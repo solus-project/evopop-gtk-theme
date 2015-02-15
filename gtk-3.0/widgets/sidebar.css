@@ -1,0 +1,69 @@
+/***********
+ * sidebar *
+ ***********/
+.sidebar,
+.sidebar.view,
+.sidebar .view,
+.sidebar GtkScrolledWindow {
+    background-color: @theme_base_color;
+    font-weight: bold;
+    color: @theme_text_color;
+    
+}
+.sidebar GtkScrolledWindow,
+.sidebar {
+    border-width: 0;
+}
+
+.sidebar .image:selected,
+.sidebar .image:hover {
+    color: @theme_bg_color;
+}
+
+.sidebar .image:selected:focus,
+.sidebar .image:selected:hover {
+    color: @theme_base_color;
+    background-color: @theme_selected_fg_color;
+}
+
+.sidebar .cell:selected,
+.sidebar .cell:selected:focus {
+    color: white;
+    background-color: @theme_selected_fg_color;
+}
+.sidebar .list-row { 				/*temp fix for evo-assist*/
+    background-color: transparent;
+    font-weight: bold;
+    color: @header;
+}
+.sidebar GtkScrolledWindow .list-row {  	/*scrolled = regular*/
+    border-radius: 0;
+    background-color: transparent;
+    font-weight: bold;
+    color: @theme_text_color;
+}
+
+.sidebar GtkScrolledWindow .list-row:selected, /*for budgie settings*/
+.sidebar GtkScrolledWindow .list-row:selected:hover,
+.sidebar GtkScrolledWindow .list-row:selected:hover:active,
+.sidebar GtkScrolledWindow .list-row:hover,
+.sidebar GtkScrolledWindow .list-row:hover:active {
+    background-color: @theme_selected_fg_color;
+    font-weight: bold;
+    color: white;
+}
+
+.sidebar .list-row:hover,
+.sidebar .list-row:hover:active,
+.sidebar .list-row:focus {
+    background-color: transparent;
+    color: @theme_selected_fg_color;
+}
+
+.sidebar .seperator {
+    color: @navigation;
+}
+
+.sidebar .frame {
+    border-width: 0;
+}

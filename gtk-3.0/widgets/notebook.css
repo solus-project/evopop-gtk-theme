@@ -1,0 +1,100 @@
+/************
+ * notebook *
+ ************/
+.notebook {
+    padding: 0;
+    background-color: @theme_base_color;
+    background-image: none;
+    background-clip: border-box;
+    -GtkNotebook-has-tab-gap: false;
+}
+
+.notebook.header {
+    background-color: @theme_bg_color;
+    background-image: none;
+    box-shadow: none;
+    border-width: 0;
+}
+
+.notebook tab {
+    padding: 8px;
+    box-shadow: none;
+    background-color: @theme_base_color;			
+    background-image: none;
+}
+
+.notebook tab:active {
+    background-color: @theme_selected_fg_color;
+}
+
+.notebook.header.top,
+.notebook tab.top {
+    border-bottom: 1px solid @theme_bg_color;
+    border-right: 1px solid @theme_bg_color;
+}
+
+.notebook tab.top:active {
+    border: 1px solid @theme_selected_fg_color;
+}
+
+.notebook.header.left,
+.notebook tab.left {
+    border-right: 4px solid @header;
+}
+
+.notebook tab.left:active {
+    border-right-color: @theme_selected_fg_color;
+}
+
+.notebook.header.bottom,
+.notebook tab.bottom {
+    border-top: 4px solid @header;
+}
+
+.notebook tab.bottom:active {
+    border-top-color: @theme_selected_fg_color;
+}
+
+.notebook.header.right,
+.notebook tab.right {
+    border-left: 4px solid @header;
+}
+
+.notebook tab.right:active {
+    border-left-color: @theme_selected_fg_color;
+}
+
+/* close button styling */
+.notebook tab .button,
+.notebook tab .button:active,
+.notebook tab .button:checked,
+.notebook tab .button:hover {
+    margin: 0px;
+    padding: 1px;
+    border: 0px;
+    border-color: transparent;
+    background-image: none;
+    background-color: transparent;
+}
+
+.notebook tab .button {
+    color: @theme_fg_color;
+    background-color: transparent;
+}
+
+.notebook tab .button:hover {
+    color: shade(@theme_fg_color, 1.2);
+}
+
+.notebook tab .button:active,
+.notebook tab .button:checked,
+.notebook tab .button:active:hover,
+.notebook tab .button:checked:hover {
+    color: shade(@theme_fg_color, 1.5);
+}
+
+.notebook tab GtkLabel {
+    color: @theme_fg_color;
+    font: Bold;
+}
+

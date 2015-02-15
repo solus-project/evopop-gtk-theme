@@ -1,0 +1,35 @@
+GtkPopover .button {
+    color: @theme_fg_color;
+    border: 1px solid shade(@theme_bg_color, 1.0);
+}
+
+GtkPopover .button:hover,
+GtkPopover .button:active:hover {
+    transition: color 200ms ease-in;
+    color: @theme_selected_fg_color;
+    background-color: transparent;
+}
+
+GtkPopover .button:active {
+    color: @theme_selected_fg_color;
+    background-color: transparent;
+    border: 1px solid shade(@theme_bg_color, 0.7);
+}
+
+.budgie-panel *:active {
+    background-color: transparent;
+}
+
+.max-budgie-panel {
+    border: 1px solid alpha(black, 0.7);
+}
+
+.budgie-panel .message-area {
+    border-radius: 0px;
+    border: 1px solid alpha(white, 0.1);
+    background-color: alpha(black, 0.8);
+}
+
+.max-budgie-panel .message-area {
+    border: 1px solid alpha(white, 0.1);
+}

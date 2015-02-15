@@ -1,0 +1,26 @@
+.header-bar,
+.header-bar:insensitive {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: @theme_bg_color;
+    background-color: @theme_bg_color;
+    padding: 6px 6px;
+}
+
+.header-bar .button.text-button {
+    padding: 6px 6px;
+}
+
+.header-bar .button.image-button {
+    padding: 6px 6px;
+}
+
+.header-bar .title {
+    font: Bold 10;
+    color: @theme_fg_color;
+}
+
+.header-bar .subtitle {
+    font: 9;
+    color: @theme_fg_color;
+}
