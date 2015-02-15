@@ -36,12 +36,6 @@ GtkComboBox .menu {
     font: initial;
 }
 
-/* ubuntu software center menu */
-#toolbar-popup {
-    background-color: @menu_bg_color;
-    color: @menu_fg_color;
-}
-
 /***********
  * menubar *
  ***********/

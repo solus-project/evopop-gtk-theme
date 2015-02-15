@@ -5,11 +5,10 @@ GtkPopover {
     margin: 10px;
     padding: 2px;
     border-radius: 5px;
-    border: none;
+    border: 1px solid shade(@theme_bg_color, 0.85);
     background-clip: border-box;
     background-color: @theme_bg_color;
     color: @theme_fg_color;
-    box-shadow: 0 0 2px alpha(black, 0.75);
 }
 
 GtkPopover.osd {
