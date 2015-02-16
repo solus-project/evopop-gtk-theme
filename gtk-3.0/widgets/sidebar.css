@@ -6,18 +6,12 @@
 .sidebar .view,
 .sidebar GtkScrolledWindow {
     background-color: @theme_base_color;
-    font-weight: bold;
     color: @theme_text_color;
     
 }
 .sidebar GtkScrolledWindow,
 .sidebar {
     border-width: 0;
-}
-
-.sidebar .image:selected,
-.sidebar .image:hover {
-    color: @theme_bg_color;
 }
 
 .sidebar .image:selected:focus,
@@ -33,13 +27,11 @@
 }
 .sidebar .list-row { 				/*temp fix for evo-assist*/
     background-color: transparent;
-    font-weight: bold;
-    color: @header;
+    color: @theme_fg_color;
 }
 .sidebar GtkScrolledWindow .list-row {  	/*scrolled = regular*/
     border-radius: 0;
     background-color: transparent;
-    font-weight: bold;
     color: @theme_text_color;
 }
 
@@ -49,7 +41,6 @@
 .sidebar GtkScrolledWindow .list-row:hover,
 .sidebar GtkScrolledWindow .list-row:hover:active {
     background-color: @theme_selected_fg_color;
-    font-weight: bold;
     color: white;
 }
 
@@ -61,7 +52,7 @@
 }
 
 .sidebar .seperator {
-    color: @navigation;
+    color: @theme_bg_color;
 }
 
 .sidebar .frame {
