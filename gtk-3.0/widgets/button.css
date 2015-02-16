@@ -5,13 +5,33 @@
 .button {
     -GtkWidget-focus-padding: 1;
     -GtkWidget-focus-line-width: 0;
-    border-radius: 5px;
-    padding: 4px 12px;
+    padding: 6px 8px;
+    background-color: @button_bg_color;
+    background-image: none;
+    color: @theme_text_color;
     font: bold;
+    border: none;
+    border-radius: 4px;
 }
 
 .button *{
 	transition: 150ms ease-in;
+}
+
+.button:active,
+.button:active:hover,
+.button:checked {
+    background-color: @theme_selected_fg_color;
+    color: white;
+}
+
+.button:hover {
+    background-color: @button_bg_color;
+    color: mix(#fff, @theme_text_color, 0.75);
+}
+
+.button:active:insensitive {
+    color: shade (@button_bg_color, 1.15);
 }
 
 BackgroundBox .button {
@@ -23,7 +43,6 @@ BackgroundBox .button {
 BackgroundBox .button:hover {
     transition: none; /*stop weird glitchiness*/
     color: shade(@theme_selected_fg_color, 1.15);
-    border-color: shade(@theme_bg_color, 0.87);
     background-color: @theme_bg_color;
 }
 
@@ -31,32 +50,6 @@ BackgroundBox .button:active {
     transition: 100ms linear;
     color: shade(@theme_selected_fg_color, 1.0);
     background-color: @theme_bg_color;
-    border-color: @theme_fg_color;
-}
-
-.button {
-    border-style: none;
-    border-radius: 5px;
-    background-color: @button_bg_color;
-    background-image: none;
-    color: @theme_text_color;
-}
-
-.button:active,
-.button:checked {
-    background-color: shade(@button_bg_color, 0.9);
-    background-image: none;
-    color: mix(#fff, @theme_text_color, 0.75);
-}
-
-.button:active:hover {
-    background-color: shade(@button_bg_color, 1.07);
-    background-image: none;
-    color: @theme_selected_fg_color;
-}
-
-.button:active:insensitive {
-    color: shade (@button_bg_color, 1.15);
 }
 
 /* default button */

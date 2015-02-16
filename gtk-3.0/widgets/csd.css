@@ -18,10 +18,10 @@
     text-shadow: none;
 }
 
-/* this is the default titlebar that is added by GTK
- * when client-side decorations are in use and the application
- * did not set a custom titlebar.
- */
+.maximized .titlebar {
+    border-radius:5px 5px 0 0;
+}
+
 .titlebar.default-decoration {
     border: none;
     box-shadow: none;

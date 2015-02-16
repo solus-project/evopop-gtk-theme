@@ -1,3 +1,7 @@
+/******************
+ * window actions *
+ ******************/
+
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton,
 .header-bar .button.titlebutton:hover,
@@ -10,17 +14,20 @@
     border-style: solid;
     border-image: none;
     icon-shadow: none;
-    box-shadow: none; }
+    box-shadow: none; 
+}
 
 .header-bar .right .button.titlebutton,
 .titlebar .right .button.titlebutton {
     padding-left: 3px;
-    padding-right: 4px; }
+    padding-right: 4px; 
+}
 
 .header-bar .left .button.titlebutton,
 .titlebar .left .button.titlebutton {
     padding-left: 4px;
-    padding-right: 3px; }
+    padding-right: 3px; 
+}
 
 .titlebar .right .titlebutton,
 .titlebar .left .titlebutton,
@@ -29,7 +36,15 @@
 .titlebar .right .titlebutton:active:hover,
 .titlebar .left .titlebutton:active:hover,
 .titlebar .right .titlebutton:backdrop,
-.titlebar .left .titlebutton:backdrop {
+.titlebar .left .titlebutton:backdrop,
+.maximized .titlebar .right .titlebutton,
+.maximized .titlebar .left .titlebutton,
+.maximized .titlebar .right .titlebutton:hover,
+.maximized .titlebar .left .titlebutton:hover,
+.maximized .titlebar .right .titlebutton:active:hover,
+.maximized .titlebar .left .titlebutton:active:hover,
+.maximized .titlebar .right .titlebutton:backdrop,
+.maximized .titlebar .left .titlebutton:backdrop {
     color: transparent;
     background-position: center;
     background-repeat: no-repeat;
