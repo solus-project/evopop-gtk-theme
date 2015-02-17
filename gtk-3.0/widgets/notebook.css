@@ -7,9 +7,11 @@
     background-image: none;
     background-clip: border-box;
     -GtkNotebook-has-tab-gap: false;
+    border: none;
 }
 
 .notebook.header {
+
     background-color: @theme_bg_color;
     background-image: none;
     box-shadow: none;
@@ -19,82 +21,58 @@
 .notebook tab {
     padding: 8px;
     box-shadow: none;
-    background-color: @theme_base_color;			
+    background-color: alpha(@theme_base_color,0.5);			
     background-image: none;
 }
 
 .notebook tab:active {
-    background-color: @theme_selected_fg_color;
+    background-color: @theme_base_color;
 }
 
-.notebook.header.top,
-.notebook tab.top {
-    border-bottom: 1px solid @theme_bg_color;
-    border-right: 1px solid @theme_bg_color;
+.notebook tab {
+    border: 1px solid @theme_bg_color;
 }
 
 .notebook tab.top:active {
-    border: 1px solid @theme_selected_fg_color;
+    border-bottom: 0px;
 }
 
-.notebook.header.left,
 .notebook tab.left {
-    border-right: 4px solid @header;
+    border-right: 1px solid @theme_bg_color;
 }
 
 .notebook tab.left:active {
-    border-right-color: @theme_selected_fg_color;
+    border-right: 0px;
 }
 
-.notebook.header.bottom,
 .notebook tab.bottom {
-    border-top: 4px solid @header;
+    border-top: 1px solid @theme_bg_color;
 }
 
 .notebook tab.bottom:active {
-    border-top-color: @theme_selected_fg_color;
+    border-top: 0px;
 }
 
-.notebook.header.right,
 .notebook tab.right {
-    border-left: 4px solid @header;
+    border-left: 1px solid @theme_bg_color;
 }
 
 .notebook tab.right:active {
-    border-left-color: @theme_selected_fg_color;
+    border-left: 0px;
 }
 
 /* close button styling */
-.notebook tab .button,
-.notebook tab .button:active,
-.notebook tab .button:checked,
-.notebook tab .button:hover {
-    margin: 0px;
-    padding: 1px;
-    border: 0px;
-    border-color: transparent;
+.notebook tab .button {
+    transition: ease-in 150ms;
+    padding: 1px 0 0 0;
+    border: none;
     background-image: none;
     background-color: transparent;
+    color: alpha(@theme_text_color,0.5);
 }
 
-.notebook tab .button {
-    color: @theme_fg_color;
+.notebook tab .button:hover,
+.notebook tab .button:active:hover {
+    color: @red;
     background-color: transparent;
 }
-
-.notebook tab .button:hover {
-    color: shade(@theme_fg_color, 1.2);
-}
-
-.notebook tab .button:active,
-.notebook tab .button:checked,
-.notebook tab .button:active:hover,
-.notebook tab .button:checked:hover {
-    color: shade(@theme_fg_color, 1.5);
-}
-
-.notebook tab GtkLabel {
-    color: @theme_fg_color;
-    font: Bold;
-}
-
