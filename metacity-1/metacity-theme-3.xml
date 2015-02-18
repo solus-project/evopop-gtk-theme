@@ -107,7 +107,7 @@
 	<distance name="title_vertical_pad" value="5"/>
 </frame_geometry>
 
-<frame_geometry name="attached" title_scale="medium" hide_buttons="true" rounded_top_left="5" rounded_top_right="5" rounded_bottom_left="false" rounded_bottom_right="false" parent="normal">
+<frame_geometry name="attached" title_scale="medium" hide_buttons="true" rounded_top_left="5" rounded_top_right="5" rounded_bottom_left="5" rounded_bottom_right="5" parent="normal">
 	<distance name="title_vertical_pad" value="9"/>
 	<distance name="bottom_height" value="4"/>
 	<distance name="left_width" value="4"/>
@@ -376,18 +376,15 @@
 </draw_ops>
 
 <draw_ops name="close_focused">
-	<!--<include name="close_shadow_focused" y="1" />-->
-	<include name="close_glyph_focused" />
-
+	<image filename="close_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_focused_pressed">
-	<include name="close_glyph_pressed" y="0" />
+	<image filename="close_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_focused_prelight">
-	<!--<include name="close_shadow_focused" y="1" />-->
-	<include name="close_glyph_prelight" />
+	<image filename="close_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_glyph_unfocused">
@@ -418,8 +415,7 @@
 </draw_ops>
 
 <draw_ops name="close_unfocused">
-	<include name="close_glyph_unfocused" y="D_icons_unfocused_offset" />
-	<include name="close_glyph_unfocused" y="D_icons_unfocused_offset" />
+	<image filename="close_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_glyph_unfocused_prelight">
@@ -450,8 +446,7 @@
 </draw_ops>
 
 <draw_ops name="close_unfocused_prelight">
-	<include name="close_glyph_unfocused_prelight" y="D_icons_unfocused_offset" />
-	<include name="close_glyph_unfocused_prelight" y="D_icons_unfocused_offset" />
+	<image filename="close_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="close_glyph_unfocused_pressed">
@@ -482,8 +477,7 @@
 </draw_ops>
 
 <draw_ops name="close_unfocused_pressed">
-	<include name="close_glyph_unfocused_pressed" y="D_icons_unfocused_offset" />
-	<include name="close_glyph_unfocused_pressed" y="D_icons_unfocused_offset" />
+	<image filename="close_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_focused">
@@ -531,17 +525,15 @@
 </draw_ops>
 
 <draw_ops name="maximize_focused">
-	<!--<include name="maximize_shadow_focused" y="1" />-->
-	<include name="maximize_glyph_focused" />
+	<image filename="max_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_pressed">
-	<include name="maximize_glyph_pressed" y="0" />
+	<image filename="max_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_focused_prelight">
-	<!--<include name="maximize_shadow_focused" y="1" />-->
-	<include name="maximize_glyph_prelight" />
+	<image filename="max_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused">
@@ -556,7 +548,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_unfocused">
-	<include name="maximize_glyph_unfocused" y="D_icons_unfocused_offset" />
+	<image filename="max_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused_prelight">
@@ -571,7 +563,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_prelight">
-	<include name="maximize_glyph_unfocused_prelight" y="D_icons_unfocused_offset" />
+	<image filename="max_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused_pressed">
@@ -586,7 +578,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_pressed">
-	<include name="maximize_glyph_unfocused_pressed" y="D_icons_unfocused_offset" />
+	<image filename="max_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_focused">
@@ -618,17 +610,15 @@
 </draw_ops>
 
 <draw_ops name="minimize_focused">
-	<!--<include name="minimize_shadow_focused" y="2" />-->
-	<include name="minimize_glyph_focused" />
+	<image filename="min_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_pressed">
-	<include name="minimize_glyph_pressed" y="0" />
+	<image filename="min_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_focused_prelight">
-	<!--<include name="minimize_shadow_focused" y="1" />-->
-	<include name="minimize_glyph_prelight" />
+	<image filename="min_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_unfocused">
@@ -639,7 +629,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_unfocused">
-	<include name="minimize_glyph_unfocused" y="D_icons_unfocused_offset" />
+	<image filename="min_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_unfocused_prelight">
@@ -650,7 +640,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_prelight">
-	<include name="minimize_glyph_unfocused_prelight" y="D_icons_unfocused_offset" />
+	<image filename="min_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_unfocused_pressed">
@@ -661,7 +651,7 @@
 </draw_ops>
 
 <draw_ops name="minimize_unfocused_pressed">
-	<include name="minimize_glyph_unfocused_pressed" y="D_icons_unfocused_offset" />
+	<image filename="min_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="menu_glyph_focused">
