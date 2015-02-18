@@ -3,17 +3,20 @@
 <info>
 	<name>EvoPop</name>
 	<author>Peter Cornelis</author>
-	<copyright>GPL-3.0</copyright>
-	<date>18/02/2015</date>
-	<description>EvoPop Metacity Theme</description>
+	<copyright>Peter Cornelis </copyright>
+	<date>2015</date>
+	<description>EvoPop window border theme for Metacity</description>
 </info>
 
 <!-- meaningfull constants -->
-<constant name="C_border_focused" value="gtk:custom(wm_bg,gtk:base[NORMAL])" />
-<constant name="C_border_unfocused" value="gtk:custom(wm_bg,gtk:base[NORMAL])" />
+
+<constant name="C_border_focused" value="gtk:custom(wm_bg,gtk:bg[NORMAL])" />
+<constant name="C_border_unfocused" value="gtk:custom(wm_bg,gtk:bg[NORMAL])" />
 <constant name="C_titlebar_focused_hilight" value="gtk:custom(wm_bg,gtk:base[NORMAL])" />
 <constant name="C_titlebar_unfocused" value="gtk:custom(wm_bg,gtk:base[NORMAL])" />
 <constant name="C_title_focused" value="gtk:custom(wm_title_focused,gtk:fg[NORMAL])" />
+<constant name="C_title_focused_hilight" value="gtk:custom(wm_bg,gtk:bg[NORMAL])" />
+<constant name="C_title_focused_hilight_dark" value="gtk:custom(wm_bg,gtk:bg[NORMAL])" />
 <constant name="C_title_unfocused" value="gtk:custom(wm_title_unfocused,gtk:fg[INSENSITIVE])" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:custom(wm_title_focused,gtk:fg[NORMAL])" />
@@ -27,8 +30,8 @@
 <constant name="D_icons_unfocused_offset" value="0" /> <!-- offset of the unfocused icons -->
 <constant name="D_icons_shrink" value="2" /> <!-- increasing this value makes the icons in buttons smaller -->
 <constant name="D_icons_grow" value="0" /> <!-- increasing this value makes the icons in buttons bigger -->
-
 <!-- geometries -->
+
 <frame_geometry name="normal" title_scale="medium" rounded_top_left="5" rounded_top_right="5">
 	<distance name="left_width" value="1" />
 	<distance name="right_width" value="1" />
@@ -46,7 +49,7 @@
 	<distance name="right_titlebar_edge" value="1"/>
 </frame_geometry>
 
-<frame_geometry name="max" title_scale="medium" parent="normal" rounded_top_left="5" rounded_top_right="5">
+<frame_geometry name="max" title_scale="medium" parent="normal" rounded_top_left="false" rounded_top_right="false">
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="left_titlebar_edge" value="1"/>
@@ -60,11 +63,11 @@
 	<distance name="bottom_height" value="0" />
 </frame_geometry>
 
-<frame_geometry name="tiled_left" title_scale="medium" rounded_top_left="5" rounded_top_right="5" parent="max">
+<frame_geometry name="tiled_left" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
 	<distance name="right_width" value="0" />
 </frame_geometry>
 
-<frame_geometry name="tiled_right" title_scale="medium" rounded_top_left="5" rounded_top_right="5" parent="max">
+<frame_geometry name="tiled_right" title_scale="medium" rounded_top_left="false" rounded_top_right="false" parent="max">
 	<distance name="left_width" value="1" />
 </frame_geometry>
 
@@ -82,7 +85,7 @@
 <frame_geometry name="nobuttons" hide_buttons="true" parent="normal">
 </frame_geometry>
 
-<frame_geometry name="border" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal" >
+<frame_geometry name="border" has_title="false" rounded_top_left="5" rounded_top_right="5" parent="normal" >
 	<distance name="left_width" value="1" />
 	<distance name="right_width" value="1" />
 	<distance name="bottom_height" value="1" />
@@ -91,7 +94,7 @@
 	<distance name="title_vertical_pad" value="1" />
 </frame_geometry>
 
-<frame_geometry name="borderless" has_title="false" rounded_top_left="false" rounded_top_right="false" parent="normal" >
+<frame_geometry name="borderless" has_title="false" rounded_top_left="5" rounded_top_right="5" parent="normal" >
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
@@ -100,11 +103,11 @@
 	<border name="title_border" left="0" right="0" top="0" bottom="0" />
 </frame_geometry>
 
-<frame_geometry name="modal" title_scale="small" hide_buttons="true" rounded_top_left="false" rounded_top_right="false" parent="small">
+<frame_geometry name="modal" title_scale="small" hide_buttons="true" rounded_top_left="5" rounded_top_right="5" parent="small">
 	<distance name="title_vertical_pad" value="5"/>
 </frame_geometry>
 
-<frame_geometry name="attached" title_scale="medium" hide_buttons="true" rounded_top_left="false" rounded_top_right="false" rounded_bottom_left="false" rounded_bottom_right="false" parent="normal">
+<frame_geometry name="attached" title_scale="medium" hide_buttons="true" rounded_top_left="5" rounded_top_right="5" rounded_bottom_left="false" rounded_bottom_right="false" parent="normal">
 	<distance name="title_vertical_pad" value="9"/>
 	<distance name="bottom_height" value="4"/>
 	<distance name="left_width" value="4"/>
@@ -118,8 +121,26 @@
 <draw_ops name="title_focused">
 	<title version="< 3.1"
                x="(0 `max` ((width - title_width) / 2))"
+               y="(0 `max` ((height - title_height) / 2)) + 2"
+               color="C_title_focused_hilight" />
+	<title version="< 3.1"
+               x="(0 `max` ((width - title_width) / 2))"
+               y="(0 `max` ((height - title_height) / 2))"
+               color="C_title_focused_hilight_dark" />
+	<title version="< 3.1"
+               x="(0 `max` ((width - title_width) / 2))"
                y="(0 `max` ((height - title_height) / 2)) + 1"
                color="C_title_focused" />
+	<title version=">= 3.1"
+               x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width)))"
+               y="(0 `max` ((height - title_height) / 2)) + 2"
+               ellipsize_width="width"
+               color="C_title_focused_hilight" />
+	<title version=">= 3.1"
+               x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width)))"
+               y="(0 `max` ((height - title_height) / 2))"
+               ellipsize_width="width"
+               color="C_title_focused_hilight_dark" />
 	<title version=">= 3.1"
                x="(0 `max` ((frame_x_center - title_width / 2) `min` (width - title_width)))"
                y="(0 `max` ((height - title_height) / 2)) + 1"
