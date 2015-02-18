@@ -42,7 +42,7 @@
 @define-color link_color #df253f;
 @define-color success_color #53a93f;
 @define-color warning_color #f57900;
-@define-color error_color #cc0000;
+@define-color error_color @red;
 @define-color light_grey #dedede;
 
 /* widget colors */
@@ -107,9 +107,6 @@
 @import url("widgets/selection-mode.css");
 @import url("widgets/popover.css");
 
-@import url("apps/gnome-applications.css");
-@import url("apps/granite-widgets.css");
-@import url("apps/unity.css");
-@import url("apps/xfce.css");
 @import url("apps/budgie.css");
-@import url("apps/nemo.css");
+@import url("apps/gnome-applications.css");
+

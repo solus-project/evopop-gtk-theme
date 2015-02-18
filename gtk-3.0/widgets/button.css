@@ -21,8 +21,7 @@
 .button:active,
 .button:active:hover,
 .button:checked {
-    background-color: @theme_selected_fg_color;
-    color: white;
+    color: @theme_selected_fg_color;
 }
 
 .button:hover {
@@ -30,8 +29,9 @@
     color: mix(#fff, @theme_text_color, 0.75);
 }
 
+
 .button:active:insensitive {
-    color: shade (@button_bg_color, 1.15);
+    color: shade (@theme_selected_fg_color, 1.15);
 }
 
 BackgroundBox .button {
@@ -184,8 +184,33 @@ EvSidebar GtkToggleButton.button:active {
 .linked .button:insensitive {
     border-width: 1px;
     border-right-width: 0;
-    border-radius: 0;
-    
+    border-radius: 0;   
+}
+
+.linked .entry,
+.linked .entry:active,
+.linked .entry:focus {
+    border-color: @theme_base_color;
+}
+
+.linked .button,
+.linked .button:prelight,
+.linked .button:focus:active {
+    background-color: @cyan;
+    color: @button_bg_color;
+}
+
+.linked .button:checked:checked {
+    background-color: @theme_selected_fg_color;
+    color: @button_bg_color;
+}
+
+.linked GtkComboBox .button,
+.linked GtkComboBox .button:prelight,
+.linked GtkComboBox .button:focus:active,
+.linked GtkComboBox .button:active:hover {
+    background-color: @button_bg_color;
+    color: @theme_text_color;
 }
 
 /* leftmost button */
@@ -195,10 +220,11 @@ EvSidebar GtkToggleButton.button:active {
 .linked .button:active:hover:first-child,
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
-.linked .button:insensitive:first-child {
+.linked .button:insensitive:first-child,
+.linked GtkComboBox .button:first-child {
     border-width: 1px;
     border-right-width: 0;
-    border-radius: 0px;
+    border-radius: 4px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -212,7 +238,8 @@ EvSidebar GtkToggleButton.button:active {
 .linked .button:focus:active:last-child,
 .linked .button:insensitive:last-child {
     border-width: 1px;
-    border-radius: 0px;
+    border-left-width: 0;
+    border-radius: 4px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
@@ -226,7 +253,7 @@ EvSidebar GtkToggleButton.button:active {
 .linked .button:focus:active:only-child,
 .linked .button:insensitive:only-child {
     border-width: 1px;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 /* middle button (vertical) */
@@ -281,4 +308,60 @@ EvSidebar GtkToggleButton.button:active {
 .linked.vertical .button:insensitive:only-child {
     border-width: 1px;
     border-radius: 0px;
+}
+
+/******************************
+ * destructive action buttons *
+ ******************************/
+
+.destructive-action.button,
+.titlebar .destructive-action.button {
+    background-color: @error_color;
+    color: white;
+}
+
+.destructive-action.button:hover,
+.titlebar .destructive-action.button:hover{
+    background-color: @error_color;
+    color: white;
+}
+
+.destructive-action.button:active,
+.titlebar .destructive-action.button:active {
+    background-color: @error_color;
+    color: white;
+}
+
+.destructive-action.button:hover:active,
+.titlebar .destructive-action.button:hover:active {
+    background-color: @error_color;
+    color: white;
+}
+
+/******************************
+ * suggested action buttons *
+ ******************************/
+
+.suggested-action.button,
+.titlebar .suggested-action.button {
+    background-color: @selected_fg_color;
+    color: white;
+}
+
+.suggested-action.button:hover,
+.titlebar .suggested-action.button:hover{
+    background-color: @selected_fg_color;
+    color: white;
+}
+
+.suggested-action.button:active,
+.titlebar .suggested-action.button:active {
+    background-color: @selected_fg_color;
+    color: white;
+}
+
+.suggested-action.button:hover:active,
+.titlebar .suggested-action.button:hover:active {
+    background-color: @selected_fg_color;
+    color: white;
 }

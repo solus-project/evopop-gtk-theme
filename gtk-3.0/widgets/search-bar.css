@@ -29,7 +29,9 @@
 }
 
 .search-bar.toolbar .button:hover,
-.search-bar.toolbar .button:active:hover {
+.search-bar.toolbar .button:active:hover,
+.search-bar.toolbar .button:checked:checked {
+    background: none;
     color: @selected_fg_color;
 }
 

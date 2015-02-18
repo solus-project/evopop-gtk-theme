@@ -92,7 +92,7 @@
 }
 
 .titlebar .button:active,
-.titlebar .button:checked,
+.titlebar .button:checked:checked,
 .maximized .header-bar .button:active,
 .maximized .header-bar .button:checked {
     background-color: @wm_bg;

@@ -11,7 +11,6 @@
 }
 
 .notebook.header {
-
     background-color: @theme_bg_color;
     background-image: none;
     box-shadow: none;
@@ -21,16 +20,13 @@
 .notebook tab {
     padding: 8px;
     box-shadow: none;
+    border: 1px solid @theme_bg_color;
     background-color: alpha(@theme_base_color,0.5);			
     background-image: none;
 }
 
 .notebook tab:active {
     background-color: @theme_base_color;
-}
-
-.notebook tab {
-    border: 1px solid @theme_bg_color;
 }
 
 .notebook tab.top:active {
@@ -64,7 +60,7 @@
 /* close button styling */
 .notebook tab .button {
     transition: ease-in 150ms;
-    padding: 1px 0 0 0;
+    padding: 2px;
     border: none;
     background-image: none;
     background-color: transparent;

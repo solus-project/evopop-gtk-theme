@@ -207,8 +207,7 @@ GeditWindow .notebook {
     border-width: 1px 0;
 }
 
-GeditPanel .notebook tab,
-GeditWindow .notebook tab {
+GeditPanel .notebook tab {
     border-width: 0;
 }
 
@@ -230,11 +229,9 @@ GeditStatusMenuButton.button:active:hover {
 
 GeditViewFrame .gedit-search-slider {
     padding: 4px;
-    border-radius: 0 0 0px 0px;
-    border-width: 0 1px 1px 1px;
-    border-style: solid;
-    border-color: shade(@theme_base_color, 0.8);
-    background-color: @theme_base_color;
+    border-radius: 0 0 5px 5px;
+    border: 0;
+    background-color: @theme_bg_color;
 }
 
 GeditViewFrame .gedit-search-slider .not-found {
