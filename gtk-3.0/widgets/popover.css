@@ -24,7 +24,7 @@ GtkPopover.osd {
 
 .popover .button:active:hover {
     background-color: transparent;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     border: none;
 }
 
@@ -62,9 +62,9 @@ GtkModelButton.button:active:insensitive {
 GtkModelButton.button:active:hover,
 GtkModelButton.button:hover,
 GtkModelButton.button:selected {
-    background-color: @theme_selected_bg_color;
+    background-color: transparent;
     background-image: none;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 GtkPopover *:hover {

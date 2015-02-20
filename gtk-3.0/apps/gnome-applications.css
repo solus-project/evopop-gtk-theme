@@ -241,8 +241,8 @@ GeditViewFrame .gedit-search-slider .not-found {
 }
 
 GeditViewFrame .gedit-search-slider .not-found:selected {
-    background-color: @theme_selected_fg_color;
-    color: @theme_base_color;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 GeditFileBrowserWidget .primary-toolbar.toolbar  {
@@ -311,7 +311,7 @@ UmEditableCombo .button:hover {
     border-width: 1px;
     border-color: shade(@theme_bg_color, 0.9);
     background-color: @theme_bg_color;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 GvcBalanceBar .frame,
@@ -333,13 +333,13 @@ GthToolbox .button:focus {
 
 GthToolbox .button:hover {
     background-color: @theme_bg_color;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 
 GthToolbox .button:active {
     background-color: @theme_bg_color;
-    color: shade(@theme_selected_fg_color, 0.87);
+    color: shade(@theme_selected_bg_color, 0.87);
 }
 
 /****************
@@ -363,7 +363,7 @@ GtkFileChooserWidget .path-bar .button:first-child {
 
 GtkFileChooserWidget .path-bar .button:hover {
     background-color: @theme_base_color;
-    color: shade(@theme_selected_fg_color, 1.04);
+    color: shade(@theme_selected_bg_color, 1.04);
 }
 
 GtkFileChooserWidget .path-bar .button:active,

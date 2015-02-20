@@ -11,8 +11,8 @@
 @define-color fg_color #fff;
 @define-color base_color #505359;
 @define-color text_color #fff;
-@define-color selected_bg_color transparent;
-@define-color selected_fg_color #2cbae5;
+@define-color selected_bg_color #2cbae5;
+@define-color selected_fg_color #fefefe;
 @define-color tooltip_bg_color #fefefe;
 @define-color tooltip_fg_color #2d2d2d;
 
@@ -55,8 +55,7 @@
 @define-color menu_fg_color @theme_text_color;
 @define-color panel_bg_color #222222;
 @define-color panel_fg_color #f2f2f2;
-@define-color menu_selected_fg_color @selected_fg_color;
-
+@define-color menu_selected_fg_color @selected_bg_color;
 
 /* osd */
 @define-color osd_base #fafafa;
@@ -76,7 +75,6 @@
 @define-color wm_icons_unfocused_prelight shade(@theme_selected_bg_color, 1.15);
 @define-color wm_icons_unfocused_pressed @theme_selected_bg_color;
 
-
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");
 
@@ -94,6 +92,7 @@
 @import url("widgets/notebook.css");
 @import url("widgets/progress-scale.css");
 @import url("widgets/scrollbar.css");
+@import url("widgets/search-bar.css");
 @import url("widgets/separator.css");
 @import url("widgets/sidebar.css");
 @import url("widgets/spinbutton.css");

@@ -368,7 +368,7 @@ GtkTreeView.dnd {
     padding: 6px 6px;
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_selected_fg_color, 0.9);
+    border-color: shade(@theme_selected_bg_color, 0.9);
     border-radius: 0;
 }
 
@@ -399,8 +399,8 @@ GtkViewport.frame {
 
 .view:selected,
 .view:selected:focus {
-    background-color: alpha(@theme_selected_fg_color, 0.85); 
-    color: @theme_base_color; /*TreeView selected for dconf and sidebars and stuff*/
+    background-color: @theme_selected_bg_color; 
+    color: @theme_selected_fg_color; /*TreeView selected for dconf and sidebars and stuff*/
 }
 
 /*********************
@@ -469,14 +469,14 @@ GtkBubbleWindow .toolbar {
 .list-row.button:selected:hover, 
 .list-row.button:focus, 
 .list-row.button:focus:hover {
-    outline-color: alpha(@theme_selected_fg_color, 0.3);
+    outline-color: alpha(@theme_selected_bg_color, 0.3);
 }
     
 .list-row.button:selected, 
 .list-row:selected {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
-    outline-color: alpha(@theme_selected_fg_color, 0.3); 
+    outline-color: alpha(@theme_selected_bg_color, 0.3); 
 }
 
 .list-row.button:selected:hover {
@@ -487,12 +487,4 @@ GtkBubbleWindow .toolbar {
 .list-row.button:selected:active:hover {
     color: @theme_selected_fg_color;
     background-color: shade(@theme_selected_bg_color, 0.97); 
-}
-
-/************
- * Calendar *
- ************/
-
-GtkCalendar.button {
-   color: @theme_fg_color;
 }

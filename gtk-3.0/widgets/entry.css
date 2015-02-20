@@ -19,7 +19,7 @@
     transition: 200ms linear;
     background-color: @theme_base_color;
     border-style: solid;
-    border-color: @theme_selected_fg_color;
+    border-color: @theme_selected_bg_color;
     color: @theme_text_color;
 }
 
@@ -37,8 +37,8 @@
 .entry.progressbar {
     border-width: 0;
     border-radius: 5px;
-    background-color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_base_color;
-    border-color: @theme_selected_fg_color;
+    border-color: @theme_selected_bg_color;
 }

@@ -27,7 +27,7 @@ column-header .button:active:hover:focus {
     border-bottom-color: shade(@theme_base_color, 0.8);
     background-color: shade(@theme_base_color, 0.99);
     background-image: none;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 column-header:last-child .button {

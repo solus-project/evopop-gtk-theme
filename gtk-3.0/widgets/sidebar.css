@@ -16,14 +16,14 @@
 
 .sidebar .image:selected:focus,
 .sidebar .image:selected:hover {
-    color: @theme_base_color;
-    background-color: @theme_selected_fg_color;
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
 }
 
 .sidebar .cell:selected,
 .sidebar .cell:selected:focus {
-    color: white;
-    background-color: @theme_selected_fg_color;
+    color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
 }
 .sidebar .list-row { 				/*temp fix for evo-assist*/
     background-color: transparent;
@@ -40,15 +40,15 @@
 .sidebar GtkScrolledWindow .list-row:selected:hover:active,
 .sidebar GtkScrolledWindow .list-row:hover,
 .sidebar GtkScrolledWindow .list-row:hover:active {
-    background-color: @theme_selected_fg_color;
-    color: white;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 .sidebar .list-row:hover,
 .sidebar .list-row:hover:active,
 .sidebar .list-row:focus {
     background-color: transparent;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 .sidebar .seperator {

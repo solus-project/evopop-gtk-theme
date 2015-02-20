@@ -21,7 +21,7 @@
 .button:active,
 .button:active:hover,
 .button:checked {
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 .button:hover {
@@ -31,7 +31,7 @@
 
 
 .button:active:insensitive {
-    color: shade (@theme_selected_fg_color, 1.15);
+    color: shade (@theme_selected_bg_color, 1.15);
 }
 
 BackgroundBox .button {
@@ -42,38 +42,38 @@ BackgroundBox .button {
 
 BackgroundBox .button:hover {
     transition: none; /*stop weird glitchiness*/
-    color: shade(@theme_selected_fg_color, 1.15);
+    color: shade(@theme_selected_bg_color, 1.15);
     background-color: @theme_bg_color;
 }
 
 BackgroundBox .button:active {
     transition: 100ms linear;
-    color: shade(@theme_selected_fg_color, 1.0);
+    color: shade(@theme_selected_bg_color, 1.0);
     background-color: @theme_bg_color;
 }
 
 /* default button */
 .button.default {
-    border-color: shade(@theme_selected_fg_color, 0.8);
-    background-color: shade(@theme_selected_fg_color, 1.08);
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-color: shade(@theme_selected_bg_color, 1.08);
     color: @theme_base_color;
 }
 
 .button.default:hover {
-    border-color: shade(@theme_selected_fg_color, 0.7);
-    background-color: @theme_selected_fg_color;
+    border-color: shade(@theme_selected_bg_color, 0.7);
+    background-color: @theme_selected_bg_color;
     color: shade(@theme_base_color, 0.9);
 }
 
 .button.default:active {
-    border-color: shade(@theme_selected_fg_color, 0.8);
-    background-color: shade(@theme_selected_fg_color, 0.95);
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-color: shade(@theme_selected_bg_color, 0.95);
     color: @theme_base_color;
 }
 
 .button.default:active:hover {
-    border-color: shade(@theme_selected_fg_color, 0.7);
-    background-color: shade(@theme_selected_fg_color, 0.97);
+    border-color: shade(@theme_selected_bg_color, 0.7);
+    background-color: shade(@theme_selected_bg_color, 0.97);
     color: shade(@theme_base_color, 0.9);
 }
 
@@ -86,12 +86,12 @@ EvSidebar GtkToggleButton.button {
 
 
 EvSidebar GtkToggleButton.button:hover {
-    color: shade(@theme_selected_fg_color, 1.15);
+    color: shade(@theme_selected_bg_color, 1.15);
     background-color: @theme_bg_color;
 }
 
 EvSidebar GtkToggleButton.button:active {
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-color: @theme_bg_color;
 }
 
@@ -113,7 +113,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button:hover {
     transition: color 150ms ease-in;
     border: none;
-    color: shade(@theme_selected_fg_color, 1.15);
+    color: shade(@theme_selected_bg_color, 1.15);
 }
 
 .toolbar .button.flat,
@@ -140,7 +140,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button:checked:focus {
     transition: color 150ms ease-in;
     border: none;
-    color: shade(@theme_selected_fg_color, 0.97);
+    color: shade(@theme_selected_bg_color, 0.97);
     background-color: transparent;
 }
 
@@ -159,7 +159,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button:active:hover {
     transition: color 150ms ease-in;
     border: none;
-    color: shade (@theme_selected_fg_color, 1.15);
+    color: shade (@theme_selected_bg_color, 1.15);
 }
 
 .button.flat:insensitive,
@@ -201,7 +201,7 @@ EvSidebar GtkToggleButton.button:active {
 }
 
 .linked .button:checked:checked {
-    background-color: @theme_selected_fg_color;
+    background-color: @theme_selected_bg_color;
     color: @button_bg_color;
 }
 
@@ -317,25 +317,25 @@ EvSidebar GtkToggleButton.button:active {
 .destructive-action.button,
 .titlebar .destructive-action.button {
     background-color: @error_color;
-    color: white;
+    color: @selected_fg_color;
 }
 
 .destructive-action.button:hover,
 .titlebar .destructive-action.button:hover{
     background-color: @error_color;
-    color: white;
+    color: @selected_fg_color;
 }
 
 .destructive-action.button:active,
 .titlebar .destructive-action.button:active {
     background-color: @error_color;
-    color: white;
+    color: @selected_fg_color;
 }
 
 .destructive-action.button:hover:active,
 .titlebar .destructive-action.button:hover:active {
     background-color: @error_color;
-    color: white;
+    color: @selected_fg_color;
 }
 
 /******************************
@@ -344,24 +344,24 @@ EvSidebar GtkToggleButton.button:active {
 
 .suggested-action.button,
 .titlebar .suggested-action.button {
-    background-color: @selected_fg_color;
-    color: white;
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
 }
 
 .suggested-action.button:hover,
 .titlebar .suggested-action.button:hover{
-    background-color: @selected_fg_color;
-    color: white;
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
 }
 
 .suggested-action.button:active,
 .titlebar .suggested-action.button:active {
-    background-color: @selected_fg_color;
-    color: white;
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
 }
 
 .suggested-action.button:hover:active,
 .titlebar .suggested-action.button:hover:active {
-    background-color: @selected_fg_color;
-    color: white;
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
 }

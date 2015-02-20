@@ -62,11 +62,11 @@ GthEmbeddedDialog .button {
     border-color: alpha(@dark_shadow, 0.25);
     background-color: transparent;
     background-image: none;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 GthEmbeddedDialog .button:hover {
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-color: @toolbar_bg_color;
 }
 
@@ -74,7 +74,7 @@ GthEmbeddedDialog .button:active,
 GthEmbeddedDialog .button:active:focus {
     border-color: shade(@toolbar_bg_color, 0.75);
     background-color: transparent;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-image: none;
 }
 
@@ -85,7 +85,7 @@ GthEmbeddedDialog .button:active:focus {
     border-radius: 0px;
     border-color: alpha(#000, 0.35);
     background-color: transparent;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-image: none;
 }
 
@@ -95,14 +95,14 @@ GthEmbeddedDialog .button:active:focus {
     border-radius: 0px;
     border-color: alpha(#000, 0.35);
     background-color: transparent;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-image: none;
 }
 
 .primary-toolbar .button:active:hover,
 .toolbar .button:active:hover {
     border-color: shade(@toolbar_bg_color, 0.7);
-    color: shade(@theme_selected_fg_color, 1.25);
+    color: shade(@theme_selected_bg_color, 1.25);
 }
 
 .primary-toolbar .button:focus,
@@ -115,7 +115,7 @@ GthEmbeddedDialog .button:active:focus {
 .toolbar .button:active:hover:focus {
     transition: 200ms linear;
     border-color: alpha(#000, 0.35);
-    color: shade(@theme_selected_fg_color, 1.25);
+    color: shade(@theme_selected_bg_color, 1.25);
 }
 
 .primary-toolbar .button:insensitive,
@@ -176,7 +176,7 @@ GthEmbeddedDialog .button:active:focus {
     border-color: shade(@theme_bg_color, 0.7);
     background-color: transparent;
     background-image: none;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
 }
 
 .inline-toolbar.toolbar .button:active {

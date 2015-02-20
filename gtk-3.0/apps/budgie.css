@@ -6,12 +6,12 @@ GtkPopover .button {
 GtkPopover .button:hover,
 GtkPopover .button:active:hover {
     transition: color 200ms ease-in;
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-color: transparent;
 }
 
 GtkPopover .button:active {
-    color: @theme_selected_fg_color;
+    color: @theme_selected_bg_color;
     background-color: transparent;
     border: 1px solid shade(@theme_bg_color, 0.7);
 }
@@ -25,7 +25,7 @@ GtkPopover .button:active {
 }
 
 .budgie-panel .message-area {
-    border-radius: 0px;
+    border-radius: 3px;
     border: 1px solid alpha(white, 0.1);
     background-color: alpha(black, 0.8);
 }
