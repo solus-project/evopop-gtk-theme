@@ -1,5 +1,5 @@
 gtk-toolbar-icon-size = large-toolbar
-gtk-color-scheme = "base_color:#ffffff\nbg_color:#FAFAFA\ntooltip_bg_color:#656D78\nselected_bg_color:#2cbae5\ntext_color:#1a334c\nfg_color:#555555\ntooltip_fg_color:#ffffff\nselected_fg_color:#ffffff"
+gtk-color-scheme = "base_color:#fefefe\nbg_color:#e6e8eb\ntooltip_bg_color:#fefefe\nselected_bg_color:#2cbae5\ntext_color:#1a334c\nfg_color:#2f4261\ntooltip_fg_color:#2d2d2d\nselected_fg_color:#fefefe"
 gtk-icon-sizes = "panel-menu=16,16:panel=8,8:gtk-button=16,16:gtk-large-toolbar=24,24:gtk-small-toolbar=16,16"
 gtk-button-images	= 0
 gtk-menu-images	= 0					
@@ -520,8 +520,8 @@ style "chrome-gtk-frame" {
 	ChromeGtkFrame::incognito-frame-gradient-color = @text_color
 
 	ChromeGtkFrame::scrollbar-trough-color = @bg_color
-	ChromeGtkFrame::scrollbar-slider-normal-color =  mix (0.21, @fg_color, @bg_color)
-	ChromeGtkFrame::scrollbar-slider-prelight-color =  mix (0.31, @fg_color, @bg_color)
+	ChromeGtkFrame::scrollbar-slider-normal-color =  mix(0.3, @bg_color, @fg_color)
+	ChromeGtkFrame::scrollbar-slider-prelight-color =  shade(1.35, @selected_bg_color)
 }
 
 class "ChromeGtkFrame" style "chrome-gtk-frame"

@@ -3,7 +3,7 @@ style "menu"="default"
 xthickness=0
 ythickness=0
 
-  bg[NORMAL] = @text_color
+  bg[NORMAL] = @base_color
 
   engine "pixmap"
   {
@@ -23,8 +23,8 @@ style "menuitem"
 {
  xthickness				= 0
  ythickness            			= 4
- fg[NORMAL] = @bg_color
- text[NORMAL] = @bg_color
+ fg[NORMAL] = @fg_color
+ text[NORMAL] = @text_color
 	fg[PRELIGHT] = "#2cbae5"
 	fg[SELECTED] = "#2cbae5"
 	text[SELECTED] = "#2cbae5"
@@ -85,12 +85,12 @@ style "tearoffmenuitem"	= "menuitem"
 style "menubar"		
 
 {
-    text[NORMAL] = @bg_color
-	text[PRELIGHT] = @bg_color
-	text[SELECTED] = @bg_color
-	fg[NORMAL] = @bg_color
-	fg[PRELIGHT] = @bg_color
-	fg[SELECTED] = @bg_color
+    text[NORMAL] = @text_color
+	text[PRELIGHT] = @selected_bg_color
+	text[SELECTED] = @selected_bg_color
+	fg[NORMAL] = @fg_color
+	fg[PRELIGHT] = @selected_bg_color
+	fg[SELECTED] = @selected_bg_color
   xthickness			= 1
   ythickness			= 1
 	engine "pixmap"
@@ -139,29 +139,31 @@ style "menubar"
 style "menubar-item"		
 
 {
-    text[NORMAL] = @bg_color
-	text[PRELIGHT] = @bg_color
-	text[SELECTED] = @bg_color
-	fg[NORMAL] = @bg_color
-	fg[PRELIGHT] = @bg_color
-	fg[SELECTED] = @bg_color
+    text[NORMAL] = @text_color
+	text[PRELIGHT] = @selected_bg_color
+	text[SELECTED] = @selected_bg_color
+	fg[NORMAL] = @fg_color
+	fg[PRELIGHT] = @fg_color
+	fg[SELECTED] = @fg_color
   xthickness			= 1
   ythickness			= 1
 }
 
 style "chrome_menu"
 {
-        bg[NORMAL] = @text_color
+        bg[NORMAL] = @base_color
 }
 
 style "chrome_menu_item"
 {
-        bg[NORMAL] = @text_color
-        fg[NORMAL] = @bg_color
-        bg[SELECTED] = @text_color
-        bg[INSENSITIVE] = shade (1.08, @text_color)
-        fg[SELECTED] = @bg_color
+        bg[NORMAL] = @base_color
+        fg[NORMAL] = @text_color
+        bg[SELECTED] = @selected_bg_color
+        bg[INSENSITIVE] = shade (1.08, @base_color)
+        fg[SELECTED] = @selected_fg_color
         fg[INSENSITIVE] = shade (1.08, @text_color)
+		text[PRELIGHT] = @selected_fg_color
+		text[SELECTED] = @selected_fg_color
         xthickness			= 4
         ythickness			= 4
 

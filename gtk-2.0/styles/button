@@ -3,9 +3,13 @@ style "button"
 	xthickness = 4
 	ythickness = 4
 	fg[NORMAL] = @text_color
-	fg[PRELIGHT] = @text_color
-	fg[ACTIVE] = @text_color
+	fg[PRELIGHT] = @selected_bg_color
+	fg[ACTIVE] = @selected_bg_color
 	fg[INSENSITIVE] = mix (0.3, @base_color, @text_color)
+	bg[NORMAL] = @bg_color
+	bg[PRELIGHT] = @bg_color
+	bg[ACTIVE] = @bg_color
+	bg[INSENSITIVE] = @bg_color
   engine "pixmap"
   {
 		image
