@@ -197,12 +197,12 @@ EvSidebar GtkToggleButton.button:active {
 .linked .button:prelight,
 .linked .button:focus:active {
     background-color: @cyan;
-    color: @button_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 .linked .button:checked:checked {
     background-color: @theme_selected_bg_color;
-    color: @button_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 .linked GtkComboBox .button,
