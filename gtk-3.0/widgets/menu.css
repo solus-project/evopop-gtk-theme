@@ -1,6 +1,7 @@
 /********
  * menu *
  ********/
+
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
@@ -67,7 +68,7 @@ GtkComboBox .menu {
     border-color: @button_bg_color;
     background-color: @button_bg_color;
     background-image: none;
-    color: shade(@theme_base_color, 0.95);
+    color: button_fg_color;
 }
 
 .menubar .menuitem *:hover {
