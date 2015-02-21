@@ -156,6 +156,7 @@
 }
 
 .radio:active:insensitive,
+.radio:checked:insensitive,
 .radio row:selected:active:insensitive,
 .radio row:selected:focus:active:insensitive {
     -gtk-icon-source: url("assets/radio-selected-insensitive.svg");

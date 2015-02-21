@@ -8,25 +8,29 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    viewBox="0 0 16 16"
-   id="svg5232"
+   id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
-   sodipodi:docname="checkbox-mixed.svg">
+   sodipodi:docname="checkbox-mixed.svg"
+   inkscape:export-filename="/home/xylon/.themes/iris-light/gtk-3.0/assets/checkbox-checked.png"
+   inkscape:export-xdpi="720"
+   inkscape:export-ydpi="720">
   <metadata
-     id="metadata5246">
+     id="metadata16">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs5244" />
+     id="defs14" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -36,37 +40,38 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
+     inkscape:window-width="959"
      inkscape:window-height="1001"
-     id="namedview5242"
+     id="namedview12"
      showgrid="false"
-     inkscape:zoom="25.707889"
-     inkscape:cx="3.8279669"
-     inkscape:cy="7.5634153"
-     inkscape:window-x="0"
+     inkscape:zoom="22.627417"
+     inkscape:cx="6.6498549"
+     inkscape:cy="13.962694"
+     inkscape:window-x="960"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg5232" />
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
   <rect
-     id="rect5236"
-     style="fill:#f9f9f9"
-     height="14"
-     rx="1"
-     y="1"
-     x="1"
-     width="14" />
+     style="fill:#2cbae5;fill-opacity:1;stroke:none;stroke-width:0.93526953000000002;stroke-opacity:1"
+     id="rect2993"
+     width="16"
+     height="16.000002"
+     x="0"
+     y="-9.5367432e-07"
+     rx="8"
+     ry="8" />
   <rect
      id="rect5240"
-     style="fill:#2cbae5;fill-opacity:1"
+     style="fill:#000000;fill-opacity:0.22745098"
      height="2"
-     y="6.9998608"
-     x="4"
+     y="7.3544073"
+     x="4.3085046"
      width="8" />
   <rect
-     style="fill:none;stroke:#c8c8c8;stroke-width:0.93818742;stroke-opacity:1"
-     id="rect2993"
-     width="15.061811"
-     height="15.161813"
-     x="0.46909371"
-     y="0.36909351" />
+     width="8"
+     x="4.1317277"
+     y="7.1334376"
+     height="2"
+     style="fill:#ffffff;fill-opacity:1"
+     id="rect4142" />
 </svg>

@@ -14,7 +14,7 @@
    height="25"
    id="svg7539"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="switch-on.svg">
   <defs
      id="defs7541">
@@ -313,7 +313,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="16.499159"
-     inkscape:cx="-17.402922"
+     inkscape:cx="-28.797442"
      inkscape:cy="11.028627"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -373,6 +373,6 @@
        height="11"
        width="49.400002"
        id="rect3137"
-       style="opacity:0.50000000000000000;fill:#27b9e5;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none" />
+       style="opacity:0.5;fill:#ffffff;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none" />
   </g>
 </svg>

@@ -14,8 +14,8 @@
    height="25"
    id="svg7539"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
-   sodipodi:docname="switch-off.svg">
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="switch-insensitive.svg">
   <defs
      id="defs7541">
     <marker
@@ -313,7 +313,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="16.499159"
-     inkscape:cx="-7.9865724"
+     inkscape:cx="-19.381093"
      inkscape:cy="11.028627"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -324,7 +324,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1920"
-     inkscape:window-height="1002"
+     inkscape:window-height="1001"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -347,7 +347,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -357,7 +357,7 @@
      inkscape:groupmode="layer"
      transform="translate(-116,93)">
     <rect
-       style="fill:#b8b8b8;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#dee3ec;fill-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect4620"
        width="49.400002"
        height="11"

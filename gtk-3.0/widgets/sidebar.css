@@ -25,10 +25,7 @@
     color: @theme_selected_fg_color;
     background-color: @theme_selected_bg_color;
 }
-.sidebar .list-row { 				/*temp fix for evo-assist*/
-    background-color: transparent;
-    color: @theme_fg_color;
-}
+
 .sidebar GtkScrolledWindow .list-row {  	/*scrolled = regular*/
     border-radius: 0;
     background-color: transparent;
@@ -47,8 +44,8 @@
 .sidebar .list-row:hover,
 .sidebar .list-row:hover:active,
 .sidebar .list-row:focus {
-    background-color: transparent;
-    color: @theme_selected_bg_color;
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
 
 .sidebar .seperator {

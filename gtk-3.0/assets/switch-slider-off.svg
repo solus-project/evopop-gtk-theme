@@ -14,7 +14,7 @@
    width="22"
    height="23"
    id="svg2"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="switch-slider-off.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -29,9 +29,9 @@
      inkscape:window-height="1001"
      id="namedview2574"
      showgrid="true"
-     inkscape:zoom="17.999081"
-     inkscape:cx="-2.6326804"
-     inkscape:cy="14.869839"
+     inkscape:zoom="35.998162"
+     inkscape:cx="5.6403183"
+     inkscape:cy="10.434734"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -10558,7 +10558,7 @@
        fy="11"
        r="10.952381"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.052174,0,0,1.0521738,-0.57391308,0.4260896)" />
+       gradientTransform="matrix(1.0030169,0,0,1.0043453,-0.54710012,0.45217789)" />
   </defs>
   <metadata
      id="metadata7">
@@ -11514,13 +11514,13 @@
      transform="translate(-117.00003,-22.820144)"
      id="layer1" />
   <path
-     d="M 11.000001,1.0000027 C 4.9305774,1.0000027 0,5.9305797 0,12 0,18.069422 4.9305774,23 11.000001,23 17.069422,23 22.00001,18.069422 22,12 22,5.9305797 17.069422,1.0000027 11.000001,1.0000027 z"
+     d="M 10.486086,1.0000027 C 4.700223,1.0000027 0,5.7064511 0,11.499975 0,17.2935 4.700223,21.999949 10.486086,21.999949 c 5.78586,0 10.486093,-4.706449 10.486084,-10.499974 0,-5.7935239 -4.700224,-10.4999723 -10.486084,-10.4999723 z"
      id="path2555-7-1-7-0"
-     style="color:#000000;fill:url(#radialGradient6366);fill-opacity:1;stroke:none;stroke-width:0.99567103;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#radialGradient6366);fill-opacity:1;stroke:none;stroke-width:0.99567103;marker:none;enable-background:accumulate"
      inkscape:connector-curvature="0" />
   <path
      inkscape:connector-curvature="0"
-     style="color:#000000;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:0.95454543999999997;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.95454544;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      id="path6358"
      d="M 10.5,1.977274 C 5.2582257,1.977274 1,6.2405934 1,11.488636 1,16.73668 5.2582257,21 10.5,21 15.741774,21 20.000009,16.73668 20,11.488636 20,6.2405934 15.741774,1.977274 10.5,1.977274 z" />
 </svg>

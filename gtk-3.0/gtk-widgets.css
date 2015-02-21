@@ -410,7 +410,8 @@ GtkViewport.frame {
     border-style: solid;
     border-color: shade(@theme_base_color, 0.8);
     border-width: 0 1px 1px 1px;
-    border-radius: 0 0 0px 0px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding: 8px;
     background-color: @theme_base_color;
     background-image: none;

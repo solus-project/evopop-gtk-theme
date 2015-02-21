@@ -10,23 +10,27 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
-   sodipodi:docname="checkbox-checked-insensitive.svg">
+   sodipodi:docname="checkbox-checked-insensitive.svg"
+   inkscape:export-filename="/home/xylon/.themes/iris-light/gtk-3.0/assets/checkbox-checked.png"
+   inkscape:export-xdpi="720"
+   inkscape:export-ydpi="720">
   <metadata
-     id="metadata18">
+     id="metadata16">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs16" />
+     id="defs14" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -36,28 +40,41 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="840"
-     id="namedview14"
+     inkscape:window-width="959"
+     inkscape:window-height="1001"
+     id="namedview12"
      showgrid="false"
-     inkscape:zoom="26.970876"
-     inkscape:cx="5.3634589"
-     inkscape:cy="5.6995999"
-     inkscape:window-x="0"
-     inkscape:window-y="26"
-     inkscape:window-maximized="1"
+     inkscape:zoom="22.627417"
+     inkscape:cx="10.281336"
+     inkscape:cy="1.5883257"
+     inkscape:window-x="960"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
   <rect
-     style="fill:#e1e1e1;stroke:#c8c8c8;stroke-width:0.93526953000000002;stroke-opacity:1;fill-opacity:1"
+     style="fill:#bfc4cb;fill-opacity:1;stroke:none;stroke-width:0.93526953;stroke-opacity:1"
      id="rect2993"
-     width="15.06473"
-     height="15.064731"
-     x="0.46763515"
-     y="0.46763468" />
+     width="16"
+     height="16.000002"
+     x="0"
+     y="-9.5367432e-07"
+     rx="8"
+     ry="8" />
   <path
-     style="fill:none;stroke:#bebebe;stroke-width:1.43271386999999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-     d="m 4.966357,8 2.022429,2.283643 4.044857,-4.5672862"
+     sodipodi:nodetypes="ccc"
+     inkscape:connector-curvature="0"
+     id="path4419"
+     d="M 4.4051118,8.3386456 7.072103,10.770701 11.539202,5.5509456"
+     style="fill:none;stroke:#000000;stroke-width:1.29583812;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.22891566" />
+  <path
+     style="fill:none;stroke:#ffffff;stroke-width:1.29583812;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 4.4051118,7.9238132 7.072103,10.355869 11.539202,5.1361132"
      id="path3785"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+     d="M 11.043434,4.7090171 12.047382,5.5616858 7.1289062,11.285156 3.9648438,8.4023438 4.8359375,7.4414062 7.015625,9.4257813 Z"
+     id="path4424"
+     inkscape:connector-curvature="0" />
 </svg>

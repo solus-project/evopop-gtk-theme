@@ -14,7 +14,7 @@
    width="22"
    height="23"
    id="svg2"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="switch-slider-on.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -30,7 +30,7 @@
      id="namedview2574"
      showgrid="true"
      inkscape:zoom="35.998161"
-     inkscape:cx="11.8599"
+     inkscape:cx="6.637411"
      inkscape:cy="9.4336284"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -10558,7 +10558,7 @@
        fy="11"
        r="10.952381"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.052174,0,0,1.0521738,-0.57391308,0.4260896)" />
+       gradientTransform="matrix(1.0043455,0,0,1.0043453,-0.54782479,0.45217789)" />
   </defs>
   <metadata
      id="metadata7">
@@ -11514,9 +11514,9 @@
      transform="translate(-117.00003,-22.820144)"
      id="layer1" />
   <path
-     d="M 11.000001,1.0000027 C 4.9305774,1.0000027 0,5.9305797 0,12 0,18.069422 4.9305774,23 11.000001,23 17.069422,23 22.00001,18.069422 22,12 22,5.9305797 17.069422,1.0000027 11.000001,1.0000027 z"
+     d="M 10.499975,1.0000027 C 4.7064488,1.0000027 0,5.7064511 0,11.499975 0,17.2935 4.7064488,21.999949 10.499975,21.999949 c 5.793525,0 10.499983,-4.706449 10.499974,-10.499974 0,-5.7935239 -4.706449,-10.4999723 -10.499974,-10.4999723 z"
      id="path2555-7-1-7-0"
-     style="color:#000000;fill:url(#radialGradient6366);fill-opacity:1;stroke:none;stroke-width:0.99567103;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:url(#radialGradient6366);fill-opacity:1;stroke:none;stroke-width:0.99567103;marker:none;enable-background:accumulate"
      inkscape:connector-curvature="0" />
   <path
      inkscape:connector-curvature="0"

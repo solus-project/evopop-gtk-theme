@@ -10,7 +10,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
    sodipodi:docname="radio-selected.svg">
@@ -26,7 +26,22 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs14" />
+     id="defs14">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path4139"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:none;stroke-width:1pt;stroke-opacity:1;fill:#2cbae5;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -41,7 +56,7 @@
      id="namedview12"
      showgrid="false"
      inkscape:zoom="9.5356445"
-     inkscape:cx="-38.998125"
+     inkscape:cx="5.1520108"
      inkscape:cy="-3.946845"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -56,7 +71,7 @@
      inkscape:connector-curvature="0"
      id="path8"
      d="M 8,0 C 3.581722,0 0,3.581722 0,8 c 0,4.418278 3.581722,8 8,8 4.418278,0 8,-3.581722 8,-8 C 16,3.581722 12.418278,0 8,0 z m 0,1 c 3.865993,0 7,3.1340068 7,7 0,3.865993 -3.134007,7 -7,7 C 4.1340068,15 1,11.865993 1,8 1,4.1340068 4.1340068,1 8,1 z"
-     style="fill:#c8c8c8;fill-opacity:1" />
+     style="fill:#2cbae5;fill-opacity:1;stroke-width:0.4;stroke-miterlimit:4;stroke-dasharray:none;marker-start:" />
   <path
      inkscape:connector-curvature="0"
      id="path10"
