@@ -9,7 +9,6 @@
     background-color: @button_bg_color;
     background-image: none;
     color: @theme_text_color;
-    font: bold;
     border: none;
     border-radius: 4px;
 }
@@ -18,17 +17,16 @@
 	transition: 150ms ease-in;
 }
 
-.button:active,
-.button:active:hover,
-.button:checked {
-    color: @theme_selected_bg_color;
-}
-
 .button:hover {
     background-color: @button_bg_color;
     color: mix(#fff, @theme_text_color, 0.75);
 }
 
+.button:active,
+.button:active:hover,
+.button:checked {
+    color: @theme_selected_bg_color;
+}
 
 .button:active:insensitive {
     color: shade (@theme_selected_bg_color, 1.15);
@@ -112,13 +110,14 @@ EvSidebar GtkToggleButton.button:active {
 .button.flat:hover,
 .action-bar .button:hover {
     transition: color 150ms ease-in;
-    border: none;
+    border: 1px solid @toolbar_bg_color;
     color: shade(@theme_selected_bg_color, 1.15);
 }
 
 .toolbar .button.flat,
 .toolbar .button.flat:focus {
     transition: all 150ms linear;
+    border-radius: 5px;
     border: 1px solid @toolbar_bg_color;
     background-color: @toolbar_bg_color;
 }
@@ -139,7 +138,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button:checked,
 .action-bar .button:checked:focus {
     transition: color 150ms ease-in;
-    border: none;
+    border: 1px solid @toolbar_bg_color;
     color: shade(@theme_selected_bg_color, 0.97);
     background-color: transparent;
 }
@@ -150,6 +149,7 @@ EvSidebar GtkToggleButton.button:active {
 .toolbar .button.flat:active:checked:focus,
 .toolbar .button.flat:active:hover {
     transition: all 150ms linear;
+    border-radius: 5px;
     border: 1px solid alpha(@theme_fg_color, 0.4);
     background-color: shade(@toolbar_bg_color, 0.92);
     color: @theme_text_color;
@@ -158,7 +158,7 @@ EvSidebar GtkToggleButton.button:active {
 .button.flat:active:hover,
 .action-bar .button:active:hover {
     transition: color 150ms ease-in;
-    border: none;
+    border: 1px solid alpha(@theme_fg_color, 0.4);
     color: shade (@theme_selected_bg_color, 1.15);
 }
 
@@ -364,4 +364,9 @@ EvSidebar GtkToggleButton.button:active {
 .titlebar .suggested-action.button:hover:active {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
+}
+
+.suggested-action.button:insensitive,
+.titlebar .suggested-action.button:insensitive {
+    background-color: mix(@theme_bg_color,@selected_bg_color,0.3);
 }

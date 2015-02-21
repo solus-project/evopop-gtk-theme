@@ -9,6 +9,7 @@
 
 .header-bar .button.text-button {
     padding: 6px 6px;
+    font: bold;
 }
 
 .header-bar .button.image-button {

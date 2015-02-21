@@ -253,7 +253,7 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
 }
 
 GdTaggedEntry *{
-	color: @theme_fg_color;
+    color: @theme_fg_color;
 }
 /***************
  * font-viewer *

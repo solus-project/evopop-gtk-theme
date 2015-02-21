@@ -26,7 +26,7 @@
 .message-dialog.csd .dialog-action-area .button:checked,
 .message-dialog.csd .dialog-action-area .button:active:focus,
 .message-dialog.csd .dialog-action-area .button:checked:focus {
-    color: @theme_bg_color;
+    color: @theme_selected_fg_color;
     background-color: shade(@theme_selected_bg_color, 1.15);
 }
 
