@@ -14,11 +14,6 @@ Alternatively, extract it to the ".themes" directory in your home folder if you 
 
 Use Budgie settings to change the theme to EvoPop.
 
-###TODO
-- Start work on GTK2 theme
-- Start work on Metacity theme
-- Gtk3: improve tabs, buttons,...
-
 ---
 
 License: GPL-3.0+
