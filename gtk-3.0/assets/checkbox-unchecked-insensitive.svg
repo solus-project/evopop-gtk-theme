@@ -5,6 +5,7 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    viewBox="0 0 16 16"
@@ -14,7 +15,7 @@
    width="100%"
    height="100%"
    sodipodi:docname="checkbox-unchecked-insensitive.svg"
-   inkscape:export-filename="/home/xylon/.themes/iris-light/gtk-3.0/assets/checkbox-checked.png"
+   inkscape:export-filename="/home/poltertec/Downloads/test.png"
    inkscape:export-xdpi="720"
    inkscape:export-ydpi="720">
   <metadata
@@ -30,7 +31,31 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs14" />
+     id="defs14">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4143">
+      <stop
+         style="stop-color:#dee3ec;stop-opacity:1"
+         offset="0"
+         id="stop4145" />
+      <stop
+         style="stop-color:#bfc4cb;stop-opacity:1"
+         offset="1"
+         id="stop4147" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4143"
+       id="radialGradient4149"
+       cx="8.0441894"
+       cy="8.0623745"
+       fx="8.0441894"
+       fy="8.0623745"
+       r="8.0000002"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9970703,0,0,0.9970703,-0.03112052,-0.03106725)" />
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -40,24 +65,28 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="959"
-     inkscape:window-height="1000"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
      id="namedview12"
      showgrid="false"
-     inkscape:zoom="22.627417"
-     inkscape:cx="1.9728313"
-     inkscape:cy="5.1238596"
-     inkscape:window-x="959"
+     inkscape:zoom="16"
+     inkscape:cx="2.7679999"
+     inkscape:cy="14.112377"
+     inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="false" />
   <rect
-     style="fill:#bfc4cb;fill-opacity:1;stroke:none;stroke-width:0.93526953;stroke-opacity:1"
-     id="rect2993"
-     width="16"
-     height="16.000002"
-     x="0"
-     y="-9.5367432e-07"
-     rx="8"
-     ry="8" />
+     style="fill:url(#radialGradient4149);fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     id="rect4133"
+     width="15.953115"
+     height="15.953115"
+     x="0.01294421"
+     y="0.031129243"
+     rx="5.1055107"
+     ry="3.998131"
+     inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
+     inkscape:export-xdpi="720"
+     inkscape:export-ydpi="720" />
 </svg>

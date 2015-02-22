@@ -3,14 +3,16 @@
  **********/
 
 .button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
     padding: 6px 8px;
     background-color: @button_bg_color;
+    border: 1px solid @theme_bg_color;
     background-image: none;
     color: @theme_text_color;
     border: none;
     border-radius: 4px;
+
+    -GtkWidget-focus-padding: 1;
+    -GtkWidget-focus-line-width: 0;
 }
 
 .button *{
@@ -18,14 +20,15 @@
 }
 
 .button:hover {
-    background-color: @button_bg_color;
-    color: mix(#fff, @theme_text_color, 0.75);
+    background-color: @cyan;
+    color: @theme_selected_fg_color;
 }
 
 .button:active,
 .button:active:hover,
 .button:checked {
-    color: @theme_selected_bg_color;
+    background-color: shade(@cyan, 0.9);
+    color: @theme_selected_fg_color;
 }
 
 .button:active:insensitive {
@@ -101,6 +104,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button,
 .osd .button,
 .osd.button {
+    border-radius: 4px;
     border: 1px solid @theme_bg_color;
     background-color: transparent;
     background-image: none;
