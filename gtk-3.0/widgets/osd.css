@@ -21,7 +21,7 @@ GtkOverlay.osd {
     border-width: 0px;
     border-style: none;
     border-radius: 0px;
-    background-color: shade(@osd_bg, 1.08);
+    background-color: @osd_bg;
     background-image: none;
     color: @osd_fg;
 }
@@ -29,8 +29,9 @@ GtkOverlay.osd {
 .osd.button:prelight,
 .osd.button:hover,
 .osd .button:hover {
+    border-width: 0px;
     border-color: shade(@osd_bg, 0.7);
-    background-color: shade(@osd_bg, 1.10);
+    background-color: @osd_bg;
     background-image: none;
 }
 
@@ -45,6 +46,7 @@ GtkOverlay.osd {
 .osd.button:active:hover,
 .osd .button:active:hover,
 .osd GtkMenuButton.button:active:hover {
+    border-width: 0px;
     border-color: shade(@osd_bg, 0.7);
 }
 
