@@ -36,5 +36,9 @@ row:selected:focus {
     background-color:  @theme_selected_bg_color;
     color: @theme_selected_fg_color;
     background-image: none;
-    font-weight: bold;
+    font: bold;
+}
+
+row:selected:selected {
+    color: @theme_selected_bg_color;
 }

@@ -101,16 +101,17 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button,
 .osd .button,
 .osd.button {
-    border: none;
+    border: 1px solid transparent;
     background-color: transparent;
     background-image: none;
     color: @theme_fg_color;
+    font: bold;
 }
 
 .button.flat:hover,
 .action-bar .button:hover {
     transition: color 150ms ease-in;
-    border: 1px solid @toolbar_bg_color;
+    border: 1px solid transparent;
     color: shade(@theme_selected_bg_color, 1.15);
 }
 
@@ -158,7 +159,7 @@ EvSidebar GtkToggleButton.button:active {
 .button.flat:active:hover,
 .action-bar .button:active:hover {
     transition: color 150ms ease-in;
-    border: 1px solid alpha(@theme_fg_color, 0.4);
+    border: 1px solid transparent;
     color: shade (@theme_selected_bg_color, 1.15);
 }
 
