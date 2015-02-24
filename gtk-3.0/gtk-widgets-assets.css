@@ -142,6 +142,10 @@
     -gtk-icon-source: url("assets/radio-unselected.svg");
 }
 
+.radio:hover {
+    -gtk-icon-source: url("assets/radio-unselected-hover.svg");
+}
+
 .radio:insensitive,
 .radio row:selected:insensitive,
 .radio row:selected:focus:insensitive {

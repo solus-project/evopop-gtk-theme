@@ -5,7 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    viewBox="0 0 16 16"
@@ -31,31 +30,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs14">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient4143">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:1"
-         offset="0"
-         id="stop4145" />
-      <stop
-         style="stop-color:#f8f8f8;stop-opacity:1"
-         offset="1"
-         id="stop4147" />
-    </linearGradient>
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4143"
-       id="radialGradient4193"
-       cx="7.9895019"
-       cy="8.007687"
-       fx="7.9895019"
-       fy="8.007687"
-       r="7.9765627"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.0029383,0,0,1.0029383,-0.01297723,-0.03121571)" />
-  </defs>
+     id="defs14" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -70,7 +45,7 @@
      id="namedview12"
      showgrid="true"
      inkscape:zoom="11.313709"
-     inkscape:cx="10.090436"
+     inkscape:cx="-6.5265726"
      inkscape:cy="1.7763135"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -82,7 +57,7 @@
        id="grid4137" />
   </sodipodi:namedview>
   <rect
-     style="fill:url(#radialGradient4193);fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#f8f8f8;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
      width="15.99999"
      height="15.99999"

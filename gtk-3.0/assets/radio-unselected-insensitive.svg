@@ -15,18 +15,19 @@
    height="100%"
    sodipodi:docname="radio-unselected-insensitive.svg">
   <metadata
-     id="metadata14">
+     id="metadata16">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs12" />
+     id="defs14" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -36,25 +37,29 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
+     inkscape:window-width="959"
      inkscape:window-height="1001"
-     id="namedview10"
-     showgrid="false"
-     inkscape:zoom="38.142578"
-     inkscape:cx="-1.2023145"
-     inkscape:cy="8"
-     inkscape:window-x="0"
+     id="namedview12"
+     showgrid="true"
+     inkscape:zoom="12.843736"
+     inkscape:cx="19.799701"
+     inkscape:cy="-2.737723"
+     inkscape:window-x="960"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg2" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path6"
-     d="m 7.9368654,0.6212 c 4.1798076,0 7.5682106,3.3036 7.5682106,7.3788 0,4.0752 -3.388403,7.3788 -7.5682106,7.3788 -4.1798073,0 -7.56821074,-3.3036 -7.56821074,-7.3788 0,-4.0752 3.38840344,-7.3788 7.56821074,-7.3788 z"
-     style="fill:#dee3ec;fill-opacity:1" />
-  <path
-     inkscape:connector-curvature="0"
-     id="path8"
-     d="M 8,0 C 3.581722,0 0,3.581722 0,8 c 0,4.418278 3.581722,8 8,8 4.418278,0 8,-3.581722 8,-8 C 16,3.581722 12.418278,0 8,0 Z m 0,1 c 3.865993,0 7,3.1340068 7,7 0,3.865993 -3.134007,7 -7,7 C 4.1340068,15 1,11.865993 1,8 1,4.1340068 4.1340068,1 8,1 Z"
-     style="fill:#bfc4cb;fill-opacity:1" />
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3336" />
+  </sodipodi:namedview>
+  <g
+     transform="translate(0 -1036.3622)"
+     id="g4">
+    <circle
+       style="opacity:1;fill:#bfc4cb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
+       id="path4151"
+       cx="8"
+       cy="1044.3622"
+       r="8" />
+  </g>
 </svg>
