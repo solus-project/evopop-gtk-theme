@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -53,7 +53,8 @@
        fx="7.9895019"
        fy="8.007687"
        r="7.9765627"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0029383,0,0,1.0029383,-0.01297723,-0.03121571)" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -67,24 +68,28 @@
      inkscape:window-width="1920"
      inkscape:window-height="1001"
      id="namedview12"
-     showgrid="false"
-     inkscape:zoom="16"
-     inkscape:cx="-8.9195001"
-     inkscape:cy="14.112377"
+     showgrid="true"
+     inkscape:zoom="11.313709"
+     inkscape:cx="10.090436"
+     inkscape:cy="1.7763135"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2"
-     showguides="false" />
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4137" />
+  </sodipodi:namedview>
   <rect
      style="fill:url(#radialGradient4193);fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
-     width="15.953115"
-     height="15.953115"
-     x="0.01294421"
-     y="0.031129243"
-     rx="5.1055107"
-     ry="3.998131"
+     width="15.99999"
+     height="15.99999"
+     x="5.0146914e-06"
+     y="5.0035483e-06"
+     rx="3.9999952"
+     ry="3.999995"
      inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
      inkscape:export-xdpi="720"
      inkscape:export-ydpi="720" />

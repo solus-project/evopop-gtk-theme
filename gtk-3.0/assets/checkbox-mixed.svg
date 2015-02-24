@@ -34,27 +34,25 @@
      id="defs14">
     <linearGradient
        inkscape:collect="always"
-       id="linearGradient4143">
+       id="linearGradient4153">
       <stop
-         style="stop-color:#44c2e8;stop-opacity:1"
+         style="stop-color:#ffffff;stop-opacity:0.5"
          offset="0"
-         id="stop4145" />
+         id="stop4155" />
       <stop
-         style="stop-color:#19a3cd;stop-opacity:1"
+         style="stop-color:#072c37;stop-opacity:0.2"
          offset="1"
-         id="stop4147" />
+         id="stop4157" />
     </linearGradient>
-    <radialGradient
+    <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4143"
-       id="radialGradient4149"
-       cx="8.0441894"
-       cy="8.0623745"
-       fx="8.0441894"
-       fy="8.0623745"
-       r="8.0000002"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9970703,0,0,0.9970703,-0.03112052,-0.03106725)" />
+       xlink:href="#linearGradient4153"
+       id="linearGradient4159"
+       x1="8"
+       y1="0"
+       x2="8"
+       y2="16"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -65,41 +63,49 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
+     inkscape:window-width="959"
      inkscape:window-height="1001"
      id="namedview12"
-     showgrid="false"
-     inkscape:zoom="32"
-     inkscape:cx="-4.6802426"
-     inkscape:cy="6.844175"
-     inkscape:window-x="0"
+     showgrid="true"
+     inkscape:zoom="22.627417"
+     inkscape:cx="3.7982041"
+     inkscape:cy="8.3280579"
+     inkscape:window-x="960"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg2"
-     showguides="false" />
+     showguides="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4139" />
+  </sodipodi:namedview>
   <rect
-     style="fill:url(#radialGradient4149);fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#23acd5;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
-     width="15.953115"
-     height="15.953115"
-     x="0.01294421"
-     y="0.031129243"
-     rx="5.1055107"
-     ry="3.998131"
+     width="15.99999"
+     height="15.99999"
+     x="4.9999999e-06"
+     y="4.5367433e-06"
+     rx="3.9999952"
+     ry="3.9999955"
      inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
      inkscape:export-xdpi="720"
      inkscape:export-ydpi="720" />
+  <path
+     style="fill:url(#linearGradient4159);fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     d="M 4 0 C 1.7840026 0 0 1.7840025 0 4 L 0 12 C 0 14.215997 1.7840026 16 4 16 L 12 16 C 14.215997 16 16 14.215997 16 12 L 16 4 C 16 1.7840025 14.215997 0 12 0 L 4 0 z M 4.25 0.5 L 11.75 0.5 C 13.827497 0.5 15.5 2.1725025 15.5 4.25 L 15.5 11.75 C 15.5 13.827497 13.827497 15.5 11.75 15.5 L 4.25 15.5 C 2.1725026 15.5 0.5 13.827497 0.5 11.75 L 0.5 4.25 C 0.5 2.1725025 2.1725026 0.5 4.25 0.5 z "
+     id="rect4148" />
   <rect
      id="rect5240"
      style="fill:#000000;fill-opacity:0.22745098"
      height="2.1583605"
-     y="7.0400529"
-     x="3.6705608"
+     y="7.0558033"
+     x="3.6576216"
      width="8.7983799" />
   <rect
      width="8.7983799"
-     x="3.4761419"
-     y="6.8015866"
+     x="3.4632027"
+     y="6.817337"
      height="2.1583605"
      style="fill:#ffffff;fill-opacity:1"
      id="rect4142" />
