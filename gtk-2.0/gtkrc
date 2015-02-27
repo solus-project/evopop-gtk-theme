@@ -188,10 +188,10 @@ style "murrine-button"  = "murrine-wider" {
 	bg[PRELIGHT] = @base_color
 	bg[ACTIVE] = @base_color
 	bg[INSENSITIVE] = @base_color
-	bg[SELECTED] = @base_color
+	bg[SELECTED] = @selected_bg_color
 	
-	fg[ACTIVE] = @base_color
-	fg[INSENSITIVE] = @base_color
+	fg[ACTIVE] = @text_color
+	fg[INSENSITIVE] = @text_color
 	fg[SELECTED] = @base_color
 	
 	engine "murrine" {
