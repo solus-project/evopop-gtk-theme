@@ -179,7 +179,7 @@
 }
 
 .menuitem.check {
-	-gtk-icon-source: none;
+    -gtk-icon-source: none;
 }
 
 .menuitem.check:active,
@@ -213,7 +213,7 @@
 }
 
 .menuitem.radio {
-	-gtk-icon-source: none;
+    -gtk-icon-source: none;
 }
 
 .menuitem.radio:active,
@@ -270,7 +270,6 @@ GtkSwitch.trough:active {
 GtkSwitch.slider {
     background-image: url("assets/switch-slider-off.svg");
 }
-
 
 GtkSwitch.slider:active {
     background-image: url("assets/switch-slider-on.svg");

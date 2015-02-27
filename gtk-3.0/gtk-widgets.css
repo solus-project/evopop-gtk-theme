@@ -90,6 +90,7 @@ GtkClutterOffscreen {
     -gtk-image-effect: dim;
 }
 
+
 *:hover {
     -gtk-image-effect: highlight;
 }
@@ -216,26 +217,6 @@ GtkLabel,
 GtkLabel:active,
 GtkLabel:insensitive {
     background-color: transparent;
-}
-
-/*******************
- * symbolic images *
- *******************/
-.image,
-.view.image {
-    color: alpha(@theme_fg_color, 0.5);
-}
-
-.image:hover,
-.view.image:hover {
-    color: @theme_fg_color;
-}
-
-.image:selected,
-.image:selected:hover,
-.view.image:selected,
-.view.image:selected:hover {
-    color: @theme_base_color;
 }
 
 /*****************
@@ -445,7 +426,6 @@ GtkBubbleWindow .toolbar {
 }
 
 .list-row.button {
-    
     font-weight: normal;
     background-color: @theme_bg_color; 
     color: @theme_fg_color;
