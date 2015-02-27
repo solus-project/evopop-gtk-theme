@@ -6,6 +6,7 @@
     background-color: @button_bg_color;
     background-image: none;
     color: @theme_text_color;
+    font: bold;
     border: none;
     border-radius: 4px;
 
@@ -41,7 +42,7 @@ BackgroundBox .button {
 
 BackgroundBox .button:hover {
     transition: none; /*stop weird glitchiness*/
-    color: shade(@theme_selected_bg_color, 1.15);
+    color: @theme_selected_bg_color;
     background-color: @theme_bg_color;
 }
 

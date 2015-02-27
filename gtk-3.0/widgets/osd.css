@@ -7,7 +7,7 @@
 }
 
 GtkOverlay.osd {
-    background-color: @osd_bg;
+    background-color: transparent;
 }
 
 .osd.frame {

@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -44,9 +44,9 @@
      inkscape:window-height="1001"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="11.313709"
-     inkscape:cx="-6.5265726"
-     inkscape:cy="1.7763135"
+     inkscape:zoom="22.627417"
+     inkscape:cx="-3.5601258"
+     inkscape:cy="11.863592"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -54,18 +54,23 @@
      showguides="false">
     <inkscape:grid
        type="xygrid"
-       id="grid4137" />
+       id="grid4139" />
   </sodipodi:namedview>
   <rect
-     style="fill:#f8f8f8;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#f8f8f8;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
      width="15.99999"
      height="15.99999"
-     x="5.0146914e-06"
-     y="5.0035483e-06"
+     x="4.9999999e-06"
+     y="4.5367433e-06"
      rx="3.9999952"
-     ry="3.999995"
+     ry="3.9999955"
      inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
      inkscape:export-xdpi="720"
      inkscape:export-ydpi="720" />
+  <path
+     style="fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     d="M 4,0 C 1.7840026,0 0,1.7840025 0,4 l 0,8 c 0,2.215997 1.7840026,4 4,4 l 8,0 c 2.215997,0 4,-1.784003 4,-4 L 16,4 C 16,1.7840025 14.215997,0 12,0 L 4,0 Z m 0.25,0.5 7.5,0 c 2.077497,0 3.75,1.6725025 3.75,3.75 l 0,7.5 c 0,2.077497 -1.672503,3.75 -3.75,3.75 l -7.5,0 C 2.1725026,15.5 0.5,13.827497 0.5,11.75 l 0,-7.5 C 0.5,2.1725025 2.1725026,0.5 4.25,0.5 Z"
+     id="rect4148"
+     inkscape:connector-curvature="0" />
 </svg>
