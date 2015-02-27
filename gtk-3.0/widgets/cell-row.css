@@ -7,11 +7,11 @@
 }
 
 .cell:selected,
+.cell:selected:hover,
 .cell:selected:focus {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
-    background-image: none;
-    font-weight: bold;
+    background-image: linear-gradient(to bottom,@theme_selected_bg_color,@theme_selected_bg_color); #Fixes python issue (not proud of this)
 }
 
 .cell:selected.image:hover {
@@ -36,8 +36,4 @@ row:selected:focus {
     color: @theme_selected_fg_color;
     background-image: none;
     font: bold;
-}
-
-row:selected:selected {
-    color: @theme_selected_bg_color;
 }
