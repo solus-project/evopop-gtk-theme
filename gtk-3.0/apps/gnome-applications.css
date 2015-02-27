@@ -4,7 +4,7 @@
 PanelWidget,
 PanelApplet,
 PanelToplevel {
-    padding: 0;
+    padding: 1px;
     background-color: @panel_bg_color;
     background-image: none;
     color: @panel_fg_color;

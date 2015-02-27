@@ -10,23 +10,18 @@
 .message-dialog.csd .dialog-action-area .button {
     padding: 6px;
     border-radius: 0;
+    font:bold;
     color: @theme_fg_color;
     background-color: @theme_bg_color;
 }
 
-.message-dialog.csd .dialog-action-area .button:last-child {
-    border-right: none;
-}
-
 .message-dialog.csd .dialog-action-area .button:hover {
-    color: shade(@theme_selected_bg_color, 1.15);
+    color: @theme_selected_bg_color;
 }
 
 .message-dialog.csd .dialog-action-area .button:active,
 .message-dialog.csd .dialog-action-area .button:checked,
 .message-dialog.csd .dialog-action-area .button:active:focus,
 .message-dialog.csd .dialog-action-area .button:checked:focus {
-    color: @theme_selected_fg_color;
-    background-color: shade(@theme_selected_bg_color, 1.15);
+    color: @theme_selected_bg_color;
 }
-

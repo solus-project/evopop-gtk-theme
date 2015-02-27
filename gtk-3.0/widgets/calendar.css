@@ -1,7 +1,6 @@
 /************
  * Calendar *
  ************/
-
 GtkCalendar.button {
    color: @theme_fg_color;
 }
@@ -38,4 +37,3 @@ GtkCalendar:selected {
 GtkCalendar .button {
     padding-top: 0px;
 }
-
