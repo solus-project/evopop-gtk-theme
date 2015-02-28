@@ -563,7 +563,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_prelight">
-	<image filename="max_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
+	<image filename="max_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="maximize_glyph_unfocused_pressed">
@@ -578,7 +578,7 @@
 </draw_ops>
 
 <draw_ops name="maximize_unfocused_pressed">
-	<image filename="max_unfocused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
+	<image filename="max_focused_normal.svg" x="5" y="4" width="object_width" height="object_height" />
 </draw_ops>
 
 <draw_ops name="minimize_glyph_focused">
