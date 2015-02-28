@@ -217,14 +217,8 @@ GeditStatusMenuButton.button:active,
 GeditStatusMenuButton.button:active:hover {
     padding: 1px 6px 2px 4px;
     border-style: solid;
-    border-width: 0 1px;
+    border-width: 0px;
     border-radius: 0;
-}
-
-GeditStatusMenuButton.button:hover,
-GeditStatusMenuButton.button:active,
-GeditStatusMenuButton.button:active:hover {
-    border-color: shade(@theme_bg_color, 0.8);
 }
 
 GeditViewFrame .gedit-search-slider {
@@ -255,6 +249,7 @@ GeditFileBrowserWidget .primary-toolbar.toolbar  {
 GdTaggedEntry *{
     color: @theme_fg_color;
 }
+
 /***************
  * font-viewer *
  ***************/
