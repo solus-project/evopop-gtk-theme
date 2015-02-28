@@ -386,3 +386,11 @@ BaconVideoWidget .toolbar .button:first-child {
     border: solid 1px shade(@theme_bg_color, 0.81);
     box-shadow: none;
 }
+
+/**************
+ * Tweak Tool *
+ **************/
+
+.tweak:hover{
+    color: @theme_text_color;
+}
