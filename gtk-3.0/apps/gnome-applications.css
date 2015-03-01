@@ -340,7 +340,6 @@ GthToolbox .button:active {
 /****************
  * File chooser *
  ****************/
-
 GtkFileChooserWidget .action-bar {
 padding: 8px 6px;
 }
@@ -371,7 +370,6 @@ GtkFileChooserWidget .path-bar .button:checked {
 /*********
  * Totem *
  *********/
- 
 BaconVideoWidget .toolbar .button {
     box-shadow: none;
     border: solid 1px shade(@theme_bg_color, 0.81);
@@ -390,7 +388,17 @@ BaconVideoWidget .toolbar .button:first-child {
 /**************
  * Tweak Tool *
  **************/
-
 .tweak:hover{
     color: @theme_text_color;
+}
+
+/**************
+ * Calculator *
+ **************/
+MathButtons .button {
+    border-radius: 0px;
+}
+
+MathButtons GtkComboBox .button{
+    border-radius: 4px;
 }
