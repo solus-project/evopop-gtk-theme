@@ -267,10 +267,23 @@ GtkSwitch.trough:active {
     background-image: url("assets/switch-on.svg");
 }
 
+GtkSwitch.trough:insensitive,
+GtkSwitch.trough:active:insensitive {
+    background-image: url("assets/switch-insensitive.svg");
+}
+
 GtkSwitch.slider {
     background-image: url("assets/switch-slider-off.svg");
 }
 
+GtkSwitch.slider:insensitive {
+    background-image: url("assets/switch-slider-off-insensitive.svg");
+}
+
 GtkSwitch.slider:active {
     background-image: url("assets/switch-slider-on.svg");
+}
+
+GtkSwitch.slider:active:insensitive {
+    background-image: url("assets/switch-slider-on-insensitive.svg");
 }
