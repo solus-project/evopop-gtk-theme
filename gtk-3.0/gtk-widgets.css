@@ -418,16 +418,17 @@ GtkBubbleWindow .toolbar {
 /**************
  * List boxes *
  **************/
-
 /*Blatantly stolen code from Vertex theme*/
 
+.list,
 .list-row {
     font-weight: normal;
+    background-color: @theme_base_color; 
 }
 
 .list-row.button {
     font-weight: normal;
-    background-color: @theme_bg_color; 
+    background-color: @theme_base_color; 
     color: @theme_fg_color;
     border-radius: 0px;
 }
