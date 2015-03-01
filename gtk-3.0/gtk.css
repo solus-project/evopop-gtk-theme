@@ -58,9 +58,9 @@
 @define-color menu_selected_fg_color @selected_bg_color;
 
 /* osd */
-@define-color osd_base #fafafa;
-@define-color osd_fg #333333;
-@define-color osd_bg #fafafa;
+@define-color osd_base @base_color;
+@define-color osd_fg @fg_color;
+@define-color osd_bg @bg_color;
 
 /* window manager colors */
 @define-color wm_bg @header;
