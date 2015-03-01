@@ -37,7 +37,7 @@
 BackgroundBox .button {
     color: @theme_text_color;
     border-style: solid;
-    border-width: 1px;
+    border-width:0px;
 }
 
 BackgroundBox .button:hover {
@@ -102,6 +102,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button,
 .osd .button,
 .osd.button {
+    border: none;
     border-radius: 4px;
     background-color: transparent;
     background-image: none;
@@ -111,18 +112,21 @@ EvSidebar GtkToggleButton.button:active {
 
 .button.flat:hover,
 .action-bar .button:hover {
+    border: none;
     transition: color 150ms ease-in;
     color: shade(@theme_selected_bg_color, 1.15);
 }
 
 .toolbar .button.flat,
 .toolbar .button.flat:focus {
+    border: none;
     transition: all 150ms linear;
     border-radius: 5px;
     background-color: @toolbar_bg_color;
 }
 
 .toolbar .button.flat:hover {
+    border: none;
     transition: all 150ms linear;
     background-color: shade(@toolbar_bg_color, 0.96);
     color: @theme_text_color;
@@ -136,6 +140,7 @@ EvSidebar GtkToggleButton.button:active {
 .action-bar .button:active:focus,
 .action-bar .button:checked,
 .action-bar .button:checked:focus {
+    border: none;
     transition: color 150ms ease-in;
     color: shade(@theme_selected_bg_color, 0.97);
     background-color: transparent;
@@ -146,6 +151,7 @@ EvSidebar GtkToggleButton.button:active {
 .toolbar .button.flat:checked,
 .toolbar .button.flat:active:checked:focus,
 .toolbar .button.flat:active:hover {
+    border: none;
     transition: all 150ms linear;
     border-radius: 5px;
     background-color: shade(@toolbar_bg_color, 0.92);
@@ -154,6 +160,7 @@ EvSidebar GtkToggleButton.button:active {
 
 .button.flat:active:hover,
 .action-bar .button:active:hover {
+    border: none;
     transition: color 150ms ease-in;
     color: shade (@theme_selected_bg_color, 1.15);
 }
@@ -161,6 +168,7 @@ EvSidebar GtkToggleButton.button:active {
 .button.flat:insensitive,
 .toolbar .button.flat:insensitive,
 .action-bar .button:insensitive {
+    border: none;
     transition: color 150ms ease-in;
     color: shade (@theme_bg_color, 0.5);
 }

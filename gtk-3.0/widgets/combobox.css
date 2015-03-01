@@ -30,6 +30,7 @@ GtkComboBox.combobox-entry .button:insensitive {
 GtkComboBox .button,
 .action-bar GtkComboBox .button {
     padding: 4px 10px;
+    border: 1px solid @theme_bg_color;
     border-radius: 5px;
     background-color: @theme_base_color;
     color: shade(@theme_text_color, 1.10);
