@@ -36,7 +36,7 @@
 @define-color warning_fg_color #fefefe;
 @define-color warning_bg_color #fa993e;
 @define-color question_fg_color #fefefe;
-@define-color question_bg_color #5160d2;
+@define-color question_bg_color @cyan;
 @define-color error_fg_color #fefefe;
 @define-color error_bg_color #fa4a3e;
 @define-color link_color #df253f;

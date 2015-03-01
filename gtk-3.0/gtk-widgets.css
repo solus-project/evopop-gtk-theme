@@ -23,7 +23,7 @@
     -GtkPaned-handle-size: 7;
     -GtkProgressBar-min-horizontal-bar-height: 5;
     -GtkProgressBar-min-vertical-bar-width: 5;
-    -GtkRange-slider-width: 12
+    -GtkRange-slider-width: 12;
     -GtkRange-stepper-spacing: 0;
     -GtkRange-trough-border: 0;
     -GtkRange-trough-under-steppers: 1;
@@ -185,7 +185,7 @@ GtkIconView.view.cell:selected:focus {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
-    border-radius: 0px;
+    border-radius: 4px;
     background-color: shade(@theme_bg_color, 0.8);
     background-image: none;
     color: @theme_selected_fg_color;
