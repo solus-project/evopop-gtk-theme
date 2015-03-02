@@ -392,6 +392,11 @@ BaconVideoWidget .toolbar .button:first-child {
     color: @theme_text_color;
 }
 
+.tweak-categories .list-row.button:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
 .tweak-categories {
     background-color: @theme_base_color;
     background-image: linear-gradient(to bottom,@theme_base_color,@theme_base_color);

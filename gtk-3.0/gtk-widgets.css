@@ -423,7 +423,7 @@ GtkBubbleWindow .toolbar {
 .list,
 .list-row {
     font-weight: normal;
-    background-color: @theme_base_color; 
+    background-color: @theme_base_color;
 }
 
 .list-row.button {
@@ -435,16 +435,18 @@ GtkBubbleWindow .toolbar {
 
 .list-row.button:hover {
     transition: none;
-    background-color: shade(@theme_bg_color, 0.92);
+    color: @theme_fg_color;
+    background-color: shade(@theme_bg_color, 0.97);
 }
     
 .list-row.button:active, 
 .list-row.button:active:hover {
-    color: @theme_fg_color;
-    background-color: shade(@theme_bg_color, 0.92);
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }
     
 .list-row.button:checked {
+    background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
     
