@@ -37,12 +37,12 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-width="1280"
+     inkscape:window-height="689"
      id="namedview12"
      showgrid="true"
      inkscape:zoom="12.843736"
-     inkscape:cx="6.8361832"
+     inkscape:cx="-17.806179"
      inkscape:cy="0.37663561"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -56,15 +56,15 @@
      transform="translate(0 -1036.3622)"
      id="g4">
     <circle
-       style="opacity:1;fill:#f8f8f8;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#fafafa;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
        id="path4151"
        cx="8"
        cy="1044.3622"
        r="8" />
     <path
-       inkscape:connector-curvature="0"
        style="opacity:1;fill:#e6e8eb;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
-       d="m 8,1036.3622 a 8,8 0 0 0 -8,8 8,8 0 0 0 8,8 8,8 0 0 0 8,-8 8,8 0 0 0 -8,-8 z m 0,0.5 a 7.5,7.5 0 0 1 7.5,7.5 7.5,7.5 0 0 1 -7.5,7.5 7.5,7.5 0 0 1 -7.5,-7.5 7.5,7.5 0 0 1 7.5,-7.5 z"
-       id="circle4153" />
+       d="M 8 0 A 8 8 0 0 0 0 8 A 8 8 0 0 0 8 16 A 8 8 0 0 0 16 8 A 8 8 0 0 0 8 0 z M 8 1 A 7 7 0 0 1 15 8 A 7 7 0 0 1 8 15 A 7 7 0 0 1 1 8 A 7 7 0 0 1 8 1 z "
+       transform="translate(0,1036.3622)"
+       id="circle4136" />
   </g>
 </svg>
