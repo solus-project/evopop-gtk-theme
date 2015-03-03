@@ -433,6 +433,10 @@ GtkBubbleWindow .toolbar {
     border-radius: 0px;
 }
 
+.list .text-button.button {
+    background-color: @theme_bg_color; /*Special for Evolve Software Center*/
+}
+
 .list-row.button:hover {
     transition: none;
     color: @theme_fg_color;
