@@ -15,6 +15,7 @@
 @define-color selected_fg_color #fefefe;
 @define-color tooltip_bg_color #fefefe;
 @define-color tooltip_fg_color #2d2d2d;
+@define-color borders @text_color;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
@@ -108,4 +109,5 @@
 @import url("widgets/popover.css");
 
 @import url("apps/budgie.css");
+@import url("apps/corebird.css");
 @import url("apps/gnome-applications.css");

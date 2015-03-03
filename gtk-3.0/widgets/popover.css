@@ -44,7 +44,7 @@ GtkPopover.osd > .toolbar .button {
 GtkPopover .separator {
     border: 0;
     background-color: transparent;
-    color: alpha(currentColor, 0.5);
+    color: alpha(currentColor, 0.3);
     font-size: 80%;
     font-weight: bold;
 }

@@ -440,13 +440,13 @@ GtkBubbleWindow .toolbar {
 .list-row.button:hover {
     transition: none;
     color: @theme_fg_color;
-    background-color: shade(@theme_bg_color, 0.97);
+    background-color: alpha(@theme_bg_color, 0.55);
 }
     
 .list-row.button:active, 
 .list-row.button:active:hover {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
+    color: @theme_fg_color;
+    background-color: shade(@theme_bg_color, 0.97);
 }
     
 .list-row.button:checked {
