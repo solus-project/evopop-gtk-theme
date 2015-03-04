@@ -145,15 +145,15 @@ GthEmbeddedDialog .button:active:focus {
     padding: 4px;
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.93);
+    border-color: @theme_bg_color;
     border-radius: 0;
-    background-color: shade(@theme_bg_color, 1.07);
+    background-color: @theme_base_color;
     background-image: none;
 }
 
 .inline-toolbar.toolbar:last-child {
-    border-width: 0 1px 1px 1px;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-width: 1px;
+    border-color: @theme_bg_color;
     border-radius: 0;
 }
 
