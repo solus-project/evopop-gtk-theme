@@ -4,7 +4,7 @@
 GtkPopover {
     margin: 10px;
     padding: 2px;
-    border-radius: 5px;
+    border-radius: 4px;
     border: 1px solid shade(@theme_bg_color, 0.85);
     background-clip: border-box;
     background-color: @theme_bg_color;
@@ -15,14 +15,14 @@ GtkPopover.osd {
     box-shadow: 0 2px 7px 3px alpha(black, 0.5);
 }
 
-.popover .button,
-.popover .button:hover {
+GtkPopover .button {
     background-color: transparent;
     color: @theme_fg_color;
     border: none;
 }
 
-.popover .button:active:hover {
+GtkPopover .button:hover,
+GtkPopover .button:active:hover {
     background-color: transparent;
     color: @theme_selected_bg_color;
     border: none;

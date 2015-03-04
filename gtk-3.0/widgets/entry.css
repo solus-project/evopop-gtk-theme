@@ -39,6 +39,6 @@
     border-radius: 5px;
     background-color: @theme_selected_bg_color;
     background-image: none;
-    color: @theme_base_color;
+    color: @theme_selected_fg_color;
     border-color: @theme_selected_bg_color;
 }

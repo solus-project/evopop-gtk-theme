@@ -21,7 +21,7 @@
     padding: 8px;
     box-shadow: none;
     border: 1px solid @theme_bg_color;
-    background-color: alpha(@theme_base_color,0.5);			
+    background-color: alpha(@theme_base_color,0.6);			
     background-image: none;
 }
 

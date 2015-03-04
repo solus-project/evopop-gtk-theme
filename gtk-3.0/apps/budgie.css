@@ -4,6 +4,7 @@
 
 .max-budgie-panel {
     border: 1px solid alpha(black, 0.7);
+    background-color: alpha(black, 0.8);
 }
 
 .budgie-panel .message-area {

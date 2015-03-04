@@ -6,10 +6,10 @@
 .sidebar .view,
 .sidebar GtkScrolledWindow {
     background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom,@theme_base_color,@theme_base_color); #Fixes python issue (not proud of this)
-    color: @theme_text_color;
-    
+    background-image: linear-gradient(to bottom,@theme_base_color,@theme_base_color); #Fixes python issue
+    color: @theme_text_color; 
 }
+
 .sidebar GtkScrolledWindow,
 .sidebar {
     border-width: 0;
@@ -33,30 +33,10 @@
     color: @theme_selected_fg_color;
 }
 
-.sidebar GtkScrolledWindow .list-row {  	/*scrolled = regular*/
+.sidebar GtkScrolledWindow .list-row {
     border-radius: 0;
     background-color: transparent;
     color: @theme_text_color;
-}
-
-.sidebar GtkScrolledWindow .list-row:selected, /*for budgie settings*/
-.sidebar GtkScrolledWindow .list-row:selected:hover,
-.sidebar GtkScrolledWindow .list-row:selected:hover:active,
-.sidebar GtkScrolledWindow .list-row:hover,
-.sidebar GtkScrolledWindow .list-row:hover:active {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-.sidebar .list-row:hover,
-.sidebar .list-row:hover:active,
-.sidebar .list-row:focus {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
-.sidebar .seperator {
-    color: @theme_bg_color;
 }
 
 .sidebar .frame {

@@ -1,12 +1,11 @@
 /*************
  * separator *
  *************/
- 
 .sidebar.view.separator,
 .view.separator,
 .separator,
 .sidebar .view.separator {
-    color: alpha(@theme_bg_color, 0.4);
+    color: @theme_bg_color;
 }
 
 .button .separator,
@@ -16,7 +15,7 @@
 
 .button .separator:insensitive,
 .button.separator:insensitive {
-    color: shade(@button_bg_color, 1.05);
+    color: shade(@button_bg_color, 0.9);
 }
 
 .primary-toolbar GtkSeparatorToolItem,
@@ -66,4 +65,3 @@ GtkComboBox .separator {
     -GtkWidget-horizontal-separator: 0;
     -GtkWidget-vertical-separator: 0;
 }
-

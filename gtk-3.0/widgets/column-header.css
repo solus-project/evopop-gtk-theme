@@ -3,7 +3,7 @@
  *****************/
 column-header .button,
 column-header .button:active {
-    border-width: 0 1px 1px 1px;
+    border-width: 0 1px 1px 0px;
     border-radius: 0;
     border-style: solid;
 }
@@ -12,11 +12,10 @@ column-header .button,
 column-header .button:active,
 column-header .button:focus,
 column-header .button:active:focus {
-    border-color: shade(@theme_base_color, 0.95);
-    border-bottom-color: shade(@theme_base_color, 0.9);
+    border-color: shade(@theme_base_color, 0.9);
+    border-bottom-color: shade(@theme_base_color, 0.85);
     background-color: shade(@theme_base_color, 0.97);
     background-image: none;
-    color: @theme_text_color;
 }
 
 column-header .button:hover,

@@ -16,12 +16,6 @@ GtkColorSwatch:selected:hover {
     border-color: alpha(black, 0.3);
 }
 
-GtkColorSwatch.color-dark:hover {
-}
-
-GtkColorSwatch.color-light:hover {
-}
-
 GtkColorSwatch.color-light:selected:hover,
 GtkColorSwatch.color-dark:selected:hover {
     background-image: none;
@@ -95,8 +89,3 @@ GtkColorEditor GtkColorSwatch.color-light:hover {
     background-image: none;
     border-color: alpha(black, 0.3);
 }
-
-GtkColorButton.button {
-    padding: 2px;
-}
-

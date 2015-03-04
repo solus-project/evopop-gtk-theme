@@ -147,7 +147,7 @@ GthEmbeddedDialog .button:active:focus {
     border-style: solid;
     border-color: @theme_bg_color;
     border-radius: 0;
-    background-color: @theme_base_color;
+    background-color: alpha(@theme_base_color,0.8);
     background-image: none;
 }
 
@@ -312,3 +312,4 @@ GthEmbeddedDialog .button:active:focus {
     border-width: 1px;
     border-radius: 0;
 }
+

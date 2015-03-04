@@ -1,7 +1,6 @@
 /********
  * menu *
  ********/
-
 GtkTreeMenu.menu,
 GtkMenuToolButton.menu,
 GtkComboBox .menu {
@@ -55,7 +54,7 @@ GtkComboBox .menu {
 .menubar.menuitem,
 .menubar .menuitem {
     padding: 3px 6px;
-    border-width: 1px 1px 0 1px;
+    border-width: 1px;
     border-style: solid;
     border-color: transparent;
     background-color: transparent;
@@ -103,7 +102,7 @@ GtkTreeMenu .menuitem {
 .menu .menuitem:hover {
     transition: 100ms linear;
     border-style: none;
-    background-color: transparent;
+    background-color: @menu_selected_bg_color;
     border-radius: 0;
     color: @menu_selected_fg_color;
     background-image: none;
@@ -114,7 +113,7 @@ GtkTreeMenu .menuitem {
 .menu .menuitem:hover,
 .menu .menuitem *:hover {
     transition: 100ms linear;
-    background-color: transparent;
+    background-color: @menu_selected_bg_color;;
     color: @menu_selected_fg_color;
 }
 
@@ -178,10 +177,3 @@ GtkTreeMenu .menuitem {
     color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.6);
 }
 
-GtkModelMenuItem GtkBox GtkImage {
-    padding-right: 4px;
-}
-
-.button .menu *{
-    font-weight: normal;
-}

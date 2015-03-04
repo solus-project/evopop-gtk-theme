@@ -1,12 +1,8 @@
 /************
  * Calendar *
  ************/
-GtkCalendar.button {
-   color: @theme_fg_color;
-}
-
 GtkCalendar {
-    padding: 1px 2px 2px 3px;
+    padding: 1px 4px 2px 4px;
 }
 
 GtkCalendar:inconsistent {
@@ -31,9 +27,5 @@ GtkCalendar.highlight {
 }
 
 GtkCalendar:selected {
-    border-radius: 16px;
-}
-
-GtkCalendar .button {
-    padding-top: 0px;
+    border-radius: 32px;
 }
