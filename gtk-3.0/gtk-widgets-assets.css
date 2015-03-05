@@ -119,6 +119,7 @@
 }
 
 .check:active:insensitive,
+.check:checked:insensitive,
 .check row:selected:active:insensitive,
 .check row:selected:focus:active:insensitive {
     -gtk-icon-source: url("assets/checkbox-checked-insensitive.svg");
