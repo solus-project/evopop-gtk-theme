@@ -144,7 +144,8 @@
 .linked .button:active:hover,
 .linked .button:focus,
 .linked .button:focus:active,
-.linked .button:insensitive {
+.linked .button:insensitive,
+.linked > GtkComboBox > .button:dir(ltr) {
     border-width: 1px;
     border-radius: 0;   
 }
@@ -173,7 +174,7 @@
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
 .linked .button:insensitive:first-child,
-.linked GtkComboBox .button:first-child {
+.linked > GtkComboBox:first-child > .button {
     border-width: 1px;
     border-right-width: 0;
     border-radius: 4px;
@@ -188,7 +189,8 @@
 .linked .button:active:hover:last-child,
 .linked .button:focus:last-child,
 .linked .button:focus:active:last-child,
-.linked .button:insensitive:last-child {
+.linked .button:insensitive:last-child,
+.linked > GtkComboBox:last-child > .button {
     border-width: 1px;
     border-left-width: 0;
     border-radius: 4px;

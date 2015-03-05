@@ -41,7 +41,7 @@
 
 .scrollbar.slider:active,
 .scrollbar.slider.vertical:active {
-    background-color: shade(@theme_selected_bg_color, 1.35);
+    background-color: shade(@theme_selected_bg_color, 0.95);
 }
 
 .scrollbar.slider.fine-tune:prelight:active {
