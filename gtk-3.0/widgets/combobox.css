@@ -1,3 +1,10 @@
+/************
+ * combobox *
+ ************/
+GtkComboBox .button {
+    border: 1px solid @theme_bg_color;
+}
+
 /******************
  * combobox entry *
  ******************/
