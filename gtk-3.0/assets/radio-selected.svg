@@ -11,7 +11,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.48.5 r10040"
    width="100%"
    height="100%"
    sodipodi:docname="radio-selected.svg">
@@ -30,7 +30,6 @@
   <defs
      id="defs14">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient4159">
       <stop
          style="stop-color:#ffffff;stop-opacity:0.50196081"
@@ -49,7 +48,26 @@
        y1="0"
        x2="8"
        y2="16"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(19.5,1036.3622)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4159"
+       id="linearGradient3783"
+       x1="8"
+       y1="1036.3622"
+       x2="8"
+       y2="1044.3622"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4159"
+       id="linearGradient3791"
+       gradientUnits="userSpaceOnUse"
+       x1="8"
+       y1="1036.3622"
+       x2="8"
+       y2="1044.3622" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -60,13 +78,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-width="1050"
+     inkscape:window-height="1366"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="12.843736"
-     inkscape:cx="6.8361832"
-     inkscape:cy="0.37663561"
+     inkscape:zoom="18.163786"
+     inkscape:cx="7.3455761"
+     inkscape:cy="3.6760676"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -78,28 +96,50 @@
   <g
      transform="translate(0 -1036.3622)"
      id="g4">
+    <g
+       id="g3813">
+      <circle
+         transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="1044.3622"
+         sodipodi:cx="8"
+         r="8"
+         cy="1044.3622"
+         cx="8"
+         id="path4151"
+         style="fill:#13b1d5;fill-opacity:1;stroke:none" />
+      <circle
+         transform="matrix(0.90625,0,0,0.90625,0.75,97.908972)"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="1044.3622"
+         sodipodi:cx="8"
+         r="8"
+         cy="1044.3622"
+         cx="8"
+         id="path4151-6"
+         style="fill:none;stroke:url(#linearGradient3791);stroke-width:0.55172408;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
     <circle
-       style="opacity:1;fill:#13b1d5;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
-       id="path4151"
-       cx="8"
-       cy="1044.3622"
-       r="8" />
-    <path
-       style="opacity:1;fill:url(#linearGradient4165);fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
-       d="M 8 0 A 8 8 0 0 0 0 8 A 8 8 0 0 0 8 16 A 8 8 0 0 0 16 8 A 8 8 0 0 0 8 0 z M 8 0.5 A 7.5 7.5 0 0 1 15.5 8 A 7.5 7.5 0 0 1 8 15.5 A 7.5 7.5 0 0 1 0.5 8 A 7.5 7.5 0 0 1 8 0.5 z "
-       transform="translate(0,1036.3622)"
-       id="circle4153" />
-    <circle
-       style="opacity:1;fill:#000000;fill-opacity:0.22745098;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:ry="3.5"
+       sodipodi:rx="3.5"
+       sodipodi:cy="1044.6622"
+       sodipodi:cx="8.3000002"
+       style="fill:#000000;fill-opacity:0.22745098;stroke:none"
        id="path4151-8"
        cx="8.3000002"
        cy="1044.6622"
        r="3.5" />
     <circle
+       sodipodi:ry="3.5"
+       sodipodi:rx="3.5"
+       sodipodi:cy="1044.3623"
+       sodipodi:cx="7.9999995"
        cy="1044.3623"
        cx="7.9999995"
        id="circle4194"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
        r="3.5" />
   </g>
 </svg>

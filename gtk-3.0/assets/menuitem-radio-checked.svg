@@ -41,15 +41,15 @@
      id="namedview8"
      showgrid="false"
      inkscape:zoom="14.75"
-     inkscape:cx="8"
+     inkscape:cx="0.16949153"
      inkscape:cy="8"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="1500"
+     inkscape:window-y="467"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2" />
   <path
      inkscape:connector-curvature="0"
      id="path6"
-     d="M 11,8 C 11,9.6568542 9.6568542,11 8,11 6.3431458,11 5,9.6568542 5,8 5,6.3431458 6.3431458,5 8,5 c 1.6568542,0 3,1.3431458 3,3 z"
+     d="M 11.5,8 C 11.5,9.9329966 9.932997,11.5 8,11.5 6.0670034,11.5 4.5,9.9329966 4.5,8 4.5,6.0670034 6.0670034,4.5 8,4.5 c 1.932997,0 3.5,1.5670034 3.5,3.5 z"
      style="fill:#2cbae5;fill-opacity:1" />
 </svg>
