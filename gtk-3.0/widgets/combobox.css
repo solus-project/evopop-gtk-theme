@@ -2,7 +2,7 @@
  * combobox *
  ************/
 .notebook GtkComboBox .button {
-    border: 1px solid @theme_bg_color;
+    border: 1px solid shade(@theme_bg_color, 0.87);
 }
 
 /******************
