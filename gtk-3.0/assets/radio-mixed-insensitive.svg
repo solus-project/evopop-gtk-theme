@@ -11,7 +11,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
    sodipodi:docname="radio-mixed-insensitive.svg">
@@ -51,15 +51,6 @@
        y2="16"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4159-4"
-       id="linearGradient3791"
-       gradientUnits="userSpaceOnUse"
-       x1="8"
-       y1="1036.3622"
-       x2="8"
-       y2="1044.3622" />
-    <linearGradient
        id="linearGradient4159-4">
       <stop
          style="stop-color:#ffffff;stop-opacity:0.50196081"
@@ -81,14 +72,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="959"
-     inkscape:window-height="993"
+     inkscape:window-height="540"
      id="namedview12"
      showgrid="true"
      inkscape:zoom="13.485438"
-     inkscape:cx="-1.4095117"
-     inkscape:cy="6.9712974"
-     inkscape:window-x="1409"
-     inkscape:window-y="222"
+     inkscape:cx="-6.3778338"
+     inkscape:cy="9.9374599"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="g4">
     <inkscape:grid
@@ -99,7 +90,7 @@
      transform="translate(0 -1036.3622)"
      id="g4">
     <circle
-       style="fill:#bfc4cb;fill-opacity:1;stroke:none"
+       style="fill:#7f8a99;fill-opacity:1;stroke:none"
        id="path4151-60"
        cx="8"
        cy="1044.3622"
@@ -109,27 +100,9 @@
        sodipodi:rx="8"
        sodipodi:ry="8"
        transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)" />
-    <circle
-       style="fill:none;stroke:url(#linearGradient3791);stroke-width:0.55172408;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path4151-6"
-       cx="8"
-       cy="1044.3622"
-       r="8"
-       sodipodi:cx="8"
-       sodipodi:cy="1044.3622"
-       sodipodi:rx="8"
-       sodipodi:ry="8"
-       transform="matrix(0.90625,0,0,0.90625,0.75,97.908972)" />
     <rect
-       id="rect5240"
-       style="fill:#000000;fill-opacity:0.22745098"
-       height="2"
-       y="1043.8622"
+       width="8"
        x="4"
-       width="9" />
-    <rect
-       width="9"
-       x="3.5"
        y="1043.3622"
        height="2"
        style="fill:#ffffff;fill-opacity:1"

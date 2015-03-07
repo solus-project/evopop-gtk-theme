@@ -10,7 +10,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
    sodipodi:docname="radio-unselected-insensitive.svg">
@@ -27,7 +27,19 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs14" />
+     id="defs14">
+    <linearGradient
+       id="linearGradient4159">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0.50196081"
+         offset="0"
+         id="stop4161" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0.2"
+         offset="1"
+         id="stop4163" />
+    </linearGradient>
+  </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -38,14 +50,14 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="959"
-     inkscape:window-height="993"
+     inkscape:window-height="1002"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="18.163786"
-     inkscape:cx="13.014785"
-     inkscape:cy="-0.1361828"
-     inkscape:window-x="1409"
-     inkscape:window-y="222"
+     inkscape:zoom="64"
+     inkscape:cx="-2.8201187"
+     inkscape:cy="10.055136"
+     inkscape:window-x="130"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="g4">
     <inkscape:grid
@@ -56,16 +68,15 @@
      transform="translate(0 -1036.3622)"
      id="g4">
     <circle
-       style="fill:#bfc4cb;fill-opacity:1;stroke:none"
-       id="path4151"
+       style="fill:#f0f0f3;fill-opacity:1;stroke:none"
+       id="path4151-7"
        cx="8"
        cy="1044.3622"
-       r="8"
-       d="m 16,1044.3622 c 0,4.4183 -3.581722,8 -8,8 -4.418278,0 -8,-3.5817 -8,-8 0,-4.4183 3.581722,-8 8,-8 4.418278,0 8,3.5817 8,8 z"
-       sodipodi:cx="8"
-       sodipodi:cy="1044.3622"
-       sodipodi:rx="8"
-       sodipodi:ry="8"
-       transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)" />
+       r="7" />
+    <path
+       style="fill:#a5a5b1;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8 0.5 A 7.4998691 7.4998661 0 0 0 0.5 8 A 7.4998691 7.4998661 0 0 0 8 15.5 A 7.4998691 7.4998661 0 0 0 15.5 8 A 7.4998691 7.4998661 0 0 0 8 0.5 z M 8 1.5 A 6.4998866 6.499884 0 0 1 14.5 8 A 6.4998866 6.499884 0 0 1 8 14.5 A 6.4998866 6.499884 0 0 1 1.5 8 A 6.4998866 6.499884 0 0 1 8 1.5 z "
+       transform="translate(0,1036.3622)"
+       id="path4151-6" />
   </g>
 </svg>

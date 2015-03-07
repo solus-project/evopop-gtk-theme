@@ -10,7 +10,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
    sodipodi:docname="menuitem-checkbox-mixed-selected.svg">
@@ -37,27 +37,27 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
+     inkscape:window-height="1003"
      id="namedview8"
      showgrid="false"
      inkscape:zoom="14.75"
-     inkscape:cx="-16.338983"
+     inkscape:cx="-39.864407"
      inkscape:cy="8"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <g
-     transform="translate(0 -1036.3622)"
+     transform="translate(0,-1036.3622)"
      id="g4"
-     style="fill:#2c9be5;fill-opacity:1">
+     style="fill:#1396b2;fill-opacity:1">
     <rect
        width="8"
        x="4"
        y="7"
        height="2"
-       style="fill:#2c9be5;fill-opacity:1"
-       transform="translate(0 1036.3622)"
+       style="fill:#1396b2;fill-opacity:1"
+       transform="translate(0,1036.3622)"
        id="rect6" />
   </g>
 </svg>

@@ -34,6 +34,18 @@
     background-color: shade(@theme_selected_bg_color, 1.15);
 }
 
+.notebook .button,
+.list .text-button.button {
+    border: 1px solid shade(@theme_bg_color, 0.87);
+}
+
+.list .text-button.button:hover,
+.list .text-button.button:active:hover,
+.list .text-button.button:active {
+    border-color: @theme_selected_bg_color;
+}
+
+
 /* default button */
 .button.default {
     background-color: shade(@theme_selected_bg_color, 1.08);
@@ -132,7 +144,6 @@
     transition: color 150ms ease-in;
     color: shade (@theme_bg_color, 0.5);
 }
-
 
 /****************
 * linked button *
@@ -295,26 +306,34 @@
  * suggested action buttons *
  ******************************/
 .suggested-action.button,
+.list .suggested-action.button,
 .titlebar .suggested-action.button {
+    border-color: @cyan;
     background-color: @cyan;
     color: @selected_fg_color;
 }
 
 .suggested-action.button:hover,
+.list .suggested-action.button:hover,
 .titlebar .suggested-action.button:hover{
+    border-color: @cyan;
     background-color: @cyan;
     color: @selected_fg_color;
 }
 
 .suggested-action.button:active,
+.list .suggested-action.button:active,
 .titlebar .suggested-action.button:active {
-    background-color: @cyan;
+    border-color: shade(@cyan,0.9);
+    background-color: shade(@cyan,0.9);
     color: @selected_fg_color;
 }
 
 .suggested-action.button:hover:active,
+.list .suggested-action.button:hover:active,
 .titlebar .suggested-action.button:hover:active {
-    background-color: @cyan;
+    border-color: shade(@cyan,0.9);
+    background-color: shade(@cyan,0.9);
     color: @selected_fg_color;
 }
 

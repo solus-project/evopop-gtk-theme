@@ -78,7 +78,7 @@
 @define-color wm_icons_unfocused_pressed @theme_selected_bg_color;
 
 @import url("gtk-widgets.css");
-@import url("gtk-widgets-assets.css");
+@import url("gtk-widgets-assets-dark.css");
 
 @import url("widgets/assistant.css");
 @import url("widgets/button.css");

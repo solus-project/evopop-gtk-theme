@@ -14,7 +14,7 @@
    inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
-   sodipodi:docname="radio-selected-insensitive.svg">
+   sodipodi:docname="radio-selected-insensitive-dark.svg">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -85,10 +85,10 @@
      id="namedview12"
      showgrid="true"
      inkscape:zoom="25.687472"
-     inkscape:cx="-0.78249507"
+     inkscape:cx="1.5960739"
      inkscape:cy="9.9968117"
-     inkscape:window-x="54"
-     inkscape:window-y="56"
+     inkscape:window-x="771"
+     inkscape:window-y="210"
      inkscape:window-maximized="0"
      inkscape:current-layer="g4">
     <inkscape:grid
@@ -99,7 +99,7 @@
      transform="translate(0 -1036.3622)"
      id="g4">
     <circle
-       style="fill:#7f8a99;fill-opacity:1;stroke:none"
+       style="fill:#989a9e;fill-opacity:1;stroke:none"
        id="path4151-3"
        cx="8"
        cy="1044.3622"
@@ -113,7 +113,7 @@
        cy="1044.3622"
        cx="-8"
        id="circle4194"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:#31363d;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
        transform="scale(-1,1)"
        r="4" />
   </g>

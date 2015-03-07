@@ -14,7 +14,7 @@
    inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
-   sodipodi:docname="radio-selected-insensitive.svg">
+   sodipodi:docname="radio-selected-dark.svg">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -30,7 +30,6 @@
   <defs
      id="defs14">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient4159">
       <stop
          style="stop-color:#ffffff;stop-opacity:0.50196081"
@@ -49,27 +48,17 @@
        y1="0"
        x2="8"
        y2="16"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(19.5,1036.3622)" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient4159-3"
-       id="linearGradient3791"
-       gradientUnits="userSpaceOnUse"
+       xlink:href="#linearGradient4159"
+       id="linearGradient3783"
        x1="8"
        y1="1036.3622"
        x2="8"
-       y2="1044.3622" />
-    <linearGradient
-       id="linearGradient4159-3">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.50196081"
-         offset="0"
-         id="stop4161-5" />
-      <stop
-         style="stop-color:#000000;stop-opacity:0.2"
-         offset="1"
-         id="stop4163-2" />
-    </linearGradient>
+       y2="1044.3622"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -80,16 +69,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1122"
-     inkscape:window-height="728"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="25.687472"
-     inkscape:cx="-0.78249507"
-     inkscape:cy="9.9968117"
-     inkscape:window-x="54"
-     inkscape:window-y="56"
-     inkscape:window-maximized="0"
+     inkscape:zoom="18.163786"
+     inkscape:cx="-30.862317"
+     inkscape:cy="3.5109038"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
      inkscape:current-layer="g4">
     <inkscape:grid
        type="xygrid"
@@ -99,22 +88,22 @@
      transform="translate(0 -1036.3622)"
      id="g4">
     <circle
-       style="fill:#7f8a99;fill-opacity:1;stroke:none"
-       id="path4151-3"
+       style="fill:#13a0bf;fill-opacity:1;stroke:none"
+       id="path4151"
        cx="8"
        cy="1044.3622"
-       r="8"
-       sodipodi:cx="8"
-       sodipodi:cy="1044.3622"
-       sodipodi:rx="8"
-       sodipodi:ry="8"
-       transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)" />
+       r="7.5" />
+    <circle
+       style="fill:none;stroke:none;stroke-width:0.55172408;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4151-6"
+       cx="8"
+       cy="1044.3622"
+       r="7.25" />
     <circle
        cy="1044.3622"
-       cx="-8"
+       cx="8"
        id="circle4194"
-       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:14.5;stroke-dasharray:none;stroke-opacity:1"
-       transform="scale(-1,1)"
+       style="fill:#31363d;fill-opacity:1;stroke:none"
        r="4" />
   </g>
 </svg>
