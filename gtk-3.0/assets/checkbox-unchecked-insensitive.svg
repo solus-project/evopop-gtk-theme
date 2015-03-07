@@ -14,9 +14,9 @@
    width="100%"
    height="100%"
    sodipodi:docname="checkbox-unchecked-insensitive.svg"
-   inkscape:export-filename="/home/poltertec/Downloads/test.png"
-   inkscape:export-xdpi="720"
-   inkscape:export-ydpi="720">
+   inkscape:export-filename="/home/poltertec/Downloads/assets/checkbox-unchecked-insensitive@2.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -40,14 +40,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1756"
-     inkscape:window-height="1000"
+     inkscape:window-width="959"
+     inkscape:window-height="1002"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="22.627417"
-     inkscape:cx="-0.72360318"
-     inkscape:cy="6.4599035"
-     inkscape:window-x="162"
+     inkscape:zoom="45.254834"
+     inkscape:cx="7.7373984"
+     inkscape:cy="10.277695"
+     inkscape:window-x="959"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2"
@@ -57,15 +57,27 @@
        id="grid4139" />
   </sodipodi:namedview>
   <rect
-     style="fill:#bfc4cb;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#a5a5b1;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
      width="15.99999"
      height="15.99999"
      x="4.9999999e-06"
      y="4.5367433e-06"
-     rx="3.9999952"
-     ry="3.9999955"
+     rx="1.9999952"
+     ry="1.9999955"
      inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
      inkscape:export-xdpi="720"
      inkscape:export-ydpi="720" />
+  <rect
+     inkscape:export-ydpi="720"
+     inkscape:export-xdpi="720"
+     inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
+     ry="1.7499958"
+     rx="1.7499956"
+     y="1.000005"
+     x="1.000005"
+     height="13.99999"
+     width="13.99999"
+     id="rect4134"
+     style="fill:#f0f0f3;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1" />
 </svg>

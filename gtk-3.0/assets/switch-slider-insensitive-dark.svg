@@ -15,7 +15,7 @@
    height="23"
    id="svg2"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="switch-slider-on-insensitive.svg">
+   sodipodi:docname="switch-slider-insensitive-dark.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -30,10 +30,10 @@
      id="namedview2574"
      showgrid="true"
      inkscape:zoom="12.727272"
-     inkscape:cx="3.8736639"
+     inkscape:cx="-10.960717"
      inkscape:cy="3.029013"
-     inkscape:window-x="960"
-     inkscape:window-y="0"
+     inkscape:window-x="702"
+     inkscape:window-y="1"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg2"
      inkscape:snap-bbox="true">
@@ -11520,7 +11520,7 @@
      inkscape:connector-curvature="0" />
   <path
      inkscape:connector-curvature="0"
-     style="color:#000000;fill:#a8acb2;fill-opacity:1;stroke:none;stroke-width:0.95454544;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+     style="color:#000000;fill:#26282d;fill-opacity:1;stroke:none;stroke-width:0.95454544;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
      id="path6358"
      d="M 10.5,1.977274 C 5.2582257,1.977274 1,6.2405934 1,11.488636 1,16.73668 5.2582257,21 10.5,21 15.741774,21 20.000009,16.73668 20,11.488636 20,6.2405934 15.741774,1.977274 10.5,1.977274 z" />
   <path

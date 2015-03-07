@@ -5,7 +5,6 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    viewBox="0 0 16 16"
@@ -31,29 +30,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs14">
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient4153">
-      <stop
-         style="stop-color:#ffffff;stop-opacity:0.5"
-         offset="0"
-         id="stop4155" />
-      <stop
-         style="stop-color:#072c37;stop-opacity:0.2"
-         offset="1"
-         id="stop4157" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4153"
-       id="linearGradient4159"
-       x1="8"
-       y1="0"
-       x2="8"
-       y2="16"
-       gradientUnits="userSpaceOnUse" />
-  </defs>
+     id="defs14" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -63,16 +40,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1003"
+     inkscape:window-width="959"
+     inkscape:window-height="1002"
      id="namedview12"
      showgrid="true"
      inkscape:zoom="22.627417"
-     inkscape:cx="-12.222184"
+     inkscape:cx="12.379402"
      inkscape:cy="8.3280579"
-     inkscape:window-x="0"
+     inkscape:window-x="959"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:current-layer="svg2"
      showguides="false">
     <inkscape:grid
@@ -80,32 +57,15 @@
        id="grid4139" />
   </sodipodi:namedview>
   <rect
-     inkscape:export-ydpi="720"
-     inkscape:export-xdpi="720"
-     inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
-     ry="3.9999955"
-     rx="3.9999952"
-     y="4.5367433e-06"
-     x="4.9999999e-06"
-     height="15.99999"
-     width="15.99999"
-     id="rect4139"
-     style="fill:#fafafa;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;opacity:1" />
-  <rect
-     style="fill:#13b1d5;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;opacity:0.5"
+     style="opacity:1;fill:#5ec3d8;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
      width="15.99999"
      height="15.99999"
      x="4.9999999e-06"
-     y="4.5367433e-06"
-     rx="3.9999952"
-     ry="3.9999955"
+     y="4.529953e-06"
+     rx="1.9999952"
+     ry="1.9999955"
      inkscape:export-filename="/home/poltertec/Downloads/rect4133.png"
      inkscape:export-xdpi="720"
      inkscape:export-ydpi="720" />
-  <path
-     style="fill:url(#linearGradient4159);fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-opacity:1;stroke-dasharray:none"
-     d="M 4,0 C 1.7840026,0 0,1.784002 0,4 l 0,8 c 0,2.215997 1.7840026,4 4,4 l 8,0 c 2.215997,0 4,-1.784003 4,-4 L 16,4 C 16,1.784002 14.215997,0 12,0 L 4,0 z m 0.25,0.5 7.5,0 c 2.077497,0 3.75,1.672502 3.75,3.75 l 0,7.5 c 0,2.077497 -1.672503,3.75 -3.75,3.75 l -7.5,0 C 2.1725026,15.5 0.5,13.827497 0.5,11.75 l 0,-7.5 C 0.5,2.172502 2.1725026,0.5 4.25,0.5 z"
-     id="rect4148"
-     inkscape:connector-curvature="0" />
 </svg>

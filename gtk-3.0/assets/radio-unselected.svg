@@ -10,7 +10,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
    sodipodi:docname="radio-unselected.svg">
@@ -49,16 +49,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1680"
-     inkscape:window-height="994"
+     inkscape:window-width="959"
+     inkscape:window-height="1002"
      id="namedview12"
      showgrid="true"
-     inkscape:zoom="18.163786"
-     inkscape:cx="2.1464744"
-     inkscape:cy="0.74531442"
-     inkscape:window-x="1050"
-     inkscape:window-y="222"
-     inkscape:window-maximized="1"
+     inkscape:zoom="64"
+     inkscape:cx="-0.15585937"
+     inkscape:cy="10.055136"
+     inkscape:window-x="959"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="g4">
     <inkscape:grid
        type="xygrid"
@@ -67,30 +67,16 @@
   <g
      transform="translate(0 -1036.3622)"
      id="g4">
-    <g
-       id="g3770">
-      <circle
-         transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="1044.3622"
-         sodipodi:cx="8"
-         r="8"
-         cy="1044.3622"
-         cx="8"
-         id="path4151-7"
-         style="fill:#fafafa;fill-opacity:1;stroke:none" />
-      <circle
-         transform="matrix(0.875,0,0,0.875,1,130.54529)"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="1044.3622"
-         sodipodi:cx="8"
-         r="8"
-         cy="1044.3622"
-         cx="8"
-         id="path4151-6"
-         style="fill:none;stroke:#e6e8eb;stroke-width:1.14285718999999997;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
+    <circle
+       style="fill:#fefefe;fill-opacity:1;stroke:none"
+       id="path4151-7"
+       cx="8"
+       cy="1044.3622"
+       r="7" />
+    <path
+       style="fill:#676775;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8 0.5 A 7.4998691 7.4998661 0 0 0 0.5 8 A 7.4998691 7.4998661 0 0 0 8 15.5 A 7.4998691 7.4998661 0 0 0 15.5 8 A 7.4998691 7.4998661 0 0 0 8 0.5 z M 8 1.5 A 6.4998866 6.499884 0 0 1 14.5 8 A 6.4998866 6.499884 0 0 1 8 14.5 A 6.4998866 6.499884 0 0 1 1.5 8 A 6.4998866 6.499884 0 0 1 8 1.5 z "
+       transform="translate(0,1036.3622)"
+       id="path4151-6" />
   </g>
 </svg>

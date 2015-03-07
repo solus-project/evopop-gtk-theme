@@ -11,7 +11,7 @@
    viewBox="0 0 16 16"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
    sodipodi:docname="radio-unselected-hover.svg">
@@ -51,15 +51,6 @@
        y2="16"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4159-3"
-       id="linearGradient3791"
-       gradientUnits="userSpaceOnUse"
-       x1="8"
-       y1="1036.3622"
-       x2="8"
-       y2="1044.3622" />
-    <linearGradient
        id="linearGradient4159-3">
       <stop
          style="stop-color:#ffffff;stop-opacity:0.50196081"
@@ -80,15 +71,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1680"
-     inkscape:window-height="994"
+     inkscape:window-width="1920"
+     inkscape:window-height="1003"
      id="namedview12"
      showgrid="true"
      inkscape:zoom="12.843736"
-     inkscape:cx="-4.7783082"
+     inkscape:cx="-31.79537"
      inkscape:cy="0.37663561"
-     inkscape:window-x="1050"
-     inkscape:window-y="222"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="g4">
     <inkscape:grid
@@ -99,7 +90,7 @@
      transform="translate(0 -1036.3622)"
      id="g4">
     <circle
-       style="fill:#13b1d5;fill-opacity:1;stroke:none;opacity:0.5"
+       style="fill:#5ec3d8;fill-opacity:1;stroke:none;opacity:1"
        id="path4151"
        cx="8"
        cy="1044.3622"
@@ -108,19 +99,6 @@
        sodipodi:cy="1044.3622"
        sodipodi:rx="8"
        sodipodi:ry="8"
-       transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)"
-       d="m 16,1044.3622 c 0,4.4183 -3.581722,8 -8,8 -4.418278,0 -8,-3.5817 -8,-8 0,-4.4183 3.581722,-8 8,-8 4.418278,0 8,3.5817 8,8 z" />
-    <circle
-       style="fill:none;stroke:url(#linearGradient3791);stroke-width:0.55172408;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       id="path4151-6"
-       cx="8"
-       cy="1044.3622"
-       r="8"
-       sodipodi:cx="8"
-       sodipodi:cy="1044.3622"
-       sodipodi:rx="8"
-       sodipodi:ry="8"
-       transform="matrix(0.90625,0,0,0.90625,0.75,97.908972)"
-       d="m 16,1044.3622 c 0,4.4183 -3.581722,8 -8,8 -4.418278,0 -8,-3.5817 -8,-8 0,-4.4183 3.581722,-8 8,-8 4.418278,0 8,3.5817 8,8 z" />
+       transform="matrix(0.9375,0,0,0.9375,0.5,65.272654)" />
   </g>
 </svg>

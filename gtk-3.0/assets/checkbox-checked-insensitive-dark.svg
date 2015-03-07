@@ -13,7 +13,7 @@
    inkscape:version="0.91 r13725"
    width="100%"
    height="100%"
-   sodipodi:docname="checkbox-checked-insensitive.svg"
+   sodipodi:docname="checkbox-checked-insensitive-dark.svg"
    inkscape:export-filename="/home/poltertec/Downloads/test.png"
    inkscape:export-xdpi="720"
    inkscape:export-ydpi="720">
@@ -45,7 +45,7 @@
      id="namedview12"
      showgrid="true"
      inkscape:zoom="32"
-     inkscape:cx="-1.1305665"
+     inkscape:cx="15.5625"
      inkscape:cy="5.6639703"
      inkscape:window-x="959"
      inkscape:window-y="0"
@@ -57,7 +57,7 @@
        id="grid4139" />
   </sodipodi:namedview>
   <rect
-     style="fill:#7f8a99;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:#989a9e;fill-opacity:1;stroke:#e6e8eb;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1"
      id="rect4133"
      width="15.99999"
      height="15.99999"
@@ -69,7 +69,7 @@
      inkscape:export-xdpi="720"
      inkscape:export-ydpi="720" />
   <path
-     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     style="fill:#31363d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      d="M 12.509456,3 14,4.2966099 6.6976266,13 2,8.6162544 3.293298,7.1550048 6.5294403,10.172543 Z"
      id="path4424"
      inkscape:connector-curvature="0" />
