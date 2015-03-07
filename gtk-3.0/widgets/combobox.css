@@ -1,7 +1,7 @@
 /************
  * combobox *
  ************/
-GtkComboBox .button {
+.notebook GtkComboBox .button {
     border: 1px solid @theme_bg_color;
 }
 
@@ -34,4 +34,11 @@ GtkComboBox.combobox-entry .button:insensitive {
     border-color: shade(@theme_bg_color, 0.87);
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .button:active {
+    border-color: @theme_selected_bg_color;
 }
