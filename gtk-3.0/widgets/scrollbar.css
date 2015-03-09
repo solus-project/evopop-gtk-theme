@@ -5,6 +5,8 @@
     border-width: 0px;
     border-style: none;
     padding: 0;
+
+    background-clip: padding-box;
 }
 
 .scrollbars-junction,

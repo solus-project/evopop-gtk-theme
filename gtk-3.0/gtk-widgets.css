@@ -4,7 +4,6 @@
 /* default */
 * {
     engine: none;
-    background-clip: padding-box;
     -GtkArrow-arrow-scaling: 0.55;
     -GtkButton-child-displacement-x: 0;
     -GtkButton-child-displacement-y: 0;
