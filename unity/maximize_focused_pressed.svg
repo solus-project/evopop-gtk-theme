@@ -70,7 +70,7 @@
      inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="23.5"
-     inkscape:cx="5.9136204"
+     inkscape:cx="-1.2353158"
      inkscape:cy="9.6183855"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -101,16 +101,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(290.21429,-522.86219)">
-    <path
-       sodipodi:type="arc"
-       style="fill:#7d92b3;fill-opacity:1"
-       id="path3774"
-       sodipodi:cx="-11.439947"
-       sodipodi:cy="10.936503"
-       sodipodi:rx="5.0868893"
-       sodipodi:ry="5.0868893"
-       d="m -6.3530579,10.936503 a 5.0868893,5.0868893 0 1 1 -10.1737781,0 5.0868893,5.0868893 0 1 1 10.1737781,0 z"
-       transform="matrix(1.4743785,0,0,1.4743785,-263.84748,516.23764)" />
     <rect
        style="opacity:0.7;color:#000000;fill:none;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="rect4238"
@@ -119,7 +109,7 @@
        x="-290.21429"
        y="522.86218" />
     <path
-       style="opacity:0.69999999999999996;fill:#9cb7e0;fill-opacity:1;stroke:none"
+       style="opacity:0.69999999999999996;fill:#6fd0ba;fill-opacity:1;stroke:none"
        d="M 9.5 2 C 5.3578642 2 2 5.3578643 2 9.5 C 2 13.642136 5.3578642 17 9.5 17 C 13.642136 17 17 13.642136 17 9.5 C 17 5.3578643 13.642136 2 9.5 2 z M 7.28125 5.5 L 12.5 5.5 C 13.054 5.5 13.5 5.946 13.5 6.5 L 13.5 11.71875 L 7.28125 5.5 z M 5.5 7.28125 L 11.71875 13.5 L 6.5 13.5 C 5.946 13.5 5.5 13.054 5.5 12.5 L 5.5 7.28125 z "
        transform="translate(-290.21429,522.86219)"
        id="path3764" />

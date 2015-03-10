@@ -132,8 +132,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="9.7144515"
-     inkscape:cx="-12.43479"
-     inkscape:cy="8.0550459"
+     inkscape:cx="-6.0010764"
+     inkscape:cy="16.290199"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -163,13 +163,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(287.35714,-522.86219)">
-    <rect
-       style="color:#000000;fill:none;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="rect4507"
-       width="19"
-       height="19"
-       x="-287.35715"
-       y="522.86218" />
     <circle
        sodipodi:ry="8.5"
        sodipodi:rx="8.5"
@@ -180,7 +173,7 @@
        cy="1062.8622"
        cx="9.4999924"
        id="circle5890"
-       style="color:#000000;fill:#c4c4c4;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#e5e5e5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        transform="matrix(0.88235294,0,0,0.88235294,-286.23949,-405.45738)" />
     <circle
        sodipodi:ry="7.49998"
@@ -189,7 +182,7 @@
        sodipodi:cx="-1062.8622"
        d="m -1055.3622,9.4999952 c 0,4.1421248 -3.3579,7.4999798 -7.5,7.4999798 -4.1421,0 -7.5,-3.357855 -7.5,-7.4999798 0,-4.1421245 3.3579,-7.4999799 7.5,-7.4999799 4.1421,0 7.5,3.3578554 7.5,7.4999799 z"
        transform="matrix(0,-0.86666898,0.86666898,0,-286.09049,-388.78749)"
-       style="color:#000000;fill:#f5f5f5;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       style="color:#000000;fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:8;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="circle5892"
        cx="-1062.8622"
        cy="9.4999952"
