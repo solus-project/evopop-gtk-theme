@@ -75,6 +75,7 @@
 
 .inline-toolbar.toolbar .button {
     background-color: transparent;
+    padding: 2px;
 }
 
 .inline-toolbar.toolbar .button:hover,
