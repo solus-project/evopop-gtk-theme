@@ -5,9 +5,9 @@
 .sidebar.view,
 .sidebar .view,
 .sidebar GtkScrolledWindow {
-    background-color: @theme_base_color;
-    background-image: linear-gradient(to bottom,@theme_base_color,@theme_base_color); #Fixes python issue
-    color: @theme_text_color; 
+    background-color: @base_color;
+    background-image: linear-gradient(to bottom,@base_color,@base_color); #Fixes python issue
+    color: @text_color; 
 }
 
 .sidebar GtkScrolledWindow,
@@ -17,26 +17,25 @@
 
 .sidebar .image:selected:focus,
 .sidebar .image:selected:hover {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
+    background-color: shade(@selected_bg_color,0.9);
+    color: @selected_fg_color;
 }
 
 .sidebar  .list-row {
-    background-color: @theme_base_color;
-    color: @theme_text_color;
+    background-color: @base_color;
+    color: @text_color;
 }
 
 .sidebar .cell:selected,
 .sidebar .cell:selected:focus {
-    background-color: @theme_selected_bg_color;
+    background-color: shade(@selected_bg_color,0.9);
     background-image: none;
-    color: @theme_selected_fg_color;
+    color: @selected_fg_color;
 }
 
 .sidebar GtkScrolledWindow .list-row {
-    border-radius: 0;
     background-color: transparent;
-    color: @theme_text_color;
+    color: @text_color;
 }
 
 .sidebar .frame {
