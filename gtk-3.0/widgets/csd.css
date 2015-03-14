@@ -3,23 +3,37 @@
  *******/
 .titlebar {
     border-radius:5px 5px 0 0;
-    border-color: @theme_bg_color;
     background-image: none;
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
+    background-color: @header_bg_color;
+    color: @header_fg_color;
     text-shadow: none;
+    padding: 6px 6px;
 }
 
-.titlebar:insensitive {
-    border-radius:5px 5px 0 0;
-    background-image: none;
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
-    text-shadow: none;
+.titlebar .button,
+.titlebar .button:active,
+.titlebar .button:checked {
+    padding: 6px 6px;
+    background-color: transparent;
+    border-color: transparent;
+    color: @header_fg_color;
+    font: bold;
 }
+
+.titlebar .button:hover,
+.titlebar .button:active:hover {
+    color: @selected_bg_color;
+}
+
+.titlebar .button:checked,
+.titlebar .button:active {
+    color: shade(@selected_bg_color,0.9);
+}
+
 
 .maximized .titlebar {
-    border-radius:5px 5px 0 0;
+    border-radius: 0;
+    border: none;
 }
 
 .titlebar.default-decoration {
@@ -28,102 +42,74 @@
 }
 
 .titlebar .title {
-    font: bold;
+    font: Bold 10;
+    color: @header_fg_color;
 }
 
-.titlebar:backdrop {
-    background-image: none;
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
-    text-shadow: none;
+.titlebar .subtitle {
+    font: 9;
+    color: @header_fg_color;
 }
 
-.titlebar:backdrop:insensitive {
-    background-image: none;
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
-    text-shadow: none;
-}
-
-.titlebar .titlebutton {
-    padding: 6px 6px;
-    border-style: none;
-    background: none;
-    color: @theme_fg_color;
-    icon-shadow: none;
-}
-
-.titlebar .titlebutton:hover,
-.titlebar .titlebutton:hover:focus {
-    background: none;
-    color: @menu_selected_bg_color;
-}
-
-.titlebar .titlebutton:active,
-.titlebar .titlebutton:active:hover {
-    background: none;
-    color: @menu_selected_bg_color;
-    box-shadow: none;
-}
-
-.titlebar .titlebutton:backdrop {
-    background-image: none;
-    color: shade(@theme_fg_color,1.75);
-    icon-shadow: none;
-}
-
-.titlebar .button,
-.maximized .header-bar .button {
-    padding: 6px 6px;
-    background-color: @wm_bg; /*makes it practically transparent*/
-    color: @wm_title_focused;
-}
-
-.titlebar .button:hover,
-.maximized .header-bar .button:hover {
-    background-color: @wm_bg;
-    color: @menu_selected_bg_color;
-}
-
-.titlebar .button:active:hover,
-.maximized .header-bar .button:active:hover {
-    background-color: @wm_bg;
-    color: shade(@menu_selected_bg_color, 0.87);
-}
-
-.titlebar .button:active,
-.titlebar .button:checked:checked,
-.maximized .header-bar .button:active,
-.maximized .header-bar .button:checked {
-    background-color: @wm_bg;
-    color: @menu_selected_bg_color;
-}
-.titlebar .linked .button,
-.titlebar .linked .button:hover,
-.titlebar .linked .button:active,
-.titlebar .linked .buttonactive:hover,
-.titlebar .linked .button:focus:active,
-.titlebar .linked .button:checked {
-    border:none;
-}
-
-.titlebar .separator,
-.maximized .header-bar .separator {
-    border-color: @theme_bg_color;
-    color: @theme_bg_color;
+.titlebar .separator {
+    color: transparent;
 }
 
 .window-frame {
     border: none;
-    border-radius:5px 5px 0 0;
-    /*box-shadow: 0 3px 7px 1px alpha(black, 0.7),
-                0 0 0 1px mix(shade(wm_bg, 0.7), @wm_title_focused, 0.21);
-    this is used for the resize cursor area */
-    
-    box-shadow: 0 3px 9px alpha(@dark_shadow, 0.75);
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 3px 9px alpha(black, 0.75);
     margin: 10px;
 }
 
 .window-frame:backdrop {
     box-shadow: 0 3px 6px 1px alpha(black, 0.5);
+}
+
+/**************
+ * header-bar *
+ **************/
+.header-bar,
+.header-bar:insensitive {
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: mix(@header_bg_color, white, 0.1);
+    background-color: @header_bg_color;
+}
+
+/******************
+ * window actions *
+ ******************/
+.header-bar .button.titlebutton,
+.titlebar .button.titlebutton,
+.header-bar .button.titlebutton:hover,
+.titlebar .button.titlebutton:hover,
+.header-bar .button.titlebutton:checked,
+.titlebar .button.titlebutton:checked {
+    background: none;
+    border-width: 1px 0px 2px 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-image: none;
+    icon-shadow: none;
+    box-shadow: none; 
+}
+
+.header-bar .right .button.titlebutton,
+.titlebar .right .button.titlebutton {
+    padding-left: 4px;
+    padding-right: 4px; 
+}
+
+.titlebar .right .titlebutton,
+.titlebar .right .titlebutton:hover,
+.titlebar .right .titlebutton:active:hover,
+.titlebar .right .titlebutton:backdrop,
+.maximized .titlebar .right .titlebutton,
+.maximized .titlebar .right .titlebutton:hover,
+.maximized .titlebar .right .titlebutton:active:hover,
+.maximized .titlebar .right .titlebutton:backdrop {
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
 }

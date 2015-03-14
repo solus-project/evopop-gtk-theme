@@ -1,23 +1,23 @@
 /* evolve palet */
 @define-color lime #a1ce4b;
-@define-color cyan #6fd0ba;
+@define-color cyan #37b9a5;
 @define-color yellow #eedc43;
 @define-color orange #f5a723;
 @define-color purple #9cb7e0;
-@define-color red #d63f5b;
+@define-color red #c72240;
 
 /* default color scheme */
 @define-color bg_color #e6e8eb;
-@define-color fg_color #1a334c;
+@define-color fg_color #31363D;
 @define-color base_color #fefefe;
-@define-color text_color #1a334c;
+@define-color text_color #31363D;
+@define-color borders transparent;
+@define-color header_bg_color #31363D;
+@define-color header_fg_color #fefefe;
 @define-color selected_bg_color #13b1d5;
 @define-color selected_fg_color #fefefe;
 @define-color tooltip_bg_color #fefefe;
 @define-color tooltip_fg_color #2d2d2d;
-@define-color borders @text_color;
-@define-color dark_theme_bg_color #31363D;
-@define-color dark_theme_fg_color @base_color;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
@@ -56,8 +56,8 @@
 @define-color toolbar_fg_color @theme_fg_color;
 @define-color menu_bg_color @theme_base_color;
 @define-color menu_fg_color @theme_text_color;
-@define-color panel_bg_color @dark_theme_bg_color;
-@define-color panel_fg_color @dark_theme_fg_color;
+@define-color panel_bg_color shade(@header_bg_color, 0.8);
+@define-color panel_fg_color @header_fg_color;
 @define-color menu_selected_bg_color @selected_bg_color;
 @define-color menu_selected_fg_color @selected_fg_color;
 @define-color titlebar_bg_color @theme_bg_color;
@@ -69,10 +69,10 @@
 @define-color osd_bg @bg_color;
 
 /* window manager colors */
-@define-color wm_bg @header;
-@define-color wm_border_focused @theme_bg_color;
-@define-color wm_border_unfocused @theme_bg_color;
-@define-color wm_title_focused @theme_fg_color;
+@define-color wm_bg @header_bg_color;
+@define-color wm_border_focused @header_bg_color;
+@define-color wm_border_unfocused @header_bg_color;
+@define-color wm_title_focused @header_fg_color;
 @define-color wm_title_unfocused alpha(@theme_fg_color, 0.75);
 @define-color wm_icons_focused @theme_fg_color;
 @define-color wm_icons_focused_prelight shade(@theme_selected_bg_color, 1.15);
@@ -107,7 +107,6 @@
 @import url("widgets/switch.css");
 @import url("widgets/color-chooser.css");
 @import url("widgets/toolbar.css");
-@import url("widgets/header-bar.css");
 @import url("widgets/osd.css");
 @import url("widgets/csd.css");
 @import url("widgets/combobox.css");

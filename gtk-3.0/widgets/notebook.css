@@ -64,7 +64,7 @@
     border: none;
     background-image: none;
     background-color: transparent;
-    color: alpha(@theme_text_color,0.5);
+    color: @theme_text_color;
 }
 
 .notebook tab .button:hover,

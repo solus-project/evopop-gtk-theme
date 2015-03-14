@@ -1,94 +1,35 @@
 /******************
  * window actions *
  ******************/
-
-.header-bar .button.titlebutton,
-.titlebar .button.titlebutton,
-.header-bar .button.titlebutton:hover,
-.titlebar .button.titlebutton:hover,
-.header-bar .button.titlebutton:checked,
-.titlebar .button.titlebutton:checked {
-    background: none;
-    border-width: 1px 0px 2px 0px;
-    border-color: transparent;
-    border-style: solid;
-    border-image: none;
-    icon-shadow: none;
-    box-shadow: none; 
-}
-
-.header-bar .right .button.titlebutton,
-.titlebar .right .button.titlebutton {
-    padding-left: 3px;
-    padding-right: 4px; 
-}
-
-.header-bar .left .button.titlebutton,
-.titlebar .left .button.titlebutton {
-    padding-left: 4px;
-    padding-right: 3px; 
-}
-
-.titlebar .right .titlebutton,
-.titlebar .left .titlebutton,
-.titlebar .right .titlebutton:hover,
-.titlebar .left .titlebutton:hover,
-.titlebar .right .titlebutton:active:hover,
-.titlebar .left .titlebutton:active:hover,
-.titlebar .right .titlebutton:backdrop,
-.titlebar .left .titlebutton:backdrop,
-.maximized .titlebar .right .titlebutton,
-.maximized .titlebar .left .titlebutton,
-.maximized .titlebar .right .titlebutton:hover,
-.maximized .titlebar .left .titlebutton:hover,
-.maximized .titlebar .right .titlebutton:active:hover,
-.maximized .titlebar .left .titlebutton:active:hover,
-.maximized .titlebar .right .titlebutton:backdrop,
-.maximized .titlebar .left .titlebutton:backdrop {
-    color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* minimize */
-.titlebar .left .titlebutton:nth-child(3),
 .titlebar .right .titlebutton:nth-last-child(3) {
     background-image: -gtk-scaled(url("assets/min_unfocused_normal.svg"));
 }
 
-.titlebar .left .titlebutton:nth-child(3):hover,
 .titlebar .right .titlebutton:nth-last-child(3):hover,
-.titlebar .left .titlebutton:nth-child(3):active,
 .titlebar .right .titlebutton:nth-last-child(3):active {
     background-image: -gtk-scaled(url("assets/min_focused_normal.svg"));
 }
 
 /* maximize */
-.titlebar .left .titlebutton:nth-child(2),
 .titlebar .right .titlebutton:nth-last-child(2) {
     background-image: -gtk-scaled(url("assets/max_unfocused_normal.svg"));
 }
 
-.titlebar .left .titlebutton:nth-child(2):hover,
 .titlebar .right .titlebutton:nth-last-child(2):hover, 
-.titlebar .left .titlebutton:nth-child(2):active,
 .titlebar .right .titlebutton:nth-last-child(2):active {
     background-image: -gtk-scaled(url("assets/max_focused_normal.svg"));
 }
 
 /* close */
-.titlebar .left .titlebutton:first-child,
 .titlebar .right .titlebutton:last-child {
     background-image: -gtk-scaled(url("assets/close_unfocused_normal.svg"));
 }
 
-.titlebar .left .titlebutton:first-child:hover,
 .titlebar .right .titlebutton:last-child:hover,
-.titlebar .left .titlebutton:first-child:active,
 .titlebar .right .titlebutton:last-child:active {
     background-image: -gtk-scaled(url("assets/close_focused_normal.svg"));
 }
-
 
 /*******************
  * check and radio *

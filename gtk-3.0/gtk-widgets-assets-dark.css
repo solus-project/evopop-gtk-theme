@@ -1,55 +1,6 @@
 /******************
  * window actions *
  ******************/
-
-.header-bar .button.titlebutton,
-.titlebar .button.titlebutton,
-.header-bar .button.titlebutton:hover,
-.titlebar .button.titlebutton:hover,
-.header-bar .button.titlebutton:checked,
-.titlebar .button.titlebutton:checked {
-    background: none;
-    border-width: 1px 0px 2px 0px;
-    border-color: transparent;
-    border-style: solid;
-    border-image: none;
-    icon-shadow: none;
-    box-shadow: none; 
-}
-
-.header-bar .right .button.titlebutton,
-.titlebar .right .button.titlebutton {
-    padding-left: 3px;
-    padding-right: 4px; 
-}
-
-.header-bar .left .button.titlebutton,
-.titlebar .left .button.titlebutton {
-    padding-left: 4px;
-    padding-right: 3px; 
-}
-
-.titlebar .right .titlebutton,
-.titlebar .left .titlebutton,
-.titlebar .right .titlebutton:hover,
-.titlebar .left .titlebutton:hover,
-.titlebar .right .titlebutton:active:hover,
-.titlebar .left .titlebutton:active:hover,
-.titlebar .right .titlebutton:backdrop,
-.titlebar .left .titlebutton:backdrop,
-.maximized .titlebar .right .titlebutton,
-.maximized .titlebar .left .titlebutton,
-.maximized .titlebar .right .titlebutton:hover,
-.maximized .titlebar .left .titlebutton:hover,
-.maximized .titlebar .right .titlebutton:active:hover,
-.maximized .titlebar .left .titlebutton:active:hover,
-.maximized .titlebar .right .titlebutton:backdrop,
-.maximized .titlebar .left .titlebutton:backdrop {
-    color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* minimize */
 .titlebar .left .titlebutton:nth-child(3),
 .titlebar .right .titlebutton:nth-last-child(3) {

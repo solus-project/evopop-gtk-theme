@@ -1,58 +1,41 @@
 /**************
  * List boxes *
  **************/
-/*Blatantly stolen code from Vertex theme*/
-
 .list,
 .list-row {
     font-weight: normal;
-    background-color: @theme_base_color;
+    background-color: @base_color;
 }
 
 .list-row.button {
+    background-color: @base_color; 
+    color: @fg_color;
     font-weight: normal;
-    background-color: @theme_base_color; 
-    color: @theme_fg_color;
+    border: none;
     border-radius: 0px;
 }
 
 .list-row.button:hover {
     transition: none;
-    color: @theme_fg_color;
-    background-color: alpha(@theme_bg_color, 0.55);
+    background-color: alpha(@bg_color, 0.55);
+    color: @fg_color;
 }
     
 .list-row.button:active, 
 .list-row.button:active:hover {
+    background-color: shade(@bg_color, 0.97);
     color: @theme_fg_color;
-    background-color: shade(@theme_bg_color, 0.97);
-}
-    
-.list-row.button:checked {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-    
-.list-row.button:selected, 
-.list-row.button:selected:hover, 
-.list-row.button:focus, 
-.list-row.button:focus:hover {
-    outline-color: alpha(@theme_selected_bg_color, 0.3);
-}
-    
-.list-row.button:selected, 
-.list-row:selected {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-    outline-color: alpha(@theme_selected_bg_color, 0.3); 
 }
 
 .list-row.button:selected:hover {
-    background-color: shade(@theme_selected_bg_color, 1.05);
-    color: @theme_selected_fg_color;
+    background-color: shade(@selected_bg_color, 1.05);
+    color: @selected_fg_color;
 }
-    
+
+.list-row.button:checked,
+.list-row.button:selected, 
+.list-row:selected,    
 .list-row.button:selected:active:hover {
-    color: @theme_selected_fg_color;
-    background-color: shade(@theme_selected_bg_color, 0.97); 
+    background-color: shade(@selected_bg_color, 0.9); 
+    color: @selected_fg_color;
 }

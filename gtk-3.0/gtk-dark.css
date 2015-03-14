@@ -11,11 +11,13 @@
 @define-color fg_color #fefefe;
 @define-color base_color #505359;
 @define-color text_color #fefefe;
+@define-color borders transparent;
+@define-color header_bg_color #31363D;
+@define-color header_fg_color #fefefe;
 @define-color selected_bg_color #13b1d5;
 @define-color selected_fg_color #fefefe;
 @define-color tooltip_bg_color #fefefe;
 @define-color tooltip_fg_color #2d2d2d;
-@define-color borders @text_color;
 
 /* colormap actually used by the theme, to be overridden in other css files */
 @define-color theme_bg_color @bg_color;
@@ -54,8 +56,8 @@
 @define-color toolbar_fg_color @theme_fg_color;
 @define-color menu_bg_color @theme_base_color;
 @define-color menu_fg_color @theme_text_color;
-@define-color panel_bg_color #222222;
-@define-color panel_fg_color #f2f2f2;
+@define-color panel_bg_color shade(@header_bg_color, 0.8);
+@define-color panel_fg_color @header_fg_color;
 @define-color menu_selected_bg_color @selected_bg_color;
 @define-color menu_selected_fg_color @selected_fg_color;
 
@@ -103,7 +105,6 @@
 @import url("widgets/switch.css");
 @import url("widgets/color-chooser.css");
 @import url("widgets/toolbar.css");
-@import url("widgets/header-bar.css");
 @import url("widgets/osd.css");
 @import url("widgets/csd.css");
 @import url("widgets/combobox.css");
