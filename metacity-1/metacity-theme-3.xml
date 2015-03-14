@@ -17,7 +17,7 @@
 <constant name="C_title_focused" value="gtk:custom(wm_title_focused,gtk:fg[NORMAL])" />
 <constant name="C_title_focused_hilight" value="gtk:custom(wm_bg,gtk:bg[NORMAL])" />
 <constant name="C_title_focused_hilight_dark" value="gtk:custom(wm_bg,gtk:bg[NORMAL])" />
-<constant name="C_title_unfocused" value="gtk:custom(wm_title_unfocused,gtk:fg[INSENSITIVE])" />
+<constant name="C_title_unfocused" value="gtk:custom(wm_title_focused,gtk:fg[NORMAL])" />
 <!-- color of the button icons -->
 <constant name="C_icons_focused" value="gtk:custom(wm_title_focused,gtk:fg[NORMAL])" />
 <constant name="C_icons_pressed" value="gtk:text[SELECTED]" />
