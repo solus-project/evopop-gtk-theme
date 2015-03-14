@@ -8,6 +8,7 @@
 }
 
 .list-row.button {
+    padding: 4px;
     background-color: @base_color; 
     color: @fg_color;
     font-weight: normal;
@@ -17,18 +18,18 @@
 
 .list-row.button:hover {
     transition: none;
-    background-color: alpha(@bg_color, 0.55);
+    background-color: mix(@base_color,@bg_color, 0.2);
     color: @fg_color;
 }
     
 .list-row.button:active, 
 .list-row.button:active:hover {
-    background-color: shade(@bg_color, 0.97);
+    background-color: mix(@base_color,@bg_color, 0.4);
     color: @theme_fg_color;
 }
 
 .list-row.button:selected:hover {
-    background-color: shade(@selected_bg_color, 1.05);
+    background-color: @selected_bg_color;
     color: @selected_fg_color;
 }
 
