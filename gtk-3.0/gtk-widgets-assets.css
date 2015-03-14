@@ -34,7 +34,6 @@
 /*******************
  * check and radio *
  *******************/
-
 /* draw regular check and radio items using our assets */
 
 .check,
@@ -184,7 +183,6 @@ GtkIconView.content-view.cell.check:active {
 /******************
  * pane separator *
  ******************/
-
 .pane-separator.horizontal {
     background-image: url("assets/pane-handle.svg");
     background-repeat: no-repeat;
@@ -200,7 +198,6 @@ GtkIconView.content-view.cell.check:active {
 /*************
  * GtkSwitch *
  *************/
-
 GtkSwitch.trough {
     background-image: url("assets/switch-off.svg");
 }

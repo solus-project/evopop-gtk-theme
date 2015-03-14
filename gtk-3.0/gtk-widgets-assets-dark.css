@@ -2,40 +2,31 @@
  * window actions *
  ******************/
 /* minimize */
-.titlebar .left .titlebutton:nth-child(3),
 .titlebar .right .titlebutton:nth-last-child(3) {
     background-image: -gtk-scaled(url("assets/min_unfocused_normal.svg"));
 }
 
-.titlebar .left .titlebutton:nth-child(3):hover,
 .titlebar .right .titlebutton:nth-last-child(3):hover,
-.titlebar .left .titlebutton:nth-child(3):active,
 .titlebar .right .titlebutton:nth-last-child(3):active {
     background-image: -gtk-scaled(url("assets/min_focused_normal.svg"));
 }
 
 /* maximize */
-.titlebar .left .titlebutton:nth-child(2),
 .titlebar .right .titlebutton:nth-last-child(2) {
     background-image: -gtk-scaled(url("assets/max_unfocused_normal.svg"));
 }
 
-.titlebar .left .titlebutton:nth-child(2):hover,
 .titlebar .right .titlebutton:nth-last-child(2):hover, 
-.titlebar .left .titlebutton:nth-child(2):active,
 .titlebar .right .titlebutton:nth-last-child(2):active {
     background-image: -gtk-scaled(url("assets/max_focused_normal.svg"));
 }
 
 /* close */
-.titlebar .left .titlebutton:first-child,
 .titlebar .right .titlebutton:last-child {
     background-image: -gtk-scaled(url("assets/close_unfocused_normal.svg"));
 }
 
-.titlebar .left .titlebutton:first-child:hover,
 .titlebar .right .titlebutton:last-child:hover,
-.titlebar .left .titlebutton:first-child:active,
 .titlebar .right .titlebutton:last-child:active {
     background-image: -gtk-scaled(url("assets/close_focused_normal.svg"));
 }
@@ -44,9 +35,7 @@
 /*******************
  * check and radio *
  *******************/
-
 /* draw regular check and radio items using our assets */
-
 .check,
 .check:focus {
     -gtk-icon-source: url("assets/checkbox-unchecked-dark.svg");
@@ -194,7 +183,6 @@ GtkIconView.content-view.cell.check:active {
 /******************
  * pane separator *
  ******************/
-
 .pane-separator.horizontal {
     background-image: url("assets/pane-handle.svg");
     background-repeat: no-repeat;
@@ -210,7 +198,6 @@ GtkIconView.content-view.cell.check:active {
 /*************
  * GtkSwitch *
  *************/
-
 GtkSwitch.trough {
     background-image: url("assets/switch-off-dark.svg");
 }

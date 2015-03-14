@@ -21,13 +21,10 @@
 }
 
 .titlebar .button:hover,
-.titlebar .button:active:hover {
-    color: @selected_bg_color;
-}
-
+.titlebar .button:active:hover,
 .titlebar .button:checked,
 .titlebar .button:active {
-    color: shade(@selected_bg_color,0.9);
+    color: @selected_bg_color;
 }
 
 

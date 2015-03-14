@@ -6,39 +6,39 @@
     transition: 200ms linear;
     padding: 6px 8px;
     border-style: solid;
-    border-radius: 4px;
+    border-radius: 3px;
     border-width: 1px;
-    background-color: @theme_base_color;
+    border-color: transparent;
+    border-top-color: alpha(white,0.2);
+    border-bottom-color: alpha(black,0.2);
+    background-color: @base_color;
     background-image: none;
-    border-color: shade(@theme_bg_color, 0.87);
-    color: @theme_text_color;
+    color: @text_color;
 }
 
 .entry:active,
 .entry:focus {
     transition: 200ms linear;
-    background-color: @theme_base_color;
-    border-style: solid;
-    border-color: @theme_selected_bg_color;
-    color: @theme_text_color;
+    background-color: @base_color;
+    border-bottom-color: @selected_bg_color;
+    color: @text_color;
 }
 
 .entry:selected,
 .entry:selected:focus {
-    background-color: shade(@theme_bg_color, 0.9);
+    background-color: shade(@bg_color, 0.9);
 }
 
 .entry:insensitive {
-    background-color: alpha(@theme_base_color, 0.5);
+    background-color: alpha(@base_color, 0.5);
     background-image: none;
-    color: mix(@theme_text_color, @theme_base_color, 0.5);
 }
 
 .entry.progressbar {
     border-width: 0;
-    border-radius: 5px;
-    background-color: @theme_selected_bg_color;
+    border-radius: 3px;
+    background-color: @selected_bg_color;
     background-image: none;
-    color: @theme_selected_fg_color;
-    border-color: @theme_selected_bg_color;
+    color: @selected_fg_color;
+    border-color: @selected_bg_color;
 }
