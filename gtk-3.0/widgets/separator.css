@@ -10,12 +10,7 @@
 
 .button .separator,
 .button.separator {
-    color: @button_bg_color;
-}
-
-.button .separator:insensitive,
-.button.separator:insensitive {
-    color: shade(@button_bg_color, 0.9);
+    color: transparent;
 }
 
 .primary-toolbar GtkSeparatorToolItem,

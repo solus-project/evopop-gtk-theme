@@ -65,7 +65,8 @@
 
 .button.flat:hover,
 .action-bar .button:hover,
-.inline-toolbar .button:hover {
+.inline-toolbar .button:hover,
+.action-bar .button:hover {
     border: none;
     transition: color 150ms ease-in;
     color: @selected_bg_color;
@@ -74,10 +75,13 @@
 .button.flat:active,
 .button.flat:active:focus,
 .button.flat:active:checked,
-.button.flat:active:checked:focus {
+.button.flat:active:checked:focus,
+.action-bar .button:checked,
+.action-bar .button:active {
     border: none;
     transition: color 150ms ease-in;
     color: shade(@selected_bg_color, 0.9);
+    background-color: transparent;
 }
 
 .button.flat:active:hover {

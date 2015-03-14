@@ -217,7 +217,7 @@ GtkImage:insensitive {
 .floating-bar {
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@bg_color, 0.8);
+    border-color: @bg_color;
     border-radius: 0px;
     background-color: @bg_color;
     background-image: none;

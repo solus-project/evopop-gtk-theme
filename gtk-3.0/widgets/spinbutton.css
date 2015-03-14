@@ -2,7 +2,7 @@
  * spinbutton *
  **************/
 .spinbutton.entry {
-    padding: 4px 10px;
+    border: solid 1px mix(@bg_color,black, 0.2);
 }
 
 .spinbutton.button {
@@ -19,7 +19,7 @@
     border-style: none;
     border-radius: 0;
     background-color: transparent;
-    color: shade(@theme_selected_bg_color, 0.85);
+    color: shade(@theme_selected_bg_color, 0.9);
 }
 
 .spinbutton.button:hover {
@@ -48,31 +48,31 @@
     border-radius: 0;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    border-right-color: shade(@theme_bg_color, 0.82);
+    border-right-color: mix(@bg_color,black, 0.2);
     border-style: solid;
 }
 
 .spinbutton.vertical .button:first-child {
-    border-width: 1px;
     border-bottom-width: 0;
-    border-radius: 0;
+    border-radius: 4px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-    border: solid 1px shade(@theme_bg_color, 0.82);
+    border: solid 1px mix(@bg_color,black, 0.2);
     border-bottom: none;    
 }
 
 .spinbutton.vertical .button:last-child {
     border-width: 1px;
     border-top-width: 0;
-    border-radius: 0;
+    border-radius: 4px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-    border: solid 1px shade(@theme_bg_color, 0.82);
+    border: solid 1px mix(@bg_color,black, 0.2);
     border-top: none;  
 }
 
 .spinbutton.vertical.entry {
+    border: solid 1px mix(@bg_color,black, 0.2);
     border-width: 1px;
     border-style: solid;
     border-radius: 0;
