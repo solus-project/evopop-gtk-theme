@@ -74,6 +74,7 @@
 
 .button.flat:active,
 .button.flat:active:focus,
+.button.flat:checked,
 .button.flat:active:checked,
 .button.flat:active:checked:focus,
 .action-bar .button:checked,

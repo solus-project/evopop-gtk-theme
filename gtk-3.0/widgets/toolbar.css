@@ -9,46 +9,39 @@
 }
 
 /* primary-toolbar */
-.primary-toolbar,
-.primary-toolbar .toolbar,
 .primary-toolbar.toolbar {
-    -GtkWidget-window-dragging: true;
+    padding: 4px;
+    background-color: @header_bg_color;
+    color: @header_fg_color;
+}
 
-    padding: 5px;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: shade(@toolbar_bg_color, 0.8);
+.primary-toolbar.toolbar .button {
+    background-color: shade(@header_bg_color,1.2);
+    color: @header_fg_color;
+}
+
+.primary-toolbar.toolbar .button:hover {
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+.primary-toolbar.toolbar .button:active,
+.primary-toolbar.toolbar .button:checked {
+    background-color: shade(@selected_bg_color,0.9);
+}
+
+.primary-toolbar.toolbar .button.flat {
     background-color: transparent;
-    background-image: none;
-    color: @toolbar_fg_color;
 }
 
-.primary-toolbar GtkSeparatorToolItem,
-.primary-toolbar .separator,
-.primary-toolbar .separator:insensitive {
-    border-color: shade(@toolbar_bg_color, 0.9);
+.primary-toolbar.toolbar .button.flat:hover {
+    color: @selected_bg_color;
 }
 
-.primary-toolbar .button,
-.primary-toolbar .button:active:hover {
-    background-color: transparent;
+.primary-toolbar.toolbar .button.flat:active,
+.primary-toolbar.toolbar .button.flat:checked {
+    color: shade(@selected_bg_color, 0.9);
 }
-
-.primary-toolbar .linked .button {
-    background-color: @theme_base_color;
-}
-
-.primary-toolbar.toolbar .button:hover,
-.primary-toolbar.toolbar .button:active {
-    color: @theme_selected_bg_color;
-}
-
-.primary-toolbar .linked .button:hover,
-.primary-toolbar .linked .button:active {
-    background-color: @theme_selected_bg_color;
-    color: @theme_selected_fg_color;
-}
-
 
 /* inline-toolbar */
 .inline-toolbar.toolbar {
@@ -79,6 +72,7 @@
 }
 
 .inline-toolbar.toolbar .button:hover,
-.inline-toolbar.toolbar .button:active {
+.inline-toolbar.toolbar .button:active,
+.inline-toolbar.toolbar .button:checked {
     color: @theme_selected_bg_color;
 }

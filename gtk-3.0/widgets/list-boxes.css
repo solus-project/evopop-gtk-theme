@@ -40,3 +40,9 @@
     background-color: shade(@selected_bg_color, 0.9); 
     color: @selected_fg_color;
 }
+
+/*selected-row buttons*/
+.list-row.button:selected .button:hover,
+.list-row.button:selected .button:active {
+    color: @selected_fg_color;
+}
