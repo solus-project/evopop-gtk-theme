@@ -16,3 +16,11 @@
 .max-budgie-panel .message-area {
     border: 1px solid alpha(white, 0.1);
 }
+
+PanelToplevel {
+    padding: 0px;
+    border-top: 1px solid mix(@panel_bg_color,white,0.2);
+    background-color: @panel_bg_color;
+    background-image: none;
+    color: @panel_fg_color;
+}
