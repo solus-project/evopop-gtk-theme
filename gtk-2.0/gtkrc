@@ -281,8 +281,8 @@ style "murrine-spinbutton" = "murrine-button" {
 style "murrine-radiocheck" = "murrine-default" {
 	bg[SELECTED] = @base_color
 
-	text[NORMAL] = @selected_bg_color
-	text[PRELIGHT] = @selected_bg_color
+	text[NORMAL] = @selected_fg_color
+	text[PRELIGHT] = @selected_fg_color
 }
 
 style "murrine-entry" = "murrine-wider" {
@@ -594,8 +594,8 @@ style "chromium-toolbar-button" {
 }
 
 style "chrome-gtk-frame" {
-	ChromeGtkFrame::frame-color = @titlebar_bg_color
-	ChromeGtkFrame::inactive-frame-color = @titlebar_bg_color
+	ChromeGtkFrame::frame-color = "#31363d"
+	ChromeGtkFrame::inactive-frame-color = "#31363d"
 
 	ChromeGtkFrame::frame-gradient-size = 0
 	ChromeGtkFrame::frame-gradient-color = @titlebar_bg_color
