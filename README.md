@@ -1,16 +1,16 @@
 EvoPop
 ====
 
-A simple, flat and bold Gtk theme for Evolve OS  & Budgie Desktop.
+A simple, flat and bold Gtk theme for Evolve OS & Budgie Desktop.
 Iris Dark was used as base.
 
-This project is still in a very early stage.
+This project is still a work in progress.
 Requires Gtk 3.14
 
 ###Installation Instructions:
 
-Extract the zip file to the themes directory i.e. "/usr/share/themes/"
-Alternatively, extract it to the ".themes" directory in your home folder if you want the theme to be applied only to you user.
+Extract the zip file & run the included install script.
+	bash install.sh
 
 Use Budgie settings to change the theme to EvoPop.
 

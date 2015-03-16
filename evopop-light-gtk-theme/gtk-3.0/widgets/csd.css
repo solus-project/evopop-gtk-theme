@@ -1,0 +1,112 @@
+/*******
+ * CSD *
+ *******/
+.titlebar {
+    border-radius:5px 5px 0 0;
+    background-image: none;
+    background-color: @header_bg_color;
+    color: @header_fg_color;
+    text-shadow: none;
+    padding: 6px 6px;
+}
+
+.titlebar .button,
+.titlebar .button:active,
+.titlebar .button:checked {
+    padding: 6px 6px;
+    background-color: transparent;
+    border-color: transparent;
+    color: @header_fg_color;
+    font: bold;
+}
+
+.titlebar .button:hover,
+.titlebar .button:active:hover,
+.titlebar .button:checked,
+.titlebar .button:active {
+    color: @selected_bg_color;
+}
+
+
+.maximized .titlebar {
+    border-radius: 0;
+    border: none;
+}
+
+.titlebar.default-decoration {
+    border: none;
+    box-shadow: none;
+}
+
+.titlebar .title {
+    font: Bold 10;
+    color: @header_fg_color;
+}
+
+.titlebar .subtitle {
+    font: 9;
+    color: @header_fg_color;
+}
+
+.titlebar .separator {
+    color: transparent;
+}
+
+.window-frame {
+    border: none;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 3px 9px alpha(black, 0.75);
+    margin: 10px;
+}
+
+.window-frame:backdrop {
+    box-shadow: 0 3px 6px 1px alpha(black, 0.5);
+}
+
+/**************
+ * header-bar *
+ **************/
+.header-bar,
+.header-bar:insensitive {
+    border-width: 1px 0 0;
+    border-style: solid;
+    border-color: mix(@header_bg_color, white, 0.1);
+    background-color: @header_bg_color;
+}
+
+/******************
+ * window actions *
+ ******************/
+.header-bar .button.titlebutton,
+.titlebar .button.titlebutton,
+.header-bar .button.titlebutton:hover,
+.titlebar .button.titlebutton:hover,
+.header-bar .button.titlebutton:checked,
+.titlebar .button.titlebutton:checked {
+    background: none;
+    border-width: 1px 0px 2px 0px;
+    border-color: transparent;
+    border-style: solid;
+    border-image: none;
+    icon-shadow: none;
+    box-shadow: none; 
+}
+
+.header-bar .right .button.titlebutton,
+.titlebar .right .button.titlebutton {
+    padding-left: 4px;
+    padding-right: 4px; 
+}
+
+.titlebar .right .titlebutton,
+.titlebar .right .titlebutton:hover,
+.titlebar .right .titlebutton:active:hover,
+.titlebar .right .titlebutton:backdrop,
+.maximized .titlebar .right .titlebutton,
+.maximized .titlebar .right .titlebutton:hover,
+.maximized .titlebar .right .titlebutton:active:hover,
+.maximized .titlebar .right .titlebutton:backdrop {
+    color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+}
