@@ -5,7 +5,7 @@ GtkScale,
 GtkProgressBar {
     padding: 0;
     border-width: 0px;
-    border-radius: 3px;
+    border-radius: 0px;
     border-style: solid;
 }
 
@@ -31,7 +31,7 @@ GtkProgressBar {
 .trough row:hover,
 .trough row:selected,
 .trough row:selected:focus {
-    border-radius: 3px;
+    border-radius: 0px;
     border-width: 3px;
     border-style: solid;
     border-color: @theme_base_color;

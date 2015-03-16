@@ -1,6 +1,10 @@
 /******************
  * combobox entry *
  ******************/
+GtkComboBox .button {
+    padding: 5px 6px 5px 6px;
+}
+
 GtkComboBox.combobox-entry .button {
     border-color: alpha(black,0.2);
 }

@@ -600,8 +600,8 @@ style "chrome-gtk-frame" {
 	ChromeGtkFrame::frame-gradient-size = 0
 	ChromeGtkFrame::frame-gradient-color = @titlebar_bg_color
 
-	ChromeGtkFrame::incognito-frame-color = @titlebar_bg_color
-	ChromeGtkFrame::incognito-inactive-frame-color = @titlebar_bg_color
+	ChromeGtkFrame::incognito-frame-color = "#31363d"
+	ChromeGtkFrame::incognito-inactive-frame-color = "#31363d"
 
 	ChromeGtkFrame::incognito-frame-gradient-size = 0
 	ChromeGtkFrame::incognito-frame-gradient-color = @titlebar_bg_color

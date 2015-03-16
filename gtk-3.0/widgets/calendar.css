@@ -27,5 +27,5 @@ GtkCalendar.highlight {
 }
 
 GtkCalendar:selected {
-    border-radius: 32px;
+    border-radius: 5px;
 }
