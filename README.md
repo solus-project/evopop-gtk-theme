@@ -10,6 +10,7 @@ Requires Gtk 3.14
 ###Installation Instructions:
 
 Extract the zip file & run the included install script.
+
     bash install.sh
 
 Use Budgie settings to change the theme to EvoPop.
