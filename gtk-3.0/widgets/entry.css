@@ -8,9 +8,7 @@
     border-style: solid;
     border-radius: 3px;
     border-width: 1px;
-    border-color: transparent;
-    border-top-color: alpha(white,0.2);
-    border-bottom-color: alpha(black,0.2);
+    border-color: alpha(black,0.2);
     background-color: @base_color;
     background-image: none;
     color: @text_color;
