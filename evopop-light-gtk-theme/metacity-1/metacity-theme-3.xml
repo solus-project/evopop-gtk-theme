@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>Adwaita</name>
-	<author>GNOME Art Team &lt;art.gnome.org&gt;</author>
-	<copyright>&#194; Intel, &#194; Red Hat, Lapo Calamandrei</copyright>
-	<date>2014</date>
-	<description>Default GNOME 3 window theme</description>
+	<name>EvoPop</name>
+	<author>Evolve OS Art Team</author>
+	<copyright>Evolve OS Art Team 2015</copyright>
+	<date>2015</date>
+	<description>EvoPop window theme</description>
 </info>
 
 <!-- meaningfull constants -->
