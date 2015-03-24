@@ -20,6 +20,17 @@ GeditViewFrame .gedit-search-slider {
     background-color: @bg_color;
 }
 
+GeditViewFrame .gedit-search-slider .linked .button {
+    border-color: alpha(black,0.2);
+}
+
+GeditViewFrame .gedit-search-slider .linked .button:hover {
+    border-color: transparent;
+    border-top-color: alpha(white,0.2);
+    border-bottom-color: alpha(black,0.2);
+}
+
+
 GeditViewFrame .gedit-search-slider .not-found {
     background-color: @error_bg_color;
     background-image: none;
@@ -29,6 +40,10 @@ GeditViewFrame .gedit-search-slider .not-found {
 GeditViewFrame .gedit-search-slider .not-found:selected {
     background-color: @selected_bg_color;
     color: @selected_fg_color;
+}
+
+GdTaggedEntry *{
+	color: @fg_color;
 }
 
 /**************
