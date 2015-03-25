@@ -113,20 +113,10 @@ GtkLabel,
 GtkLabel:insensitive,
 GtkBox,
 GtkBox:insensitive,
+GtkOverlay,
 GtkGrid,
 GtkGrid:insensitive {
     background-color: transparent;
-}
-
-/****************
- * drawing area *
- ****************/
-GtkDrawingArea {
-    background-color: @base_color;
-}
-
-GtkDrawingArea:insensitive {
-    background-color: shade(@base_color, 0.9);
 }
 
 /***********
@@ -150,16 +140,6 @@ GtkHTML {
 
 .expander:active {
     color: alpha(currentColor, 0.9);
-}
-
-/*********
- * frame *
- *********/
-.frame {
-    border-width: 1px;
-    border-style: solid;
-    border-color: @bg_color;
-    border-radius: 0;
 }
 
 /*******************
@@ -200,15 +180,6 @@ GtkIconView.view.cell:selected:focus {
     border-color: shade(@selected_fg_color, 0.9);
     border-radius: 0;
     background-color: alpha(@selected_fg_color, 0.3);
-}
-
-/*********
- * image *
- *********/
-GtkImage,
-GtkImage:active,
-GtkImage:insensitive {
-    background-color: transparent;
 }
 
 /*****************
