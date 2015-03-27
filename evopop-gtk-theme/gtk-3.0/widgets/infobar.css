@@ -7,129 +7,102 @@ GtkInfoBar {
 }
 
 .info {
-    border-width: 0px;
-    border-style: solid;
-    border-color: shade(@info_bg_color, 0.8);
-    background-color: @info_bg_color;
+    border: none;
+    background-color: shade(@info_bg_color,0.9);
     background-image: none;
     color: @info_fg_color;
 }
 
-.info .button.close {
+.error .button {
+    border: none;
     color: @info_fg_color;
+    background-image: none;
+    background-color: @info_bg_color;
 }
 
-.info .button.close:hover {
-    background-image: linear-gradient(to bottom,
-                                      alpha(white, 0.3),
-                                      alpha(white, 0.2) 30%,
-                                      alpha(black, 0.02));
+.error .button:hover {
+    color: @info_fg_color;
+    background-image: none;
+    background-color: shade(@info_bg_color,1.1);
 }
 
-.info .button.close:active {
+.error .button:active {
     color: @info_fg_color;
-    background-image: linear-gradient(to bottom,
-                                      alpha(black, 0.1),
-                                      transparent);
+    background-image: none;
+    background-color: shade(@info_bg_color,1.2);
 }
 
 .warning {
-    border-width: 0px;
-    border-style: solid;
-    border-color: shade(@warning_bg_color, 0.8);
-    background-color: @warning_bg_color;
+    background-color: shade(@warning_bg_color, 0.9);
     background-image: none;
     color: @warning_fg_color;
 }
 
-.warning .button.close {
+.warning .button {
+    border: none;
     color: @warning_fg_color;
+    background-image: none;
+    background-color: @warning_bg_color;
 }
 
-.warning .button.close:hover {
-    background-image: linear-gradient(to bottom,
-                                      alpha(white, 0.3),
-                                      alpha(white, 0.2) 30%,
-                                      alpha(black, 0.02));
+.warning .button:hover {
+    color: @question_fg_color;
+    background-image: none;
+    background-color: shade(@warning_bg_color,1.1);
 }
 
-.warning .button.close:active {
-    color: @warning_fg_color;
-    background-image: linear-gradient(to bottom,
-                                      alpha(black, 0.1),
-                                      transparent);
+.warning .button:active {
+    color: @question_fg_color;
+    background-image: none;
+    background-color: shade(@warning_bg_color,1.2);
 }
 
 .question {
-    border-width: 0px;
-    border-style: solid;
-    border-color: shade(@question_bg_color, 0.8);
-    background-color: @question_bg_color;
+    background-color: shade(@question_bg_color, 0.9);
     background-image: none;
     color: @question_fg_color;
-}
-
-.question .button.close {
-    border-style: solid;
-    border-width: 1px;
-    color: @question_fg_color;
-    background-image: none;
-    background-color: @question_bg_color;
-    border-color: @question_bg_color;
 }
 
 .question .button {
-    border-style: solid;
-    border-width: 1px;
+    border: none;
     color: @question_fg_color;
     background-image: none;
     background-color: @question_bg_color;
-    border-color: shade(@question_bg_color, 0.85);
 }
 
-.question .button.close:hover,
 .question .button:hover {
-    transition: none;
-    border-style: solid;
-    border-width: 1px;
     color: @question_fg_color;
-    border-color: alpha(#000, 0.15);
     background-image: none;
-    background-color: @question_bg_color;
+    background-color: shade(@question_bg_color,1.1);
 }
 
-.question .button.close:active {
-    border-style: solid;
-    border-width: 1px;
+.question .button:active {
     color: @question_fg_color;
-    border-color: alpha(#000, 0.25);
     background-image: none;
-    background-color: @question_bg_color;
+    background-color: shade(@question_bg_color,1.2);
 }
 
 .error {
-    border-width: 0px;
-    border-style: solid;
-    border-color: shade(@error_bg_color, 0.8);
-    background-color: @error_bg_color;
+    background-color: shade(@error_bg_color, 0.9);
     background-image: none;
     color: @error_fg_color;
 }
 
-.error .button.close {
+.error .button {
+    border: none;
     color: @error_fg_color;
+    background-image: none;
+    background-color: @error_bg_color;
 }
 
-.error .button.close:hover {
-    background-image: linear-gradient(to bottom,
-                                      alpha(white, 0.3),
-                                      alpha(white, 0.2) 30%,
-                                      alpha(black, 0.02));
+.error .button:hover {
+    color: @error_fg_color;
+    background-image: none;
+    background-color: shade(@error_bg_color,1.1);
 }
 
-.error .button.close:active {
+.error .button:active {
     color: @error_fg_color;
-    background-image: linear-gradient(to bottom,
-                                      alpha(black, 0.1),
-                                      transparent);
+    background-image: none;
+    background-color: shade(@error_bg_color,1.2);
 }

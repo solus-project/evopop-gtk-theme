@@ -1,10 +1,10 @@
 /* evolve palet */
 @define-color lime #a1ce4b;
-@define-color cyan #6fd0ba;
+@define-color cyan #37b9a5;
 @define-color yellow #eedc43;
-@define-color orange #f5a723;
+@define-color orange #ffc022;
 @define-color purple #9cb7e0;
-@define-color red #c83b55;
+@define-color red #c72240;
 
 /* default color scheme */
 @define-color bg_color #31363d;
@@ -34,14 +34,14 @@
 @define-color dark_shadow #000;
 
 /* misc colors used by gtk+ */
-@define-color info_fg_color #333;
-@define-color info_bg_color #f2f2f2;
+@define-color info_fg_color #31363D;
+@define-color info_bg_color #f3f3f3;
 @define-color warning_fg_color #fefefe;
-@define-color warning_bg_color #fa993e;
+@define-color warning_bg_color @orange;
 @define-color question_fg_color #fefefe;
 @define-color question_bg_color @cyan;
 @define-color error_fg_color #fefefe;
-@define-color error_bg_color #fa4a3e;
+@define-color error_bg_color @red;
 @define-color link_color #df253f;
 @define-color success_color #53a93f;
 @define-color warning_color #f57900;
