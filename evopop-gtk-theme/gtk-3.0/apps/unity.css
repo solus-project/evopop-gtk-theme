@@ -18,41 +18,41 @@ UnityDecoration {
 }
 
 UnityDecoration.top {
-    border: 1px solid @titlebar_bg_color;
+    border: 1px solid @header_bg_color;
     border-bottom-width: 0;
     border-radius: 5px 5px 0 0;
     padding: 1px 8px 0 8px;
-    background-color: @titlebar_bg_color;
-    color: @titlebar_fg_color;
+    background-color: @header_bg_color;
+    color: @header_fg_color:
     text-shadow: none;
 }
 
 UnityDecoration.top:backdrop {
-    border: 1px solid @titlebar_bg_color;    
+    border: 1px solid @header_bg_color;    
     border-bottom-width: 0;
-    background-color: @titlebar_bg_color;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.2);
+    background-color: @header_bg_color;
+    color: mix(@header_fg_color, @header_bg_color, 0.2);
 }
 
 UnityDecoration.left,
 UnityDecoration.right,
 UnityDecoration.bottom {
-    background-color: @theme_bg_color;
+    background-color: @header_bg_color;
 }
 
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
-    background-color: @theme_bg_color;
+    background-color: @header_bg_color;
 }
 
 UnityPanelWidget,
 .unity-panel {
     border-width: 0 0 0 0;
     border-style: solid;
-    border-color: @panel_bg_color;
-    background-color: @panel_bg_color; /* the theme_bg_color of the dark theme */
-    color: @theme_bg_color;
+    border-color: @header_bg_color;
+    background-color: @header_bg_color; /* the theme_bg_color of the dark theme */
+    color: @header_fg_color;
 }
 
 .unity-panel.menubar,
@@ -62,13 +62,13 @@ UnityPanelWidget,
 .unity-panel.menuitem,
 .unity-panel .menuitem {
     border-width: 0 0 0 0;
-    color: @panel_fg_color;
+    color: @header_fg_color;
 }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-    border-color: mix(@panel_bg_color, @panel_fg_color, 0.2);
-    background-color: mix(@panel_bg_color, @panel_fg_color, 0.2);
+    border-color: @selected_bg_color; /*mix(@panel_bg_color, @panel_fg_color, 0.2);*/
+    background-color: @header_bg_color; /*mix(@panel_bg_color, @panel_fg_color, 0.2);*/
     background-image: none;
-    color: shade(@panel_fg_color, 1.08);
+    color: shade(@header_fg_color, 1.08);
 }
