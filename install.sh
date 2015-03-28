@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION="0.19"
+VERSION="0.20"
 THEME_PREFIX=/usr/share/themes/EvoPop
 LIGHT_THEME_PREFIX=/usr/share/themes/EvoPop-light
 
