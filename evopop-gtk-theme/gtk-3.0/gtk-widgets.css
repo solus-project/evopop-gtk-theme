@@ -247,14 +247,6 @@ GtkIconView.view.cell:selected:focus {
     color: alpha(@fg_color, 0.7);
 }
 
-/******************
- * pane separator *
- ******************/
-.pane-separator {
-    background-color: @bg_color;
-    color: transparent;
-}
-
 /*************
  * statusbar *
  *************/
