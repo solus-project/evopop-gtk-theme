@@ -11,7 +11,8 @@ Requires Gtk 3.14
 
 Extract the zip file & run the included install script.
 
-    bash install.sh
+    sh autogen.sh
+    sudo make install
 
 Use Budgie settings to change the theme to EvoPop.
 
