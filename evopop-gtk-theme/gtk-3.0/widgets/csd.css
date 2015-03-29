@@ -52,6 +52,14 @@
     color: transparent;
 }
 
+.titlebar .arrow {
+    color: alpha(@header_fg_color, 0.7);
+}
+
+.titlebar .arrow:insensitive {
+    color: mix(@fg_color, @bg_color, 0.3);
+}
+
 .window-frame {
     border: none;
     border-radius: 5px 5px 0 0;
