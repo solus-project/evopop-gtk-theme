@@ -228,7 +228,7 @@
     color: @selected_fg_color;
 }
 
-.destructive-action.button::insensitive,
+.destructive-action.button:insensitive,
 .titlebar .destructive-action.button:insensitive {
     background-color: mix(@bg_color,@error,0.6);
 }

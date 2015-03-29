@@ -23,7 +23,7 @@ UnityDecoration.top {
     border-radius: 5px 5px 0 0;
     padding: 1px 8px 0 8px;
     background-color: @header_bg_color;
-    color: @header_fg_color:
+    color: @header_fg_color;
     text-shadow: none;
 }
 

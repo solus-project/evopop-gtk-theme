@@ -10,7 +10,7 @@
 .cell:selected:hover,
 .cell:selected:focus {
     background-color: shade(@selected_bg_color, 0.9);
-    background-image: linear-gradient(to bottom,shade(@selected_bg_color, 0.9),shade(@selected_bg_color, 0.9)); #Fixes python issue
+    background-image: linear-gradient(to bottom,shade(@selected_bg_color, 0.9),shade(@selected_bg_color, 0.9));
     color: @selected_fg_color;
     border-color: shade(@selected_bg_color, 0.9);
     border-width: 1px 0;

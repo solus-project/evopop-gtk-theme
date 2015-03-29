@@ -6,7 +6,7 @@
 .sidebar .view,
 .sidebar GtkScrolledWindow {
     background-color: @base_color;
-    background-image: linear-gradient(to bottom,@base_color,@base_color); #Fixes python issue
+    background-image: linear-gradient(to bottom,@base_color,@base_color);
     color: @text_color; 
 }
 
