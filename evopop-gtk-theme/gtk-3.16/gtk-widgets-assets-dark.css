@@ -2,32 +2,32 @@
  * window actions *
  ******************/
 /* minimize */
-.titlebar .right .titlebutton:nth-last-child(3) {
+.titlebar .titlebutton.minimize {
     background-image: -gtk-scaled(url("assets/min_unfocused_normal.svg"));
 }
 
-.titlebar .right .titlebutton:nth-last-child(3):hover,
-.titlebar .right .titlebutton:nth-last-child(3):active {
+.titlebar .titlebutton.minimize:hover,
+.titlebar .titlebutton.minimize:active {
     background-image: -gtk-scaled(url("assets/min_focused_normal.svg"));
 }
 
 /* maximize */
-.titlebar .right .titlebutton:nth-last-child(2) {
+.titlebar .titlebutton.maximize {
     background-image: -gtk-scaled(url("assets/max_unfocused_normal.svg"));
 }
 
-.titlebar .right .titlebutton:nth-last-child(2):hover, 
-.titlebar .right .titlebutton:nth-last-child(2):active {
+.titlebar .titlebutton.maximize:hover, 
+.titlebar .titlebutton.maximize:active {
     background-image: -gtk-scaled(url("assets/max_focused_normal.svg"));
 }
 
 /* close */
-.titlebar .right .titlebutton:last-child {
+.titlebar .titlebutton.close {
     background-image: -gtk-scaled(url("assets/close_unfocused_normal.svg"));
 }
 
-.titlebar .right .titlebutton:last-child:hover,
-.titlebar .right .titlebutton:last-child:active {
+.titlebar .titlebutton.close:hover,
+.titlebar .titlebutton.close:active {
     background-image: -gtk-scaled(url("assets/close_focused_normal.svg"));
 }
 
@@ -35,10 +35,9 @@
  * check and radio *
  *******************/
 /* draw regular check and radio items using our assets */
-
 .check,
 .check:focus {
-    -gtk-icon-source: url("assets/checkbox-unchecked.svg");
+    -gtk-icon-source: url("assets/checkbox-unchecked-dark.svg");
 }
 
 .check:hover {
@@ -48,39 +47,39 @@
 .check:insensitive,
 .check row:selected:insensitive,
 .check row:selected:focus:insensitive {
-    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.svg");
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive-dark.svg");
 }
 
 .check:active,
 .check:checked,
 .check row:selected:active,
 .check row:selected:focus:active {
-    -gtk-icon-source: url("assets/checkbox-checked.svg");
+    -gtk-icon-source: url("assets/checkbox-checked-dark.svg");
 }
 
 .check:active:insensitive,
 .check:checked:insensitive,
 .check row:selected:active:insensitive,
 .check row:selected:focus:active:insensitive {
-    -gtk-icon-source: url("assets/checkbox-checked-insensitive.svg");
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive-dark.svg");
 }
 
 .check:inconsistent,
 .check row:selected:inconsistent,
 .check row:selected:focus:inconsistent {
-    -gtk-icon-source: url("assets/checkbox-mixed.svg");
+    -gtk-icon-source: url("assets/checkbox-mixed-dark.svg");
 }
 
 .check:inconsistent:insensitive,
 .check row:selected:inconsistent:insensitive,
 .check row:selected:focus:inconsistent:insensitive {
-    -gtk-icon-source: url("assets/checkbox-mixed-insensitive.svg");
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive-dark.svg");
 }
 
 .radio,
 .radio row:selected,
 .radio row:selected:focus {
-    -gtk-icon-source: url("assets/radio-unselected.svg");
+    -gtk-icon-source: url("assets/radio-unselected-dark.svg");
 }
 
 .radio:hover {
@@ -90,33 +89,33 @@
 .radio:insensitive,
 .radio row:selected:insensitive,
 .radio row:selected:focus:insensitive {
-    -gtk-icon-source: url("assets/radio-unselected-insensitive.svg");
+    -gtk-icon-source: url("assets/radio-unselected-insensitive-dark.svg");
 }
 
 .radio:active,
 .radio:checked,
 .radio row:selected:active,
 .radio row:selected:focus:active {
-    -gtk-icon-source: url("assets/radio-selected.svg");
+    -gtk-icon-source: url("assets/radio-selected-dark.svg");
 }
 
 .radio:active:insensitive,
 .radio:checked:insensitive,
 .radio row:selected:active:insensitive,
 .radio row:selected:focus:active:insensitive {
-    -gtk-icon-source: url("assets/radio-selected-insensitive.svg");
+    -gtk-icon-source: url("assets/radio-selected-insensitive-dark.svg");
 }
 
 .radio:inconsistent,
 .radio row:selected:inconsistent,
 .radio row:selected:focus:inconsistent {
-    -gtk-icon-source: url("assets/radio-mixed.svg");
+    -gtk-icon-source: url("assets/radio-mixed-dark.svg");
 }
 
 .radio:inconsistent:insensitive,
 .radio row:selected:inconsistent:insensitive,
 .radio row:selected:focus:inconsistent:insensitive {
-    -gtk-icon-source: url("assets/radio-mixed-insensitive.svg");
+    -gtk-icon-source: url("assets/radio-mixed-insensitive-dark.svg");
 }
 
 .menuitem.check {
@@ -199,7 +198,7 @@ GtkIconView.content-view.cell.check:active {
  * GtkSwitch *
  *************/
 GtkSwitch.trough {
-    background-image: url("assets/switch-off.svg");
+    background-image: url("assets/switch-off-dark.svg");
 }
 
 GtkSwitch.trough:active {
@@ -208,11 +207,11 @@ GtkSwitch.trough:active {
 
 GtkSwitch.trough:insensitive,
 GtkSwitch.trough:active:insensitive {
-    background-image: url("assets/switch-insensitive.svg");
+    background-image: url("assets/switch-insensitive-dark.svg");
 }
 
 GtkSwitch.slider {
-    background-image: url("assets/switch-slider-off.svg");
+    background-image: url("assets/switch-slider-off-dark.svg");
 }
 
 GtkSwitch.slider:active {
@@ -221,5 +220,5 @@ GtkSwitch.slider:active {
 
 GtkSwitch.slider:insensitive,
 GtkSwitch.slider:active:insensitive {
-    background-image: url("assets/switch-slider-insensitive.svg");
+    background-image: url("assets/switch-slider-insensitive-dark.svg");
 }

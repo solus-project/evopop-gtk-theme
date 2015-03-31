@@ -2,32 +2,32 @@
  * window actions *
  ******************/
 /* minimize */
-.titlebar .right .titlebutton:nth-last-child(3) {
+.titlebar .titlebutton.minimize {
     background-image: -gtk-scaled(url("assets/min_unfocused_normal.svg"));
 }
 
-.titlebar .right .titlebutton:nth-last-child(3):hover,
-.titlebar .right .titlebutton:nth-last-child(3):active {
+.titlebar .titlebutton.minimize:hover,
+.titlebar .titlebutton.minimize:active {
     background-image: -gtk-scaled(url("assets/min_focused_normal.svg"));
 }
 
 /* maximize */
-.titlebar .right .titlebutton:nth-last-child(2) {
+.titlebar .titlebutton.maximize {
     background-image: -gtk-scaled(url("assets/max_unfocused_normal.svg"));
 }
 
-.titlebar .right .titlebutton:nth-last-child(2):hover, 
-.titlebar .right .titlebutton:nth-last-child(2):active {
+.titlebar .titlebutton.maximize:hover, 
+.titlebar .titlebutton.maximize:active {
     background-image: -gtk-scaled(url("assets/max_focused_normal.svg"));
 }
 
 /* close */
-.titlebar .right .titlebutton:last-child {
+.titlebar .titlebutton.close {
     background-image: -gtk-scaled(url("assets/close_unfocused_normal.svg"));
 }
 
-.titlebar .right .titlebutton:last-child:hover,
-.titlebar .right .titlebutton:last-child:active {
+.titlebar .titlebutton.close:hover,
+.titlebar .titlebutton.close:active {
     background-image: -gtk-scaled(url("assets/close_focused_normal.svg"));
 }
 
