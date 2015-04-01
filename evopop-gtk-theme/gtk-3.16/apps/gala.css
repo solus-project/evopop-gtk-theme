@@ -1,7 +1,7 @@
 .gala-notification {
     border: none;
     border-radius: 4px;
-    background-color: @bg_color;
+    background-color: @header_bg_color;
     background-image: none;
-    color: @fg_color;
+    color: @header_fg_color;
 }
