@@ -33,6 +33,11 @@
     border: none;
 }
 
+.tiled .titlebar {
+    border-radius: 0;
+    border: none;
+}
+
 .titlebar.default-decoration {
     border: none;
     box-shadow: none;

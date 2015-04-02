@@ -1,7 +1,7 @@
 EvoPop
 ====
 
-A simple, flat and bold Gtk theme for Evolve OS & Budgie Desktop.
+A simple, flat and bold Gtk theme for Solus OS & Budgie Desktop.
 Iris Dark was used as base.
 
 This project is still a work in progress.
