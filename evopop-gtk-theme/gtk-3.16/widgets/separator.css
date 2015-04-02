@@ -8,6 +8,10 @@
     color: @theme_bg_color;
 }
 
+.pane-separator {
+    background-color: transparent;
+}
+
 .button .separator,
 .button.separator {
     color: transparent;
