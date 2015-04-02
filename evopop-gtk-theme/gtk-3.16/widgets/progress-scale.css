@@ -16,13 +16,13 @@ GtkProgressBar {
 .progressbar row:selected:focus {
     border-width: 0px;
     border-style: solid;
-    border-color: shade(@theme_base_color, 0.9);
-    background-color: shade(@theme_selected_bg_color, 1.15);
+    border-color: shade(@base_color, 0.9);
+    background-color: shade(@selected_bg_color,1.0);
     background-image: none;
 }
 
 .progressbar.vertical {
-    background-color: @theme_selected_bg_color;
+    background-color: @selected_bg_color;
     background-image: none;
 }
 
@@ -34,13 +34,8 @@ GtkProgressBar {
     border-radius: 0px;
     border-width: 3px;
     border-style: solid;
-    border-color: @theme_base_color;
-    background-color: @theme_base_color;
-    background-image: none;
-}
-
-.trough.vertical {
-    background-color: shade(@theme_bg_color, 1.08);
+    border-color: @base_color;
+    background-color: @base_color;
     background-image: none;
 }
 
@@ -63,8 +58,8 @@ GtkLevelBar.vertical {
 .level-bar.fill-block {
     border-width: 0px;
     border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
-    background-color: @theme_selected_bg_color;
+    border-color: shade(@selected_bg_color, 0.9);
+    background-color: @selected_bg_color;
 }
 
 .level-bar.indicator-continuous.fill-block {
@@ -120,7 +115,7 @@ GtkLevelBar.vertical {
 }
 
 .level-bar.fill-block.empty-fill-block {
-    border-color: alpha(@theme_fg_color, 0.1);
+    border-color: alpha(@fg_color, 0.1);
     background-color: transparent;
     background-image: none;
 }
@@ -138,26 +133,30 @@ GtkScale.vertical {
 GtkScale.slider {    
 
     border-radius: 15px; /*Slider handle*/
-    background-color: shade(@theme_selected_bg_color, 1.0);
+    background-color: shade(@selected_bg_color, 0.9);
     background-image: none;
 }
 
 GtkScale.slider:hover {
-    background-color: shade(@theme_selected_bg_color, 1.09);
+    background-color: shade(@selected_bg_color, 1.0);
 }
 
 GtkScale.slider:insensitive {
-    background-color: shade(@theme_bg_color, 0.9);
+    background-color: shade(@bg_color, 0.9);
     background-image: none;
 }
 
 GtkScale.slider.vertical {
-    background-color: shade(@theme_selected_bg_color, 1.0);
+    background-color: shade(@selected_bg_color, 0.9);
     background-image: none;
 }
 
+GtkScale.slider.vertical:hover {
+    background-color: shade(@selected_bg_color, 1.0);
+}
+
 GtkScale.slider.vertical:insensitive {
-    background-color: shade(@theme_bg_color, 0.9);
+    background-color: shade(@bg_color, 0.9);
     background-image: none;
 }
 
@@ -175,27 +174,27 @@ GtkScale.trough {
 
 GtkScale.trough.vertical {
     margin: 0 5px;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@bg_color, 0.8);
     border-radius: 2px;
-    background-color: shade(@theme_bg_color, 1.08);
+    background-color: shade(@bg_color, 1.08);
     background-image: none;
 }
 
 .menubar .menuitem .scale.highlight.left,
 .scale.highlight.left {
-    border-color: @theme_selected_bg_color;
-    background-color: @theme_selected_bg_color;
+    border-color: @selected_bg_color;
+    background-color: @selected_bg_color;
     background-image: none;
 }   
 
 .menubar .menuitem .scale.highlight.left:hover {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-    background-color: shade(@theme_selected_bg_color, 0.8);
+    border-color: shade(@selected_bg_color, 0.8);
+    background-color: shade(@selected_bg_color, 0.8);
 }
 
 .scale.highlight.bottom {
-    border-color: @theme_selected_bg_color;
-    background-color: @theme_selected_bg_color;
+    border-color: @selected_bg_color;
+    background-color: @selected_bg_color;
     background-image: none;
 }
 
