@@ -9,10 +9,6 @@ VteTerminal {
 /*********
  * gedit *
  *********/
-GeditWindow .titlebar .pane-separator {
-    background-color: transparent;
-}
-
 GeditViewFrame .gedit-search-slider {
     padding: 4px;
     border-radius: 0 0 0 5px;

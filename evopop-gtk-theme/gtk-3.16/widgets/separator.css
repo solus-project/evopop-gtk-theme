@@ -8,8 +8,13 @@
     color: @theme_bg_color;
 }
 
-.pane-separator {
+.pane-separator,
+.titlebar .pane-separator {
     background-color: transparent;
+}
+
+.maximized .titlebar .pane-separator {
+    background-image: linear-gradient(to bottom,@header_bg_color,@header_bg_color);
 }
 
 .button .separator,
