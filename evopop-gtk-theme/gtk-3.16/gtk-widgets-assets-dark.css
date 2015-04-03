@@ -3,32 +3,32 @@
  ******************/
 /* minimize */
 .titlebar .titlebutton.minimize {
-    background-image: -gtk-scaled(url("assets/min_unfocused_normal.svg"));
+    background-image: -gtk-scaled(url("assets/min.svg"));
 }
 
 .titlebar .titlebutton.minimize:hover,
 .titlebar .titlebutton.minimize:active {
-    background-image: -gtk-scaled(url("assets/min_focused_normal.svg"));
+    background-image: -gtk-scaled(url("assets/min_prelight.svg"));
 }
 
 /* maximize */
 .titlebar .titlebutton.maximize {
-    background-image: -gtk-scaled(url("assets/max_unfocused_normal.svg"));
+    background-image: -gtk-scaled(url("assets/max.svg"));
 }
 
 .titlebar .titlebutton.maximize:hover, 
 .titlebar .titlebutton.maximize:active {
-    background-image: -gtk-scaled(url("assets/max_focused_normal.svg"));
+    background-image: -gtk-scaled(url("assets/max_prelight.svg"));
 }
 
 /* close */
 .titlebar .titlebutton.close {
-    background-image: -gtk-scaled(url("assets/close_unfocused_normal.svg"));
+    background-image: -gtk-scaled(url("assets/close.svg"));
 }
 
 .titlebar .titlebutton.close:hover,
 .titlebar .titlebutton.close:active {
-    background-image: -gtk-scaled(url("assets/close_focused_normal.svg"));
+    background-image: -gtk-scaled(url("assets/close_prelight.svg"));
 }
 
 /*******************
