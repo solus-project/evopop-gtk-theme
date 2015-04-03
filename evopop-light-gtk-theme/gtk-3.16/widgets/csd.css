@@ -80,7 +80,7 @@
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 3px 6px 1px alpha(black, 0.5);
+    box-shadow: 0px -1px 0px 1px @header_bg_color,inset 0px 1px 0px 0px rgba(255,255,255,0.1);
 }
 
 /**************
