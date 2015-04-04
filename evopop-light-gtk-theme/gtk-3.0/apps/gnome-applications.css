@@ -1,3 +1,22 @@
+/************
+ * nautilus *
+ ************/
+.nautilus-canvas-item {
+    border-radius: 0px;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: white;
+    text-shadow: 1px 1px alpha(black,0.8);
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    border-radius: 3px;
+    text-shadow: none;
+}
+
 /******************
  * gnome terminal *
  ******************/
