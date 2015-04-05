@@ -2,8 +2,8 @@
 <metacity_theme>
 <info>
 	<name>EvoPop</name>
-	<author>Evolve OS Art Team</author>
-	<copyright>Evolve OS Art Team 2015</copyright>
+	<author>Solus Art Team</author>
+	<copyright>Solus Art Team 2015</copyright>
 	<date>2015</date>
 	<description>EvoPop window theme</description>
 </info>
@@ -35,11 +35,11 @@
 	<distance name="left_width" value="0" />
 	<distance name="right_width" value="0" />
 	<distance name="bottom_height" value="0" />
-	<distance name="left_titlebar_edge" value="0"/>
+	<distance name="left_titlebar_edge" value="8"/>
 	<distance name="right_titlebar_edge" value="0"/>
 	<distance name="title_vertical_pad" value="8"/>
 	<border name="title_border" left="10" right="10" top="0" bottom="2"/>
-	<border name="button_border" left="0" right="0" top="2" bottom="0"/>
+	<border name="button_border" left="4" right="0" top="2" bottom="0"/>
 	<aspect_ratio name="button" value="1"/>
 </frame_geometry>
 
@@ -53,7 +53,7 @@
 							title_vertical_pad on normal state
 							or you'll have bigger buttons 								-->
 	<border name="title_border" left="10" right="10" top="1" bottom="2"/>
-	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
+	<border name="button_border" left="4" right="0" top="0" bottom="0"/>
 	<distance name="bottom_height" value="0" />
 </frame_geometry>
 
@@ -68,11 +68,11 @@
 <frame_geometry name="small" title_scale="small" parent="normal" rounded_top_left="4" rounded_top_right="4">
 	<distance name="title_vertical_pad" value="8"/>
 	<border name="title_border" left="10" right="10" top="0" bottom="1"/>
-	<border name="button_border" left="0" right="0" top="0" bottom="0"/>
+	<border name="button_border" left="4" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
 <frame_geometry name="small_unfocused" parent="small">
-	<distance name="left_titlebar_edge" value="0"/>
+	<distance name="left_titlebar_edge" value="8"/>
 	<distance name="right_titlebar_edge" value="0"/>
 </frame_geometry>
 
