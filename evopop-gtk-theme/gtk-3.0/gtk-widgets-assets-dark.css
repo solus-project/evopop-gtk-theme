@@ -2,32 +2,41 @@
  * window actions *
  ******************/
 /* minimize */
-.titlebar .right .titlebutton:nth-last-child(3) {
+.titlebar .right .titlebutton:nth-last-child(3),
+.titlebar .left .titlebutton:nth-child(3) {
     background-image: -gtk-scaled(url("assets/min.svg"));
 }
 
 .titlebar .right .titlebutton:nth-last-child(3):hover,
-.titlebar .right .titlebutton:nth-last-child(3):active {
+.titlebar .right .titlebutton:nth-last-child(3):active,
+.titlebar .left .titlebutton:nth-child(3):hover,
+.titlebar .left .titlebutton:nth-child(3):active {
     background-image: -gtk-scaled(url("assets/min_prelight.svg"));
 }
 
 /* maximize */
-.titlebar .right .titlebutton:nth-last-child(2) {
+.titlebar .right .titlebutton:nth-last-child(2),
+.titlebar .left .titlebutton:nth-child(2) {
     background-image: -gtk-scaled(url("assets/max.svg"));
 }
 
 .titlebar .right .titlebutton:nth-last-child(2):hover, 
-.titlebar .right .titlebutton:nth-last-child(2):active {
+.titlebar .right .titlebutton:nth-last-child(2):active,
+.titlebar .left .titlebutton:nth-child(2):hover,
+.titlebar .left .titlebutton:nth-child(2):active {
     background-image: -gtk-scaled(url("assets/max_prelight.svg"));
 }
 
 /* close */
-.titlebar .right .titlebutton:last-child {
+.titlebar .right .titlebutton:last-child,
+.titlebar .left .titlebutton:first-child {
     background-image: -gtk-scaled(url("assets/close.svg"));
 }
 
 .titlebar .right .titlebutton:last-child:hover,
-.titlebar .right .titlebutton:last-child:active {
+.titlebar .right .titlebutton:last-child:active,
+.titlebar .left .titlebutton:first-child:hover,
+.titlebar .left .titlebutton:first-child:active {
     background-image: -gtk-scaled(url("assets/close_prelight.svg"));
 }
 
