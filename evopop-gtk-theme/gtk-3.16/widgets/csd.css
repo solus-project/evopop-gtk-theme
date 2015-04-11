@@ -71,7 +71,9 @@
     box-shadow: 0 3px 9px alpha(black, 0.75),inset 0px 1px 0px 0px rgba(255,255,255,0.1);
     margin: 10px;
 }
-
+.window-frame.maximized {
+    border-radius: 0px 0px 0 0;
+}
 .window-frame.tiled  {
     border: none;
     border-radius: 0;
