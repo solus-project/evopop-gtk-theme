@@ -73,6 +73,10 @@
     margin: 10px;
 }
 
+.window-frame.maximized {
+    border-radius: 0px 0px 0 0;
+}
+
 .window-frame.tiled  {
     border: none;
     border-radius: 0;
