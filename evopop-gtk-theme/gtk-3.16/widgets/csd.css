@@ -1,13 +1,16 @@
 /*******
  * CSD *
  *******/
-.titlebar {
+.titlebar,
+.header-bar {
     border-radius:5px 5px 0 0;
     background-image: none;
     background-color: @header_bg_color;
     color: @header_fg_color;
     text-shadow: none;
     padding: 4px 10px;
+
+    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.1);
 }
 
 .titlebar .button,
@@ -30,16 +33,17 @@
 .maximized .titlebar {
     border-radius: 0;
     border: none;
+    box-shadow: none;
 }
 
 .tiled .titlebar {
     border-radius: 0;
     border: none;
+    box-shadow: none;
 }
 
 .titlebar.default-decoration {
     border: none;
-    box-shadow: none;
 }
 
 .titlebar .title {
@@ -68,30 +72,24 @@
     border:none;
     border-radius: 5px 5px 0 0;
     background-color: @header_bg_color;
-    box-shadow: 0 3px 9px alpha(black, 0.75),inset 0px 1px 0px 0px rgba(255,255,255,0.1);
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.6);
     margin: 10px;
 }
+
 .window-frame.maximized {
-    border-radius: 0px 0px 0 0;
-}
-.window-frame.tiled  {
-    border: none;
     border-radius: 0;
-    box-shadow: 0px -1px 0px 1px @header_bg_color,inset 0px 1px 0px 0px rgba(255,255,255,0.1);
+}
+
+.window-frame.tiled  {
+    border-radius: 0;
 }
 
 .window-frame:backdrop {
-    box-shadow: 0 3px 6px 1px alpha(black, 0.5);
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
-/**************
- * header-bar *
- **************/
-.header-bar,
-.header-bar:insensitive {
-    border: none;
-    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.1);
-    background-color: @header_bg_color;
+  .window-frame.ssd {
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.23);
 }
 
 /******************
@@ -115,10 +113,12 @@
 
 .titlebar .titlebutton,
 .titlebar .titlebutton:hover,
+.titlebar .titlebutton:active,
 .titlebar .titlebutton:active:hover,
 .titlebar .titlebutton:backdrop,
 .maximized .titlebar .titlebutton,
 .maximized .titlebar .titlebutton:hover,
+.maximized .titlebar .titlebutton:active,
 .maximized .titlebar .titlebutton:active:hover,
 .maximized .titlebar .titlebutton:backdrop {
     color: transparent;
