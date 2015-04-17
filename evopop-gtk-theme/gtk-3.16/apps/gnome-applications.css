@@ -17,6 +17,11 @@
     text-shadow: none;
 }
 
+NautilusListView GtkTreeView {
+    border-color: @borders; /*Temp fix*/
+
+}
+
 /******************
  * gnome terminal *
  ******************/
