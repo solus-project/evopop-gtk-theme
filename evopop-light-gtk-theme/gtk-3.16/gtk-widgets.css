@@ -302,6 +302,10 @@ GtkTreeView {
     -GtkWidget-focus-padding: 1;
 }
 
+GtkTreeView.view:selected {
+    border: none; 
+}
+
 GtkTreeView.dnd {
     padding: 6px 6px;
     border-width: 1px;
