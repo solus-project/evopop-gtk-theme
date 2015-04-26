@@ -82,15 +82,3 @@ GdTaggedEntry *{
     background-color: @base_color;
     background-image: linear-gradient(to bottom,@base_color,@base_color);
 }
-
-/**************
- * Calculator *
- **************/
-MathButtons .button {
-    border-radius: 0px;
-    border-color: transparent;
-}
-
-MathButtons GtkComboBox .button{
-    border-radius: 4px;
-}
