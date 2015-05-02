@@ -98,11 +98,13 @@ GtkProgressBar.trough.osd {
 }
 
 .trough row:selected,
+.trough row:selected:hover,
 .trough row:selected:focus {
     border: none;
     border-radius: 3px;
     background-color: @base_color;
     background-image: none;
+    color: @text_color;
 }
 
 /*************
