@@ -171,7 +171,7 @@ GtkIconView.content-view.cell.check {
     -gtk-icon-source: url("assets/grid-selection-unchecked.svg");
 }
 
-GtkIconView.content-view.cell.check:active {
+GtkIconView.content-view.cell.check:checked {
     -gtk-icon-source: url("assets/grid-selection-checked.svg");
 }
 
