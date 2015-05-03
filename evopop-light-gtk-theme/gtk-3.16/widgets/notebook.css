@@ -57,6 +57,26 @@
     border-left: 0px;
 }
 
+.notebook tab.left:first-child:active,
+.notebook tab.right:first-child:active {
+    border-top: 0px;
+}
+
+.notebook tab.left:last-child:active,
+.notebook tab.right:last-child:active {
+    border-bottom: 0px;
+}
+
+.notebook tab.top:first-child:active,
+.notebook tab.bottom:first-child:active {
+    border-left: 0px;
+}
+
+.notebook tab.top:last-child:active,
+.notebook tab.bottom:last-child:active {
+    border-right: 0px;
+}
+
 /* close button styling */
 .notebook tab .button {
     transition: ease-in 150ms;
