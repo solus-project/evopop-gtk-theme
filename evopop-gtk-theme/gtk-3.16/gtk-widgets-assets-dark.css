@@ -42,7 +42,7 @@
 }
 
 .check:hover {
-    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover-dark.png"),url("assets/checkbox-unchecked-hover-dark@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked-hover.png"),url("assets/checkbox-unchecked-hover@2.png"));
 }
 
 .check:insensitive,
@@ -84,7 +84,7 @@
 }
 
 .radio:hover {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-unselected-hover-dark.png"),url("assets/radio-unselected-hover-dark@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-unselected-hover.png"),url("assets/radio-unselected-hover@2.png"));
 }
 
 .radio:insensitive,
