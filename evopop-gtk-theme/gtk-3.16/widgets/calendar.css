@@ -6,7 +6,7 @@ GtkCalendar {
 }
 
 GtkCalendar:inconsistent {
-    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
+    color: mix(@fg_color, @bg_color, 0.5);
 }
 
 GtkCalendar.view,
@@ -23,9 +23,13 @@ GtkCalendar.button:insensitive {
 GtkCalendar.highlight {
     border-width: 0;
     background-color: transparent;
-    color: @theme_selected_bg_color;
+    color: @selected_bg_color;
 }
 
 GtkCalendar:selected {
     border-radius: 5px;
+}
+
+GtkCalendar:selected:selected {
+    background-color: @selected_bg_color;
 }
