@@ -102,7 +102,8 @@
 .linked .button:focus,
 .linked .button:focus:active,
 .linked .button:insensitive,
-.linked > GtkComboBox > .button:dir(ltr) {
+.linked > GtkComboBox > .button:dir(ltr),
+.linked > GtkComboBox > .button:dir(ltr):focus {
     border-radius: 0;   
 }
 
@@ -115,7 +116,8 @@
 .linked .button:focus:first-child,
 .linked .button:focus:active:first-child,
 .linked .button:insensitive:first-child,
-.linked > GtkComboBox:first-child > .button {
+.linked > GtkComboBox:first-child > .button,
+.linked > GtkComboBox:first-child > .button:focus {
     border-right-width: 0;
     border-radius: 3px;
     border-top-right-radius: 0;
@@ -130,7 +132,8 @@
 .linked .button:focus:last-child,
 .linked .button:focus:active:last-child,
 .linked .button:insensitive:last-child,
-.linked > GtkComboBox:last-child > .button {
+.linked > GtkComboBox:last-child > .button,
+.linked > GtkComboBox:last-child > .button:focus {
     border-left-width: 0;
     border-radius: 3px;
     border-bottom-left-radius: 0;
@@ -144,7 +147,9 @@
 .linked .button:active:hover:only-child,
 .linked .button:focus:only-child,
 .linked .button:focus:active:only-child,
-.linked .button:insensitive:only-child {
+.linked .button:insensitive:only-child,
+.linked.vertical > GtkComboBox:only-child > .button,
+.linked.vertical > GtkComboBox:only-child > .button:focus {
     border-radius: 3px;
 }
 
@@ -155,7 +160,9 @@
 .linked.vertical .button:active:hover,
 .linked.vertical .button:focus,
 .linked.vertical .button:focus:active,
-.linked.vertical .button:insensitive {
+.linked.vertical .button:insensitive,
+.linked.vertical > GtkComboBox > .button:dir(ltr),
+.linked.vertical > GtkComboBox > .button:dir(ltr):focus {
     border-bottom-width: 0;
     border-radius: 0;
 }
@@ -167,7 +174,9 @@
 .linked.vertical .button:active:hover:first-child,
 .linked.vertical .button:focus:first-child,
 .linked.vertical .button:focus:active:first-child,
-.linked.vertical .button:insensitive:first-child {
+.linked.vertical .button:insensitive:first-child,
+.linked.vertical > GtkComboBox:first-child > .button,
+.linked.vertical > GtkComboBox:first-child > .button:focus {
     border-bottom-width: 0;
     border-radius: 3px;
     border-bottom-right-radius: 0;
@@ -181,7 +190,9 @@
 .linked.vertical .button:active:hover:last-child,
 .linked.vertical .button:focus:last-child,
 .linked.vertical .button:focus:active:last-child,
-.linked.vertical .button:insensitive:last-child {
+.linked.vertical .button:insensitive:last-child,
+.linked.vertical > GtkComboBox:last-child > .button,
+.linked.vertical > GtkComboBox:last-child > .button:focus {
     border-radius: 3px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -194,8 +205,19 @@
 .linked.vertical .button:active:hover:only-child,
 .linked.vertical .button:focus:only-child,
 .linked.vertical .button:focus:active:only-child,
-.linked.vertical .button:insensitive:only-child {
+.linked.vertical .button:insensitive:only-child,
+.linked.vertical > GtkComboBox:only-child > .button,
+.linked.vertical > GtkComboBox:only-child > .button:focus {
     border-radius: 3px;
+}
+
+.linked.vertical .entry:first-child {
+    border: 1px solid alpha(black,0.2);
+    border-bottom-width: 0px;
+}
+
+.linked.vertical .entry:last-child {
+    border: 1px solid alpha(black,0.2);
 }
 
 /******************************
@@ -271,4 +293,14 @@
 .suggested-action.button:insensitive,
 .titlebar .suggested-action.button:insensitive {
     background-color: mix(@bg_color,@cyan,0.6);
+}
+
+/********************
+ * circular buttons *
+ ********************/
+.circular-button.button {
+    border: none;
+    border-radius: 20px;
+    outline-radius: 20px;
+    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
 }

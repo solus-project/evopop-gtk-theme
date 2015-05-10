@@ -3,7 +3,8 @@
  *************/
 
 GtkSwitch {
-    -GtkRange-slider-width: 47px;
+    -GtkRange-slider-width: 46;
+    border: none;
     font: 1;
 }
 

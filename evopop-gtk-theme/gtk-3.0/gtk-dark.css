@@ -82,6 +82,7 @@
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets-dark.css");
 
+@import url("widgets/app-notifications.css");
 @import url("widgets/assistant.css");
 @import url("widgets/button.css");
 @import url("widgets/cell-row.css");

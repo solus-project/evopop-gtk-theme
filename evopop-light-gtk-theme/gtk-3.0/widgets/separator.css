@@ -8,11 +8,11 @@
     color: @theme_bg_color;
 }
 
-.pane-separator {
+.pane-separator,
+.titlebar .pane-separator {
     background-color: transparent;
 }
-
-.titlebar .pane-separator {
+.maximized .titlebar .pane-separator {
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.1);
     background-image: linear-gradient(to bottom,@header_bg_color,@header_bg_color);
 }
