@@ -181,23 +181,20 @@ GtkProgressBar.trough.osd {
 
 .scale.slider,
 .scale.scale-has-marks-above.scale-has-marks-below.slider,
-.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider {
-    border-radius: 15px;
-    background-color: shade(@selected_bg_color, 0.9);
-    background-image: none;
-}
-
+.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider,
 .scale.slider:hover,
 .scale.scale-has-marks-above.scale-has-marks-below.slider:hover,
-.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider:hover {
-    background-color: shade(@selected_bg_color, 1.0);
-}
-
+.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider:hover,
 .scale.slider:insensitive,
 .scale.scale-has-marks-above.scale-has-marks-below.slider:insensitive,
-.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider:insensitive {
-    background-color: shade(@bg_color, 0.8);
-    background-image: none;
+.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider:insensitive,
+.scale.slider:backdrop,
+.scale.scale-has-marks-above.scale-has-marks-below.slider:backdrop,
+.scale.vertical.scale-has-marks-above.scale-has-marks-below.slider:backdrop {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 .scale.mark {

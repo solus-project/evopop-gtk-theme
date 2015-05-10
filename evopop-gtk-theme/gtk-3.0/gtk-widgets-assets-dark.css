@@ -218,3 +218,18 @@ GtkSwitch.slider:insensitive,
 GtkSwitch.slider:active:insensitive {
     background-image: -gtk-scaled(url("assets/switch-slider-insensitive-dark.svg"),url("assets/switch-slider-insensitive-dark@2.svg"));
 }
+
+/*******************
+ * GtkScale slider *
+ *******************/
+.scale.slider {
+    background: -gtk-scaled(url("assets/scale-slider.png"),url("assets/scale-slider@2.png"));
+}
+
+.scale.slider:hover {
+    background: -gtk-scaled(url("assets/scale-slider-hover.png"),url("assets/scale-slider-hover@2.png"));
+}
+
+.scale.slider:insensitive {
+    background: -gtk-scaled(url("assets/scale-slider-insensitive-dark.png"),url("assets/scale-slider-insensitive-dark@2.png"));
+}
