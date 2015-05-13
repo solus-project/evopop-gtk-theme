@@ -1,4 +1,4 @@
-/* evolve palet */
+/* solus palet */
 @define-color lime #a1ce4b;
 @define-color cyan #37b9a5;
 @define-color yellow #eedc43;
@@ -114,6 +114,6 @@
 
 @import url("apps/budgie.css");
 @import url("apps/corebird.css");
-@import url("apps/evolve-applications.css");
+@import url("apps/solus-applications.css");
 @import url("apps/gala.css");
 @import url("apps/gnome-applications.css");
