@@ -1,6 +1,10 @@
 /******************
  * combobox entry *
  ******************/
+GtkComboBox*:hover {
+color: @selected_fg_color;
+}
+
 GtkComboBox .button {
     padding: 5px 6px 5px 6px;
 }

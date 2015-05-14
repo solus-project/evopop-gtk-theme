@@ -43,7 +43,7 @@
     -GtkWindow-resize-grip-height: 0;
     -GtkWindow-resize-grip-width: 0;
     -WnckTasklist-fade-overlay-rect: 0;
-    outline-color: alpha(@theme_selected_bg_color, 0.5);
+    outline-color: alpha(@selected_bg_color, 0.5);
     outline-style: solid;
     outline-offset: 0;
 }
@@ -307,6 +307,10 @@ GtkTreeView {
     -GtkTreeView-vertical-separator: 6;
     -GtkWidget-focus-line-width: 1;
     -GtkWidget-focus-padding: 1;
+}
+
+GtkTreeView {
+    border: 1px solid @bg_color;
 }
 
 GtkTreeView.view:selected {

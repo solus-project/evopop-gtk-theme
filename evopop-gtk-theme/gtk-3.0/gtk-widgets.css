@@ -310,6 +310,10 @@ GtkTreeView {
     -GtkWidget-focus-padding: 1;
 }
 
+GtkTreeView {
+    border: 1px solid @bg_color;
+}
+
 GtkTreeView.view:selected {
     border: none; 
 }
