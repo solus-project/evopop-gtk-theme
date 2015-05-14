@@ -125,8 +125,8 @@ style "murrine-default" {
 		border_shades = { 1.0, 1.0 } # gradient to draw on border
 		colorize_scrollbar = FALSE
 		comboboxstyle = 0 # 0 = normal combobox, 1 = colorized combobox below arrow
-		contrast = 0.8 # overal contrast with borders
-		focusstyle = 1 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
+		contrast = 0.4 # overal contrast with borders
+		focusstyle = 0 # 0 = none, 1 = grey dotted, 2 = colored with fill, 3 = colored glow
 		glazestyle = 0 # 0 = flat highlight, 1 = curved highlight, 2 = concave, 3 = top curved highlight, 4 = beryl highlight
 		glowstyle = 0 # 0 = glow on top, 1 = glow on bottom, 2 = glow on top and bottom, 3 = glow on middle vertically, 4 = glow on middle horizontally, 5 = glow on all sides
 		glow_shade = 1.0 # amount of glow
@@ -142,7 +142,7 @@ style "murrine-default" {
 		menustyle = 0 # 0 = none, 1 = vertical striped
 		progressbarstyle = 0 # 0 = none, 1 = diagonal striped, 2 = vertical striped
 		reliefstyle = 0 # 0 = flat, 1 = inset, 2 = shadow, 3 = shadow with gradient, 4 = stronger shadow with gradient
-		roundness = 4 # roundness of widgets
+		roundness = 3 # roundness of widgets
 		scrollbarstyle = 0 # 0 = none, 1 = circles, 2 = handles, 3 = diagonal stripes, 4 = diagonal stripes and handles, 5 = horizontal stripes, 6 = horizontal stripes and handles
 		sliderstyle = 0 # 0 = none, 1 = handles
 		stepperstyle = 1 # 0 = standard, 1 = integrated stepper handles
@@ -156,8 +156,8 @@ style "murrine-wide" {
 }
 
 style "murrine-wider" {
-	xthickness = 3
-	ythickness = 3
+	xthickness = 4
+	ythickness = 4
 }
 
 style "murrine-thin" {
@@ -169,12 +169,12 @@ style "murrine-thin" {
 
 style "murrine-notebook-bg" {
 	bg[NORMAL] = @base_color
-	bg[ACTIVE] = shade (0.87, @base_color)
+	bg[ACTIVE] = mix (0.6, @bg_color, @base_color)
 }
 
 style "murrine-notebook" = "murrine-notebook-bg" {
-	xthickness = 2
-	ythickness = 2
+	xthickness = 0
+	ythickness = 0
 
 	engine "murrine" {
 		roundness = 0
@@ -204,13 +204,6 @@ style "murrine-scrollbar" {
 	bg[PRELIGHT] = mix (0.31, @fg_color, @bg_color)
 	bg[ACTIVE] = @selected_bg_color
 
-	engine "murrine" {
-		roundness = 5
-		contrast = 0.0
-		border_shades = { 0.9, 0.9 }
-		trough_shades = { 0.97, 0.97 }
-		trough_border_shades = { 1.0, 1.0 }
-	}
 }
 
 style "murrine-overlay-scrollbar" {
@@ -219,6 +212,14 @@ style "murrine-overlay-scrollbar" {
 
 	base[SELECTED] = shade (0.6, @base_color)
 	base[INSENSITIVE] = shade (0.85, @base_color)
+
+	engine "murrine" {
+		roundness = 5
+		contrast = 0.0
+		border_shades = { 0.9, 0.9 }
+		trough_shades = { 0.97, 0.97 }
+		trough_border_shades = { 1.0, 1.0 }
+	}
 }
 
 style "murrine-scale" = "murrine-thin" {
@@ -287,7 +288,7 @@ style "murrine-radiocheck" = "murrine-default" {
 
 style "murrine-entry" = "murrine-wider" {
 	engine "murrine" {
-		border_shades = { 1.15, 1.15 }
+		border_shades = { 2.0, 2.0}
 	}
 }
 
@@ -296,7 +297,7 @@ style "metacity-frame" = "murrine-default" {
 }
 
 style "murrine-statusbar" { }
-style "murrine-comboboxentry" = "murrine-entry" { }
+style "murrine-comboboxentry" = "murrine-entry" {}
 style "murrine-hscale" = "murrine-scale" { }
 style "murrine-vscale" = "murrine-scale" { }
 style "murrine-hscrollbar" = "murrine-scrollbar" { }
@@ -594,14 +595,14 @@ style "chromium-toolbar-button" {
 }
 
 style "chrome-gtk-frame" {
-	ChromeGtkFrame::frame-color = @titlebar_bg_color
-	ChromeGtkFrame::inactive-frame-color = @titlebar_bg_color
+	ChromeGtkFrame::frame-color = "#31363d"
+	ChromeGtkFrame::inactive-frame-color = "#31363d"
 
 	ChromeGtkFrame::frame-gradient-size = 0
 	ChromeGtkFrame::frame-gradient-color = @titlebar_bg_color
 
-	ChromeGtkFrame::incognito-frame-color = @titlebar_bg_color
-	ChromeGtkFrame::incognito-inactive-frame-color = @titlebar_bg_color
+	ChromeGtkFrame::incognito-frame-color = "#31363d"
+	ChromeGtkFrame::incognito-inactive-frame-color = "#31363d"
 
 	ChromeGtkFrame::incognito-frame-gradient-size = 0
 	ChromeGtkFrame::incognito-frame-gradient-color = @titlebar_bg_color
@@ -713,7 +714,7 @@ widget_class "EShellWindow.GtkVBox.BonoboDock.BonoboDockBand.BonoboDockItem*" st
 style "inkscape-toolbar-fix" {
 	engine "murrine" {
 		gradient_shades = { 1.0, 1.0, 1.0, 1.0 }
-		highlight_shade = 1.0
+		highlight_shade = 0.0
 	}
 }
 
