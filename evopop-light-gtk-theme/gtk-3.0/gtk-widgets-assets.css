@@ -168,11 +168,11 @@
 }
 
 GtkIconView.content-view.cell.check {
-    -gtk-icon-source: url("assets/grid-selection-unchecked.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/grid-selection-unchecked.png"),url("assets/grid-selection-unchecked@2.png"));
 }
 
 GtkIconView.content-view.cell.check:checked {
-    -gtk-icon-source: url("assets/grid-selection-checked.svg");
+    -gtk-icon-source: -gtk-scaled(url("assets/grid-selection-checked.png"),url("assets/grid-selection-checked@2.png"));
 }
 
 /******************
