@@ -195,7 +195,7 @@ style "murrine-button"  = "murrine-wider" {
 	fg[SELECTED] = @base_color
 	
 	engine "murrine" {
-		roundness = 5
+		roundness = 3
 	}
 }
 
@@ -203,7 +203,6 @@ style "murrine-scrollbar" {
 	bg[NORMAL] = mix (0.21, @fg_color, @bg_color)
 	bg[PRELIGHT] = mix (0.31, @fg_color, @bg_color)
 	bg[ACTIVE] = @selected_bg_color
-
 }
 
 style "murrine-overlay-scrollbar" {
@@ -236,7 +235,7 @@ style "murrine-progressbar" = "murrine-thin" {
 	fg[PRELIGHT] = @selected_fg_color
 
 	engine "murrine" {
-		roundness = 4
+		roundness = 3
 		border_shades = { 1.2, 1.2 }
 		trough_border_shades = { 0.8, 0.8 }
 	}
@@ -300,8 +299,16 @@ style "murrine-statusbar" { }
 style "murrine-comboboxentry" = "murrine-entry" {}
 style "murrine-hscale" = "murrine-scale" { }
 style "murrine-vscale" = "murrine-scale" { }
-style "murrine-hscrollbar" = "murrine-scrollbar" { }
-style "murrine-vscrollbar" = "murrine-scrollbar" { }
+style "murrine-hscrollbar" = "murrine-scrollbar" {
+	engine "murrine" {
+		roundness = 0
+	}
+}
+style "murrine-vscrollbar" = "murrine-scrollbar" { 
+	engine "murrine" {
+		roundness = 0
+	}
+}
 
 # Menus
 
