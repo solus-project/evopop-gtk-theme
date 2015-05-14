@@ -179,13 +179,13 @@ GtkIconView.content-view.cell.check:checked {
  * pane separator *
  ******************/
 .pane-separator.horizontal {
-    background-image: url("assets/pane-handle.svg");
+    background-image: -gtk-scaled(url("assets/pane-handle.png"),url("assets/pane-handle@2.png"));
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .pane-separator.vertical {
-    background-image: url("assets/pane-handle-vertical.svg");
+    background-image: -gtk-scaled(url("assets/pane-handle-vertical.png"),url("assets/pane-handle-vertical@2.png"));
     background-repeat: no-repeat;
     background-position: center center;
 }
