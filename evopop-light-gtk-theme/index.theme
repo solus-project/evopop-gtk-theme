@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=EvoPop
+Name=EvoPop-Light
 Comment=A flat and light theme with a modern look
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=EvoPop
-MetacityTheme=EvoPop
+GtkTheme=EvoPop-Light
+MetacityTheme=EvoPop-Light
 ButtonLayout=:minimize,maximize,close
