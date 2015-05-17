@@ -287,7 +287,7 @@ style "murrine-radiocheck" = "murrine-default" {
 
 style "murrine-entry" = "murrine-wider" {
 	engine "murrine" {
-		border_shades = { 2.0, 2.0}
+		border_shades = {0.9,0.9}
 	}
 }
 
