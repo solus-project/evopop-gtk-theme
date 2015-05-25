@@ -5,7 +5,7 @@ A simple, flat and bold Gtk theme for Solus OS & Budgie Desktop.
 Iris Dark was used as base.
 
 This project is still a work in progress.
-Requires Gtk 3.16 to function properly.
+Requires Gtk 3.16 & gtk-engine-murrine to function properly.
 
 ###Notice:
 Since i had unfixable issues with the window controls support for 3.14 & unity is dropped.
