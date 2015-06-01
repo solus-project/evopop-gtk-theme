@@ -142,6 +142,19 @@ GtkHTML {
     color: alpha(currentColor, 0.9);
 }
 
+
+/*********
+ * frame *
+ *********/
+.frame {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+
+.frame.flat {
+	border: none;
+}
+
 /*******************
  * scrolled window *
  *******************/
