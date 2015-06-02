@@ -303,14 +303,26 @@ GtkTextView {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@tooltip_bg_color, 0.8);
-    border-radius: 0px;
+    border-radius: 5px;
     background-color: @tooltip_bg_color;
     background-image: none;
     color: @tooltip_fg_color;
 }
 
+.tooltip.background {
+    background-color: alpha(@tooltip_bg_color,0.8);
+    background-clip: padding-box;
+}
+
+.tooltip.window-frame.csd {
+    background-color: transparent;
+}
+
 .tooltip * {
-    background-color: @tooltip_bg_color;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: inherit;
 }
 
 /************
