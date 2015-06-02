@@ -316,11 +316,11 @@ GtkTextView {
 
 .tooltip.window-frame.csd {
     background-color: transparent;
+    border-radius: 5px;
 }
 
 .tooltip * {
     padding: 4px;
-    border-radius: 5px;
     background-color: transparent;
     color: inherit;
 }
