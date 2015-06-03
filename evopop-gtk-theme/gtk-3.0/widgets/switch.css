@@ -24,6 +24,10 @@ GtkSwitch.trough:active {
     background-color: transparent;
 }
 
+GtkSwitch.trough:insensitive {
+    color: transparent;
+}
+
 GtkSwitch.slider {
     background-repeat: no-repeat;
     background-position: 0 center;
