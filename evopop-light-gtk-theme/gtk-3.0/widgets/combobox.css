@@ -1,14 +1,22 @@
-/******************
- * combobox entry *
- ******************/
-GtkComboBox*:hover {
+/************
+ * combobox *
+ ************/
+GtkComboBox {
+  -GtkComboBox-shadow-type: none;
+}
+
+GtkComboBox > *:hover {
 color: @selected_fg_color;
 }
 
-GtkComboBox .button {
+GtkComboBox > .button,
+.titlebar GtkComboBox > .button.titlebutton {
     padding: 5px 6px 5px 6px;
 }
 
+/******************
+ * combobox entry *
+ ******************/
 GtkComboBox.combobox-entry .button {
     border-color: alpha(black,0.2);
 }

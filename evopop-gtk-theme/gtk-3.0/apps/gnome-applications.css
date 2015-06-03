@@ -2,7 +2,7 @@
  * nautilus *
  ************/
 .nautilus-canvas-item {
-    border-radius: 0px;
+    border-radius: 3px;
 }
 
 .nautilus-desktop.nautilus-canvas-item {
@@ -13,7 +13,7 @@
 .nautilus-desktop.nautilus-canvas-item:active,
 .nautilus-desktop.nautilus-canvas-item:prelight,
 .nautilus-desktop.nautilus-canvas-item:selected {
-    border-radius: 3px;
+    background-color: alpha(@selected_bg_color,0.8);
     text-shadow: none;
 }
 
