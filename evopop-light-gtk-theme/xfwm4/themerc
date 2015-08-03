@@ -1,0 +1,18 @@
+# Author: FabianOvrWrt <fabianovrwrt@gmail.com>
+# Name: Evopop Light for xfwm4
+# License: GPL-3.0+
+
+# This theme can be used with other light themes (ex. Numix Frost Light, Adwaita, etc.)
+
+active_text_color=active_text_color_2
+active_text_shadow_color=active_hilight_2
+button_offset=8
+button_spacing=8
+show_app_icon=false
+full_width_title=true
+maximized_offset=8
+title_horizontal_offset=8
+title_shadow_active=false
+title_shadow_inactive=false
+title_shadow_active=false
+title_shadow_inactive=false
