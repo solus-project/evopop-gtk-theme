@@ -7,4 +7,3 @@ config.*
 configure
 install-sh
 missing
-*test*
