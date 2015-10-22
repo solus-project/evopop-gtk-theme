@@ -24,7 +24,8 @@ GtkComboBox .menu {
 
 .menu.button:hover,
 .menu.button:active,
-.menu.button:active *:insensitive,
+.menu.button:active:insensitive,
+.menu.button:checked:insensitive,
 .menu.button:insensitive,
 .menu.button {
     border-width: 0;
@@ -40,7 +41,10 @@ GtkComboBox .menu {
  * menubar *
  ***********/
 .menubar {
+    -GtkWidget-window-dragging: true;
+    
     background-color: @menubar_bg_color;
+    background-image: none;
     color: @menubar_fg_color;
 }
 
