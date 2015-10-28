@@ -97,7 +97,7 @@
 .radio:checked,
 .radio row:selected:active,
 .radio row:selected:focus:active {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-selected-dark.png"),url("assets/radio-unselected-dark@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-selected-dark.png"),url("assets/radio-selected-dark@2.png"));
 }
 
 .radio:active:insensitive,

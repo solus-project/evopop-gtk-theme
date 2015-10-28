@@ -10,6 +10,10 @@
     color: @text_color;
 }
 
+.sidebar .list-row {
+    padding: 10px;
+}
+
 .sidebar row:selected,
 .sidebar row:selected:hover,
 .sidebar row:selected:focus,

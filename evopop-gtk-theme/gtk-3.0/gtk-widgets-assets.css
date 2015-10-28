@@ -16,7 +16,7 @@
     background-image: -gtk-scaled(url("assets/max.png"),url("assets/max@2.png"));
 }
 
-.titlebar .titlebutton.maximize:hover, 
+.titlebar .titlebutton.maximize:hover,
 .titlebar .titlebutton.maximize:active {
     background-image: -gtk-scaled(url("assets/max_prelight.png"),url("assets/max_prelight@2.png"));
 }
@@ -97,7 +97,7 @@
 .radio:checked,
 .radio row:selected:active,
 .radio row:selected:focus:active {
-    -gtk-icon-source: -gtk-scaled(url("assets/radio-selected.png"),url("assets/radio-unselected@2.png"));
+    -gtk-icon-source: -gtk-scaled(url("assets/radio-selected.png"),url("assets/radio-selected@2.png"));
 }
 
 .radio:active:insensitive,

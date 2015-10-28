@@ -31,26 +31,27 @@ NautilusWindow .sidebar .view {
     background-image: none;
 }
 
-
 NautilusWindow .sidebar .sidebar-row {
     padding: 5px;
+    padding-left: 15px;
     background-color: transparent;
     background-image: none;
 }
 
+NautilusWindow .sidebar .sidebar-row:prelight,
+NautilusWindow .sidebar .sidebar-row:selected,
+NautilusWindow .sidebar .sidebar-row:selected:focus {
+    border-radius: 0 3px 3px 0;
+}
+
 NautilusWindow .sidebar .sidebar-row:prelight {
-    background-color: mix(@base_color, @bg_color, 0.1);
+    background-color: shade(mix(@base_color, @bg_color, 0.3), 0.9);
     color: @text_color;
 }
 
 NautilusWindow .sidebar .sidebar-row:selected {
     background-color: shade(@selected_bg_color, 0.9);
     color: @selected_fg_color;
-}
-
-NautilusWindow .sidebar .cell:selected,
-NautilusWindow .sidebar .cell:selected:focus {
-    border-radius: 0 3px 3px 0;
 }
 
 NautilusWindow .pane-separator.horizontal {
