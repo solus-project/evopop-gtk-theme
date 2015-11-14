@@ -38,6 +38,10 @@ NautilusWindow .sidebar .sidebar-row {
     background-image: none;
 }
 
+NautilusWindow .sidebar .sidebar-icon {
+	padding-right: 5px;
+}
+
 NautilusWindow .sidebar .sidebar-row:prelight,
 NautilusWindow .sidebar .sidebar-row:selected,
 NautilusWindow .sidebar .sidebar-row:selected:focus {
