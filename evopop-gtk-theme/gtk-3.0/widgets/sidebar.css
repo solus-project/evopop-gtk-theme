@@ -43,3 +43,16 @@
 .sidebar .frame {
     border-width: 0;
 }
+
+/* TODO: Check this code  */
+.sidebar row:selected,
+.sidebar row:selected:backdrop {
+	background: #6FD0BA;
+	color: @header_fg_color;
+}
+.folder-frame {
+    border: 1px solid shade(@bg_color, .9);
+}
+.sidebar-pane-separator {
+	background: @bg_color;
+} 
