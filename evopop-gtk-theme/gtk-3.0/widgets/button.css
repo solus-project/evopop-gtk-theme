@@ -1,7 +1,8 @@
 /**********
  * button *
  **********/
-.button {
+.button,
+.header-bar .button {
     padding: 6px 8px;
     border-radius: 3px;
     border-width: 1px;
