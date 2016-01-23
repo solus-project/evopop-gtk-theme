@@ -8,7 +8,7 @@
     background-color: @header_bg_color;
     color: @header_fg_color;
     text-shadow: none;
-    padding: 4px 10px;
+    padding: 8px 10px;
 
     box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.1);
 }
@@ -101,14 +101,14 @@
     border: none;
     background-color: transparent;
     icon-shadow: none;
-    box-shadow: none; 
+    box-shadow: none;
 }
 
 .header-bar .button.titlebutton,
 .titlebar .button.titlebutton {
     padding: 8px;
     padding-left: 4px;
-    padding-right: 4px; 
+    padding-right: 4px;
 }
 
 .titlebar .titlebutton,

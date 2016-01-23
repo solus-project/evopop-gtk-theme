@@ -165,7 +165,7 @@ GtkScrolledWindow.frame {
     border-radius: 0;
 }
 
-/* avoid double borders when a viewport is 
+/* avoid double borders when a viewport is
  * packed into a GtkScrolledWindow */
 GtkScrolledWindow GtkViewport.frame {
     border-style: none;
@@ -341,7 +341,7 @@ GtkTreeView {
 }
 
 GtkTreeView.view:selected {
-    border: none; 
+    border: none;
 }
 
 GtkTreeView.dnd {
@@ -378,7 +378,7 @@ GtkViewport.frame {
 
 .view:selected,
 .view:selected:focus {
-    background-color: @selected_bg_color; 
+    background-color: @selected_bg_color;
     color: @selected_fg_color; /*TreeView selected for dconf and sidebars and stuff*/
 }
 
