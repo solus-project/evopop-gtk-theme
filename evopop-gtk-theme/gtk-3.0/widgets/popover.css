@@ -35,6 +35,15 @@ GtkPopover > .toolbar {
     background-color: transparent;
 }
 
+GtkPopover .list-row {
+    color: @menu_fg_color;
+}
+
+GtkPopover .list-row:hover {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
 GtkPopover.osd > .toolbar .button {
     border-radius: 0;
     border-width: 0;

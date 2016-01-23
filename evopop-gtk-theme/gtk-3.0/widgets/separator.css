@@ -1,16 +1,28 @@
 /*************
  * separator *
  *************/
+.sidebar.separator,
 .sidebar.view.separator,
+.sidebar .view.separator,
 .view.separator,
-.separator,
-.sidebar .view.separator {
-    color: @theme_bg_color;
+.separator {
+    color: shade(@theme_bg_color, 0.9);
 }
 
-.pane-separator,
+/*.pane-separator,
 .titlebar .pane-separator {
     background-color: transparent;
+}*/
+
+.titlebar GtkSeparatorToolItem,
+.titlebar .separator,
+.titlebar .separator:insensitive {
+    -GtkWidget-window-dragging: true;
+
+    background-color: transparent;
+    border-color: shade(@titlebar_bg_color, 0.95);
+    color: shade(@titlebar_bg_color, 0.95);
+
 }
 
 .maximized .titlebar .pane-separator {
@@ -32,6 +44,8 @@
 .header-bar GtkSeparatorToolItem,
 .header-bar .separator,
 .header-bar .separator:insensitive {
+    -GtkWidget-window-dragging: true;
+
     border-color: shade(@toolbar_bg_color, 0.87);
     color: shade(@toolbar_bg_color, 0.87);
 }

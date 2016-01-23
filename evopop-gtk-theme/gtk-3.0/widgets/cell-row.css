@@ -20,6 +20,9 @@
 row:selected,
 row:selected:hover,
 row:selected:focus {
+    -GtkWidget-focus-paddin: 1;
+    -GtkWidget-focus-line-width: 0;
+
     border-style: none;
     border-color: shade(@selected_bg_color, 0.9);
     background-color:  shade(@selected_bg_color, 0.9);

@@ -31,9 +31,31 @@ NautilusWindow .sidebar .view {
     background-image: none;
 }
 
-NautilusWindow .sidebar .cell:selected,
-NautilusWindow .sidebar .cell:selected:focus {
+NautilusWindow .sidebar .sidebar-row {
+    padding: 5px;
+    padding-left: 15px;
+    background-color: transparent;
+    background-image: none;
+}
+
+NautilusWindow .sidebar .sidebar-icon {
+	padding-right: 5px;
+}
+
+NautilusWindow .sidebar .sidebar-row:prelight,
+NautilusWindow .sidebar .sidebar-row:selected,
+NautilusWindow .sidebar .sidebar-row:selected:focus {
     border-radius: 0 3px 3px 0;
+}
+
+NautilusWindow .sidebar .sidebar-row:prelight {
+    background-color: shade(mix(@base_color, @bg_color, 0.3), 0.9);
+    color: @text_color;
+}
+
+NautilusWindow .sidebar .sidebar-row:selected {
+    background-color: shade(@selected_bg_color, 0.9);
+    color: @selected_fg_color;
 }
 
 NautilusWindow .pane-separator.horizontal {
@@ -41,6 +63,9 @@ NautilusWindow .pane-separator.horizontal {
     border-right: 1px solid @bg_color;
 }
 
+NautilusListView GtkTreeView:prelight{
+    background-color: mix(@bg_color,@base_color,0.5);
+}
 
 NautilusListView GtkTreeView {
     border-color: @borders;
