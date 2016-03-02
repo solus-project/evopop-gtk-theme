@@ -1,3 +1,19 @@
+EvoPop 3.18
+===
+
+This is a fork of [EvoPop](https://github.com/solus-cold-storage/evopop-gtk-theme.git) that try to keep alive this amazing theme.
+So the main aim is adding support for gnome 3.18.
+
+###Collaborations:
+Please, if you are familiar with Gtk theming we need you!
+
+####Tip:
+I'm newbbie to Gtk theme, and I spent a lot of time to figure out how to test changes.
+The secret is to run make install every time you need to test your changes.
+
+---
+(Original README.md)
+
 EvoPop
 ====
 

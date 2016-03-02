@@ -7,9 +7,14 @@
     background-color: @base_color;
 }
 
+.list-row:prelight {
+  background-color: mix(@base_color, @bg_color, 0.5);
+  color: @text_color;
+}
+
 .list-row.button {
     padding: 4px;
-    background-color: @base_color; 
+    background-color: @base_color;
     color: @fg_color;
     font-weight: normal;
     border: none;
@@ -21,8 +26,8 @@
     background-color: mix(@base_color,@bg_color, 0.2);
     color: @fg_color;
 }
-    
-.list-row.button:active, 
+
+.list-row.button:active,
 .list-row.button:active:hover {
     background-color: mix(@base_color,@bg_color, 0.4);
     color: @theme_fg_color;
@@ -34,10 +39,10 @@
 }
 
 .list-row.button:checked,
-.list-row.button:selected, 
-.list-row:selected,    
+.list-row.button:selected,
+.list-row:selected,
 .list-row.button:selected:active:hover {
-    background-color: shade(@selected_bg_color, 0.9); 
+    background-color: shade(@selected_bg_color, 0.9);
     color: @selected_fg_color;
 }
 

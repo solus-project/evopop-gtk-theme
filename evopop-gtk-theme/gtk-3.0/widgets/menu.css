@@ -6,6 +6,8 @@ GtkMenuToolButton.menu,
 GtkComboBox .menu {
     background-color: @menu_bg_color;
     color: @menu_fg_color;
+    border-radius: 5px;
+    padding: 4px 0;
 }
 
 .primary-toolbar .menu,
@@ -14,9 +16,10 @@ GtkComboBox .menu {
 .toolbar .primary-toolbar .menu,
 .header-bar .menu,
 .header-bar .primary-toolbar .menu,
-.menu {
-    padding: 0;
-    border-radius: 0;
+.menu,
+.popup {
+    padding: 4px 0;
+    border-radius: 5px;
     border-style: none;
     background-color: @menu_bg_color;
     color: @menu_fg_color;
@@ -24,7 +27,8 @@ GtkComboBox .menu {
 
 .menu.button:hover,
 .menu.button:active,
-.menu.button:active *:insensitive,
+.menu.button:active:insensitive,
+.menu.button:checked:insensitive,
 .menu.button:insensitive,
 .menu.button {
     border-width: 0;
@@ -40,7 +44,10 @@ GtkComboBox .menu {
  * menubar *
  ***********/
 .menubar {
+    -GtkWidget-window-dragging: true;
+
     background-color: @menubar_bg_color;
+    background-image: none;
     color: @menubar_fg_color;
 }
 
@@ -49,7 +56,7 @@ GtkComboBox .menu {
  ***************/
 .menubar.menuitem,
 .menubar .menuitem {
-    padding: 3px 6px;
+    padding: 4px 6px;
     color: @menubar_fg_color;
     border-width: 0px;
     border-bottom: 2px solid transparent;
@@ -73,7 +80,7 @@ GtkTreeMenu .menuitem {
 
 .menuitem,
 .menu .menuitem {
-    padding: 4px 3px;
+    padding: 6px 10px;
     border-width: 1px;
     border-style: solid;
     border-color: transparent;
@@ -81,27 +88,20 @@ GtkTreeMenu .menuitem {
     background-color: transparent;
     background-image: none;
     color: @menu_fg_color;
+    font: bold;
 
     -GtkMenuItem-arrow-scaling: 0.5;
-}
-
-.menu .menuitem:active,
-.menu .menuitem:hover {
-    transition: 100ms linear;
-    border-style: none;
-    background-color: @menu_selected_bg_color;
-    border-radius: 0;
-    color: @menu_selected_fg_color;
-    background-image: none;
 }
 
 .menu .menuitem:active,
 .menu .menuitem *:active,
 .menu .menuitem:hover,
 .menu .menuitem *:hover {
-    transition: 100ms linear;
-    background-color: @menu_selected_bg_color;;
-    color: @menu_selected_fg_color;
+  transition: 100ms linear;
+  border-style: none;
+  border-radius: 0;
+  color: @selected_bg_color;
+  background-image: none;
 }
 
 .menu .menuitem:insensitive,
@@ -163,4 +163,3 @@ GtkTreeMenu .menuitem {
 .menuitem .accelerator:insensitive {
     color: alpha(mix(@menu_fg_color, @menu_bg_color, 0.5), 0.6);
 }
-

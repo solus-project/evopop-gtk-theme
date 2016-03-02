@@ -7,37 +7,52 @@
 .sidebar GtkScrolledWindow {
     background-color: @base_color;
     background-image: linear-gradient(to bottom,@base_color,@base_color);
-    color: @text_color; 
-}
-
-.sidebar GtkScrolledWindow,
-.sidebar {
-    border-width: 0;
-}
-
-.sidebar .image:selected:focus,
-.sidebar .image:selected:hover {
-    background-color: shade(@selected_bg_color,0.9);
-    color: @selected_fg_color;
-}
-
-.sidebar  .list-row {
-    background-color: @base_color;
     color: @text_color;
 }
 
-.sidebar .cell:selected,
-.sidebar .cell:selected:focus {
-    background-color: shade(@selected_bg_color,0.9);
+.sidebar .list-row {
+    padding: 10px;
+}
+
+.sidebar row:selected,
+.sidebar row:selected:hover,
+.sidebar row:selected:focus,
+.sidebar .view row:selected,
+.sidebar .view row:selected:hover,
+.sidebar .view row:selected:focus {
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    background-color: @selected_bg_color;
+    color: @selected_fg_color;
+}
+
+.sidebar row:prelight,
+.sidebar .view row:prelight {
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: @theme_bg_color;
     background-image: none;
-    color: @selected_fg_color;
+    color: @text_color;
 }
 
-.sidebar GtkScrolledWindow .list-row {
-    background-color: transparent;
-    color: @text_color;
+.sidebar row:selected:prelight,
+.sidebar .view:selected:prelight {
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    background-color: shade(@selected_bg_color,0.9);
+    color: @selected_fg_color;
 }
 
 .sidebar .frame {
     border-width: 0;
 }
+
+/* TODO: Check this code  */
+.sidebar row:selected,
+.sidebar row:selected:backdrop {
+	background: #6FD0BA;
+	color: @header_fg_color;
+}
+.folder-frame {
+    border: 1px solid shade(@bg_color, .9);
+}
+.sidebar-pane-separator {
+	background: @bg_color;
+} 

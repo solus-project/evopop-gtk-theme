@@ -1,65 +1,55 @@
+.budgie-container {
+  background-color: transparent;
+}
+
 .budgie-panel {
-    border-bottom-color: transparent;
+    border-top: 1px solid #31363D;
+    background-color: #22252a;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.max-budgie-panel {
-    border: none;
-    background-color: alpha(black, 0.5);
+.budgie-notification {
+  border-radius: 4px;
+  border: none;
+  color: @selected_fg_color;
+  background-color: alpha(#22252a, 0.85);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+      0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
-.budgie-panel *:active {
-    background-color: transparent;
+.budgie-notification .notification-title {
+  padding: 4px;
+  font-size: 110%;
+  font: bold;
 }
 
-/* top panel */
-.budgie-panel.top {
-    border-top-color: transparent;
+.budgie-notification .notification-body {
+  padding: 4px;
+  color: alpha(white, 0.7);
 }
 
-/* left panel */
-.budgie-panel.left {
-    border-left-color: transparent;
+.raven {
+  background-color: alpha(#22252a, 0.65);
+  transition: 170ms ease-out;
 }
 
-/* right panel */
-.budgie-panel.right {
-    border-right-color: transparent;
+.raven-header {
+  background-color: alpha(#13b1d5, 0.04);
 }
 
-.budgie-panel .message-area {
-    border-radius: 3px;
-    border: none;
-    font: bold;
-    text-shadow: 1px 1px alpha(black, 0.3);
-    background-color: alpha(black, 0.5);
-    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.1);
+.raven-background,
+.raven-background GtkListBox {
+  background: transparent;
 }
 
-.budgie-panel .menu-icon *,
-.budgie-panel .message-area * {
-    icon-shadow: 1px 1px alpha(black, 0.3);
+.raven .powerstrip {
+  background-color: #31363D;
 }
 
-.max-budgie-panel .message-area {
-    box-shadow:none;
-    background-color: transparent;
-}
-
-.budgie-panel * {
-    icon-shadow: none;
-}
-
-.launcher * {
-    icon-shadow: 1px 1px alpha(black, 0.3);
-}
-
-PanelToplevel {
-    padding: 0px;
-    background-color: @panel_bg_color;
-    background-image: none;
-    color: @panel_fg_color;
-}
-
-.dark .notif-title {
-    color: @orange;
+.raven .powerstrip .button {
+  padding: 10px;
+  color: alpha(white, 0.7);
 }
