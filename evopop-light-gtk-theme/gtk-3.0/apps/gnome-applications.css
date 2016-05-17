@@ -31,6 +31,10 @@ NautilusWindow .sidebar .view {
     background-image: none;
 }
 
+NautilusWindow .sidebar-icon {
+    padding: 10px;
+}
+
 NautilusWindow .sidebar .cell:selected,
 NautilusWindow .sidebar .cell:selected:focus {
     border-radius: 0 3px 3px 0;
