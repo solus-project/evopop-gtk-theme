@@ -2,6 +2,10 @@
 *
 * This file is part of the EvoPop GTK theme.
 *
+* Authors:
+* Sam Hewitt <sam@snwh.org>
+* Peter Cornelis <poltertec@gmail.com>
+*
 * The EvoPop GTK theme is free software: you can redistribute it
 * and/or modify it under the terms of the GNU General Public License as
 * published by the Free Software Foundation, either version 3 of the
@@ -88,6 +92,8 @@ read if you used those and something break with a version upgrade you're on your
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
   -GtkPaned-handle-size: 1;
+  -GtkWindow-resize-grip-height: 0;
+  -GtkWindow-resize-grip-width: 0;
   outline-color: rgba(49, 54, 61, 0.3);
   outline-style: dashed;
   outline-offset: -3px;

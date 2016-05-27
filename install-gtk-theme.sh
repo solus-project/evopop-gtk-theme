@@ -3,6 +3,7 @@
 #
 # Authors:
 #   Sam Hewitt <sam@snwh.org>
+#   Peter Cornelis <poltertec@gmail.com>
 #
 # Description:
 #   An installation bash script for EvoPop GTK Theme
