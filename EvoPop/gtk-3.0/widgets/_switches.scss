@@ -1,0 +1,76 @@
+/**********
+ * Switch *
+ **********/
+GtkSwitch {
+  -GtkSwitch-slider-width: 20px;
+  -GtkSwitch-slider-height: 20px;
+
+  font: 1;
+  font-weight: bold;
+  outline-offset: -4px;
+  transition: all 200ms ease-in;
+
+  border: none;
+  border-radius: 16px;
+  color: transparent;
+
+  background-color: transparentize(black,0.9);
+  box-shadow: if($variant == 'light', (inset 0 0 0 1px transparentize(black,0.9), 0px 1px $bottom_highlight), (inset 0 0 0 1px transparentize(black,0.75), 0px 1px $bottom_highlight));
+
+  &:insensitive {
+    background-color: $insensitive_base_color;
+    box-shadow: if($variant == 'light', inset 0 0 0 1px transparentize(black, 0.9), 0 0 0 1px transparentize(black, 0.8));
+  }
+
+  &:active,
+  &:checked {
+    background-color: $selected_bg_color;
+    box-shadow: if($variant == 'light', inset 0 0 0 1px $selected_borders_color, 0 0 0 1px transparentize(black, 0.8));
+
+    &:backdrop,
+    &:insensitive {
+      background-color: $backdrop_selected_bg_color;
+    }
+  }
+
+  // Handle
+  .slider {
+    border:none;
+    padding:2px;
+    outline-radius: 12px;
+    border-radius: 12px;
+    transition: $button_transition;
+    background-color: $base_color;
+
+    box-shadow: inset 0 1px 0 0 transparentize(white,0.9),
+                0 2px 2px 0 $shadow_color,
+                0 1px 2px 0 $shadow_color;
+
+    &:active {
+      background-color: white;
+    }
+
+    &:backdrop {
+      background-color: $backdrop_base_color;
+      box-shadow: 0 1px 2px 0 transparentize(black, 0.9);
+    }
+
+    &:insensitive {
+      box-shadow:none;
+    }
+  }
+
+  // Trough
+  .trough {
+
+    &:active,
+    &:checked {
+      background-color: $selected_bg_color;
+
+      &:backdrop {
+        background-color: $backdrop_selected_bg_color;
+      }
+    }
+
+  }
+}

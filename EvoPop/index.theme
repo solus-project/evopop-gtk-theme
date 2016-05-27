@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=EvoPop
+Comment=Back from the dead.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=EvoPop
+MetacityTheme=EvoPop
+IconTheme=EvoPop
