@@ -19,8 +19,8 @@
 
   &.high,
   &.level-high {
-    background-color: $green;
-    border-color: if($variant == 'light', darken($green, 10%), $borders_color);
+    background-color: $cyan;
+    border-color: if($variant == 'light', darken($cyan, 10%), $borders_color);
     box-shadow:inset 0 1px 0 0 $top_highlight;
   }
 
@@ -62,7 +62,7 @@ GtkLevelBar.vertical {
   }
 
   // Fill block
-  &.fill-block { 
+  &.fill-block {
     @extend %fill-block;
   }
 
@@ -73,7 +73,7 @@ GtkLevelBar.vertical {
     }
   }
 
-  // Discrete  
+  // Discrete
   &.horizontal.indicator-discrete.fill-block { margin: 0 1px; }
   &.horizontal.discrete block { margin: 0 1px; }
 

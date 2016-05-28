@@ -18,16 +18,12 @@ $purple: #9cb7e0;
 $cyan: #37b9a5;
 $blue: #13b1d5;
 
-$green: #4caf50;
-$dark_blue: #3f51b5;
-$magenta: #f50057;
-
 $borders_color: if($variant == 'light', darken($bg_color,20%), darken($bg_color,10%));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $selected_fg_color: #fefefe;
 $selected_bg_color: if($variant == 'light', darken($blue,5%), $blue);
 $selected_borders_color: if($variant == 'light', darken($selected_bg_color, 10%), $borders_color);
-$link_color: blue;
+$link_color: $blue;
 $link_visited_color:transparentize($link_color,0.5);
 $top_highlight: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $bottom_highlight: if($variant == 'light', transparentize(white, 0.7), transparentize(white, 0.9));
@@ -43,7 +39,7 @@ $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
 $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
 $scrollbar_slider_active_color: if($variant=='light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 10%));
 
-$success_color: if($variant == 'light', $green, darken($green,10%));
+$success_color: if($variant == 'light', $cyan, darken($cyan,10%));
 $destructive_color: if($variant == 'light', $red, darken($red,10%));
 $suggested_color: if($variant == 'light', $selected_bg_color, darken($selected_bg_color,10%));
 
