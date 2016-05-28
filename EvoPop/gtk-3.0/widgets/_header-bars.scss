@@ -19,7 +19,7 @@
 
     box-shadow: inset 0 1px transparentize($top_highlight, 0.4);
 
-    transition: $backdrop_transition;
+    transition: $backdrop_transition
   }
 
   .title {
@@ -358,13 +358,13 @@
 
       background-color: transparentize($cyan,0.1);
       color: $selected_fg_color;
-      box-shadow: 0 1px 0 0 transparentize(black, 0.8);
+      box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
 
       GtkLabel { color: $selected_fg_color;}
 
       &:hover {
         background-color: $cyan;
-        box-shadow: 0 1px 2px 0 transparentize(black, 0.6);
+        box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
         GtkLabel {color: $headerbar_fg_color;}
 
         &:backdrop {
