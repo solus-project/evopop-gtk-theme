@@ -2717,7 +2717,7 @@ GraniteWidgetsWelcome {
     .titlebar:not(headerbar) .button.titlebutton,
     .header-bar .button.titlebutton {
       background-image: none;
-      border-radius: 50%;
+      background-color: transparent;
       border: none;
       box-shadow: none;
       icon-shadow: none;
@@ -2725,36 +2725,57 @@ GraniteWidgetsWelcome {
       padding: 0px;
       text-shadow: none;
       color: transparent; }
-      .titlebar:not(headerbar) .button.titlebutton*,
-      .header-bar .button.titlebutton* {
+      .titlebar:not(headerbar) .button.titlebutton GtkImage,
+      .header-bar .button.titlebutton GtkImage {
         color: transparent; }
+      .titlebar:not(headerbar) .button.titlebutton:hover, .titlebar:not(headerbar) .button.titlebutton:active, .titlebar:not(headerbar) .button.titlebutton:focus, .titlebar:not(headerbar) .button.titlebutton:checked,
+      .header-bar .button.titlebutton:hover,
+      .header-bar .button.titlebutton:active,
+      .header-bar .button.titlebutton:focus,
+      .header-bar .button.titlebutton:checked {
+        color: transparent;
+        background-color: transparent;
+        box-shadow: none; }
+        .titlebar:not(headerbar) .button.titlebutton:hover GtkImage, .titlebar:not(headerbar) .button.titlebutton:active GtkImage, .titlebar:not(headerbar) .button.titlebutton:focus GtkImage, .titlebar:not(headerbar) .button.titlebutton:checked GtkImage,
+        .header-bar .button.titlebutton:hover GtkImage,
+        .header-bar .button.titlebutton:active GtkImage,
+        .header-bar .button.titlebutton:focus GtkImage,
+        .header-bar .button.titlebutton:checked GtkImage {
+          color: transparent; }
+        .titlebar:not(headerbar) .button.titlebutton:hover:backdrop, .titlebar:not(headerbar) .button.titlebutton:active:backdrop, .titlebar:not(headerbar) .button.titlebutton:focus:backdrop, .titlebar:not(headerbar) .button.titlebutton:checked:backdrop,
+        .header-bar .button.titlebutton:hover:backdrop,
+        .header-bar .button.titlebutton:active:backdrop,
+        .header-bar .button.titlebutton:focus:backdrop,
+        .header-bar .button.titlebutton:checked:backdrop {
+          color: transparent;
+          background-color: transparent; }
+          .titlebar:not(headerbar) .button.titlebutton:hover:backdrop GtkImage, .titlebar:not(headerbar) .button.titlebutton:active:backdrop GtkImage, .titlebar:not(headerbar) .button.titlebutton:focus:backdrop GtkImage, .titlebar:not(headerbar) .button.titlebutton:checked:backdrop GtkImage,
+          .header-bar .button.titlebutton:hover:backdrop GtkImage,
+          .header-bar .button.titlebutton:active:backdrop GtkImage,
+          .header-bar .button.titlebutton:focus:backdrop GtkImage,
+          .header-bar .button.titlebutton:checked:backdrop GtkImage {
+            color: transparent; }
       .titlebar:not(headerbar) .button.titlebutton.close,
       .header-bar .button.titlebutton.close {
         background-image: -gtk-scaled(url("../assets/close.png"), url("../assets/close@2.png")); }
-        .titlebar:not(headerbar) .button.titlebutton.close:hover, .titlebar:not(headerbar) .button.titlebutton.close :active,
+        .titlebar:not(headerbar) .button.titlebutton.close:hover, .titlebar:not(headerbar) .button.titlebutton.close:active,
         .header-bar .button.titlebutton.close:hover,
-        .header-bar .button.titlebutton.close :active {
-          background-image: -gtk-scaled(url("../assets/close_prelight.png"), url("../assets/close_prelight@2.png"));
-          box-shadow: none; }
+        .header-bar .button.titlebutton.close:active {
+          background-image: -gtk-scaled(url("../assets/close_prelight.png"), url("../assets/close_prelight@2.png")); }
       .titlebar:not(headerbar) .button.titlebutton.maximize,
       .header-bar .button.titlebutton.maximize {
         background-image: -gtk-scaled(url("../assets/max.png"), url("../assets/max@2.png")); }
-        .titlebar:not(headerbar) .button.titlebutton.maximize:hover, .titlebar:not(headerbar) .button.titlebutton.maximize :active,
+        .titlebar:not(headerbar) .button.titlebutton.maximize:hover, .titlebar:not(headerbar) .button.titlebutton.maximize:active,
         .header-bar .button.titlebutton.maximize:hover,
-        .header-bar .button.titlebutton.maximize :active {
-          background-image: -gtk-scaled(url("../assets/max_prelight.png"), url("../assets/max_prelight@2.png"));
-          box-shadow: none; }
+        .header-bar .button.titlebutton.maximize:active {
+          background-image: -gtk-scaled(url("../assets/max_prelight.png"), url("../assets/max_prelight@2.png")); }
       .titlebar:not(headerbar) .button.titlebutton.minimize,
       .header-bar .button.titlebutton.minimize {
         background-image: -gtk-scaled(url("../assets/min.png"), url("../assets/min@2.png")); }
-        .titlebar:not(headerbar) .button.titlebutton.minimize:hover, .titlebar:not(headerbar) .button.titlebutton.minimize :active,
+        .titlebar:not(headerbar) .button.titlebutton.minimize:hover, .titlebar:not(headerbar) .button.titlebutton.minimize:active,
         .header-bar .button.titlebutton.minimize:hover,
-        .header-bar .button.titlebutton.minimize :active {
-          background-image: -gtk-scaled(url("../assets/min_prelight.png"), url("../assets/min_prelight@2.png"));
-          box-shadow: none; }
-      .titlebar:not(headerbar) .button.titlebutton:backdrop GtkImage,
-      .header-bar .button.titlebutton:backdrop GtkImage {
-        color: transparent; }
+        .header-bar .button.titlebutton.minimize:active {
+          background-image: -gtk-scaled(url("../assets/min_prelight.png"), url("../assets/min_prelight@2.png")); }
     .titlebar:not(headerbar) .button.menu-button .menu .menuitem GtkLabel,
     .header-bar .button.menu-button .menu .menuitem GtkLabel {
       color: #31363D; }
