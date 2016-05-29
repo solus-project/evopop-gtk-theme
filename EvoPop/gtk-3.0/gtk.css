@@ -3435,17 +3435,17 @@ GtkAssistant {
   margin: 3px; }
 .popover .menuitem {
   padding: 8px;
-  text-shadow: none; }
+  text-shadow: none;
+  color: #31363D; }
   .popover .menuitem:hover {
     color: #fefefe;
-    background-color: #119ebe; }
+    background-image: linear-gradient(#119ebe, #119ebe); }
   .popover .menuitem:insensitive {
     color: #8c8f94; }
     .popover .menuitem:insensitive:backdrop {
       color: #bcc1c9; }
   .popover .menuitem:backdrop, .popover .menuitem:backdrop:hover {
-    color: #8c8f94;
-    background-color: transparent; }
+    color: #8c8f94; }
   .popover .menuitem .arrow:dir(ltr) {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
     margin-left: 10px; }
