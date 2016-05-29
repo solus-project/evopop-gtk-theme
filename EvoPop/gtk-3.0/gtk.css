@@ -352,10 +352,8 @@ treeview.view:selected {
     outline-color: rgba(49, 54, 61, 0.3);
     background-color: #119ebe;
     text-shadow: none;
-    box-shadow: none;
-    border-color: transparent;
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(0, 0, 0, 0.2);
+    border-color: #575a5f;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
     transition-duration: 50ms; }
   .button:backdrop.flat,
   .button:backdrop {
@@ -379,14 +377,18 @@ treeview.view:selected {
       background-image: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
       .button:backdrop.flat:active GtkLabel,
+      .button:backdrop.flat:active GtkImage,
       .button:backdrop.flat:active,
       .button:backdrop.flat:checked GtkLabel,
+      .button:backdrop.flat:checked GtkImage,
       .button:backdrop.flat:checked,
       .button:backdrop:active GtkLabel,
+      .button:backdrop:active GtkImage,
       .button:backdrop:active,
       .button:backdrop:checked GtkLabel,
+      .button:backdrop:checked GtkImage,
       .button:backdrop:checked {
-        color: rgba(254, 254, 254, 0.6); }
+        color: rgba(254, 254, 254, 0.5); }
       .button:backdrop.flat:active label,
       .button:backdrop.flat:active,
       .button:backdrop.flat:checked label,
@@ -655,7 +657,8 @@ row:selected
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
   icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white; }
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white;
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .button.suggested-action.flat {
     border-color: transparent;
     background-color: transparent;
@@ -672,17 +675,16 @@ row:selected
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white; }
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .button.suggested-action:active,
   .button.suggested-action:checked {
     color: #fefefe;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #119ebe;
     text-shadow: none;
-    box-shadow: none;
-    border-color: transparent;
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(0, 0, 0, 0.2); }
+    border-color: #575a5f;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .button.suggested-action:backdrop,
   .button.suggested-action.flat:backdrop {
     border-color: #119ebe;
@@ -703,14 +705,18 @@ row:selected
       background-image: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
       .button.suggested-action:backdrop:active GtkLabel,
+      .button.suggested-action:backdrop:active GtkImage,
       .button.suggested-action:backdrop:active,
       .button.suggested-action:backdrop:checked GtkLabel,
+      .button.suggested-action:backdrop:checked GtkImage,
       .button.suggested-action:backdrop:checked,
       .button.suggested-action.flat:backdrop:active GtkLabel,
+      .button.suggested-action.flat:backdrop:active GtkImage,
       .button.suggested-action.flat:backdrop:active,
       .button.suggested-action.flat:backdrop:checked GtkLabel,
+      .button.suggested-action.flat:backdrop:checked GtkImage,
       .button.suggested-action.flat:backdrop:checked {
-        color: rgba(254, 254, 254, 0.6); }
+        color: rgba(254, 254, 254, 0.5); }
       .button.suggested-action:backdrop:active label,
       .button.suggested-action:backdrop:active,
       .button.suggested-action:backdrop:checked label,
@@ -838,7 +844,8 @@ row:selected
   text-shadow: 0 1px rgba(0, 0, 0, 0.2);
   icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
-  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white; }
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white;
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .button.destructive-action.flat {
     border-color: transparent;
     background-color: transparent;
@@ -855,17 +862,16 @@ row:selected
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.4);
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white; }
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px white;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .button.destructive-action:active,
   .button.destructive-action:checked {
     color: #fefefe;
     outline-color: rgba(255, 255, 255, 0.3);
     background-color: #119ebe;
     text-shadow: none;
-    box-shadow: none;
-    border-color: transparent;
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(0, 0, 0, 0.2); }
+    border-color: #575a5f;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .button.destructive-action:backdrop,
   .button.destructive-action.flat:backdrop {
     border-color: #c72240;
@@ -886,14 +892,18 @@ row:selected
       background-image: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
       .button.destructive-action:backdrop:active GtkLabel,
+      .button.destructive-action:backdrop:active GtkImage,
       .button.destructive-action:backdrop:active,
       .button.destructive-action:backdrop:checked GtkLabel,
+      .button.destructive-action:backdrop:checked GtkImage,
       .button.destructive-action:backdrop:checked,
       .button.destructive-action.flat:backdrop:active GtkLabel,
+      .button.destructive-action.flat:backdrop:active GtkImage,
       .button.destructive-action.flat:backdrop:active,
       .button.destructive-action.flat:backdrop:checked GtkLabel,
+      .button.destructive-action.flat:backdrop:checked GtkImage,
       .button.destructive-action.flat:backdrop:checked {
-        color: rgba(254, 254, 254, 0.6); }
+        color: rgba(254, 254, 254, 0.5); }
       .button.destructive-action:backdrop:active label,
       .button.destructive-action:backdrop:active,
       .button.destructive-action:backdrop:checked label,
@@ -1095,10 +1105,8 @@ row:selected
     outline-color: rgba(49, 54, 61, 0.3);
     background-color: #119ebe;
     text-shadow: none;
-    box-shadow: none;
-    border-color: transparent;
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(0, 0, 0, 0.2); }
+    border-color: #575a5f;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .inline-toolbar toolbutton > button:insensitive {
     border-color: #adb4be;
     background-image: none;
@@ -1128,8 +1136,8 @@ row:selected
       border-color: #b3b9c3;
       background-image: none;
       box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 0 0 rgba(255, 255, 255, 0.8); }
-      .inline-toolbar toolbutton > button:backdrop:active GtkLabel, .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked GtkLabel, .inline-toolbar toolbutton > button:backdrop:checked {
-        color: rgba(254, 254, 254, 0.6); }
+      .inline-toolbar toolbutton > button:backdrop:active GtkLabel, .inline-toolbar toolbutton > button:backdrop:active GtkImage, .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked GtkLabel, .inline-toolbar toolbutton > button:backdrop:checked GtkImage, .inline-toolbar toolbutton > button:backdrop:checked {
+        color: rgba(254, 254, 254, 0.5); }
       .inline-toolbar toolbutton > button:backdrop:active label, .inline-toolbar toolbutton > button:backdrop:active, .inline-toolbar toolbutton > button:backdrop:checked label, .inline-toolbar toolbutton > button:backdrop:checked {
         color: #8c8f94; }
     .inline-toolbar toolbutton > button:backdrop:insensitive {
@@ -5647,10 +5655,8 @@ ConversationListView {
     outline-color: rgba(49, 54, 61, 0.3);
     background-color: #119ebe;
     text-shadow: none;
-    box-shadow: none;
-    border-color: transparent;
-    border-top-color: rgba(255, 255, 255, 0.2);
-    border-bottom-color: rgba(0, 0, 0, 0.2); }
+    border-color: #575a5f;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   #content_frame button:insensitive {
     border-color: #adb4be;
     background-image: none;

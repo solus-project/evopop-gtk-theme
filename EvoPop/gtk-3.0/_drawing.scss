@@ -244,10 +244,8 @@
     outline-color: transparentize($tc, 0.7);
     background-color: $selected_bg_color;
     text-shadow: none;
-    box-shadow: none;
-    border-color: transparent;
-    border-top-color: transparentize(white,0.8);
-    border-bottom-color: transparentize(black,0.8);
+    border-color: mix($borders_color,black,50%);
+    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
   }
 
   // Insensitive Button
@@ -307,7 +305,7 @@
     $_bg: if($c!=$bg_color, darken($c, 10%), $backdrop_dark_fill);
     $_bc: if($variant=='light',$_bg,_border_color($c));
 
-    GtkLabel, & { color: transparentize($selected_fg_color,0.4); }
+    GtkLabel,GtkImage, & { color: transparentize($selected_fg_color,0.5); }
     label, & { color: if($tc!=$fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color); }
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
