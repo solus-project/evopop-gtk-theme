@@ -7,3 +7,5 @@ config.*
 configure
 install-sh
 missing
+.sass-cache
+.sass-cache/
