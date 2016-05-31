@@ -9,3 +9,4 @@ install-sh
 missing
 .sass-cache
 .sass-cache/
+*.css.map

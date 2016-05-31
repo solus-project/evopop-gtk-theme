@@ -4951,7 +4951,7 @@ treeview.view header button:active {
 
 .raven {
   color: #fefefe;
-  background-color: rgba(49, 54, 61, 0.98);
+  background-color: rgba(49, 54, 61, 0.9);
   transition: 170ms ease-out; }
   .raven .raven-header {
     padding: 4px;
@@ -4959,11 +4959,10 @@ treeview.view header button:active {
     text-shadow: 0 1px rgba(0, 0, 0, 0.2);
     icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
     background-color: #31363d;
-    background-image: linear-gradient(to bottom, #3c434b, #31363d);
     color: #fefefe;
     border: solid #1a1d21;
     border-width: 1px 0 1px 0;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(255, 255, 255, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); }
     .raven .raven-header.top {
       border-top-style: none; }
     .raven .raven-header.bottom {
@@ -4976,8 +4975,8 @@ treeview.view header button:active {
         border-radius: 8px; }
   .raven .raven-background {
     background-color: #505359;
-    border-bottom: 1px solid #1a1d21;
-    box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2); }
+    border-bottom: 0px solid #1a1d21;
+    box-shadow: inset none; }
     .raven .raven-background.middle {
       border-bottom-style: none; }
   .raven .raven-calendar {
@@ -5104,6 +5103,11 @@ NautilusWindow .sidebar, NautilusWindow .sidebar .view, NautilusWindow .sidebar 
   NautilusWindow .sidebar:backdrop, NautilusWindow .sidebar .view:backdrop, NautilusWindow .sidebar GtkIconView:backdrop {
     background-color: transparent;
     background-image: none; }
+  NautilusWindow .sidebar .list-row .button, NautilusWindow .sidebar .view .list-row .button, NautilusWindow .sidebar GtkIconView .list-row .button {
+    border: none;
+    background-color: rgba(73, 75, 81, 0.95); }
+    NautilusWindow .sidebar .list-row .button:active, NautilusWindow .sidebar .view .list-row .button:active, NautilusWindow .sidebar GtkIconView .list-row .button:active {
+      background-color: rgba(19, 177, 213, 0.75); }
   NautilusWindow .sidebar .list-row:selected, NautilusWindow .sidebar .view .list-row:selected, NautilusWindow .sidebar GtkIconView .list-row:selected {
     background-color: rgba(19, 177, 213, 0.75); }
     NautilusWindow .sidebar .list-row:selected:hover, NautilusWindow .sidebar .view .list-row:selected:hover, NautilusWindow .sidebar GtkIconView .list-row:selected:hover {

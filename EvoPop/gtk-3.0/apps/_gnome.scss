@@ -62,6 +62,13 @@ NautilusWindow {
     }
 
     .list-row {
+      .button{
+        border: none;
+        background-color: transparentize(darken($base_color,3%),0.05);
+        &:active {
+          background-color: transparentize($selected_bg_color,0.25);
+        }
+      }
 
       &:selected {
         background-color: transparentize($selected_bg_color,0.25);

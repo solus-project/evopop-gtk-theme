@@ -8,7 +8,7 @@ AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
 
 AC_MSG_RESULT([
-        EvoPop Icon Theme $VERSION
+        EvoPop Gtk Theme $VERSION
         ========
 
         prefix:                 ${prefix}
