@@ -128,7 +128,7 @@ read if you used those and something break with a version upgrade you're on your
 .app-notification.frame {
   padding: 10px;
   border-radius: 0 0 5px 5px;
-  background-color: rgba(49, 54, 61, 0.8);
+  background-color: rgba(20, 23, 26, 0.8);
   background-clip: padding-box; }
   .app-notification:backdrop,
   .app-notification.frame:backdrop {
@@ -250,7 +250,7 @@ GtkLabel:backdrop {
 .osd {
   color: #fefefe;
   border: none;
-  background-color: rgba(49, 54, 61, 0.8);
+  background-color: rgba(20, 23, 26, 0.8);
   background-clip: padding-box;
   outline-color: rgba(254, 254, 254, 0.3);
   text-shadow: 0 1px black;
@@ -489,7 +489,7 @@ row:selected
   outline-color: rgba(254, 254, 254, 0.3);
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -500,7 +500,7 @@ row:selected
   .button.osd:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(76, 84, 95, 0.8));
+    background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -524,9 +524,9 @@ row:selected
   .button.osd:insensitive,
   .button.osd:insensitive:backdrop,
   .button.osd:insensitive {
-    color: #989a9e;
+    color: #898b8c;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+    background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -535,7 +535,7 @@ row:selected
   .button.osd:backdrop {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+    background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -547,7 +547,7 @@ row:selected
 .button {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -557,7 +557,7 @@ row:selected
   .button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(76, 84, 95, 0.8));
+    background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -579,9 +579,9 @@ row:selected
   .app-notification .button:insensitive:backdrop, .app-notification button:insensitive:backdrop, .popover .background.touch-selection button:insensitive:backdrop, .popover .background.magnifier button:insensitive:backdrop, .app-notification .button:insensitive, .app-notification button:insensitive, .popover .background.touch-selection button:insensitive, .popover .background.magnifier button:insensitive, .osd
   .button:insensitive:backdrop, .osd
   .button:insensitive {
-    color: #989a9e;
+    color: #898b8c;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+    background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -590,7 +590,7 @@ row:selected
   .button:backdrop {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+    background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -608,7 +608,7 @@ row:selected
     .button.flat:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(76, 84, 95, 0.8));
+      background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8));
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
@@ -616,9 +616,9 @@ row:selected
       outline-color: rgba(254, 254, 254, 0.3); }
     .app-notification .flat.button:insensitive, .app-notification button.flat:insensitive, .popover .background.touch-selection button.flat:insensitive, .popover .background.magnifier button.flat:insensitive, .osd
     .button.flat:insensitive {
-      color: #989a9e;
+      color: #898b8c;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+      background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -816,9 +816,9 @@ row:selected
     .osd
     .button.suggested-action:insensitive:backdrop, .osd
     .button.suggested-action:insensitive {
-      color: #989a9e;
+      color: #898b8c;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+      background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -1003,9 +1003,9 @@ row:selected
     .osd
     .button.destructive-action:insensitive:backdrop, .osd
     .button.destructive-action:insensitive {
-      color: #989a9e;
+      color: #898b8c;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+      background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -3554,7 +3554,7 @@ GtkProgressBar,
     outline-color: rgba(254, 254, 254, 0.2); }
     .osd GtkProgressBar:insensitive,
     .osd .progressbar:insensitive, .osd .scale .trough:insensitive, .scale .osd .trough:insensitive, .osd .scale fill:insensitive, .scale .osd fill:insensitive {
-      background-color: rgba(70, 74, 80, 0.5); }
+      background-color: rgba(43, 46, 49, 0.5); }
 
 GtkProgressBar .progressbar,
 .progressbar .progressbar, .scale .highlight, .scale.fine-tune .highlight {
@@ -3636,18 +3636,18 @@ GtkProgressBar .progressbar,
     .osd .scale .slider {
       color: #fefefe;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+      background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black;
       outline-color: rgba(254, 254, 254, 0.3);
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: #31363d; }
+      background-color: #14171a; }
       .osd .scale .slider:hover {
         color: white;
         border-color: rgba(0, 0, 0, 0.7);
-        background-image: linear-gradient(to bottom, rgba(76, 84, 95, 0.8));
+        background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8));
         background-clip: padding-box;
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
         text-shadow: 0 1px black;
@@ -3663,9 +3663,9 @@ GtkProgressBar .progressbar,
         icon-shadow: none;
         outline-color: rgba(254, 254, 254, 0.3); }
       .osd .scale .slider:insensitive {
-        color: #989a9e;
+        color: #898b8c;
         border-color: rgba(0, 0, 0, 0.7);
-        background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+        background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
         background-clip: padding-box;
         box-shadow: none;
         text-shadow: none;
@@ -3673,7 +3673,7 @@ GtkProgressBar .progressbar,
       .osd .scale .slider:backdrop {
         color: #fefefe;
         border-color: rgba(0, 0, 0, 0.7);
-        background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+        background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
         background-clip: padding-box;
         box-shadow: none;
         text-shadow: none;
@@ -4032,7 +4032,7 @@ OsScrollbar {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     icon-shadow: none;
-    color: #989a9e;
+    color: #898b8c;
     border-color: rgba(0, 0, 0, 0.5);
     box-shadow: none; }
   .osd .spinbutton:not(.vertical) .button:last-child {
@@ -4068,7 +4068,7 @@ OsScrollbar {
 .osd .spinbutton.vertical button:first-child {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -4077,7 +4077,7 @@ OsScrollbar {
   .osd .spinbutton.vertical button:first-child:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(76, 84, 95, 0.8));
+    background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -4093,9 +4093,9 @@ OsScrollbar {
     icon-shadow: none;
     outline-color: rgba(254, 254, 254, 0.3); }
   .osd .spinbutton.vertical button:first-child:insensitive {
-    color: #989a9e;
+    color: #898b8c;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+    background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -4103,7 +4103,7 @@ OsScrollbar {
   .osd .spinbutton.vertical button:first-child:backdrop {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+    background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
@@ -4300,7 +4300,7 @@ GtkSwitch {
   padding: 13px;
   border: none;
   border-radius: 5px;
-  background-color: rgba(49, 54, 61, 0.8); }
+  background-color: rgba(20, 23, 26, 0.8); }
   .toolbar.osd.left, .toolbar.osd.right, .toolbar.osd.top, .toolbar.osd.bottom {
     border-radius: 0; }
 .toolbar.horizontal separator {
@@ -5669,7 +5669,7 @@ ConversationListView {
 #buttonbox_frame button {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(49, 54, 61, 0.8));
+  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
@@ -5678,7 +5678,7 @@ ConversationListView {
   #buttonbox_frame button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(76, 84, 95, 0.8));
+    background-image: linear-gradient(to bottom, rgba(47, 54, 61, 0.8));
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
@@ -5694,9 +5694,9 @@ ConversationListView {
     icon-shadow: none;
     outline-color: rgba(254, 254, 254, 0.3); }
   #buttonbox_frame button:insensitive {
-    color: #989a9e;
+    color: #898b8c;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(70, 74, 80, 0.5));
+    background-image: linear-gradient(to bottom, rgba(43, 46, 49, 0.5));
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
