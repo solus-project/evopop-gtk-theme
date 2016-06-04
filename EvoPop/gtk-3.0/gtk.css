@@ -1244,9 +1244,9 @@ button.color {
   .linked.vertical .entry:last-child {
     border: 1px solid rgba(0, 0, 0, 0.2); }
 
-.notebook .button, .list .button, .view .button, GtkIconView .button {
+.notebook .button, .list .button, .view .button, GtkIconView .button, .popover .button {
   border: 1px solid #e6e8eb; }
-  .notebook .button:hover, .notebook .button:active, .notebook .button:checked, .list .button:hover, .list .button:active, .list .button:checked, .view .button:hover, GtkIconView .button:hover, .view .button:active, GtkIconView .button:active, .view .button:checked, GtkIconView .button:checked {
+  .notebook .button:hover, .notebook .button:active, .notebook .button:checked, .list .button:hover, .list .button:active, .list .button:checked, .view .button:hover, GtkIconView .button:hover, .view .button:active, GtkIconView .button:active, .view .button:checked, GtkIconView .button:checked, .popover .button:hover, .popover .button:active, .popover .button:checked {
     box-shadow: none;
     border-color: transparent;
     border-top-color: rgba(255, 255, 255, 0.2);
@@ -4848,6 +4848,8 @@ treeview.view header button:active {
 .budgie-menu .list-row.activatable:selected,
 .budgie-menu .list-row.activatable:selected .button {
   color: inherit; }
+.budgie-menu .list .button, .budgie-menu .button {
+  border-color: transparent; }
 
 .budgie-panel {
   color: #fefefe;
@@ -4917,12 +4919,16 @@ treeview.view header button:active {
     background-color: #fefefe;
     border-bottom: 0px solid #adb4be;
     box-shadow: inset none; }
+    .raven .raven-background .button {
+      box-shadow: 0px 0px 1px 1px #e6e8eb, inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
     .raven .raven-background.middle {
       border-bottom-style: none; }
   .raven .raven-calendar {
     border: none;
     padding: 2px;
     border-bottom: 1px solid #adb4be; }
+    .raven .raven-calendar .button {
+      box-shadow: none; }
   .raven .powerstrip {
     background-color: transparent;
     background-image: none;
@@ -4931,16 +4937,33 @@ treeview.view header button:active {
   .raven .powerstrip .button {
     border-radius: 50%;
     padding: 12px;
-    background: #e0e3e6;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    box-shadow: 0 1px rgba(255, 255, 255, 0.1);
+    color: #fefefe;
+    background: #ffa622;
+    border: none;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 100%; }
     .raven .powerstrip .button:hover {
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 1px 1px rgba(0, 0, 0, 0.2);
-      transition: 170ms ease all; }
+      transition: 170ms ease all;
+      background: #ffb03c; }
     .raven .powerstrip .button:active {
-      box-shadow: 0 1px rgba(255, 255, 255, 0.1);
-      transition: 170ms ease all; }
+      transition: 170ms ease all;
+      background: #ffbb55; }
+    .raven .powerstrip .button:first-child {
+      background: #a1ce4b; }
+      .raven .powerstrip .button:first-child:hover {
+        transition: 170ms ease all;
+        background: #abd35f; }
+      .raven .powerstrip .button:first-child:active {
+        transition: 170ms ease all;
+        background: #b6d973; }
+    .raven .powerstrip .button:last-child {
+      background: #c72240; }
+      .raven .powerstrip .button:last-child:hover {
+        transition: 170ms ease all;
+        background: #da2849; }
+      .raven .powerstrip .button:last-child:active {
+        transition: 170ms ease all;
+        background: #de3e5b; }
   .raven .option-subtitle {
     font-size: smaller; }
 

@@ -93,6 +93,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   }
   .list-row.activatable:selected,
   .list-row.activatable:selected .button { color: inherit; }
+  .list .button, .button { border-color: transparent; }
 }
 
 // Panel
@@ -214,6 +215,9 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     background-color: $base_color;
     border-bottom: 0px solid $borders_color;
     box-shadow:inset none;
+    .button {
+      box-shadow: 0px 0px 1px 1px $bg_color, inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
+    }
     &.middle { border-bottom-style: none; }  // applet background between two headers
 
   }
@@ -223,6 +227,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     border:none;
     padding: 2px;
     border-bottom:1px solid $borders_color;
+    .button { box-shadow: none; }
   }
 
   // Session Buttons
@@ -236,19 +241,46 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   .powerstrip .button {
     border-radius:50%;
     padding: 12px;
-    background: darken($bg_color,2%);
-    border: 1px solid transparentize(black,0.8);
-    box-shadow: 0 1px transparentize(white,0.9);
+    color: $selected_fg_color;
+    background: $orange;
+    border: none;
+    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2), 1px 1px transparentize(black,0.8);
     font-size: 100%;
 
     &:hover {
-      box-shadow: inset 0 1px transparentize(white,0.9), 1px 1px transparentize(black,0.8);
       transition: 170ms ease all;
+      background: lighten($orange, 5%);
     }
 
     &:active {
-      box-shadow: 0 1px transparentize(white,0.9);
       transition: 170ms ease all;
+      background: lighten($orange, 10%);
+    }
+
+    &:first-child {
+      background: $lime;
+      &:hover {
+        transition: 170ms ease all;
+        background: lighten($lime, 5%);
+      }
+
+      &:active {
+        transition: 170ms ease all;
+        background: lighten($lime, 10%);
+      }
+    }
+
+    &:last-child {
+      background: $red;
+      &:hover {
+        transition: 170ms ease all;
+        background: lighten($red, 5%);
+      }
+
+      &:active {
+        transition: 170ms ease all;
+        background: lighten($red, 10%);
+      }
     }
   }
 
