@@ -1,40 +1,16 @@
 /***********
  * Buttons *
  ***********/
-
-// stuff for .needs-attention
-$_dot_color: if($variant=='light', $selected_bg_color,
-                                   lighten($selected_bg_color,15%));
-@keyframes needs_attention {
-  from {
-    background-image: -gtk-gradient(radial,
-                                    center center, 0,
-                                    center center, 0.01,
-                                    to($_dot_color),
-                                    to(transparent));
-  }
-
-  to {
-    background-image: -gtk-gradient(radial,
-                                    center center, 0,
-                                    center center, 0.5,
-                                    to($selected_bg_color),
-                                    to(transparent));
-  }
-}
-
-
-
 %button,
 .button {
   @at-root %button_basic, & {
 
-    padding: 4px 9px;
+    padding: 6px 9px;
     border: 1px solid $borders_color;
     border-radius: 3px;
     transition: $button_transition;
 
-    @include button(normal);
+    @include button(normal,$base_color);
 
     &.flat {
       @include button(undecorated);
@@ -53,26 +29,26 @@ $_dot_color: if($variant=='light', $selected_bg_color,
     }
 
     &:hover {
-      @include button(hover);
+      @include button(hover,$selected_bg_color,$selected_fg_color);
       -gtk-image-effect: highlight;
     }
 
     &:active,
     &:checked {
-      @include button(active);
+      @include button(active,darken($selected_bg_color,5%),$selected_fg_color);
 
       transition-duration: 50ms;
     }
 
     &:backdrop {
       &.flat, & {
-        @include button(backdrop);
+        @include button(backdrop,$backdrop_base_color);
 
         transition: $backdrop_transition;
         -gtk-image-effect: none;
 
         &:active,
-        &:checked { @include button(backdrop-active); }
+        &:checked { @include button(backdrop-active,$backdrop_selected_bg_color); }
 
         &:insensitive {
           @include button(backdrop-insensitive);
@@ -308,74 +284,16 @@ $_dot_color: if($variant=='light', $selected_bg_color,
       padding-left: 2px;
       padding-right: 2px;
     }
-
-    &.needs-attention {
-      > label,
-      > image { @extend %needs_attention; }
-
-      &:active,
-      &:checked {
-        > label,
-        > image {
-          animation: none;
-          background-image: none;
-        }
-      }
-    }
   }
 
   //inline-toolbar buttons
   .inline-toolbar &, .inline-toolbar &:backdrop {
     border-radius: 2px;
     border-width: 1px;
-    @extend %linked;
   }
 
   .primary-toolbar & { icon-shadow: none; } // tango icons don't need shadows
-
-  .linked > &,
-  .linked > &:hover,
-  .linked > &:active,
-  .linked > &:checked,
-  .linked > &:backdrop { @extend %linked; }
-
-  .linked.vertical > &,
-  .linked.vertical > &:hover,
-  .linked.vertical > &:active,
-  .linked.vertical > &:checked,
-  .linked.vertical > &:backdrop { @extend %linked_vertical; }
 }
-
-%needs_attention {
-  animation: needs_attention 150ms ease-in;
-  $_dot_shadow: _text_shadow_color();
-  $_dot_shadow_r: if($variant=='light',0.5,0.45);
-  background-image: -gtk-gradient(radial,
-                                  center center, 0,
-                                  center center, 0.5,
-                                  to($_dot_color),
-                                  to(transparent)),
-                    -gtk-gradient(radial,
-                                  center center, 0,
-                                  center center, $_dot_shadow_r,
-                                  to($_dot_shadow),
-                                  to(transparent));
-  background-size: 6px 6px, 6px 6px;
-  background-repeat: no-repeat;
-
-  @if $variant == 'light' { background-position: right 3px, right 4px; }
-
-  @else { background-position: right 3px, right 2px; }
-
-  &:backdrop { background-size: 6px 6px, 0 0;}
-
-  &:dir(rtl) {
-    @if $variant == 'light' { background-position: left 3px, left 4px; }
-
-    @else { background-position: left 3px, left 2px; }
-  }
-}
-
 
 // all the following is for the +|- buttons on inline toolbars, that way
 // should really be deprecated...
@@ -410,74 +328,11 @@ $_dot_color: if($variant=='light', $selected_bg_color,
   }
 }
 
-// More inline toolbar buttons
-toolbar.inline-toolbar toolbutton,
-toolbar.inline-toolbar toolbutton:backdrop {
-  > button.flat { @extend %linked_middle; }
-
-  &:first-child > button.flat { @extend %linked:first-child; }
-
-  &:last-child > button.flat { @extend %linked:last-child; }
-
-  &:only-child > button.flat { @extend %linked:only-child; }
-}
-
-%linked_middle {
-  border-radius: 0;
-  border-right-style: none;
-}
-
-%linked {
-  @extend %linked_middle;
-
-  &:first-child {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-  }
-
-  &:last-child {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-right-style: solid;
-  }
-
-  &:only-child {
-    border-radius: 3px;
-    border-style: solid;
-  }
-}
-
-%linked_vertical_middle {
-  border-style: solid solid none solid;
-  border-radius: 0;
-}
-
-%linked_vertical{
-  @extend %linked_vertical_middle;
-
-  &:first-child {
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-  }
-
-  &:last-child {
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border-style: solid;
-  }
-
-  &:only-child {
-    border-radius: 3px;
-    border-style: solid;
-  }
-}
-
 %undecorated_button {
   background-color: transparent;
   background-image: none;
   border-color: transparent;
-  box-shadow: inset 0 1px transparentize(white,1),
-              0 1px transparentize(white, 1);
+  box-shadow: none;
   text-shadow: none;
   icon-shadow: none;
 }
@@ -528,6 +383,150 @@ button.color {
 
       &:insensitive,
       &:backdrop { box-shadow: none; }
+    }
+  }
+}
+
+/****************
+* Linked Buttons *
+*****************/
+.linked {
+  /* middle button */
+  & .entry,
+  & .button,
+  > GtkComboBox > .button:dir(ltr),
+  > GtkComboBox > .button:dir(ltr):focus {
+    border-radius: 0;
+
+    &:focus,
+    &:active,
+    &:insensitive {
+      border-radius: 0;
+    }
+  }
+
+  /* leftmost button */
+  & .entry:first-child,
+  & .button:first-child,
+  & .button:active:first-child,
+  & .button:active:hover:first-child,
+  & .button:focus:first-child,
+  & .button:focus:active:first-child,
+  & .button:insensitive:first-child,
+  & > GtkComboBox:first-child > .button,
+  & > GtkComboBox:first-child > .button:focus {
+      border-right-width: 0;
+      border-radius: 3px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+  }
+
+  /* rightmost button */
+  & .entry:last-child,
+  & .button:last-child,
+  & .button:active:last-child,
+  & .button:active:hover:last-child,
+  & .button:focus:last-child,
+  & .button:focus:active:last-child,
+  & .button:insensitive:last-child,
+  & > GtkComboBox:last-child > .button,
+  & > GtkComboBox:last-child > .button:focus {
+      border-left-width: 0;
+      border-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+  }
+
+  /* linked single button */
+  & .entry:only-child,
+  & .button:only-child,
+  & .button:active:only-child,
+  & .button:active:hover:only-child,
+  & .button:focus:only-child,
+  & .button:focus:active:only-child,
+  & .button:insensitive:only-child,
+  &.vertical > GtkComboBox:only-child > .button,
+  &.vertical > GtkComboBox:only-child > .button:focus {
+      border-radius: 3px;
+  }
+
+  /* middle button (vertical) */
+  &.vertical .entry,
+  &.vertical .button,
+  &.vertical .button:active,
+  &.vertical .button:active:hover,
+  &.vertical .button:focus,
+  &.vertical .button:focus:active,
+  &.vertical .button:insensitive,
+  &.vertical > GtkComboBox > .button:dir(ltr),
+  &.vertical > GtkComboBox > .button:dir(ltr):focus {
+      border-bottom-width: 0;
+      border-radius: 0;
+  }
+
+  /* leftmost button (vertical) */
+  &.vertical .entry:first-child,
+  &.vertical .button:first-child,
+  &.vertical .button:active:first-child,
+  &.vertical .button:active:hover:first-child,
+  &.vertical .button:focus:first-child,
+  &.vertical .button:focus:active:first-child,
+  &.vertical .button:insensitive:first-child,
+  &.vertical > GtkComboBox:first-child > .button,
+  &.vertical > GtkComboBox:first-child > .button:focus {
+      border-bottom-width: 0;
+      border-radius: 3px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+
+  /* rightmost button (vertical) */
+  &.vertical .entry:last-child,
+  &.vertical .button:last-child,
+  &.vertical .button:active:last-child,
+  &.vertical .button:active:hover:last-child,
+  &.vertical .button:focus:last-child,
+  &.vertical .button:focus:active:last-child,
+  &.vertical .button:insensitive:last-child,
+  &.vertical > GtkComboBox:last-child > .button,
+  &.vertical > GtkComboBox:last-child > .button:focus {
+      border-radius: 3px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+  }
+
+  /* linked single button (vertical) */
+  &.vertical .entry:only-child,
+  &.vertical .button:only-child,
+  &.vertical .button:active:only-child,
+  &.vertical .button:active:hover:only-child,
+  &.vertical .button:focus:only-child,
+  &.vertical .button:focus:active:only-child,
+  &.vertical .button:insensitive:only-child,
+  &.vertical > GtkComboBox:only-child > .button,
+  &.vertical > GtkComboBox:only-child > .button:focus {
+      border-radius: 3px;
+  }
+
+  &.vertical .entry:first-child {
+    border: 1px solid transparentize(black,0.8);
+      border-bottom-width: 0px;
+  }
+
+  &.vertical .entry:last-child {
+      border: 1px solid transparentize(black,0.8);
+  }
+}
+
+.notebook,.list,.view {
+  .button {
+    border: 1px solid $bg_color;
+
+    &:hover, &:active, &:checked {
+      box-shadow: none;
+      border-color: transparent;
+      border-top-color: transparentize(white, 0.8);
+      border-bottom-color: transparentize(black, 0.8);
     }
   }
 }

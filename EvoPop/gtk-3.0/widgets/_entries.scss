@@ -11,7 +11,7 @@
     transition: all 200ms $ease-out-quad;
 
     @include entry(normal);
-    
+
     // icons inside the entry
     GtkImage {
       color: mix($fg_color, $base_color, 80%);
@@ -63,7 +63,7 @@
         &:focus { @include entry(focus, $e_color); }
 
         &:selected {
-          &:focus, & { 
+          &:focus, & {
             background-color:white;
             color: $e_color;
           }
@@ -87,31 +87,10 @@
   }
 
    // linked entries
-  .linked:not(.vertical) > & { @extend %linked; }
-  .linked:not(.vertical) > &:focus + &,
-  .linked:not(.vertical) > &:focus + button,
-  .linked:not(.vertical) > &:focus + combobox > box > button.combo { border-left-color: entry_focus_border(); }
 
   // Vertically linked entries
   // FIXME: take care of "colored" entries
   .linked.vertical > & {
-    @extend %linked_vertical;
-
-    // brighter border between linked entries
-    &:not(:insensitive) + entry:not(:insensitive),
-    &:not(:insensitive) + %entry:not(:insensitive) {
-      border-top-color: mix($borders_color, $base_color, 30%);
-      background-image: linear-gradient(to bottom, $base_color);
-
-      &:backdrop {
-        border-top-color: mix($backdrop_borders_color, $backdrop_base_color, 30%);
-        background-image: linear-gradient(to bottom, $backdrop_base_color);
-      }
-    }
-
-    // brighter border between linked insensitive entries
-    &:insensitive + %entry:insensitive { border-top-color: mix($borders_color, $base_color, 30%); }
-
     // color back the top border of a linked focused entry following another entry and add back the focus shadow.
     // :not(:only-child) is a specificity bump hack.
     + %entry:focus:not(:only-child) { border-top-color: entry_focus_border(); }
