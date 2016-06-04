@@ -676,11 +676,13 @@ row:selected
   .button.suggested-action:active,
   .button.suggested-action:checked {
     color: #fefefe;
-    outline-color: rgba(255, 255, 255, 0.3);
+    outline-color: rgba(254, 254, 254, 0.3);
     background-color: #13b1d5;
     text-shadow: none;
     border-color: #0d0f11;
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    background-color: #13b1d5;
+    color: white; }
   .button.suggested-action:backdrop,
   .button.suggested-action.flat:backdrop {
     border-color: #095060;
@@ -863,11 +865,13 @@ row:selected
   .button.destructive-action:active,
   .button.destructive-action:checked {
     color: #fefefe;
-    outline-color: rgba(255, 255, 255, 0.3);
+    outline-color: rgba(254, 254, 254, 0.3);
     background-color: #13b1d5;
     text-shadow: none;
     border-color: #0d0f11;
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+    background-color: #9b1b32;
+    color: white; }
   .button.destructive-action:backdrop,
   .button.destructive-action.flat:backdrop {
     border-color: #2f080f;
