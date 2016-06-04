@@ -258,15 +258,15 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     }
 
     &:first-child {
-      background: $lime;
+      background: $cyan;
       &:hover {
         transition: 170ms ease all;
-        background: lighten($lime, 5%);
+        background: lighten($cyan, 5%);
       }
 
       &:active {
         transition: 170ms ease all;
-        background: lighten($lime, 10%);
+        background: lighten($cyan, 10%);
       }
     }
 

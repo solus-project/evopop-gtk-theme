@@ -4949,13 +4949,13 @@ treeview.view header button:active {
       transition: 170ms ease all;
       background: #ffbb55; }
     .raven .powerstrip .button:first-child {
-      background: #a1ce4b; }
+      background: #37b9a5; }
       .raven .powerstrip .button:first-child:hover {
         transition: 170ms ease all;
-        background: #abd35f; }
+        background: #43c7b3; }
       .raven .powerstrip .button:first-child:active {
         transition: 170ms ease all;
-        background: #b6d973; }
+        background: #56cdbb; }
     .raven .powerstrip .button:last-child {
       background: #c72240; }
       .raven .powerstrip .button:last-child:hover {
