@@ -16,10 +16,7 @@
   &:backdrop {
     background-color: $headerbar_bg_color;
     color: $backdrop_headerbar_fg_color;
-
-    box-shadow: inset 0 1px transparentize($top_highlight, 0.4);
-
-    transition: $backdrop_transition
+    transition: $backdrop_transition;
   }
 
   .title {
