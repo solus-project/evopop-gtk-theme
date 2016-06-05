@@ -472,8 +472,7 @@ treeview.view:selected {
       .button:insensitive:checked {
         color: #8c8f94; }
   .button.image-button {
-    padding-left: 4px;
-    padding-right: 4px; }
+    padding: 4px; }
   .button.text-button {
     padding-left: 16px;
     padding-right: 16px; }
@@ -1251,6 +1250,11 @@ button.color {
     border-color: transparent;
     border-top-color: rgba(255, 255, 255, 0.2);
     border-bottom-color: rgba(0, 0, 0, 0.2); }
+
+.circular-button.button.image-button {
+  border-radius: 50%;
+  padding-left: 8px;
+  padding-right: 8px; }
 
 /************
  * Calendar *
@@ -3023,8 +3027,6 @@ GtkLevelBar.vertical {
 .list-row {
   border-radius: 0;
   transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-  .list-row GtkImage {
-    padding-right: 6px; }
   .list-row:hover {
     transition: none; }
   .list-row:backdrop {
@@ -3357,7 +3359,7 @@ GtkAssistant {
   border: none;
   background-color: #fefefe; }
   .popover .background:backdrop {
-    background-color: #e6e8eb;
+    background-color: #fbfbfb;
     box-shadow: none; }
   .popover .background > .view, .popover .background > GtkIconView,
   .popover .background > .toolbar {
@@ -4938,24 +4940,24 @@ treeview.view header button:active {
     border-radius: 50%;
     padding: 12px;
     color: #fefefe;
-    background: #ffa622;
+    background: #a1ce4b;
     border: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 100%; }
     .raven .powerstrip .button:hover {
       transition: 170ms ease all;
-      background: #ffb03c; }
+      background: #abd35f; }
     .raven .powerstrip .button:active {
       transition: 170ms ease all;
-      background: #ffbb55; }
+      background: #b6d973; }
     .raven .powerstrip .button:first-child {
-      background: #37b9a5; }
+      background: #7b7bbd; }
       .raven .powerstrip .button:first-child:hover {
         transition: 170ms ease all;
-        background: #43c7b3; }
+        background: #8c8cc6; }
       .raven .powerstrip .button:first-child:active {
         transition: 170ms ease all;
-        background: #56cdbb; }
+        background: #9d9dce; }
     .raven .powerstrip .button:last-child {
       background: #c72240; }
       .raven .powerstrip .button:last-child:hover {

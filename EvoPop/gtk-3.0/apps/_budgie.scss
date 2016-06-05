@@ -242,31 +242,31 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     border-radius:50%;
     padding: 12px;
     color: $selected_fg_color;
-    background: $orange;
+    background: $lime;
     border: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2), 1px 1px transparentize(black,0.8);
     font-size: 100%;
 
     &:hover {
       transition: 170ms ease all;
-      background: lighten($orange, 5%);
+      background: lighten($lime, 5%);
     }
 
     &:active {
       transition: 170ms ease all;
-      background: lighten($orange, 10%);
+      background: lighten($lime, 10%);
     }
 
     &:first-child {
-      background: $cyan;
+      background: $darkpurple;
       &:hover {
         transition: 170ms ease all;
-        background: lighten($cyan, 5%);
+        background: lighten($darkpurple, 5%);
       }
 
       &:active {
         transition: 170ms ease all;
-        background: lighten($cyan, 10%);
+        background: lighten($darkpurple, 10%);
       }
     }
 

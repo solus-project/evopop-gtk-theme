@@ -10,7 +10,7 @@
     background-color: $popover_bg_color;
 
     &:backdrop {
-      background-color: $backdrop_bg_color;
+      background-color: $backdrop_base_color;
       box-shadow: none;
     }
 

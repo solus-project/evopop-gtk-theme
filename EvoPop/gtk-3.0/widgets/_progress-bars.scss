@@ -4,7 +4,7 @@
 
 GtkProgressBar,
 .progressbar {
-  
+
   @extend %scale_trough;
 
   // sizing
@@ -86,6 +86,6 @@ GtkProgressBar,
       border: 1px solid darken($selected_bg_color, 10%);
       color: transparentize(black,0.5);
       background-color: $selected_bg_color;
-    }   
+    }
   }
 }

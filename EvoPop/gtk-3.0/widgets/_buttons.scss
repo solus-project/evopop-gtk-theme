@@ -70,8 +70,7 @@
     }
 
     &.image-button {
-      padding-left: 4px;
-      padding-right: 4px;
+      padding: 4px;
     }
 
     &.text-button {
@@ -529,4 +528,10 @@ button.color {
       border-bottom-color: transparentize(black, 0.8);
     }
   }
+}
+
+.circular-button.button.image-button {
+    border-radius: 50%;
+    padding-left: 8px;
+    padding-right: 8px;
 }

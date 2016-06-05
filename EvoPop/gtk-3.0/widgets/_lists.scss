@@ -17,10 +17,6 @@
   border-radius:0;
   transition: all 150ms $ease-out-quad;
 
-  GtkImage {
-    padding-right: 6px;
-  }
-
   &:hover { transition: none; }
 
   &:backdrop { transition: $backdrop_transition; }
