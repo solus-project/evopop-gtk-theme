@@ -4902,7 +4902,7 @@ treeview.view header button:active {
     font: bold;
     text-shadow: 0 1px rgba(255, 255, 255, 0.1);
     icon-shadow: 0 1px rgba(255, 255, 255, 0.1);
-    background-color: #e6e8eb;
+    background-color: rgba(230, 232, 235, 0.3);
     color: #31363D;
     border: solid #adb4be;
     border-width: 1px 0 1px 0;
@@ -4911,6 +4911,13 @@ treeview.view header button:active {
       border-top-style: none; }
     .raven .raven-header.bottom {
       border-bottom-style: none; }
+    .raven .raven-header .button.image-button {
+      background-color: transparent;
+      box-shadow: none; }
+      .raven .raven-header .button.image-button:hover {
+        color: #13b1d5; }
+      .raven .raven-header .button.image-button:active, .raven .raven-header .button.image-button:checked {
+        color: #119ebe; }
     .raven .raven-header GtkSwitch {
       -GtkSwitch-slider-width: 16px;
       -GtkSwitch-slider-height: 16px;
@@ -4918,14 +4925,13 @@ treeview.view header button:active {
       .raven .raven-header GtkSwitch .slider {
         border-radius: 8px; }
   .raven .raven-background {
-    background-color: #fefefe;
+    background-color: rgba(230, 232, 235, 0.5);
     border-bottom: 0px solid #adb4be;
-    box-shadow: inset none; }
-    .raven .raven-background .button {
-      box-shadow: 0px 0px 1px 1px #e6e8eb, inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3); }
     .raven .raven-background.middle {
       border-bottom-style: none; }
   .raven .raven-calendar {
+    background-color: rgba(230, 232, 235, 0.5);
     border: none;
     padding: 2px;
     border-bottom: 1px solid #adb4be; }
@@ -4936,34 +4942,36 @@ treeview.view header button:active {
     background-image: none;
     border: none;
     box-shadow: none; }
-  .raven .powerstrip .button {
+  .raven .powerstrip .button.image-button {
     border-radius: 50%;
     padding: 12px;
     color: #fefefe;
-    background: #a1ce4b;
+    background: #7b7bbd;
     border: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 100%; }
-    .raven .powerstrip .button:hover {
+    .raven .powerstrip .button.image-button:hover {
       transition: 170ms ease all;
-      background: #abd35f; }
-    .raven .powerstrip .button:active {
+      background: #8c8cc6;
+      color: #fefefe; }
+    .raven .powerstrip .button.image-button:active {
       transition: 170ms ease all;
-      background: #b6d973; }
-    .raven .powerstrip .button:first-child {
-      background: #7b7bbd; }
-      .raven .powerstrip .button:first-child:hover {
+      background: #9d9dce;
+      color: #fefefe; }
+    .raven .powerstrip .button.image-button:first-child {
+      background: #119ebe; }
+      .raven .powerstrip .button.image-button:first-child:hover {
         transition: 170ms ease all;
-        background: #8c8cc6; }
-      .raven .powerstrip .button:first-child:active {
+        background: #13b1d5; }
+      .raven .powerstrip .button.image-button:first-child:active {
         transition: 170ms ease all;
-        background: #9d9dce; }
-    .raven .powerstrip .button:last-child {
+        background: #17c3ea; }
+    .raven .powerstrip .button.image-button:last-child {
       background: #c72240; }
-      .raven .powerstrip .button:last-child:hover {
+      .raven .powerstrip .button.image-button:last-child:hover {
         transition: 170ms ease all;
         background: #da2849; }
-      .raven .powerstrip .button:last-child:active {
+      .raven .powerstrip .button.image-button:last-child:active {
         transition: 170ms ease all;
         background: #de3e5b; }
   .raven .option-subtitle {
