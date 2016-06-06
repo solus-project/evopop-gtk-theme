@@ -58,30 +58,27 @@
     color: $text_color;
     border-color: $borders_color;
     background-color:$base_color;
-    @include _shadows(entry_focus_shadow(transparentize($fc, 1)), $_entry_edge);
-    // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
   }
   @if $t==focus {
-    @include _shadows(entry_focus_shadow($fc), $_entry_edge);
     border-color: entry_focus_border($fc);
   }
   @if $t==insensitive {
     color: $insensitive_fg_color;
     border-color: $borders_color;
     background-image: linear-gradient(to bottom, $insensitive_bg_color);
-    box-shadow: $_entry_edge;
+    box-shadow: none;
   }
   @if $t==backdrop {
     color: $backdrop_text_color;
     border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom, $backdrop_base_color);
-    box-shadow: $_blank_edge;
+    box-shadow: none;
   }
   @if $t==backdrop-insensitive {
     color: $backdrop_insensitive_color;
     border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom, $insensitive_bg_color);
-    box-shadow: $_blank_edge;
+    box-shadow: none;
   }
   @if $t==osd {
     color: $osd_text_color;

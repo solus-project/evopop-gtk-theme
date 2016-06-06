@@ -4,33 +4,39 @@
 
 GtkMessageDialog,
 .message-dialog {
+
+  background-color: if($variant=='light',$base_color,$bg_color);
+
+  &:backdrop {
+    background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
+  }
+
   .header-bar,
   .titlebar {
     background-image: none;
-    background-color: $bg_color;
+    background-color: if($variant=='light',$base_color,$bg_color);
     border-style: none;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     box-shadow: inset 0 1px $top_highlight;
 
     &:backdrop {
-      background-color: $backdrop_bg_color;
+      background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
     }
 
     &.default-decoration {
       padding: 6px;
-      background-color: $bg_color;
+      background-color: if($variant=='light',$base_color,$bg_color);
       color: $fg_color;
 
       &:backdrop {
-        background-color: $backdrop_bg_color;
+        background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
         color: $backdrop_fg_color;
       }
 
       .button {
         &.titlebutton {
           padding: 1px;
-          border-radius:50%;
           background-color:transparent;
           box-shadow: none;
           text-shadow: none;
@@ -41,31 +47,30 @@ GtkMessageDialog,
           }
 
           &:hover {
-            background-color:darken($bg_color, 10%);;
-            color:lighten($fg_color, 10%);
+            background-color:transparent;
+            color: $selected_bg_color;
 
             GtkImage {
-              color: lighten($fg_color, 10%);
+              color: $selected_bg_color;
             }
           }
 
           &:backdrop {
             background-color:transparent;
             color:$backdrop_fg_color;
-            
+
             GtkImage {
               color: lighten($backdrop_fg_color, 10%);
             }
           }
 
           &:active {
-            background-color:$fg_color;
-            color:$bg_color;
-            border-radius:50%;
+            background-color: transparent;
+            color: $selected_bg_color;
             box-shadow:none;
-            
+
             GtkImage {
-              color: lighten($bg_color, 10%);
+              color: $selected_bg_color;
             }
           }
         }
@@ -87,9 +92,20 @@ GtkMessageDialog,
       padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
       border-radius: 0;
       background-image:none;
+      background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
       border-left-style: solid;
       border-right-style: none;
       border-bottom-style: none;
+      border-top: 1px solid darken(if($variant=='light',$backdrop_base_color,$backdrop_bg_color), 20%);
+
+      &:hover {
+        background-color: $selected_bg_color;
+      }
+
+      &:active,&:selected {
+        border-radius: 0;
+        background-color: darken($selected_bg_color,5%);
+      }
 
       &:first-child {
         border-left-style: none;
@@ -109,7 +125,7 @@ GtkFileChooserDialog {
 
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  
+
   .dialog-action-box {
     border-top: 1px solid $borders_color;
 

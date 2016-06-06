@@ -1805,107 +1805,121 @@ GtkComboBox .arrow {
 /***********
  * Dialogs *
  ***********/
-GtkMessageDialog .header-bar,
-GtkMessageDialog .titlebar,
-.message-dialog .header-bar,
-.message-dialog .titlebar {
-  background-image: none;
-  background-color: #31363d;
-  border-style: none;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
-  GtkMessageDialog .header-bar:backdrop,
-  GtkMessageDialog .titlebar:backdrop,
-  .message-dialog .header-bar:backdrop,
-  .message-dialog .titlebar:backdrop {
+GtkMessageDialog,
+.message-dialog {
+  background-color: #31363d; }
+  GtkMessageDialog:backdrop,
+  .message-dialog:backdrop {
     background-color: #31363d; }
-  GtkMessageDialog .header-bar.default-decoration,
-  GtkMessageDialog .titlebar.default-decoration,
-  .message-dialog .header-bar.default-decoration,
-  .message-dialog .titlebar.default-decoration {
-    padding: 6px;
-    background-color: #31363d;
-    color: #fefefe; }
-    GtkMessageDialog .header-bar.default-decoration:backdrop,
-    GtkMessageDialog .titlebar.default-decoration:backdrop,
-    .message-dialog .header-bar.default-decoration:backdrop,
-    .message-dialog .titlebar.default-decoration:backdrop {
-      background-color: #31363d;
-      color: #989a9e; }
-    GtkMessageDialog .header-bar.default-decoration .button.titlebutton,
-    GtkMessageDialog .titlebar.default-decoration .button.titlebutton,
-    .message-dialog .header-bar.default-decoration .button.titlebutton,
-    .message-dialog .titlebar.default-decoration .button.titlebutton {
-      padding: 1px;
-      border-radius: 50%;
-      background-color: transparent;
-      box-shadow: none;
-      text-shadow: none;
-      icon-shadow: none; }
-      GtkMessageDialog .header-bar.default-decoration .button.titlebutton GtkImage,
-      GtkMessageDialog .titlebar.default-decoration .button.titlebutton GtkImage,
-      .message-dialog .header-bar.default-decoration .button.titlebutton GtkImage,
-      .message-dialog .titlebar.default-decoration .button.titlebutton GtkImage {
-        color: #fefefe; }
-      GtkMessageDialog .header-bar.default-decoration .button.titlebutton:hover,
-      GtkMessageDialog .titlebar.default-decoration .button.titlebutton:hover,
-      .message-dialog .header-bar.default-decoration .button.titlebutton:hover,
-      .message-dialog .titlebar.default-decoration .button.titlebutton:hover {
-        background-color: #1a1d21;
-        color: white; }
-        GtkMessageDialog .header-bar.default-decoration .button.titlebutton:hover GtkImage,
-        GtkMessageDialog .titlebar.default-decoration .button.titlebutton:hover GtkImage,
-        .message-dialog .header-bar.default-decoration .button.titlebutton:hover GtkImage,
-        .message-dialog .titlebar.default-decoration .button.titlebutton:hover GtkImage {
-          color: white; }
-      GtkMessageDialog .header-bar.default-decoration .button.titlebutton:backdrop,
-      GtkMessageDialog .titlebar.default-decoration .button.titlebutton:backdrop,
-      .message-dialog .header-bar.default-decoration .button.titlebutton:backdrop,
-      .message-dialog .titlebar.default-decoration .button.titlebutton:backdrop {
-        background-color: transparent;
-        color: #989a9e; }
-        GtkMessageDialog .header-bar.default-decoration .button.titlebutton:backdrop GtkImage,
-        GtkMessageDialog .titlebar.default-decoration .button.titlebutton:backdrop GtkImage,
-        .message-dialog .header-bar.default-decoration .button.titlebutton:backdrop GtkImage,
-        .message-dialog .titlebar.default-decoration .button.titlebutton:backdrop GtkImage {
-          color: #b2b4b7; }
-      GtkMessageDialog .header-bar.default-decoration .button.titlebutton:active,
-      GtkMessageDialog .titlebar.default-decoration .button.titlebutton:active,
-      .message-dialog .header-bar.default-decoration .button.titlebutton:active,
-      .message-dialog .titlebar.default-decoration .button.titlebutton:active {
-        background-color: #fefefe;
-        color: #31363d;
-        border-radius: 50%;
-        box-shadow: none; }
-        GtkMessageDialog .header-bar.default-decoration .button.titlebutton:active GtkImage,
-        GtkMessageDialog .titlebar.default-decoration .button.titlebutton:active GtkImage,
-        .message-dialog .header-bar.default-decoration .button.titlebutton:active GtkImage,
-        .message-dialog .titlebar.default-decoration .button.titlebutton:active GtkImage {
-          color: #484f59; }
-GtkMessageDialog.csd,
-.message-dialog.csd {
-  border: none;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
-  GtkMessageDialog.csd.background,
-  .message-dialog.csd.background {
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px; }
-  GtkMessageDialog.csd .dialog-action-area .button,
-  .message-dialog.csd .dialog-action-area .button {
-    padding: 10px 14px;
-    border-radius: 0;
+  GtkMessageDialog .header-bar,
+  GtkMessageDialog .titlebar,
+  .message-dialog .header-bar,
+  .message-dialog .titlebar {
     background-image: none;
-    border-left-style: solid;
-    border-right-style: none;
-    border-bottom-style: none; }
-    GtkMessageDialog.csd .dialog-action-area .button:first-child,
-    .message-dialog.csd .dialog-action-area .button:first-child {
-      border-left-style: none;
-      border-bottom-left-radius: 4px; }
-    GtkMessageDialog.csd .dialog-action-area .button:last-child,
-    .message-dialog.csd .dialog-action-area .button:last-child {
+    background-color: #31363d;
+    border-style: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+    GtkMessageDialog .header-bar:backdrop,
+    GtkMessageDialog .titlebar:backdrop,
+    .message-dialog .header-bar:backdrop,
+    .message-dialog .titlebar:backdrop {
+      background-color: #31363d; }
+    GtkMessageDialog .header-bar.default-decoration,
+    GtkMessageDialog .titlebar.default-decoration,
+    .message-dialog .header-bar.default-decoration,
+    .message-dialog .titlebar.default-decoration {
+      padding: 6px;
+      background-color: #31363d;
+      color: #fefefe; }
+      GtkMessageDialog .header-bar.default-decoration:backdrop,
+      GtkMessageDialog .titlebar.default-decoration:backdrop,
+      .message-dialog .header-bar.default-decoration:backdrop,
+      .message-dialog .titlebar.default-decoration:backdrop {
+        background-color: #31363d;
+        color: #989a9e; }
+      GtkMessageDialog .header-bar.default-decoration .button.titlebutton,
+      GtkMessageDialog .titlebar.default-decoration .button.titlebutton,
+      .message-dialog .header-bar.default-decoration .button.titlebutton,
+      .message-dialog .titlebar.default-decoration .button.titlebutton {
+        padding: 1px;
+        background-color: transparent;
+        box-shadow: none;
+        text-shadow: none;
+        icon-shadow: none; }
+        GtkMessageDialog .header-bar.default-decoration .button.titlebutton GtkImage,
+        GtkMessageDialog .titlebar.default-decoration .button.titlebutton GtkImage,
+        .message-dialog .header-bar.default-decoration .button.titlebutton GtkImage,
+        .message-dialog .titlebar.default-decoration .button.titlebutton GtkImage {
+          color: #fefefe; }
+        GtkMessageDialog .header-bar.default-decoration .button.titlebutton:hover,
+        GtkMessageDialog .titlebar.default-decoration .button.titlebutton:hover,
+        .message-dialog .header-bar.default-decoration .button.titlebutton:hover,
+        .message-dialog .titlebar.default-decoration .button.titlebutton:hover {
+          background-color: transparent;
+          color: #13b1d5; }
+          GtkMessageDialog .header-bar.default-decoration .button.titlebutton:hover GtkImage,
+          GtkMessageDialog .titlebar.default-decoration .button.titlebutton:hover GtkImage,
+          .message-dialog .header-bar.default-decoration .button.titlebutton:hover GtkImage,
+          .message-dialog .titlebar.default-decoration .button.titlebutton:hover GtkImage {
+            color: #13b1d5; }
+        GtkMessageDialog .header-bar.default-decoration .button.titlebutton:backdrop,
+        GtkMessageDialog .titlebar.default-decoration .button.titlebutton:backdrop,
+        .message-dialog .header-bar.default-decoration .button.titlebutton:backdrop,
+        .message-dialog .titlebar.default-decoration .button.titlebutton:backdrop {
+          background-color: transparent;
+          color: #989a9e; }
+          GtkMessageDialog .header-bar.default-decoration .button.titlebutton:backdrop GtkImage,
+          GtkMessageDialog .titlebar.default-decoration .button.titlebutton:backdrop GtkImage,
+          .message-dialog .header-bar.default-decoration .button.titlebutton:backdrop GtkImage,
+          .message-dialog .titlebar.default-decoration .button.titlebutton:backdrop GtkImage {
+            color: #b2b4b7; }
+        GtkMessageDialog .header-bar.default-decoration .button.titlebutton:active,
+        GtkMessageDialog .titlebar.default-decoration .button.titlebutton:active,
+        .message-dialog .header-bar.default-decoration .button.titlebutton:active,
+        .message-dialog .titlebar.default-decoration .button.titlebutton:active {
+          background-color: transparent;
+          color: #13b1d5;
+          box-shadow: none; }
+          GtkMessageDialog .header-bar.default-decoration .button.titlebutton:active GtkImage,
+          GtkMessageDialog .titlebar.default-decoration .button.titlebutton:active GtkImage,
+          .message-dialog .header-bar.default-decoration .button.titlebutton:active GtkImage,
+          .message-dialog .titlebar.default-decoration .button.titlebutton:active GtkImage {
+            color: #13b1d5; }
+  GtkMessageDialog.csd,
+  .message-dialog.csd {
+    border: none;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2); }
+    GtkMessageDialog.csd.background,
+    .message-dialog.csd.background {
+      border-bottom-left-radius: 4px;
       border-bottom-right-radius: 4px; }
+    GtkMessageDialog.csd .dialog-action-area .button,
+    .message-dialog.csd .dialog-action-area .button {
+      padding: 10px 14px;
+      border-radius: 0;
+      background-image: none;
+      background-color: #31363d;
+      border-left-style: solid;
+      border-right-style: none;
+      border-bottom-style: none;
+      border-top: 1px solid #040404; }
+      GtkMessageDialog.csd .dialog-action-area .button:hover,
+      .message-dialog.csd .dialog-action-area .button:hover {
+        background-color: #13b1d5; }
+      GtkMessageDialog.csd .dialog-action-area .button:active, GtkMessageDialog.csd .dialog-action-area .button:selected,
+      .message-dialog.csd .dialog-action-area .button:active,
+      .message-dialog.csd .dialog-action-area .button:selected {
+        border-radius: 0;
+        background-color: #119ebe; }
+      GtkMessageDialog.csd .dialog-action-area .button:first-child,
+      .message-dialog.csd .dialog-action-area .button:first-child {
+        border-left-style: none;
+        border-bottom-left-radius: 4px; }
+      GtkMessageDialog.csd .dialog-action-area .button:last-child,
+      .message-dialog.csd .dialog-action-area .button:last-child {
+        border-bottom-right-radius: 4px; }
 
 GtkFileChooserDialog {
   border-bottom-left-radius: 4px;
@@ -1930,8 +1944,7 @@ GtkFileChooserDialog {
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #fefefe;
   border-color: #1a1d21;
-  background-color: #505359;
-  box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+  background-color: #505359; }
   .spinbutton:not(.vertical) GtkImage, GeditWindow > .entry GtkImage,
   .entry GtkImage {
     color: #dbdcdd; }
@@ -1983,7 +1996,6 @@ GtkFileChooserDialog {
     border-radius: 0; }
   .spinbutton:focus:not(.vertical), GeditWindow > .entry:focus,
   .entry:focus {
-    box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
     border-color: #1a1d21; }
   .spinbutton:insensitive:not(.vertical), GeditWindow > .entry:insensitive,
   .entry:insensitive {
@@ -2011,7 +2023,6 @@ GtkFileChooserDialog {
     border-color: #2f080f; }
     .error.spinbutton:focus:not(.vertical), GeditWindow > .error.entry:focus,
     .entry.error:focus {
-      box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       border-color: #2f080f; }
     .error.spinbutton:selected:focus:not(.vertical), GeditWindow > .error.entry:selected:focus, .error.spinbutton:selected:not(.vertical), GeditWindow > .error.entry:selected,
     .entry.error:selected:focus,
@@ -2025,7 +2036,6 @@ GtkFileChooserDialog {
     border-color: #6f4200; }
     .warning.spinbutton:focus:not(.vertical), GeditWindow > .warning.entry:focus,
     .entry.warning:focus {
-      box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       border-color: #6f4200; }
     .warning.spinbutton:selected:focus:not(.vertical), GeditWindow > .warning.entry:selected:focus, .warning.spinbutton:selected:not(.vertical), GeditWindow > .warning.entry:selected,
     .entry.warning:selected:focus,
@@ -4993,10 +5003,25 @@ treeview.view header button:active {
 .budgie-session-dialog, .budgie-polkit-dialog {
   border-radius: 4px;
   border: none;
+  background-color: #31363d;
   border-top: 1px solid rgba(255, 255, 255, 0.1); }
   .budgie-session-dialog.background, .background.budgie-polkit-dialog {
     padding: 12px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.2); }
+  .budgie-session-dialog .button, .budgie-polkit-dialog .button {
+    background-image: none;
+    background-color: #31363d;
+    border-left-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-top: 1px solid #040404; }
+    .budgie-session-dialog .button:hover, .budgie-polkit-dialog .button:hover {
+      background-color: #13b1d5; }
+    .budgie-session-dialog .button:active, .budgie-polkit-dialog .button:active, .budgie-session-dialog .button:selected, .budgie-polkit-dialog .button:selected {
+      border-radius: 0;
+      background-color: #119ebe; }
+    .budgie-session-dialog .button.destructive-action, .budgie-polkit-dialog .button.destructive-action {
+      background-color: #9b1b32; }
   .budgie-session-dialog .linked.horizontal > .button, .budgie-polkit-dialog .linked.horizontal > .button {
     border-bottom: none;
     border-radius: 0; }

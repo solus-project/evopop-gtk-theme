@@ -346,6 +346,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-session-dialog {
   border-radius: 4px;
   border:none;
+  background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
   border-top: 1px solid transparentize(white,0.9);
 
   &.background {
@@ -353,11 +354,35 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     box-shadow: 0 1px 1px 0 $shadow_color, 0 0 0 1px $shadow_color;
   }
 
+  .button {
+    background-image:none;
+    background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
+    border-left-style: solid;
+    border-right-style: none;
+    border-bottom-style: none;
+    border-top: 1px solid darken(if($variant=='light',$backdrop_base_color,$backdrop_bg_color), 20%);
+
+    &:hover {
+      background-color: $selected_bg_color;
+    }
+
+    &:active,&:selected {
+      border-radius: 0;
+      background-color: darken($selected_bg_color,5%);
+    }
+
+    &.destructive-action {
+      background-color: $destructive_color;
+    }
+  }
+
   .linked.horizontal > .button {
     border-bottom: none;
     border-radius: 0;
     &:first-child { border-left: none; border-radius: 0 0 0 4px; }
-    &:last-child { border-right: none; border-radius: 0 0 4px 0; }
+    &:last-child {
+      border-right: none; border-radius: 0 0 4px 0;
+    }
   }
 }
 
