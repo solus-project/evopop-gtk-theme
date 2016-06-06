@@ -396,6 +396,7 @@ button.color {
   > GtkComboBox > .button:dir(ltr),
   > GtkComboBox > .button:dir(ltr):focus {
     border-radius: 0;
+    border-right: 1px solid transparentize(black,0.8);
 
     &:focus,
     &:active,
@@ -408,28 +409,28 @@ button.color {
   & .entry:first-child,
   & .button:first-child,
   & .button:active:first-child,
-  & .button:active:hover:first-child,
   & .button:focus:first-child,
-  & .button:focus:active:first-child,
   & .button:insensitive:first-child,
   & > GtkComboBox:first-child > .button,
   & > GtkComboBox:first-child > .button:focus {
-      border-right-width: 0;
       border-radius: 3px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
   }
 
   /* rightmost button */
-  & .entry:last-child,
   & .button:last-child,
   & .button:active:last-child,
-  & .button:active:hover:last-child,
   & .button:focus:last-child,
-  & .button:focus:active:last-child,
   & .button:insensitive:last-child,
   & > GtkComboBox:last-child > .button,
   & > GtkComboBox:last-child > .button:focus {
+      border-right-width: 0;
+      border-radius: 3px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+  }
+  & .entry:last-child {
       border-left-width: 0;
       border-radius: 3px;
       border-bottom-left-radius: 0;
@@ -440,9 +441,7 @@ button.color {
   & .entry:only-child,
   & .button:only-child,
   & .button:active:only-child,
-  & .button:active:hover:only-child,
   & .button:focus:only-child,
-  & .button:focus:active:only-child,
   & .button:insensitive:only-child,
   &.vertical > GtkComboBox:only-child > .button,
   &.vertical > GtkComboBox:only-child > .button:focus {
@@ -453,9 +452,7 @@ button.color {
   &.vertical .entry,
   &.vertical .button,
   &.vertical .button:active,
-  &.vertical .button:active:hover,
   &.vertical .button:focus,
-  &.vertical .button:focus:active,
   &.vertical .button:insensitive,
   &.vertical > GtkComboBox > .button:dir(ltr),
   &.vertical > GtkComboBox > .button:dir(ltr):focus {
@@ -467,9 +464,7 @@ button.color {
   &.vertical .entry:first-child,
   &.vertical .button:first-child,
   &.vertical .button:active:first-child,
-  &.vertical .button:active:hover:first-child,
   &.vertical .button:focus:first-child,
-  &.vertical .button:focus:active:first-child,
   &.vertical .button:insensitive:first-child,
   &.vertical > GtkComboBox:first-child > .button,
   &.vertical > GtkComboBox:first-child > .button:focus {
@@ -483,9 +478,7 @@ button.color {
   &.vertical .entry:last-child,
   &.vertical .button:last-child,
   &.vertical .button:active:last-child,
-  &.vertical .button:active:hover:last-child,
   &.vertical .button:focus:last-child,
-  &.vertical .button:focus:active:last-child,
   &.vertical .button:insensitive:last-child,
   &.vertical > GtkComboBox:last-child > .button,
   &.vertical > GtkComboBox:last-child > .button:focus {
@@ -498,9 +491,7 @@ button.color {
   &.vertical .entry:only-child,
   &.vertical .button:only-child,
   &.vertical .button:active:only-child,
-  &.vertical .button:active:hover:only-child,
   &.vertical .button:focus:only-child,
-  &.vertical .button:focus:active:only-child,
   &.vertical .button:insensitive:only-child,
   &.vertical > GtkComboBox:only-child > .button,
   &.vertical > GtkComboBox:only-child > .button:focus {

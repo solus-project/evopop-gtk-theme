@@ -25,9 +25,11 @@
     border-width: 0px 1px 1px 1px;
   }
 
-  & .button {
+  & .button,
+  & .linked .button {
     background-color: transparent;
     box-shadow: none;
+    border: none;
 
     &:hover {
       background-color: transparent;

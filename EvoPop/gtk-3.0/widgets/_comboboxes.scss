@@ -19,7 +19,7 @@ GtkComboBox {
 
     &:first-child {
       border-radius: 4px 0 0 4px;
-      border-right-width: 0;
+      border-right: 1px solid darken(black, 20%);
     }
 
     &:last-child {
@@ -37,7 +37,6 @@ GtkComboBox {
     }
 
     &:last-child {
-      border-radius: 0 4px 4px 0;
       border-radius: 0 4px 4px 0;
     }
 

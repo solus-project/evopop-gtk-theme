@@ -120,29 +120,30 @@ read if you used those and something break with a version upgrade you're on your
   .action-bar:last-child {
     border-radius: 0 0 6px 6px;
     border-width: 0px 1px 1px 1px; }
-  .action-bar .button {
+  .action-bar .button, .action-bar .linked .button {
     background-color: transparent;
-    box-shadow: none; }
-    .action-bar .button:hover {
+    box-shadow: none;
+    border: none; }
+    .action-bar .button:hover, .action-bar .linked .button:hover {
       background-color: transparent;
       color: #13b1d5;
       box-shadow: none; }
-    .action-bar .button:active, .action-bar .button:checked {
+    .action-bar .button:active, .action-bar .button:checked, .action-bar .linked .button:active, .action-bar .linked .button:checked {
       background-color: transparent;
       color: #119ebe;
       box-shadow: none; }
-    .action-bar .button:backdrop {
+    .action-bar .button:backdrop, .action-bar .linked .button:backdrop {
       background-color: transparent;
       background-image: none;
       box-shadow: none; }
-      .action-bar .button:backdrop:hover {
+      .action-bar .button:backdrop:hover, .action-bar .linked .button:backdrop:hover {
         background-color: transparent;
         box-shadow: none; }
-      .action-bar .button:backdrop:active, .action-bar .button:backdrop:checked {
+      .action-bar .button:backdrop:active, .action-bar .button:backdrop:checked, .action-bar .linked .button:backdrop:active, .action-bar .linked .button:backdrop:checked {
         background-color: transparent;
         color: #119ebe;
         box-shadow: none; }
-        .action-bar .button:backdrop:active GtkImage, .action-bar .button:backdrop:checked GtkImage {
+        .action-bar .button:backdrop:active GtkImage, .action-bar .button:backdrop:checked GtkImage, .action-bar .linked .button:backdrop:active GtkImage, .action-bar .linked .button:backdrop:checked GtkImage {
           color: #119ebe; }
 
 /*********************
@@ -1202,7 +1203,8 @@ button.color {
   .linked .entry, .linked .button,
   .linked > GtkComboBox > .button:dir(ltr),
   .linked > GtkComboBox > .button:dir(ltr):focus {
-    border-radius: 0; }
+    border-radius: 0;
+    border-right: 1px solid rgba(0, 0, 0, 0.2); }
     .linked .entry:focus, .linked .entry:active, .linked .entry:insensitive, .linked .button:focus, .linked .button:active, .linked .button:insensitive,
     .linked > GtkComboBox > .button:dir(ltr):focus,
     .linked > GtkComboBox > .button:dir(ltr):active,
@@ -1211,31 +1213,35 @@ button.color {
     .linked > GtkComboBox > .button:dir(ltr):focus:active,
     .linked > GtkComboBox > .button:dir(ltr):focus:insensitive {
       border-radius: 0; }
-  .linked .entry:first-child, .linked .button:first-child, .linked .button:active:first-child, .linked .button:active:hover:first-child, .linked .button:focus:first-child, .linked .button:focus:active:first-child, .linked .button:insensitive:first-child, .linked > GtkComboBox:first-child > .button, .linked > GtkComboBox:first-child > .button:focus {
-    border-right-width: 0;
+  .linked .entry:first-child, .linked .button:first-child, .linked .button:active:first-child, .linked .button:focus:first-child, .linked .button:insensitive:first-child, .linked > GtkComboBox:first-child > .button, .linked > GtkComboBox:first-child > .button:focus {
     border-radius: 3px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .linked .entry:last-child, .linked .button:last-child, .linked .button:active:last-child, .linked .button:active:hover:last-child, .linked .button:focus:last-child, .linked .button:focus:active:last-child, .linked .button:insensitive:last-child, .linked > GtkComboBox:last-child > .button, .linked > GtkComboBox:last-child > .button:focus {
+  .linked .button:last-child, .linked .button:active:last-child, .linked .button:focus:last-child, .linked .button:insensitive:last-child, .linked > GtkComboBox:last-child > .button, .linked > GtkComboBox:last-child > .button:focus {
+    border-right-width: 0;
+    border-radius: 3px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0; }
+  .linked .entry:last-child {
     border-left-width: 0;
     border-radius: 3px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
-  .linked .entry:only-child, .linked .button:only-child, .linked .button:active:only-child, .linked .button:active:hover:only-child, .linked .button:focus:only-child, .linked .button:focus:active:only-child, .linked .button:insensitive:only-child, .linked.vertical > GtkComboBox:only-child > .button, .linked.vertical > GtkComboBox:only-child > .button:focus {
+  .linked .entry:only-child, .linked .button:only-child, .linked .button:active:only-child, .linked .button:focus:only-child, .linked .button:insensitive:only-child, .linked.vertical > GtkComboBox:only-child > .button, .linked.vertical > GtkComboBox:only-child > .button:focus {
     border-radius: 3px; }
-  .linked.vertical .entry, .linked.vertical .button, .linked.vertical .button:active, .linked.vertical .button:active:hover, .linked.vertical .button:focus, .linked.vertical .button:focus:active, .linked.vertical .button:insensitive, .linked.vertical > GtkComboBox > .button:dir(ltr), .linked.vertical > GtkComboBox > .button:dir(ltr):focus {
+  .linked.vertical .entry, .linked.vertical .button, .linked.vertical .button:active, .linked.vertical .button:focus, .linked.vertical .button:insensitive, .linked.vertical > GtkComboBox > .button:dir(ltr), .linked.vertical > GtkComboBox > .button:dir(ltr):focus {
     border-bottom-width: 0;
     border-radius: 0; }
-  .linked.vertical .entry:first-child, .linked.vertical .button:first-child, .linked.vertical .button:active:first-child, .linked.vertical .button:active:hover:first-child, .linked.vertical .button:focus:first-child, .linked.vertical .button:focus:active:first-child, .linked.vertical .button:insensitive:first-child, .linked.vertical > GtkComboBox:first-child > .button, .linked.vertical > GtkComboBox:first-child > .button:focus {
+  .linked.vertical .entry:first-child, .linked.vertical .button:first-child, .linked.vertical .button:active:first-child, .linked.vertical .button:focus:first-child, .linked.vertical .button:insensitive:first-child, .linked.vertical > GtkComboBox:first-child > .button, .linked.vertical > GtkComboBox:first-child > .button:focus {
     border-bottom-width: 0;
     border-radius: 3px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .linked.vertical .entry:last-child, .linked.vertical .button:last-child, .linked.vertical .button:active:last-child, .linked.vertical .button:active:hover:last-child, .linked.vertical .button:focus:last-child, .linked.vertical .button:focus:active:last-child, .linked.vertical .button:insensitive:last-child, .linked.vertical > GtkComboBox:last-child > .button, .linked.vertical > GtkComboBox:last-child > .button:focus {
+  .linked.vertical .entry:last-child, .linked.vertical .button:last-child, .linked.vertical .button:active:last-child, .linked.vertical .button:focus:last-child, .linked.vertical .button:insensitive:last-child, .linked.vertical > GtkComboBox:last-child > .button, .linked.vertical > GtkComboBox:last-child > .button:focus {
     border-radius: 3px;
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .linked.vertical .entry:only-child, .linked.vertical .button:only-child, .linked.vertical .button:active:only-child, .linked.vertical .button:active:hover:only-child, .linked.vertical .button:focus:only-child, .linked.vertical .button:focus:active:only-child, .linked.vertical .button:insensitive:only-child, .linked.vertical > GtkComboBox:only-child > .button, .linked.vertical > GtkComboBox:only-child > .button:focus {
+  .linked.vertical .entry:only-child, .linked.vertical .button:only-child, .linked.vertical .button:active:only-child, .linked.vertical .button:focus:only-child, .linked.vertical .button:insensitive:only-child, .linked.vertical > GtkComboBox:only-child > .button, .linked.vertical > GtkComboBox:only-child > .button:focus {
     border-radius: 3px; }
   .linked.vertical .entry:first-child {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1799,7 +1805,7 @@ GtkComboBox .arrow {
  ******************/
 .combobox-entry .button:first-child {
   border-radius: 4px 0 0 4px;
-  border-right-width: 0; }
+  border-right: 1px solid black; }
 .combobox-entry .button:last-child {
   border-radius: 0 4px 4px 0; }
 .combobox-entry .entry {
@@ -1808,7 +1814,6 @@ GtkComboBox .arrow {
     border-radius: 4px 0 0 4px;
     border-right-width: 1px; }
   .combobox-entry .entry:last-child {
-    border-radius: 0 4px 4px 0;
     border-radius: 0 4px 4px 0; }
 
 /***********
@@ -2634,7 +2639,7 @@ GraniteWidgetsWelcome {
       border-radius: 0px;
       text-shadow: none;
       icon-shadow: none;
-      box-shadow: inset 0 -2px 0 0 #fefefe;
+      box-shadow: inset 0 -2px 0 0 #119ebe;
       background-color: transparent;
       background-image: none;
       color: #fefefe; }
@@ -2644,16 +2649,17 @@ GraniteWidgetsWelcome {
         background-color: transparent;
         background-image: none;
         color: rgba(254, 254, 254, 0.5);
-        box-shadow: inset 0 -2px 0 0 rgba(254, 254, 254, 0.5); }
+        box-shadow: inset 0 -2px 0 0 #119ebe; }
       .titlebar:not(headerbar) .button:active:focus, .titlebar:not(headerbar) .button:active:hover, .titlebar:not(headerbar) .button:checked:focus, .titlebar:not(headerbar) .button:checked:hover,
       .header-bar .button:active:focus,
       .header-bar .button:active:hover,
       .header-bar .button:checked:focus,
       .header-bar .button:checked:hover {
+        border-radius: 0px;
         background-image: none;
         background-color: rgba(0, 0, 0, 0.15);
         color: white;
-        box-shadow: inset 0 -2px 0 0 #fefefe; }
+        box-shadow: inset 0 -2px 0 0 #13b1d5; }
     .titlebar:not(headerbar) .button:insensitive, .titlebar:not(headerbar) .button:insensitive:backdrop,
     .header-bar .button:insensitive,
     .header-bar .button:insensitive:backdrop {
