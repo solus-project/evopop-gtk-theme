@@ -803,9 +803,9 @@ style "default" {
       border   = {  3,3,3,3 }
       stretch  = TRUE
       gap_side = LEFT
-    }  
+    }
 
-    # Up 
+    # Up
 
     image {
       function = EXTENSION
@@ -1492,8 +1492,10 @@ style "default" {
 style "menubar" {
 
   # Needed to fix Firefox's menubar text
-  bg[SELECTED] = @selected_fg_color
-  fg[SELECTED] = shade(0.9, @selected_bg_color)
+  bg[NORMAL]      = @dark_bg_color
+  text[NORMAL]      = @dark_fg_color
+  bg[SELECTED]    = @dark_bg_color
+  fg[SELECTED]    = shade(0.9, @dark_fg_color)
 
 }
 
@@ -1502,7 +1504,8 @@ style "menubar_item" {
   xthickness = 3
   ythickness = 4
 
-  fg[PRELIGHT] = shade(0.9, @selected_bg_color)
+  fg[NORMAL]      = @dark_fg_color
+  fg[PRELIGHT]    = @dark_fg_color
 
   engine "pixmap" {
     image {
