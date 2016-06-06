@@ -5390,11 +5390,9 @@ LibraryWindow .the-button-in-the-combobox {
 * Unity *
 *********/
 /* Unity window border color */
-/* Backdrop Unity window border color */
 /* Unity window text color */
 /* Backdrop Unity window text color */
 /* Unity panel color #454D50 */
-/* Backdrop Unity panel color */
 UnityDecoration {
   /* Border properties (top, right, bottom, left) */
   -UnityDecoration-extents: 28px 1px 1px 1px;
@@ -5426,74 +5424,70 @@ UnityDecoration {
   /* Size property, space of the title that can be faded */
   -UnityDecoration-title-alignment: 0.0;
   /* Float from 0.0 to 1.0, to align the title */
-  background-color: #546e7a;
-  color: #dbdee0; }
+  background-color: #31363D;
+  color: #fefefe; }
   UnityDecoration .top {
     padding: 0 5px 0 5px;
     border-radius: 4px 4px 0px 0px;
     box-shadow: none;
-    border: 1px solid #546e7a;
+    border: 1px solid #31363D;
     border-bottom-width: 0;
-    background-color: #546e7a;
-    color: #dbdee0;
+    background-color: #31363D;
+    color: #fefefe;
     border-top: 1px solid rgba(255, 255, 255, 0.1); }
     UnityDecoration .top:backdrop {
       border-bottom-width: 0;
-      background-color: #3f535c;
-      color: #c0c5c8;
+      color: #e5e5e5;
       border-top: 1px solid rgba(255, 255, 255, 0.1); }
     UnityDecoration .top .menuitem {
-      color: #dbdee0; }
+      color: #fefefe; }
       UnityDecoration .top .menuitem:backdrop {
-        background-color: #3f535c;
-        color: #c0c5c8; }
+        color: #e5e5e5; }
 
 UnityDecoration.left,
 UnityDecoration.right {
   background-repeat: repeat-x;
-  background-color: #536c78;
+  background-color: #30343b;
   background-size: 1px 120px;
   background-clip: border-box;
-  background-image: linear-gradient(to bottom, #546e7a, #536c78); }
+  background-image: linear-gradient(to bottom, #31363D, #30343b); }
 
 UnityDecoration.bottom {
   background-size: 1px;
   background-repeat: repeat-x;
-  background-color: #536c78; }
+  background-color: #30343b; }
 
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
   background-size: 1px;
-  background-repeat: repeat-x;
-  background-color: #3f535c; }
+  background-repeat: repeat-x; }
 
 /**************
 * Unity Panel *
 ***************/
 UnityPanelWidget,
 .unity-panel {
-  background-color: #2a383e;
-  color: #dbdee0; }
+  background-color: #1a1d21;
+  color: #fefefe; }
 
 UnityPanelWidget:backdrop,
 .unity-panel:backdrop {
-  background-color: #161c1f;
-  color: #c0c5c8; }
+  color: #e5e5e5; }
 
 .unity-panel.menuitem,
 .unity-panel .menuitem {
   border-width: 0 1px;
-  color: #dbdee0; }
+  color: #fefefe; }
 
 .unity-panel.menubar,
 .unity-panel .menubar {
-  color: #dbdee0; }
+  color: #fefefe; }
 
 .unity-panel.menu.menubar,
 .unity-panel .menu .menubar {
-  background-color: #2a383e;
-  color: #dbdee0; }
+  background-color: #1a1d21;
+  color: #fefefe; }
 
 .unity-panel.menubar:backdrop,
 .unity-panel .menubar *:backdrop {
@@ -5506,14 +5500,14 @@ UnityPanelWidget:backdrop,
   border-style: solid;
   border: none;
   background: none;
-  color: #dbdee0;
+  color: #fefefe;
   box-shadow: none; }
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem:hover {
   border-radius: 0;
-  background-color: #526b77;
-  color: #dbdee0;
+  background-color: #2f333a;
+  color: #fefefe;
   box-shadow: none; }
 
 .unity-panel.menubar .menuitem *:hover {

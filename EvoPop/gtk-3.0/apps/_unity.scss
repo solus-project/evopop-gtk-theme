@@ -2,12 +2,10 @@
 * Unity *
 *********/
 
-$unity_color: #546e7a; /* Unity window border color */
-$backdrop_unity_color: darken($unity_color,10%); /* Backdrop Unity window border color */
-$unity_text_color: #dbdee0; /* Unity window text color */
+$unity_color: #31363D; /* Unity window border color */
+$unity_text_color: #fefefe; /* Unity window text color */
 $backdrop_unity_text_color: darken($unity_text_color,10%); /* Backdrop Unity window text color */
-$unity_panel_color: darken($unity_color, 20%); /* Unity panel color #454D50 */
-$backdrop_unity_panel_color: darken($unity_panel_color, 10%); /* Backdrop Unity panel color */
+$unity_panel_color: darken($unity_color, 10%); /* Unity panel color #454D50 */
 
 UnityDecoration {
 
@@ -46,7 +44,6 @@ UnityDecoration {
 
     &:backdrop {
       border-bottom-width: 0;
-      background-color: $backdrop_unity_color;
       color: $backdrop_unity_text_color;
       border-top: 1px solid rgba(255,255,255,0.1);
     }
@@ -55,7 +52,6 @@ UnityDecoration {
       color: $unity_text_color;
 
       &:backdrop {
-        background-color: $backdrop_unity_color;
         color: $backdrop_unity_text_color;
       }
     }
@@ -69,7 +65,7 @@ UnityDecoration.right {
   background-color: darken($unity_color, 0.6);
   background-size: 1px 120px;
   background-clip: border-box;
-  background-image: linear-gradient(to bottom, 
+  background-image: linear-gradient(to bottom,
                                     $unity_color,
                                     darken($unity_color, 0.6)
                                     );
@@ -86,7 +82,6 @@ UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
   background-size: 1px;
   background-repeat: repeat-x;
-  background-color: $backdrop_unity_color;
 }
 
 
@@ -103,7 +98,6 @@ color: $unity_text_color;
 
 UnityPanelWidget:backdrop,
 .unity-panel:backdrop {
-  background-color: $backdrop_unity_panel_color;
   color: $backdrop_unity_text_color;
 }
 
