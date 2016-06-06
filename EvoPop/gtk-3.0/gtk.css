@@ -380,7 +380,7 @@ treeview.view:selected {
     .button:backdrop.flat:checked,
     .button:backdrop:active,
     .button:backdrop:checked {
-      border-color: #119ebe;
+      border-color: #0f8aa6;
       background-image: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       .button:backdrop.flat:active GtkLabel,
@@ -2489,7 +2489,7 @@ GraniteWidgetsWelcome {
       border-radius: 0; }
     .default-decoration.titlebar:backdrop:not(headerbar),
     .header-bar.default-decoration:backdrop {
-      background-color: #26292f;
+      background-color: #31363D;
       color: rgba(254, 254, 254, 0.5); }
   .titlebar:not(headerbar) .entry,
   .header-bar .entry {
@@ -2811,7 +2811,7 @@ window.csd > .titlebar:not(headerbar) {
   border-color: transparent;
   box-shadow: none; }
   window.csd > .titlebar:not(headerbar):backdrop {
-    background-color: #26292f; }
+    background-color: #31363D; }
 
 /**************
  * GtkInfoBar *
@@ -3052,7 +3052,7 @@ GtkLevelBar.vertical {
   background-color: #31363D;
   color: #fefefe; }
   .menubar:backdrop {
-    background-color: #26292f; }
+    background-color: #31363D; }
   .menubar > .menuitem {
     padding: 4px 8px; }
     .menubar > .menuitem:hover {
@@ -3531,8 +3531,8 @@ GtkProgressBar .progressbar,
     .progressbar .progressbar:active:backdrop:insensitive, GtkProgressBar:backdrop .progressbar:active:insensitive,
     .progressbar:backdrop .progressbar:active:insensitive, GtkProgressBar:backdrop progress:active:insensitive,
     .progressbar:backdrop progress:active:insensitive, .scale .highlight:active:backdrop:insensitive {
-      background-color: transparent;
-      border-color: transparent; }
+      background-color: rgba(0, 0, 0, 0.05);
+      border-color: #adb4be; }
   .list-row:selected GtkProgressBar .progressbar:insensitive, GtkProgressBar .list-row:selected .progressbar:insensitive,
   .list-row:selected .progressbar .progressbar:insensitive,
   .progressbar .list-row:selected .progressbar:insensitive, .list-row:selected .scale .highlight:insensitive, .scale .list-row:selected .highlight:insensitive, .list-row:selected GtkProgressBar .progressbar, GtkProgressBar .list-row:selected .progressbar,
@@ -4116,7 +4116,7 @@ GtkSwitch {
     background-color: #13b1d5;
     box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.1); }
     GtkSwitch:active:backdrop, GtkSwitch:active:insensitive, GtkSwitch:checked:backdrop, GtkSwitch:checked:insensitive {
-      background-color: #46cfee; }
+      background-color: #2fc9ec; }
   GtkSwitch .slider {
     border: none;
     padding: 2px;
@@ -4133,7 +4133,7 @@ GtkSwitch {
   GtkSwitch .trough:active, GtkSwitch .trough:checked {
     background-color: #13b1d5; }
     GtkSwitch .trough:active:backdrop, GtkSwitch .trough:checked:backdrop {
-      background-color: #17c3ea; }
+      background-color: #13b1d5; }
 
 /************
  * Toolbars *
@@ -4144,7 +4144,7 @@ GtkSwitch {
   background-color: #31363D;
   color: #fefefe; }
   .toolbar:backdrop {
-    background-color: #26292f;
+    background-color: #31363D;
     color: rgba(254, 254, 254, 0.5); }
 
 .osd .toolbar {
@@ -5566,7 +5566,7 @@ ConversationListView {
     background-color: #13b1d5;
     color: #fefefe; }
     ConversationListView .view:active:backdrop, ConversationListView GtkIconView:active:backdrop, ConversationListView .view:selected:backdrop, ConversationListView GtkIconView:selected:backdrop {
-      background-color: #17c3ea;
+      background-color: #13b1d5;
       color: rgba(254, 254, 254, 0.5); }
   ConversationListView .view .cell, ConversationListView GtkIconView .cell {
     border: solid rgba(0, 0, 0, 0.2);

@@ -59,8 +59,8 @@
     border-color: lighten($selected_bg_color, 10%);
     background-color: lighten($selected_bg_color, 10%);
     &:insensitive {
-      background-color: transparent;
-      border-color: transparent;
+      background-color: transparentize(black, 0.95);
+      border-color: $borders_color;
     }
   }
 
