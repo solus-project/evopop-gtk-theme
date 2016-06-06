@@ -11,7 +11,7 @@ EvoPop is distributed under the terms the GNU General Public License (GNU GPL v.
 
 ###Getting EvoPop
 
-You can download the EvoPop [here](https://github.com/poltertec/evopop-gtk-theme).
+You can download the EvoPop [here](https://github.com/solus-cold-storage/evopop-gtk-theme).
 
 ###Building EvoPop
 
@@ -28,5 +28,11 @@ This procedure requires ```autotools``` on your system.
 Alternatively you may install EvoPop with the provided installation script:
 
     ./install-gtk-theme.sh
+
+###Installing EvoPop
+
+For those of you who run Geary, there is a common problem where it uses the active font color for regular buttons.
+This bash file makes a decent workaround (which is also fine to use for other themes)
+    ./install-geary-fix.sh
 
 -----------
