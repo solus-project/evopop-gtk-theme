@@ -23,9 +23,9 @@
 # this program; if not, see <https://www.gnu.org/licenses/lgpl-3.0.txt>
 
 clear
-echo '#-----------------------------------------#'
-echo '#     EvoPop GTK Theme Install Script     #'
-echo '#-----------------------------------------#'
+echo '#----------------------------------------#'
+echo '#     Geary Theme Fix Install Script     #'
+echo '#----------------------------------------#'
 
 
 show_question() {
@@ -40,30 +40,21 @@ show_error() {
 echo -e "\033[1;31m$@\033[0m"
 }
 
-function continue {
-echo
-show_question '\tDo you want to continue? (Y)es, (N)o : '
-echo
-read INPUT
-case $INPUT in
-	[Yy]* ) main;;
-    [Nn]* ) exit 99;;
-    * ) echo; echo "Sorry, try again."; continue;;
-esac
-}
-
 function main {
 if [ "$UID" -eq "$ROOT_UID" ]; then
 	if [ -d /usr/share/geary ]; then
 		echo
-		show_question '\tFound an existing installation. Replace it? (Y)es, (N)o : '
+		show_question '\tThis will replace the original Geary theming. \n\tDo you wish to Continue? (Y)es, (N)o : '
 		echo
 		read INPUT
 		case $INPUT in
 			[Yy]* ) rm -Rf /usr/share/geary/theming/message-viewer.css;;
-			[Nn]* );;
+			[Nn]* ) end;;
 		    * ) clear; show_error '\tSorry, try again.'; main;;
 		esac
+	else
+		echo "Geary is not installed on this system"
+		end
 	fi
 	echo "Installing..."
 	cp -R ./geary/theming/message-viewer.css /usr/share/geary/theming/
@@ -83,9 +74,9 @@ ROOT_UID=0
 if [ "$UID" -ne "$ROOT_UID" ]; then
 	echo
 	echo  "Please run this script as root."
-	continue
+	end
 else
 	echo
 	echo "This will be available to all users."
-	continue
+	main
 fi
