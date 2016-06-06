@@ -1493,7 +1493,8 @@ style "menubar" {
 
   # Needed to fix Firefox's menubar text
   bg[NORMAL]      = @dark_bg_color
-  text[NORMAL]      = @dark_fg_color
+  text[NORMAL]    = @dark_fg_color
+  fg[NORMAL]      = @dark_fg_color
   bg[SELECTED]    = @dark_bg_color
   fg[SELECTED]    = shade(0.9, @dark_fg_color)
 
@@ -1506,6 +1507,7 @@ style "menubar_item" {
 
   fg[NORMAL]      = @dark_fg_color
   fg[PRELIGHT]    = @dark_fg_color
+  text[NORMAL]    = @dark_fg_color
 
   engine "pixmap" {
     image {
