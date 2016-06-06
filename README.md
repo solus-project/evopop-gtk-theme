@@ -29,9 +29,9 @@ Alternatively you may install EvoPop with the provided installation script:
 
     ./install-gtk-theme.sh
 
-###Installing EvoPop
+###Geary Fix
 
-For those of you who run Geary, there is a common problem where it uses the active font color for regular buttons.
+For those of you who run Geary, there is a common problem where it uses the active font color for regular buttons. Which makes them unreadable.
 This bash file makes a decent workaround (which is also fine to use for other themes)
     ./install-geary-fix.sh
 
