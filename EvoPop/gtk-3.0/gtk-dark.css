@@ -3381,6 +3381,7 @@ GtkAssistant {
 .popover .menuitem {
   padding: 8px;
   text-shadow: none;
+  border: none;
   color: #fefefe; }
   .popover .menuitem:hover {
     color: #fefefe;
