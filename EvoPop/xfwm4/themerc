@@ -1,0 +1,14 @@
+# Author: FabianOvrWrt <fabianovrwrt@gmail.com>
+# Name: Evopop for xfwm4
+# License: GPL-3.0+
+
+button_offset=8
+button_spacing=8
+show_app_icon=false
+full_width_title=true
+maximized_offset=8
+title_horizontal_offset=8
+title_shadow_active=false
+title_shadow_inactive=false
+title_shadow_active=false
+title_shadow_inactive=false
