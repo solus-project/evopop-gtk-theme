@@ -1,0 +1,257 @@
+/***************
+ * font-viewer *
+ ***************/
+SushiFontWidget {
+    padding: 6px 12px;
+}
+
+/**********
+ * Sudoku *
+ **********/
+SudokuView SudokuCellView {
+    border: inherit;
+    background-color: inherit;
+}
+
+SudokuView SudokuCellView:backdrop {
+    border: inherit;
+    background-color: inherit;
+}
+
+SudokuView {
+    border: none;
+}
+
+/*****************
+ * Character Map *
+ *****************/
+GucharmapChartable {
+    background-color: $base_color;
+}
+
+GucharmapChartable:active,
+GucharmapChartable:focus,
+GucharmapChartable:selected {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+}
+
+
+/********
+ * Misc *
+ *******/
+
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    -EogScrollView-shadow-type: none;
+}
+
+/************
+ * Nautilus *
+ ************/
+NautilusWindow {
+  .sidebar,.sidebar .view {
+    background-color: transparent;
+    background-image: none;
+
+    &:backdrop {
+      background-color: transparent;
+      background-image: none;
+    }
+
+    .list-row {
+      .button{
+        border: none;
+        background-color: transparentize(darken($base_color,3%),0.05);
+        &:active {
+          background-color: transparentize($selected_bg_color,0.25);
+        }
+      }
+
+      &:selected {
+        background-color: transparentize($selected_bg_color,0.25);
+        &:hover {
+          background-color: transparentize($selected_bg_color,0.1);
+        }
+      }
+
+      &:hover {
+        background-color: transparentize($base_color,0.5);
+        &:active {
+          background-color: transparentize($selected_bg_color,0.1);
+        }
+      }
+    }
+  }
+
+  &.background {
+    background-color: transparentize(darken($base_color,3%),0.05);
+    &:backdrop {
+      background-color: transparentize(darken($base_color,3%),0.05);
+    }
+  }
+  .pane-separator.horizontal {
+    background-image: none;
+    border-right: 1px solid $base_color;
+  }
+}
+
+NautilusCanvasView {
+    border: none;
+
+    &:active,
+    &:focus,
+    &:backdrop {
+      border: none;
+    }
+}
+
+.nautilus-circular-button {
+  border-radius: 20px;
+  outline-radius: 20px;
+}
+
+.disk-space-display {
+  border: 2px solid;
+
+  .unknown {
+    background-color: #888a85;
+    border-color: darken(#888a85, 20%);
+  }
+
+  .used {
+    background-color: #9FB0B9;
+    border-color: darken(#9FB0B9, 20%);
+  }
+
+  .free {
+    background-color: #D8D8D8;
+    border-color: darken(#D8D8D8, 20%);
+  }
+}
+
+
+.nautilus-desktop {
+
+  color: $fg_color;
+
+  .nautilus-canvas-item {
+    border-radius: 5px;
+    color: $selected_fg_color;
+    text-shadow: 1px 1px transparentize(black, 0.4);
+
+    &:active {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:prelight {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:selected {
+      color: $selected_fg_color;
+      text-shadow: none;
+    }
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+
+  .nautilus-list {
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+}
+
+/**************
+ * Calculator *
+ **************/
+
+MathWindow {
+
+  background-color: $base_color;
+  border-radius: 0 0 4px 4px;
+
+  MathButtons {
+    GtkComboBox,
+    .button {
+      background-color: transparent;
+      background-image: none;
+      box-shadow:none;
+      border: none;
+      text-shadow: none;
+      font: bold;
+
+      &:hover {
+        background-image: none;
+        background-color:$base_color;
+      }
+
+      &.text-button.suggested-action {
+        background-image: none;
+        box-shadow:none;
+        text-shadow: none;
+        background-color: $cyan;
+        color: $base_color;
+
+        &:backdrop {
+          background-color: darken($cyan,10%);
+          color: transparentize($base_color, 0.5);
+        }
+      }
+    }
+  }
+
+  MathDisplay {
+    padding: 4px;
+    background-color:$base_color;
+    border: 1px solid $borders_color;
+  }
+}
+
+/************
+ * Epiphany *
+ ************/
+
+EphyWindow {
+  .titlebar,
+  .header-bar {
+
+    .incognito-mode {
+
+      .button {
+        background-image:none;
+      }
+    }
+  }
+}
+
+/*********
+ * Gedit *
+ *********/
+
+GeditWindow {
+
+  > .entry {
+    @extend %entry;
+  }
+}
+
+/*******************
+ * System Settings *
+ ******************/
+
+CcShellNavBar {
+  padding:0px;
+}

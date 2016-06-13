@@ -1,0 +1,54 @@
+/**************
+ * ComboBoxes *
+ **************/
+
+combobox {
+  arrow {
+    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+    min-height: 16px;
+    min-width: 16px;
+  }
+
+  &:drop(active) { // FIXME: untested
+    box-shadow: none;
+
+    button.combo { @extend %button_basic:drop(active); }
+  }
+}
+
+/******************
+ * Combobox Entry *
+ ******************/
+
+.combobox-entry {
+
+  // Button
+  button {
+    box-shadow: none;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      border-right-width: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+    }
+  }
+
+  // Entry
+  entry {
+    box-shadow: none;
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+      border-right-width: 0;
+    }
+
+    &:last-child {
+      border-radius: 0 4px 4px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+  }
+}
