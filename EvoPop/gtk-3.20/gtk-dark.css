@@ -5295,315 +5295,217 @@ decoration {
  **********************/
 /*********
 * Budgie *
-**********/
-.budgie-panel .pinned .launcher:hover,
-.budgie-panel .unpinned .launcher:hover {
-  background-color: rgba(0, 0, 0, 0.1); }
-.top .budgie-panel .unpinned .launcher,
-.top .budgie-panel .pinned .launcher.running {
-  border-top: 2px solid rgba(254, 254, 254, 0.2); }
-.top .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .top .launcher:hover,
-.top .budgie-panel .unpinned .launcher:hover,
-.budgie-panel .unpinned .top .launcher:hover {
-  border-top: 3px solid rgba(254, 254, 254, 0.5); }
-.top .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .top .launcher:active,
-.top .budgie-panel .unpinned .launcher:active,
-.budgie-panel .unpinned .top .launcher:active, .top .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .top .launcher:checked,
-.top .budgie-panel .unpinned .launcher:checked,
-.budgie-panel .unpinned .top .launcher:checked {
-  border-top: 3px solid #fefefe; }
-.bottom .budgie-panel .unpinned .launcher,
-.bottom .budgie-panel .pinned .launcher.running {
-  border-bottom: 2px solid rgba(254, 254, 254, 0.2); }
-.bottom .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .bottom .launcher:hover,
-.bottom .budgie-panel .unpinned .launcher:hover,
-.budgie-panel .unpinned .bottom .launcher:hover {
-  border-bottom: 3px solid rgba(254, 254, 254, 0.5); }
-.bottom .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .bottom .launcher:active,
-.bottom .budgie-panel .unpinned .launcher:active,
-.budgie-panel .unpinned .bottom .launcher:active, .bottom .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .bottom .launcher:checked,
-.bottom .budgie-panel .unpinned .launcher:checked,
-.budgie-panel .unpinned .bottom .launcher:checked {
-  border-bottom: 3px solid #fefefe; }
-.left .budgie-panel .unpinned .launcher,
-.left .budgie-panel .pinned .launcher.running {
-  border-left: 2px solid rgba(254, 254, 254, 0.2); }
-.left .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .left .launcher:hover,
-.left .budgie-panel .unpinned .launcher:hover,
-.budgie-panel .unpinned .left .launcher:hover {
-  border-left: 3px solid rgba(254, 254, 254, 0.5); }
-.left .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .left .launcher:active,
-.left .budgie-panel .unpinned .launcher:active,
-.budgie-panel .unpinned .left .launcher:active, .left .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .left .launcher:checked,
-.left .budgie-panel .unpinned .launcher:checked,
-.budgie-panel .unpinned .left .launcher:checked {
-  border-left: 3px solid #fefefe; }
-.right .budgie-panel .unpinned .launcher,
-.right .budgie-panel .pinned .launcher.running {
-  border-right: 2px solid rgba(254, 254, 254, 0.2); }
-.right .budgie-panel .pinned .launcher:hover, .budgie-panel .pinned .right .launcher:hover,
-.right .budgie-panel .unpinned .launcher:hover,
-.budgie-panel .unpinned .right .launcher:hover {
-  border-right: 3px solid rgba(254, 254, 254, 0.5); }
-.right .budgie-panel .pinned .launcher:active, .budgie-panel .pinned .right .launcher:active,
-.right .budgie-panel .unpinned .launcher:active,
-.budgie-panel .unpinned .right .launcher:active, .right .budgie-panel .pinned .launcher:checked, .budgie-panel .pinned .right .launcher:checked,
-.right .budgie-panel .unpinned .launcher:checked,
-.budgie-panel .unpinned .right .launcher:checked {
-  border-right: 3px solid #fefefe; }
-
-.top .budgie-panel {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-
-.top .raven-frame {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.top .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent, transparent); }
-
-.bottom .budgie-panel {
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-
-.bottom .raven-frame {
-  border-top: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.bottom .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent, transparent); }
-
-.left .budgie-panel {
-  border-right: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-
-.left .raven-frame {
-  border-right: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.left .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent, transparent); }
-
-.right .budgie-panel {
-  border-left: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-
-.right .raven-frame {
-  border-left: 1px solid rgba(0, 0, 0, 0.8);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3); }
-
-.right .shadow-block {
-  background-color: transparent;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, transparent); }
-
+*********/
+@keyframes underline {
+  from {
+    box-shadow: none; }
+  to {
+    box-shadow: inset 0 -3px 0 0 #119ebe; } }
 .budgie-container {
-  background-image: none;
   background-color: transparent; }
-  .budgie-container:backdrop {
-    background-image: none;
-    background-color: transparent; }
 
-.budgie-menu searchentry.entry:not(:selected) {
+.budgie-menu entry.search {
   border: none;
   box-shadow: none;
   background: none;
-  font-size: 100%; }
-  .budgie-menu searchentry.entry:not(:selected) image {
+  font-size: 120%; }
+  .budgie-menu entry.search image {
     padding-left: 0px;
     padding-right: 6px; }
-.budgie-menu .list-row.activatable:selected,
-.budgie-menu .list-row.activatable:selected .button {
+.budgie-menu row.activatable:selected,
+.budgie-menu row.activatable:selected button {
   color: inherit; }
-.budgie-menu .list button, .budgie-menu button {
-  border-color: transparent; }
 
 .budgie-panel {
   color: #fefefe;
-  background-color: #31363D; }
-  .budgie-panel:backdrop {
-    color: #fefefe;
-    background-color: #31363D; }
-  .budgie-panel BudgieMenuApplet {
-    font: bold; }
-    .budgie-panel BudgieMenuApplet label {
-      color: #fefefe;
-      icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
-  .budgie-panel ClockApplet {
-    font: monospace bold;
-    font-size: 90%; }
-    .budgie-panel ClockApplet label {
-      color: #fefefe;
-      icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
-      text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
-  .budgie-panel WnckTasklist button,
-  .budgie-panel WnckTasklist button:backdrop {
-    border-radius: 0; }
-  .budgie-panel .launcher {
-    transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    padding-left: 2px;
-    padding-right: 2px;
-    border-color: rgba(49, 54, 61, 0); }
-    .budgie-panel .launcher:hover {
-      -gtk-image-effect: highlight; }
-  .budgie-panel .pinned .launcher,
-  .budgie-panel .pinned .launcher.running,
-  .budgie-panel .unpinned .launcher,
-  .budgie-panel .unpinned .launcher.running {
-    padding: 2px 6px; }
+  background-color: rgba(49, 54, 61, 0.9); }
+  .budgie-panel .alert {
+    color: #c72240; }
+
+.budgie-panel #tasklist-button,
+.budgie-panel #tasklist-button:backdrop {
+  border-radius: 0;
+  outline-color: transparent; }
+  .budgie-panel #tasklist-button:drop(active),
+  .budgie-panel #tasklist-button:backdrop:drop(active) {
+    box-shadow: inset 0 0 0 1px #13b1d5; }
+
+.budgie-panel button.flat.launcher {
+  outline-color: transparent;
+  transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: 1px 2px;
+  border-color: rgba(49, 54, 61, 0);
+  border-radius: 0; }
+  .budgie-panel button.flat.launcher:hover {
+    -gtk-icon-effect: highlight; }
+
+.top .budgie-panel {
+  border-bottom: 1px solid rgba(33, 36, 41, 0.82); }
+
+.top .raven-frame {
+  padding: 0;
+  margin: 0;
+  background: none; }
+  .top .raven-frame border {
+    border: none;
+    border-bottom: 1px solid rgba(33, 36, 41, 0.82); }
+
+.top .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); }
 
 .bottom .budgie-panel {
-  border: none;
-  box-shadow: none;
+  border-top: 1px solid rgba(33, 36, 41, 0.82); }
+
+.bottom .raven-frame {
+  padding: 0;
+  margin: 0;
   background: none; }
+  .bottom .raven-frame border {
+    border: none;
+    border-top: 1px solid rgba(33, 36, 41, 0.82); }
+
+.bottom .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent); }
+
+.left .budgie-panel {
+  border-right: 1px solid rgba(33, 36, 41, 0.82); }
+
+.left .raven-frame {
+  padding: 0;
+  margin: 0;
+  background: none; }
+  .left .raven-frame border {
+    border: none;
+    border-right: 1px solid rgba(33, 36, 41, 0.82); }
+
+.left .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent); }
+
+.right .budgie-panel {
+  border-left: 1px solid rgba(33, 36, 41, 0.82); }
+
+.right .raven-frame {
+  padding: 0;
+  margin: 0;
+  background: none; }
+  .right .raven-frame border {
+    border: none;
+    border-left: 1px solid rgba(33, 36, 41, 0.82); }
+
+.right .shadow-block {
+  background-color: transparent;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent); }
 
 .raven {
   color: #fefefe;
-  background-color: rgba(49, 54, 61, 0.9);
+  background-color: rgba(60, 67, 75, 0.9);
   transition: 170ms ease-out; }
   .raven .raven-header {
-    padding: 4px;
-    font: bold;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-    icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
-    background-color: rgba(49, 54, 61, 0.3);
+    min-height: 32px;
+    max-width: 32px;
     color: #fefefe;
-    border: solid #1a1d21;
-    border-width: 1px 0 1px 0;
-    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); }
+    border: solid rgba(42, 46, 53, 0.7);
+    border-width: 1px 0;
+    background-color: rgba(54, 59, 67, 0.75); }
+    .raven .raven-header * {
+      padding-top: 0;
+      padding-bottom: 0; }
     .raven .raven-header.top {
       border-top-style: none; }
     .raven .raven-header.bottom {
       border-bottom-style: none; }
-    .raven .raven-header .image-button {
+    .raven .raven-header button {
       background-color: transparent;
-      box-shadow: none; }
-      .raven .raven-header .image-button:hover {
-        color: #13b1d5; }
-      .raven .raven-header .image-button:active, .raven .raven-header .image-button:checked {
-        color: #119ebe; }
-    .raven .raven-header switch {
-      -GtkSwitch-slider-width: 16px;
-      -GtkSwitch-slider-height: 16px;
-      border-radius: 12px; }
-      .raven .raven-header switch .slider {
-        border-radius: 8px; }
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      margin-top: -4px;
+      margin-bottom: -4px;
+      min-height: 32px; }
+      .raven .raven-header button:hover {
+        border-radius: 0;
+        background-color: transparent;
+        animation: underline 1s step-end;
+        box-shadow: inset 0 -3px 0 0 #119ebe; }
+      .raven .raven-header button:active, .raven .raven-header button:checked {
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: inset 0 -3px 0 0 #119ebe; }
+      .raven .raven-header button:disabled {
+        color: #989a9e; }
   .raven .raven-background {
-    background-color: rgba(49, 54, 61, 0.5);
-    border-bottom: 0px solid #1a1d21;
-    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3); }
+    color: #fefefe;
+    background-color: rgba(54, 59, 67, 0.6);
+    border-bottom: 1px solid rgba(42, 46, 53, 0.7); }
+    .raven .raven-background .linked button.text-button {
+      background-color: transparent;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      margin-top: -4px;
+      margin-bottom: -4px;
+      min-height: 32px; }
+      .raven .raven-background .linked button.text-button:hover {
+        border-radius: 0;
+        background-color: transparent;
+        animation: underline 1s step-end;
+        box-shadow: inset 0 -3px 0 0 #119ebe; }
+      .raven .raven-background .linked button.text-button:active, .raven .raven-background .linked button.text-button:checked {
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: inset 0 -3px 0 0 #119ebe; }
     .raven .raven-background.middle {
       border-bottom-style: none; }
-  .raven .raven-calendar {
-    background-color: rgba(49, 54, 61, 0.5);
-    border: none;
-    padding: 2px;
-    border-bottom: 1px solid #1a1d21; }
-    .raven .raven-calendar .button {
-      box-shadow: none; }
-  .raven .powerstrip {
-    background-color: transparent;
-    background-image: none;
-    border: none;
-    box-shadow: none; }
-  .raven .powerstrip button.image-button {
-    border-radius: 50%;
-    padding: 12px;
-    color: #fefefe;
-    background: #7b7bbd;
-    border: none;
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
-    font-size: 100%; }
-    .raven .powerstrip button.image-button:hover {
-      transition: 170ms ease all;
-      background: #8c8cc6;
-      color: #fefefe; }
-    .raven .powerstrip button.image-button:active {
-      transition: 170ms ease all;
-      background: #9d9dce;
-      color: #fefefe; }
-    .raven .powerstrip button.image-button:first-child {
-      background: #119ebe; }
-      .raven .powerstrip button.image-button:first-child:hover {
-        transition: 170ms ease all;
-        background: #13b1d5; }
-      .raven .powerstrip button.image-button:first-child:active {
-        transition: 170ms ease all;
-        background: #17c3ea; }
-    .raven .powerstrip button.image-button:last-child {
-      background: #c72240; }
-      .raven .powerstrip button.image-button:last-child:hover {
-        transition: 170ms ease all;
-        background: #da2849; }
-      .raven .powerstrip button.image-button:last-child:active {
-        transition: 170ms ease all;
-        background: #de3e5b; }
+  .raven .powerstrip button {
+    padding: 10px; }
   .raven .option-subtitle {
     font-size: smaller; }
 
 .raven-mpris {
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
   color: #fefefe;
-  background-color: rgba(49, 54, 61, 0.8);
-  border: solid rgba(0, 0, 0, 0.2);
-  border-width: 1px 0;
-  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 0 rgba(255, 255, 255, 0.05), 0 1px 1px 0 rgba(0, 0, 0, 0.1); }
+  background-color: rgba(33, 36, 41, 0.9);
+  border: solid rgba(24, 26, 30, 0.95);
+  border-width: 1px 0; }
   .raven-mpris button.image-button {
     padding: 8px; }
 
 .budgie-notification-window {
-  border-radius: 4px;
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(49, 54, 61, 0.9);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.2); }
+  background: none;
+  border-radius: 1px; }
 
 .budgie-notification.background {
-  border-radius: 4px;
-  padding: 4px; }
+  border-radius: 1px; }
 .budgie-notification .notification-title {
   font-size: 110%;
   color: #fefefe; }
 .budgie-notification .notification-body {
-  border: none;
   color: rgba(254, 254, 254, 0.7); }
 
+.drop-shadow {
+  color: #fefefe;
+  background-color: rgba(49, 54, 61, 0.9);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(33, 36, 41, 0.82);
+  border-radius: 1px; }
+
 .budgie-session-dialog, .budgie-polkit-dialog {
-  border-radius: 4px;
-  border: none;
-  background-color: #31363d;
-  border-top: 1px solid rgba(255, 255, 255, 0.1); }
-  .budgie-session-dialog.background, .background.budgie-polkit-dialog {
-    padding: 12px;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.2); }
-  .budgie-session-dialog button, .budgie-polkit-dialog button {
-    background-image: none;
-    background-color: #31363d;
-    border-left-style: solid;
-    border-right-style: none;
-    border-bottom-style: none;
-    border-top: 1px solid #040404; }
-    .budgie-session-dialog button:hover, .budgie-polkit-dialog button:hover {
-      background-color: #13b1d5; }
-    .budgie-session-dialog button:active, .budgie-polkit-dialog button:active, .budgie-session-dialog button:selected, .budgie-polkit-dialog button:selected {
-      border-radius: 0;
-      background-color: #119ebe; }
-    .budgie-session-dialog button.destructive-action, .budgie-polkit-dialog button.destructive-action {
-      background-color: #9b1b32; }
+  color: #fefefe;
+  background-color: rgba(49, 54, 61, 0.9); }
+  .budgie-session-dialog decoration, .budgie-polkit-dialog decoration {
+    border-radius: 1px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(33, 36, 41, 0.82); }
   .budgie-session-dialog .linked.horizontal > button, .budgie-polkit-dialog .linked.horizontal > button {
+    min-height: 20px;
     border-bottom: none;
     border-radius: 0; }
     .budgie-session-dialog .linked.horizontal > button:first-child, .budgie-polkit-dialog .linked.horizontal > button:first-child {
       border-left: none;
-      border-radius: 0 0 0 4px; }
+      border-radius: 0; }
     .budgie-session-dialog .linked.horizontal > button:last-child, .budgie-polkit-dialog .linked.horizontal > button:last-child {
       border-right: none;
-      border-radius: 0 0 4px 0; }
+      border-radius: 0; }
 
 .budgie-polkit-dialog .message {
   color: rgba(254, 254, 254, 0.7); }
