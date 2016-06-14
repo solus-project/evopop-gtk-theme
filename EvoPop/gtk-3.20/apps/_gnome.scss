@@ -56,13 +56,17 @@ CheeseThumbView /* Cheese */
     background-color: transparent;
     background-image: none;
 
+    image {
+      margin: 3px 8px;
+    }
+
     &:backdrop {
       background-color: transparent;
       background-image: none;
     }
 
     .list-row {
-      button{
+      button {
         border: none;
         background-color: transparentize(darken($base_color,3%),0.05);
         &:active {
@@ -92,6 +96,7 @@ CheeseThumbView /* Cheese */
       background-color: transparentize(darken($base_color,3%),0.05);
     }
   }
+
   .pane-separator.horizontal {
     background-image: none;
     border-right: 1px solid $base_color;

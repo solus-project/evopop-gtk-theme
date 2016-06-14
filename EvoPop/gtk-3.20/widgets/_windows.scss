@@ -9,7 +9,7 @@ decoration {
 
   box-shadow: 0 8px 9px 1px transparent,
               0 8px 6px 1px transparentize(black, 0.5);
-              
+
   margin: 10px;
 
   &:backdrop {
@@ -36,6 +36,6 @@ decoration {
     margin: 4px;
     background-color: $backdrop_bg_color;
     border: 0px solid $backdrop_borders_color;
-    box-shadow: none;
+    box-shadow: inset 0 1px $top_highlight;
   }
 }

@@ -17,7 +17,7 @@ toolbar {
 
   // on OSD
   .osd & { box-shadow:none; background-color: transparent; }
-  
+
   // Buttons
   button {
     background-color: transparent;
@@ -27,7 +27,7 @@ toolbar {
     box-shadow: none;
     -gtk-icon-shadow: none;
     margin: 0;
-    padding: 10px;
+    padding: 7px;
     text-shadow: none;
 
     &.suggested-action,
@@ -43,7 +43,7 @@ toolbar {
       box-shadow: none;
       -gtk-icon-shadow: none;
       margin: 0;
-      padding: 10px;
+      padding: 7px;
       text-shadow: none;
       color: $headerbar_fg_color;
 
@@ -54,7 +54,7 @@ toolbar {
         color: $backdrop_headerbar_fg_color;
       }
 
-      &:hover { 
+      &:hover {
         background-image:none;
         background-color: transparentize(black, 0.85);
         color:lighten($headerbar_fg_color, 10%);
@@ -80,7 +80,7 @@ toolbar {
     }
 
     &:focus,
-    &:hover { 
+    &:hover {
       background-image:none;
       background-color: transparentize(black, 0.85);
       color:lighten($headerbar_fg_color, 10%);
@@ -104,7 +104,7 @@ toolbar {
 
       text-shadow: none;
       -gtk-icon-shadow: none;
-      
+
       box-shadow: inset 0 -2px 0 0 $headerbar_fg_color;
 
       background-color: transparent;
@@ -120,7 +120,7 @@ toolbar {
       }
 
       &:focus,
-      &:hover { 
+      &:hover {
         background-image:none;
         background-color: transparentize(black, 0.85);
         color:lighten($headerbar_fg_color, 10%);
@@ -194,10 +194,10 @@ toolbar {
 
   border: 1px solid $borders_color;
   border-top-width: 0;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 3px 3px;
 
   box-shadow: inset 0 -1px 1px -2px transparentize(black, 0.5);
-  
+
   padding: 0px;
 
   &:backdrop {
@@ -213,8 +213,8 @@ toolbar {
     box-shadow: none;
     -gtk-icon-shadow: none;
     margin: 0;
-    padding: 10px;
-    text-shadow: none; 
+    padding: 7px;
+    text-shadow: none;
 
     &.suggested-action,
     &.text-button,
@@ -229,13 +229,13 @@ toolbar {
       background-color: transparent;
       color: $fg_color;
       border-radius: 0px;
-      padding: 10px;
+      padding: 7px;
     }
 
     &:focus,
     &:active {
       font:bold;
-      color: $fg_color; 
+      color: $fg_color;
       text-shadow: none;
       box-shadow: none;
       background-color: transparentize(black, 0.95);
@@ -265,7 +265,7 @@ toolbar {
       background:none;
       background-color: transparent;
       color: $backdrop_fg_color;
-    }  
+    }
 
     label,
     image {

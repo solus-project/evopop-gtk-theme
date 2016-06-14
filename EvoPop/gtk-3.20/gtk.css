@@ -2526,9 +2526,11 @@ headerbar {
   background-color: #31363D;
   color: #fefefe; }
   .titlebar:backdrop {
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
-  .tiled .titlebar:backdrop, .tiled .titlebar, .maximized .titlebar:backdrop, .maximized .titlebar {
-    border-radius: 0; }
+    box-shadow: inset 0 1px rgba(153, 153, 153, 0.2); }
+  .tiled .titlebar, .maximized .titlebar {
+    box-shadow: none; }
+    .tiled .titlebar:backdrop, .tiled .titlebar, .maximized .titlebar:backdrop, .maximized .titlebar {
+      border-radius: 0; }
   .titlebar button.titlebutton {
     background-image: none;
     background-color: transparent;
@@ -2569,6 +2571,11 @@ headerbar {
 
 .ssd .titlebar {
   border-width: 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
+  .ssd .titlebar:backdrop {
+    box-shadow: inset 0 1px rgba(153, 153, 153, 0.2); }
+
+.ssd.tiled, .ssd .maximized {
   box-shadow: none; }
 
 /**************
@@ -4732,7 +4739,7 @@ toolbar button {
   box-shadow: none;
   -gtk-icon-shadow: none;
   margin: 0;
-  padding: 10px;
+  padding: 7px;
   text-shadow: none; }
   toolbar button.suggested-action, toolbar button.text-button, toolbar button.menu-button, toolbar button.image-button, toolbar button.linked, toolbar button.flat {
     background-color: transparent;
@@ -4742,7 +4749,7 @@ toolbar button {
     box-shadow: none;
     -gtk-icon-shadow: none;
     margin: 0;
-    padding: 10px;
+    padding: 7px;
     text-shadow: none;
     color: #fefefe; }
     toolbar button.suggested-action:backdrop, toolbar button.text-button:backdrop, toolbar button.menu-button:backdrop, toolbar button.image-button:backdrop, toolbar button.linked:backdrop, toolbar button.flat:backdrop {
@@ -4839,7 +4846,7 @@ searchbar,
   color: #31363D;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-top-width: 0;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 3px 3px;
   box-shadow: inset 0 -1px 1px -2px rgba(0, 0, 0, 0.5);
   padding: 0px; }
   searchbar:backdrop,
@@ -4856,7 +4863,7 @@ searchbar,
     box-shadow: none;
     -gtk-icon-shadow: none;
     margin: 0;
-    padding: 10px;
+    padding: 7px;
     text-shadow: none; }
     searchbar button.suggested-action,
     .search-bar button.suggested-action, .location-bar button.suggested-action, searchbar button.text-button,
@@ -4878,7 +4885,7 @@ searchbar,
       background-color: transparent;
       color: #31363D;
       border-radius: 0px;
-      padding: 10px; }
+      padding: 7px; }
     searchbar button:focus,
     .search-bar button:focus, .location-bar button:focus, searchbar button:active,
     .search-bar button:active, .location-bar button:active,
@@ -5321,7 +5328,7 @@ decoration {
     margin: 4px;
     background-color: #e6e8eb;
     border: 0px solid rgba(115, 116, 118, 0.28);
-    box-shadow: none; }
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
 
 /**********************
  * DE-Specific Styles *
@@ -5676,6 +5683,9 @@ CheeseThumbView {
 .nautilus-window .sidebar iconview {
   background-color: transparent;
   background-image: none; }
+  .nautilus-window .sidebar image, .nautilus-window .sidebar .view image, .nautilus-window .sidebar GtkIconView image,
+  .nautilus-window .sidebar iconview image {
+    margin: 3px 8px; }
   .nautilus-window .sidebar:backdrop, .nautilus-window .sidebar .view:backdrop, .nautilus-window .sidebar GtkIconView:backdrop,
   .nautilus-window .sidebar iconview:backdrop {
     background-color: transparent;

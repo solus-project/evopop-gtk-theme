@@ -158,11 +158,14 @@
   color: $headerbar_fg_color;
 
   &:backdrop {
-    box-shadow: inset 0 1px $top_highlight;
+    box-shadow: inset 0 1px darken($top_highlight,40%);
   }
 
   .tiled &,
-  .maximized & { &:backdrop, & { border-radius: 0; }}
+  .maximized & {
+    box-shadow: none;
+    &:backdrop, & { border-radius: 0; }
+  }
 
   & button {
     &.titlebutton {
@@ -219,5 +222,16 @@
 
 .ssd .titlebar {
     border-width: 0;
+    box-shadow: inset 0 1px $top_highlight;
+
+    &:backdrop {
+      box-shadow: inset 0 1px darken($top_highlight,40%);
+    }
+}
+
+.ssd  {
+  &.tiled ,
+  & .maximized {
     box-shadow: none;
+  }
 }
