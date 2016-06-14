@@ -2454,7 +2454,6 @@ headerbar {
         border-radius: 0; }
     headerbar button:hover {
       background-color: transparent;
-      animation: underline 1s step-end;
       box-shadow: inset 0 -3px 0 0 #119ebe; }
     headerbar button:active,
     headerbar button:checked {
@@ -5296,11 +5295,6 @@ decoration {
 /*********
 * Budgie *
 *********/
-@keyframes underline {
-  from {
-    box-shadow: none; }
-  to {
-    box-shadow: inset 0 -3px 0 0 #119ebe; } }
 .budgie-panel .pinned .launcher:hover,
 .budgie-panel .unpinned .launcher:hover {
   background-color: rgba(0, 0, 0, 0.1); }
@@ -5384,6 +5378,16 @@ decoration {
   .budgie-panel:backdrop {
     color: #fefefe;
     background-color: rgba(49, 54, 61, 0.95); }
+  .budgie-panel .end-region {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 3px; }
+    .budgie-panel .end-region separator {
+      background-color: rgba(254, 254, 254, 0.15); }
+  .budgie-panel label {
+    font: bold;
+    color: #fefefe;
+    icon-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px rgba(0, 0, 0, 0.2); }
 
 .budgie-panel #tasklist-button,
 .budgie-panel #tasklist-button:backdrop {
@@ -5503,7 +5507,6 @@ decoration {
       .raven .raven-header button:hover {
         border-radius: 0;
         background-color: transparent;
-        animation: underline 1s step-end;
         box-shadow: inset 0 -3px 0 0 #119ebe; }
       .raven .raven-header button:active, .raven .raven-header button:checked {
         border-radius: 0;
@@ -5526,7 +5529,6 @@ decoration {
       .raven .raven-background .linked button.text-button:hover {
         border-radius: 0;
         background-color: transparent;
-        animation: underline 1s step-end;
         box-shadow: inset 0 -3px 0 0 #119ebe; }
       .raven .raven-background .linked button.text-button:active, .raven .raven-background .linked button.text-button:checked {
         border-radius: 0;
@@ -5534,8 +5536,14 @@ decoration {
         box-shadow: inset 0 -3px 0 0 #119ebe; }
     .raven .raven-background.middle {
       border-bottom-style: none; }
-  .raven .powerstrip button {
+  .raven .powerstrip button.image-button {
     padding: 10px; }
+    .raven .powerstrip button.image-button:hover {
+      box-shadow: inset 0 -3px 0 0 #6a6ab5, inset 0 3px 0 0 #6a6ab5; }
+    .raven .powerstrip button.image-button:first-child:hover {
+      box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe; }
+    .raven .powerstrip button.image-button:last-child:hover {
+      box-shadow: inset 0 -3px 0 0 #b11e39, inset 0 3px 0 0 #b11e39; }
   .raven .option-subtitle {
     font-size: smaller; }
 

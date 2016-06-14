@@ -86,17 +86,15 @@
 
      &:hover {
        background-color: transparent;
-       animation: underline 1s step-end;
-       box-shadow: inset 0 -3px 0 0 darken($selected_bg_color,5%);
+       @include lines(up);
      }
 
      &:active,
      &:checked {
        background-color: transparent;
-       box-shadow: inset 0 -3px 0 0 darken($selected_bg_color,5%);
-
+       @include lines(up);
        &:backdrop {
-         box-shadow: inset 0 -3px 0 0 darken($backdrop_selected_bg_color,5%);
+         @include lines(up);
        }
      }
 
