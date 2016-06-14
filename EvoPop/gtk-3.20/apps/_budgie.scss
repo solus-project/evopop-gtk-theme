@@ -3,7 +3,7 @@
 *********/
 $alert_color: $red;
 
-$panel_bg: transparentize($bg_color, 0.1);
+$panel_bg: transparentize($bg_color, 0.05);
 $panel_border: transparentize(darken($panel_bg, 7%), 0.08);
 $panel_shadow: transparentize(black, 0.7);
 
@@ -21,6 +21,14 @@ $mpris_overlay_bg: darken($raven_bg, 12%);
 $mpris_overlay_fg: $fg_color;
 $mpris_overlay_border: opacify(darken($mpris_overlay_bg, 4%), 0.05);
 
+$roundness: 3px;
+$border_width: 1px;
+$pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
+
+@function gtkalpha($c,$a) {
+    @return unquote("alpha(#{$c},#{$a})");
+}
+
 @keyframes underline {
   from {
     box-shadow: none;
@@ -30,13 +38,38 @@ $mpris_overlay_border: opacify(darken($mpris_overlay_bg, 4%), 0.05);
   }
 }
 
-@function gtkalpha($c,$a) {
-    @return unquote("alpha(#{$c},#{$a})");
-}
+%app_indicators {
 
-$roundness: 3px;
-$border_width: 1px;
-$pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
+  &:hover {
+    background-color: transparentize(black, 0.9);
+  }
+
+  &:active,
+  &:checked {
+    box-shadow: none;
+  }
+
+  @each $pos, $alt_pos in $pos_list {
+    .#{$pos} & {
+
+      @at-root {
+        .#{$pos} .budgie-panel .unpinned .launcher,
+        .#{$pos} .budgie-panel .pinned .launcher.running {
+          border-#{$pos}: 2px solid transparentize($fg_color, 0.8);
+        }
+      }
+
+      &:hover {
+        border-#{$pos}: 3px solid transparentize($selected_bg_color, 0.5);
+      }
+
+      &:active,
+      &:checked {
+        border-#{$pos}: 3px solid $selected_bg_color;
+      }
+    }
+  }
+}
 
 // Used to reset all style properties set by the gtk theme
 
@@ -64,6 +97,11 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     background-color: $panel_bg;
 
     .alert { color: $alert_color; }
+
+    &:backdrop {
+      color: $fg_color;
+      background-color: $panel_bg;
+    }
 }
 
 // Tasklist
@@ -73,16 +111,13 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     border-radius: 0;
     outline-color: transparent;
 
-    @if $variant == 'default' {
-        &:not(:hover):not(:active):not(:checked) { color: gtkalpha(currentColor, 0.5); }
-        background: none;
-        background-clip: padding-box;
-        border: none;
-
-        @extend %underscores;
-    }
+    &:not(:hover):not(:active):not(:checked) { color: gtkalpha(currentColor, 0.5); }
+    background: none;
+    background-clip: padding-box;
+    border: none;
 
     &:drop(active) { box-shadow: inset 0 0 0 1px $selected_bg_color; }
+
 }
 
 // Icon Tasklist
@@ -92,10 +127,17 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         outline-color: transparent;
         transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
         padding: 1px 2px;
-        border-color: transparentize($panel_bg,1); // fixes the transition
         border-radius: 0;
 
         &:hover { -gtk-icon-effect: highlight; }
+    }
+    .pinned,
+    .unpinned {
+      .launcher,
+      .launcher.running {
+        @extend %app_indicators;
+        padding: 2px 6px;
+      }
     }
 }
 
