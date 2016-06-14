@@ -51,7 +51,7 @@ CheeseThumbView /* Cheese */
 /************
  * Nautilus *
  ************/
-NautilusWindow {
+.nautilus-window {
   .sidebar,.sidebar .view {
     background-color: transparent;
     background-image: none;
@@ -62,7 +62,7 @@ NautilusWindow {
     }
 
     .list-row {
-      .button{
+      button{
         border: none;
         background-color: transparentize(darken($base_color,3%),0.05);
         &:active {
@@ -184,8 +184,8 @@ MathWindow {
   border-radius: 0 0 4px 4px;
 
   MathButtons {
-    GtkComboBox,
-    .button {
+    combobox,
+    button {
       background-color: transparent;
       background-image: none;
       box-shadow:none;
@@ -226,11 +226,11 @@ MathWindow {
 
 EphyWindow {
   .titlebar,
-  .header-bar {
+  headerbar {
 
     .incognito-mode {
 
-      .button {
+      button {
         background-image:none;
       }
     }

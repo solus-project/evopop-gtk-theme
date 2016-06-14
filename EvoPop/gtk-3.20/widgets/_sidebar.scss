@@ -3,7 +3,7 @@
  ***********/
 .sidebar {
   border-style: solid;
-  background-color: $bg_color;
+  background-color: transparentize($bg_color,0.2);
 
   @at-root %sidebar_left,
   &:dir(ltr),
@@ -38,7 +38,6 @@
     border:none;
     padding: 5px 8px;
 
-    > GtkLabel,
     > label {
       padding-left: 6px;
       padding-right: 6px;

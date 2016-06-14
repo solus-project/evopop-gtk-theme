@@ -19,7 +19,7 @@ $darkpurple: #7b7bbd;
 $cyan: #37b9a5;
 $blue: #13b1d5;
 
-$borders_color: if($variant == 'light', darken($bg_color,20%), darken($bg_color,10%));
+$borders_color: if($variant == 'light', transparentize(black,0.8), transparentize(black,0.9));
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $selected_fg_color: #fefefe;
 $selected_bg_color: $blue;
