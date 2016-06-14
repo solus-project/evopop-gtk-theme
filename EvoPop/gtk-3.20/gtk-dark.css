@@ -5476,6 +5476,8 @@ decoration {
   color: #fefefe;
   background-color: rgba(60, 67, 75, 0.95);
   transition: 170ms ease-out; }
+  .raven switch {
+    margin-left: 66px; }
   .raven .raven-header {
     min-height: 32px;
     max-width: 32px;
