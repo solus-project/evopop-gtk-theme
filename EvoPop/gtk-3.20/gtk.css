@@ -1197,6 +1197,39 @@ notebook button, list button, view button, popover button {
   padding-left: 8px;
   padding-right: 8px; }
 
+/* menu buttons */
+modelbutton.flat, popover.background checkbutton,
+popover.background radiobutton,
+.menuitem.button.flat {
+  min-height: 26px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  outline-offset: -2px; }
+  modelbutton.flat:hover, popover.background checkbutton:hover,
+  popover.background radiobutton:hover,
+  .menuitem.button.flat:hover {
+    background-color: #13b1d5;
+    color: #fefefe; }
+  modelbutton.flat:selected, popover.background checkbutton:selected,
+  popover.background radiobutton:selected,
+  .menuitem.button.flat:selected {
+    background-color: #119ebe;
+    color: #fefefe; }
+
+modelbutton.flat arrow, popover.background checkbutton arrow,
+popover.background radiobutton arrow {
+  background: none; }
+  modelbutton.flat arrow:hover, popover.background checkbutton arrow:hover,
+  popover.background radiobutton arrow:hover {
+    background: none; }
+  modelbutton.flat arrow.left, popover.background checkbutton arrow.left,
+  popover.background radiobutton arrow.left {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+  modelbutton.flat arrow.right, popover.background checkbutton arrow.right,
+  popover.background radiobutton arrow.right {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+
 /************
  * Calendar *
  ***********/
@@ -2820,59 +2853,90 @@ row {
 /*********
  * Menus *
  *********/
-menubar {
+menubar,
+.menubar {
   -GtkWidget-window-dragging: true;
   padding: 0px;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1);
   background-color: #31363D;
   color: #fefefe; }
-  menubar:backdrop {
+  menubar:backdrop,
+  .menubar:backdrop {
     background-color: #31363D; }
-  menubar > menuitem {
+  menubar > menuitem,
+  .menubar > menuitem {
     min-height: 16px;
     padding: 4px 8px; }
-    menubar > menuitem:hover {
+    menubar > menuitem:hover,
+    .menubar > menuitem:hover {
       box-shadow: inset 0 -3px #13b1d5;
       color: #fefefe; }
-    menubar > menuitem:disabled {
+    menubar > menuitem:disabled,
+    .menubar > menuitem:disabled {
       color: #8c8f94;
       box-shadow: none; }
 
-menu {
+menu,
+.menu,
+.context-menu {
   padding: 4px 0px;
   background-color: #fefefe;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-  .csd menu {
+  .csd menu, .csd
+  .menu, .csd
+  .context-menu {
     border: none; }
-  menu:backdrop {
+  menu:backdrop,
+  .menu:backdrop,
+  .context-menu:backdrop {
     background-color: #fbfbfb; }
-  menu menuitem {
+  menu menuitem,
+  .menu menuitem,
+  .context-menu menuitem {
     min-height: 16px;
     min-width: 40px;
     padding: 8px 4px;
     text-shadow: none; }
-    menu menuitem:hover {
+    menu menuitem:hover,
+    .menu menuitem:hover,
+    .context-menu menuitem:hover {
       color: #fefefe;
       background-color: #13b1d5; }
-    menu menuitem:disabled {
+    menu menuitem:disabled,
+    .menu menuitem:disabled,
+    .context-menu menuitem:disabled {
       color: #8c8f94; }
-      menu menuitem:disabled:backdrop {
+      menu menuitem:disabled:backdrop,
+      .menu menuitem:disabled:backdrop,
+      .context-menu menuitem:disabled:backdrop {
         color: #bcc1c9; }
-    menu menuitem:backdrop, menu menuitem:backdrop:hover {
+    menu menuitem:backdrop, menu menuitem:backdrop:hover,
+    .menu menuitem:backdrop,
+    .menu menuitem:backdrop:hover,
+    .context-menu menuitem:backdrop,
+    .context-menu menuitem:backdrop:hover {
       color: #8c8f94;
       background-color: transparent; }
-    menu menuitem arrow {
+    menu menuitem arrow,
+    .menu menuitem arrow,
+    .context-menu menuitem arrow {
       min-height: 16px;
       min-width: 16px; }
-      menu menuitem arrow:dir(ltr) {
+      menu menuitem arrow:dir(ltr),
+      .menu menuitem arrow:dir(ltr),
+      .context-menu menuitem arrow:dir(ltr) {
         -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
         margin-left: 10px; }
-      menu menuitem arrow:dir(rtl) {
+      menu menuitem arrow:dir(rtl),
+      .menu menuitem arrow:dir(rtl),
+      .context-menu menuitem arrow:dir(rtl) {
         -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
         margin-right: 10px; }
-  menu > arrow {
+  menu > arrow,
+  .menu > arrow,
+  .context-menu > arrow {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
@@ -2884,19 +2948,29 @@ menu {
     padding: 4px;
     background-color: #fefefe;
     border-radius: 0; }
-    menu > arrow.top {
+    menu > arrow.top,
+    .menu > arrow.top,
+    .context-menu > arrow.top {
       margin-top: -6px;
       border-bottom: 1px solid #eaeaeb;
       -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-    menu > arrow.bottom {
+    menu > arrow.bottom,
+    .menu > arrow.bottom,
+    .context-menu > arrow.bottom {
       margin-bottom: -6px;
       border-top: 1px solid #eaeaeb;
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-    menu > arrow:hover {
+    menu > arrow:hover,
+    .menu > arrow:hover,
+    .context-menu > arrow:hover {
       background-color: #eaeaeb; }
-    menu > arrow:backdrop {
+    menu > arrow:backdrop,
+    .menu > arrow:backdrop,
+    .context-menu > arrow:backdrop {
       background-color: #fbfbfb; }
-    menu > arrow:disabled {
+    menu > arrow:disabled,
+    .menu > arrow:disabled,
+    .context-menu > arrow:disabled {
       color: transparent;
       background-color: transparent;
       border-color: transparent; }
@@ -3330,6 +3404,8 @@ popover.background {
   border: none;
   background-color: #fefefe;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+  popover.background menuitem {
+    color: red; }
   .csd popover.background, popover.background {
     border: 1px solid rgba(0, 0, 0, 0.2); }
   popover.background:backdrop {

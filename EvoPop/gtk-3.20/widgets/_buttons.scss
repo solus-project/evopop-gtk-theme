@@ -535,3 +535,34 @@ notebook,list,view,popover {
     padding-left: 8px;
     padding-right: 8px;
 }
+
+
+/* menu buttons */
+modelbutton.flat,
+.menuitem.button.flat {
+  min-height: 26px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 3px;
+  outline-offset: -2px;
+
+  &:hover {
+    background-color: $selected_bg_color;
+    color: $selected_fg_color;
+  }
+
+  &:selected {
+    background-color: darken($selected_bg_color,5%);
+    color: $selected_fg_color;
+  }
+}
+
+modelbutton.flat arrow {
+  background: none;
+
+  &:hover { background: none; }
+
+  &.left { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+
+  &.right { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+}
