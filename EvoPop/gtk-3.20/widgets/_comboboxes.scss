@@ -7,6 +7,7 @@ combobox {
     -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     min-height: 16px;
     min-width: 16px;
+    margin: 3px;
   }
 
   &:drop(active) { // FIXME: untested

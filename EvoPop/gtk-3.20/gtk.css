@@ -1137,7 +1137,8 @@ button {
   .linked > combobox button:dir(ltr):focus {
     margin: 0;
     border-radius: 0;
-    border-right: 1px solid rgba(0, 0, 0, 0.2); }
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-left-width: 0; }
     .linked entry:focus, .linked entry:active, .linked entry:insensitive, .linked button:focus, .linked button:active, .linked button:insensitive,
     .linked > combobox button:dir(ltr):focus,
     .linked > combobox button:dir(ltr):active,
@@ -1148,6 +1149,7 @@ button {
       border-radius: 0; }
   .linked entry:first-child, .linked button:first-child, .linked button:active:first-child, .linked button:focus:first-child, .linked button:disabled:first-child, .linked > combobox:first-child button, .linked > combobox:first-child button:focus {
     border-radius: 3px;
+    border-left-width: 1px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
   .linked button:last-child, .linked button:active:last-child, .linked button:focus:last-child, .linked button:disabled:last-child, .linked > combobox:last-child button, .linked > combobox:last-child button:focus {
@@ -1891,7 +1893,8 @@ colorchooser .popover.osd {
 combobox arrow {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
   min-height: 16px;
-  min-width: 16px; }
+  min-width: 16px;
+  margin: 3px; }
 combobox:drop(active) {
   box-shadow: none; }
 
@@ -5827,36 +5830,33 @@ NautilusCanvasView {
 /**************
  * Calculator *
  **************/
-MathWindow {
-  background-color: #fefefe;
-  border-radius: 0 0 4px 4px; }
-  MathWindow MathButtons combobox,
-  MathWindow MathButtons button {
-    background-color: transparent;
+MathWindow MathButtons combobox,
+MathWindow MathButtons button {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  text-shadow: none;
+  font: bold; }
+  MathWindow MathButtons combobox:hover,
+  MathWindow MathButtons button:hover {
+    background-image: none;
+    background-color: #fefefe; }
+  MathWindow MathButtons combobox.text-button.suggested-action,
+  MathWindow MathButtons button.text-button.suggested-action {
     background-image: none;
     box-shadow: none;
-    border: none;
     text-shadow: none;
-    font: bold; }
-    MathWindow MathButtons combobox:hover,
-    MathWindow MathButtons button:hover {
-      background-image: none;
-      background-color: #fefefe; }
-    MathWindow MathButtons combobox.text-button.suggested-action,
-    MathWindow MathButtons button.text-button.suggested-action {
-      background-image: none;
-      box-shadow: none;
-      text-shadow: none;
-      background-color: #37b9a5;
-      color: #fefefe; }
-      MathWindow MathButtons combobox.text-button.suggested-action:backdrop,
-      MathWindow MathButtons button.text-button.suggested-action:backdrop {
-        background-color: #2b9282;
-        color: rgba(254, 254, 254, 0.5); }
-  MathWindow MathDisplay {
-    padding: 4px;
-    background-color: #fefefe;
-    border: 1px solid rgba(0, 0, 0, 0.2); }
+    background-color: #37b9a5;
+    color: #fefefe; }
+    MathWindow MathButtons combobox.text-button.suggested-action:backdrop,
+    MathWindow MathButtons button.text-button.suggested-action:backdrop {
+      background-color: #2b9282;
+      color: rgba(254, 254, 254, 0.5); }
+MathWindow MathDisplay {
+  padding: 4px;
+  background-color: #fefefe;
+  border: 1px solid rgba(0, 0, 0, 0.2); }
 
 /************
  * Epiphany *

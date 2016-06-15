@@ -399,7 +399,8 @@ button.color {
   > combobox button:dir(ltr):focus {
     margin: 0;
     border-radius: 0;
-    border-right: 1px solid transparentize(black,0.8);
+    border: 1px solid transparentize(black,0.85);
+    border-left-width: 0;
 
     &:focus,
     &:active,
@@ -418,6 +419,7 @@ button.color {
   & > combobox:first-child button,
   & > combobox:first-child button:focus {
       border-radius: 3px;
+      border-left-width: 1px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
   }
