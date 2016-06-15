@@ -463,7 +463,6 @@ button {
     button:backdrop:checked {
       border-color: #0f8aa6;
       background-image: none;
-      background-color: #0f8aa6;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:active image, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked image, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:active image, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked image, notebook > header > tabs > arrow:backdrop:checked,
       button:backdrop.flat:active label,
@@ -713,7 +712,6 @@ button.suggested-action {
     button.suggested-action.flat:backdrop:checked {
       border-color: #2b9282;
       background-image: none;
-      background-color: #2b9282;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button.suggested-action:backdrop:active label,
       button.suggested-action:backdrop:active image,
@@ -835,7 +833,6 @@ button.destructive-action {
     button.destructive-action.flat:backdrop:checked {
       border-color: #9b1b32;
       background-image: none;
-      background-color: #9b1b32;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button.destructive-action:backdrop:active label,
       button.destructive-action:backdrop:active image,
@@ -971,7 +968,6 @@ button .inline-toolbar toolbutton > button {
     button .inline-toolbar toolbutton > button:backdrop:checked {
       border-color: rgba(115, 116, 118, 0.28);
       background-image: none;
-      background-color: #13b1d5;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button .inline-toolbar toolbutton > button:backdrop:active label,
       button .inline-toolbar toolbutton > button:backdrop:active image,
@@ -2668,7 +2664,8 @@ levelbar {
  *********/
 *:link, button:link,
 button:visited {
-  color: #13b1d5; }
+  color: #13b1d5;
+  background-color: transparent; }
   *:link:visited,
   button:visited {
     color: rgba(19, 177, 213, 0.5); }
@@ -5407,6 +5404,8 @@ decoration {
   border-radius: 0; }
   .budgie-panel button.flat.launcher:hover {
     -gtk-icon-effect: highlight; }
+  .budgie-panel button.flat.launcher:backdrop {
+    background-color: transparent; }
 .budgie-panel .pinned .launcher,
 .budgie-panel .pinned .launcher.running,
 .budgie-panel .unpinned .launcher,
@@ -5495,6 +5494,7 @@ decoration {
       border-bottom-style: none; }
     .raven .raven-header button {
       background-color: transparent;
+      color: #31363D;
       border-radius: 0;
       border: none;
       box-shadow: none;
@@ -5517,6 +5517,7 @@ decoration {
     border-bottom: 1px solid rgba(222, 224, 228, 0.75); }
     .raven .raven-background .linked button.text-button {
       background-color: transparent;
+      color: #31363D;
       border-radius: 0;
       border: none;
       box-shadow: none;
@@ -5572,13 +5573,13 @@ decoration {
 
 .budgie-session-dialog, .background.budgie-polkit-dialog {
   color: #31363D;
-  background-color: rgba(230, 232, 235, 0.9);
+  background-color: rgba(230, 232, 235, 0.75);
   border-radius: 3px; }
   .budgie-session-dialog:backdrop, .background.budgie-polkit-dialog:backdrop {
-    background-color: rgba(230, 232, 235, 0.9); }
+    background-color: rgba(230, 232, 235, 0.75); }
   .budgie-session-dialog decoration, .background.budgie-polkit-dialog decoration {
     border-radius: 3px;
-    background-color: rgba(230, 232, 235, 0.9);
+    background-color: rgba(230, 232, 235, 0.75);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3); }
   .budgie-session-dialog .linked.horizontal > button, .background.budgie-polkit-dialog .linked.horizontal > button {
     min-height: 20px;

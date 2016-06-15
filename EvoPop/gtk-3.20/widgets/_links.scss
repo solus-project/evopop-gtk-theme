@@ -3,6 +3,7 @@
  *********/
 *:link {
   color: $link_color;
+  background-color: transparent;
 
   &:visited {
     color: $link_visited_color;

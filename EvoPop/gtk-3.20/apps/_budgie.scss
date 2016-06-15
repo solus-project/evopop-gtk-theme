@@ -153,6 +153,8 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         border-radius: 0;
 
         &:hover { -gtk-icon-effect: highlight; }
+
+        &:backdrop { background-color: transparent; }
     }
     .pinned,
     .unpinned {
@@ -221,6 +223,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
         button {
           background-color: transparent;
+          color: $fg_color;
           border-radius: 0;
           border: none;
           box-shadow: none;
@@ -256,6 +259,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         .linked {
           & button.text-button {
             background-color: transparent;
+            color: $fg_color;
             border-radius: 0;
             border: none;
             box-shadow: none;
@@ -341,16 +345,16 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 // Session Dialog
 .budgie-session-dialog {
     color: $fg_color;
-    background-color: transparentize($bg_color, 0.1);
+    background-color: transparentize($panel_bg, 0.2);
     border-radius: 3px;
 
     &:backdrop {
-      background-color: transparentize($bg_color, 0.1);
+      background-color: transparentize($panel_bg, 0.2);
     }
 
     decoration {
       border-radius: 3px;
-      background-color: transparentize($bg_color, 0.1);
+      background-color: transparentize($panel_bg, 0.2);
       box-shadow: 0 2px 4px 0 $panel_shadow;
     }
 
