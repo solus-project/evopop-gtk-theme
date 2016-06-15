@@ -206,7 +206,7 @@
 
     $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $disabled_bg_color);
 
-    GtkLabel, & { color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $disabled_fg_color); }
+    label, & { color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $bac_fg_color); }
 
     border-color: if($c!=$bg_color, _border_color($c), $disabled_borders_color);
     background-image: none;
@@ -218,15 +218,15 @@
 
   // Disabled Pushed Button
   @else if $t==disabled-active {
-    $_bg: if($c!=$bg_color, darken(mix($c,$base_color, 85%), 5%),
-                            $disabled_bg_color);
-    $_bc: if($c!=$bg_color, _border_color($c), $disabled_borders_color);
+    $_bg: darken($selected_bg_color, 5%);
+    $_bc: $borders_color;
 
-    GtkLabel, & { color: if($c!=$bg_color, mix($tc, $_bg, 60%), $disabled_fg_color); }
+    label, & { color: transparentize($selected_fg_color,0.3); }
 
     border-color: $_bc;
     background-image: none;
     background-color: $_bg;
+    color: transparentize($selected_fg_color,0.3);
     text-shadow: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
 
@@ -238,9 +238,9 @@
     $_bg: if($c!=$bg_color,$c,$backdrop_bg_color);
     $_bc: if($variant=='light',$c,_border_color($c));
 
-    GtkLabel, & { color: if($tc!=$fg_color,mix($tc, $_bg, 80%), $backdrop_fg_color); }
+    label, & { color: $backdrop_fg_color; }
 
-    border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
+    border-color: $backdrop_borders_color;
     background-image: linear-gradient(to bottom, $_bg);
     text-shadow: none;
     icon-shadow: none;
@@ -254,7 +254,7 @@
     $_bc: if($variant=='light',$_bg,_border_color($c));
 
     label,image, & { color: transparentize($selected_fg_color,0.5); }
-    label, & { color: if($tc!=$fg_color, mix($tc, $_bg, 80%), $backdrop_fg_color); }
+    label, & { color:  transparentize($selected_fg_color,0.5); }
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: none;

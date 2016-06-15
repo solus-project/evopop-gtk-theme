@@ -41,6 +41,15 @@ button {
       transition-duration: 50ms;
     }
 
+    &:disabled {
+      &:active,
+      &:checked {
+        @include button(disabled-active);
+
+        transition-duration: 50ms;
+      }
+    }
+
     &:backdrop {
       &.flat, & {
         @include button(backdrop,$backdrop_base_color);

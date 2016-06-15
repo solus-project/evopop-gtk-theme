@@ -456,20 +456,36 @@ button {
       text-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
       transition-duration: 50ms; }
+    notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked,
+    button:disabled:active,
+    button:disabled:checked {
+      border-color: rgba(0, 0, 0, 0.2);
+      background-image: none;
+      background-color: #119ebe;
+      color: rgba(254, 254, 254, 0.7);
+      text-shadow: none;
+      box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+      transition-duration: 50ms; }
+      notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked label, notebook > header > tabs > arrow:disabled:checked,
+      button:disabled:active label,
+      button:disabled:active,
+      button:disabled:checked label,
+      button:disabled:checked {
+        color: rgba(254, 254, 254, 0.7); }
     notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop,
     button:backdrop.flat,
     button:backdrop {
-      border-color: #fbfbfb;
+      border-color: rgba(115, 116, 118, 0.28);
       background-image: linear-gradient(to bottom, #fbfbfb);
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
       transition: 200ms ease-out;
       -gtk-icon-effect: none; }
-      notebook > header > tabs > arrow:backdrop GtkLabel, notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop GtkLabel, notebook > header > tabs > arrow:backdrop,
-      button:backdrop.flat GtkLabel,
+      notebook > header > tabs > arrow:backdrop label, notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop label, notebook > header > tabs > arrow:backdrop,
+      button:backdrop.flat label,
       button:backdrop.flat,
-      button:backdrop GtkLabel,
+      button:backdrop label,
       button:backdrop {
         color: #8c8f94; }
       notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked,
@@ -503,7 +519,7 @@ button {
         button:backdrop:active,
         button:backdrop:checked label,
         button:backdrop:checked {
-          color: #8c8f94; }
+          color: rgba(254, 254, 254, 0.5); }
     notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:disabled, notebook > header > tabs > arrow:backdrop:disabled,
     button.flat:backdrop,
     button.flat:disabled,
@@ -712,16 +728,16 @@ button {
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
     button.suggested-action:backdrop,
     button.suggested-action.flat:backdrop {
-      border-color: #37b9a5;
+      border-color: rgba(115, 116, 118, 0.28);
       background-image: linear-gradient(to bottom, #37b9a5);
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
-      button.suggested-action:backdrop GtkLabel,
+      button.suggested-action:backdrop label,
       button.suggested-action:backdrop,
-      button.suggested-action.flat:backdrop GtkLabel,
+      button.suggested-action.flat:backdrop label,
       button.suggested-action.flat:backdrop {
-        color: #d7f1ed; }
+        color: #8c8f94; }
       button.suggested-action:backdrop:active,
       button.suggested-action:backdrop:checked,
       button.suggested-action.flat:backdrop:active,
@@ -750,7 +766,7 @@ button {
         button.suggested-action.flat:backdrop:active,
         button.suggested-action.flat:backdrop:checked label,
         button.suggested-action.flat:backdrop:checked {
-          color: #d5e9e6; }
+          color: rgba(254, 254, 254, 0.5); }
     button.suggested-action.flat:backdrop,
     button.suggested-action.flat:disabled,
     button.suggested-action.flat:backdrop:disabled {
@@ -833,16 +849,16 @@ button {
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
     button.destructive-action:backdrop,
     button.destructive-action.flat:backdrop {
-      border-color: #c72240;
+      border-color: rgba(115, 116, 118, 0.28);
       background-image: linear-gradient(to bottom, #c72240);
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
-      button.destructive-action:backdrop GtkLabel,
+      button.destructive-action:backdrop label,
       button.destructive-action:backdrop,
-      button.destructive-action.flat:backdrop GtkLabel,
+      button.destructive-action.flat:backdrop label,
       button.destructive-action.flat:backdrop {
-        color: #f4d3d9; }
+        color: #8c8f94; }
       button.destructive-action:backdrop:active,
       button.destructive-action:backdrop:checked,
       button.destructive-action.flat:backdrop:active,
@@ -871,7 +887,7 @@ button {
         button.destructive-action.flat:backdrop:active,
         button.destructive-action.flat:backdrop:checked label,
         button.destructive-action.flat:backdrop:checked {
-          color: #ebd1d6; }
+          color: rgba(254, 254, 254, 0.5); }
     button.destructive-action.flat:backdrop,
     button.destructive-action.flat:disabled,
     button.destructive-action.flat:backdrop:disabled {
@@ -977,7 +993,7 @@ button {
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
-      button .inline-toolbar toolbutton > button:backdrop GtkLabel,
+      button .inline-toolbar toolbutton > button:backdrop label,
       button .inline-toolbar toolbutton > button:backdrop {
         color: #8c8f94; }
       button .inline-toolbar toolbutton > button:backdrop:active,
@@ -996,7 +1012,7 @@ button {
         button .inline-toolbar toolbutton > button:backdrop:active,
         button .inline-toolbar toolbutton > button:backdrop:checked label,
         button .inline-toolbar toolbutton > button:backdrop:checked {
-          color: #8c8f94; }
+          color: rgba(254, 254, 254, 0.5); }
   button modelbutton.flat,
   button popover.background checkbutton,
   popover.background button checkbutton,
@@ -1870,7 +1886,7 @@ colorswatch#add-color-button {
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
-      colorswatch#add-color-button overlay:backdrop GtkLabel, colorswatch#add-color-button overlay:backdrop {
+      colorswatch#add-color-button overlay:backdrop label, colorswatch#add-color-button overlay:backdrop {
         color: #8c8f94; }
 colorswatch:disabled {
   opacity: 0.5; }
@@ -3824,7 +3840,7 @@ scale {
       text-shadow: none;
       icon-shadow: none;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
-      scale slider:backdrop GtkLabel, scale slider:backdrop {
+      scale slider:backdrop label, scale slider:backdrop {
         color: #8c8f94; }
     row:selected scale slider:disabled, row:selected scale slider {
       border-color: #0f8aa6; }
