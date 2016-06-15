@@ -463,6 +463,7 @@ button {
     button:backdrop:checked {
       border-color: #0f8aa6;
       background-image: none;
+      background-color: #0f8aa6;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:active image, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked image, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:active image, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked image, notebook > header > tabs > arrow:backdrop:checked,
       button:backdrop.flat:active label,
@@ -712,6 +713,7 @@ button.suggested-action {
     button.suggested-action.flat:backdrop:checked {
       border-color: #2b9282;
       background-image: none;
+      background-color: #2b9282;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button.suggested-action:backdrop:active label,
       button.suggested-action:backdrop:active image,
@@ -833,6 +835,7 @@ button.destructive-action {
     button.destructive-action.flat:backdrop:checked {
       border-color: #9b1b32;
       background-image: none;
+      background-color: #9b1b32;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button.destructive-action:backdrop:active label,
       button.destructive-action:backdrop:active image,
@@ -968,6 +971,7 @@ button .inline-toolbar toolbutton > button {
     button .inline-toolbar toolbutton > button:backdrop:checked {
       border-color: rgba(115, 116, 118, 0.28);
       background-image: none;
+      background-color: #13b1d5;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button .inline-toolbar toolbutton > button:backdrop:active label,
       button .inline-toolbar toolbutton > button:backdrop:active image,
@@ -2403,6 +2407,7 @@ headerbar {
       box-shadow: inset 0 -3px 0 0 #119ebe; }
       headerbar button:active:backdrop,
       headerbar button:checked:backdrop {
+        background-color: transparent;
         box-shadow: inset 0 -3px 0 0 #119ebe; }
     headerbar button label,
     headerbar button image {

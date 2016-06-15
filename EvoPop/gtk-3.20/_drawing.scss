@@ -250,7 +250,7 @@
   // Backdrop Pressed Button
   @else if $t==backdrop-active {
 
-    $_bg: if($c!=$bg_color, darken($c, 10%), $backdrop_dark_fill);
+    $_bg: if($c!=$bg_color, darken($c, 10%), $selected_bg_color);
     $_bc: if($variant=='light',$_bg,_border_color($c));
 
     label,image, & { color: transparentize($selected_fg_color,0.5); }
@@ -258,6 +258,7 @@
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: none;
+    background-color: $_bg;
 
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
   }

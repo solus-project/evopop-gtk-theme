@@ -94,6 +94,7 @@
        background-color: transparent;
        @include lines(up);
        &:backdrop {
+         background-color: transparent;
          @include lines(up);
        }
      }
