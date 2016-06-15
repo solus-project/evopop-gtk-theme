@@ -246,12 +246,55 @@ EphyWindow {
  * Gedit *
  *********/
 
-GeditWindow {
+.gedit-search-slider {
+     padding: 4px;
+     border-radius: 0 0 3px 3px;
+     border: 0;
+     background-color: $headerbar_bg_color;
 
-  > .entry {
-    @extend %entry;
-  }
-}
+     & button {
+       background-color: transparent;
+       color: $headerbar_fg_color;
+       border: none;
+       box-shadow: none;
+
+       &:hover {
+         color: $selected_bg_color;
+       }
+       &:active {
+         color:darken($selected_bg_color,5%);
+       }
+     }
+
+     entry {
+       border: none;
+       background-color: $headerbar_bg_color;
+       color: $headerbar_fg_color;
+       box-shadow: inset 1px 1px 5px 0px darken($headerbar_bg_color,10%);
+       @each $e_type, $e_color in (error, $error_color),
+                                  (warning, $warning_color) {
+         &.#{$e_type} {
+           color: $e_color;
+
+           &:focus { @include entry(focus, $e_color); }
+
+           &:selected { &:focus, & { background-color: $e_color; }}
+         }
+       }
+
+       image {
+         color: transparentize($headerbar_fg_color, 0.5);
+       }
+       & entry {
+         background-color: transparent;
+         box-shadow: none;
+       }
+
+       &:first-child {
+         border-radius: 3px;
+       }
+     }
+ }
 
 /*******************
  * System Settings *

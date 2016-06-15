@@ -304,9 +304,9 @@ button popover.background checkbutton:selected,
 popover.background button checkbutton:selected,
 button popover.background radiobutton:selected,
 popover.background button radiobutton:selected,
-button .menuitem.button.flat:selected, calendar:selected, spinbutton:selected:focus:not(.vertical), GeditWindow > .entry:selected:focus, spinbutton:selected:not(.vertical), GeditWindow > .entry:selected,
+button .menuitem.button.flat:selected, calendar:selected, spinbutton:selected:focus:not(.vertical), spinbutton:selected:not(.vertical),
 entry:selected:focus,
-entry:selected, spinbutton:not(.vertical) selection:focus, GeditWindow > .entry selection:focus, spinbutton:not(.vertical) selection, GeditWindow > .entry selection,
+entry:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
 entry selection:focus,
 entry selection, row:selected, GtkTreeView.view:selected:focus, GtkTreeView.view:selected,
 treeview.view:selected:focus,
@@ -330,9 +330,9 @@ treeview.view:selected {
   popover.background button checkbutton:selected,
   button popover.background radiobutton:selected,
   popover.background button radiobutton:selected,
-  button .menuitem.button.flat:selected, calendar:selected, spinbutton:selected:focus:not(.vertical), GeditWindow > .entry:selected:focus, spinbutton:selected:not(.vertical), GeditWindow > .entry:selected,
+  button .menuitem.button.flat:selected, calendar:selected, spinbutton:selected:focus:not(.vertical), spinbutton:selected:not(.vertical),
   entry:selected:focus,
-  entry:selected, spinbutton:not(.vertical) selection:focus, GeditWindow > .entry selection:focus, spinbutton:not(.vertical) selection, GeditWindow > .entry selection,
+  entry:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
   entry selection:focus,
   entry selection, row:selected, GtkTreeView.view:selected:focus, GtkTreeView.view:selected,
   treeview.view:selected:focus,
@@ -357,8 +357,8 @@ treeview.view:selected {
     popover.background button checkbutton:disabled:selected,
     button popover.background radiobutton:disabled:selected,
     popover.background button radiobutton:disabled:selected,
-    button .menuitem.button.flat:disabled:selected, calendar:disabled:selected, spinbutton:disabled:selected:not(.vertical), GeditWindow > .entry:disabled:selected,
-    entry:disabled:selected, spinbutton:not(.vertical) selection:disabled, GeditWindow > .entry selection:disabled,
+    button .menuitem.button.flat:disabled:selected, calendar:disabled:selected, spinbutton:disabled:selected:not(.vertical),
+    entry:disabled:selected, spinbutton:not(.vertical) selection:disabled,
     entry selection:disabled, row:disabled:selected {
       color: #89d8ea; }
     .list-row:selected GtkLabel:backdrop, row:selected GtkLabel:backdrop, GtkLabel:backdrop:selected, .list-row:selected
@@ -379,8 +379,8 @@ treeview.view:selected {
     popover.background button checkbutton:backdrop:selected,
     button popover.background radiobutton:backdrop:selected,
     popover.background button radiobutton:backdrop:selected,
-    button .menuitem.button.flat:backdrop:selected, calendar:backdrop:selected, spinbutton:backdrop:selected:not(.vertical), GeditWindow > .entry:backdrop:selected,
-    entry:backdrop:selected, spinbutton:not(.vertical) selection:backdrop, GeditWindow > .entry selection:backdrop,
+    button .menuitem.button.flat:backdrop:selected, calendar:backdrop:selected, spinbutton:backdrop:selected:not(.vertical),
+    entry:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
     entry selection:backdrop, row:backdrop:selected {
       color: rgba(254, 254, 254, 0.5); }
       .list-row:selected GtkLabel:backdrop:disabled, row:selected GtkLabel:backdrop:disabled, GtkLabel:backdrop:disabled:selected, .list-row:selected
@@ -399,8 +399,8 @@ treeview.view:selected {
       popover.background button checkbutton:backdrop:disabled:selected,
       button popover.background radiobutton:backdrop:disabled:selected,
       popover.background button radiobutton:backdrop:disabled:selected,
-      button .menuitem.button.flat:backdrop:disabled:selected, calendar:backdrop:disabled:selected, spinbutton:backdrop:disabled:selected:not(.vertical), GeditWindow > .entry:backdrop:disabled:selected,
-      entry:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled, GeditWindow > .entry selection:backdrop:disabled,
+      button .menuitem.button.flat:backdrop:disabled:selected, calendar:backdrop:disabled:selected, spinbutton:backdrop:disabled:selected:not(.vertical),
+      entry:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled,
       entry selection:backdrop:disabled, row:backdrop:disabled:selected {
         color: rgba(48, 187, 218, 0.85); }
 
@@ -1943,7 +1943,7 @@ filechooserbutton:drop(active) {
 /****************
  * Text Entries *
  ****************/
-spinbutton:not(.vertical), GeditWindow > .entry,
+spinbutton:not(.vertical),
 entry {
   min-height: 20px;
   padding: 4px 6px;
@@ -1953,15 +1953,15 @@ entry {
   color: #31363D;
   border-color: rgba(0, 0, 0, 0.2);
   background-color: #fefefe; }
-  spinbutton:not(.vertical) image.left, GeditWindow > .entry image.left,
+  spinbutton:not(.vertical) image.left,
   entry image.left {
     padding-left: 0;
     padding-right: 6px; }
-  spinbutton:not(.vertical) image.right, GeditWindow > .entry image.right,
+  spinbutton:not(.vertical) image.right,
   entry image.right {
     padding-left: 6px;
     padding-right: 0; }
-  spinbutton:not(.vertical) undershoot.left, GeditWindow > .entry undershoot.left,
+  spinbutton:not(.vertical) undershoot.left,
   entry undershoot.left {
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
@@ -1972,7 +1972,7 @@ entry {
     background-position: left center;
     border: none;
     box-shadow: none; }
-  spinbutton:not(.vertical) undershoot.right, GeditWindow > .entry undershoot.right,
+  spinbutton:not(.vertical) undershoot.right,
   entry undershoot.right {
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%);
@@ -1983,7 +1983,7 @@ entry {
     background-position: right center;
     border: none;
     box-shadow: none; }
-  spinbutton.flat:focus:not(.vertical), GeditWindow > .flat.entry:focus, spinbutton.flat:not(.vertical), GeditWindow > .flat.entry,
+  spinbutton.flat:focus:not(.vertical), spinbutton.flat:not(.vertical),
   entry.flat:focus,
   entry.flat {
     min-height: 0;
@@ -1991,56 +1991,56 @@ entry {
     background-image: none;
     border-color: transparent;
     border-radius: 0; }
-  spinbutton:focus:not(.vertical), GeditWindow > .entry:focus,
+  spinbutton:focus:not(.vertical),
   entry:focus {
     border-color: #13b1d5; }
-  spinbutton:backdrop:not(.vertical), GeditWindow > .entry:backdrop,
+  spinbutton:backdrop:not(.vertical),
   entry:backdrop {
     color: #595d63;
     border-color: rgba(115, 116, 118, 0.28);
     background-image: linear-gradient(to bottom, #fbfbfb);
     box-shadow: none;
     transition: 200ms ease-out; }
-  spinbutton.error:not(.vertical), GeditWindow > .error.entry,
+  spinbutton.error:not(.vertical),
   entry.error {
     color: #c72240;
     border-color: #c72240; }
-    spinbutton.error:focus:not(.vertical), GeditWindow > .error.entry:focus,
+    spinbutton.error:focus:not(.vertical),
     entry.error:focus {
       border-color: #c72240; }
-    spinbutton.error:selected:focus:not(.vertical), GeditWindow > .error.entry:selected:focus, spinbutton.error:selected:not(.vertical), GeditWindow > .error.entry:selected,
+    spinbutton.error:selected:focus:not(.vertical), spinbutton.error:selected:not(.vertical),
     entry.error:selected:focus,
     entry.error:selected {
       background-color: #c72240; }
-  spinbutton.warning:not(.vertical), GeditWindow > .warning.entry,
+  spinbutton.warning:not(.vertical),
   entry.warning {
     color: #ffa622;
     border-color: #ffa622; }
-    spinbutton.warning:focus:not(.vertical), GeditWindow > .warning.entry:focus,
+    spinbutton.warning:focus:not(.vertical),
     entry.warning:focus {
       border-color: #ffa622; }
-    spinbutton.warning:selected:focus:not(.vertical), GeditWindow > .warning.entry:selected:focus, spinbutton.warning:selected:not(.vertical), GeditWindow > .warning.entry:selected,
+    spinbutton.warning:selected:focus:not(.vertical), spinbutton.warning:selected:not(.vertical),
     entry.warning:selected:focus,
     entry.warning:selected {
       background-color: #ffa622; }
-  spinbutton:not(.vertical) image, GeditWindow > .entry image,
+  spinbutton:not(.vertical) image,
   entry image {
     color: #5a5e64; }
-    spinbutton:not(.vertical) image:hover, GeditWindow > .entry image:hover,
+    spinbutton:not(.vertical) image:hover,
     entry image:hover {
       color: #31363D; }
-    spinbutton:not(.vertical) image:active, GeditWindow > .entry image:active,
+    spinbutton:not(.vertical) image:active,
     entry image:active {
       color: #13b1d5; }
-    spinbutton:not(.vertical) image:backdrop, GeditWindow > .entry image:backdrop,
+    spinbutton:not(.vertical) image:backdrop,
     entry image:backdrop {
       color: #a2a5a9; }
-  spinbutton:drop(active):focus:not(.vertical), GeditWindow > .entry:drop(active):focus, spinbutton:drop(active):not(.vertical), GeditWindow > .entry:drop(active),
+  spinbutton:drop(active):focus:not(.vertical), spinbutton:drop(active):not(.vertical),
   entry:drop(active):focus,
   entry:drop(active) {
     border-color: #4e9a06;
     box-shadow: inset 0 0 0 1px #4e9a06; }
-  .osd spinbutton:not(.vertical), .osd GeditWindow > .entry, .osd
+  .osd spinbutton:not(.vertical), .osd
   entry {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
@@ -2049,7 +2049,7 @@ entry {
     box-shadow: none;
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black; }
-    .osd spinbutton:focus:not(.vertical), .osd GeditWindow > .entry:focus, .osd
+    .osd spinbutton:focus:not(.vertical), .osd
     entry:focus {
       color: white;
       border-color: #13b1d5;
@@ -2058,7 +2058,7 @@ entry {
       box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black; }
-    .osd spinbutton:backdrop:not(.vertical), .osd GeditWindow > .entry:backdrop, .osd
+    .osd spinbutton:backdrop:not(.vertical), .osd
     entry:backdrop {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
@@ -2067,7 +2067,7 @@ entry {
       box-shadow: none;
       text-shadow: none;
       icon-shadow: none; }
-spinbutton:not(.vertical) progress, GeditWindow > .entry progress,
+spinbutton:not(.vertical) progress,
 entry progress {
   margin: 2px -6px;
   background-color: transparent;
@@ -2077,7 +2077,7 @@ entry progress {
   border-color: #13b1d5;
   border-style: solid;
   box-shadow: none; }
-  spinbutton:not(.vertical) progress:backdrop, GeditWindow > .entry progress:backdrop,
+  spinbutton:not(.vertical) progress:backdrop,
   entry progress:backdrop {
     background-color: transparent; }
 
@@ -2527,10 +2527,9 @@ headerbar {
   color: #fefefe; }
   .titlebar:backdrop {
     box-shadow: inset 0 1px rgba(153, 153, 153, 0.2); }
-  .tiled .titlebar, .maximized .titlebar {
+  .maximized .titlebar, .fullscreen .titlebar, .tiled .titlebar {
+    border-radius: 0;
     box-shadow: none; }
-    .tiled .titlebar:backdrop, .tiled .titlebar, .maximized .titlebar:backdrop, .maximized .titlebar {
-      border-radius: 0; }
   .titlebar button.titlebutton {
     background-image: none;
     background-color: transparent;
@@ -2574,9 +2573,6 @@ headerbar {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
   .ssd .titlebar:backdrop {
     box-shadow: inset 0 1px rgba(153, 153, 153, 0.2); }
-
-.ssd.tiled, .ssd .maximized {
-  box-shadow: none; }
 
 /**************
  * GtkInfoBar *
@@ -5808,6 +5804,45 @@ EphyWindow headerbar .incognito-mode button {
 /*********
  * Gedit *
  *********/
+.gedit-search-slider {
+  padding: 4px;
+  border-radius: 0 0 3px 3px;
+  border: 0;
+  background-color: #31363D; }
+  .gedit-search-slider button {
+    background-color: transparent;
+    color: #fefefe;
+    border: none;
+    box-shadow: none; }
+    .gedit-search-slider button:hover {
+      color: #13b1d5; }
+    .gedit-search-slider button:active {
+      color: #119ebe; }
+  .gedit-search-slider entry {
+    border: none;
+    background-color: #31363D;
+    color: #fefefe;
+    box-shadow: inset 1px 1px 5px 0px #1a1d21; }
+    .gedit-search-slider entry.error {
+      color: #c72240; }
+      .gedit-search-slider entry.error:focus {
+        border-color: #c72240; }
+      .gedit-search-slider entry.error:selected:focus, .gedit-search-slider entry.error:selected {
+        background-color: #c72240; }
+    .gedit-search-slider entry.warning {
+      color: #ffa622; }
+      .gedit-search-slider entry.warning:focus {
+        border-color: #ffa622; }
+      .gedit-search-slider entry.warning:selected:focus, .gedit-search-slider entry.warning:selected {
+        background-color: #ffa622; }
+    .gedit-search-slider entry image {
+      color: rgba(254, 254, 254, 0.5); }
+    .gedit-search-slider entry entry {
+      background-color: transparent;
+      box-shadow: none; }
+    .gedit-search-slider entry:first-child {
+      border-radius: 3px; }
+
 /*******************
  * System Settings *
  ******************/
