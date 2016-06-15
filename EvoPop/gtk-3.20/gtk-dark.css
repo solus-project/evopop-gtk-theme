@@ -5668,20 +5668,37 @@ decoration {
 
 .budgie-session-dialog, .budgie-polkit-dialog {
   color: #fefefe;
-  background-color: rgba(49, 54, 61, 0.95); }
+  background-color: rgba(49, 54, 61, 0.95);
+  border-radius: 3px; }
   .budgie-session-dialog decoration, .budgie-polkit-dialog decoration {
-    border-radius: 1px;
+    border-radius: 3px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(33, 36, 41, 0.87); }
+  .budgie-session-dialog button:backdrop, .budgie-polkit-dialog button:backdrop {
+    background-color: transparent; }
   .budgie-session-dialog .linked.horizontal > button, .budgie-polkit-dialog .linked.horizontal > button {
     min-height: 20px;
     border-bottom: none;
-    border-radius: 0; }
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none; }
+    .budgie-session-dialog .linked.horizontal > button label, .budgie-polkit-dialog .linked.horizontal > button label {
+      font: bold; }
     .budgie-session-dialog .linked.horizontal > button:first-child, .budgie-polkit-dialog .linked.horizontal > button:first-child {
       border-left: none;
-      border-radius: 0; }
+      border-bottom-left-radius: 3px; }
     .budgie-session-dialog .linked.horizontal > button:last-child, .budgie-polkit-dialog .linked.horizontal > button:last-child {
       border-right: none;
-      border-radius: 0; }
+      border-bottom-right-radius: 3px; }
+    .budgie-session-dialog .linked.horizontal > button:hover, .budgie-polkit-dialog .linked.horizontal > button:hover {
+      background-color: rgba(19, 177, 213, 0.9); }
+    .budgie-session-dialog .linked.horizontal > button.destructive-action, .budgie-polkit-dialog .linked.horizontal > button.destructive-action {
+      background-color: rgba(155, 27, 50, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button.destructive-action:hover, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:hover {
+        background-color: rgba(177, 30, 57, 0.9); }
+    .budgie-session-dialog .linked.horizontal > button.suggested-action, .budgie-polkit-dialog .linked.horizontal > button.suggested-action {
+      background-color: rgba(55, 185, 165, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button.suggested-action:hover, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:hover {
+        background-color: rgba(67, 199, 179, 0.9); }
 
 .budgie-polkit-dialog .message {
   color: rgba(254, 254, 254, 0.7); }

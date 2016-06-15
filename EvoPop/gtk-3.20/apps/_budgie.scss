@@ -323,18 +323,44 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-session-dialog {
     color: $fg_color;
     background-color: $panel_bg;
+    border-radius: 3px;
 
     decoration {
-      border-radius: 1px;
+      border-radius: 3px;
       box-shadow: 0 2px 4px 0 $panel_shadow, 0 0 0 1px $panel_border;
+    }
+
+    button {
+      &:backdrop {
+        background-color: transparent;
+      }
     }
 
     .linked.horizontal > button {
         min-height: 20px;
         border-bottom: none;
         border-radius: 0;
-        &:first-child { border-left: none; border-radius: 0; }
-        &:last-child { border-right: none; border-radius: 0; }
+        background-color: transparent;
+        box-shadow: none;
+
+        label {
+          font: bold;
+        }
+
+        &:first-child { border-left: none; border-bottom-left-radius: 3px; }
+        &:last-child { border-right: none; border-bottom-right-radius: 3px; }
+
+        &:hover {
+          background-color: transparentize($selected_bg_color, 0.1);
+        }
+        &.destructive-action {
+          background-color: transparentize($destructive_color, 0.1);
+          &:hover { background-color: transparentize(lighten($destructive_color,5%), 0.1); }
+        }
+        &.suggested-action {
+          background-color: transparentize($cyan, 0.1);
+          &:hover { background-color: transparentize(lighten($cyan,5%), 0.1); }
+        }
     }
 }
 
