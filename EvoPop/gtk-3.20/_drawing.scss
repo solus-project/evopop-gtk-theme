@@ -241,7 +241,7 @@
     label, & { color: $backdrop_fg_color; }
 
     border-color: $backdrop_borders_color;
-    background-image: linear-gradient(to bottom, $_bg);
+    background-color: $_bg;
     text-shadow: none;
     icon-shadow: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);

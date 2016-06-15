@@ -15,7 +15,7 @@ messagedialog {
     box-shadow: inset 0 1px $top_highlight;
 
     &:backdrop {
-      background-color: $backdrop_bg_color;
+      background-color: transparentize(if($variant=='light', $headerbar_bg_color, $bg_color), 0.05);
     }
   }
 
