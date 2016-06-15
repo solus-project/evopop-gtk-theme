@@ -65,6 +65,9 @@
 
      &:disabled {
        color: $insensitive_fg_color;
+       background-color: transparent;
+       border-radius: 0;
+       box-shadow: none;
      }
 
      &.back-button,

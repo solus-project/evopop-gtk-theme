@@ -2,8 +2,10 @@
  * Links *
  *********/
 *:link {
+  font: bold;
   color: $link_color;
   background-color: transparent;
+  box-shadow: none;
 
   &:visited {
     color: $link_visited_color;

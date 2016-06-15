@@ -390,7 +390,7 @@ button {
   color: #fefefe;
   background-color: #505359;
   text-shadow: none;
-  border: transparent;
+  border: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   notebook > header > tabs > arrow,
@@ -423,22 +423,34 @@ button {
     text-shadow: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
     transition-duration: 50ms; }
-  notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked,
-  button:disabled:active,
-  button:disabled:checked {
+  notebook > header > tabs > arrow:disabled,
+  button:disabled {
     border-color: rgba(0, 0, 0, 0.1);
     background-image: none;
-    background-color: #119ebe;
-    color: rgba(254, 254, 254, 0.7);
+    background-color: #3d4248;
     text-shadow: none;
     box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
-    transition-duration: 50ms; }
-    notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked label, notebook > header > tabs > arrow:disabled:checked,
-    button:disabled:active label,
+    icon-shadow: none; }
+    notebook > header > tabs > arrow:disabled label, notebook > header > tabs > arrow:disabled,
+    button:disabled label,
+    button:disabled {
+      color: #989a9e; }
+    notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked,
     button:disabled:active,
-    button:disabled:checked label,
     button:disabled:checked {
-      color: rgba(254, 254, 254, 0.7); }
+      border-color: rgba(0, 0, 0, 0.1);
+      background-image: none;
+      background-color: #119ebe;
+      color: rgba(254, 254, 254, 0.7);
+      text-shadow: none;
+      box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
+      transition-duration: 50ms; }
+      notebook > header > tabs > arrow:disabled:active label, notebook > header > tabs > arrow:disabled:active, notebook > header > tabs > arrow:disabled:checked label, notebook > header > tabs > arrow:disabled:checked,
+      button:disabled:active label,
+      button:disabled:active,
+      button:disabled:checked label,
+      button:disabled:checked {
+        color: rgba(254, 254, 254, 0.7); }
   notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:backdrop,
   button:backdrop.flat,
   button:backdrop {
@@ -462,6 +474,7 @@ button {
     button:backdrop:checked {
       border-color: _border_color(#13b1d5);
       background-image: none;
+      background-color: #0f8aa6;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:active image, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked image, notebook > header > tabs > arrow:backdrop:checked, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:active image, notebook > header > tabs > arrow:backdrop:active, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:checked image, notebook > header > tabs > arrow:backdrop:checked,
       button:backdrop.flat:active label,
@@ -666,7 +679,7 @@ button.suggested-action {
   color: white;
   background-color: #37b9a5;
   text-shadow: none;
-  border: transparent;
+  border: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
@@ -708,6 +721,7 @@ button.suggested-action {
     button.suggested-action.flat:backdrop:checked {
       border-color: _border_color(#37b9a5);
       background-image: none;
+      background-color: #2b9282;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button.suggested-action:backdrop:active label,
       button.suggested-action:backdrop:active image,
@@ -787,7 +801,7 @@ button.destructive-action {
   color: white;
   background-color: #9b1b32;
   text-shadow: none;
-  border: transparent;
+  border: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2);
@@ -829,6 +843,7 @@ button.destructive-action {
     button.destructive-action.flat:backdrop:checked {
       border-color: _border_color(#9b1b32);
       background-image: none;
+      background-color: #701324;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button.destructive-action:backdrop:active label,
       button.destructive-action:backdrop:active image,
@@ -937,7 +952,7 @@ button .inline-toolbar toolbutton > button {
   color: #fefefe;
   background-color: #31363d;
   text-shadow: none;
-  border: transparent;
+  border: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   button .inline-toolbar toolbutton > button:hover {
@@ -964,6 +979,7 @@ button .inline-toolbar toolbutton > button {
     button .inline-toolbar toolbutton > button:backdrop:checked {
       border-color: rgba(33, 37, 41, 0.19);
       background-image: none;
+      background-color: #13b1d5;
       box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
       button .inline-toolbar toolbutton > button:backdrop:active label,
       button .inline-toolbar toolbutton > button:backdrop:active image,
@@ -1037,7 +1053,6 @@ button .scale-popup button:backdrop,
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
   .linked button:last-child, .linked button:active:last-child, .linked button:focus:last-child, .linked button:disabled:last-child, .linked > combobox:last-child button, .linked > combobox:last-child button:focus {
-    border-left-width: 0;
     border-radius: 3px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
@@ -1739,7 +1754,7 @@ colorswatch#add-color-button {
     color: #fefefe;
     background-color: #31363d;
     text-shadow: none;
-    border: transparent;
+    border: none;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
     box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
     colorswatch#add-color-button overlay:hover {
@@ -2369,7 +2384,10 @@ headerbar {
       border-radius: 0;
       box-shadow: none; }
     headerbar button:disabled {
-      color: #989a9e; }
+      color: #989a9e;
+      background-color: transparent;
+      border-radius: 0;
+      box-shadow: none; }
     headerbar button.back-button,
     headerbar button.suggested-action,
     headerbar button.menu-button,
@@ -2659,8 +2677,10 @@ levelbar {
  *********/
 *:link, button:link,
 button:visited {
+  font: bold;
   color: #13b1d5;
-  background-color: transparent; }
+  background-color: transparent;
+  box-shadow: none; }
   *:link:visited,
   button:visited {
     color: rgba(19, 177, 213, 0.5); }
@@ -6213,7 +6233,7 @@ ConversationListView {
   color: #fefefe;
   background-color: #31363d;
   text-shadow: none;
-  border: transparent;
+  border: none;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
   box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   #content_frame button:hover {

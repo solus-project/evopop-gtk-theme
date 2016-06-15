@@ -175,7 +175,7 @@
     color: $tc;
     background-color: $c;
     text-shadow: none;
-    border: transparent;
+    border: none;
     @include _shadows(inset 0 1px $_hilight_color, $_button_edge);
 
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
@@ -204,11 +204,11 @@
   // Disabled Button
   @else if $t==disabled {
 
-    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $disabled_bg_color);
+    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $insensitive_bg_color);
 
-    label, & { color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $bac_fg_color); }
+    label, & { color: if($tc!=$fg_color, mix($tc, $_bg, 50%), $insensitive_fg_color); }
 
-    border-color: if($c!=$bg_color, _border_color($c), $disabled_borders_color);
+    border-color: if($c!=$bg_color, _border_color($c), $insensitive_borders_color);
     background-image: none;
     background-color: $_bg;
     text-shadow: none;
@@ -258,6 +258,7 @@
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: none;
+    background-color: $_bg;
 
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
   }

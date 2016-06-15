@@ -42,6 +42,7 @@ button {
     }
 
     &:disabled {
+      @include button(disabled);
       &:active,
       &:checked {
         @include button(disabled-active);
@@ -389,7 +390,6 @@ button {
   & button:disabled:last-child,
   & > combobox:last-child button,
   & > combobox:last-child button:focus {
-      border-left-width: 0;
       border-radius: 3px;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
