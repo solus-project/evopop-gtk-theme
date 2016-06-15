@@ -395,8 +395,8 @@ button.color {
   /* middle button */
   & entry,
   & button,
-  > combobox > button:dir(ltr),
-  > combobox > button:dir(ltr):focus {
+  > combobox button:dir(ltr),
+  > combobox button:dir(ltr):focus {
     margin: 0;
     border-radius: 0;
     border-right: 1px solid transparentize(black,0.8);
@@ -415,8 +415,8 @@ button.color {
   & button:active:first-child,
   & button:focus:first-child,
   & button:disabled:first-child,
-  & > combobox:first-child > button,
-  & > combobox:first-child > button:focus {
+  & > combobox:first-child button,
+  & > combobox:first-child button:focus {
       border-radius: 3px;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
@@ -427,9 +427,9 @@ button.color {
   & button:active:last-child,
   & button:focus:last-child,
   & button:disabled:last-child,
-  & > combobox:last-child > button,
-  & > combobox:last-child > button:focus {
-      border-right-width: 0;
+  & > combobox:last-child button,
+  & > combobox:last-child button:focus {
+      border-left-width: 0;
       border-radius: 3px;
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
@@ -447,8 +447,8 @@ button.color {
   & button:active:only-child,
   & button:focus:only-child,
   & button:disabled:only-child,
-  &.vertical > combobox:only-child > button,
-  &.vertical > combobox:only-child > button:focus {
+  & > combobox:only-child button,
+  & > combobox:only-child button:focus {
       border-radius: 3px;
   }
 
@@ -458,8 +458,8 @@ button.color {
   &.vertical button:active,
   &.vertical button:focus,
   &.vertical button:disabled,
-  &.vertical > GtkComboBox > button:dir(ltr),
-  &.vertical > GtkComboBox > button:dir(ltr):focus {
+  &.vertical > combobox button:dir(ltr),
+  &.vertical > combobox button:dir(ltr):focus {
       border-bottom-width: 0;
       border-radius: 0;
   }
@@ -470,8 +470,8 @@ button.color {
   &.vertical button:active:first-child,
   &.vertical button:focus:first-child,
   &.vertical button:disabled:first-child,
-  &.vertical > combobox:first-child > button,
-  &.vertical > combobox:first-child > button:focus {
+  &.vertical > combobox:first-child button,
+  &.vertical > combobox:first-child button:focus {
       border-bottom-width: 0;
       border-radius: 3px;
       border-bottom-right-radius: 0;
@@ -484,8 +484,8 @@ button.color {
   &.vertical button:active:last-child,
   &.vertical button:focus:last-child,
   &.vertical button:disabled:last-child,
-  &.vertical > combobox:last-child > button,
-  &.vertical > combobox:last-child > button:focus {
+  &.vertical > combobox:last-child button,
+  &.vertical > combobox:last-child button:focus {
       border-radius: 3px;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -497,8 +497,8 @@ button.color {
   &.vertical button:active:only-child,
   &.vertical button:focus:only-child,
   &.vertical button:disabled:only-child,
-  &.vertical > combobox:only-child > button,
-  &.vertical > combobox:only-child > button:focus {
+  &.vertical > combobox:only-child button,
+  &.vertical > combobox:only-child button:focus {
       border-radius: 3px;
   }
 
@@ -547,8 +547,7 @@ modelbutton.flat,
   outline-offset: -2px;
 
   &:hover {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    background-color: darken($base_color,10%);
   }
 
   &:selected {

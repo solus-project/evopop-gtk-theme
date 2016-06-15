@@ -14,12 +14,7 @@ scrollbar {
 
   background-color: $scrollbar_bg_color;
   transition: 300ms $ease-out-quad;
-
-  // scrollbar border
-  &.top { border-bottom: 1px solid $borders_color; }
-  &.bottom { border-top: 1px solid $borders_color; }
-  &.left { border-right: 1px solid $borders_color; }
-  &.right { border-left: 1px solid $borders_color; }
+  border: none;
 
   &:backdrop {
     background-color: $backdrop_scrollbar_bg_color;

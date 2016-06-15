@@ -1124,25 +1124,25 @@ button {
   /* rightmost button (vertical) */
   /* linked single button (vertical) */ }
   .linked entry, .linked button,
-  .linked > combobox > button:dir(ltr),
-  .linked > combobox > button:dir(ltr):focus {
+  .linked > combobox button:dir(ltr),
+  .linked > combobox button:dir(ltr):focus {
     margin: 0;
     border-radius: 0;
     border-right: 1px solid rgba(0, 0, 0, 0.2); }
     .linked entry:focus, .linked entry:active, .linked entry:insensitive, .linked button:focus, .linked button:active, .linked button:insensitive,
-    .linked > combobox > button:dir(ltr):focus,
-    .linked > combobox > button:dir(ltr):active,
-    .linked > combobox > button:dir(ltr):insensitive,
-    .linked > combobox > button:dir(ltr):focus:focus,
-    .linked > combobox > button:dir(ltr):focus:active,
-    .linked > combobox > button:dir(ltr):focus:insensitive {
+    .linked > combobox button:dir(ltr):focus,
+    .linked > combobox button:dir(ltr):active,
+    .linked > combobox button:dir(ltr):insensitive,
+    .linked > combobox button:dir(ltr):focus:focus,
+    .linked > combobox button:dir(ltr):focus:active,
+    .linked > combobox button:dir(ltr):focus:insensitive {
       border-radius: 0; }
-  .linked entry:first-child, .linked button:first-child, .linked button:active:first-child, .linked button:focus:first-child, .linked button:disabled:first-child, .linked > combobox:first-child > button, .linked > combobox:first-child > button:focus {
+  .linked entry:first-child, .linked button:first-child, .linked button:active:first-child, .linked button:focus:first-child, .linked button:disabled:first-child, .linked > combobox:first-child button, .linked > combobox:first-child button:focus {
     border-radius: 3px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
-  .linked button:last-child, .linked button:active:last-child, .linked button:focus:last-child, .linked button:disabled:last-child, .linked > combobox:last-child > button, .linked > combobox:last-child > button:focus {
-    border-right-width: 0;
+  .linked button:last-child, .linked button:active:last-child, .linked button:focus:last-child, .linked button:disabled:last-child, .linked > combobox:last-child button, .linked > combobox:last-child button:focus {
+    border-left-width: 0;
     border-radius: 3px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
@@ -1151,21 +1151,21 @@ button {
     border-radius: 3px;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0; }
-  .linked entry:only-child, .linked button:only-child, .linked button:active:only-child, .linked button:focus:only-child, .linked button:disabled:only-child, .linked.vertical > combobox:only-child > button, .linked.vertical > combobox:only-child > button:focus {
+  .linked entry:only-child, .linked button:only-child, .linked button:active:only-child, .linked button:focus:only-child, .linked button:disabled:only-child, .linked > combobox:only-child button, .linked > combobox:only-child button:focus {
     border-radius: 3px; }
-  .linked.vertical entry, .linked.vertical button, .linked.vertical button:active, .linked.vertical button:focus, .linked.vertical button:disabled, .linked.vertical > GtkComboBox > button:dir(ltr), .linked.vertical > GtkComboBox > button:dir(ltr):focus {
+  .linked.vertical entry, .linked.vertical button, .linked.vertical button:active, .linked.vertical button:focus, .linked.vertical button:disabled, .linked.vertical > combobox button:dir(ltr), .linked.vertical > combobox button:dir(ltr):focus {
     border-bottom-width: 0;
     border-radius: 0; }
-  .linked.vertical entry:first-child, .linked.vertical button:first-child, .linked.vertical button:active:first-child, .linked.vertical button:focus:first-child, .linked.vertical button:disabled:first-child, .linked.vertical > combobox:first-child > button, .linked.vertical > combobox:first-child > button:focus {
+  .linked.vertical entry:first-child, .linked.vertical button:first-child, .linked.vertical button:active:first-child, .linked.vertical button:focus:first-child, .linked.vertical button:disabled:first-child, .linked.vertical > combobox:first-child button, .linked.vertical > combobox:first-child button:focus {
     border-bottom-width: 0;
     border-radius: 3px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .linked.vertical entry:last-child, .linked.vertical button:last-child, .linked.vertical button:active:last-child, .linked.vertical button:focus:last-child, .linked.vertical button:disabled:last-child, .linked.vertical > combobox:last-child > button, .linked.vertical > combobox:last-child > button:focus {
+  .linked.vertical entry:last-child, .linked.vertical button:last-child, .linked.vertical button:active:last-child, .linked.vertical button:focus:last-child, .linked.vertical button:disabled:last-child, .linked.vertical > combobox:last-child button, .linked.vertical > combobox:last-child button:focus {
     border-radius: 3px;
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
-  .linked.vertical entry:only-child, .linked.vertical button:only-child, .linked.vertical button:active:only-child, .linked.vertical button:focus:only-child, .linked.vertical button:disabled:only-child, .linked.vertical > combobox:only-child > button, .linked.vertical > combobox:only-child > button:focus {
+  .linked.vertical entry:only-child, .linked.vertical button:only-child, .linked.vertical button:active:only-child, .linked.vertical button:focus:only-child, .linked.vertical button:disabled:only-child, .linked.vertical > combobox:only-child button, .linked.vertical > combobox:only-child button:focus {
     border-radius: 3px; }
   .linked.vertical entry:first-child {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1200,8 +1200,7 @@ popover.background radiobutton,
   modelbutton.flat:hover, popover.background checkbutton:hover,
   popover.background radiobutton:hover,
   .menuitem.button.flat:hover {
-    background-color: #13b1d5;
-    color: #fefefe; }
+    background-color: #383a3e; }
   modelbutton.flat:selected, popover.background checkbutton:selected,
   popover.background radiobutton:selected,
   .menuitem.button.flat:selected {
@@ -4253,22 +4252,11 @@ scale {
 .scrollbar,
 scrollbar {
   background-color: transparent;
-  transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: none; }
   * {
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false; }
-  .scrollbar.top,
-  scrollbar.top {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  .scrollbar.bottom,
-  scrollbar.bottom {
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
-  .scrollbar.left,
-  scrollbar.left {
-    border-right: 1px solid rgba(0, 0, 0, 0.1); }
-  .scrollbar.right,
-  scrollbar.right {
-    border-left: 1px solid rgba(0, 0, 0, 0.1); }
   .scrollbar:backdrop,
   scrollbar:backdrop {
     background-color: #2a2e35;
