@@ -106,9 +106,8 @@
   @if $t==osd-focus {
     color: $osd_text_color;
     border-color: $selected_bg_color;
-    background-image: linear-gradient(to bottom, transparentize(opacify($osd_borders_color, 1), 0.5));
+    background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
     background-clip: padding-box;
-    box-shadow: entry_focus_shadow($fc);
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
   }

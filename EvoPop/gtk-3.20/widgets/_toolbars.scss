@@ -189,6 +189,26 @@ toolbar {
     &.right,
     &.top,
     &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
+
+    & button {
+      border-radius: 3px;
+      &:hover {
+        background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        box-shadow: none;
+        text-shadow: 0 1px black;
+        icon-shadow: 0 1px black;
+      }
+
+      &:active,
+      &:focus {
+        background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        box-shadow: none;
+        border-radius: 3px;
+        text-shadow: 0 1px black;
+        icon-shadow: 0 1px black;
+      }
+    }
+
   }
 
   // toolbar separators

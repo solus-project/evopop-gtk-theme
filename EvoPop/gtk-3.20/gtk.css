@@ -2030,9 +2030,8 @@ entry {
     entry:focus {
       color: white;
       border-color: #13b1d5;
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5));
+      background-color: rgba(0, 0, 0, 0.5);
       background-clip: padding-box;
-      box-shadow: inset 0 1px 2px 0 rgba(0, 0, 0, 0.05), inset 0 1px 1px 0 rgba(0, 0, 0, 0.1);
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black; }
     .osd spinbutton:backdrop:not(.vertical), .osd
@@ -4861,6 +4860,19 @@ toolbar.osd {
   background-color: rgba(20, 23, 26, 0.8); }
   toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
     border-radius: 0; }
+  toolbar.osd button {
+    border-radius: 3px; }
+    toolbar.osd button:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: none;
+      text-shadow: 0 1px black;
+      icon-shadow: 0 1px black; }
+    toolbar.osd button:active, toolbar.osd button:focus {
+      background-color: rgba(0, 0, 0, 0.5);
+      box-shadow: none;
+      border-radius: 3px;
+      text-shadow: 0 1px black;
+      icon-shadow: 0 1px black; }
 toolbar.horizontal separator {
   margin: 0 7px 1px 6px; }
 toolbar.vertical separator {
