@@ -4836,6 +4836,16 @@ toolbar button {
     color: rgba(0, 0, 0, 0.2); }
   toolbar button.menu-button .menu .menuitem:hover label {
     color: #fefefe; }
+toolbar entry {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: #2c3137;
+  color: #fefefe;
+  border: none;
+  box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.3), inset 0 -1px rgba(255, 255, 255, 0.3); }
+  toolbar entry:backdrop {
+    background: none;
+    box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.3), inset 0 -1px rgba(255, 255, 255, 0.3); }
 toolbar .separator {
   color: transparent;
   background-color: transparent; }

@@ -156,6 +156,21 @@ toolbar {
     }
   }
 
+  entry {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color: darken($headerbar_bg_color, 2%);
+    color: $headerbar_fg_color;
+    border: none;
+    box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.3),
+                inset 0 -1px rgba(255,255,255,0.3);
+    &:backdrop {
+      background: none;
+      box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.3),
+                  inset 0 -1px rgba(255,255,255,0.3);
+    }
+  }
+
   .separator {
     color: transparent;
     background-color: transparent;
