@@ -4877,7 +4877,6 @@ searchbar,
     searchbar button:backdrop,
     .search-bar button:backdrop, .location-bar button:backdrop,
     .inline-toolbar button:backdrop {
-      border: none;
       background: none;
       background-color: transparent;
       color: #989a9e; }
@@ -4911,11 +4910,11 @@ searchbar,
   .location-bar entry,
   .inline-toolbar .entry,
   .inline-toolbar entry {
-    background: none;
+    background-color: #282c32;
     color: #fefefe;
-    border-radius: 0px;
+    border-radius: 3px;
     border: none;
-    box-shadow: none; }
+    box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.3), inset 0 -1px rgba(255, 255, 255, 0.6); }
     searchbar .entry.image,
     .search-bar .entry.image, .location-bar .entry.image,
     searchbar entry.image,
@@ -4939,7 +4938,9 @@ searchbar,
     .location-bar entry:backdrop,
     .inline-toolbar .entry:backdrop,
     .inline-toolbar entry:backdrop {
-      color: #989a9e; }
+      background: none;
+      color: #989a9e;
+      box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.3), inset 0 -1px rgba(255, 255, 255, 0.6); }
     searchbar .entry:selected,
     .search-bar .entry:selected, .location-bar .entry:selected,
     searchbar entry:selected,
@@ -4948,7 +4949,8 @@ searchbar,
     .inline-toolbar .entry:selected,
     .inline-toolbar entry:selected {
       color: #505359;
-      background-color: #13b1d5; }
+      background-color: #13b1d5;
+      box-shadow: inset 1px 1px 5px 0px black; }
 
 searchbar,
 .search-bar, .location-bar {
@@ -4967,6 +4969,13 @@ searchbar,
   padding: 3px 0px;
   border-width: 0;
   border-radius: 0; }
+  searchbar .linked entry,
+  .search-bar .linked entry {
+    border: none; }
+  searchbar .linked button,
+  .search-bar .linked button {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: none; }
 
 .location-bar {
   border-width: 0 0 1px;
@@ -5798,9 +5807,9 @@ EphyWindow headerbar .incognito-mode button {
       color: #119ebe; }
   .gedit-search-slider entry {
     border: none;
-    background-color: #31363D;
+    background-color: #2c3137;
     color: #fefefe;
-    box-shadow: inset 1px 1px 5px 0px #1a1d21; }
+    box-shadow: inset 3px 3px 3px 0px rgba(0, 0, 0, 0.3), inset 0 -1px rgba(255, 255, 255, 0.3); }
     .gedit-search-slider entry.error {
       color: #c72240; }
       .gedit-search-slider entry.error:focus {
