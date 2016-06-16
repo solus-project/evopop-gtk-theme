@@ -20,9 +20,9 @@
     border-style: none;
     border-radius: 5px;
   }
-  
+
   // +/- buttons on GtkVolumeButton popup
-  button { 
+  button {
     &:hover {
       @extend %undecorated_button;
       background-color: transparentize($fg_color,0.9);

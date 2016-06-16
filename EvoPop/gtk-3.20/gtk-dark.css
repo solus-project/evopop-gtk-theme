@@ -127,7 +127,7 @@ read if you used those and something break with a version upgrade you're on your
 .app-notification,
 .app-notification.frame {
   padding: 10px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 3px 3px;
   background-color: rgba(20, 23, 26, 0.8);
   background-clip: padding-box; }
   .app-notification:backdrop,
@@ -572,12 +572,11 @@ button.osd {
   outline-color: rgba(254, 254, 254, 0.3);
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
+  background-color: rgba(31, 36, 40, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3);
   border: none;
   box-shadow: none; }
   button.osd:hover {
@@ -621,12 +620,11 @@ button.osd {
 button {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
+  background-color: rgba(31, 36, 40, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3); }
+  icon-shadow: 0 1px black; }
   .app-notification .button:hover, .app-notification button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .osd
   button:hover {
     color: white;
@@ -788,12 +786,11 @@ button.suggested-action {
   button.suggested-action {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(55, 185, 165, 0.5));
+    background-color: rgba(55, 185, 165, 0.5);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    icon-shadow: 0 1px black; }
     .osd
     button.suggested-action:hover {
       color: white;
@@ -910,12 +907,11 @@ button.destructive-action {
   button.destructive-action {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient(to bottom, rgba(155, 27, 50, 0.5));
+    background-color: rgba(155, 27, 50, 0.5);
     background-clip: padding-box;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
     text-shadow: 0 1px black;
-    icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    icon-shadow: 0 1px black; }
     .osd
     button.destructive-action:hover {
       color: white;
@@ -3787,12 +3783,11 @@ scale {
     .osd scale slider {
       color: #fefefe;
       border-color: rgba(0, 0, 0, 0.7);
-      background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
+      background-color: rgba(31, 36, 40, 0.8);
       background-clip: padding-box;
       box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
       text-shadow: 0 1px black;
       icon-shadow: 0 1px black;
-      outline-color: rgba(254, 254, 254, 0.3);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: #14171a; }
       .osd scale slider:hover {
@@ -4609,12 +4604,11 @@ spinbutton.vertical button.down {
 .osd spinbutton.vertical button:first-child {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
+  background-color: rgba(31, 36, 40, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3); }
+  icon-shadow: 0 1px black; }
   .osd spinbutton.vertical button:first-child:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
@@ -6329,12 +6323,11 @@ ConversationListView {
 #buttonbox_frame button {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-image: linear-gradient(to bottom, rgba(20, 23, 26, 0.8));
+  background-color: rgba(31, 36, 40, 0.8);
   background-clip: padding-box;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3); }
+  icon-shadow: 0 1px black; }
   #buttonbox_frame button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);

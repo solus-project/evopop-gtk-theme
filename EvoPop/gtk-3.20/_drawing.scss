@@ -298,16 +298,15 @@
 
   // OSD Button
   @else if $t==osd {
-    $_bg: if($c!=$bg_color, transparentize($c, 0.5), $osd_bg_color);
+    $_bg: if($c!=$bg_color, transparentize($c, 0.5), lighten($osd_bg_color, 5%));
 
     color: $osd_fg_color;
     border-color: $osd_borders_color;
-    background-image: linear-gradient(to bottom, $_bg);
+    background-color: $_bg;
     background-clip: padding-box;
     box-shadow: inset 0 1px transparentize(white, 0.9);
     text-shadow: 0 1px black;
     icon-shadow: 0 1px black;
-    outline-color: transparentize($osd_fg_color, 0.7);
   }
 
   // Hover OSD Button
