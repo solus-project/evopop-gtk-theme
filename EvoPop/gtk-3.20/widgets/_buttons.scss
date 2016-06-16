@@ -62,10 +62,10 @@ button {
         &:checked { @include button(backdrop-active,$backdrop_selected_bg_color); }
 
         &:disabled {
-          @include button(backdrop-insensitive);
+          @include button(backdrop-disabled);
 
           &:active,
-          &:checked { @include button(backdrop-insensitive-active); }
+          &:checked { @include button(backdrop-disabled-active); }
         }
       }
     }

@@ -501,6 +501,35 @@ button {
       button:backdrop:checked label,
       button:backdrop:checked {
         color: rgba(254, 254, 254, 0.5); }
+    notebook > header > tabs > arrow:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled,
+    button:backdrop.flat:disabled,
+    button:backdrop:disabled {
+      border-color: rgba(0, 0, 0, 0.2);
+      background-image: none;
+      background-color: #f0f1f3;
+      text-shadow: none;
+      icon-shadow: none; }
+      notebook > header > tabs > arrow:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled, notebook > header > tabs > arrow:backdrop:disabled label, notebook > header > tabs > arrow:backdrop:disabled,
+      button:backdrop.flat:disabled label,
+      button:backdrop.flat:disabled,
+      button:backdrop:disabled label,
+      button:backdrop:disabled {
+        color: #8c8f94; }
+      notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked, notebook > header > tabs > arrow:backdrop:disabled:active, notebook > header > tabs > arrow:backdrop:disabled:checked,
+      button:backdrop.flat:disabled:active,
+      button:backdrop.flat:disabled:checked,
+      button:backdrop:disabled:active,
+      button:backdrop:disabled:checked {
+        border-color: rgba(115, 116, 118, 0.28);
+        background-image: none;
+        background-color: #0f8aa6;
+        box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
+        notebook > header > tabs > arrow:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label, notebook > header > tabs > arrow:backdrop:disabled:active label, notebook > header > tabs > arrow:backdrop:disabled:checked label,
+        button:backdrop.flat:disabled:active label,
+        button:backdrop.flat:disabled:checked label,
+        button:backdrop:disabled:active label,
+        button:backdrop:disabled:checked label {
+          color: rgba(254, 254, 254, 0.5); }
   notebook > header > tabs > arrow:backdrop, notebook > header > tabs > arrow:disabled, notebook > header > tabs > arrow:backdrop:disabled,
   button.flat:backdrop,
   button.flat:disabled,
@@ -1208,11 +1237,11 @@ radio:disabled {
   -gtk-icon-shadow: none; }
 
 check:disabled:backdrop {
-  -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-unchecked-backdrop-insensitive.png"), url("../assets/checkbox-unchecked-backdrop-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/checkbox-unchecked-insensitive.png"), url("../assets/checkbox-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
 radio:disabled:backdrop {
-  -gtk-icon-source: -gtk-scaled(url("../assets/radio-unchecked-backdrop-insensitive.png"), url("../assets/radio-unchecked-backdrop-insensitive@2.png"));
+  -gtk-icon-source: -gtk-scaled(url("../assets/radio-unchecked-insensitive.png"), url("../assets/radio-unchecked-insensitive@2.png"));
   -gtk-icon-shadow: none; }
 
 check:checked {

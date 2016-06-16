@@ -266,29 +266,28 @@
   // Disabled Backdrop Button
   @else if $t==backdrop-disabled {
 
-    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $disabled_bg_color);
+    $_bg: if($c!=$bg_color, mix($c, $base_color, 85%), $insensitive_bg_color);
     $_bc: if($variant=='light', $_bg,_border_color($c));
 
-    label, & { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $backdrop_disabled_color); }
+    label, & { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $insensitive_fg_color); }
 
-    border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
+    border-color: if($c!=$bg_color, $_bc, $insensitive_borders_color);
     background-image: none;
     background-color: $_bg;
     text-shadow: none;
     icon-shadow: none;
     // white with 0 alpha to avoid an ugly transition, since no color means
     // black with 0 alpha
-    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
   }
 
   // Disabled Backdrop Pushed Button
   @else if $t==backdrop-disabled-active {
 
     $_bg: if($c!=$bg_color, darken(mix($c, $base_color, 85%), 5%),
-                            darken($disabled_bg_color, 5%));
+                            darken($selected_bg_color, 10%));
     $_bc: if($variant=='light', $_bg,_border_color($c));
 
-    label { color: if($c!=$bg_color, mix($tc, $_bg, 35%), $backdrop_disabled_color); }
+    label { color: transparentize($selected_fg_color,0.5); }
 
     border-color: if($c!=$bg_color, $_bc, $backdrop_borders_color);
     background-image: none;

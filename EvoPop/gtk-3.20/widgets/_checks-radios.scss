@@ -11,7 +11,7 @@
                   (':active', '-unchecked-active'),
                   (':backdrop', '-unchecked-backdrop'),
                   (':disabled', '-unchecked-insensitive'),
-                  (':disabled:backdrop', '-unchecked-backdrop-insensitive') {
+                  (':disabled:backdrop', '-unchecked-insensitive') {
   check#{$s}{
     -gtk-icon-source: if($variant == 'light', -gtk-scaled(url("../assets/checkbox#{$un}.png"),url("../assets/checkbox#{$un}@2.png")), -gtk-scaled(url("../assets/checkbox#{$un}-dark.png"),url("../assets/checkbox#{$un}-dark@2.png")));
     -gtk-icon-shadow: none;
