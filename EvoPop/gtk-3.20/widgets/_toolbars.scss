@@ -56,10 +56,11 @@ toolbar {
 
       &:hover {
         background-image:none;
-        background-color: transparentize(black, 0.85);
-        color:lighten($headerbar_fg_color, 10%);
+        background-color: transparent;
+        color:$headerbar_fg_color;
         box-shadow:none;
         text-shadow:none;
+        @include lines(both);
       }
 
       &:disabled {
@@ -82,17 +83,18 @@ toolbar {
     &:focus,
     &:hover {
       background-image:none;
-      background-color: transparentize(black, 0.85);
-      color:lighten($headerbar_fg_color, 10%);
+      background-color: transparent;
+      color:$headerbar_fg_color;
       box-shadow:none;
       text-shadow:none;
+      @include lines(both);
     }
 
     &:backdrop {
       background-color: transparent;
       background-image: none;
       color: $backdrop_headerbar_fg_color;
-
+      @include lines(both);
       image {
         color: $backdrop_headerbar_fg_color;
       }
@@ -105,7 +107,7 @@ toolbar {
       text-shadow: none;
       -gtk-icon-shadow: none;
 
-      box-shadow: inset 0 -2px 0 0 $headerbar_fg_color;
+      @include lines(both);
 
       background-color: transparent;
       background-image: none;
@@ -116,16 +118,16 @@ toolbar {
         background-image: none;
         color: $backdrop_headerbar_fg_color;
 
-        box-shadow: inset 0 -2px 0 0 $backdrop_headerbar_fg_color;
+        @include lines(both);
       }
 
       &:focus,
       &:hover {
         background-image:none;
-        background-color: transparentize(black, 0.85);
+        background-color: transparent;
         color:lighten($headerbar_fg_color, 10%);
-        box-shadow: inset 0 -2px 0 0 $headerbar_fg_color;
-      }
+        @include lines(both);
+        }
     }
 
     &:disabled,
@@ -211,7 +213,8 @@ toolbar {
   border-top-width: 0;
   border-radius: 0 0 3px 3px;
 
-  box-shadow: inset 0 -1px 1px -2px transparentize(black, 0.5);
+  box-shadow: inset 0 -1px 1px -2px transparentize(black, 0.5),
+              inset 0 1px rgba(255,255,255,0.3);
 
   padding: 0px;
 
@@ -245,6 +248,20 @@ toolbar {
       color: $fg_color;
       border-radius: 0px;
       padding: 7px;
+
+      &:hover,
+      &:focus {
+        color: $selected_bg_color;
+        box-shadow: none;
+        label,image { color: $selected_bg_color; }
+      }
+
+      &:active,
+      &:checked {
+        color: darken($selected_bg_color, 5%);
+        box-shadow: none;
+        label,image { color: darken($selected_bg_color, 5%); }
+      }
     }
 
     &:focus,

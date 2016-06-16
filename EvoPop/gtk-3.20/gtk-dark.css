@@ -4761,10 +4761,11 @@ toolbar button {
       color: rgba(254, 254, 254, 0.8); }
     toolbar button.suggested-action:hover, toolbar button.text-button:hover, toolbar button.menu-button:hover, toolbar button.image-button:hover, toolbar button.linked:hover, toolbar button.flat:hover {
       background-image: none;
-      background-color: rgba(0, 0, 0, 0.15);
-      color: white;
+      background-color: transparent;
+      color: #fefefe;
       box-shadow: none;
-      text-shadow: none; }
+      text-shadow: none;
+      box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe; }
     toolbar button.suggested-action:disabled, toolbar button.text-button:disabled, toolbar button.menu-button:disabled, toolbar button.image-button:disabled, toolbar button.linked:disabled, toolbar button.flat:disabled {
       color: rgba(254, 254, 254, 0.8);
       -gtk-icon-effect: dim; }
@@ -4778,21 +4779,23 @@ toolbar button {
       -gtk-icon-effect: dim; }
   toolbar button:focus, toolbar button:hover {
     background-image: none;
-    background-color: rgba(0, 0, 0, 0.15);
-    color: white;
+    background-color: transparent;
+    color: #fefefe;
     box-shadow: none;
-    text-shadow: none; }
+    text-shadow: none;
+    box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe; }
   toolbar button:backdrop {
     background-color: transparent;
     background-image: none;
-    color: rgba(254, 254, 254, 0.8); }
+    color: rgba(254, 254, 254, 0.8);
+    box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe; }
     toolbar button:backdrop image {
       color: rgba(254, 254, 254, 0.8); }
   toolbar button:active, toolbar button:checked {
     border-radius: 0px;
     text-shadow: none;
     -gtk-icon-shadow: none;
-    box-shadow: inset 0 -2px 0 0 #fefefe;
+    box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe;
     background-color: transparent;
     background-image: none;
     color: #fefefe; }
@@ -4800,12 +4803,12 @@ toolbar button {
       background-color: transparent;
       background-image: none;
       color: rgba(254, 254, 254, 0.8);
-      box-shadow: inset 0 -2px 0 0 rgba(254, 254, 254, 0.8); }
+      box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe; }
     toolbar button:active:focus, toolbar button:active:hover, toolbar button:checked:focus, toolbar button:checked:hover {
       background-image: none;
-      background-color: rgba(0, 0, 0, 0.15);
+      background-color: transparent;
       color: white;
-      box-shadow: inset 0 -2px 0 0 #fefefe; }
+      box-shadow: inset 0 -3px 0 0 #119ebe, inset 0 3px 0 0 #119ebe; }
   toolbar button:disabled, toolbar button:disabled:backdrop {
     color: rgba(254, 254, 254, 0.8);
     background-color: transparent;
@@ -4859,7 +4862,7 @@ searchbar,
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top-width: 0;
   border-radius: 0 0 3px 3px;
-  box-shadow: inset 0 -1px 1px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -1px 1px -2px rgba(0, 0, 0, 0.5), inset 0 1px rgba(255, 255, 255, 0.3);
   padding: 0px; }
   searchbar:backdrop,
   .search-bar:backdrop, .location-bar:backdrop,
@@ -4898,6 +4901,160 @@ searchbar,
       color: #fefefe;
       border-radius: 0px;
       padding: 7px; }
+      searchbar button.suggested-action:hover,
+      .search-bar button.suggested-action:hover, .location-bar button.suggested-action:hover, searchbar button.suggested-action:focus,
+      .search-bar button.suggested-action:focus, .location-bar button.suggested-action:focus, searchbar button.text-button:hover,
+      .search-bar button.text-button:hover, .location-bar button.text-button:hover, searchbar button.text-button:focus,
+      .search-bar button.text-button:focus, .location-bar button.text-button:focus, searchbar button.menu-button:hover,
+      .search-bar button.menu-button:hover, .location-bar button.menu-button:hover, searchbar button.menu-button:focus,
+      .search-bar button.menu-button:focus, .location-bar button.menu-button:focus, searchbar button.image-button:hover,
+      .search-bar button.image-button:hover, .location-bar button.image-button:hover, searchbar button.image-button:focus,
+      .search-bar button.image-button:focus, .location-bar button.image-button:focus, searchbar button.linked:hover,
+      .search-bar button.linked:hover, .location-bar button.linked:hover, searchbar button.linked:focus,
+      .search-bar button.linked:focus, .location-bar button.linked:focus, searchbar button.flat:hover,
+      .search-bar button.flat:hover, .location-bar button.flat:hover, searchbar button.flat:focus,
+      .search-bar button.flat:focus, .location-bar button.flat:focus,
+      .inline-toolbar button.suggested-action:hover,
+      .inline-toolbar button.suggested-action:focus,
+      .inline-toolbar button.text-button:hover,
+      .inline-toolbar button.text-button:focus,
+      .inline-toolbar button.menu-button:hover,
+      .inline-toolbar button.menu-button:focus,
+      .inline-toolbar button.image-button:hover,
+      .inline-toolbar button.image-button:focus,
+      .inline-toolbar button.linked:hover,
+      .inline-toolbar button.linked:focus,
+      .inline-toolbar button.flat:hover,
+      .inline-toolbar button.flat:focus {
+        color: #13b1d5;
+        box-shadow: none; }
+        searchbar button.suggested-action:hover label,
+        .search-bar button.suggested-action:hover label, .location-bar button.suggested-action:hover label, searchbar button.suggested-action:hover image,
+        .search-bar button.suggested-action:hover image, .location-bar button.suggested-action:hover image, searchbar button.suggested-action:focus label,
+        .search-bar button.suggested-action:focus label, .location-bar button.suggested-action:focus label, searchbar button.suggested-action:focus image,
+        .search-bar button.suggested-action:focus image, .location-bar button.suggested-action:focus image, searchbar button.text-button:hover label,
+        .search-bar button.text-button:hover label, .location-bar button.text-button:hover label, searchbar button.text-button:hover image,
+        .search-bar button.text-button:hover image, .location-bar button.text-button:hover image, searchbar button.text-button:focus label,
+        .search-bar button.text-button:focus label, .location-bar button.text-button:focus label, searchbar button.text-button:focus image,
+        .search-bar button.text-button:focus image, .location-bar button.text-button:focus image, searchbar button.menu-button:hover label,
+        .search-bar button.menu-button:hover label, .location-bar button.menu-button:hover label, searchbar button.menu-button:hover image,
+        .search-bar button.menu-button:hover image, .location-bar button.menu-button:hover image, searchbar button.menu-button:focus label,
+        .search-bar button.menu-button:focus label, .location-bar button.menu-button:focus label, searchbar button.menu-button:focus image,
+        .search-bar button.menu-button:focus image, .location-bar button.menu-button:focus image, searchbar button.image-button:hover label,
+        .search-bar button.image-button:hover label, .location-bar button.image-button:hover label, searchbar button.image-button:hover image,
+        .search-bar button.image-button:hover image, .location-bar button.image-button:hover image, searchbar button.image-button:focus label,
+        .search-bar button.image-button:focus label, .location-bar button.image-button:focus label, searchbar button.image-button:focus image,
+        .search-bar button.image-button:focus image, .location-bar button.image-button:focus image, searchbar button.linked:hover label,
+        .search-bar button.linked:hover label, .location-bar button.linked:hover label, searchbar button.linked:hover image,
+        .search-bar button.linked:hover image, .location-bar button.linked:hover image, searchbar button.linked:focus label,
+        .search-bar button.linked:focus label, .location-bar button.linked:focus label, searchbar button.linked:focus image,
+        .search-bar button.linked:focus image, .location-bar button.linked:focus image, searchbar button.flat:hover label,
+        .search-bar button.flat:hover label, .location-bar button.flat:hover label, searchbar button.flat:hover image,
+        .search-bar button.flat:hover image, .location-bar button.flat:hover image, searchbar button.flat:focus label,
+        .search-bar button.flat:focus label, .location-bar button.flat:focus label, searchbar button.flat:focus image,
+        .search-bar button.flat:focus image, .location-bar button.flat:focus image,
+        .inline-toolbar button.suggested-action:hover label,
+        .inline-toolbar button.suggested-action:hover image,
+        .inline-toolbar button.suggested-action:focus label,
+        .inline-toolbar button.suggested-action:focus image,
+        .inline-toolbar button.text-button:hover label,
+        .inline-toolbar button.text-button:hover image,
+        .inline-toolbar button.text-button:focus label,
+        .inline-toolbar button.text-button:focus image,
+        .inline-toolbar button.menu-button:hover label,
+        .inline-toolbar button.menu-button:hover image,
+        .inline-toolbar button.menu-button:focus label,
+        .inline-toolbar button.menu-button:focus image,
+        .inline-toolbar button.image-button:hover label,
+        .inline-toolbar button.image-button:hover image,
+        .inline-toolbar button.image-button:focus label,
+        .inline-toolbar button.image-button:focus image,
+        .inline-toolbar button.linked:hover label,
+        .inline-toolbar button.linked:hover image,
+        .inline-toolbar button.linked:focus label,
+        .inline-toolbar button.linked:focus image,
+        .inline-toolbar button.flat:hover label,
+        .inline-toolbar button.flat:hover image,
+        .inline-toolbar button.flat:focus label,
+        .inline-toolbar button.flat:focus image {
+          color: #13b1d5; }
+      searchbar button.suggested-action:active,
+      .search-bar button.suggested-action:active, .location-bar button.suggested-action:active, searchbar button.suggested-action:checked,
+      .search-bar button.suggested-action:checked, .location-bar button.suggested-action:checked, searchbar button.text-button:active,
+      .search-bar button.text-button:active, .location-bar button.text-button:active, searchbar button.text-button:checked,
+      .search-bar button.text-button:checked, .location-bar button.text-button:checked, searchbar button.menu-button:active,
+      .search-bar button.menu-button:active, .location-bar button.menu-button:active, searchbar button.menu-button:checked,
+      .search-bar button.menu-button:checked, .location-bar button.menu-button:checked, searchbar button.image-button:active,
+      .search-bar button.image-button:active, .location-bar button.image-button:active, searchbar button.image-button:checked,
+      .search-bar button.image-button:checked, .location-bar button.image-button:checked, searchbar button.linked:active,
+      .search-bar button.linked:active, .location-bar button.linked:active, searchbar button.linked:checked,
+      .search-bar button.linked:checked, .location-bar button.linked:checked, searchbar button.flat:active,
+      .search-bar button.flat:active, .location-bar button.flat:active, searchbar button.flat:checked,
+      .search-bar button.flat:checked, .location-bar button.flat:checked,
+      .inline-toolbar button.suggested-action:active,
+      .inline-toolbar button.suggested-action:checked,
+      .inline-toolbar button.text-button:active,
+      .inline-toolbar button.text-button:checked,
+      .inline-toolbar button.menu-button:active,
+      .inline-toolbar button.menu-button:checked,
+      .inline-toolbar button.image-button:active,
+      .inline-toolbar button.image-button:checked,
+      .inline-toolbar button.linked:active,
+      .inline-toolbar button.linked:checked,
+      .inline-toolbar button.flat:active,
+      .inline-toolbar button.flat:checked {
+        color: #119ebe;
+        box-shadow: none; }
+        searchbar button.suggested-action:active label,
+        .search-bar button.suggested-action:active label, .location-bar button.suggested-action:active label, searchbar button.suggested-action:active image,
+        .search-bar button.suggested-action:active image, .location-bar button.suggested-action:active image, searchbar button.suggested-action:checked label,
+        .search-bar button.suggested-action:checked label, .location-bar button.suggested-action:checked label, searchbar button.suggested-action:checked image,
+        .search-bar button.suggested-action:checked image, .location-bar button.suggested-action:checked image, searchbar button.text-button:active label,
+        .search-bar button.text-button:active label, .location-bar button.text-button:active label, searchbar button.text-button:active image,
+        .search-bar button.text-button:active image, .location-bar button.text-button:active image, searchbar button.text-button:checked label,
+        .search-bar button.text-button:checked label, .location-bar button.text-button:checked label, searchbar button.text-button:checked image,
+        .search-bar button.text-button:checked image, .location-bar button.text-button:checked image, searchbar button.menu-button:active label,
+        .search-bar button.menu-button:active label, .location-bar button.menu-button:active label, searchbar button.menu-button:active image,
+        .search-bar button.menu-button:active image, .location-bar button.menu-button:active image, searchbar button.menu-button:checked label,
+        .search-bar button.menu-button:checked label, .location-bar button.menu-button:checked label, searchbar button.menu-button:checked image,
+        .search-bar button.menu-button:checked image, .location-bar button.menu-button:checked image, searchbar button.image-button:active label,
+        .search-bar button.image-button:active label, .location-bar button.image-button:active label, searchbar button.image-button:active image,
+        .search-bar button.image-button:active image, .location-bar button.image-button:active image, searchbar button.image-button:checked label,
+        .search-bar button.image-button:checked label, .location-bar button.image-button:checked label, searchbar button.image-button:checked image,
+        .search-bar button.image-button:checked image, .location-bar button.image-button:checked image, searchbar button.linked:active label,
+        .search-bar button.linked:active label, .location-bar button.linked:active label, searchbar button.linked:active image,
+        .search-bar button.linked:active image, .location-bar button.linked:active image, searchbar button.linked:checked label,
+        .search-bar button.linked:checked label, .location-bar button.linked:checked label, searchbar button.linked:checked image,
+        .search-bar button.linked:checked image, .location-bar button.linked:checked image, searchbar button.flat:active label,
+        .search-bar button.flat:active label, .location-bar button.flat:active label, searchbar button.flat:active image,
+        .search-bar button.flat:active image, .location-bar button.flat:active image, searchbar button.flat:checked label,
+        .search-bar button.flat:checked label, .location-bar button.flat:checked label, searchbar button.flat:checked image,
+        .search-bar button.flat:checked image, .location-bar button.flat:checked image,
+        .inline-toolbar button.suggested-action:active label,
+        .inline-toolbar button.suggested-action:active image,
+        .inline-toolbar button.suggested-action:checked label,
+        .inline-toolbar button.suggested-action:checked image,
+        .inline-toolbar button.text-button:active label,
+        .inline-toolbar button.text-button:active image,
+        .inline-toolbar button.text-button:checked label,
+        .inline-toolbar button.text-button:checked image,
+        .inline-toolbar button.menu-button:active label,
+        .inline-toolbar button.menu-button:active image,
+        .inline-toolbar button.menu-button:checked label,
+        .inline-toolbar button.menu-button:checked image,
+        .inline-toolbar button.image-button:active label,
+        .inline-toolbar button.image-button:active image,
+        .inline-toolbar button.image-button:checked label,
+        .inline-toolbar button.image-button:checked image,
+        .inline-toolbar button.linked:active label,
+        .inline-toolbar button.linked:active image,
+        .inline-toolbar button.linked:checked label,
+        .inline-toolbar button.linked:checked image,
+        .inline-toolbar button.flat:active label,
+        .inline-toolbar button.flat:active image,
+        .inline-toolbar button.flat:checked label,
+        .inline-toolbar button.flat:checked image {
+          color: #119ebe; }
     searchbar button:focus,
     .search-bar button:focus, .location-bar button:focus, searchbar button:active,
     .search-bar button:active, .location-bar button:active,
