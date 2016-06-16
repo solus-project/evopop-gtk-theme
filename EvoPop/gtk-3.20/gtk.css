@@ -5217,13 +5217,13 @@ tooltip,
   margin: 4px;
   border: none;
   border-radius: 3px;
-  background-color: #fefefe;
+  background-color: rgba(254, 254, 254, 0.9);
   color: #31363D;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), inset 0 1px rgba(255, 255, 255, 0.1); }
   tooltip.background,
   .tooltip.background,
   .overlay-bar.background {
-    background-color: #fefefe;
+    background-color: rgba(254, 254, 254, 0.9);
     border: none; }
   tooltip decoration,
   .tooltip decoration,
@@ -5232,7 +5232,6 @@ tooltip,
   tooltip *,
   .tooltip *,
   .overlay-bar * {
-    padding: 2px;
     background-color: transparent;
     color: #31363D; }
 
