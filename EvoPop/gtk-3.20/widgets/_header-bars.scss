@@ -61,6 +61,10 @@
        color: $headerbar_fg_color;
        border-radius: 0;
        box-shadow: none;
+
+       &:disabled {
+         background-color: transparent;
+       }
      }
 
      &:disabled {
@@ -80,6 +84,7 @@
        border: none;
        border-radius: 0;
        border-right-width: 0;
+       box-shadow: none;
 
        &:hover {
          border: none;
@@ -133,7 +138,13 @@
 
    .linked {
      & button {
-       border-right: none;
+       border: none;
+       box-shadow: none;
+       &:hover,
+       &:active,
+       &:checked {
+         @include lines(up);
+       }
 
        &:first-child,
        &:last-child,

@@ -2431,6 +2431,8 @@ headerbar {
       color: #fefefe;
       border-radius: 0;
       box-shadow: none; }
+      headerbar button:backdrop:disabled {
+        background-color: transparent; }
     headerbar button:disabled {
       color: #8c8f94;
       background-color: transparent;
@@ -2445,7 +2447,8 @@ headerbar {
     headerbar button.flat {
       border: none;
       border-radius: 0;
-      border-right-width: 0; }
+      border-right-width: 0;
+      box-shadow: none; }
       headerbar button.back-button:hover,
       headerbar button.suggested-action:hover,
       headerbar button.menu-button:hover,
@@ -2491,7 +2494,12 @@ headerbar {
         animation: none;
         box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   headerbar .linked button {
-    border-right: none; }
+    border: none;
+    box-shadow: none; }
+    headerbar .linked button:hover,
+    headerbar .linked button:active,
+    headerbar .linked button:checked {
+      box-shadow: inset 0 -3px 0 0 #119ebe; }
     headerbar .linked button:first-child,
     headerbar .linked button:last-child,
     headerbar .linked button:hover:first-child,
