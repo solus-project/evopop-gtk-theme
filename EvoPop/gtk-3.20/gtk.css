@@ -1065,6 +1065,8 @@ button .scale-popup button:backdrop,
   /* leftmost button (vertical) */
   /* rightmost button (vertical) */
   /* linked single button (vertical) */ }
+  .linked button {
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2); }
   .linked entry, .linked button,
   .linked > combobox button:dir(ltr),
   .linked > combobox button:dir(ltr):focus {
