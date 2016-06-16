@@ -305,8 +305,6 @@ toolbar {
     &:selected {
       color: $base_color;
       background-color:$selected_bg_color;
-      box-shadow: inset 1px 1px 5px 0px black;
-
     }
   }
 }

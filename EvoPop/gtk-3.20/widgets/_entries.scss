@@ -35,7 +35,7 @@ entry {
 
     &:focus { @include entry(focus); }
 
-    &:disabled { @include entry(insensitive); }
+    &:disabled { @include entry(disabled); }
 
     &:backdrop {
       @include entry(backdrop);
@@ -43,7 +43,7 @@ entry {
       transition: $backdrop_transition;
     }
 
-    &:backdrop:disabled { @include entry(backdrop-insensitive); }
+    &:backdrop:disabled { @include entry(backdrop-disabled); }
 
     &:selected { &:focus, & { @extend %selected_items; }}
     selection { &:focus, & { @extend %selected_items; }}

@@ -77,9 +77,9 @@
     border-color: entry_focus_border($fc);
   }
   @if $t==disabled {
-    color: $disabled;
+    color: $insensitive_fg_color;
     border-color: $borders_color;
-    background-image: linear-gradient(to bottom, $disabled_bg_color);
+    background-image: linear-gradient(to bottom, $insensitive_bg_color);
     box-shadow: none;
   }
   @if $t==backdrop {
@@ -89,9 +89,9 @@
     box-shadow: none;
   }
   @if $t==backdrop-disabled {
-    color: $backdrop_disabled_color;
+    color: $insensitive_fg_color;
     border-color: $backdrop_borders_color;
-    background-image: linear-gradient(to bottom, $disabled_bg_color);
+    background-image: linear-gradient(to bottom, $insensitive_bg_color);
     box-shadow: none;
   }
   @if $t==osd {

@@ -1927,6 +1927,12 @@ entry {
   spinbutton:focus:not(.vertical),
   entry:focus {
     border-color: rgba(0, 0, 0, 0.1); }
+  spinbutton:disabled:not(.vertical),
+  entry:disabled {
+    color: #989a9e;
+    border-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom, #3d4248);
+    box-shadow: none; }
   spinbutton:backdrop:not(.vertical),
   entry:backdrop {
     color: #dcdcde;
@@ -1934,6 +1940,12 @@ entry {
     background-image: linear-gradient(to bottom, #52565c);
     box-shadow: none;
     transition: 200ms ease-out; }
+  spinbutton:backdrop:disabled:not(.vertical),
+  entry:backdrop:disabled {
+    color: #989a9e;
+    border-color: rgba(33, 37, 41, 0.19);
+    background-image: linear-gradient(to bottom, #3d4248);
+    box-shadow: none; }
   spinbutton.error:not(.vertical),
   entry.error {
     color: #c72240;
@@ -4949,8 +4961,7 @@ searchbar,
     .inline-toolbar .entry:selected,
     .inline-toolbar entry:selected {
       color: #505359;
-      background-color: #13b1d5;
-      box-shadow: inset 1px 1px 5px 0px black; }
+      background-color: #13b1d5; }
 
 searchbar,
 .search-bar, .location-bar {
