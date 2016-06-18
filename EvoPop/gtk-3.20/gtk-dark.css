@@ -76,6 +76,12 @@ read if you used those and something break with a version upgrade you're on your
 @define-color wm_button_active_color_b shade(#31363d, 0.89);
 @define-color wm_button_active_color_c shade(#31363d, 0.9);
 @define-color content_view_bg #505359;
+/*****************
+* Drawing mixins *
+*****************/
+/*********
+* Common *
+*********/
 * {
   padding: 0;
   -GtkToolButton-icon-spacing: 4;
@@ -1100,6 +1106,13 @@ button.color {
   padding: 4px; }
   button.color colorswatch:only-child, button.color colorswatch:only-child overlay {
     border-radius: 0; }
+
+notebook > stack:not(:only-child) button, list button, view button, popover button {
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1); }
+  notebook > stack:not(:only-child) button:backdrop, list button:backdrop, view button:backdrop, popover button:backdrop {
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1); }
+notebook > stack:not(:only-child) .linked > button, list .linked > button, view .linked > button, popover .linked > button {
+  box-shadow: none; }
 
 /************
  * Calendar *
