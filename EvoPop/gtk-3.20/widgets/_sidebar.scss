@@ -3,6 +3,7 @@
  ***********/
 .sidebar {
   border-style: none;
+  border-width: 0;
   background-color: mix($bg_color, $base_color, 50%);
 
   @at-root %sidebar_left,
@@ -26,9 +27,28 @@
     transition: $backdrop_transition;
   }
 
-  list { background-color: transparent; }
+  list {
+    background-color: transparent;
+    row {
+      padding-left: 12px;
+      padding-right: 12px;
+      min-height: 34px;
 
-  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+      label {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      button {
+        margin: 1px;
+      }
+    }
+  }
+
+  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
+    border-style: none;
+    border-color: transparent;
+  }
+}
 }
 
 stacksidebar {
