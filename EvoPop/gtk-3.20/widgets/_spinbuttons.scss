@@ -1,7 +1,6 @@
 /*****************
  * GtkSpinButton *
  *****************/
-
 spinbutton {
   &:not(.vertical) {
     // in this horizontal configuration, the whole spinbutton
@@ -9,11 +8,12 @@ spinbutton {
     // and nuke the style on the internal entry
     @extend %entry;
 
+    padding: 0;
+
     entry {
       min-width: 28px;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
-      padding: 0;
       background: none;
       background-color: transparent;
       border: none;
@@ -24,13 +24,14 @@ spinbutton {
     button {
       min-height: 16px;
       margin: 0;
-      padding: 6px;
+      padding-bottom: 0;
+      padding-top: 0;
       color: mix($fg_color, $base_color, 90%);
       background-image: none;
       border-style: none none none solid;
       border-color: transparentize($borders_color, 0.7);
       border-radius: 0;
-      box-shadow: none;
+      box-shadow: inset 1px 0px 0px 0px rgba(0,0,0,0.07);
 
       &:dir(rtl) { border-style: none solid none none; }
 
@@ -57,8 +58,14 @@ spinbutton {
         color: transparentize($backdrop_insensitive_color,0.7);
         background-image: none;
         border-style: none none none solid; // It is needed or it gets overridden
+        box-shadow: inset 1px 0px 0px 0px rgba(0,0,0,0.07);
 
         &:dir(rtl) { border-style: none solid none none; }
+      }
+
+      &:last-child {
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
       }
     }
   }
@@ -73,6 +80,7 @@ spinbutton {
       border-color: transparentize($osd_borders_color, 0.3);
       border-radius: 0;
       box-shadow: none;
+      -gtk-icon-shadow: 0 1px black;
 
       &:dir(rtl) { border-style: none solid none none; }
 
@@ -82,6 +90,7 @@ spinbutton {
         color: $osd_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
         background-color: transparentize($osd_fg_color, 0.9);
+        -gtk-icon-shadow: 0 1px black;
         box-shadow: none;
       }
 
@@ -90,6 +99,7 @@ spinbutton {
 
         color: $osd_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        -gtk-icon-shadow: none;
         box-shadow: none;
       }
 
@@ -98,6 +108,7 @@ spinbutton {
 
         color: $osd_insensitive_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
+        -gtk-icon-shadow: none;
         box-shadow: none;
       }
 
@@ -123,34 +134,20 @@ spinbutton {
       box-shadow: none;
     }
 
-    .entry,
     entry {
-      min-height: 24px;
+      min-height: 32px;
       min-width: 32px;
       padding: 0;
       border-radius: 0;
     }
 
-    .button,
     button {
       min-height: 32px;
       min-width: 32px;
       padding: 0;
-      border: none;
-      background: none;
-      box-shadow: none;
-      color: $fg_color;
-
-      &:hover {
-        background-color:$selected_bg_color;
-        color: $selected_fg_color;
-        -gtk-icon-shadow:none;
-      }
-
-      &:active {
-        background-color:transparent;
-        color: $fg_color;
-      }
+      border-width: 1px;
+      border-color: $borders_color;
+      box-shadow: 0 1px $top_highlight;
 
       &.up { @extend %top_button; }
 
@@ -182,14 +179,11 @@ spinbutton {
   }
 
   // Misc
-
-  GtkTreeView &:not(.vertical),
   treeview &:not(.vertical) {
     min-height: 0;
     border-style: none;
     border-radius: 0;
 
-    .entry,
     entry {
       min-height: 0;
       padding: 1px 2px;

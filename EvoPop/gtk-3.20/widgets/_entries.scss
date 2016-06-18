@@ -5,8 +5,9 @@
 %entry,
 entry {
   %entry_basic, & {
-    min-height: 20px;
-    padding: 4px 6px;
+    min-height: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
     border: 1px solid;
     border-radius: 3px;
     transition: all 200ms $ease-out-quad;
@@ -29,13 +30,14 @@ entry {
         padding: 2px;
         background-image: none;
         border-color: transparent;
+        box-shadow: none;
         border-radius: 0;
       }
     }
 
     &:focus { @include entry(focus); }
 
-    &:disabled { @include entry(disabled); }
+    &:disabled { @include entry(insensitive); }
 
     &:backdrop {
       @include entry(backdrop);
@@ -43,9 +45,8 @@ entry {
       transition: $backdrop_transition;
     }
 
-    &:backdrop:disabled { @include entry(backdrop-disabled); }
+    &:backdrop:disabled { @include entry(backdrop-insensitive); }
 
-    &:selected { &:focus, & { @extend %selected_items; }}
     selection { &:focus, & { @extend %selected_items; }}
 
     // entry error and warning style
@@ -61,7 +62,7 @@ entry {
       }
     }
 
-    image { // entry icons colors
+    & image { // entry icons colors
       color: mix($fg_color, $base_color, 80%);
 
       &:hover { color: $fg_color; }
@@ -101,13 +102,74 @@ entry {
 
     &:backdrop { background-color: transparent; }
   }
-}
 
-treeview acceleditor > label {
-    background-color: $selected_bg_color;
+   // linked entries
+  .linked:not(.vertical) > & { @extend %linked; }
+  .linked:not(.vertical) > &:focus + &,
+  .linked:not(.vertical) > &:focus + button,
+  .linked:not(.vertical) > &:focus + combobox > box > button.combo { border-left-color: entry_focus_border(); }
+
+  .linked:not(.vertical) > &:focus { border-color: entry_focus_border(); }
+
+  .linked:not(.vertical) > &:drop(active) + &,
+  .linked:not(.vertical) > &:drop(active) + button,
+  .linked:not(.vertical) > &:drop(active) + combobox > box > button.combo { border-left-color: $drop_target_color; }
+
+  // Vertically linked entries
+  // FIXME: take care of "colored" entries
+  .linked.vertical > & {
+    @extend %linked_vertical;
+
+    // brighter border between linked entries
+    &:not(:disabled) + entry:not(:disabled),
+    &:not(:disabled) + %entry:not(:disabled) {
+      border-top-color: mix($borders_color, $base_color, 30%);
+      background-image: linear-gradient(to bottom, $base_color);
+
+      &:backdrop {
+        border-top-color: mix($backdrop_borders_color, $backdrop_base_color, 30%);
+        background-image: linear-gradient(to bottom, $backdrop_base_color);
+      }
+    }
+
+    // brighter border between linked insensitive entries
+    &:disabled + %entry:disabled,
+    &:disabled + entry:disabled { border-top-color: mix($borders_color, $base_color, 30%); }
+
+    // color back the top border of a linked focused entry following another entry and add back the focus shadow.
+    // :not(:only-child) is a specificity bump hack.
+    + %entry:focus:not(:only-child),
+    + entry:focus:not(:only-child) { border-top-color: entry_focus_border(); }
+
+    + %entry:drop(active):not(:only-child),
+    + entry:drop(active):not(:only-child) { border-top-color: $drop_target_color; }
+
+    // this takes care of coloring the top border of the focused entry subsequent widget.
+    // :not(:only-child) is a specificity bump hack.
+    &:focus:not(:only-child) {
+      + %entry,
+      + entry,
+      + button,
+      + combobox > box > button.combo { border-top-color: entry_focus_border(); }
+    }
+
+    &:drop(active):not(:only-child) {
+      + %entry,
+      + entry,
+      + button,
+      + combobox > box > button.combo { border-top-color: $drop_target_color; }
+    }
+  }
 }
 
 treeview entry {
+  &:focus {
+    &:dir(rtl), &:dir(ltr) { // specificity bump hack
+      background-color: $base_color;
+      transition-property: color, background;
+    }
+  }
+
   &.flat, & {
     border-radius: 0;
     background-image: none;

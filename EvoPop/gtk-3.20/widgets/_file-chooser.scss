@@ -27,7 +27,6 @@ placessidebar {
       &:disabled { color: $backdrop_insensitive_color; }
     }
 
-    GtkImage.sidebar-icon,
     image.sidebar-icon {
       opacity: $_placesidebar_icons_opacity; // dim the device icons
 
@@ -35,7 +34,6 @@ placessidebar {
       &:dir(rtl) { padding-left: 8px; }
     }
 
-    GtkLabel.sidebar-label,
     label.sidebar-label {
       &:dir(ltr) { padding-right: 2px; }
       &:dir(rtl) { padding-left: 2px; }

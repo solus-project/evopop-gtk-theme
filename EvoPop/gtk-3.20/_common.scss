@@ -1,6 +1,4 @@
-/**********
- * Common *
- **********/
+//Common
 
 @function gtkalpha($c,$a) {
   @return unquote("alpha(#{$c},#{$a})");
@@ -24,18 +22,12 @@ $button_transition: all 200ms $ease-out-quad;
   -GtkScrolledWindow-scrollbar-spacing: 0;
 
   -GtkToolItemGroup-expander-size: 11;
-  -GtkTreeView-expander-size: 11;
-
-  -GtkTreeView-horizontal-separator: 4;
 
   -GtkWidget-text-handle-width: 20;
   -GtkWidget-text-handle-height: 24;
 
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
-
-
-  -GtkPaned-handle-size: 1;
 
   // We use the outline properties to signal the focus properties
   // to the adwaita engine: using real CSS properties is faster,
@@ -45,6 +37,7 @@ $button_transition: all 200ms $ease-out-quad;
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
-  outline-radius: 2px;
+  -gtk-outline-radius: 2px;
 
+  -gtk-secondary-caret-color: $selected_bg_color;
 }

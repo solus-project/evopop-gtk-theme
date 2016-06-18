@@ -122,7 +122,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     label {
       font: bold;
       color: $fg_color;
-      icon-shadow: 0 1px $icon_shadow_color;
+      -gtk-icon-shadow: 0 1px $icon_shadow_color;
       text-shadow: 0 1px $text_shadow_color;
     }
 }
@@ -211,7 +211,6 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         }
 
         min-height: 32px;
-        max-width: 32px;
 
         color: $fg_color;
         border: solid $raven_expander_border;

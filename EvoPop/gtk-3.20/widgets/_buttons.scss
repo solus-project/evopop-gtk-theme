@@ -1,18 +1,39 @@
 /***********
  * Buttons *
  ***********/
+// stuff for .needs-attention
+$_dot_color: if($variant=='light', $selected_bg_color,
+                                   lighten($selected_bg_color,15%));
+@keyframes needs_attention {
+  from {
+    background-image: -gtk-gradient(radial,
+                                    center center, 0,
+                                    center center, 0.01,
+                                    to($_dot_color),
+                                    to(transparent));
+  }
+
+  to {
+    background-image: -gtk-gradient(radial,
+                                    center center, 0,
+                                    center center, 0.5,
+                                    to($selected_bg_color),
+                                    to(transparent));
+  }
+}
+
 %button,
 button {
   @at-root %button_basic, & {
 
-    min-height: 20px;
-    min-width: 20px;
-    padding: 7px;
-    border: 1px solid $borders_color;
+    min-height: 24px;
+    min-width: 16px;
+    padding: 4px 8px;
+    border: none;
     border-radius: 3px;
     transition: $button_transition;
 
-    @include button(normal,$base_color);
+    @include button(normal);
 
     &.flat {
       @include button(undecorated);
@@ -32,6 +53,7 @@ button {
 
     &:hover {
       @include button(hover,$selected_bg_color,$selected_fg_color);
+      -gtk-icon-effect: highlight;
     }
 
     &:active,
@@ -41,31 +63,21 @@ button {
       transition-duration: 50ms;
     }
 
-    &:disabled {
-      @include button(disabled);
-      &:active,
-      &:checked {
-        @include button(disabled-active);
-
-        transition-duration: 50ms;
-      }
-    }
-
     &:backdrop {
       &.flat, & {
-        @include button(backdrop,$backdrop_base_color);
+        @include button(backdrop);
 
         transition: $backdrop_transition;
         -gtk-icon-effect: none;
 
         &:active,
-        &:checked { @include button(backdrop-active,$backdrop_selected_bg_color); }
+        &:checked { @include button(backdrop-active); }
 
         &:disabled {
-          @include button(backdrop-disabled);
+          @include button(backdrop-insensitive);
 
           &:active,
-          &:checked { @include button(backdrop-disabled-active); }
+          &:checked { @include button(backdrop-insensitive-active); }
         }
       }
     }
@@ -80,7 +92,9 @@ button {
     }
 
     &.image-button {
-      padding: 4px;
+      min-width: 24px;
+      padding-left: 4px;
+      padding-right: 4px;
     }
 
     &.text-button {
@@ -119,8 +133,12 @@ button {
   }
 
 
-  // Standalone Buttons
+  // big standalone buttons like in Documents pager
   &.osd {
+    min-width: 24px;
+    min-height: 32px;
+
+    &.image-button { min-width: 32px; }
 
     color: $osd_fg_color;
     border-radius: 5px;
@@ -203,7 +221,6 @@ button {
                              (destructive-action, $destructive_color) {
     &.#{$b_type} {
       @include button(normal, $b_color, white);
-      box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
 
       &.flat {
         @include button(undecorated);
@@ -212,7 +229,6 @@ button {
       }
 
       &:hover { @include button(hover, $b_color, white); }
-      box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
 
       &:active,
       &:checked { @include button(active, $b_color, white); }
@@ -225,7 +241,7 @@ button {
         &:checked { @include button(backdrop-active, $b_color, white); }
 
         &:disabled {
-          @include button(backdrop-insensitive);
+          @include button(backdrop-insensitive, $b_color, white);
 
           &:active,
           &:checked { @include button(backdrop-insensitive-active, $b_color, white); }
@@ -241,7 +257,7 @@ button {
       }
 
       &:disabled {
-        @include button(insensitive);
+        @include button(insensitive, $b_color, white);
 
         &:active,
         &:checked { @include button(insensitive-active, $b_color, white); }
@@ -293,46 +309,173 @@ button {
       padding-left: 2px;
       padding-right: 2px;
     }
+
+    &.needs-attention {
+      > label,
+      > image { @extend %needs_attention; }
+
+      &:active,
+      &:checked {
+        > label,
+        > image {
+          animation: none;
+          background-image: none;
+        }
+      }
+    }
   }
 
   //inline-toolbar buttons
   .inline-toolbar &, .inline-toolbar &:backdrop {
     border-radius: 2px;
     border-width: 1px;
+    @extend %linked;
   }
 
   .primary-toolbar & { -gtk-icon-shadow: none; } // tango icons don't need shadows
 
+  .linked > &,
+  .linked > &:hover,
+  .linked > &:active,
+  .linked > &:checked,
+  .linked > &:backdrop { @extend %linked; }
+
+  .linked.vertical > &,
+  .linked.vertical > &:hover,
+  .linked.vertical > &:active,
+  .linked.vertical > &:checked,
+  .linked.vertical > &:backdrop { @extend %linked_vertical; }
+}
+
+%needs_attention {
+  animation: needs_attention 150ms ease-in;
+  $_dot_shadow: _text_shadow_color();
+  $_dot_shadow_r: if($variant=='light',0.5,0.45);
+  background-image: -gtk-gradient(radial,
+                                  center center, 0,
+                                  center center, 0.5,
+                                  to($_dot_color),
+                                  to(transparent)),
+                    -gtk-gradient(radial,
+                                  center center, 0,
+                                  center center, $_dot_shadow_r,
+                                  to($_dot_shadow),
+                                  to(transparent));
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+
+  @if $variant == 'light' { background-position: right 3px, right 4px; }
+
+  @else { background-position: right 3px, right 2px; }
+
+  &:backdrop { background-size: 6px 6px, 0 0;}
+
+  &:dir(rtl) {
+    @if $variant == 'light' { background-position: left 3px, left 4px; }
+
+    @else { background-position: left 3px, left 2px; }
+  }
+}
+
+toolbar {
+  button {
+    &:hover { @include button(normal,darken($bg_color,7%));}
+    &:active { @include button(normal,darken($bg_color,12%));}
+  }
+}
 // all the following is for the +|- buttons on inline toolbars, that way
 // should really be deprecated...
 .inline-toolbar toolbutton > button { // redefining the button look is
                                       // needed since those are flat...
-  @include button(normal);
+  @include button(undecorated);
 
-  &:hover { @include button(hover); }
+  &:hover { color: $selected_bg_color; }
 
   &:active,
-  &:checked{ @include button(active); }
+  &:checked{ color: darken($selected_bg_color, 5%); }
 
   &:disabled {
-    @include button(insensitive);
+    color: $backdrop_text_color;
 
     &:active,
-    &:checked { @include button(insensitive-active); }
+    &:checked { color: transparentize(darken($selected_bg_color, 5%),0.7); }
   }
 
   &:backdrop {
-    @include button(backdrop);
+    color: $backdrop_text_color;
 
     &:active,
-    &:checked { @include button(backdrop-active); }
+    &:checked { color: darken($selected_bg_color, 5%); }
 
     &:disabled {
-      @include button(backdrop-insensitive);
+      color: $backdrop_text_color;
 
       &:active,
-      &:checked { @include button(backdrop-insensitive-active); }
+      &:checked { color: transparentize(darken($selected_bg_color, 5%),0.7); }
     }
+  }
+}
+
+// More inline toolbar buttons
+toolbar.inline-toolbar toolbutton,
+toolbar.inline-toolbar toolbutton:backdrop {
+  > button.flat {
+    &:backdrop {
+      border-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+%linked_middle {
+  border: 1px solid $borders_color;
+  border-radius: 0;
+  border-right-style: none;
+  box-shadow: inset 0px 1px 0px 0px $top_highlight;
+}
+
+%linked {
+  @extend %linked_middle;
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-right-style: solid;
+  }
+
+  &:only-child {
+    border-radius: 3px;
+    border-style: solid;
+  }
+}
+
+%linked_vertical_middle {
+  border-style: solid solid none solid;
+  border-radius: 0;
+}
+
+%linked_vertical{
+  @extend %linked_vertical_middle;
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-style: solid;
+  }
+
+  &:only-child {
+    border-radius: 3px;
+    border-style: solid;
   }
 }
 
@@ -345,161 +488,6 @@ button {
   text-shadow: none;
   -gtk-icon-shadow: none;
 }
-}
-
-/****************
-* Linked Buttons *
-*****************/
-.linked {
-
-  & button {
-    box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.2);
-  }
-  /* middle button */
-  & entry,
-  & button,
-  > combobox button:dir(ltr),
-  > combobox button:dir(ltr):focus {
-    margin: 0;
-    border-radius: 0;
-    border: 1px solid transparentize(black,0.85);
-    border-left-width: 0;
-
-    &:focus,
-    &:active,
-    &:insensitive {
-      border-radius: 0;
-    }
-  }
-
-
-  /* leftmost button */
-  & entry:first-child,
-  & button:first-child,
-  & button:active:first-child,
-  & button:focus:first-child,
-  & button:disabled:first-child,
-  & > combobox:first-child button,
-  & > combobox:first-child button:focus {
-      border-radius: 3px;
-      border-left-width: 1px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-  }
-
-  /* rightmost button */
-  & button:last-child,
-  & button:active:last-child,
-  & button:focus:last-child,
-  & button:disabled:last-child,
-  & > combobox:last-child button,
-  & > combobox:last-child button:focus {
-      border-radius: 3px;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-  }
-  & entry:last-child {
-      border-left-width: 0;
-      border-radius: 3px;
-      border-bottom-left-radius: 0;
-      border-top-left-radius: 0;
-  }
-
-  /* linked single button */
-  & entry:only-child,
-  & button:only-child,
-  & button:active:only-child,
-  & button:focus:only-child,
-  & button:disabled:only-child,
-  & > combobox:only-child button,
-  & > combobox:only-child button:focus {
-      border-radius: 3px;
-  }
-
-  /* middle button (vertical) */
-  &.vertical entry,
-  &.vertical button,
-  &.vertical button:active,
-  &.vertical button:focus,
-  &.vertical button:disabled,
-  &.vertical > combobox button:dir(ltr),
-  &.vertical > combobox button:dir(ltr):focus {
-      border-bottom-width: 0;
-      border-radius: 0;
-  }
-
-  /* leftmost button (vertical) */
-  &.vertical entry:first-child,
-  &.vertical button:first-child,
-  &.vertical button:active:first-child,
-  &.vertical button:focus:first-child,
-  &.vertical button:disabled:first-child,
-  &.vertical > combobox:first-child button,
-  &.vertical > combobox:first-child button:focus {
-      border-bottom-width: 0;
-      border-radius: 3px;
-      border-bottom-right-radius: 0;
-      border-bottom-left-radius: 0;
-  }
-
-  /* rightmost button (vertical) */
-  &.vertical entry:last-child,
-  &.vertical button:last-child,
-  &.vertical button:active:last-child,
-  &.vertical button:focus:last-child,
-  &.vertical button:disabled:last-child,
-  &.vertical > combobox:last-child button,
-  &.vertical > combobox:last-child button:focus {
-      border-radius: 3px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-  }
-
-  /* linked single button (vertical) */
-  &.vertical entry:only-child,
-  &.vertical button:only-child,
-  &.vertical button:active:only-child,
-  &.vertical button:focus:only-child,
-  &.vertical button:disabled:only-child,
-  &.vertical > combobox:only-child button,
-  &.vertical > combobox:only-child button:focus {
-      border-radius: 3px;
-  }
-
-  &.vertical entry:first-child {
-    border: 1px solid transparentize(black,0.8);
-      border-bottom-width: 0px;
-  }
-
-  &.vertical entry:last-child {
-      border: 1px solid transparentize(black,0.8);
-  }
-}
-
-notebook,list,view,popover {
-  button {
-    border: 1px solid $bg_color;
-
-    &:backdrop,
-    &:disabled {
-      border-color: $backdrop_bg_color;
-    }
-
-    &:hover, &:active, &:checked {
-      box-shadow: none;
-      border-color: transparent;
-      border-top-color: transparentize(white, 0.8);
-      border-bottom-color: transparentize(black, 0.8);
-    }
-  }
-}
-
-.circular-button > .image-button {
-    border-radius: 50%;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
 
 /* menu buttons */
 modelbutton.flat,
@@ -510,14 +498,21 @@ modelbutton.flat,
   border-radius: 3px;
   outline-offset: -2px;
 
-  &:hover {
-    background-color: darken($base_color,10%);
-  }
+  @extend %undecorated_button;
 
-  &:selected {
-    background-color: darken($selected_bg_color,5%);
-    color: $selected_fg_color;
-  }
+  &:hover { background-color: $popover_hover_color; }
+
+  &:selected { @extend %selected_items; }
+
+  &:backdrop,
+  &:backdrop:hover { @extend %undecorated_button; }
+
+  // FIXME: remove the following when the checks/radios rewrite lands
+  check:last-child,
+  radio:last-child { margin-left: 8px; }
+
+  check:first-child,
+  radio:first-child { margin-right: 8px; }
 }
 
 modelbutton.flat arrow {
@@ -528,4 +523,19 @@ modelbutton.flat arrow {
   &.left { -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 
   &.right { -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+}
+
+button.color {
+  padding: 4px;
+
+  colorswatch:only-child {
+    &, overlay { border-radius: 0; }
+
+    @if $variant == 'light' {
+      box-shadow: 0 1px _text_shadow_color();
+
+      &:disabled,
+      &:backdrop { box-shadow: none; }
+    }
+  }
 }

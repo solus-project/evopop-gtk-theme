@@ -1,18 +1,11 @@
-/************
- * Popovers *
- ************/
+/***************
+ * Popovers   *
+ ***************/
 
 popover.background {
   padding: 2px;
-  border-radius: 4px;
-  border:none;
+  border-radius: 5px;
   background-color: $popover_bg_color;
-
-  & {
-    menuitem {
-      color: red;
-    }
-  }
 
   .csd &, & { border: 1px solid $borders_color; }
 
@@ -25,8 +18,7 @@ popover.background {
 
   > list,
   > .view,
-  > toolbar,
-  > .toolbar {
+  > toolbar {
     border-style: none;
     background-color: transparent;
   }
@@ -44,7 +36,7 @@ popover.background {
     &.osd { @extend %osd; }
   }
 
-  .separator,separator { margin: 3px; }
+  separator { margin: 3px; }
 
   list separator { margin: 0px; }
 

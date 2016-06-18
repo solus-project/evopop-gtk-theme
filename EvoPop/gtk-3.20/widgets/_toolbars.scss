@@ -2,181 +2,18 @@
  * Toolbars *
  ************/
 %toolbar {
-  padding: 0px;
+  -GtkWidget-window-dragging: true;
+  padding: 4px;
   background-color: $bg_color;
-  color: $fg_color;
-
-  &:backdrop {
-    background-color:$backdrop_bg_color;
-    color:$backdrop_fg_color;
-  }
 }
 
 toolbar {
   @extend %toolbar;
 
+  padding: 4px 3px 3px 4px;
+
   // on OSD
-  .osd & { box-shadow:none; background-color: transparent; }
-
-  // Buttons
-  button {
-    background-color: transparent;
-    background-image: none;
-    border-radius: 0px;
-    border: none;
-    box-shadow: none;
-    -gtk-icon-shadow: none;
-    margin: 0;
-    padding: 7px;
-    text-shadow: none;
-
-    &.suggested-action,
-    &.text-button,
-    &.menu-button,
-    &.image-button,
-    &.linked,
-    &.flat {
-      background-color: transparent;
-      background-image: none;
-      border-radius: 0px;
-      border: none;
-      box-shadow: none;
-      -gtk-icon-shadow: none;
-      margin: 0;
-      padding: 7px;
-      text-shadow: none;
-      color: $fg_color;
-
-      &:backdrop {
-        background-color: transparent;
-        background-image: none;
-        text-shadow: none;
-        color: $backdrop_fg_color;
-      }
-
-      &:hover {
-        background-image:none;
-        background-color: transparent;
-        color:$fg_color;
-        box-shadow:none;
-        text-shadow:none;
-        @include lines(up);
-      }
-
-      &:disabled {
-        color: $backdrop_fg_color;
-        -gtk-icon-effect: dim;
-      }
-    }
-
-    label,
-    image {
-      color: $fg_color;
-
-      &:disabled,
-      &:backdrop {
-        color: $backdrop_fg_color;
-        -gtk-icon-effect: dim;
-      }
-    }
-
-    &:focus,
-    &:hover {
-      background-image:none;
-      background-color: transparent;
-      color:$fg_color;
-      box-shadow:none;
-      text-shadow:none;
-      @include lines(up);
-    }
-
-    &:backdrop {
-      background-color: transparent;
-      background-image: none;
-      color: $backdrop_fg_color;
-      @include lines(up);
-      image {
-        color: $backdrop_fg_color;
-      }
-    }
-
-    &:active,
-    &:checked {
-      border-radius: 0px;
-
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-
-      @include lines(up);
-
-      background-color: transparent;
-      background-image: none;
-      color: $fg_color;
-
-      &:backdrop {
-        background-color: transparent;
-        background-image: none;
-        color: $backdrop_fg_color;
-
-        @include lines(up);
-      }
-
-      &:focus,
-      &:hover {
-        background-image:none;
-        background-color: transparent;
-        color:lighten($fg_color, 10%);
-        @include lines(up);
-        }
-    }
-
-    &:disabled,
-    &:disabled:backdrop {
-      color: $backdrop_fg_color;
-      background-color: transparent;
-      background-image: none;
-
-      image,
-      image {
-        -gtk-icon-effect: dim;
-      }
-    }
-
-
-    // Menu Button
-    &.menu-button {
-      .menu {
-        .menuitem {
-          label {
-            color: $fg_color;
-            &:disabled { color: $insensitive_fg_color; }
-          }
-          .separator { color: $borders_color;}
-          &:hover { label {color: $fg_color;}}
-        }
-      }
-    }
-  }
-
-  entry {
-    margin-top: 3px;
-    margin-bottom: 3px;
-    background-color: darken($bg_color, 2%);
-    color: $fg_color;
-    border: none;
-    box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.3),
-                inset 0 -1px rgba(255,255,255,0.3);
-    &:backdrop {
-      background: none;
-      box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.3),
-                  inset 0 -1px rgba(255,255,255,0.3);
-    }
-  }
-
-  .separator {
-    color: transparent;
-    background-color: transparent;
-  }
+  .osd & { background-color: transparent; }
 
   // stand-alone OSD toolbars
   &.osd {
@@ -189,178 +26,44 @@ toolbar {
     &.right,
     &.top,
     &.bottom { border-radius: 0; } // positional classes for `attached` osd toolbars
-
-    & button {
-      border-radius: 3px;
-      &:hover {
-        background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        box-shadow: none;
-        text-shadow: 0 1px black;
-        icon-shadow: 0 1px black;
-      }
-
-      &:active,
-      &:focus {
-        background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        box-shadow: none;
-        border-radius: 3px;
-        text-shadow: 0 1px black;
-        icon-shadow: 0 1px black;
-      }
-    }
-
   }
 
   // toolbar separators
   &.horizontal separator { margin: 0 7px 1px 6px; }
   &.vertical separator { margin: 6px 1px 7px 0; }
 
+  &:not(.inline-toolbar):not(.osd) {
+    switch,
+    scale,
+    entry,
+    spinbutton,
+    button {
+      margin-right: 1px;
+      margin-bottom: 1px;
+    }
+  }
 }
 
-
-/*******************
- * Inline Toolbars *
- *******************/
-
-%inline-toolbar,
+//searchbar, location-bar & inline-toolbar
 .inline-toolbar {
-  -GtkWidget-window-dragging: true;
+  @extend %toolbar;
 
-  background-color: darken($bg_color, 2%);
-  color: $fg_color;
+  @extend %darkbar;
 
-  border: 1px solid $borders_color;
-  border-top-width: 0;
-  border-radius: 0 0 3px 3px;
-
-  box-shadow: inset 0 -1px 1px -2px transparentize(black, 0.5),
-              inset 0 1px rgba(255,255,255,0.3);
-
-  padding: 0px;
-
-  &:backdrop {
-    background-color: darken($bg_color, 5%);
-  }
-
-  // buttons
-  button {
-    background-color: transparent;
-    background-image: none;
-    border-radius: 0px;
-    border: none;
-    box-shadow: none;
-    -gtk-icon-shadow: none;
-    margin: 0;
-    padding: 7px;
-    text-shadow: none;
-
-    &.suggested-action,
-    &.text-button,
-    &.menu-button,
-    &.image-button,
-    &.linked,
-    &.flat  {
-      border: none;
-      background: none;
-      text-shadow: none;
-      box-shadow: none;
-      background-color: transparent;
-      color: $fg_color;
-      border-radius: 0px;
-      padding: 7px;
-
-      &:hover,
-      &:focus {
-        color: $selected_bg_color;
-        box-shadow: none;
-        label,image { color: $selected_bg_color; }
-      }
-
-      &:active,
-      &:checked {
-        color: darken($selected_bg_color, 5%);
-        box-shadow: none;
-        label,image { color: darken($selected_bg_color, 5%); }
-      }
-    }
-
-    &:focus,
-    &:active {
-      font:bold;
-      color: $fg_color;
-      text-shadow: none;
-      box-shadow: none;
-      background-color: transparentize(black, 0.95);
-
-      &:backdrop {
-        border: none;
-        background-color: transparent;
-        color: $backdrop_fg_color;
-      }
-    }
-
-    &:hover {
-      background-color: transparentize(black, 0.95);
-      text-shadow: none;
-      color: $fg_color;
-      box-shadow: none;
-    }
-
-    &:disabled {
-      background:none;
-      background-color: transparent;
-      color: transparentize($fg_color,0.5);
-    }
-
-    &:backdrop {
-      background:none;
-      background-color: transparent;
-      color: $backdrop_fg_color;
-    }
-
-    label,
-    image {
-      color: $fg_color;
-
-      &:disabled,
-      &:backdrop {
-        color: $backdrop_fg_color;
-        -gtk-icon-effect: dim;
-      }
-    }
-  }
-
-  .entry,
-  entry {
-    background-color: darken($bg_color, 4%);
-    color: $fg_color;
-    border-radius: 3px;
-    border: none;
-    box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.3),
-                inset 0 -1px rgba(255,255,255,0.6);
-
-    &.image {
-      color: $fg_color;
-
-      &.left{
-        padding-right: 6px;
-      }
-    }
-
-    &:backdrop {
-      background: none;
-      color: $backdrop_fg_color;
-      box-shadow: inset 1px 1px 2px 0px rgba(0,0,0,0.3),
-                  inset 0 -1px rgba(255,255,255,0.6);
-    }
-
-    &:selected {
-      color: $base_color;
-      background-color:$selected_bg_color;
-    }
-  }
+  padding: 3px;
+  border-width: 0 1px 1px;
+  border-radius: 0  0 5px 5px;
 }
 
+searchbar,
+.location-bar {
+  @extend %toolbar;
+
+  @extend %darkbar;
+
+  border-width: 0 0 1px;
+  padding: 3px;
+}
 
 %darkbar {
   border-style: solid;
@@ -374,36 +77,4 @@ toolbar {
     box-shadow: none;
     transition: $backdrop_transition;
   }
-}
-
-
-// search-bar
-searchbar,
-.search-bar {
-  @extend %darkbar;
-  @extend %inline-toolbar;
-
-  padding:3px 0px;
-  border-width: 0;
-  border-radius:0;
-
-  .linked {
-    entry {
-      border: none;
-    }
-    button {
-      border: 1px solid transparentize(black,0.85);
-      box-shadow: none;
-    }
-  }
-
-}
-
-// location-bar
-.location-bar {
-  @extend %darkbar;
-  @extend %inline-toolbar;
-
-  border-width: 0 0 1px;
-  padding: 3px;
 }

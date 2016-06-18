@@ -2,10 +2,7 @@
  * Links *
  *********/
 *:link {
-  font: bold;
   color: $link_color;
-  background-color: transparent;
-  box-shadow: none;
 
   &:visited {
     color: $link_visited_color;
@@ -49,5 +46,4 @@ button:visited {
   }
 
   > label { text-decoration-line: underline; }
-  > GtkLabel { text-decoration-line: underline; }
 }

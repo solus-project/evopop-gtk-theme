@@ -1,69 +1,18 @@
-/***************
- * font-viewer *
- ***************/
-SushiFontWidget {
-    padding: 6px 12px;
-}
-
-/**********
- * Sudoku *
- **********/
-SudokuView SudokuCellView {
-    border: inherit;
-    background-color: inherit;
-}
-
-SudokuView SudokuCellView:backdrop {
-    border: inherit;
-    background-color: inherit;
-}
-
-SudokuView {
-    border: none;
-}
-
-/*****************
- * Character Map *
- *****************/
-GucharmapChartable {
-    background-color: $base_color;
-}
-
-GucharmapChartable:active,
-GucharmapChartable:focus,
-GucharmapChartable:selected {
-    background-color: $selected_bg_color;
-    color: $selected_fg_color;
-}
-
-
-/********
- * Misc *
- *******/
-
-ApDocView, /* Abiword */
-EogScrollView, /* Eog */
-CheeseThumbView /* Cheese */
-{
-    -EogScrollView-shadow-type: none;
-}
-
 /************
  * Nautilus *
  ************/
 .nautilus-window {
-  .sidebar,.sidebar .view {
+
+  .sidebar {
     background-color: transparent;
     background-image: none;
-
-    image {
-      margin: 3px 8px;
-    }
 
     &:backdrop {
       background-color: transparent;
       background-image: none;
     }
+
+    image { margin: 9px; }
 
     .list-row {
       button {
@@ -89,7 +38,6 @@ CheeseThumbView /* Cheese */
       }
     }
   }
-
   &.background {
     background-color: transparentize(darken($base_color,3%),0.05);
     &:backdrop {
@@ -97,25 +45,17 @@ CheeseThumbView /* Cheese */
     }
   }
 
-  .pane-separator.horizontal {
-    background-image: none;
-    border-right: 1px solid $base_color;
-  }
-}
-
-NautilusCanvasView {
-    border: none;
-
-    &:active,
-    &:focus,
-    &:backdrop {
-      border: none;
+  notebook {
+    > stack:only-child { // the :not(:only-child) is for "hidden" notebooks
+        background-color: $base_color;
+        &:backdrop { background-color: $backdrop_base_color; }
     }
+  }
 }
 
 .nautilus-circular-button {
   border-radius: 20px;
-  outline-radius: 20px;
+  -gtk-outline-radius: 20px;
 }
 
 .disk-space-display {
@@ -137,108 +77,6 @@ NautilusCanvasView {
   }
 }
 
-
-.nautilus-desktop {
-
-  color: $fg_color;
-
-  .nautilus-canvas-item {
-    border-radius: 5px;
-    color: $selected_fg_color;
-    text-shadow: 1px 1px transparentize(black, 0.4);
-
-    &:active {
-      color: $fg_color;
-      text-shadow: none;
-    }
-
-    &:prelight {
-      color: $fg_color;
-      text-shadow: none;
-    }
-
-    &:selected {
-      color: $selected_fg_color;
-      text-shadow: none;
-    }
-
-    .dim-label {
-      &:selected {
-        color: $selected_fg_color;
-      }
-    }
-  }
-
-  .nautilus-list {
-
-    .dim-label {
-      &:selected {
-        color: $selected_fg_color;
-      }
-    }
-  }
-}
-
-/**************
- * Calculator *
- **************/
-
-MathWindow {
-
-  MathButtons {
-    combobox,
-    button {
-      background-color: transparent;
-      background-image: none;
-      box-shadow:none;
-      border: none;
-      text-shadow: none;
-      font: bold;
-
-      &:hover {
-        background-image: none;
-        background-color:$base_color;
-      }
-
-      &.text-button.suggested-action {
-        background-image: none;
-        box-shadow:none;
-        text-shadow: none;
-        background-color: $cyan;
-        color: $base_color;
-
-        &:backdrop {
-          background-color: darken($cyan,10%);
-          color: transparentize($base_color, 0.5);
-        }
-      }
-    }
-  }
-
-  MathDisplay {
-    padding: 4px;
-    background-color:$base_color;
-    border: 1px solid $borders_color;
-  }
-}
-
-/************
- * Epiphany *
- ************/
-
-EphyWindow {
-  .titlebar,
-  headerbar {
-
-    .incognito-mode {
-
-      button {
-        background-image:none;
-      }
-    }
-  }
-}
-
 /*********
  * Gedit *
  *********/
@@ -247,57 +85,5 @@ EphyWindow {
      padding: 4px;
      border-radius: 0 0 3px 3px;
      border: 0;
-     background-color: $headerbar_bg_color;
-
-     & button {
-       background-color: transparent;
-       color: $headerbar_fg_color;
-       border: none;
-       box-shadow: none;
-
-       &:hover {
-         color: $selected_bg_color;
-       }
-       &:active {
-         color:darken($selected_bg_color,5%);
-       }
-     }
-
-     entry {
-       border: none;
-       background-color: darken($headerbar_bg_color,2%);
-       color: $headerbar_fg_color;
-       box-shadow: inset 3px 3px 3px 0px rgba(0,0,0,0.3),
-                   inset 0 -1px rgba(255,255,255,0.3);
-       @each $e_type, $e_color in (error, $error_color),
-                                  (warning, $warning_color) {
-         &.#{$e_type} {
-           color: $e_color;
-
-           &:focus { @include entry(focus, $e_color); }
-
-           &:selected { &:focus, & { background-color: $e_color; }}
-         }
-       }
-
-       image {
-         color: transparentize($headerbar_fg_color, 0.5);
-       }
-       & entry {
-         background-color: transparent;
-         box-shadow: none;
-       }
-
-       &:first-child {
-         border-radius: 3px;
-       }
-     }
+     background-color: $bg_color;
  }
-
-/*******************
- * System Settings *
- ******************/
-
-CcShellNavBar {
-  padding:0px;
-}

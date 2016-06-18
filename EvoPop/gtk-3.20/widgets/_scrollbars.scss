@@ -1,8 +1,6 @@
 /**************
  * Scrollbars *
  **************/
-
-.scrollbar,
 scrollbar {
   $_slider_min_length: 40px;
 
@@ -14,7 +12,12 @@ scrollbar {
 
   background-color: $scrollbar_bg_color;
   transition: 300ms $ease-out-quad;
-  border: none;
+
+  // scrollbar border
+  &.top { border-bottom: 1px solid $borders_color; }
+  &.bottom { border-top: 1px solid $borders_color; }
+  &.left { border-right: 1px solid $borders_color; }
+  &.right { border-left: 1px solid $borders_color; }
 
   &:backdrop {
     background-color: $backdrop_scrollbar_bg_color;
@@ -42,7 +45,6 @@ scrollbar {
   }
 
   &.fine-tune {
-    .slider,
     slider {
       min-width: 4px;
       min-height: 4px;
@@ -58,7 +60,6 @@ scrollbar {
       opacity: 0.4;
       background-color: transparent;
 
-      .slider,
       slider {
         margin: 0;
         min-width: 3px;
@@ -67,7 +68,6 @@ scrollbar {
         border: 1px solid if($variant == 'light', white, black);
       }
 
-      .button,
       button {
         min-width: 5px;
         min-height: 5px;
@@ -79,13 +79,11 @@ scrollbar {
       }
 
       &.horizontal {
-        .slider,
         slider {
           margin: 0 2px;
           min-width: $_slider_min_length;
         }
 
-        .button,
         button {
           margin: 1px 2px;
           min-width: 5px;
@@ -93,13 +91,11 @@ scrollbar {
       }
 
       &.vertical {
-        .slider,
         slider {
           margin: 2px 0;
           min-height: $_slider_min_length;
         }
 
-        .button,
         button {
           margin: 2px 1px;
           min-height: 5px;
@@ -116,7 +112,6 @@ scrollbar {
   &.vertical slider { min-height: $_slider_min_length; }
 
   // button styling
-  .button,
   button {
     padding: 0;
     min-width: 12px;
@@ -159,17 +154,17 @@ scrollbar {
 
   // button icons
   &.vertical {
-    .button,
     button {
       &.down { -gtk-icon-source: -gtk-icontheme('pan-down-symbolic'); }
+
       &.up { -gtk-icon-source: -gtk-icontheme('pan-up-symbolic'); }
     }
   }
 
   &.horizontal {
-    .button,
     button {
       &.down { -gtk-icon-source: -gtk-icontheme('pan-right-symbolic'); }
+
       &.up { -gtk-icon-source: -gtk-icontheme('pan-left-symbolic'); }
     }
   }

@@ -66,7 +66,7 @@
   }
 }
 
-GtkTextView,
+.view,
 textview {
   text {
     @extend %view;
@@ -75,44 +75,9 @@ textview {
   }
 }
 
-GtkTextView,
-textview border {
-  background-color: mix($bg_color, $base_color, 50%);
-  background-image: image(transparentize(black, 0.8)); // HACK: the border node just draws background so,
-  background-repeat: no-repeat;                        // using a background-image to draw the border
+textview border { background-color: mix($bg_color, $base_color, 50%); }
 
-  &:backdrop { background-color: mix($backdrop_bg_color, $backdrop_base_color, 50%); }
-
-  &.bottom {
-    background-size: 100% 1px;
-    background-position: top;
-  }
-
-  &.top {
-    background-size: 100% 1px;
-    background-position: bottom;
-  }
-
-  &.left {
-    background-size: 1px 100%;
-    background-position: right;
-  }
-
-  &.right {
-    background-size: 1px 100%;
-    background-position: left;
-  }
-}
-
-GtkIconView,
-iconview {
-  @extend .view;
-  background-color:transparent;
-
-  &:backdrop{
-    background-color:transparent;
-  }
-}
+iconview { @extend .view; }
 
 .rubberband,
 rubberband {
@@ -120,8 +85,6 @@ rubberband {
   background-color: transparentize(darken($selected_bg_color, 10%), 0.8);
 }
 
-
-GtkFlow,
 flowbox {
   rubberband { @extend rubberband; }
 
@@ -137,8 +100,9 @@ flowbox {
   }
 }
 
-GtkLabel,
 label {
+  caret-color: currentColor; // this shouldn't be needed.
+
   &.separator {
     @extend .dim-label;
 
@@ -147,7 +111,6 @@ label {
     &:backdrop { color: $backdrop_fg_color; }
   }
 
-  .list-row:selected &,
   row:selected &,
   &:selected { @extend %nobg_selected_items; }
 
@@ -176,8 +139,25 @@ label {
   text-shadow: none;
 }
 
-%osd,
-.osd {
+assistant {
+  .sidebar {
+    background-color: $base_color;
+    border-top: 1px solid $borders_color;
+
+    &:backdrop {
+      background-color: $backdrop_base_color;
+      border-color: $backdrop_borders_color;
+    }
+  }
+
+  &.csd .sidebar { border-top-style: none; }
+
+  .sidebar label { padding: 6px 12px; }
+
+  .sidebar label.highlight { background-color: mix($bg_color, $fg_color, 80%); }
+}
+
+%osd, .osd {
   color: $osd_fg_color;
   border: none;
   background-color: $osd_bg_color;
@@ -191,23 +171,3 @@ label {
     -gtk-icon-shadow: none;
   }
 }
-
-%selected_items {
-  background-color: $selected_bg_color;
-
-  @at-root %nobg_selected_items, & {
-    color: $selected_fg_color;
-
-    @if $variant == 'light' { outline-color: transparentize($selected_fg_color, 0.7); }
-
-    &:disabled { color: mix($selected_fg_color, $selected_bg_color, 50%); }
-
-    &:backdrop {
-      color: $backdrop_selected_fg_color;
-
-      &:disabled { color: mix($backdrop_selected_fg_color, $selected_bg_color, 30%); }
-    }
-  }
-}
-
-.monospace { font: Monospace; }

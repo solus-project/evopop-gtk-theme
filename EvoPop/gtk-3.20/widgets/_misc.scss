@@ -1,7 +1,6 @@
 /********
  * Misc *
  ********/
-
 //content view (grid/list)
 .content-view {
   background-color: darken($bg_color,7%);
@@ -21,8 +20,7 @@
     border-radius: 5px;
   }
 
-  // +/- buttons on GtkVolumeButton popup
-  button {
+  button { // +/- buttons on GtkVolumeButton popup
     &:hover {
       @extend %undecorated_button;
       background-color: transparentize($fg_color,0.9);
@@ -31,10 +29,6 @@
 
     &:backdrop { &:hover, &:disabled, & { @extend %undecorated_button; }}
   }
-}
-
-separator {
-  color: $borders_color;
 }
 
 /************

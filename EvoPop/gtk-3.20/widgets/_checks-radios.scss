@@ -128,30 +128,6 @@
   }
 }
 
-// selection-mode checked
-@each $s,$ch in ('','-checked'),
-                  (':hover', '-checked-hover'),
-                  (':active', '-checked-active'),
-                  (':backdrop', '-checked-backdrop'),
-                  (':disabled', '-checked-insensitive'),
-                  (':disabled:backdrop', '-checked-backdrop-insensitive') {
-  .view.content-view check#{$s},
-  .view.content-view.check#{$s}{
-    -gtk-icon-source: -gtk-scaled(url("../assets/selection-mode-checkbox#{$ch}.png"),url("../assets/checkbox#{$ch}@2.png"));
-    -gtk-icon-shadow: none;
-  }
-  .view.content-view radio#{$s},
-  .view.content-view.radio#{$s}{
-    -gtk-icon-source: -gtk-scaled(url("../assets/selection-mode-radio#{$ch}.png"),url("../assets/radio#{$ch}@2.png"));
-    -gtk-icon-shadow: none;
-  }
-}
-
-
-
-// Style
-
-.check.text-button, .radio.text-button,
 checkbutton.text-button, radiobutton.text-button {
   // this is for a nice focus on check and radios text
   padding: 2px 0;
@@ -164,40 +140,26 @@ checkbutton.text-button, radiobutton.text-button {
 }
 
 check,
-.check,
-radio,
-.radio {
+radio {
   margin: 0 4px;
 
-  .menu .menuitem &,
+  min-height: 16px;
+  min-width: 16px;
+  border: none;
+
   menu menuitem & {
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
-  }
-}
 
-// no animations in menus
-menu menuitem {
-  check:not(:indeterminate):checked,
-  radio:not(:indeterminate):checked,
-  check:indeterminate:checked:active,
-  radio:indeterminate:checked { animation: none; }
-}
-
-treeview.view check,
-treeview.view radio {
-  &:selected {
-    &:focus, & {
-      color: $fg_color;
-
-      @if $variant == 'light' { border-color: $selected_borders_color; }
-    }
-
-    &:disabled {
-      color: $insensitive_fg_color;
-
-      &:backdrop { color: $backdrop_insensitive_color; }
+    &, &:hover, &:disabled { //FIXME use button reset mixin
+      min-height: 14px;
+      min-width: 14px;
+      background-image: none;
+      background-color: transparent;
+      box-shadow: none;
+      -gtk-icon-shadow: none;
+      color: inherit;
+      border-color: currentColor;
+      animation: none;
     }
   }
-
-  &:backdrop { &:selected, & { color: $backdrop_fg_color; }}
 }

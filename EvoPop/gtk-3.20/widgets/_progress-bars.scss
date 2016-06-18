@@ -1,24 +1,16 @@
 /*****************
  * Progress bars *
  *****************/
-
-GtkProgressBar,
-.progressbar,
 progressbar {
-  
-  @extend %scale_trough;
-
   // sizing
   &.horizontal {
     trough,
-    .trough,
-    progress { min-height: 4px; }
+    progress { min-height: 2px; }
   }
 
   &.vertical {
     trough,
-    .trough,
-    progress { min-width: 4px; }
+    progress { min-width: 2px; }
   }
 
   &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
@@ -29,51 +21,41 @@ progressbar {
   font-size: smaller;
   color: transparentize($fg_color, 0.6);
 
-  &:active {
-    border-radius:0px;
-    color: transparentize(black,0.5);
-    background-color: $selected_bg_color;
-    border-color: darken($selected_bg_color, 10%);
-
-    &:backdrop {
-      background-color: lighten($selected_bg_color, 10%);
-      border-color: lighten(darken($selected_bg_color, 10%), 10%);
-    }
-  }
-
   &:backdrop {
+    box-shadow: none;
     transition: $backdrop_transition;
   }
 
-  .progressbar,
+  trough { @extend %scale_trough; }
+
+  &:backdrop trough { @extend %scale_trough:backdrop; } // looks like states are not passed to the trough component here
+
   progress {
     @extend %scale_highlight;
 
-    border-radius: 0px;
+    border-radius: 1.5px;
 
-    // default 2px
     &.left {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
     }
 
     &.right {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
     }
 
     &.top {
-      border-top-right-radius: 0px;
-      border-top-left-radius: 0px;
+      border-top-right-radius: 2px;
+      border-top-left-radius: 2px;
     }
 
     &.bottom {
-      border-bottom-right-radius: 0px;
-      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 2px;
+      border-bottom-left-radius: 2px;
     }
   }
 
-  &:backdrop .progressbar { @extend %scale_highlight:backdrop; } // states not passed here as well
   &:backdrop progress { @extend %scale_highlight:backdrop; } // states not passed here as well
 
   &.osd { // progressbar.osd used for epiphany page loading progress
@@ -81,7 +63,6 @@ progressbar {
     min-height: 3px;
     background-color: transparent;
 
-    .trough,
     trough {
       border-style: none;
       border-radius: 0;
@@ -89,22 +70,9 @@ progressbar {
       box-shadow: none;
     }
 
-    .progressbar,
     progress {
       border-style: none;
       border-radius: 0;
     }
-  }
-
-  // In-Row
-
-  row,
-  .list-row {
-
-    &:selected {
-      border: 1px solid darken($selected_bg_color, 10%);
-      color: transparentize(black,0.5);
-      background-color: $selected_bg_color;
-    }   
   }
 }

@@ -149,8 +149,6 @@ UnityPanelWidget:backdrop,
 
 .unity-panel.menubar .menuitem.separator,
 .unity-panel.menubar.menuitem.separator {
-  -GtkMenuItem-horizontal-padding: 0;
-  -GtkWidget-separator-height: 1;
   border: none;
   color: $borders_color;
 }

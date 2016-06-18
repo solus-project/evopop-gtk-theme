@@ -1,246 +1,296 @@
 /***************
- * Header Bars *
+ * Header bars *
  ***************/
- %headerbar,
- headerbar {
-   padding:0 8px;
-   border: none;
-
-   background-color: $headerbar_bg_color;
-   color: $headerbar_fg_color;
-
-   &:backdrop {
-     background-color: $headerbar_bg_color;
-     color: $backdrop_headerbar_fg_color;
-     transition: $backdrop_transition;
-   }
-
-   .title {
-     font-weight: bold;
-     padding-left: 12px;
-     padding-right: 12px;
-     color: $headerbar_fg_color;
-
-     &:backdrop {
-       color:$backdrop_headerbar_fg_color;
-     }
-   }
-
-   .subtitle {
-     font-size: smaller;
-     padding-left: 12px;
-     padding-right: 12px;
-     color: $headerbar_fg_color;
-
-     @extend .dim-label;
-   }
-
-   //Buttons
-   @keyframes underline {
-     from {
-       box-shadow: none;
-     }
-     to {
-       box-shadow: inset 0 -3px 0 0 darken($selected_bg_color,5%);
-     }
-   }
-
-   button {
-     background-image: none;
-     background-color: transparent;
-     color: $headerbar_fg_color;
-     border-radius: 0;
-     box-shadow: none;
-     min-height: 34px;
-     padding: 0;
-     margin: 0;
-
-     &:backdrop {
-       background-image: none;
-       background-color: transparent;
-       color: $headerbar_fg_color;
-       border-radius: 0;
-       box-shadow: none;
-
-       &:disabled {
-         background-color: transparent;
-       }
-     }
-
-     &:disabled {
-       color: $insensitive_fg_color;
-       background-color: transparent;
-       border-radius: 0;
-       box-shadow: none;
-     }
-
-     &.back-button,
-     &.suggested-action,
-     &.menu-button,
-     &.text-button,
-     &.image-button,
-     &.linked,
-     &.flat {
-       border: none;
-       border-radius: 0;
-       border-right-width: 0;
-       box-shadow: none;
-
-       &:hover {
-         border: none;
-         border-radius: 0;
-       }
-     }
-
-     &:hover {
-       background-color: transparent;
-       @include lines(up);
-     }
-
-     &:active,
-     &:checked {
-       background-color: transparent;
-       @include lines(up);
-       &:backdrop {
-         background-color: transparent;
-         @include lines(up);
-       }
-     }
-
-     label,
-     image {
-       color: $headerbar_fg_color;
-
-       &:backdrop,
-       &:disabled {
-         color: $backdrop_headerbar_fg_color;
-         -gtk-image-effect: dim;
-       }
-     }
-
-     &.suggested-action,
-     &.destructive_color {
-       border-radius: 3px;
-       min-height: 28px;
-       margin-top: 3px;
-       margin-bottom: 3px;
-
-       &:hover,
-       &:active,
-       &:checked {
-         border-radius: 3px;
-         animation: none;
-         box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
-
-       }
-     }
-   }
-
-   .linked {
-     & button {
-       border: none;
-       box-shadow: none;
-       &:hover,
-       &:active,
-       &:checked {
-         @include lines(up);
-       }
-
-       &:first-child,
-       &:last-child,
-       &:hover:first-child,
-       &:hover:last-child,
-       &:active:first-child,
-       &:active:last-child,
-       &:checked:first-child,
-       &:checked:last-child  {
-         border-radius: 0;
-       }
-     }
-   }
-
-   // Separator
-   separator {
-     color: transparent;
-     background-color: transparent;
-   }
- }
-
-.titlebar {
-  border-radius: 4px 4px 0 0;
-  box-shadow: inset 0 1px $top_highlight;
-  background-color: $headerbar_bg_color;
+%titlebar,
+headerbar {
+  padding: 0 6px;
+  min-height: 34px;
+  background-color: $headerbar_color;
   color: $headerbar_fg_color;
+  border-radius: 0;
 
   &:backdrop {
-    box-shadow: inset 0 1px darken($top_highlight,40%);
+    border-color: $backdrop_borders_color;
+    background-image: none;
+
+    transition: $backdrop_transition;
   }
 
-  .maximized &,
-  .fullscreen &,
-  .tiled & {
+  .title {
+    font-weight: bold;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .subtitle {
+    font-size: smaller;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    @extend .dim-label;
+  }
+
+  %linked-header {
+    border: none;
     border-radius: 0;
+    border-right-style: none;
     box-shadow: none;
+
+    &:first-child {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-right-style: solid;
+    }
+
+    &:only-child {
+      border-radius: 0px;
+      border-style: solid;
+    }
   }
 
-  & button {
-    &.titlebutton {
-      background-image: none;
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: none;
-      box-shadow: none;
-      icon-shadow: none;
-      padding: 0;
-      text-shadow: none;
-      color: transparent;
-      image {color: transparent;}
+  button {
+    @include button(normal-header);
+    min-height: 34px;
 
-      &:hover,&:active,&:focus,&:checked {
-        color: transparent;
-        background-color: transparent;
-        box-shadow: none;
-        animation:none;
-        image {color: transparent;}
-        &:backdrop,
+    &:hover,
+    &:active,
+    &:checked {
+      @include button(hover-header);
+    }
+
+    &:backdrop,
+    &:disabled,
+    &:backdrop:disabled {
+      @include button(backdrop-header,transparent,transparentize(white,0.7));
+    }
+
+    &:backdrop {
+      &:hover,
+      &:active,
+      &:checked {
+        @include button(hover-header,transparent,transparentize(white,0.7));
+      }
+    }
+
+    @each $b_type, $b_color in (suggested-action, $cyan),
+                               (destructive-action, $destructive_color) {
+      &.#{$b_type} {
+        font: bold;
+        min-height: 24px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        border-radius: 3px;
+        @include button(normal, $b_color, white);
+
+        &:hover { @include button(hover, $b_color, white); }
+
+        &:active { @include button(active, $b_color, white); }
+
         &:disabled {
-          color: transparent;
-          background-color: transparent;
-          image {color: transparent;}
+          @include button(insensitive, $b_color, white);
+          label {color: transparentize(white,0.5);}
+        }
+
+        &:backdrop {
+          @include button(backdrop, $b_color, white);
+          border-radius: 3px;
+        }
+
+        &:backdrop:disabled { @include button(backdrop-insensitive, $b_color, white); }
+
+      }
+    }
+
+    //Reset style
+    &.titlebutton {
+      color: transparent;
+      box-shadow: none;
+
+      &:hover,
+      &:active,
+      &:checked,
+      &:backdrop,
+      &:backdrop:hover,* {
+        color: transparent;
+        box-shadow: none;
+      }
+    }
+  }
+  .linked > button,
+  .linked > button:hover,
+  .linked > button:active,
+  .linked > button:checked,
+  .linked > button:backdrop { @extend %linked-header; }
+
+  .linked > button:hover,
+  .linked > button:active,
+  .linked > button:checked {
+    @include lines(up);
+  }
+  // End reset style
+
+  &.selection-mode {
+    $_hc: mix($top_highlight,$selected_bg_color, 50%); // highlight color
+
+    color: $selected_fg_color;
+    text-shadow: 0 -1px transparentize(black, 0.5);
+    border-color: $selected_borders_color;
+
+    @include headerbar_fill($selected_bg_color, $_hc);
+
+    &:backdrop {
+      background-color: $selected_bg_color;
+      background-image: none;
+      box-shadow: inset 0 1px mix($top_highlight, $selected_bg_color, 60%);
+    }
+
+    .subtitle:link { @extend *:link:selected;  }
+
+    button {
+      @include button(normal, $selected_bg_color, $selected_fg_color);
+
+      &.flat { @include button(undecorated); }
+
+      &:hover { @include button(hover, $selected_bg_color, $selected_fg_color); }
+
+      &:active,
+      &:checked { @include button(active, $selected_bg_color, $selected_fg_color); }
+
+      &:backdrop {
+        &.flat, & {
+          @include button(backdrop, $selected_bg_color, $selected_fg_color);
+
+          -gtk-icon-effect: none;
+          border-color: $selected_borders_color;
+
+          &:active,
+          &:checked {
+            @include button(backdrop-active, $selected_bg_color, $selected_fg_color);
+
+            border-color: $selected_borders_color;
+          }
+
+          &:disabled {
+            @include button(backdrop-insensitive, $selected_bg_color, $selected_fg_color);
+
+            border-color: $selected_borders_color;
+
+            &:active, &:checked {
+              @include button(backdrop-insensitive-active, $selected_bg_color, $selected_fg_color);
+
+              border-color: $selected_borders_color;
+            }
+          }
         }
       }
-      &.close {
-        background-image: -gtk-scaled(url("../assets/close.png"),url("../assets/close@2.png"));
 
-        &:hover,&:active {
-          background-image: -gtk-scaled(url("../assets/close_prelight.png"),url("../assets/close_prelight@2.png"));
-        }
+      &.flat { &:backdrop, &:disabled, &:backdrop:disabled { @include button(undecorated); }}
+
+      &:disabled {
+        @include button(insensitive, $selected_bg_color, $selected_fg_color);
+
+        &:active,
+        &:checked { @include button(insensitive-active, $selected_bg_color, $selected_fg_color); }
       }
 
-      &.maximize {
-        background-image: -gtk-scaled(url("../assets/max.png"),url("../assets/max@2.png"));
+      &.suggested-action {
+        @include button(normal, $cyan, white);
 
-        &:hover,&:active {
-          background-image: -gtk-scaled(url("../assets/max_prelight.png"),url("../assets/max_prelight@2.png"));
+        &:hover { @include button(hover, $cyan, white); }
+
+        &:active { @include button(active, $cyan, white); }
+
+        &:disabled { @include button(insensitive, $cyan, white); }
+
+        &:backdrop { @include button(backdrop, $cyan, white); }
+
+        &:backdrop:disabled { @include button(backdrop-insensitive, $cyan, white); }
+      }
+    }
+
+    .selection-menu {
+      &:backdrop, & {
+        border-color: transparentize($selected_bg_color, 1);
+        background-image: linear-gradient(to bottom, transparentize($selected_bg_color, 1));
+        box-shadow: none;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        GtkArrow { -GtkArrow-arrow-scaling: 1; }
+
+        .arrow {
+          -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
+          color: transparentize($selected_fg_color,0.5);
+          -gtk-icon-shadow: none;
         }
       }
+    }
+  }
 
-      &.minimize {
-        background-image: -gtk-scaled(url("../assets/min.png"),url("../assets/min@2.png"));
-        &:hover,&:active {
-          background-image: -gtk-scaled(url("../assets/min_prelight.png"),url("../assets/min_prelight@2.png"));
-        }
-      }
+  .tiled &,
+  .maximized & { &:backdrop, & { border-radius: 0; }} // squared corners when the window is maximized or tiled
+
+  &.default-decoration {
+    padding: 4px;
+    min-height: 28px;
+
+    button.titlebutton {
+      min-height: 26px;
+      min-width: 26px;
+      margin: 0;
+      padding: 0;
     }
   }
 }
 
-.ssd .titlebar {
-    border-width: 0;
-    box-shadow: inset 0 1px $top_highlight;
+headerbar {
+  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
+  entry,
+  spinbutton,
+  separator,
+  button {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  switch {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
 
-    &:backdrop {
-      box-shadow: inset 0 1px darken($top_highlight,40%);
-    }
+.background:not(.tiled):not(.maximized) .titlebar {
+  box-shadow: inset 0 1px $top_highlight;
+
+  &:backdrop, & {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+}
+
+headerbar {
+  window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
+  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 4px; }}
+
+  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 4px; }}
+}
+
+.titlebar:not(headerbar) {
+  window.csd > & {
+    // in csd we assume every titlebar is a headerbar so reset anything, this is needed for split toolbars cases
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border-style: none;
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  > separator { background-color: transparent; }
+
+  @extend %titlebar;
 }

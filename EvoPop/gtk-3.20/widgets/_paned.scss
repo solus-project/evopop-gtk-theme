@@ -1,7 +1,6 @@
 /*********
  * Paned *
  *********/
-.paned,
 paned {
   > separator {
     min-width: 1px;
@@ -31,9 +30,6 @@ paned {
       }
     }
   }
-
-  border: solid $borders_color;
-  border-left-width: 1px;
 
   &.horizontal > separator {
     background-repeat: repeat-y;

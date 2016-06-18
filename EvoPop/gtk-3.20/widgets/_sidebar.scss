@@ -2,8 +2,8 @@
  * Sidebar *
  ***********/
 .sidebar {
-  border-style: solid;
-  background-color: transparentize($bg_color,0.2);
+  border-style: none;
+  background-color: mix($bg_color, $base_color, 50%);
 
   @at-root %sidebar_left,
   &:dir(ltr),
@@ -28,35 +28,7 @@
 
   list { background-color: transparent; }
 
-  .frame {
-    border-width:0;
-    border-right-width:1px;
-  }
-
-  .list-row,
-  row {
-    border:none;
-    padding: 5px 8px;
-
-    > label {
-      padding-left: 6px;
-      padding-right: 6px;
-    }
-
-    &.needs-attention > label {
-      background-size: 6px 6px, 0 0;
-    }
-  }
-
-  .separator {
-    color: $borders_color;
-  }
-
-  > .inline-toolbar {
-    border-radius: 0;
-  }
-
-  .paned &, paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
+  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
 
 stacksidebar {
@@ -69,9 +41,8 @@ stacksidebar {
     &.right { list { @extend %sidebar_right; }}
   }
 
-  .list-row,
   row {
-    padding: 5px 8px;
+    padding: 10px 4px;
 
     > label {
       padding-left: 6px;
@@ -79,6 +50,8 @@ stacksidebar {
     }
 
     &.needs-attention > label {
+      @extend %needs_attention;
+
       background-size: 6px 6px, 0 0;
     }
   }
