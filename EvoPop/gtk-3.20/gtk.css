@@ -2788,55 +2788,43 @@ infobar {
  *************/
 levelbar block {
   min-width: 32px;
-  min-height: 2px; }
+  min-height: 6px; }
 levelbar.vertical block {
-  min-width: 2px;
+  min-width: 6px;
   min-height: 32px; }
 levelbar:backdrop {
   transition: 200ms ease-out; }
 levelbar trough {
-  border: 1px solid;
-  padding: 2px;
+  padding: 3px;
   border-radius: 3px;
-  color: #31363d;
-  border-color: rgba(0, 0, 0, 0.2);
-  background-color: #fefefe; }
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
   levelbar trough:backdrop {
-    color: #595d63;
-    border-color: rgba(115, 116, 118, 0.28);
-    background-color: #fbfbfb;
-    box-shadow: none; }
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
 levelbar.horizontal.discrete block {
   margin: 0 1px; }
 levelbar.vertical.discrete block {
   margin: 1px 0; }
 levelbar block {
-  border: 1px solid;
-  border-radius: 2px;
-  box-shadow: 0 1px rgba(0, 0, 0, 0.2); }
+  border-radius: 2px; }
   levelbar block:backdrop {
     box-shadow: none; }
   levelbar block.low {
-    border-color: #ff9c09;
     background-color: #ffa622; }
     levelbar block.low:backdrop {
       border-color: #ffa622; }
   levelbar block.high, levelbar block:not(.empty) {
-    border-color: #31a593;
     background-color: #37b9a5; }
     levelbar block.high:backdrop, levelbar block:not(.empty):backdrop {
       border-color: #37b9a5; }
   levelbar block.full {
-    border-color: #31a593;
     background-color: #37b9a5; }
     levelbar block.full:backdrop {
       border-color: #37b9a5; }
   levelbar block.empty {
-    background-color: transparent;
-    border-color: rgba(49, 54, 61, 0.2);
+    background-color: rgba(0, 0, 0, 0.14);
     box-shadow: none; }
-    levelbar block.empty:backdrop {
-      border-color: rgba(140, 143, 148, 0.15); }
 
 /*********
  * Links *
@@ -3382,31 +3370,17 @@ progressbar {
   color: rgba(49, 54, 61, 0.4); }
   progressbar.horizontal trough,
   progressbar.horizontal progress {
-    min-height: 2px; }
+    min-height: 6px; }
   progressbar.vertical trough,
   progressbar.vertical progress {
-    min-width: 2px; }
+    min-width: 6px; }
   progressbar.horizontal progress {
-    margin: 0 -1px; }
+    margin: 0; }
   progressbar.vertical progress {
-    margin: -1px 0; }
+    margin: 0; }
   progressbar:backdrop {
     box-shadow: none;
     transition: 200ms ease-out; }
-  progressbar progress {
-    border-radius: 1.5px; }
-    progressbar progress.left {
-      border-top-left-radius: 2px;
-      border-bottom-left-radius: 2px; }
-    progressbar progress.right {
-      border-top-right-radius: 2px;
-      border-bottom-right-radius: 2px; }
-    progressbar progress.top {
-      border-top-right-radius: 2px;
-      border-top-left-radius: 2px; }
-    progressbar progress.bottom {
-      border-bottom-right-radius: 2px;
-      border-bottom-left-radius: 2px; }
   progressbar.osd {
     min-width: 3px;
     min-height: 3px;
@@ -3424,58 +3398,42 @@ progressbar {
  * GtkScale *
  ************/
 progressbar trough, scale trough, scale fill {
-  background-color: #fefefe;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.14);
+  border: none;
+  border-radius: 3px;
   margin: 0; }
   progressbar trough:disabled, scale trough:disabled, scale fill:disabled {
-    background-color: #f0f1f3; }
+    background-color: rgba(0, 0, 0, 0.06); }
   progressbar trough:backdrop, progressbar:backdrop trough, scale trough:backdrop, scale fill:backdrop {
-    background-color: rgba(221, 223, 226, 0.748);
-    border-color: rgba(115, 116, 118, 0.28);
+    background-color: rgba(0, 0, 0, 0.06);
     transition: 200ms ease-out; }
     progressbar trough:backdrop:disabled, progressbar:backdrop trough:disabled, scale trough:backdrop:disabled, scale fill:backdrop:disabled {
-      background-color: #f0f1f3; }
-  row:selected progressbar trough, progressbar row:selected trough, row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill {
-    box-shadow: none; }
-    row:selected progressbar trough:disabled, progressbar row:selected trough:disabled, row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled, row:selected progressbar trough, progressbar row:selected trough, row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill {
-      border-color: #0f8aa6; }
-  .osd progressbar trough, progressbar .osd trough, .osd scale trough, scale .osd trough, .osd scale fill, scale .osd fill {
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: none; }
-    .osd progressbar trough:disabled, progressbar .osd trough:disabled, .osd scale trough:disabled, scale .osd trough:disabled, .osd scale fill:disabled, scale .osd fill:disabled {
-      background-color: rgba(43, 46, 49, 0.5); }
+      background-color: rgba(0, 0, 0, 0.06); }
 
 progressbar progress, scale highlight {
-  border: 1px solid #0f8aa6;
+  border: none;
   background-color: #13b1d5;
-  box-shadow: inset 0px 1px rgba(255, 255, 255, 0.2);
-  border-radius: 4px; }
+  border-radius: 3px;
+  margin: 0; }
   progressbar progress:disabled, scale highlight:disabled {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    background-color: rgba(0, 0, 0, 0.1); }
+    border: none;
+    background-color: rgba(0, 0, 0, 0.14); }
   progressbar progress:backdrop, progressbar:backdrop progress, scale highlight:backdrop, progressbar progress:active:backdrop, progressbar:backdrop progress:active, scale highlight:active:backdrop {
-    border-color: #2fc9ec;
-    background-color: #2fc9ec; }
+    border-color: #17c3ea;
+    background-color: #17c3ea; }
     progressbar progress:backdrop:disabled, progressbar:backdrop progress:disabled, scale highlight:backdrop:disabled, progressbar progress:active:backdrop:disabled, progressbar:backdrop progress:active:disabled, scale highlight:active:backdrop:disabled {
-      background-color: rgba(0, 0, 0, 0.05);
-      border-color: rgba(0, 0, 0, 0.2); }
-  .list-row:selected progressbar progress:disabled, progressbar .list-row:selected progress:disabled, .list-row:selected scale highlight:disabled, scale .list-row:selected highlight:disabled, .list-row:selected progressbar progress, progressbar .list-row:selected progress, .list-row:selected scale highlight, scale .list-row:selected highlight {
-    border-color: #0f8aa6; }
-  row:selected progressbar progress:disabled, progressbar row:selected progress:disabled, row:selected scale highlight:disabled, scale row:selected highlight:disabled, row:selected progressbar progress, progressbar row:selected progress, row:selected scale highlight, scale row:selected highlight {
-    border-color: #0f8aa6; }
-  .osd progressbar progress, progressbar .osd progress, .osd scale highlight, scale .osd highlight {
-    border-color: rgba(0, 0, 0, 0.7); }
-    .osd progressbar progress:disabled, progressbar .osd progress:disabled, .osd scale highlight:disabled, scale .osd highlight:disabled {
-      border-color: transparent; }
+      background-color: rgba(0, 0, 0, 0.1); }
 
 scale {
   min-height: 16px;
   min-width: 16px;
   padding: 8px; }
-  scale fill,
-  scale highlight {
-    margin: -1px; }
+  scale.horizontal trough,
+  scale.horizontal progress {
+    min-height: 6px; }
+  scale.vertical trough,
+  scale.vertical progress {
+    min-width: 6px; }
   scale slider {
     min-height: 16px;
     min-width: 16px;

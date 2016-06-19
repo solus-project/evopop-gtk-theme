@@ -2,68 +2,39 @@
  * GtkScale *
  ************/
 %scale_trough {
-  background-color: $base_color;
-  border:1px solid $borders_color;
-
+  background-color: transparentize(black,0.86);
+  border: none;
+  border-radius: 3px;
   margin: 0;
 
-  &:disabled { background-color: $insensitive_bg_color; }
+  &:disabled { background-color: transparentize(black,0.94); }
 
   &:backdrop {
-    background-color: $backdrop_dark_fill;
-    border-color: $backdrop_borders_color;
+    background-color: transparentize(black,0.94);
     transition: $backdrop_transition;
 
-    &:disabled { background-color: $insensitive_bg_color; }
-  }
-
-  // ...on selected list rows
-  row:selected & {
-    box-shadow: none;
-
-    &:disabled, & { border-color: $selected_borders_color; }}
-
-  // OSD
-  .osd & {
-    border-color: $osd_borders_color;
-    background-color: transparentize($osd_borders_color, 0.2);
-    box-shadow: none;
-
-    &:disabled { background-color: $osd_insensitive_bg_color; }
+    &:disabled { background-color: transparentize(black,0.94); }
   }
 }
 
 %scale_highlight {
-  border: 1px solid $selected_borders_color;
+  border: none;
   background-color: $selected_bg_color;
-  box-shadow: inset 0px 1px $top_highlight;
-
-  border-radius: 4px;
+  border-radius: 3px;
+  margin: 0;
 
   &:disabled {
-    border: 1px solid $borders_color;
-    background-color: transparentize(black, 0.9);
+    border: none;
+    background-color: transparentize(black, 0.86);
   }
 
   &:backdrop,
   &:active:backdrop {
-    border-color: lighten($selected_bg_color, 10%);
-    background-color: lighten($selected_bg_color, 10%);
+    border-color: lighten($selected_bg_color, 5%);
+    background-color: lighten($selected_bg_color, 5%);
     &:disabled {
-      background-color: transparentize(black, 0.95);
-      border-color: $borders_color;
+      background-color: transparentize(black, 0.9);
     }
-  }
-
-  // ...on selected list rows
-  .list-row:selected & { &:disabled, & { border-color: $selected_borders_color; } }
-  row:selected & { &:disabled, & { border-color: $selected_borders_color; }}
-
-  // OSD
-  .osd & {
-    border-color: $osd_borders_color;
-
-    &:disabled { border-color: transparent; }
   }
 }
 
@@ -76,9 +47,15 @@ scale {
   min-width: 16px;
   padding: 8px;
 
-  // those are inside the trough node, I need them to show their own border over the trough one, so negative margin
-  fill,
-  highlight { margin: -1px; }
+  &.horizontal {
+    trough,
+    progress { min-height: 6px; }
+  }
+
+  &.vertical {
+    trough,
+    progress { min-width: 6px; }
+  }
 
   // the slider is inside the trough, so to have make it bigger there's a negative margin
 
