@@ -235,8 +235,8 @@ headerbar {
   .tiled &,
   .maximized & {
     &.titlebar {
-      @if $variant == 'light' {box-shadow: none;}
-      box-shadow: inset 0 -1px $bottom_highlight;
+      @if $variant == 'dark' {box-shadow: inset 0 -1px $bottom_highlight;}
+      @else {box-shadow: none;}
     }
     &:backdrop, & { border-radius: 0; }
   } // squared corners when the window is maximized or tiled
