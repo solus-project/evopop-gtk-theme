@@ -97,8 +97,36 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
         image { padding-left: 0px; padding-right: 6px; }
     }
-    row.activatable:selected,
-    row.activatable:selected button { color: inherit; }
+
+    scrollbar {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    list {
+      background-color: transparent;
+
+      row.activatable:selected,
+      row.activatable:selected button { color: inherit; }
+
+
+      row {
+        &.activatable {
+          &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
+
+          &:hover { background-color: transparent; }
+
+          &:active { box-shadow: none; }
+
+          &:selected {
+            &:active { box-shadow: none; }
+
+            &.has-open-popup,
+            &:hover { background-color: transparent; }
+          }
+        }
+      }
+    }
 }
 
 // Panel
@@ -358,7 +386,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     }
 
     .linked.horizontal > button {
-        min-height: 20px;
+        min-height: 32px;
         border-bottom: none;
         border-radius: 0;
         background-color: transparent;
@@ -387,8 +415,12 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 }
 
 // PolKit Dialog
-.background.budgie-polkit-dialog {
+.budgie-polkit-dialog {
   @extend .budgie-session-dialog;
+
+  .window-frame.csd.popup {
+    background-color: black;
+  }
 
   .message { color: transparentize($fg_color, 0.3); }
   .failure { color: $alert_color; }
