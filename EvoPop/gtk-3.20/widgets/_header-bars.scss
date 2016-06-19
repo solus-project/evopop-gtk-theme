@@ -233,7 +233,13 @@ headerbar {
   }
 
   .tiled &,
-  .maximized & { &:backdrop, & { border-radius: 0; }} // squared corners when the window is maximized or tiled
+  .maximized & {
+    &.titlebar {
+      @if $variant == 'light' {box-shadow: none;}
+      box-shadow: inset 0 -1px $bottom_highlight;
+    }
+    &:backdrop, & { border-radius: 0; }
+  } // squared corners when the window is maximized or tiled
 
   &.default-decoration {
     padding: 4px;
@@ -264,7 +270,9 @@ headerbar {
 }
 
 .background:not(.tiled):not(.maximized) .titlebar {
-  box-shadow: inset 0 1px $top_highlight;
+  @if $variant == 'light' {box-shadow: inset 0 1px $top_highlight;}
+  box-shadow: inset 0 1px $top_highlight,inset 0 -1px $bottom_highlight;
+
 
   &:backdrop, & {
     border-top-left-radius: 4px;
