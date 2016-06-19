@@ -1108,9 +1108,9 @@ button.color {
     border-radius: 0; }
 
 notebook > stack:not(:only-child) button, list button, view button, popover button {
-  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1); }
+  box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.1), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1); }
   notebook > stack:not(:only-child) button:backdrop, list button:backdrop, view button:backdrop, popover button:backdrop {
-    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.1); }
+    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.1), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1); }
 notebook > stack:not(:only-child) .linked > button, list .linked > button, view .linked > button, popover .linked > button {
   box-shadow: none; }
 
