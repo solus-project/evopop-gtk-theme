@@ -4989,8 +4989,6 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked {
         background-color: rgba(177, 30, 57, 0.9); }
 
-.budgie-polkit-dialog .window-frame.csd.popup {
-  background-color: black; }
 .budgie-polkit-dialog .message {
   color: rgba(254, 254, 254, 0.7); }
 .budgie-polkit-dialog .failure {

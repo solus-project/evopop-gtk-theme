@@ -418,10 +418,6 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-polkit-dialog {
   @extend .budgie-session-dialog;
 
-  .window-frame.csd.popup {
-    background-color: black;
-  }
-
   .message { color: transparentize($fg_color, 0.3); }
   .failure { color: $alert_color; }
 }
