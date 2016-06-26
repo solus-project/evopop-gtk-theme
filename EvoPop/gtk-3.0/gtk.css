@@ -2094,6 +2094,8 @@ GraniteWidgetsWelcome {
   .titlebar:backdrop {
     background-color: #31363D;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
+  .tiled .titlebar, .maximized .titlebar {
+    box-shadow: none; }
 
 .titlebar,
 .header-bar {

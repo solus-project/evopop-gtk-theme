@@ -9,6 +9,10 @@
    &:backdrop {
      @include headerbar_fill;
    }
+
+   .tiled &, .maximized & {
+     box-shadow: if($variant == 'light', none, inset 0 -1px $bottom_highlight);
+   }
  }
 
 .titlebar,
