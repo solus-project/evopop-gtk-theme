@@ -50,7 +50,10 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
 // Container for both the "panel" area and the shadow. Wise to keep
 // this transparent..
-.budgie-container { background-color: transparent; }
+.budgie-container {
+  background-color: transparent;
+  &:backdrop { background-color: transparent; }
+}
 
 // Budgie Menu
 .budgie-menu {

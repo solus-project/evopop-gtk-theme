@@ -4074,6 +4074,8 @@ column-header .button, column-header .button:hover, column-header .button:active
 **********/
 .budgie-container {
   background-color: transparent; }
+  .budgie-container:backdrop {
+    background-color: transparent; }
 
 .budgie-menu GtkSearchEntry.entry:not(:selected) {
   border: none;
