@@ -2,138 +2,98 @@
  * Dialogs *
  ***********/
 
-GtkMessageDialog,
-.message-dialog {
+.message-dialog .dialog-action-area .button {
+  padding: 8px;
+}
 
-  background-color: if($variant=='light',$base_color,$bg_color);
+.message-dialog { // Message Dialog styling
+  background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
 
-  &:backdrop {
-    background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
-  }
-
-  .header-bar,
   .titlebar {
-    background-image: none;
-    background-color: if($variant=='light',$base_color,$bg_color);
+    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
     border-style: none;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    box-shadow: inset 0 1px $top_highlight;
-
-    &:backdrop {
-      background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
-    }
-
-    &.default-decoration {
-      padding: 6px;
-      background-color: if($variant=='light',$base_color,$bg_color);
-      color: $fg_color;
-
-      &:backdrop {
-        background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
-        color: $backdrop_fg_color;
-      }
-
-      .button {
-        &.titlebutton {
-          padding: 1px;
-          background-color:transparent;
-          box-shadow: none;
-          text-shadow: none;
-          icon-shadow: none;
-
-          GtkImage {
-            color: $fg_color;
-          }
-
-          &:hover {
-            background-color:transparent;
-            color: $selected_bg_color;
-
-            GtkImage {
-              color: $selected_bg_color;
-            }
-          }
-
-          &:backdrop {
-            background-color:transparent;
-            color:$backdrop_fg_color;
-
-            GtkImage {
-              color: lighten($backdrop_fg_color, 10%);
-            }
-          }
-
-          &:active {
-            background-color: transparent;
-            color: $selected_bg_color;
-            box-shadow:none;
-
-            GtkImage {
-              color: $selected_bg_color;
-            }
-          }
-        }
-      }
-    }
+    box-shadow: inset 0 1px $borders_edge;
   }
-
   &.csd { // rounded bottom border styling for csd version
-    border:none;
-    box-shadow: 0 1px 4px 0 transparentize(black, 0.8);
-
     &.background {
       // bigger radius for better antialiasing
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
+      background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+      color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
     }
-
     .dialog-action-area .button {
-      padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
+      padding: 12px;
       border-radius: 0;
-      background-image:none;
-      background-color: if($variant=='light',$backdrop_base_color,$backdrop_bg_color);
+      border-radius: 0;
       border-left-style: solid;
       border-right-style: none;
       border-bottom-style: none;
-      border-top: 1px solid darken(if($variant=='light',$backdrop_base_color,$backdrop_bg_color), 20%);
-
+      background-color: transparent;
+      color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      box-shadow: none;
       &:hover {
-        background-color: $selected_bg_color;
+        background-color: transparentize($selected_bg_color, 0.1);
       }
-
-      &:active,&:selected {
-        border-radius: 0;
-        background-color: darken($selected_bg_color,5%);
+      @each $b_type, $b_color in (suggested-action, $selected_bg_color),
+                                 (destructive-action, $destructive_color) {
+        &.#{$b_type} {
+          @include button(normal, $b_color, white, $edge:none);
+          @extend %middle_button;
+          &:hover {
+            @include button(hover, $b_color, white, $edge:none);
+            @extend %middle_button;
+          }
+          &:active {
+            @include button(active, $b_color, white, $edge:none);
+            @extend %middle_button;
+          }
+          &:backdrop {
+            @include button(backdrop, $b_color, white, $edge:none);
+            @extend %middle_button;
+            &:insensitive {
+              @include button(backdrop-insensitive, $edge:none);
+              @extend %middle_button;
+            }
+          }
+          &:insensitive {
+            @include button(insensitive, $edge:none);
+            @extend %middle_button;
+          }
+        }
       }
-
-      &:first-child {
-        border-left-style: none;
-        border-bottom-left-radius: 4px;
-        // -gtk-outline-bottom-left-radius: 4px;
-      }
-
-      &:last-child {
-        border-bottom-right-radius: 4px;
-        // -gtk-outline-bottom-right-radius: 4px;
-      }
+      &:first-child{ @extend %first_button; }
+      &:last-child { @extend %last_button; }
+    }
+    %middle_button {
+      border-left-style: solid;
+      border-right-style: none;
+      border-bottom-style: none;
+    }
+    %last_button {
+      border-bottom-right-radius: 5px;
+      outline-bottom-right-radius: 5px;
+    }
+    %first_button {
+      border-left-style: none;
+      border-bottom-left-radius: 5px;
+      outline-bottom-left-radius: 5px;
     }
   }
 }
 
 GtkFileChooserDialog {
-
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-
+  .search-bar {
+    background-color: $base_color;
+    border-color: $bg_color;
+    box-shadow: none;
+    &:backdrop {
+      background-color: $backdrop_base_color;
+      border-color: $backdrop_bg_color;
+    }
+  }
   .dialog-action-box {
     border-top: 1px solid $borders_color;
-
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-
     &:backdrop { border-top-color: $backdrop_borders_color; }
   }
-
-  #pathbarbox { border-bottom: 1px solid $bg_color; }
 }

@@ -2,90 +2,74 @@
  * Progress bars *
  *****************/
 
-GtkProgressBar,
-.progressbar {
-
-  @extend %scale_trough;
-
-  // sizing
-  &.horizontal progress { margin: 0 -1px; } // the progress node is positioned after the trough border
-  &.vertical progress { margin: -1px 0; }   // this moves it over it.
-
-
-  // FIXME: insensitive state missing and some other state should be set probably
+GtkProgressBar {
+  padding: 0;
   font-size: smaller;
   color: transparentize($fg_color, 0.6);
-
-  &:active {
-    border-radius:0px;
-    color: transparentize(black,0.5);
-    background-color: $selected_bg_color;
-    border-color: darken($selected_bg_color, 10%);
-
-    &:backdrop {
-      background-color: lighten($selected_bg_color, 10%);
-      border-color: lighten(darken($selected_bg_color, 10%), 10%);
-    }
-  }
-
+  box-shadow: inset 1px 1px transparentize(black, 0.9), // needs to be set
+              _widget_edge();                           // here ot it gets
+                                                        // clipped
   &:backdrop {
-    transition: $backdrop_transition;
+    color: $backdrop_insensitive_color;
   }
-
-  .progressbar {
-    @extend %scale_highlight;
-
-    border-radius: 0px;
-
-    // default 2px
-    &.left {
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
-    }
-
-    &.right {
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
-    }
-
-    &.top {
-      border-top-right-radius: 0px;
-      border-top-left-radius: 0px;
-    }
-
-    &.bottom {
-      border-bottom-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-    }
+  &.osd {
+    -GtkProgressBar-xspacing: 0;
+    -GtkProgressBar-yspacing: 0;
+    -GtkProgressBar-min-horizontal-bar-height: 3;
   }
-
-  &:backdrop .progressbar { @extend %scale_highlight:backdrop; } // states not passed here as well
-  &:backdrop progress { @extend %scale_highlight:backdrop; } // states not passed here as well
-
-  &.osd { // progressbar.osd used for epiphany page loading progress
-    background-color: transparent;
-
-    .trough {
+  &.trough {  // background
+    border-radius: 3px;
+    background-color: transparentize(black,0.86);
+    box-shadow: none;
+    &:backdrop{
+      background-color: transparentize(black,0.94);
+    }
+    &.osd {
       border-style: none;
-      border-radius: 0;
       background-color: transparent;
       box-shadow: none;
     }
+  }
+}
 
-    .progressbar {
-      border-style: none;
-      border-radius: 0;
+// moving bit
+.progressbar {
+  background-color: $selected_bg_color;
+  border-radius: 1.5px;
+  box-shadow: none; //needed for clipping
+  &.left {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  &.right {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  &.left.right {
+    box-shadow: none;
+  }
+  &.vertical {
+    &.bottom {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+      box-shadow: none;
+    }
+    &.top {
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
     }
   }
-
-  // In-Row
-
-  row,
-  .list-row {
-    &:selected {
-      border: 1px solid darken($selected_bg_color, 10%);
-      color: transparentize(black,0.5);
-      background-color: $selected_bg_color;
-    }
+  &:backdrop {
+    border-color: if($variant=='light', $selected_bg_color,
+                                        $selected_borders_color);
+    background-image: none;
+    background-color: $selected_bg_color;
+    box-shadow: none;
+  }
+  &.osd {
+    background-image: none;
+    background-color: $selected_bg_color;
+    border-style: none;
+    border-radius: 0;
   }
 }

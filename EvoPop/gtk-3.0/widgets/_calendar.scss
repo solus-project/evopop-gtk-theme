@@ -6,13 +6,11 @@ GtkCalendar {
   border: 1px solid $borders_color;
 
   &:selected {
-    @extend %selected_items;
-
-    border-radius: 3px;
+    @extend .view:selected;
   }
 
   &.header {
-    border-bottom: 1px solid transparentize(black, 0.9);
+    border: 1px solid transparentize(black, 0.9);
     border-radius: 0;
 
     &:backdrop { border-color: transparentize(black, 0.9); }
@@ -20,30 +18,26 @@ GtkCalendar {
 
   &.button {
     @extend %undecorated_button;
-
     color: transparentize($fg_color, 0.55);
 
     &:hover {
       @extend %undecorated_button;
-
       color: $fg_color;
     }
 
     &:backdrop {
       @extend %undecorated_button;
-
       color: transparentize($backdrop_fg_color,0.55);
     }
 
     &:insensitive {
       @extend %undecorated_button;
-
       color:  transparentize($insensitive_fg_color,0.55);
     }
   }
 
-  &.highlight,
-  &.highlight:backdrop {
+  &:inconsistent, &:inconsistent:backdrop { color: gtkalpha(currentColor, 0.55); }
+  &.highlight, &.highlight:backdrop {
     font-size: smaller;
     color: $fg_color;
   }

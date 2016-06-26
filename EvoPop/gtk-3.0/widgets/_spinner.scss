@@ -10,22 +10,21 @@ menu spinner,
 /*********************
  * Spinner Animation *
  *********************/
+
 @keyframes spin {
   to { -gtk-icon-transform: rotate(1turn); }
 }
 
-.spinner,
-spinner {
+.spinner {
   background-image: none;
-  background: none;
+  background-color: blue;
   opacity: 0; // non spinning spinner makes no sense
   -gtk-icon-source: -gtk-icontheme('process-working-symbolic');
-
-  &:active,
-  &:checked {
+  &:active {
     opacity: 1;
     animation: spin 1s linear infinite;
-
-    &:insensitive, &:insensitive { opacity: 0.5; }
+    &:insensitive {
+      opacity: 0.5;
+    }
   }
 }

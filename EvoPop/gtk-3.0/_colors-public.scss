@@ -24,13 +24,13 @@
 /* text/foreground color of selections */
 @define-color theme_selected_fg_color #{"" +$selected_fg_color};
 
-/* base background color of insensitive widgets */
+/* base background color of disabled widgets */
 @define-color insensitive_bg_color #{"" +$insensitive_bg_color};
 
-/* text foreground color of insensitive widgets */
+/* text foreground color of disabled widgets */
 @define-color insensitive_fg_color #{"" +$insensitive_fg_color};
 
-/* insensitive text widgets and the like base background color */
+/* disabled text widgets and the like base background color */
 @define-color insensitive_base_color #{"" +$base_color};
 
 /* widget text/foreground color on backdrop windows */
@@ -65,7 +65,7 @@
 
 //WM
 
-$_wm_highlight: if($variant=='light', $top_highlight,  // Sass gets mad if this is
+$_wm_highlight: if($variant=='light', $top_hilight,  // Sass gets mad if this is
                   transparentize(black,1));          // done directly in the
                                                      // color definition
 
@@ -91,4 +91,3 @@ read if you used those and something break with a version upgrade you're on your
 //FIXME this is really an API
 
 @define-color content_view_bg #{"" + $base_color};
-

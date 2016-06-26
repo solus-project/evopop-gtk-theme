@@ -16,12 +16,12 @@
   }
 
   &:first-child {
-    border-radius: 6px 6px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
     border-width: 1px 1px 0px 1px;
   }
 
   &:last-child {
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 3px 3px;
     border-width: 0px 1px 1px 1px;
   }
 
@@ -35,18 +35,21 @@
       background-color: transparent;
       color: $selected_bg_color;
       box-shadow: none;
+      border: none;
     }
     &:active,
     &:checked {
       background-color: transparent;
       color: darken($selected_bg_color,5%);
       box-shadow: none;
+      border: none;
     }
 
     &:backdrop {
       background-color: transparent;
       background-image: none;
       box-shadow: none;
+      border: none;
 
       &:hover {
         background-color: transparent;

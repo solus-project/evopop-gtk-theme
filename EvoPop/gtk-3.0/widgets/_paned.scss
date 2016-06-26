@@ -1,56 +1,34 @@
 /*********
  * Paned *
  *********/
-.paned {
-  > .separator {
-    -gtk-icon-source: none; // defeats the ugly default handle decoration
-    border-style: none; // just to be sure
+
+GtkPaned { // this is for the standard paned separator
+
+  -GtkPaned-handle-size: 1; // sets separator width
+
+  -gtk-icon-source: none; // removes handle decoration
+  margin: 0 8px 8px 0; // drag area of the separator, not a real margin
+  &:dir(rtl) {
+    margin-right: 0;
+    margin-left: 8px;
+  }
+  .pane-separator {
     background-color: $borders_color;
-    // workaround, using background istead of a border since the border will get rendered twice (?)
-    background-size: 1px 1px;
-
-    &:selected { background-color: $selected_bg_color } // FIXME is this needed?
-
-    &:backdrop { background-color: $backdrop_borders_color }
-
-  }
-
-  border: solid $borders_color;
-  border-left-width: 1px;
-
-  &.horizontal > .separator {
-    background-repeat: repeat-y;
-
-    &:dir(ltr) {
-      margin: 0 -8px 0 0;
-      padding: 0 8px 0 0;
-      background-position: left;
-    }
-    &:dir(rtl) {
-      margin: 0 0 0 -8px;
-      padding: 0 0 0 8px;
-      background-position: right;
-    }
-
-    &.wide {
-      margin: 0;
-      padding: 0;
-      background-repeat: repeat-y, repeat-y;
-      background-position: left, right;
+    &:backdrop {
+      background-color: $backdrop_borders_color;
     }
   }
+}
 
-  &.vertical > .separator {
-    margin: 0 0 -8px 0;
-    padding: 0 0 8px 0;
-    background-repeat: repeat-x;
-    background-position: top;
-
-    &.wide {
-      margin: 0;
-      padding: 0;
-      background-repeat: repeat-x, repeat-x;
-      background-position: bottom, top;
-    }
+GtkPaned.wide { // this is for the paned with wide separator
+  -GtkPaned-handle-size: 5; // wider separator here
+  margin: 0; // no need of the invisible drag area so, reset margin
+  .pane-separator {
+    background-color: transparent;
+    border-style: none solid;
+    border-color: $borders_color;
+    border-width: 1px;
   }
+  &.vertical .pane-separator { border-style: solid none;}
+  .pane-separator:backdrop { border-color: $backdrop_borders_color; }
 }

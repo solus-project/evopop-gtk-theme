@@ -38,7 +38,6 @@ GtkSwitch {
     padding:2px;
     outline-radius: 10px;
     border-radius: 10px;
-    transition: $button_transition;
     background-color: white;
 
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2);
@@ -55,7 +54,7 @@ GtkSwitch {
 
   // Trough
   .trough {
-    
+
     &:active,
     &:checked {
       background-color: $selected_bg_color;

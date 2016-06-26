@@ -1,73 +1,83 @@
 /***********
  * Sidebar *
  ***********/
+
 .sidebar {
-  padding:0;
-  border-style: solid;
-  background-color: $bg_color;
-
-  &.left {
-    border-right: 1px solid $borders_color;
-    border-left-style: none;
-  }
-
-  &.right {
-    border-left: 1px solid $borders_color;
-    border-right-style: none;
-  }
+  border: none;
+  background-color: mix($bg_color, $base_color, 50%);
+  color: $fg_color;
 
   &:backdrop {
-    background-color: $backdrop_sidebar_bg_color;
-    border-color: $backdrop_borders_color;
-    transition: $backdrop_transition;
+    color: $backdrop_fg_color;
   }
 
-  .frame {
-    border-width:0;
-    border-left-width:1px;
-    border-right-width:1px;
+  &:selected {
+    @extend %selected_items;
+  }
+}
+
+$_placesidebar_icons_opacity: 0.8;
+GtkSidebarRow {
+  // Needs overriding of the GtkListBoxRow padding
+  &.list-row {
+    padding: 0px;
+  }
+  // Using margins/padding directly in the SidebarRow
+  // will make the animation of the new bookmark row jump
+  .sidebar-revealer {
+    padding: 4px 14px 4px 12px;
+  }
+  .sidebar-icon {
+    opacity: $_placesidebar_icons_opacity; // dim the device icons
+    &:dir(ltr) { padding-right: 8px; }
+    &:dir(rtl) { padding-left: 8px; }
+  }
+  .sidebar-label {
+    &:dir(ltr) { padding-right: 2px; }
+    &:dir(rtl) { padding-left: 2px; }
+  }
+}
+
+GtkPlacesSidebar.sidebar {
+  // in the sidebar case it makes no sense to click the selected row
+  .list-row:selected:active { box-shadow: none; }
+
+   // looks like the label doesn't get all the states so work around
+  .list-row:selected:insensitive .label { @extend %selected_items:insensitive; }
+  .list-row:selected:backdrop:insensitive .label { @extend %selected_items:backdrop:insensitive; }
+
+  .sidebar-placeholder-row {
+    border: solid 1px $selected_bg_color;
   }
 
-  .sidebar-item,
-  .sidebar-row {
-    padding: 5px 8px;
-
-    GtkImage {
-      padding-right: 6px;
-      padding-left: 6px;
-    }
-
-    &:selected,
-    &:active {
-      background-color: $selected_bg_color;
-      color: $selected_fg_color;
-
-      &:hover {
-        background-color: $selected_bg_color;
-        color: $selected_fg_color;
-        box-shadow:none;
-      }
-
-      &:backdrop {
-        background-color: lighten($selected_bg_color, 20%);
-      }
-    }
-
-    &:hover {
-      background-color: $base_color;
-      color: $fg_color;
-      box-shadow:0 1px 2px 0 transparentize(black, 0.8);
-
-      &:backdrop {
-        box-shadow:none;
-      }
-    }
+  .sidebar-new-bookmark-row {
+    color: $selected_bg_color;
   }
 
-  .separator {
-    color: $borders_color;
+  @at-root .sidebar-button.button { // @at-root needded to not change the specificity making button styling inheritance broken
+                                    // so istead of "GtkPlacesSidebar.sidebar .sidebar-button.button" [specificity 0,0,3,1]
+                                    // the extended selector ".sidebar-button.button" [specificity 0,0,2,0]
+
+    &.image-button { padding: 5px; }
+
+    @extend .button.flat;
+    border-radius: 100%;
+    outline-radius: 100%;
+    &:not(:hover):not(:active) > GtkImage,
+    &:backdrop > GtkImage { opacity: $_placesidebar_icons_opacity };
   }
+  // this is for indicating which sidebar row generated a popover
+  // see https://bugzilla.gnome.org/show_bug.cgi?id=754411
+  .has-open-popup { @extend .list-row.activatable:hover; }
+}
 
-  .paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
-
+.sidebar-item {
+  padding: 10px 4px;
+  > .label {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  &.needs-attention > .label {
+    background-size: 6px 6px, 0 0;
+  }
 }

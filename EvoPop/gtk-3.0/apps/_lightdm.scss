@@ -63,7 +63,7 @@
   padding-top: 20px;
   padding-bottom: 0px;
   border-style: none;
-  background-color: if($variant=='light', $osd_bg_color, $headerbar_bg_color);
+  background-color: if($variant=='light', $osd_bg_color, $headerbar_color);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border: solid transparentize(black, 0.9);
