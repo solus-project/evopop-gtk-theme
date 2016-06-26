@@ -99,7 +99,7 @@
     background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
     box-shadow: none;
     text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
   }
   @if $t==osd-focus {
     color: $osd_text_color;
@@ -107,7 +107,7 @@
     background-color: transparentize(opacify($osd_borders_color, 1), 0.5);
     background-clip: padding-box;
     text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
   }
   @if $t==osd-insensitive {
     color: $osd_insensitive_fg_color;
@@ -116,7 +116,7 @@
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
   }
   @if $t==osd-backdrop {
     color: $osd_text_color;
@@ -125,7 +125,7 @@
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
   }
 }
 
@@ -174,11 +174,11 @@
 
   @if lightness($tc)<50% {
     text-shadow: 0 1px $_shadow;
-    -gtk-icon-shadow: 0 1px $_shadow;
+    icon-shadow: 0 1px $_shadow;
   }
   @else {
     text-shadow: 0 -1px $_shadow;
-    -gtk-icon-shadow: 0 -1px $_shadow;
+    icon-shadow: 0 -1px $_shadow;
   }
 }
 
@@ -349,7 +349,7 @@ box-shadow: none;
     background-clip: padding-box;
     box-shadow: inset 0 1px transparentize(white, 0.9);
     text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
     outline-color: transparentize($osd_fg_color, 0.7);
   }
   @else if $t==osd-hover {
@@ -365,7 +365,7 @@ box-shadow: none;
     background-clip: padding-box;
     box-shadow: inset 0 1px transparentize(white, 0.9);
     text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
+    icon-shadow: 0 1px black;
     outline-color: transparentize($osd_fg_color, 0.7);
   }
   @else if $t==osd-active {
@@ -380,7 +380,7 @@ box-shadow: none;
     background-clip: padding-box;
     box-shadow: inset 0 1px transparentize(white, 0.9);
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
     outline-color: transparentize($osd_fg_color, 0.7);
   }
   @else if $t==osd-insensitive {
@@ -393,7 +393,7 @@ box-shadow: none;
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
   }
   @else if $t==osd-backdrop {
   //
@@ -408,7 +408,7 @@ box-shadow: none;
     background-clip: padding-box;
     box-shadow: none;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
   }
   @else if $t==undecorated {
   //
@@ -422,7 +422,7 @@ box-shadow: none;
                       $_blank_edge);
 
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
   }
 }
 

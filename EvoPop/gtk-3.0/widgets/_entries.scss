@@ -89,7 +89,6 @@
   // remove the edge hilight and the focus shadow (unfortunatelly)
   > .entry:not(:last-child) { box-shadow: none; }
   // add back the focus shadow
-  > .entry:focus:not(:last-child) { box-shadow: entry_focus_shadow(); }
 
   // brighter border between linked entries
   > .entry:not(:insensitive) + .entry:not(:insensitive) {
@@ -104,7 +103,6 @@
   // color back the top border of a linked focused entry following another entry and add back the focus shadow.
   > .entry + .entry:focus:not(:last-child) {
     border-top-color: entry_focus_border();
-    box-shadow: entry_focus_shadow();
   }
   // just recolor the top border on the last focused entry, since we don't reset the shadow here letting that be
   // inherited by the entry styling.

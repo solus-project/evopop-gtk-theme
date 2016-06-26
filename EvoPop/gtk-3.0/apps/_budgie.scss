@@ -36,7 +36,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     border: none;
     box-shadow: none;
     text-shadow: none;
-    -gtk-icon-shadow: none;
+    icon-shadow: none;
     opacity: 1;
     margin: 0;
     padding: 0;
@@ -233,7 +233,6 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
             box-shadow: none;
             margin-top: -4px;
             margin-bottom: -4px;
-            min-height: 32px;
 
             &:hover {
               border-radius: 0;
