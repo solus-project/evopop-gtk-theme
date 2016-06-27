@@ -4504,6 +4504,15 @@ NautilusWindow .pane-separator.horizontal {
   .header-bar .nautilus-desktop .nautilus-list .subtitle:selected {
     color: #fefefe; }
 
+/*********
+ * Gedit *
+ *********/
+.gedit-search-slider {
+  padding: 4px;
+  border-radius: 0 0 3px 3px;
+  border: 0;
+  background-color: #e6e8eb; }
+
 /********
  * Gala *
  *******/
