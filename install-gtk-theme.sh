@@ -126,7 +126,7 @@ if [ -d /usr/share/gnome-shell/extensions/user-theme@gnome-shell-extensions.gcam
 	echo
 	read INPUT
 	case $INPUT in
-		[Yy]* ) gsettings set org.gnome.shell.extensions.user-theme name "Paper";;
+		[Yy]* ) gsettings set org.gnome.shell.extensions.user-theme name "EvoPop";;
 	    [Nn]* ) end;;
 	    * ) echo; show_error "\aUh oh, invalid response. Please retry."; set;;
 	esac
@@ -153,7 +153,7 @@ if [ "$UID" -ne "$ROOT_UID" ]; then
 	continue
 else
 	echo
-	echo "Paper GTK Theme will be installed in:"
+	echo "EvoPop GTK Theme will be installed in:"
 	echo
 	show_dir '\t/usr/share/themes'
 	echo
