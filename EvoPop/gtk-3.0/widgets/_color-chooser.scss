@@ -7,11 +7,9 @@ GtkColorSwatch {
   // is GtkColorSwatch > .overlay {}, GtkColorSwatch has the programmatically set background, so most of the style
   // is applied to the overlay box.
 
-  $_colorswatch_shadow: inset 0 1px transparentize(black, 0.9), _widget_edge();
+  $_colorswatch_radius: 4px;
 
-  $_colorswatch_radius: 5px;
-
-  box-shadow: $_colorswatch_shadow;
+  box-shadow: none;
 
   // take care of colorswatches on selected elements
   :selected & {
@@ -22,7 +20,7 @@ GtkColorSwatch {
   }
 
   // we need to re-set the shadow here since it get axed by the previous bit
-  &:selected { box-shadow: $_colorswatch_shadow; }
+  &:selected { box-shadow: none; }
   &:insensitive {
     box-shadow: none;
     opacity: 0.5;
@@ -72,17 +70,6 @@ GtkColorSwatch {
   &:only-child > .overlay { border-radius: $_colorswatch-radius; }
 
   // hover effect
-  &:hover,
-  &:hover:selected {
-    background-image: linear-gradient(135deg, transparentize(white, 0.3),
-                                              transparentize(white, 1) 50%);
-    box-shadow: inset 0 1px transparentize(white, 0.6),
-                inset 0 -1px if($variant == 'light', transparentize(black, 0.9), transparentize(black, 0.6));
-    &.color-dark { // swatches with colors with luminosity lower than 50% get the color-dark class
-      background-image: linear-gradient(135deg, transparentize(white, 0.5),
-                                                transparentize(white, 1) 50%);
-    }
-  }
   &:backdrop,
   &:backdrop:selected
   &.color-dark:backdrop,
@@ -96,7 +83,7 @@ GtkColorSwatch {
     border-radius: 3px; // same radius as the entry
     &:hover {
       background-image: none;
-      box-shadow: inset 0 1px transparentize(black, 0.9), _widget_edge();
+      box-shadow: _widget_edge();
     }
     &:backdrop { box-shadow: none; }
   }
