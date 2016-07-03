@@ -2765,7 +2765,7 @@ infobar {
     padding: 4px 8px; }
     .menubar > .menuitem:hover {
       box-shadow: inset 0 -3px #13b1d5;
-      color: #13b1d5; }
+      color: #fefefe; }
     .menubar > .menuitem:insensitive {
       color: #989a9e;
       box-shadow: none; }
