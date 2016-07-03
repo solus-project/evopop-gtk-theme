@@ -3097,7 +3097,8 @@ GtkPlacesView .list-row.activatable:hover, GtkPlacesView GtkPlacesSidebar.sideba
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
       .notebook tab .button:backdrop {
         color: rgba(152, 154, 158, 0.3);
-        border-color: transparent; }
+        border-color: transparent;
+        box-shadow: none; }
       .notebook tab .button > GtkImage {
         padding: 2px; }
   .notebook.arrow {
