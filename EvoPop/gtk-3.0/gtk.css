@@ -1036,11 +1036,11 @@ GtkColorButton.button {
     GtkColorButton.button GtkColorSwatch:first-child:last-child:insensitive, GtkColorButton.button GtkColorSwatch:first-child:last-child:backdrop {
       box-shadow: none; }
 
-.notebook > stack:not(:only-child) .button, .list .button, .view .button, .popover .button {
+.notebook .button, .list .button, .view .button, .popover .button {
   box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
-  .notebook > stack:not(:only-child) .button:backdrop, .list .button:backdrop, .view .button:backdrop, .popover .button:backdrop {
+  .notebook .button:backdrop, .list .button:backdrop, .view .button:backdrop, .popover .button:backdrop {
     box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
-.notebook > stack:not(:only-child) .linked > .button, .list .linked > .button, .view .linked > .button, .popover .linked > .button {
+.notebook .linked > .button, .list .linked > .button, .view .linked > .button, .popover .linked > .button {
   box-shadow: none; }
 
 /************

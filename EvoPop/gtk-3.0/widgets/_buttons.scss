@@ -389,7 +389,7 @@ GtkColorButton.button {
   }
 }
 
-.notebook > stack:not(:only-child), .list, .view, .popover {
+.notebook, .list, .view, .popover {
   .button {
     box-shadow: inset 0px 2px 0px 0px $top_hilight,
                 inset 0px 0px 0px 1px $borders_color;
