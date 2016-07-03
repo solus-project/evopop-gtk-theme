@@ -265,7 +265,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         &:inconsistent { color: gtkalpha(currentColor,0.3); }
 
         &:selected {
-            color: $selected_bg_color;
+            color: darken($selected_bg_color,5%);
             background-color: transparent;
         }
         &.header {

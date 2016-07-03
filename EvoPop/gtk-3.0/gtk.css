@@ -4352,7 +4352,7 @@ column-header .button, column-header .button:hover, column-header .button:active
     .raven GtkCalendar.raven-calendar:inconsistent {
       color: alpha(currentColor,0.3); }
     .raven GtkCalendar.raven-calendar:selected {
-      color: #13b1d5;
+      color: #119ebe;
       background-color: transparent; }
     .raven GtkCalendar.raven-calendar.header {
       color: #31363d;
