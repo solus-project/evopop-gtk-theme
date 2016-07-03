@@ -256,6 +256,35 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         &.middle { border-bottom-style: none; }  // applet background between two headers
     }
 
+    // Calendar
+    GtkCalendar.raven-calendar {
+        padding: 3px;
+        color: $fg_color;
+        background-color: $raven_background_bg;
+
+        &:inconsistent { color: gtkalpha(currentColor,0.3); }
+
+        &:selected {
+            color: $selected_bg_color;
+            background-color: transparent;
+        }
+        &.header {
+            color: $fg_color;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+        }
+        &.button, &.button:focus {
+            color: gtkalpha(currentColor,0.5);
+            background-color: transparent;
+
+            &:hover {
+                color: $fg_color;
+                background-color: transparent;
+            }
+        }
+    }
+
     .powerstrip .button.image-button {
         border-radius:50%;
         padding: 12px;

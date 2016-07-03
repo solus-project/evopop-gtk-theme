@@ -4329,6 +4329,26 @@ column-header .button, column-header .button:hover, column-header .button:active
         box-shadow: inset 0 -3px 0 0 #119ebe; }
     .raven .raven-background.middle {
       border-bottom-style: none; }
+  .raven GtkCalendar.raven-calendar {
+    padding: 3px;
+    color: #fefefe;
+    background-color: rgba(54, 59, 67, 0.55); }
+    .raven GtkCalendar.raven-calendar:inconsistent {
+      color: alpha(currentColor,0.3); }
+    .raven GtkCalendar.raven-calendar:selected {
+      color: #13b1d5;
+      background-color: transparent; }
+    .raven GtkCalendar.raven-calendar.header {
+      color: #fefefe;
+      border: none;
+      border-radius: 0;
+      background-color: transparent; }
+    .raven GtkCalendar.raven-calendar.button, .raven GtkCalendar.raven-calendar.button:focus {
+      color: alpha(currentColor,0.5);
+      background-color: transparent; }
+      .raven GtkCalendar.raven-calendar.button:hover, .raven GtkCalendar.raven-calendar.button:focus:hover {
+        color: #fefefe;
+        background-color: transparent; }
   .raven .powerstrip .button.image-button, .raven .powerstrip GtkScaleButton.button,
   .raven .powerstrip GtkVolumeButton.button {
     border-radius: 50%;
