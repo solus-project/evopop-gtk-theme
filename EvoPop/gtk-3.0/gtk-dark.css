@@ -3157,11 +3157,11 @@ GtkPaned.wide {
  ***************/
 .popover {
   padding: 2px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  background-color: #41454b;
+  background-color: #31363d;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
   .popover:backdrop {
+    background-color: #31363d;
     box-shadow: none; }
   .popover > .list,
   .popover > .view,
@@ -4097,7 +4097,10 @@ column-header .button, column-header .button:hover, column-header .button:active
     padding-right: 6px; }
 
 .budgie-menu .scrollbar {
+  background-color: transparent;
   border-color: transparent; }
+  .budgie-menu .scrollbar .slider {
+    background-color: #505359; }
 
 .budgie-menu .button {
   box-shadow: none; }

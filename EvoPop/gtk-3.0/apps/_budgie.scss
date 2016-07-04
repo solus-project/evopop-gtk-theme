@@ -65,7 +65,11 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
         &.image { padding-left: 0px; padding-right: 6px; }
     }
-    .scrollbar { border-color: transparent; }
+    .scrollbar {
+      background-color: transparent;
+      border-color: transparent;
+      .slider { background-color: if($variant=='dark', $base_color, $bg_color); }
+    }
     .button { box-shadow: none; }
     .list,
     .list-row:hover { background: none; }
@@ -179,7 +183,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     color: $fg_color;
     background-color: $raven_bg;
     transition: 170ms ease-out;
-    
+
     .raven-header {
       color: $fg_color;
       border: solid $raven_expander_border;
