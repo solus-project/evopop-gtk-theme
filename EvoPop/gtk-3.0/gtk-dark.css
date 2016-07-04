@@ -4387,6 +4387,7 @@ column-header .button, column-header .button:hover, column-header .button:active
         color: #fefefe;
         background-color: transparent; }
   .raven .powerstrip {
+    background-color: transparent;
     border-top-color: transparent; }
   .raven .powerstrip .button.image-button, .raven .powerstrip GtkScaleButton.button, .raven .powerstrip
   GtkVolumeButton.button {
@@ -4434,7 +4435,7 @@ column-header .button, column-header .button:hover, column-header .button:active
 
 .raven-mpris {
   color: #fefefe;
-  background-color: #31363d;
+  background-color: rgba(26, 29, 33, 0.9);
   border: solid rgba(0, 0, 0, 0.1);
   border-width: 1px 0; }
   .raven-mpris .button.image-button, .raven-mpris GtkScaleButton.button, .raven-mpris

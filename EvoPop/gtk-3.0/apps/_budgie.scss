@@ -288,7 +288,10 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
             }
         }
     }
-    .powerstrip { border-top-color: transparent; }
+    .powerstrip {
+      background-color: transparent;
+      border-top-color: transparent;
+    }
     .powerstrip .button.image-button {
         border-radius:50%;
         padding: 12px;
@@ -344,7 +347,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 // MPRIS Applet
 .raven-mpris {
     color: $fg_color;
-    background-color: $bg_color;
+    background-color: transparentize(if($variant=='light',$base_color, darken($bg_color, 10%)), 0.1);
     border: solid $borders_color;
     border-width: 1px 0;
 
