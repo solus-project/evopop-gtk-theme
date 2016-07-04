@@ -23,7 +23,7 @@ GtkScrolledWindow {
 .separator {
   // always disable separators
   // -GtkWidget-wide-separators: true;
-  color: transparentize(black, 0.9);
+  color: $borders_color;
 
   // Font and File button separators
   GtkFileChooserButton &.vertical,

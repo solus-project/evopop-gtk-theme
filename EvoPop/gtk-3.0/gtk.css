@@ -1947,7 +1947,7 @@ GtkScrolledWindow GtkViewport.frame {
   border-style: none; }
 
 .separator {
-  color: rgba(0, 0, 0, 0.1); }
+  color: rgba(0, 0, 0, 0.2); }
   GtkFileChooserButton .separator.vertical,
   GtkFontButton .separator.vertical {
     -GtkWidget-wide-separators: true; }
@@ -2117,7 +2117,8 @@ GraniteWidgetsWelcome {
   background-color: #31363D;
   color: #fefefe;
   padding-left: 5px;
-  padding-right: 5px; }
+  padding-right: 5px;
+  -GtkPaned-handle-size: 0; }
   .titlebar .title,
   .header-bar .title {
     font-weight: bold;
@@ -2130,10 +2131,13 @@ GraniteWidgetsWelcome {
     padding-right: 12px; }
   .titlebar .header-bar-separator,
   .titlebar > GtkBox > .separator.vertical,
+  .titlebar > GtkBox > GtkBox > .separator.vertical,
   .header-bar .header-bar-separator,
-  .header-bar > GtkBox > .separator.vertical {
+  .header-bar > GtkBox > .separator.vertical,
+  .header-bar > GtkBox > GtkBox > .separator.vertical {
     -GtkWidget-wide-separators: false;
-    border-width: 0; }
+    border: 0 none transparent;
+    color: transparent; }
   .titlebar .button,
   .header-bar .button {
     color: #fefefe;
@@ -3561,6 +3565,9 @@ GtkPlacesSidebar.sidebar .sidebar-new-bookmark-row {
     padding-right: 6px; }
   .sidebar-item.needs-attention > .label {
     background-size: 6px 6px, 0 0; }
+
+GtkStackSidebar .separator {
+  -GtkWidget-wide-separators: true; }
 
 /*****************
  * GtkSpinButton *
