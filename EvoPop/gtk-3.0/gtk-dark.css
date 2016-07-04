@@ -4360,14 +4360,18 @@ column-header .button, column-header .button:hover, column-header .button:active
     .raven .raven-background.middle {
       border-bottom-style: none; }
   .raven GtkCalendar.raven-calendar {
-    padding: 3px;
+    padding: 6px;
     color: #fefefe;
     background-color: rgba(54, 59, 67, 0.55); }
     .raven GtkCalendar.raven-calendar:inconsistent {
       color: alpha(currentColor,0.3); }
     .raven GtkCalendar.raven-calendar:selected {
-      color: #119ebe;
-      background-color: transparent; }
+      color: #fefefe;
+      background-color: transparent;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 2em 2em;
+      background-image: -gtk-scaled(url("../assets/calendar-selected.png"), url("../assets/calendar-selected@2.png")); }
     .raven GtkCalendar.raven-calendar.header {
       color: #fefefe;
       border: none;

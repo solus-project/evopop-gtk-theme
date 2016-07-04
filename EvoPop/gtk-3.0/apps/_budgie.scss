@@ -270,15 +270,21 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
     // Calendar
     GtkCalendar.raven-calendar {
-        padding: 3px;
+        padding: 6px;
         color: $fg_color;
         background-color: $raven_background_bg;
 
         &:inconsistent { color: gtkalpha(currentColor,0.3); }
 
         &:selected {
-            color: darken($selected_bg_color,5%);
+            color: $selected_fg_color;
             background-color: transparent;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 2em 2em;
+
+            background-image: -gtk-scaled(url("../assets/calendar-selected.png"),
+                                          url("../assets/calendar-selected@2.png"));
         }
         &.header {
             color: $fg_color;
