@@ -180,6 +180,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
 // Raven
 .raven {
+    padding: 0;
     color: $fg_color;
     background-color: $raven_bg;
     transition: 170ms ease-out;
@@ -225,6 +226,13 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         }
       }
     }
+
+    GtkScrolledWindow { background: transparent; }
+
+    .list,
+    .list-row,
+    .list-row.activatable { background-color: transparent; }
+
     .raven-background {
         color: $fg_color;
         background-color: $raven_background_bg;

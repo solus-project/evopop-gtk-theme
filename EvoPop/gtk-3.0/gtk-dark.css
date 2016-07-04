@@ -4296,6 +4296,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent); }
 
 .raven {
+  padding: 0;
   color: #fefefe;
   background-color: rgba(60, 67, 75, 0.95);
   transition: 170ms ease-out; }
@@ -4328,6 +4329,12 @@ column-header .button, column-header .button:hover, column-header .button:active
         box-shadow: inset 0 -3px 0 0 #119ebe; }
       .raven .raven-header .button:insensitive {
         color: #989a9e; }
+  .raven GtkScrolledWindow {
+    background: transparent; }
+  .raven .list,
+  .raven .list-row,
+  .raven .list-row.activatable {
+    background-color: transparent; }
   .raven .raven-background {
     color: #fefefe;
     background-color: rgba(54, 59, 67, 0.55);
