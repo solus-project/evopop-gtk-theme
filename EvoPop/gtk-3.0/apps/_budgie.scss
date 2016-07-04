@@ -374,7 +374,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 }
 
 .drop-shadow {
-    color: $fg_color;
+    color: $headerbar_fg_color;
     background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
     box-shadow: 0 2px 4px 0 transparentize(black, 0.7);
     border-radius: 3px;
@@ -382,17 +382,20 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
 // Session Dialog
 .budgie-session-dialog {
-    &.background { @extend .drop-shadow; }
+  color: $headerbar_fg_color;
+    &.background {
+      @extend .drop-shadow;
+      GtkLabel { color: transparentize($headerbar_fg_color, 0.1); }
+    }
 
     .linked.horizontal > .button {
       padding: 8px 14px;
       border-bottom: none;
       border-radius: 0;
+      color: $headerbar_fg_color;
       background-color: transparent;
       box-shadow: none;
-      GtkLabel {
-        font: bold;
-      }
+      GtkLabel { font: bold; }
 
       &:first-child { border-left: none; border-bottom-left-radius: 3px; }
       &:last-child { border-right: none; border-bottom-right-radius: 3px; }
@@ -407,6 +410,13 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
             &:active, &:checked { background-color: transparentize(lighten($b_color,5%), 0.1); }
           }
       }
+    }
+
+    .entry {
+      background-color: #505359;
+      color: $headerbar_fg_color;
+      &:focus { background-color: #505359; }
+      &:backdrop { background-color: #505359; }
     }
 }
 
