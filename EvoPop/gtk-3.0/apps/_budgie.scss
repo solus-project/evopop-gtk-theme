@@ -147,7 +147,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         padding: 0;
         background: none;
         border: none;
-        border-#{$b_pos}: $border_width solid $borders_color;
+        border-#{$b_pos}: $border_width solid transparentize($bg_color, 0.08);
     }
 
     // Shadows

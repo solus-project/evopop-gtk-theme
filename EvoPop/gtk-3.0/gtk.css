@@ -4263,7 +4263,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   padding: 0;
   background: none;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  border-bottom: 1px solid rgba(230, 232, 235, 0.92); }
 
 .top .shadow-block {
   background-color: transparent;
@@ -4276,7 +4276,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   padding: 0;
   background: none;
   border: none;
-  border-top: 1px solid rgba(0, 0, 0, 0.2); }
+  border-top: 1px solid rgba(230, 232, 235, 0.92); }
 
 .bottom .shadow-block {
   background-color: transparent;
@@ -4289,7 +4289,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   padding: 0;
   background: none;
   border: none;
-  border-right: 1px solid rgba(0, 0, 0, 0.2); }
+  border-right: 1px solid rgba(230, 232, 235, 0.92); }
 
 .left .shadow-block {
   background-color: transparent;
@@ -4302,7 +4302,7 @@ column-header .button, column-header .button:hover, column-header .button:active
   padding: 0;
   background: none;
   border: none;
-  border-left: 1px solid rgba(0, 0, 0, 0.2); }
+  border-left: 1px solid rgba(230, 232, 235, 0.92); }
 
 .right .shadow-block {
   background-color: transparent;
