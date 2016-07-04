@@ -179,7 +179,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     color: $fg_color;
     background-color: $raven_bg;
     transition: 170ms ease-out;
-
+    
     .raven-header {
       color: $fg_color;
       border: solid $raven_expander_border;
@@ -333,9 +333,8 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         }
       }
 
-    .option-subtitle {
-        font-size: smaller;
-    }
+    .option-subtitle { font-size: smaller; }
+
 }
 
 // MPRIS Applet
@@ -362,12 +361,14 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         font-size: 110%;
         color: $fg_color;
     }
-    .notification-body { color: transparentize($fg_color, 0.3); }
+    .notification-body {
+      color: transparentize($fg_color, 0.3);
+    }
 }
 
 .drop-shadow {
     color: $fg_color;
-    background-color: $panel_bg;
+    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
     box-shadow: 0 2px 4px 0 $panel_shadow;
     border-radius: 3px;
 }

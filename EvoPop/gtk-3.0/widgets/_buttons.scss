@@ -391,11 +391,9 @@ GtkColorButton.button {
 
 .notebook, .list, .view, .popover {
   .button {
-    box-shadow: inset 0px 2px 0px 0px $top_hilight,
-                inset 0px 0px 0px 1px $borders_color;
+    box-shadow: inset 0px 0px 0px 1px $borders_color;
     &:backdrop {
-      box-shadow: inset 0px 2px 0px 0px $top_hilight,
-                  inset 0px 0px 0px 1px $borders_color;
+      box-shadow: inset 0px 0px 0px 1px $borders_color;
     }
   }
   .linked > .button {
