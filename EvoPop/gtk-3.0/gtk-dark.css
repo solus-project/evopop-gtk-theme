@@ -4464,8 +4464,6 @@ column-header .button, column-header .button:hover, column-header .button:active
 
 .budgie-session-dialog, .budgie-polkit-dialog {
   color: #fefefe; }
-  .budgie-session-dialog.background GtkLabel, .background.budgie-polkit-dialog GtkLabel {
-    color: rgba(254, 254, 254, 0.9); }
   .budgie-session-dialog .linked.horizontal > .button, .budgie-polkit-dialog .linked.horizontal > .button {
     padding: 8px 14px;
     border-bottom: none;

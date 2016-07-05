@@ -4467,10 +4467,10 @@ column-header .button, column-header .button:hover, column-header .button:active
 
 .budgie-notification .notification-title {
   font-size: 110%;
-  color: #31363d; }
+  color: #fefefe; }
 
 .budgie-notification .notification-body {
-  color: rgba(49, 54, 61, 0.7); }
+  color: rgba(254, 254, 254, 0.7); }
 
 .drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog {
   color: #fefefe;
@@ -4480,8 +4480,6 @@ column-header .button, column-header .button:hover, column-header .button:active
 
 .budgie-session-dialog, .budgie-polkit-dialog {
   color: #fefefe; }
-  .budgie-session-dialog.background GtkLabel, .background.budgie-polkit-dialog GtkLabel {
-    color: rgba(254, 254, 254, 0.9); }
   .budgie-session-dialog .linked.horizontal > .button, .budgie-polkit-dialog .linked.horizontal > .button {
     padding: 8px 14px;
     border-bottom: none;
@@ -4520,7 +4518,7 @@ column-header .button, column-header .button:hover, column-header .button:active
       background-color: #505359; }
 
 .budgie-polkit-dialog .message {
-  color: rgba(49, 54, 61, 0.7); }
+  color: rgba(254, 254, 254, 0.7); }
 
 .budgie-polkit-dialog .failure {
   color: #c72240; }
