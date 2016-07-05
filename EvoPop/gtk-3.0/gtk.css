@@ -4319,7 +4319,24 @@ column-header .button, column-header .button:hover, column-header .button:active
     border-width: 1px 0;
     background-color: rgba(230, 232, 235, 0.2); }
     .raven .raven-header.top {
-      border-top-style: none; }
+      border-style: none; }
+      .raven .raven-header.top .button.image-button:hover, .raven .raven-header.top GtkScaleButton.button:hover, .raven .raven-header.top
+      GtkVolumeButton.button:hover {
+        color: #119ebe;
+        box-shadow: none; }
+      .raven .raven-header.top > .button.text-button {
+        border-radius: 3px;
+        color: #fefefe;
+        background-color: rgba(177, 30, 57, 0.9);
+        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
+        .raven .raven-header.top > .button.text-button:hover {
+          color: #fefefe;
+          background-color: rgba(199, 34, 64, 0.9);
+          box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
+        .raven .raven-header.top > .button.text-button:active {
+          color: #fefefe;
+          background-color: rgba(218, 40, 73, 0.9);
+          box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
     .raven .raven-header.bottom {
       border-bottom-style: none;
       padding: 0;
@@ -4354,9 +4371,8 @@ column-header .button, column-header .button:hover, column-header .button:active
       background-color: rgba(19, 177, 213, 0.9); }
   .raven .raven-background {
     color: #31363d;
-    background-color: rgba(230, 232, 235, 0.2);
-    border-color: transparent;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    background-color: transparent;
+    border-color: transparent; }
     .raven .raven-background.middle {
       border-bottom-style: none; }
     .raven .raven-background .linked .button.text-button {

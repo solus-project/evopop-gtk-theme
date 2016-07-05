@@ -172,7 +172,33 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
       border-width: 1px 0;
       background-color: transparentize($bg_color, 0.8);
 
-      &.top { border-top-style: none; }
+      &.top {
+        border-style: none;
+        .button.image-button {
+          &:hover {
+            color: darken($selected_bg_color,5%);
+            box-shadow: none;
+          }
+        }
+
+        > .button.text-button {
+          border-radius: 3px;
+          color: $selected_fg_color;
+          background-color: transparentize(darken($red,5%), 0.1);
+          @include _shadows(inset 0px 1px 0px 0px $top_hilight,inset 0px -1px 0px 0px $bottom_highlight);
+          &:hover {
+            color: $selected_fg_color;
+            background-color: transparentize($red, 0.1);
+            @include _shadows(inset 0px 1px 0px 0px $top_hilight,inset 0px -1px 0px 0px $bottom_highlight);
+          }
+          &:active {
+            color: $selected_fg_color;
+            background-color: transparentize(lighten($red,5%), 0.1);
+            @include _shadows(inset 0px 1px 0px 0px $top_hilight,inset 0px -1px 0px 0px $bottom_highlight);
+          }
+        }
+
+      }
       &.bottom {
         border-bottom-style: none;
         padding: 0;
@@ -219,9 +245,8 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
     .raven-background {
         color: $fg_color;
-        background-color: transparentize($bg_color, 0.8);
+        background-color: transparent;
         border-color: transparent;
-        border-bottom: 1px solid $borders_color;
         &.middle { border-bottom-style: none; }  // applet background between two headers
 
         .linked {
