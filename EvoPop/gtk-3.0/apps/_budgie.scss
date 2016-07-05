@@ -358,6 +358,17 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-notification-window {
     background: none;
     border-radius: 1px;
+    .button {
+      background-color: $cyan;
+      color: $selected_fg_color;
+      border: none;
+      &:hover {
+        background-color: darken($cyan, 5%);
+        border: none;
+      }
+      &:active, &:checked { background-color: darken($cyan, 5%); }
+    }
+
 }
 
 .budgie-notification {
@@ -370,6 +381,16 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     }
     .notification-body {
       color: transparentize($headerbar_fg_color, 0.3);
+    }
+
+    .button {
+      background-color: transparent;
+      color: $selected_fg_color;
+      &:hover {
+        color: $red;
+        box-shadow: none;
+      }
+      &:active, &:checked { color: darken($red, 5%); }
     }
 }
 

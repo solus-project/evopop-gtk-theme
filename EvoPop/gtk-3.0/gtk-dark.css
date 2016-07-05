@@ -4445,6 +4445,15 @@ column-header .button, column-header .button:hover, column-header .button:active
 .budgie-notification-window {
   background: none;
   border-radius: 1px; }
+  .budgie-notification-window .button {
+    background-color: #37b9a5;
+    color: #fefefe;
+    border: none; }
+    .budgie-notification-window .button:hover {
+      background-color: #31a593;
+      border: none; }
+    .budgie-notification-window .button:active, .budgie-notification-window .button:checked {
+      background-color: #31a593; }
 
 .budgie-notification.background {
   border-radius: 1px; }
@@ -4455,6 +4464,15 @@ column-header .button, column-header .button:hover, column-header .button:active
 
 .budgie-notification .notification-body {
   color: rgba(254, 254, 254, 0.7); }
+
+.budgie-notification .button {
+  background-color: transparent;
+  color: #fefefe; }
+  .budgie-notification .button:hover {
+    color: #c72240;
+    box-shadow: none; }
+  .budgie-notification .button:active, .budgie-notification .button:checked {
+    color: #b11e39; }
 
 .drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog {
   color: #fefefe;
