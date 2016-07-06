@@ -4485,9 +4485,11 @@ column-header .button, column-header .button:hover, column-header .button:active
   background-color: transparent;
   color: #fefefe; }
   .budgie-notification .button:hover {
+    background-color: transparent;
     color: #c72240;
     box-shadow: none; }
   .budgie-notification .button:active, .budgie-notification .button:checked {
+    background-color: transparent;
     color: #b11e39; }
 
 .drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog {

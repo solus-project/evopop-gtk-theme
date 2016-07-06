@@ -412,10 +412,14 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
       background-color: transparent;
       color: $selected_fg_color;
       &:hover {
+        background-color: transparent;
         color: $red;
         box-shadow: none;
       }
-      &:active, &:checked { color: darken($red, 5%); }
+      &:active, &:checked {
+        background-color: transparent;
+        color: darken($red, 5%);
+      }
     }
 }
 
