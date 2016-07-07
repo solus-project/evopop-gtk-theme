@@ -2165,7 +2165,9 @@ GraniteWidgetsWelcome {
     .titlebar .button > .label,
     .header-bar .button > .label {
       padding-left: 0px;
-      padding-right: 0px; }
+      padding-right: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px; }
     .titlebar .button > GtkImage,
     .header-bar .button > GtkImage {
       padding-left: 0px;
@@ -2239,15 +2241,15 @@ GraniteWidgetsWelcome {
         background-color: #37b9a5;
         text-shadow: none;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-      .titlebar .button.suggested-action:disabled,
-      .header-bar .button.suggested-action:disabled {
+      .titlebar .button.suggested-action:insensitive,
+      .header-bar .button.suggested-action:insensitive {
         color: white;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #37b9a5;
         text-shadow: none;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-        .titlebar .button.suggested-action:disabled label,
-        .header-bar .button.suggested-action:disabled label {
+        .titlebar .button.suggested-action:insensitive .label,
+        .header-bar .button.suggested-action:insensitive .label {
           color: rgba(255, 255, 255, 0.5); }
       .titlebar .button.suggested-action:backdrop,
       .header-bar .button.suggested-action:backdrop {
@@ -2260,8 +2262,11 @@ GraniteWidgetsWelcome {
         margin-top: 3px;
         margin-bottom: 3px;
         border-radius: 3px; }
-      .titlebar .button.suggested-action:backdrop:disabled,
-      .header-bar .button.suggested-action:backdrop:disabled {
+        .titlebar .button.suggested-action:backdrop .label,
+        .header-bar .button.suggested-action:backdrop .label {
+          color: rgba(255, 255, 255, 0.5); }
+      .titlebar .button.suggested-action:backdrop:insensitive,
+      .header-bar .button.suggested-action:backdrop:insensitive {
         color: white;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #37b9a5;
@@ -2298,15 +2303,15 @@ GraniteWidgetsWelcome {
         background-color: #9b1b32;
         text-shadow: none;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-      .titlebar .button.destructive-action:disabled,
-      .header-bar .button.destructive-action:disabled {
+      .titlebar .button.destructive-action:insensitive,
+      .header-bar .button.destructive-action:insensitive {
         color: white;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #9b1b32;
         text-shadow: none;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-        .titlebar .button.destructive-action:disabled label,
-        .header-bar .button.destructive-action:disabled label {
+        .titlebar .button.destructive-action:insensitive .label,
+        .header-bar .button.destructive-action:insensitive .label {
           color: rgba(255, 255, 255, 0.5); }
       .titlebar .button.destructive-action:backdrop,
       .header-bar .button.destructive-action:backdrop {
@@ -2319,8 +2324,11 @@ GraniteWidgetsWelcome {
         margin-top: 3px;
         margin-bottom: 3px;
         border-radius: 3px; }
-      .titlebar .button.destructive-action:backdrop:disabled,
-      .header-bar .button.destructive-action:backdrop:disabled {
+        .titlebar .button.destructive-action:backdrop .label,
+        .header-bar .button.destructive-action:backdrop .label {
+          color: rgba(255, 255, 255, 0.5); }
+      .titlebar .button.destructive-action:backdrop:insensitive,
+      .header-bar .button.destructive-action:backdrop:insensitive {
         color: white;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #9b1b32;

@@ -54,13 +54,13 @@
 
     &.text-button,
     &.image-button,
-    &.text-button.image-button {
-      padding: 14px 8px;
-    }
+    &.text-button.image-button { padding: 14px 8px; }
 
     > .label {
       padding-left: 0px;
       padding-right: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
     > GtkImage {
       padding-left: 0px;
@@ -117,21 +117,21 @@
 
         &:active { @include button(active, $b_color, white); }
 
-        &:disabled {
+        &:insensitive {
           @include button(insensitive, $b_color, white);
-          label {color: transparentize(white,0.5);}
+          .label {color: transparentize(white,0.5);}
         }
 
         &:backdrop {
           @include button(backdrop, $b_color, white);
+          .label {color: transparentize(white,0.5);}
           padding: 8px 12px;
           margin-top: 3px;
           margin-bottom: 3px;
           border-radius: 3px;
         }
 
-        &:backdrop:disabled { @include button(backdrop-insensitive, $b_color, white); }
-
+        &:backdrop:insensitive { @include button(backdrop-insensitive, $b_color, white); }
       }
     }
   }
