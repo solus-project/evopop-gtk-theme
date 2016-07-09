@@ -656,6 +656,10 @@ button.suggested-action {
     background-color: #37b9a5;
     text-shadow: none;
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
+    .selection-mode button.titlebutton:backdrop label,
+    button.suggested-action:backdrop label,
+    button.suggested-action.flat:backdrop label {
+      color: rgba(255, 255, 255, 0.5); }
     .selection-mode button.titlebutton:backdrop:active, .selection-mode button.titlebutton:backdrop:checked,
     button.suggested-action:backdrop:active,
     button.suggested-action:backdrop:checked,
@@ -680,6 +684,10 @@ button.suggested-action {
       background-color: #37b9a5;
       text-shadow: none;
       box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
+      .selection-mode button.titlebutton:backdrop:disabled label,
+      button.suggested-action:backdrop:disabled label,
+      button.suggested-action.flat:backdrop:disabled label {
+        color: rgba(255, 255, 255, 0.5); }
       .selection-mode button.titlebutton:backdrop:disabled:active, .selection-mode button.titlebutton:backdrop:disabled:checked,
       button.suggested-action:backdrop:disabled:active,
       button.suggested-action:backdrop:disabled:checked,
@@ -814,6 +822,10 @@ button.destructive-action {
     text-shadow: none;
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
     
+    button.destructive-action:backdrop label,
+    button.destructive-action.flat:backdrop label {
+      color: rgba(255, 255, 255, 0.5); }
+    
     button.destructive-action:backdrop:active,
     button.destructive-action:backdrop:checked,
     button.destructive-action.flat:backdrop:active,
@@ -837,6 +849,10 @@ button.destructive-action {
       background-color: #b11e39;
       text-shadow: none;
       box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2); }
+      
+      button.destructive-action:backdrop:disabled label,
+      button.destructive-action.flat:backdrop:disabled label {
+        color: rgba(255, 255, 255, 0.5); }
       
       button.destructive-action:backdrop:disabled:active,
       button.destructive-action:backdrop:disabled:checked,
@@ -1148,12 +1164,12 @@ button.color {
     button.color colorswatch:only-child:disabled, button.color colorswatch:only-child:backdrop {
       box-shadow: none; }
 
-notebook > stack:not(:only-child) button, list button, view button, popover button {
-  box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
-  notebook > stack:not(:only-child) button:backdrop, list button:backdrop, view button:backdrop, popover button:backdrop {
-    box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.2), inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
+notebook button, list button, .view button, iconview button, popover button {
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
+  notebook button:backdrop, list button:backdrop, .view button:backdrop, iconview button:backdrop, popover button:backdrop {
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
 
-notebook > stack:not(:only-child) .linked > button, list .linked > button, view .linked > button, popover .linked > button {
+notebook .linked > button, list .linked > button, .view .linked > button, iconview .linked > button, popover .linked > button {
   box-shadow: none; }
 
 /************

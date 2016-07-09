@@ -236,12 +236,13 @@ button {
       &:backdrop,
       &.flat:backdrop {
         @include button(backdrop, $b_color, white);
-
+        label { color: transparentize(white, 0.5);}
         &:active,
         &:checked { @include button(backdrop-active, $b_color, white); }
 
         &:disabled {
           @include button(backdrop-insensitive, $b_color, white);
+          label { color: transparentize(white, 0.5);}
 
           &:active,
           &:checked { @include button(backdrop-insensitive-active, $b_color, white); }
@@ -540,13 +541,11 @@ button.color {
   }
 }
 
-notebook > stack:not(:only-child), list, view, popover {
+notebook, list, .view, popover {
   button {
-    box-shadow: inset 0px 2px 0px 0px $top_highlight,
-                inset 0px 0px 0px 1px $borders_color;
+    box-shadow: inset 0px 0px 0px 1px $borders_color;
     &:backdrop {
-      box-shadow: inset 0px 2px 0px 0px $top_highlight,
-                  inset 0px 0px 0px 1px $borders_color;
+      box-shadow: inset 0px 0px 0px 1px $borders_color;
     }
   }
   .linked > button {
