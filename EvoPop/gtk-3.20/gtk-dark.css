@@ -5250,6 +5250,30 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     background-color: #D8D8D8;
     border-color: #a5a5a5; }
 
+.nautilus-desktop {
+  color: #fefefe; }
+  .nautilus-desktop .nautilus-canvas-item {
+    border-radius: 5px;
+    color: #fefefe;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
+    .nautilus-desktop .nautilus-canvas-item:active {
+      color: #fefefe;
+      text-shadow: none; }
+    .nautilus-desktop .nautilus-canvas-item:prelight {
+      color: #fefefe;
+      text-shadow: none; }
+    .nautilus-desktop .nautilus-canvas-item:selected {
+      color: #fefefe;
+      text-shadow: none; }
+    .nautilus-desktop .nautilus-canvas-item .dim-label:selected, .nautilus-desktop .nautilus-canvas-item label.separator:selected, .nautilus-desktop .nautilus-canvas-item .titlebar:not(headerbar) .subtitle:selected, .titlebar:not(headerbar) .nautilus-desktop .nautilus-canvas-item .subtitle:selected, .nautilus-desktop .nautilus-canvas-item
+    headerbar .subtitle:selected,
+    headerbar .nautilus-desktop .nautilus-canvas-item .subtitle:selected {
+      color: #fefefe; }
+  .nautilus-desktop .nautilus-list .dim-label:selected, .nautilus-desktop .nautilus-list label.separator:selected, .nautilus-desktop .nautilus-list .titlebar:not(headerbar) .subtitle:selected, .titlebar:not(headerbar) .nautilus-desktop .nautilus-list .subtitle:selected, .nautilus-desktop .nautilus-list
+  headerbar .subtitle:selected,
+  headerbar .nautilus-desktop .nautilus-list .subtitle:selected {
+    color: #fefefe; }
+
 /*********
  * Gedit *
  *********/

@@ -2,7 +2,6 @@
  * Nautilus *
  ************/
 .nautilus-window {
-
   .sidebar {
     background-color: transparent;
     background-image: none;
@@ -72,6 +71,47 @@
   .free {
     background-color: #D8D8D8;
     border-color: darken(#D8D8D8, 20%);
+  }
+}
+
+.nautilus-desktop {
+
+  color: $fg_color;
+
+  .nautilus-canvas-item {
+    border-radius: 5px;
+    color: $selected_fg_color;
+    text-shadow: 1px 1px transparentize(black, 0.4);
+
+    &:active {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:prelight {
+      color: $fg_color;
+      text-shadow: none;
+    }
+
+    &:selected {
+      color: $selected_fg_color;
+      text-shadow: none;
+    }
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
+  }
+
+  .nautilus-list {
+
+    .dim-label {
+      &:selected {
+        color: $selected_fg_color;
+      }
+    }
   }
 }
 
