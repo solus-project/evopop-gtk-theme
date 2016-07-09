@@ -10,12 +10,15 @@ list {
     background-color: $backdrop_base_color;
     border-color: $backdrop_borders_color;
   }
-
-  row { padding: 2px; }
 }
 
 row {
+  padding: 8px 14px;
   transition: all 150ms $ease-out-quad;
+
+  label {
+    padding-left: 8px;
+  }
 
   &:hover { transition: none; }
 

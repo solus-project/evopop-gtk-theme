@@ -27,22 +27,7 @@
     transition: $backdrop_transition;
   }
 
-  list {
-    background-color: transparent;
-    row {
-      padding-left: 12px;
-      padding-right: 12px;
-      min-height: 34px;
-
-      label {
-        padding-left: 12px;
-        padding-right: 12px;
-      }
-      button {
-        margin: 1px;
-      }
-    }
-  }
+  list { background-color: transparent; }
 
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
     border-style: none;
