@@ -2,6 +2,10 @@
  * Nautilus *
  ************/
 .nautilus-window {
+
+  paned {
+    > separator { background-image: none; }
+  }
   .sidebar {
     background-color: transparent;
     background-image: none;

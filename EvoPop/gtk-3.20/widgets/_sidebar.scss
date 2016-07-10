@@ -10,7 +10,7 @@
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: 1px solid $borders_color;
+    border-right: none;
     border-left-style: none;
   }
 
@@ -31,7 +31,7 @@
 
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
     border-style: none;
-    border-color: transparent;
+    border-color: $borders_color;
   }
 }
 }
