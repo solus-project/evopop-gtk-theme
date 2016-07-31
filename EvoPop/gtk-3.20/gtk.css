@@ -2704,6 +2704,8 @@ headerbar button {
 headerbar switch {
   margin-top: 3px;
   margin-bottom: 3px; }
+headerbar separator {
+  background: transparent; }
 
 .background:not(.tiled):not(.maximized) .titlebar {
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.2); }
@@ -2724,7 +2726,7 @@ window.csd > .titlebar:not(headerbar) {
   border-color: transparent;
   box-shadow: none; }
 .titlebar:not(headerbar) > separator {
-  background-color: transparent; }
+  background: transparent; }
 
 /**************
  * GtkInfoBar *

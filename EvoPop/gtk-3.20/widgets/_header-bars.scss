@@ -268,6 +268,7 @@ headerbar {
     margin-top: 3px;
     margin-bottom: 3px;
   }
+  separator { background: transparent; }
 }
 
 .background:not(.tiled):not(.maximized) .titlebar {
@@ -299,7 +300,9 @@ headerbar {
     box-shadow: none;
   }
 
-  > separator { background-color: transparent; }
+  > separator {
+    background: transparent;
+  }
 
   @extend %titlebar;
 }
