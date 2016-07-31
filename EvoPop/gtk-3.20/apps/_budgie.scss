@@ -39,12 +39,12 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 // Budgie Menu
 .budgie-menu {
     entry.search {
-        border: none;
-        box-shadow: none;
-        background: none;
-        font-size: 120%;
+      border: none;
+      box-shadow: none;
+      background: none;
+      font-size: 120%;
 
-        image { padding-left: 0px; padding-right: 6px; }
+      image { padding-left: 0px; padding-right: 6px; }
     }
 
     scrollbar {
@@ -55,6 +55,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     button { box-shadow: none; }
     list {
       background-color: transparent;
+      label { color: $headerbar_fg_color; }
 
       row.activatable:selected,
       row.activatable:selected button { color: inherit; }
@@ -90,10 +91,13 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     }
 
     .end-region {
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 2px;
-
-      separator { background-color: transparentize($headerbar_fg_color, 0.85) }
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 2px;
+      separator { background-color: transparentize($headerbar_fg_color, 0.85); }
+      label {
+        font: bold;
+        color: $headerbar_fg_color;
+      }
     }
 }
 

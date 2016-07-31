@@ -77,7 +77,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   .end-region {
     background-color: rgba(0,0,0,0.3);
     border-radius: 2px;
-    .separator { color: transparentize($headerbar_fg_color, 0.85) }
+    .separator { color: transparentize($headerbar_fg_color, 0.85); }
   }
 }
 
