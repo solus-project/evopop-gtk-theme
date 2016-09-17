@@ -125,20 +125,12 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         color: $headerbar_fg_color;
       }
     }
+
     // Menu Button
     button.budgie-menu-launcher {
       box-shadow: none;
       &:hover { background-color: transparent; }
       &:active, &:checked { background-color: transparent; }
-    }
-
-    // User Menu
-    .user-menu {
-        &:hover { background-color: transparent; }
-
-        .content-box separator {
-            background-color: transparent;
-        }
     }
 
     // Raven Trigger
@@ -150,7 +142,20 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         background-color: transparent;
       }
     }
+}
 
+// User Menu
+.user-menu {
+  list {
+    row {
+      &.activatable {
+        &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
+        &:hover { background-color: transparent; }
+        &.has-open-popup,
+        &:hover { background-color: transparent; }
+      }
+    }
+  }
 }
 
 // Tasklist

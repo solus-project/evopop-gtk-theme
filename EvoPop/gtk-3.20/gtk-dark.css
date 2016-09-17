@@ -4757,10 +4757,6 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       background-color: transparent; }
     .budgie-panel button.budgie-menu-launcher:active, .budgie-panel button.budgie-menu-launcher:checked {
       background-color: transparent; }
-  .budgie-panel .user-menu:hover {
-    background-color: transparent; }
-  .budgie-panel .user-menu .content-box separator {
-    background-color: transparent; }
   .budgie-panel button.raven-trigger {
     box-shadow: none; }
     .budgie-panel button.raven-trigger:hover {
@@ -4768,6 +4764,11 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel button.raven-trigger:active, .budgie-panel button.raven-trigger:checked {
       box-shadow: none;
       background-color: transparent; }
+
+.user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
+  background-color: transparent; }
+.user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
+  background-color: transparent; }
 
 .budgie-panel #tasklist-button,
 .budgie-panel #tasklist-button:backdrop {
