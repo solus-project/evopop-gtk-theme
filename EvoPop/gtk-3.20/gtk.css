@@ -4776,6 +4776,23 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel .end-region label {
       font: bold;
       color: #fefefe; }
+  .budgie-panel button.budgie-menu-launcher {
+    box-shadow: none; }
+    .budgie-panel button.budgie-menu-launcher:hover {
+      background-color: transparent; }
+    .budgie-panel button.budgie-menu-launcher:active, .budgie-panel button.budgie-menu-launcher:checked {
+      background-color: transparent; }
+  .budgie-panel .user-menu:hover {
+    background-color: transparent; }
+  .budgie-panel .user-menu .content-box separator {
+    background-color: transparent; }
+  .budgie-panel button.raven-trigger {
+    box-shadow: none; }
+    .budgie-panel button.raven-trigger:hover {
+      background-color: transparent; }
+    .budgie-panel button.raven-trigger:active, .budgie-panel button.raven-trigger:checked {
+      box-shadow: none;
+      background-color: transparent; }
 
 .budgie-panel #tasklist-button,
 .budgie-panel #tasklist-button:backdrop {
