@@ -128,6 +128,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
     // Menu Button
     button.budgie-menu-launcher {
+      color: $selected_fg_color;
       box-shadow: none;
       &:hover { background-color: transparent; }
       &:active, &:checked { background-color: transparent; }
@@ -135,6 +136,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
     // Raven Trigger
     button.raven-trigger {
+      color: $selected_fg_color;
       box-shadow: none;
       &:hover { background-color: transparent; }
       &:active, &:checked {

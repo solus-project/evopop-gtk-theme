@@ -4777,12 +4777,14 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       font: bold;
       color: #fefefe; }
   .budgie-panel button.budgie-menu-launcher {
+    color: #fefefe;
     box-shadow: none; }
     .budgie-panel button.budgie-menu-launcher:hover {
       background-color: transparent; }
     .budgie-panel button.budgie-menu-launcher:active, .budgie-panel button.budgie-menu-launcher:checked {
       background-color: transparent; }
   .budgie-panel button.raven-trigger {
+    color: #fefefe;
     box-shadow: none; }
     .budgie-panel button.raven-trigger:hover {
       background-color: transparent; }
