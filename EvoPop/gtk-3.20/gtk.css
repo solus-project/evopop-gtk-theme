@@ -4770,7 +4770,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     background-color: rgba(26, 29, 33, 0.95); }
   .budgie-panel .end-region {
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 2px; }
+    border-radius: 0px; }
     .budgie-panel .end-region separator {
       background-color: rgba(254, 254, 254, 0.15); }
     .budgie-panel .end-region label {
