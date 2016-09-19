@@ -4816,7 +4816,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   border-color: rgba(49, 54, 61, 0);
   opacity: 0.75; }
   .budgie-panel button.flat.launcher:hover {
-    -gtk-image-effect: highlight;
+    -gtk-icon-effect: highlight;
     opacity: 0.9; }
   .budgie-panel button.flat.launcher:backdrop {
     background-color: transparent; }
@@ -5060,7 +5060,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     color: #31363d;
     background-color: rgba(230, 232, 235, 0.2);
     border-color: transparent; }
-    .raven calendar.raven-calendar:inconsistent {
+    .raven calendar.raven-calendar:indeterminate {
       color: alpha(currentColor,0.3); }
     .raven calendar.raven-calendar:selected {
       color: #fefefe;
@@ -5288,7 +5288,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .nautilus-desktop .nautilus-canvas-item:active {
       color: #31363d;
       text-shadow: none; }
-    .nautilus-desktop .nautilus-canvas-item:prelight {
+    .nautilus-desktop .nautilus-canvas-item:hover {
       color: #31363d;
       text-shadow: none; }
     .nautilus-desktop .nautilus-canvas-item:selected {
