@@ -33,16 +33,16 @@
      borderopacity="0.25490196"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="168.47514"
-     inkscape:cy="205.69582"
+     inkscape:zoom="22.627417"
+     inkscape:cx="168.73685"
+     inkscape:cy="208.93223"
      inkscape:current-layer="layer2"
-     showgrid="false"
+     showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1002"
+     inkscape:window-width="2560"
+     inkscape:window-height="1370"
      inkscape:window-x="0"
      inkscape:window-y="34"
      width="400px"
@@ -2825,12 +2825,14 @@
        d="m 174,183 8,0 0,2 -8,0 z"
        id="path5204"
        inkscape:connector-curvature="0" />
-    <ellipse
-       style="display:inline;fill:#37b9a5;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
-       id="path3793-3"
-       cx="177.99998"
-       cy="92"
-       rx="11.999985"
-       ry="12" />
+    <rect
+       style="fill:#37b9a5;fill-opacity:1;stroke:none;stroke-width:1.70000005;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4584"
+       width="24"
+       height="24"
+       x="166"
+       y="80"
+       rx="2"
+       ry="2" />
   </g>
 </svg>
