@@ -423,45 +423,20 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
       padding: 6px;
       min-width: 32px;
       margin-bottom: 3px;
-      color: $selected_fg_color;
-      background: $darkpurple;
+      background: if($variant=='dark', transparentize(black,0.7), transparentize(black,0.9));
       border: none;
-      box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2),inset 0px 1px 0px 0px rgba(255,255,255,0.2), 1px 1px transparentize(black,0.8);
+      box-shadow: none;
       font-size: 100%;
 
       &:hover {
         transition: 170ms ease all;
-        background: lighten($darkpurple, 5%);
+      background: if($variant=='dark', transparentize(black,0.6), transparentize(black,0.8));
         color: $selected_fg_color;
       }
       &:active {
         transition: 170ms ease all;
-        background: lighten($darkpurple, 10%);
+      background: if($variant=='dark', transparentize(black,0.5), transparentize(black,0.7));
         color: $selected_fg_color;
-      }
-      &:first-child {
-        background: darken($blue,5%);
-        &:hover {
-          transition: 170ms ease all;
-          background: $blue;
-        }
-
-        &:active {
-          transition: 170ms ease all;
-          background: lighten($blue, 5%);
-        }
-      }
-      &:last-child {
-        background: $red;
-        &:hover {
-          transition: 170ms ease all;
-          background: lighten($red, 5%);
-        }
-
-        &:active {
-          transition: 170ms ease all;
-          background: lighten($red, 10%);
-        }
       }
     }
     .option-subtitle { font-size: smaller; }

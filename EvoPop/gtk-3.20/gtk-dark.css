@@ -2369,7 +2369,7 @@ headerbar {
       min-height: 24px;
       margin-top: 4px;
       margin-bottom: 4px;
-      border-radius: 0;
+      border-radius: 2px;
       font: bold;
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
@@ -2421,7 +2421,7 @@ headerbar {
       min-height: 24px;
       margin-top: 4px;
       margin-bottom: 4px;
-      border-radius: 0;
+      border-radius: 2px;
       font: bold;
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
@@ -5060,35 +5060,18 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding: 6px;
     min-width: 32px;
     margin-bottom: 3px;
-    color: #fefefe;
-    background: #7b7bbd;
+    background: rgba(0, 0, 0, 0.3);
     border: none;
-    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.2), 1px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
     font-size: 100%; }
     .raven .powerstrip button.image-button:hover {
       transition: 170ms ease all;
-      background: #8c8cc6;
+      background: rgba(0, 0, 0, 0.4);
       color: #fefefe; }
     .raven .powerstrip button.image-button:active {
       transition: 170ms ease all;
-      background: #9d9dce;
+      background: rgba(0, 0, 0, 0.5);
       color: #fefefe; }
-    .raven .powerstrip button.image-button:first-child {
-      background: #119ebe; }
-      .raven .powerstrip button.image-button:first-child:hover {
-        transition: 170ms ease all;
-        background: #13b1d5; }
-      .raven .powerstrip button.image-button:first-child:active {
-        transition: 170ms ease all;
-        background: #17c3ea; }
-    .raven .powerstrip button.image-button:last-child {
-      background: #c72240; }
-      .raven .powerstrip button.image-button:last-child:hover {
-        transition: 170ms ease all;
-        background: #da2849; }
-      .raven .powerstrip button.image-button:last-child:active {
-        transition: 170ms ease all;
-        background: #de3e5b; }
   .raven .option-subtitle {
     font-size: smaller; }
 

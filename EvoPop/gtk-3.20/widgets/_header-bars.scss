@@ -85,7 +85,7 @@ headerbar {
         min-height: 24px;
         margin-top: 4px;
         margin-bottom: 4px;
-        border-radius: 0;
+        border-radius: 2px;
         @include button(normal, $b_color, white);
 
         &:hover { @include button(hover, $b_color, white); }
