@@ -85,7 +85,7 @@ headerbar {
         min-height: 24px;
         margin-top: 4px;
         margin-bottom: 4px;
-        border-radius: 3px;
+        border-radius: 0;
         @include button(normal, $b_color, white);
 
         &:hover { @include button(hover, $b_color, white); }
@@ -99,7 +99,7 @@ headerbar {
 
         &:backdrop {
           @include button(backdrop, $b_color, white);
-          border-radius: 3px;
+          border-radius: 0;
         }
 
         &:backdrop:disabled { @include button(backdrop-insensitive, $b_color, white); }
@@ -277,16 +277,16 @@ headerbar {
 
 
   &:backdrop, & {
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
   }
 }
 
 headerbar {
   window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
-  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 4px; }}
+  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 0; }}
 
-  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 4px; }}
+  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 0; }}
 }
 
 .titlebar:not(headerbar) {

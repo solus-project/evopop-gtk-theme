@@ -25,7 +25,7 @@ $borders_color: if($variant == 'light', transparentize(black,0.8), transparentiz
 $borders_edge: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
 $link_color: $blue;
 $link_visited_color:transparentize($link_color,0.5);
-$top_highlight: if($variant == 'light', transparentize(white, 0.8), transparentize(white, 0.9));
+$top_highlight: transparentize(white, 0.9);
 $bottom_highlight: if($variant == 'light', transparentize(black, 0.8), transparentize(black, 0.9));
 $dark_fill: mix($borders_color, $bg_color, 35%);
 $headerbar_color: #31363D;
