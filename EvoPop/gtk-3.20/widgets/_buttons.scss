@@ -233,6 +233,14 @@ button {
       &:active,
       &:checked { @include button(active, $b_color, white); }
 
+      &:disabled {
+        @include button(backdrop-insensitive, $b_color, white);
+        label { color: transparentize(white, 0.5);}
+
+        &:active,
+        &:checked { @include button(backdrop-insensitive-active, $b_color, white); }
+      }
+
       &:backdrop,
       &.flat:backdrop {
         @include button(backdrop, $b_color, white);

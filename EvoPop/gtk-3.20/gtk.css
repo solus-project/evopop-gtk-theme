@@ -616,6 +616,21 @@ button.suggested-action {
     background-color: #37b9a5;
     text-shadow: none;
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+  button.suggested-action:disabled {
+    color: white;
+    outline-color: rgba(255, 255, 255, 0.3);
+    background-color: #37b9a5;
+    text-shadow: none;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+    button.suggested-action:disabled label {
+      color: rgba(255, 255, 255, 0.5); }
+    button.suggested-action:disabled:active,
+    button.suggested-action:disabled:checked {
+      color: rgba(254, 254, 254, 0.7);
+      outline-color: rgba(255, 255, 255, 0.3);
+      background-color: #13b1d5;
+      text-shadow: none;
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
   .selection-mode button.titlebutton:backdrop,
   button.suggested-action:backdrop,
   button.suggested-action.flat:backdrop {
@@ -773,6 +788,21 @@ button.destructive-action {
     background-color: #b11e39;
     text-shadow: none;
     box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+  button.destructive-action:disabled {
+    color: white;
+    outline-color: rgba(255, 255, 255, 0.3);
+    background-color: #b11e39;
+    text-shadow: none;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+    button.destructive-action:disabled label {
+      color: rgba(255, 255, 255, 0.5); }
+    button.destructive-action:disabled:active,
+    button.destructive-action:disabled:checked {
+      color: rgba(254, 254, 254, 0.7);
+      outline-color: rgba(255, 255, 255, 0.3);
+      background-color: #13b1d5;
+      text-shadow: none;
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
   button.destructive-action:backdrop,
   button.destructive-action.flat:backdrop {
     color: rgba(255, 255, 255, 0.4);
