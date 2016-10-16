@@ -1682,7 +1682,7 @@ messagedialog.csd.background {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px; }
 messagedialog.csd .dialog-action-area button {
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 0;
   border-left-style: solid;
   border-right-style: none;
@@ -1692,6 +1692,8 @@ messagedialog.csd .dialog-action-area button {
   box-shadow: none; }
   messagedialog.csd .dialog-action-area button:hover {
     background-color: rgba(19, 177, 213, 0.9); }
+    messagedialog.csd .dialog-action-area button:hover:backdrop label {
+      color: rgba(255, 255, 255, 0.5); }
   messagedialog.csd .dialog-action-area button:first-child {
     border-left-style: none;
     border-bottom-left-radius: 2px; }
@@ -2390,6 +2392,9 @@ headerbar {
         background-color: #37b9a5;
         text-shadow: none;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+        .titlebar:not(headerbar) button.suggested-action:hover:backdrop label,
+        headerbar button.suggested-action:hover:backdrop label {
+          color: rgba(255, 255, 255, 0.5); }
       .titlebar:not(headerbar) button.suggested-action:active,
       headerbar button.suggested-action:active {
         color: white;
@@ -2442,6 +2447,9 @@ headerbar {
         background-color: #b11e39;
         text-shadow: none;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+        .titlebar:not(headerbar) button.destructive-action:hover:backdrop label,
+        headerbar button.destructive-action:hover:backdrop label {
+          color: rgba(255, 255, 255, 0.5); }
       .titlebar:not(headerbar) button.destructive-action:active,
       headerbar button.destructive-action:active {
         color: white;
@@ -5164,6 +5172,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       border-bottom-right-radius: 2px; }
     .budgie-session-dialog .linked.horizontal > button:hover, .budgie-polkit-dialog .linked.horizontal > button:hover {
       background-color: rgba(19, 177, 213, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button:hover:backdrop label, .budgie-polkit-dialog .linked.horizontal > button:hover:backdrop label {
+        color: rgba(255, 255, 255, 0.5); }
     .budgie-session-dialog .linked.horizontal > button.suggested-action, .budgie-polkit-dialog .linked.horizontal > button.suggested-action {
       background-color: rgba(55, 185, 165, 0.9); }
       .budgie-session-dialog .linked.horizontal > button.suggested-action:hover, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:hover {

@@ -88,7 +88,12 @@ headerbar {
         border-radius: 2px;
         @include button(normal, $b_color, white);
 
-        &:hover { @include button(hover, $b_color, white); }
+        &:hover {
+          @include button(hover, $b_color, white);
+          &:backdrop {
+            label { color: transparentize(white, 0.5); }
+          }
+        }
 
         &:active { @include button(active, $b_color, white); }
 

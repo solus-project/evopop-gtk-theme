@@ -519,6 +519,9 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
         &:hover {
           background-color: transparentize($selected_bg_color, 0.1);
+          &:backdrop {
+            label { color: transparentize(white, 0.5); }
+          }
         }
 
         @each $b_type, $b_color in (suggested-action, $cyan),
