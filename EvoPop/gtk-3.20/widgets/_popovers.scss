@@ -4,12 +4,12 @@
 
 popover.background {
   padding: 2px;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: $popover_bg_color;
 
   .csd &, & { border: 1px solid $borders_color; }
 
-  box-shadow: 0 1px 2px transparentize(black, 0.7);
+  box-shadow: 0 2px 3px transparentize(black, 0.9);
 
   &:backdrop {
     background-color: $backdrop_bg_color;
