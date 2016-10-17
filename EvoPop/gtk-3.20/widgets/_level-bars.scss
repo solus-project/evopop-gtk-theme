@@ -16,7 +16,7 @@ levelbar {
 
   trough {
     padding: 3px;
-    border-radius: 3px;
+    border-radius: 2px;
     background-color: if($variant == 'light' ,transparentize(white,0.2),transparentize(black,0.86));
     box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
 
@@ -26,12 +26,12 @@ levelbar {
     }
   }
 
-  &.horizontal.discrete block { margin: 0 1px; }
+  &.horizontal.discrete block { margin: 0 2px; }
 
-  &.vertical.discrete block { margin: 1px 0; }
+  &.vertical.discrete block { margin: 2px 0; }
 
   block {
-    border-radius: 2px;
+    border-radius: 1px;
 
     &:backdrop { box-shadow: none; }
 

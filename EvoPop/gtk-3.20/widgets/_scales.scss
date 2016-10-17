@@ -4,7 +4,7 @@
 %scale_trough {
   background-color: transparentize(black,0.86);
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   margin: 0;
 
   &:disabled { background-color: transparentize(black,0.94); }
@@ -20,7 +20,7 @@
 %scale_highlight {
   border: none;
   background-color: $selected_bg_color;
-  border-radius: 3px;
+  border-radius: 2px;
   margin: 0;
 
   &:disabled {

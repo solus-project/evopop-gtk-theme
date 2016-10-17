@@ -2846,18 +2846,18 @@ levelbar:backdrop {
   transition: 200ms ease-out; }
 levelbar trough {
   padding: 3px;
-  border-radius: 3px;
+  border-radius: 2px;
   background-color: rgba(0, 0, 0, 0.14);
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
   levelbar trough:backdrop {
     background-color: rgba(0, 0, 0, 0.06);
     box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1); }
 levelbar.horizontal.discrete block {
-  margin: 0 1px; }
+  margin: 0 2px; }
 levelbar.vertical.discrete block {
-  margin: 1px 0; }
+  margin: 2px 0; }
 levelbar block {
-  border-radius: 2px; }
+  border-radius: 1px; }
   levelbar block:backdrop {
     box-shadow: none; }
   levelbar block.low {
@@ -3449,7 +3449,7 @@ progressbar {
 progressbar trough, scale trough, scale fill {
   background-color: rgba(0, 0, 0, 0.14);
   border: none;
-  border-radius: 3px;
+  border-radius: 2px;
   margin: 0; }
   progressbar trough:disabled, scale trough:disabled, scale fill:disabled {
     background-color: rgba(0, 0, 0, 0.06); }
@@ -3462,7 +3462,7 @@ progressbar trough, scale trough, scale fill {
 progressbar progress, scale highlight {
   border: none;
   background-color: #13b1d5;
-  border-radius: 3px;
+  border-radius: 2px;
   margin: 0; }
   progressbar progress:disabled, scale highlight:disabled {
     border: none;
