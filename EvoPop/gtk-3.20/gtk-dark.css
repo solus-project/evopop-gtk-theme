@@ -4801,10 +4801,14 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       box-shadow: none;
       background-color: transparent; }
 
-.user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
-  background-color: transparent; }
-.user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
-  background-color: transparent; }
+.user-menu list row {
+  padding: 2px; }
+  .user-menu list row:nth-child(2) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
+    background-color: transparent; }
+  .user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
+    background-color: transparent; }
 
 .budgie-panel #tasklist-button,
 .budgie-panel #tasklist-button:backdrop {
