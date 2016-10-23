@@ -36,7 +36,12 @@ popover.background {
     &.osd { @extend %osd; }
   }
 
-  separator { margin: 3px; }
+  separator {
+    background-color: $borders_color;
+    padding-left: 1px; //Temp fix
+    padding-top: 1px;
+    margin: 3px;
+  }
 
   list separator { margin: 0px; }
 
