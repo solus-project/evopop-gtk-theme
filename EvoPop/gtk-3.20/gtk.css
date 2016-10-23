@@ -3113,21 +3113,21 @@ menuitem radio {
 
 .osd .scale-popup button.flat {
   border-style: none;
-  border-radius: 5px; }
+  border-radius: 2px; }
 .scale-popup button:hover {
   background-color: rgba(49, 54, 61, 0.1);
-  border-radius: 5px; }
+  border-radius: 2px; }
 
 /************
 * Assistant *
 *************/
 assistant {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; }
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px; }
   assistant .sidebar {
     background-color: #fefefe;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom-left-radius: 4px; }
+    border-bottom-left-radius: 2px; }
     assistant .sidebar:backdrop {
       background-color: #fbfbfb;
       border-color: rgba(115, 116, 118, 0.28); }
