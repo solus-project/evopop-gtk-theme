@@ -38,8 +38,8 @@ popover.background {
 
   separator {
     background-color: $borders_color;
-    padding-left: 1px; //Temp fix
-    padding-top: 1px;
+    min-width: 1px;
+    min-height: 1px;
     margin: 3px;
   }
 

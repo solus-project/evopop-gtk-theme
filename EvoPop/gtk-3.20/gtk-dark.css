@@ -3408,8 +3408,8 @@ popover.background {
     border: 1px solid rgba(255, 255, 255, 0.1); }
   popover.background separator {
     background-color: rgba(0, 0, 0, 0.1);
-    padding-left: 1px;
-    padding-top: 1px;
+    min-width: 1px;
+    min-height: 1px;
     margin: 3px; }
   popover.background list separator {
     margin: 0px; }
@@ -5040,11 +5040,11 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     background-color: transparent; }
     .raven list:selected {
       background-color: rgba(19, 177, 213, 0.9); }
-    .raven list row
-    row.activatable {
+    .raven list row,
+    .raven list row.activatable {
       background-color: transparent; }
-      .raven list row
-      row.activatable:selected {
+      .raven list row:selected,
+      .raven list row.activatable:selected {
         background-color: rgba(19, 177, 213, 0.9); }
   .raven .raven-background {
     color: #fefefe;
