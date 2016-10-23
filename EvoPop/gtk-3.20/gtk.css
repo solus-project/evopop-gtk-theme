@@ -3520,11 +3520,11 @@ scale {
   scale.fine-tune fill,
   scale.fine-tune highlight,
   scale.fine-tune trough {
-    border-radius: 5px;
+    border-radius: 2px;
     -gtk-outline-radius: 7px; }
   scale trough {
     outline-offset: 2px;
-    -gtk-outline-radius: 5px;
+    -gtk-outline-radius: 2px;
     outline-color: transparent; }
   scale fill:backdrop, scale fill {
     background-color: rgba(0, 0, 0, 0.2); }
@@ -4396,7 +4396,7 @@ toolbar {
   toolbar.osd {
     padding: 13px;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgba(20, 23, 26, 0.8); }
     toolbar.osd.left, toolbar.osd.right, toolbar.osd.top, toolbar.osd.bottom {
       border-radius: 0; }
@@ -5308,7 +5308,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .nautilus-desktop {
   color: #31363d; }
   .nautilus-desktop .nautilus-canvas-item {
-    border-radius: 5px;
+    border-radius: 2px;
     color: #fefefe;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.6); }
     .nautilus-desktop .nautilus-canvas-item:active {
@@ -5334,7 +5334,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
  *********/
 .gedit-search-slider {
   padding: 4px;
-  border-radius: 0 0 3px 3px;
+  border-radius: 0 0 2px 2px;
   border: 0;
   background-color: #e6e8eb; }
 
@@ -5365,7 +5365,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
  *********/
 .notify {
   /*-notify-shadow: 0px 2px 18px transparentize(black, 0.60);*/
-  border-radius: 5px;
+  border-radius: 2px;
   border: 1px solid rgba(0, 0, 0, 0.7);
   background-color: rgba(254, 254, 254, 0.05); }
 
@@ -5745,8 +5745,8 @@ ConversationListView {
   padding-bottom: 0px;
   border-style: none;
   background-color: rgba(20, 23, 26, 0.8);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   border: solid rgba(0, 0, 0, 0.1);
   border-width: 0 1px 1px 1px; }
 

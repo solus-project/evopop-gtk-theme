@@ -55,7 +55,7 @@ button.circular { // FIXME: aggregate to buttons
   background-color: $base_color;
   border: 1px solid;
   border-color: if($variant == 'light', mix($borders_color, $bg_color, 50%), $borders_color);
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: if($variant == 'light', inset 0 -3px mix($base_color, $bg_color, 20%), inset 0 -3px mix($borders_color, $base_color, 60%));
   font-size: smaller;
 

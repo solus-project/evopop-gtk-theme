@@ -15,9 +15,7 @@
       background-image: none;
     }
 
-    row {
-      label { padding-left: 10px; }
-    }
+    row { label { padding-left: 10px; } }
 
     .list-row {
       button {
@@ -87,7 +85,7 @@
   color: $fg_color;
 
   .nautilus-canvas-item {
-    border-radius: 5px;
+    border-radius: 2px;
     color: $selected_fg_color;
     text-shadow: 1px 1px transparentize(black, 0.4);
 
@@ -128,7 +126,7 @@
  *********/
 .gedit-search-slider {
      padding: 4px;
-     border-radius: 0 0 3px 3px;
+     border-radius: 0 0 2px 2px;
      border: 0;
      background-color: $bg_color;
  }
