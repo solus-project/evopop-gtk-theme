@@ -128,7 +128,7 @@ read if you used those and something break with a version upgrade you're on your
 .app-notification,
 .app-notification.frame {
   padding: 10px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 2px 2px;
   background-color: rgba(20, 23, 26, 0.8);
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent 2px);
   background-clip: padding-box; }

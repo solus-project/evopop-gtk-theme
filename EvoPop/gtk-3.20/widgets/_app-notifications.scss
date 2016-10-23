@@ -6,7 +6,7 @@
   @extend %osd;
 
   padding: 10px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 2px 2px;
   background-color: $osd_bg_color;
   background-image: linear-gradient(to bottom, transparentize(black, 0.8),
                                                transparent 2px);
