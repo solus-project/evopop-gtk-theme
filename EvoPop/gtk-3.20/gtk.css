@@ -4601,10 +4601,10 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
 decoration {
   border-radius: 2px;
   border-width: 0px;
-  box-shadow: 0 3px 9px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.3);
   margin: 10px; }
   decoration:backdrop {
-    box-shadow: 0 3px 9px 1px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 8px 2px transparent, 0 2px 6px 2px rgba(0, 0, 0, 0.2);
     transition: 200ms ease-out; }
   .popup decoration {
     box-shadow: none; }
