@@ -92,7 +92,7 @@ read if you used those and something break with a version upgrade you're on your
   -GtkWidget-text-handle-height: 24;
   -GtkDialog-button-spacing: 4;
   -GtkDialog-action-area-border: 0;
-  outline-color: rgba(49, 54, 61, 0.3);
+  outline-color: transparent;
   outline-style: dashed;
   outline-offset: -3px;
   outline-width: 1px;
