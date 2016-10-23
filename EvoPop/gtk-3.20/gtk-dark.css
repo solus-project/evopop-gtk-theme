@@ -4417,19 +4417,19 @@ searchbar,
  * Tooltips *
  ************/
 tooltip {
-  padding: 4px;
+  padding: 2px;
   /* not working */
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: none;
-  text-shadow: 0 1px black; }
+  text-shadow: 0 1px rgba(0, 0, 0, 0.9); }
   tooltip.background {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.75);
     background-clip: padding-box;
     border: 1px solid rgba(255, 255, 255, 0.1); }
   tooltip decoration {
     background-color: transparent; }
   tooltip * {
-    padding: 4px;
+    padding: 1px;
     background-color: transparent;
     color: white; }
 
