@@ -1,4 +1,4 @@
-AC_INIT([EvoPop ], 2.0.2, [poltertec@gmail.com], [evopop-gtk-theme], [https://solus-project.com/])
+AC_INIT([EvoPop ], 2.0.3, [poltertec@gmail.com], [evopop-gtk-theme], [https://solus-project.com/])
 AM_INIT_AUTOMAKE([-Wno-portability no-dist-gzip dist-xz foreign subdir-objects 1.9 tar-ustar])
 AC_PREFIX_DEFAULT(/usr/local)
 AM_SILENT_RULES([yes])
