@@ -151,7 +151,6 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   list {
     row {
       padding: 2px;
-      &:nth-child(2) { border-bottom: 1px solid $borders_color }
       &.activatable {
         &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
         &:hover { background-color: transparent; }
