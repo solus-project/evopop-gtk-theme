@@ -149,6 +149,27 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   }
 }
 
+// Places Menu
+.places-menu {
+  padding: 0;
+
+  .places-section-header {
+    border-bottom: 1px solid $borders_color;
+  }
+
+  .places-list {
+    background: transparentize($fg_color, 0.96);
+    border-bottom: 1px solid $borders_color;
+  }
+
+  list,
+  row {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 // User Menu
 .user-menu {
   list {
@@ -496,7 +517,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     box-shadow: 0 1px 2px 0 transparentize(black, 0.8);
     border-radius: 2px;
   }
-  
+
   // On Screen Display in Budgie
   .budgie-osd-window {
     @extend .budgie-notification-window;
