@@ -5126,34 +5126,34 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   .raven-mpris button.image-button {
     padding: 8px; }
 
-.budgie-notification-window {
+.budgie-notification-window, .budgie-osd-window {
   background: none;
   border-radius: 1px; }
-  .budgie-notification-window button {
+  .budgie-notification-window button, .budgie-osd-window button {
     background-color: #37b9a5;
     color: #fefefe;
     border: none; }
-    .budgie-notification-window button:hover {
+    .budgie-notification-window button:hover, .budgie-osd-window button:hover {
       background-color: #31a593;
       border: none; }
-    .budgie-notification-window button:active, .budgie-notification-window button:checked {
+    .budgie-notification-window button:active, .budgie-osd-window button:active, .budgie-notification-window button:checked, .budgie-osd-window button:checked {
       background-color: #31a593; }
 
-.budgie-notification.background {
+.budgie-notification.background, .background.budgie-osd {
   border-radius: 1px; }
-.budgie-notification .notification-title {
+.budgie-notification .notification-title, .budgie-osd .notification-title {
   font-size: 110%;
   color: #fefefe; }
-.budgie-notification .notification-body {
+.budgie-notification .notification-body, .budgie-osd .notification-body {
   color: rgba(254, 254, 254, 0.7); }
-.budgie-notification button {
+.budgie-notification button, .budgie-osd button {
   background-color: transparent;
   color: #fefefe; }
-  .budgie-notification button:hover {
+  .budgie-notification button:hover, .budgie-osd button:hover {
     background-color: transparent;
     color: #c72240;
     box-shadow: none; }
-  .budgie-notification button:active, .budgie-notification button:checked {
+  .budgie-notification button:active, .budgie-osd button:active, .budgie-notification button:checked, .budgie-osd button:checked {
     background-color: transparent;
     color: #b11e39; }
 
