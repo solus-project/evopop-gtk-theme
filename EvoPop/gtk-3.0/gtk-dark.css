@@ -278,7 +278,7 @@ button {
   border: none;
   border-radius: 2px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  font: bold;
+  font-weight: 700;
   color: #fefefe;
   outline-color: rgba(254, 254, 254, 0.3);
   background-color: #505359;
@@ -585,7 +585,7 @@ button {
       -gtk-icon-shadow: none;
       outline-color: rgba(254, 254, 254, 0.3); }
 button.suggested-action {
-  font: bold;
+  font-weight: 700;
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
   background-color: #37b9a5;
@@ -758,7 +758,7 @@ button.suggested-action {
       text-shadow: none;
       -gtk-icon-shadow: none; }
 button.destructive-action {
-  font: bold;
+  font-weight: 700;
   color: white;
   outline-color: rgba(255, 255, 255, 0.3);
   background-color: #9b1b32;
@@ -981,14 +981,14 @@ button.needs-attention > image, stacksidebar row.needs-attention > label {
     background-position: left 3px, left 2px; }
 
 toolbar button:hover {
-  font: bold;
+  font-weight: 700;
   color: #fefefe;
   outline-color: rgba(254, 254, 254, 0.3);
   background-color: #212429;
   text-shadow: none;
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
 toolbar button:active {
-  font: bold;
+  font-weight: 700;
   color: #fefefe;
   outline-color: rgba(254, 254, 254, 0.3);
   background-color: #16181b;
@@ -1644,7 +1644,7 @@ colorswatch#add-color-button {
   colorswatch#add-color-button:only-child {
     border-radius: 2px; }
   colorswatch#add-color-button overlay {
-    font: bold;
+    font-weight: 700;
     color: #fefefe;
     outline-color: rgba(254, 254, 254, 0.3);
     background-color: #505359;
@@ -2249,7 +2249,7 @@ GraniteWidgetsWelcome {
   font-size: 12px;
   padding: 6px;
   color: rgba(254, 254, 254, 0.3);
-  font-weight: bold;
+  font-weight: 700;
   text-shadow: 0 1px rgba(255, 255, 255, 0.2); }
 
 /**************
@@ -2308,7 +2308,7 @@ headerbar {
     transition: 200ms ease-out; }
   .titlebar:not(headerbar) .title,
   headerbar .title {
-    font-weight: bold;
+    font-weight: 700;
     padding-left: 12px;
     padding-right: 12px; }
   .titlebar:not(headerbar) .subtitle,
@@ -2397,12 +2397,12 @@ headerbar {
       box-shadow: inset 0 -3px 0 0 #119ebe; }
     .titlebar:not(headerbar) button.suggested-action,
     headerbar button.suggested-action {
-      font: bold;
+      font-weight: 700;
       min-height: 24px;
       margin-top: 4px;
       margin-bottom: 4px;
       border-radius: 2px;
-      font: bold;
+      font-weight: 700;
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #37b9a5;
@@ -2452,12 +2452,12 @@ headerbar {
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
     .titlebar:not(headerbar) button.destructive-action,
     headerbar button.destructive-action {
-      font: bold;
+      font-weight: 700;
       min-height: 24px;
       margin-top: 4px;
       margin-bottom: 4px;
       border-radius: 2px;
-      font: bold;
+      font-weight: 700;
       color: white;
       outline-color: rgba(255, 255, 255, 0.3);
       background-color: #9b1b32;
@@ -2539,7 +2539,7 @@ headerbar {
       box-shadow: inset 0 1px rgba(36, 183, 216, 0.46); }
     .selection-mode.titlebar:not(headerbar) button,
     headerbar.selection-mode button {
-      font: bold;
+      font-weight: 700;
       color: #fefefe;
       outline-color: rgba(254, 254, 254, 0.3);
       background-color: #13b1d5;
@@ -2646,7 +2646,7 @@ headerbar {
             color: rgba(254, 254, 254, 0.7); }
       .selection-mode.titlebar:not(headerbar) button.suggested-action,
       headerbar.selection-mode button.suggested-action {
-        font: bold;
+        font-weight: 700;
         color: white;
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #37b9a5;
@@ -3235,7 +3235,7 @@ notebook > header {
     padding: 3px 12px;
     outline-offset: -5px;
     color: #989a9e;
-    font-weight: bold;
+    font-weight: 700;
     border-width: 1px;
     border-color: transparent; }
     notebook > header tab:hover {
@@ -4320,8 +4320,8 @@ spinner {
  * Switch *
  **********/
 switch {
-  font: 1;
-  font-weight: bold;
+  font-size: 1px;
+  font-weight: 700;
   outline-offset: -4px;
   transition: all 200ms ease-in;
   border: none;
@@ -4521,7 +4521,7 @@ treeview.view {
   treeview.view header button {
     color: #a7a9ac;
     background-color: #505359;
-    font-weight: bold;
+    font-weight: 700;
     text-shadow: none;
     box-shadow: none; }
     treeview.view header button:hover {
@@ -4690,7 +4690,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
         color: rgba(48, 187, 218, 0.85); }
 
 .monospace {
-  font: Monospace; }
+  font-style: Monospace; }
 
 /**********************
  * DE-Specific Styles *
@@ -4786,7 +4786,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel .end-region separator {
       background-color: rgba(254, 254, 254, 0.15); }
     .budgie-panel .end-region label {
-      font: bold;
+      font-weight: 700;
       color: #fefefe; }
   .budgie-panel button.budgie-menu-launcher {
     color: #fefefe;
@@ -5186,7 +5186,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     background-color: transparent;
     box-shadow: none; }
     .budgie-session-dialog .linked.horizontal > button label, .budgie-polkit-dialog .linked.horizontal > button label {
-      font: bold; }
+      font-weight: 700; }
     .budgie-session-dialog .linked.horizontal > button:first-child, .budgie-polkit-dialog .linked.horizontal > button:first-child {
       border-left: none;
       border-bottom-left-radius: 2px; }
@@ -5361,7 +5361,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
  * SwitchBoard *
  ***************/
 .category-label {
-  font-weight: bold;
+  font-weight: 700;
   color: #fefefe; }
 
 /*************
@@ -5393,7 +5393,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .search-entry-large,
 .search-entry-large:focus {
   border: none;
-  font: 18;
+  font-size: 18px;
   font-weight: 300;
   background-image: none;
   background: none;
@@ -5401,7 +5401,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   border-radius: 0; }
 
 .search-category-header {
-  font-weight: bold;
+  font-weight: 700;
   color: #fefefe; }
 
 /*********
@@ -5420,7 +5420,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .composited-indicator > GtkRevealer GtkImage,
 .composited-indicator > GtkRevealer GtkLabel {
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1);
   -gtk-icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.1); }
 
@@ -5664,7 +5664,7 @@ ConversationListView {
 #panel_window {
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
-  font: bold;
+  font-weight: 900;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.7); }
   #panel_window .menubar,
   #panel_window .menubar > .menuitem
@@ -5672,7 +5672,7 @@ ConversationListView {
   #panel_window menubar > menuitem {
     background-color: transparent;
     color: white;
-    font: bold; }
+    font-weight: 700; }
   #panel_window .menubar .menuitem:disabled,
   #panel_window menubar menuitem:disabled {
     color: rgba(255, 255, 255, 0.5); }
@@ -5684,12 +5684,12 @@ ConversationListView {
       color: inherit; }
   #panel_window .menubar .menu > .menuitem,
   #panel_window menubar menu > menuitem {
-    font: normal; }
+    font-weight: 400; }
 
 #login_window,
 #shutdown_dialog,
 #restart_dialog {
-  font: normal;
+  font-weight: 400;
   border-style: none;
   background-color: transparent;
   color: #fefefe; }
@@ -5703,7 +5703,7 @@ ConversationListView {
   border-width: 1px 1px 0 1px; }
 
 #content_frame button {
-  font: bold;
+  font-weight: 700;
   color: #fefefe;
   outline-color: rgba(254, 254, 254, 0.3);
   background-color: #505359;
@@ -5779,7 +5779,7 @@ ConversationListView {
   font: 13px; }
   #login_window #user_combobox .menu,
   #login_window #user_combobox menu {
-    font: normal; }
+    font-weight: 400; }
 
 #user_image {
   padding: 3px;
@@ -5787,6 +5787,6 @@ ConversationListView {
 
 #greeter_infobar {
   border-bottom-width: 0;
-  font: bold; }
+  font-weight: 700; }
 
 /*# sourceMappingURL=gtk-dark.css.map */

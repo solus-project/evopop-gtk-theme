@@ -50,7 +50,7 @@
  ***************/
 
 .category-label {
-  font-weight: bold;
+  font-weight: 700;
   color: $fg_color;
 }
 
@@ -96,7 +96,7 @@
 .search-entry-large,
 .search-entry-large:focus {
   border: none;
-  font: 18;
+  font-size: 18px;
   font-weight: 300;
   background-image: none;
   background: none;
@@ -105,7 +105,7 @@
 }
 
 .search-category-header {
-  font-weight: bold;
+  font-weight: 700;
   color: $fg_color;
 }
 
@@ -135,7 +135,7 @@
   > GtkRevealer GtkImage,
   > GtkRevealer GtkLabel  {
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     text-shadow: 0 1px 2px transparentize(black, 0.8), 0 1px 2px transparentize(black, 0.9);
     -gtk-icon-shadow: 0 1px 2px transparentize(black, 0.8), 0 1px 2px transparentize(black, 0.9);
   }
