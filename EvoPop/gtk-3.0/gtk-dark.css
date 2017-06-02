@@ -5139,17 +5139,17 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   .raven-mpris button.image-button {
     padding: 8px; }
 
-.budgie-notification-window, .budgie-osd-window {
+.budgie-notification-window, .budgie-osd-window, .budgie-switcher-window {
   background: none;
   border-radius: 1px; }
-  .budgie-notification-window button, .budgie-osd-window button {
+  .budgie-notification-window button, .budgie-osd-window button, .budgie-switcher-window button {
     background-color: #37b9a5;
     color: #fefefe;
     border: none; }
-    .budgie-notification-window button:hover, .budgie-osd-window button:hover {
+    .budgie-notification-window button:hover, .budgie-osd-window button:hover, .budgie-switcher-window button:hover {
       background-color: #31a593;
       border: none; }
-    .budgie-notification-window button:active, .budgie-osd-window button:active, .budgie-notification-window button:checked, .budgie-osd-window button:checked {
+    .budgie-notification-window button:active, .budgie-osd-window button:active, .budgie-switcher-window button:active, .budgie-notification-window button:checked, .budgie-osd-window button:checked, .budgie-switcher-window button:checked {
       background-color: #31a593; }
 
 .budgie-notification.background, .background.budgie-osd {
@@ -5175,6 +5175,22 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   background-color: rgba(49, 54, 61, 0.95);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   border-radius: 2px; }
+
+.budgie-switcher-window flowbox {
+  padding: 2px;
+  border-radius: 3px;
+  background: none;
+  color: #fefefe; }
+.budgie-switcher-window flowboxchild {
+  padding: 1px;
+  border-radius: 2px;
+  color: #fefefe;
+  background: transparent; }
+  .budgie-switcher-window flowboxchild:active {
+    color: #fefefe; }
+  .budgie-switcher-window flowboxchild:selected {
+    color: #fefefe;
+    background-color: rgba(19, 177, 213, 0.8); }
 
 .budgie-session-dialog, .budgie-polkit-dialog {
   color: #fefefe; }

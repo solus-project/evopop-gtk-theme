@@ -528,6 +528,37 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     @extend .budgie-notification;
   }
 
+  // Internal part of the OSD
+.budgie-osd {
+    @extend .budgie-notification;
+}
+
+// Alt+tab switcher in Budgie
+.budgie-switcher-window {
+    @extend .budgie-notification-window;
+
+    // Flowbox
+    flowbox {
+      padding: 2px;
+      border-radius: 3px;
+      background: none;
+      color: $fg_color;
+
+    }
+    flowboxchild {
+      padding: 1px;
+      border-radius: 2px;
+      color: $fg_color;
+      background: transparent;
+
+      &:active { color: $fg_color; }
+      &:selected {
+          color: $selected_fg_color;
+          background-color: transparentize($selected_bg_color,0.2);
+      }
+   }
+}
+
   // Session Dialog
   .budgie-session-dialog {
     color: $headerbar_fg_color;
