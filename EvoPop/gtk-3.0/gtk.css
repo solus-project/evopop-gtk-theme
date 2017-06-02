@@ -4903,7 +4903,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel .pinned .top .launcher.running:active, .top .budgie-panel #tasklist-button:checked, .budgie-panel .top #tasklist-button:checked, .top .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .top .launcher:checked,
     .top .budgie-panel .pinned .launcher.running:checked,
     .budgie-panel .pinned .top .launcher.running:checked {
-      border-top: 2px solid #13b1d5; }
+      border-top: 2px solid #13b1d5;
+      box-shadow: none; }
   .bottom .budgie-panel #tasklist-button, .budgie-panel .bottom #tasklist-button, .bottom .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .bottom .launcher,
   .bottom .budgie-panel .pinned .launcher.running,
   .budgie-panel .pinned .bottom .launcher.running {
@@ -4921,7 +4922,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel .pinned .bottom .launcher.running:active, .bottom .budgie-panel #tasklist-button:checked, .budgie-panel .bottom #tasklist-button:checked, .bottom .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .bottom .launcher:checked,
     .bottom .budgie-panel .pinned .launcher.running:checked,
     .budgie-panel .pinned .bottom .launcher.running:checked {
-      border-bottom: 2px solid #13b1d5; }
+      border-bottom: 2px solid #13b1d5;
+      box-shadow: none; }
   .left .budgie-panel #tasklist-button, .budgie-panel .left #tasklist-button, .left .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .left .launcher,
   .left .budgie-panel .pinned .launcher.running,
   .budgie-panel .pinned .left .launcher.running {
@@ -4939,7 +4941,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel .pinned .left .launcher.running:active, .left .budgie-panel #tasklist-button:checked, .budgie-panel .left #tasklist-button:checked, .left .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .left .launcher:checked,
     .left .budgie-panel .pinned .launcher.running:checked,
     .budgie-panel .pinned .left .launcher.running:checked {
-      border-left: 2px solid #13b1d5; }
+      border-left: 2px solid #13b1d5;
+      box-shadow: none; }
   .right .budgie-panel #tasklist-button, .budgie-panel .right #tasklist-button, .right .budgie-panel .unpinned .launcher, .budgie-panel .unpinned .right .launcher,
   .right .budgie-panel .pinned .launcher.running,
   .budgie-panel .pinned .right .launcher.running {
@@ -4957,7 +4960,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-panel .pinned .right .launcher.running:active, .right .budgie-panel #tasklist-button:checked, .budgie-panel .right #tasklist-button:checked, .right .budgie-panel .unpinned .launcher:checked, .budgie-panel .unpinned .right .launcher:checked,
     .right .budgie-panel .pinned .launcher.running:checked,
     .budgie-panel .pinned .right .launcher.running:checked {
-      border-right: 2px solid #13b1d5; }
+      border-right: 2px solid #13b1d5;
+      box-shadow: none; }
 
 .top .budgie-panel {
   border-bottom: 1px solid rgba(33, 36, 41, 0.92); }

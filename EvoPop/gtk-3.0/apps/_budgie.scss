@@ -243,6 +243,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         }
         &:active, &:checked {
           border-#{$pos}: 2px solid $selected_bg_color;
+          box-shadow: none;
         }
       }
     }
