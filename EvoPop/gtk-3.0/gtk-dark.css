@@ -3393,7 +3393,7 @@ popover.background {
   background-color: #505359;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); }
   .csd popover.background, popover.background {
-    border: 1px solid rgba(0, 0, 0, 0.1); }
+    border: 1px solid rgba(0, 0, 0, 0.02); }
   popover.background:backdrop {
     background-color: #31363d;
     box-shadow: none; }
@@ -4719,7 +4719,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   .budgie-container:backdrop {
     background-color: transparent; }
   .budgie-container popover {
-    background-color: rgba(56, 58, 62, 0.95); }
+    background-color: rgba(80, 83, 89, 0.96); }
 
 .budgie-menu {
   background-color: rgba(26, 29, 33, 0.95); }
@@ -4756,7 +4756,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     .budgie-menu scrollbar .slider {
       background-color: #505359; }
   .budgie-menu button {
-    box-shadow: none; }
+    box-shadow: none;
+    border-radius: 0 2px 2px 0; }
     .budgie-menu button:active, .budgie-menu button:hover {
       background-color: rgba(17, 158, 190, 0.8); }
   .budgie-menu list {

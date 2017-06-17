@@ -7,7 +7,7 @@ popover.background {
   border-radius: 2px;
   background-color: $popover_bg_color;
 
-  .csd &, & { border: 1px solid $borders_color; }
+  .csd &, & { border: 1px solid transparentize($borders_color, 0.08); }
 
   box-shadow: 0 2px 3px transparentize(black, 0.9);
 

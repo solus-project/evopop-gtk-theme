@@ -34,9 +34,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-container {
   background-color: transparent;
   &:backdrop { background-color: transparent; }
-  & popover {
-    background-color: transparentize(darken($popover_bg_color,10%),0.05);
-  }
+  & popover { background-color: transparentize($popover_bg_color,0.04); }
 }
 
 // Budgie Menu
@@ -83,6 +81,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
   button {
     box-shadow: none;
+    border-radius: 0 2px 2px 0;
     &:active, &:hover { background-color: transparentize( darken($selected_bg_color,5%),0.2); }
   }
 
