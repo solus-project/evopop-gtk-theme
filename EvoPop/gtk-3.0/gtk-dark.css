@@ -21,8 +21,7 @@
 */
 /* GTK NAMED COLORS
 *  ----------------
-* Sass thinks we're using the colors in the variables as strings and may shoot
-* warning, it's innocuous and can be defeated by using "" + $var */
+* use responsibly! */
 /* widget text/foreground color */
 @define-color theme_fg_color #fefefe;
 /* text color for entries, views and content in general */
@@ -2300,8 +2299,7 @@ headerbar {
   min-height: 34px;
   background-color: #31363D;
   color: #fefefe;
-  border-radius: 0;
-  -GtkPaned-handle-size: 0; }
+  border-radius: 0; }
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
     border-color: rgba(33, 37, 41, 0.19);
