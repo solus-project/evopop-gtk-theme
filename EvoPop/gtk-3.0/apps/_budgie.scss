@@ -34,10 +34,14 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-container {
   background-color: transparent;
   &:backdrop { background-color: transparent; }
+  & popover {
+    background-color: transparentize(darken($popover_bg_color,10%),0.05);
+  }
 }
 
 // Budgie Menu
 .budgie-menu {
+  background-color: transparentize( darken($headerbar_color,10%),0.05);
   entry.search {
     border: none;
     border-radius: 0px;
@@ -67,7 +71,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     &:active { box-shadow: inset 0 2px 2px -2px transparentize(black, 0.8); }
     &:checked {
       color: $selected_fg_color;
-      background-color: $selected_bg_color;
+      background-color: transparentize( darken($selected_bg_color,5%),0.2);
     }
   }
 
@@ -77,7 +81,10 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     .slider { background-color: if($variant=='dark', $base_color, $bg_color); }
   }
 
-  button { box-shadow: none; }
+  button {
+    box-shadow: none;
+    &:active, &:hover { background-color: transparentize( darken($selected_bg_color,5%),0.2); }
+  }
 
   list {
     background-color: transparent;
@@ -173,8 +180,12 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 // User Menu
 .user-menu {
   list {
+    background-color: transparent;
     row {
       padding: 2px;
+      button {
+        &:active, &:hover { background-color: transparentize( darken($selected_bg_color,5%),0.2); }
+      }
       &.activatable {
         &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
         &:hover { background-color: transparent; }

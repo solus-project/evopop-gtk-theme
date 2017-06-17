@@ -4743,58 +4743,64 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   background-color: transparent; }
   .budgie-container:backdrop {
     background-color: transparent; }
+  .budgie-container popover {
+    background-color: rgba(229, 229, 229, 0.95); }
 
-.budgie-menu entry.search {
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-  background: none;
-  font-size: 120%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
-  .budgie-menu entry.search image {
-    padding-left: 0px;
-    padding-right: 6px; }
-.budgie-menu .categories {
-  background-color: transparent; }
-  .budgie-menu .categories:dir(ltr) {
-    border-right: 1px solid rgba(0, 0, 0, 0.2); }
-  .budgie-menu .categories:dir(rtl) {
-    border-left: 1px solid rgba(0, 0, 0, 0.2); }
-.budgie-menu .category-button {
-  padding: 8px;
-  border-radius: 2px 0 0 2px; }
-  .budgie-menu .category-button:hover {
-    background-color: rgba(49, 54, 61, 0.05);
-    color: #31363d; }
-  .budgie-menu .category-button:active {
-    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.2); }
-  .budgie-menu .category-button:checked {
-    color: #fefefe;
-    background-color: #13b1d5; }
-.budgie-menu scrollbar {
-  background-color: transparent;
-  border-color: transparent; }
-  .budgie-menu scrollbar .slider {
-    background-color: #e6e8eb; }
-.budgie-menu button {
-  box-shadow: none; }
-.budgie-menu list {
-  background-color: transparent; }
-  .budgie-menu list label {
-    color: #31363d; }
-  .budgie-menu list row.activatable:selected,
-  .budgie-menu list row.activatable:selected button {
-    color: inherit; }
-  .budgie-menu list row.activatable.has-open-popup, .budgie-menu list row.activatable:hover {
+.budgie-menu {
+  background-color: rgba(26, 29, 33, 0.95); }
+  .budgie-menu entry.search {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    background: none;
+    font-size: 120%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+    .budgie-menu entry.search image {
+      padding-left: 0px;
+      padding-right: 6px; }
+  .budgie-menu .categories {
     background-color: transparent; }
-    .budgie-menu list row.activatable.has-open-popup label, .budgie-menu list row.activatable:hover label {
-      color: #fefefe; }
-  .budgie-menu list row.activatable:active {
+    .budgie-menu .categories:dir(ltr) {
+      border-right: 1px solid rgba(0, 0, 0, 0.2); }
+    .budgie-menu .categories:dir(rtl) {
+      border-left: 1px solid rgba(0, 0, 0, 0.2); }
+  .budgie-menu .category-button {
+    padding: 8px;
+    border-radius: 2px 0 0 2px; }
+    .budgie-menu .category-button:hover {
+      background-color: rgba(49, 54, 61, 0.05);
+      color: #31363d; }
+    .budgie-menu .category-button:active {
+      box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.2); }
+    .budgie-menu .category-button:checked {
+      color: #fefefe;
+      background-color: rgba(17, 158, 190, 0.8); }
+  .budgie-menu scrollbar {
+    background-color: transparent;
+    border-color: transparent; }
+    .budgie-menu scrollbar .slider {
+      background-color: #e6e8eb; }
+  .budgie-menu button {
     box-shadow: none; }
-  .budgie-menu list row.activatable:selected:active {
-    box-shadow: none; }
-  .budgie-menu list row.activatable:selected.has-open-popup, .budgie-menu list row.activatable:selected:hover {
+    .budgie-menu button:active, .budgie-menu button:hover {
+      background-color: rgba(17, 158, 190, 0.8); }
+  .budgie-menu list {
     background-color: transparent; }
+    .budgie-menu list label {
+      color: #31363d; }
+    .budgie-menu list row.activatable:selected,
+    .budgie-menu list row.activatable:selected button {
+      color: inherit; }
+    .budgie-menu list row.activatable.has-open-popup, .budgie-menu list row.activatable:hover {
+      background-color: transparent; }
+      .budgie-menu list row.activatable.has-open-popup label, .budgie-menu list row.activatable:hover label {
+        color: #fefefe; }
+    .budgie-menu list row.activatable:active {
+      box-shadow: none; }
+    .budgie-menu list row.activatable:selected:active {
+      box-shadow: none; }
+    .budgie-menu list row.activatable:selected.has-open-popup, .budgie-menu list row.activatable:selected:hover {
+      background-color: transparent; }
 
 .budgie-panel {
   color: #fefefe;
@@ -4841,12 +4847,16 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding: 0;
     margin: 0; }
 
-.user-menu list row {
-  padding: 2px; }
-  .user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
-    background-color: transparent; }
-  .user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
-    background-color: transparent; }
+.user-menu list {
+  background-color: transparent; }
+  .user-menu list row {
+    padding: 2px; }
+    .user-menu list row button:active, .user-menu list row button:hover {
+      background-color: rgba(17, 158, 190, 0.8); }
+    .user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
+      background-color: transparent; }
+    .user-menu list row.activatable.has-open-popup, .user-menu list row.activatable:hover {
+      background-color: transparent; }
 
 .budgie-panel #tasklist-button,
 .budgie-panel #tasklist-button:backdrop {
