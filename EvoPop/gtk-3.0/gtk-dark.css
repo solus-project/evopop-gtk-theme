@@ -336,7 +336,8 @@ button {
       outline-color: rgba(254, 254, 254, 0.3);
       background-color: #13b1d5;
       text-shadow: none;
-      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: none; }
       notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label,
       button:backdrop.flat:active label,
       button:backdrop.flat:checked label,
@@ -4852,7 +4853,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .budgie-panel .pinned .launcher.running {
   opacity: 1;
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  box-shadow: none; }
   .budgie-panel #tasklist-button:hover, .budgie-panel .unpinned .launcher:hover,
   .budgie-panel .pinned .launcher.running:hover {
     background-color: rgba(0, 0, 0, 0.05); }
