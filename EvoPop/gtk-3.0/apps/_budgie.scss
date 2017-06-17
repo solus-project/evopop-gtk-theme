@@ -2,7 +2,7 @@
 * Budgie *
 *********/
 @function gtkalpha($c,$a) {
-    @return unquote("alpha(#{$c},#{$a})");
+  @return unquote("alpha(#{$c},#{$a})");
 }
 
 $roundness: 2px;
@@ -104,7 +104,6 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 
         &:selected {
           &:active { box-shadow: none; }
-
           &.has-open-popup,
           &:hover { background-color: transparent; }
         }
