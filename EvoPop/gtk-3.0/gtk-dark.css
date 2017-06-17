@@ -336,8 +336,7 @@ button {
       outline-color: rgba(254, 254, 254, 0.3);
       background-color: #13b1d5;
       text-shadow: none;
-      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
-      box-shadow: none; }
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
       notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label, notebook > header > tabs > arrow:backdrop:active label, notebook > header > tabs > arrow:backdrop:checked label,
       button:backdrop.flat:active label,
       button:backdrop.flat:checked label,
@@ -3452,7 +3451,7 @@ progressbar {
 progressbar trough, scale trough, scale fill {
   background-color: rgba(0, 0, 0, 0.14);
   border: none;
-  border-radius: 2px;
+  border-radius: 0px;
   margin: 0; }
   progressbar trough:disabled, scale trough:disabled, scale fill:disabled {
     background-color: rgba(0, 0, 0, 0.06); }
@@ -3465,7 +3464,7 @@ progressbar trough, scale trough, scale fill {
 progressbar progress, scale highlight {
   border: none;
   background-color: #13b1d5;
-  border-radius: 2px;
+  border-radius: 0px;
   margin: 0; }
   progressbar progress:disabled, scale highlight:disabled {
     border: none;
@@ -4841,7 +4840,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   padding-left: 4px;
   padding-right: 4px;
   border-color: rgba(49, 54, 61, 0);
-  opacity: 0.75; }
+  opacity: 0.75;
+  box-shadow: none; }
   .budgie-panel button.flat.launcher:hover {
     -gtk-icon-effect: highlight;
     opacity: 0.9; }
@@ -4853,8 +4853,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .budgie-panel .pinned .launcher.running {
   opacity: 1;
   padding-top: 0;
-  padding-bottom: 0;
-  box-shadow: none; }
+  padding-bottom: 0; }
   .budgie-panel #tasklist-button:hover, .budgie-panel .unpinned .launcher:hover,
   .budgie-panel .pinned .launcher.running:hover {
     background-color: rgba(0, 0, 0, 0.05); }

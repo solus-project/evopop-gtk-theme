@@ -71,10 +71,7 @@ button {
         -gtk-icon-effect: none;
 
         &:active,
-        &:checked {
-          @include button(backdrop-active);
-          box-shadow: none;
-        }
+        &:checked { @include button(backdrop-active); }
 
         &:disabled {
           @include button(backdrop-insensitive);

@@ -209,6 +209,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     padding-right: 4px;
     border-color: transparentize($headerbar_color,1); // fixes the transition
     opacity: 0.75;
+    box-shadow: none;
 
     &:hover {
       -gtk-icon-effect: highlight;
@@ -226,7 +227,6 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   opacity: 1;
   padding-top: 0;
   padding-bottom: 0;
-  box-shadow: none;
   &:hover { background-color: transparentize(black, 0.95); }
   &:active, &:checked { background-color: transparentize(black, 0.9); }
 
