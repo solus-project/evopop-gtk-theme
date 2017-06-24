@@ -5429,6 +5429,120 @@ PanelToplevel.background {
     PanelToplevel.background MatePanelAppletFrameDBus:dir(rtl) {
       border-width: 0 2px 0 0; }
 
+.mate-panel-applet-slider {
+  background-color: #505359; }
+  .mate-panel-applet-slider frame {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color: #505359; }
+    .mate-panel-applet-slider frame *,
+    .mate-panel-applet-slider frame > border {
+      border: unset; }
+
+.brisk-menu .categories-list button.flat {
+  padding-top: unset;
+  padding-bottom: unset;
+  border-radius: 2px;
+  -gtk-outline-radius: 0;
+  transition-duration: 0.1s; }
+  .brisk-menu .categories-list button.flat:checked {
+    background-color: transparent;
+    color: #13b1d5; }
+  .brisk-menu .categories-list button.flat image {
+    padding: rem(8px) 0; }
+  .brisk-menu .categories-list button.flat label {
+    padding-bottom: rem(0.7px); }
+.brisk-menu box.vertical > box.horizontal > box.vertical > separator.horizontal {
+  min-height: 0;
+  background-color: transparent; }
+.brisk-menu .apps-list {
+  background-color: #505359; }
+  .brisk-menu .apps-list row.activatable > button.flat {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 2px;
+    -gtk-outline-radius: 0;
+    font-weight: 400;
+    transition: none; }
+    .brisk-menu .apps-list row.activatable > button.flat > box.horizontal > image {
+      padding: rem(5.3px) 0; }
+
+.mate-panel-applet-slider {
+  background-color: transparent; }
+  .mate-panel-applet-slider frame {
+    border-width: 0; }
+    .mate-panel-applet-slider frame *,
+    .mate-panel-applet-slider frame > border {
+      border: unset; }
+
+/********
+ * Caja *
+ ********/
+.caja-desktop > widget.entry, .caja-desktop > widget.entry:focus {
+  transition: none; }
+  .caja-desktop > widget.entry:selected, .caja-desktop > widget.entry:focus:selected {
+    color: #fefefe;
+    background-color: #13b1d5; }
+
+.caja-navigation-window .caja-side-pane scrolledwindow treeview.view {
+  background-color: transparent; }
+  .caja-navigation-window .caja-side-pane scrolledwindow treeview.view:selected {
+    background-color: #13b1d5;
+    color: #fefefe; }
+.caja-navigation-window .caja-side-pane notebook {
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
+  .caja-navigation-window .caja-side-pane notebook .frame {
+    border: none; }
+.caja-navigation-window .caja-side-pane button.flat:last-child {
+  padding: rem(10.7px);
+  border-radius: 100px;
+  -gtk-outline-radius: 100px; }
+.caja-navigation-window toolbar.primary-toolbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .caja-navigation-window toolbar.primary-toolbar button {
+    padding: rem(4px); }
+.caja-navigation-window .caja-pathbar button:not(:first-child):not(:last-child) {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  margin: 0 -1px 0 -2px; }
+.caja-navigation-window .caja-pathbar button:last-child:dir(ltr) {
+  margin-left: -2px; }
+.caja-navigation-window .caja-pathbar button:last-child:dir(rtl) {
+  margin-right: -2px; }
+.caja-navigation-window .caja-pathbar button.toggle, .caja-navigation-window .caja-pathbar button.image-button, .caja-navigation-window .caja-pathbar button.text-button {
+  border-radius: 0px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: -1px; }
+.caja-navigation-window .caja-pathbar button.slider-button, .caja-navigation-window .caja-pathbar button.image-button {
+  margin-right: -1px; }
+  .caja-navigation-window .caja-pathbar button.slider-button:first-child, .caja-navigation-window .caja-pathbar button.image-button:first-child {
+    border-radius: 0px; }
+.caja-navigation-window statusbar {
+  margin: 0 -10px; }
+.caja-navigation-window scrolledwindow widget > widget.entry, .caja-navigation-window scrolledwindow widget > widget.entry:focus {
+  transition: none; }
+  .caja-navigation-window scrolledwindow widget > widget.entry:selected, .caja-navigation-window scrolledwindow widget > widget.entry:focus:selected {
+    color: #fefefe;
+    background-color: #13b1d5; }
+
+#caja-extra-view-widget {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #31363d; }
+  #caja-extra-view-widget > box > box > label {
+    font-weight: 700; }
+
+window#MyControlCenter > frame > box.horizontal > widget > scrolledwindow.frame {
+  border: none; }
+  window#MyControlCenter > frame > box.horizontal > widget > scrolledwindow.frame > widget.view {
+    all: unset;
+    background-color: #31363d; }
+
+.atril-window scrolledwindow.frame,
+.xreader-window scrolledwindow.frame {
+  border-style: solid none none; }
+
 /********
  * Gala *
  *******/

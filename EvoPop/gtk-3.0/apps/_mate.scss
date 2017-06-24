@@ -45,3 +45,214 @@ PanelToplevel.background {
     &:dir(rtl) { border-width: 0 2px 0 0; }
   }
 }
+.mate-panel-applet-slider {
+  background-color: $base_color;
+
+  frame { // draw actual widget
+    border-width: 1px;
+    border-style: solid;
+    border-color: $borders_color;
+    border-radius: 2px;
+    background-color: $base_color;
+
+    // unset borders
+    *,
+    > border { border: unset; }
+  }
+}
+
+// Brisk-Menu applet
+
+.brisk-menu {
+  .categories-list { // left-pane
+    button.flat {
+      padding-top: unset;
+      padding-bottom: unset;
+      border-radius: 2px; // remove roundness
+      -gtk-outline-radius: 0;
+      transition-duration: 0.1s; // shorter duration
+      // almost covers :hover pseudo-class
+      &:checked {
+        background-color: transparent;
+        color: $selected_bg_color;
+      }
+
+      image { padding: rem(8px) 0; }
+      // for finer base-lines
+      label { padding-bottom: rem(0.7px); }
+    }
+  }
+
+  // hide separator above session-buttons
+  box.vertical > box.horizontal > box.vertical > separator.horizontal {
+    min-height: 0;
+    background-color: transparent;
+  }
+
+  .apps-list { // right-pane
+    background-color: $base_color;
+
+    row.activatable > button.flat {
+      padding-top: 2px;
+      padding-bottom: 2px;
+      border-radius: 2px; // remove roundness
+      -gtk-outline-radius: 0;
+      font-weight: 400;
+      transition: none; // needs quicker response
+
+      // set vertical padding with icon's padding
+      > box.horizontal > image { padding: rem(5.3px) 0; }
+    }
+  }
+}
+
+.mate-panel-applet-slider {
+  background-color: transparent;
+
+  frame { // draw actual widget
+    border-width: 0;
+    // unset borders
+    *,
+    > border { border: unset; }
+  }
+}
+
+/********
+ * Caja *
+ ********/
+
+.caja-desktop { // desktop icon-grid styling
+  &.caja-canvas-item { }
+
+  > widget.entry { // = EelEditableLabel.entry
+    &, &:focus {
+      transition: none;
+
+      &:selected { // FIXME: selection node doesn't work?
+        color: $selected_fg_color;
+        background-color: $selected_bg_color;
+      }
+    }
+  }
+}
+
+.caja-navigation-window {
+  // side-panel styling
+  .caja-side-pane {
+    scrolledwindow {
+      &:dir(ltr) {
+      }
+      &:dir(rtl) {
+      }
+
+      treeview.view {
+        background-color: transparent;
+        // font-weight: 500;
+        &:selected {
+          background-color: $selected_bg_color;
+          color: $selected_fg_color;
+        }
+      }
+    }
+
+    notebook {
+      border-top: 1px solid $borders_color;
+
+      .frame { border: none; }
+    }
+
+    button.flat:last-child { // 'close' button on header
+      padding: rem(10.7px);
+      border-radius: 100px;
+      -gtk-outline-radius: 100px;
+    }
+  }
+
+  // main toolbar styling
+  toolbar.primary-toolbar {
+    border-bottom: 1px solid $borders_color;
+    button { // uniform button sizes
+      padding: rem(4px);
+    }
+  }
+
+  // path-bar styling
+  .caja-pathbar {
+    button {
+      &:not(:first-child):not(:last-child) {
+        border-left: 1px solid $borders_color;
+        border-radius: 0px;
+        margin: 0 -1px 0 -2px;
+      }
+      &:last-child {
+        &:dir(ltr) { margin-left: -2px; }
+        &:dir(rtl) { margin-right: -2px; }
+      }
+
+      &.toggle,
+      &.image-button,
+      &.text-button { // enforce square buttons
+        border-radius: 0px;
+        border-left: 1px solid $borders_color;
+        margin-right: -1px;
+      }
+
+      &.slider-button,
+      &.image-button {
+        &:first-child { border-radius: 0px; }
+        margin-right: -1px;
+      }
+    }
+  }
+
+  statusbar {
+    margin: 0 -10px; // hide weird lateral gaps
+  }
+
+  // workaround for invisible text in rename entry
+  scrolledwindow widget > widget.entry {
+    &, &:focus {
+      transition: none;
+
+      &:selected { // FIXME: selection node doesn't work?
+        color: $selected_fg_color;
+        background-color: $selected_bg_color;
+      }
+    }
+  }
+}
+
+#caja-extra-view-widget {
+  border-bottom: 1px solid $borders_color;
+  background-color: $bg_color; // needs overriding
+
+  > box > box > label { font-weight: 700; }
+}
+
+// /***********************
+//  * Mate-Control-Center *
+//  ***********************/
+
+// almost out of control, and looks ugly
+window#MyControlCenter > frame > box.horizontal {
+  > widget > scrolledwindow.frame {
+    border: none;
+    // draw pane-separator with borders
+    // FIXME: rendering quality is quite poor
+    > widget.view { // content-view
+      all: unset;
+      background-color: $bg_color; // does not work
+    }
+  }
+}
+
+// /*****************
+//  * Atril/Xreader *
+//  *****************/
+
+.atril-window,
+.xreader-window {
+  scrolledwindow.frame {
+    border-style: solid none none;
+  }
+}
