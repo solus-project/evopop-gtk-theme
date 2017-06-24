@@ -5384,6 +5384,76 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   border: 0;
   background-color: #e6e8eb; }
 
+/**************
+ * Mate-Panel *
+ **************/
+#PanelWidget,
+#PanelPlug,
+#PanelApplet,
+PanelToplevel.background {
+  color: #fefefe;
+  background-color: #31363D;
+  box-shadow: none; }
+  #PanelWidget button,
+  #PanelPlug button,
+  #PanelApplet button,
+  PanelToplevel.background button {
+    font-weight: 400;
+    color: rgba(254, 254, 254, 0.5);
+    border-radius: 0px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent; }
+    #PanelWidget button:hover, #PanelWidget button:active, #PanelWidget button:checked,
+    #PanelPlug button:hover,
+    #PanelPlug button:active,
+    #PanelPlug button:checked,
+    #PanelApplet button:hover,
+    #PanelApplet button:active,
+    #PanelApplet button:checked,
+    PanelToplevel.background button:hover,
+    PanelToplevel.background button:active,
+    PanelToplevel.background button:checked {
+      box-shadow: none;
+      background-color: transparent; }
+    #PanelWidget button:hover,
+    #PanelPlug button:hover,
+    #PanelApplet button:hover,
+    PanelToplevel.background button:hover {
+      color: rgba(254, 254, 254, 0.7);
+      border-bottom-color: rgba(19, 177, 213, 0.5); }
+    #PanelWidget button:checked,
+    #PanelPlug button:checked,
+    #PanelApplet button:checked,
+    PanelToplevel.background button:checked {
+      color: rgba(254, 254, 254, 0.9);
+      border-bottom-color: #13b1d5; }
+    #PanelWidget button:last-child,
+    #PanelPlug button:last-child,
+    #PanelApplet button:last-child,
+    PanelToplevel.background button:last-child {
+      font-weight: 700; }
+      #PanelWidget button:last-child label,
+      #PanelPlug button:last-child label,
+      #PanelApplet button:last-child label,
+      PanelToplevel.background button:last-child label {
+        padding: 2px; }
+  #PanelWidget MatePanelAppletFrameDBus,
+  #PanelPlug MatePanelAppletFrameDBus,
+  #PanelApplet MatePanelAppletFrameDBus,
+  PanelToplevel.background MatePanelAppletFrameDBus {
+    border-style: solid;
+    border-color: #31363D; }
+    #PanelWidget MatePanelAppletFrameDBus:dir(ltr),
+    #PanelPlug MatePanelAppletFrameDBus:dir(ltr),
+    #PanelApplet MatePanelAppletFrameDBus:dir(ltr),
+    PanelToplevel.background MatePanelAppletFrameDBus:dir(ltr) {
+      border-width: 0 0 0 2px; }
+    #PanelWidget MatePanelAppletFrameDBus:dir(rtl),
+    #PanelPlug MatePanelAppletFrameDBus:dir(rtl),
+    #PanelApplet MatePanelAppletFrameDBus:dir(rtl),
+    PanelToplevel.background MatePanelAppletFrameDBus:dir(rtl) {
+      border-width: 0 2px 0 0; }
+
 /********
  * Gala *
  *******/
