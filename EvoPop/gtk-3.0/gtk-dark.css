@@ -5215,9 +5215,9 @@ calendar.raven-calendar {
       background-color: transparent; }
 
 .raven-mpris {
-  color: transparent;
-  background-color: transparent;
-  border: solid transparent;
+  color: fg_color;
+  background-color: rgba(26, 29, 33, 0.9);
+  border: solid rgba(0, 0, 0, 0.1);
   border-width: 1px 0; }
   .raven-mpris button.image-button {
     padding: 8px; }

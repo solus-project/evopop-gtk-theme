@@ -5,9 +5,9 @@
 $alert_color: $red;
 $button_bg: transparent;
 $entry_border: transparent;
-$mpris_overlay_fg: transparent;
-$mpris_overlay_bg: transparent;
-$mpris_overlay_border: transparent;
+$mpris_overlay_fg: fg_color;
+$mpris_overlay_bg: transparentize(if($variant=='light',$base_color, darken($bg_color, 10%)), 0.1);
+$mpris_overlay_border: $borders_color;
 $panel_bg: transparentize( darken($headerbar_color,10%),0.05);
 $panel_border: transparentize(darken($headerbar_color, 7%), 0.08);
 $panel_shadow: transparentize(black, 0.7);
