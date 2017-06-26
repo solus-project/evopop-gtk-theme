@@ -5225,6 +5225,15 @@ calendar.raven-calendar {
 .budgie-notification-window, .budgie-osd-window, .budgie-switcher-window {
   background: none;
   border-radius: 1px; }
+  .budgie-notification-window button, .budgie-osd-window button, .budgie-switcher-window button {
+    background-color: #37b9a5;
+    color: #fefefe;
+    border: none; }
+    .budgie-notification-window button:hover, .budgie-osd-window button:hover, .budgie-switcher-window button:hover {
+      background-color: #31a593;
+      border: none; }
+    .budgie-notification-window button:active, .budgie-osd-window button:active, .budgie-switcher-window button:active, .budgie-notification-window button:checked, .budgie-osd-window button:checked, .budgie-switcher-window button:checked {
+      background-color: #31a593; }
 
 .budgie-notification.background, .background.budgie-osd, .background.budgie-switcher {
   border-radius: 1px; }
@@ -5233,12 +5242,22 @@ calendar.raven-calendar {
   color: #fefefe; }
 .budgie-notification .notification-body, .budgie-osd .notification-body, .budgie-switcher .notification-body {
   color: rgba(254, 254, 254, 0.7); }
+.budgie-notification button, .budgie-osd button, .budgie-switcher button {
+  background-color: transparent;
+  color: #fefefe; }
+  .budgie-notification button:hover, .budgie-osd button:hover, .budgie-switcher button:hover {
+    background-color: transparent;
+    color: #c72240;
+    box-shadow: none; }
+  .budgie-notification button:active, .budgie-osd button:active, .budgie-switcher button:active, .budgie-notification button:checked, .budgie-osd button:checked, .budgie-switcher button:checked {
+    background-color: transparent;
+    color: #b11e39; }
 
-.drop-shadow {
+.drop-shadow, .budgie-session-dialog.background, .background.budgie-polkit-dialog, .background.budgie-run-dialog {
   color: #fefefe;
-  background-color: rgba(26, 29, 33, 0.95);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(33, 36, 41, 0.92);
-  border-radius: 1px; }
+  background-color: rgba(49, 54, 61, 0.95);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px; }
 
 .budgie-switcher-window flowbox {
   color: #fefefe; }
@@ -5251,7 +5270,7 @@ calendar.raven-calendar {
     color: #fefefe; }
   .budgie-switcher-window flowboxchild:selected {
     color: #fefefe;
-    background-color: #13b1d5; }
+    background-color: rgba(19, 177, 213, 0.8); }
     .budgie-switcher-window flowboxchild:selected:active {
       color: #fefefe; }
     .budgie-switcher-window flowboxchild:selected:hover {
@@ -5267,19 +5286,44 @@ calendar.raven-calendar {
   background-color: rgba(26, 29, 33, 0.95); }
   .budgie-session-dialog .dialog-title, .budgie-polkit-dialog .dialog-title, .budgie-run-dialog .dialog-title {
     font-size: 120%; }
-  .budgie-session-dialog decoration, .budgie-polkit-dialog decoration, .budgie-run-dialog decoration {
-    border-radius: 1px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(33, 36, 41, 0.92); }
   .budgie-session-dialog .linked.horizontal > button, .budgie-polkit-dialog .linked.horizontal > button, .budgie-run-dialog .linked.horizontal > button {
-    padding: 8px;
+    min-height: 32px;
     border-bottom: none;
-    border-radius: 0; }
+    border-radius: 0;
+    color: #fefefe;
+    background-color: transparent;
+    box-shadow: none; }
+    .budgie-session-dialog .linked.horizontal > button label, .budgie-polkit-dialog .linked.horizontal > button label, .budgie-run-dialog .linked.horizontal > button label {
+      font-weight: 700; }
     .budgie-session-dialog .linked.horizontal > button:first-child, .budgie-polkit-dialog .linked.horizontal > button:first-child, .budgie-run-dialog .linked.horizontal > button:first-child {
       border-left: none;
-      border-radius: 0; }
+      border-bottom-left-radius: 2px; }
     .budgie-session-dialog .linked.horizontal > button:last-child, .budgie-polkit-dialog .linked.horizontal > button:last-child, .budgie-run-dialog .linked.horizontal > button:last-child {
       border-right: none;
-      border-radius: 0; }
+      border-bottom-right-radius: 2px; }
+    .budgie-session-dialog .linked.horizontal > button:hover, .budgie-polkit-dialog .linked.horizontal > button:hover, .budgie-run-dialog .linked.horizontal > button:hover {
+      background-color: rgba(19, 177, 213, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button:hover:backdrop label, .budgie-polkit-dialog .linked.horizontal > button:hover:backdrop label, .budgie-run-dialog .linked.horizontal > button:hover:backdrop label {
+        color: rgba(255, 255, 255, 0.5); }
+    .budgie-session-dialog .linked.horizontal > button.suggested-action, .budgie-polkit-dialog .linked.horizontal > button.suggested-action, .budgie-run-dialog .linked.horizontal > button.suggested-action {
+      background-color: rgba(55, 185, 165, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button.suggested-action:hover, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:hover, .budgie-run-dialog .linked.horizontal > button.suggested-action:hover {
+        background-color: rgba(67, 199, 179, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button.suggested-action:active, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:active, .budgie-run-dialog .linked.horizontal > button.suggested-action:active, .budgie-session-dialog .linked.horizontal > button.suggested-action:checked, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:checked, .budgie-run-dialog .linked.horizontal > button.suggested-action:checked {
+        background-color: rgba(67, 199, 179, 0.9); }
+    .budgie-session-dialog .linked.horizontal > button.destructive-action, .budgie-polkit-dialog .linked.horizontal > button.destructive-action, .budgie-run-dialog .linked.horizontal > button.destructive-action {
+      background-color: rgba(155, 27, 50, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button.destructive-action:hover, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:hover, .budgie-run-dialog .linked.horizontal > button.destructive-action:hover {
+        background-color: rgba(177, 30, 57, 0.9); }
+      .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-run-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked, .budgie-run-dialog .linked.horizontal > button.destructive-action:checked {
+        background-color: rgba(177, 30, 57, 0.9); }
+  .budgie-session-dialog entry, .budgie-polkit-dialog entry, .budgie-run-dialog entry {
+    background-color: #505359;
+    color: #fefefe; }
+    .budgie-session-dialog entry:focus, .budgie-polkit-dialog entry:focus, .budgie-run-dialog entry:focus {
+      background-color: #505359; }
+    .budgie-session-dialog entry:backdrop, .budgie-polkit-dialog entry:backdrop, .budgie-run-dialog entry:backdrop {
+      background-color: #505359; }
 
 .budgie-polkit-dialog .message {
   color: rgba(254, 254, 254, 0.7); }
