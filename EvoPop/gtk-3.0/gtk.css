@@ -4825,7 +4825,7 @@ menubar menuitem label {
 
 button.budgie-menu-launcher {
   padding: 0 2px;
-  color: rgba(254, 254, 254, 0.7);
+  color: rgba(254, 254, 254, 0.8);
   background-color: rgba(0, 0, 0, 0.3);
   box-shadow: none; }
   button.budgie-menu-launcher:hover {
@@ -4833,12 +4833,12 @@ button.budgie-menu-launcher {
   button.budgie-menu-launcher:active, button.budgie-menu-launcher:checked {
     color: #fefefe; }
   button.budgie-menu-launcher:backdrop {
-    color: rgba(254, 254, 254, 0.7);
+    color: rgba(254, 254, 254, 0.8);
     background-color: rgba(0, 0, 0, 0.3); }
     button.budgie-menu-launcher:backdrop:hover {
       color: #fefefe; }
     button.budgie-menu-launcher:backdrop:active, button.budgie-menu-launcher:backdrop:checked {
-      color: #7b7bbd;
+      color: #13b1d5;
       background-color: rgba(0, 0, 0, 0.3);
       box-shadow: none; }
 
