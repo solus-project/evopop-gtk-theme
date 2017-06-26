@@ -5175,18 +5175,69 @@ button.raven-trigger {
         box-shadow: inset 0 -3px 0 0 #119ebe; }
       .raven .raven-header button:disabled {
         color: #8c8f94; }
-  .raven GtkScrolledWindow {
-    background: transparent; }
+  .raven list {
+    background-color: transparent; }
+    .raven list:selected {
+      background-color: rgba(19, 177, 213, 0.9); }
+    .raven list row,
+    .raven list row.activatable {
+      background-color: transparent; }
+      .raven list row:selected,
+      .raven list row.activatable:selected {
+        background-color: rgba(19, 177, 213, 0.9); }
   .raven .raven-background {
     color: #31363d;
     background-color: transparent;
-    border-bottom: 1px solid transparent; }
+    border-color: transparent; }
     .raven .raven-background.middle {
       border-bottom-style: none; }
-  .raven .powerstrip button {
-    padding: 10px; }
+  .raven .powerstrip {
+    border-top-color: transparent; }
+  .raven .powerstrip button.image-button {
+    border-radius: 50%;
+    padding: 6px;
+    min-width: 32px;
+    margin-bottom: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    box-shadow: none;
+    font-size: 100%; }
+    .raven .powerstrip button.image-button:hover {
+      transition: 170ms ease all;
+      background: rgba(0, 0, 0, 0.2);
+      color: #fefefe; }
+    .raven .powerstrip button.image-button:active {
+      transition: 170ms ease all;
+      background: rgba(0, 0, 0, 0.3);
+      color: #fefefe; }
   .raven .option-subtitle {
     font-size: smaller; }
+
+calendar.raven-calendar {
+  padding: 6px;
+  color: #31363d;
+  background-color: rgba(230, 232, 235, 0.2);
+  border-color: transparent; }
+  calendar.raven-calendar:indeterminate {
+    color: alpha(currentColor,0.3); }
+  calendar.raven-calendar:selected {
+    color: #fefefe;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1.6em 1.6em;
+    background-image: -gtk-scaled(url("../assets/calendar-selected.png"), url("../assets/calendar-selected@2.png")); }
+  calendar.raven-calendar.header {
+    color: #31363d;
+    border: none;
+    border-radius: 0;
+    background-color: transparent; }
+  calendar.raven-calendar button, calendar.raven-calendar button:focus {
+    color: alpha(currentColor,0.5);
+    background-color: transparent; }
+    calendar.raven-calendar button:hover, calendar.raven-calendar button:focus:hover {
+      color: #31363d;
+      background-color: transparent; }
 
 .raven-mpris {
   color: transparent;

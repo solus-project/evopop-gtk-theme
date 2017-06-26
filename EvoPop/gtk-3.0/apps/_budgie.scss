@@ -488,24 +488,86 @@ button.raven-trigger {
         }
     }
 
-    GtkScrolledWindow { background: transparent; }
-
-    @if $variant=='default' {
-        .expander-button { color: gtkalpha(currentColor, 0.5); }
+    list {
+      background-color: transparent;
+      &:selected { background-color: transparentize($selected_bg_color,0.1); }
+      row,
+      row.activatable {
+        background-color: transparent;
+        &:selected { background-color: transparentize($selected_bg_color,0.1); }
+      }
     }
+
     .raven-background {
         color: $fg_color;
-        background-color: $raven_background_bg;
-        border-bottom: 1px solid $raven_background_border;
+        background-color: transparent;
+        border-color: transparent;
 
         &.middle { border-bottom-style: none; }  // applet background between two headers
     }
-    .powerstrip button {
-        padding: 10px;
+
+    .powerstrip { border-top-color: transparent; }
+
+    .powerstrip button.image-button {
+      border-radius:50%;
+      padding: 6px;
+      min-width: 32px;
+      margin-bottom: 3px;
+      background: if($variant=='dark', transparentize(black,0.7), transparentize(black,0.9));
+      border: none;
+      box-shadow: none;
+      font-size: 100%;
+
+      &:hover {
+        transition: 170ms ease all;
+        background: if($variant=='dark', transparentize(black,0.6), transparentize(black,0.8));
+        color: $selected_fg_color;
+      }
+      &:active {
+        transition: 170ms ease all;
+        background: if($variant=='dark', transparentize(black,0.5), transparentize(black,0.7));
+        color: $selected_fg_color;
+      }
     }
     .option-subtitle {
         font-size: smaller;
     }
+}
+
+// Calendar
+calendar.raven-calendar {
+  padding: 6px;
+  color: $fg_color;
+  background-color: transparentize($bg_color, 0.8);
+  border-color: transparent;
+
+  &:indeterminate { color: gtkalpha(currentColor,0.3); }
+
+  &:selected {
+    color: $selected_fg_color;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1.6em 1.6em;
+
+    background-image: -gtk-scaled(url("../assets/calendar-selected.png"),
+                                  url("../assets/calendar-selected@2.png"));
+  }
+  &.header {
+    color: $fg_color;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  & button, & button:focus {
+    color: gtkalpha(currentColor,0.5);
+    background-color: transparent;
+
+    &:hover {
+      color: $fg_color;
+      background-color: transparent;
+    }
+  }
 }
 
 // MPRIS Applet
