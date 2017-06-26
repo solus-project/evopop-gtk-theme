@@ -199,7 +199,7 @@ button.raven-trigger {
       background-color: transparent;
     }
 }
-/* Look at later
+
 // Places Menu
 .places-menu {
     .container { padding: 0; }
@@ -291,7 +291,7 @@ button.raven-trigger {
         border-top: #{"1px solid mix(@theme_base_color, #000000, 0.35);"};
         box-shadow: #{"inset 0px 1px 1px alpha(@theme_fg_color, 0.04);"};
     }
-}*/
+}
 
 // Panel
 .budgie-panel {
@@ -467,6 +467,25 @@ button.raven-trigger {
             }
           }
         }
+
+        > button.text-button {
+          border-radius: 2px;
+          color: $selected_fg_color;
+          background-color: transparentize(darken($red,5%), 0.1);
+          @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+          &:hover {
+            border-radius: 2px;
+            color: $selected_fg_color;
+            background-color: transparentize($red, 0.1);
+            @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+          }
+          &:active {
+            color: $selected_fg_color;
+            background-color: transparentize(lighten($red,5%), 0.1);
+            @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+          }
+        }
+        
         &.bottom { border-bottom-style: none; }
         button {
           background-color: transparent;
