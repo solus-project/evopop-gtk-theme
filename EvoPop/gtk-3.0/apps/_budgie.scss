@@ -17,18 +17,14 @@ $raven_border: transparentize($bg_color, 0.08);
 $raven_expander_bg: transparent;
 $raven_background_bg: transparent;
 $raven_background_border: transparent;
-$scrollbar_bg: transparent;
-$scrollbar_border: transparent;
-$trough_bg: transparent;
 
 @function gtkalpha($c,$a) {
     @return unquote("alpha(#{$c},#{$a})");
 }
 
-$roundness: 3px;
-$border_width: if($variant == 'default', 1px, 2px);
+$roundness: 2px;
+$border_width: 1px;
 $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
-$asset_suffix: if($variant == 'default', '', '-hc');
 
 // Used to reset all style properties set by the gtk theme
 %reset_style,
@@ -72,427 +68,9 @@ popover row,
 
 // Container for both the "panel" area and the shadow. Wise to keep
 // this transparent..
-.budgie-container { background-color: transparent; }
-
-%widgets {
-
-    * {
-        padding: 0;
-        outline-color: transparentize($fg_color, 0.7);
-        outline-style: dashed;
-        outline-offset: -3px;
-        outline-width: 1px;
-        -gtk-outline-radius: 2px;
-        margin: 0;
-
-        @extend %reset_style;
-    }
-
-    .dim-label { opacity: 0.55; }
-    label:disabled { color: transparentize($fg_color, 0.65); }
-    label, image { color: inherit; }
-
-    separator {
-        background-color: rgba(0,0,0,0.25);
-        min-width: 1px;
-        min-height: 1px;
-    }
-
-    // used to indicate unread notifications
-    .alert { color: $alert_color; }
-
-    // Entries
-    entry {
-        padding: 4px 8px;
-        border: $border_width solid;
-        border-radius: $roundness;
-        caret-color: $fg_color;
-
-        @include entry(normal);
-
-        image {
-            color: $fg_color;
-
-            &.left { padding-left: 0; padding-right: 3px; }
-            &.right { padding-right: 0; padding-left: 3px; }
-        }
-
-        &:focus {
-            @include entry(focus);
-        }
-        &:disabled {
-            @include entry(insensitive);
-        }
-        selection,
-        selection:focus {
-            color: $selected_fg_color;
-            background-color: $selected_bg_color;
-        }
-    }
-
-    // Buttons
-    button {
-        background-clip: padding-box;
-        padding: 4px 8px;
-        border: $border_width solid;
-        border-radius: $roundness;
-
-        @include button(normal);
-
-        separator { margin: 4px 1px; }
-
-        &.flat:not(:hover):not(:active):not(:checked) {
-            &, &:disabled {
-                @include button(flat);
-            }
-        }
-        &:hover { @include button(hover); }
-        &:active, &:checked { @include button(active); }
-        &:disabled {
-            @include button(insensitive);
-            &:active, &:checked {
-                @include button(insensitive-active);
-            }
-        }
-
-        &.text-button { padding: 4px 12px; }
-        &.image-button { padding: 4px; }
-    }
-
-    stackswitcher button.text-button { min-width: 70px; }
-
-    // Linked Widgets
-    .linked {
-        > entry,
-        > button { @extend %linked; }
-
-        // linked square buttons look weird
-        button.image-button { padding: 4px 7px; }
-    }
-
-    %linked_middle {
-        border-radius: 0;
-        border-right-style: none;
-    }
-    %linked {
-        @extend %linked_middle;
-        &:first-child {
-            border-top-left-radius: $roundness;
-            border-bottom-left-radius: $roundness;
-        }
-        &:last-child {
-            border-top-right-radius: $roundness;
-            border-bottom-right-radius: $roundness;
-            border-right-style: solid;
-        }
-        &:only-child {
-            border-radius: $roundness;
-            border-style: solid;
-        }
-    }
-
-    // ComboBoxes
-    combobox {
-        arrow {
-          -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-          min-height: 16px;
-          min-width: 16px;
-        }
-        &.linked {
-            button:nth-child(2) {
-                &:dir(ltr) { @extend %linked:last-child; }
-                &:dir(rtl) { @extend %linked:first-child; }
-            }
-        }
-    }
-
-    // Spinbuttons
-    spinbutton {
-        color: $fg_color;
-        caret-color: currentColor;
-
-        &:not(.vertical) {
-            button, entry { @extend %linked; }
-        }
-
-        &:dir(ltr) entry,
-        &:dir(rtl) button.up { border-radius: $roundness 0 0 $roundness; }
-    }
-
-    // Progressbars
-    progressbar {
-        padding: 0;
-        font-size: smaller;
-        color: transparentize($fg_color, 0.3);
-
-        progress {
-            background-color: $selected_bg_color;
-            border: none;
-            border-radius: 3px;
-        }
-        trough {
-            border: none;
-            border-radius: 3px;
-            background-color: $trough_bg;
-        }
-    }
-
-    // Scale
-    scale {
-        min-height: 10px;
-        min-width: 10px;
-        padding: 5px;
-
-        value, marks { color: gtkalpha(currentColor, 0.7); }
-
-        &:disabled { opacity: 0.4; }
-
-        // slider sizing
-        @if $variant == 'default' {
-            slider {
-                min-width: 6px;
-                min-height: 6px;
-                margin: 0;
-            }
-            &:hover slider {
-                min-width: 14px;
-                min-height: 14px;
-                margin: -4px;
-            }
-        }
-        @else {
-            slider {
-                min-width: 16px;
-                min-height: 16px;
-                margin: -6px;
-            }
-        }
-
-        slider {
-            border-radius: 50%;
-            background-color: $selected_bg_color;
-        }
-        trough {
-            outline-offset: 2px;
-            -gtk-outline-radius: 2px;
-            margin: 5px;
-            background-color: $trough_bg;
-            border-radius: 2.5px;
-
-            highlight {
-                border-radius: 2.5px;
-                background-color: $selected_bg_color;
-            }
-        }
-    }
-
-    // Check and Radio Items
-    @each $w,$a in ('check', 'checkbox'),
-                   ('radio','radio') {
-      #{$w} {
-        color: $fg_color;
-        -gtk-icon-source: if($variant == 'default', -gtk-scaled(url("../assets/#{$a}.png"),url("../assets/#{$a}@2.png")),
-                                                    -gtk-icontheme('#{$a}-symbolic'));
-
-        &:checked, &:active {
-            -gtk-icon-source: if($variant == 'default', -gtk-scaled(url("../assets/#{$a}-active.png"),url("../assets/#{$a}-active@2.png")),
-                                                        -gtk-icontheme('#{$a}-checked-symbolic'));
-        }
-        &:disabled { color: transparentize($fg_color, 0.65); }
-        &:indeterminate { -gtk-icon-source: -gtk-icontheme('#{$a}-mixed-symbolic'); }
-      }
-    }
-    radiobutton radio,
-    checkbutton check {
-      min-width: 16px;
-      min-height: 16px;
-      margin: 0 2px;
-      &:only-child { margin: 0; }
-    }
-
-    // Switches
-    switch {
-        font-size: 1px;
-        outline-color: transparent;
-
-        slider {
-            min-width: 45px;
-            min-height: 19px;
-        }
-
-        &, slider {
-            color: transparent;
-            background-size: 45px 19px;
-            background-repeat: no-repeat;
-            background-position: right center;
-
-            &:dir(rtl) { background-position: left center; }
-        }
-
-        background-image: -gtk-scaled(url("../assets/switch#{$asset_suffix}.png"),url("../assets/switch#{$asset_suffix}@2.png"));
-
-        &:checked { background-image: -gtk-scaled(url("../assets/switch-active#{$asset_suffix}.png"),url("../assets/switch-active#{$asset_suffix}@2.png")); }
-        &:disabled { opacity: 0.4; }
-    }
-
-    // Scrollbars
-    scrollbar {
-        -GtkScrollbar-has-backward-stepper: false;
-        -GtkScrollbar-has-forward-stepper: false;
-
-        $_slider_margin: 3px;
-        $_slider_fine_tune_margin: 4px;
-
-        button { border: none; }
-
-        &.overlay-indicator {
-            &:not(.dragging):not(.hovering) {
-                opacity: if($variant == 'default', 0.4, 1);
-
-                slider {
-                    margin: 0;
-                    background-color: $scrollbar_bg;
-                    border: 1px solid $scrollbar_border;
-                    background-clip: padding-box;
-                }
-                trough {
-                    border-style: none;
-                    background-color: transparent;
-                }
-                // sizing
-                &.vertical slider {
-                    min-width: 4px;
-                    margin-top: $_slider_margin - 1px;
-                    margin-bottom: $_slider_margin - 1px;
-                }
-            }
-            &.dragging,
-            &.hovering { opacity: 0.99; }
-        }
-
-        slider {
-            border-radius: 100px;
-            margin: $_slider_margin;
-            background-color: transparentize($scrollbar_bg, if($variant == 'default', 0.5, 0));
-
-            &:hover { background-color: transparentize($scrollbar_bg, if($variant == 'default', 0.3, 0)); }
-
-            &:hover:active { background-color: $selected_bg_color;}
-
-            &:disabled { background-color: transparent; }
-        }
-
-        trough { background-color: if($variant == 'default', transparentize(black, 0.6), $trough_bg); }
-
-        // sizing
-        &.vertical {
-            &.fine-tune slider {
-                min-width: 4px;
-                margin: $_slider_fine_tune_margin;
-            }
-            slider {
-                min-height: 42px;
-                min-width: 6px;
-                margin: $_slider_margin;
-            }
-        }
-    }
-
-    // Lists
-    list { color: $fg_color; }
-    row.activatable {
-        padding: 3px;
-        color: $fg_color;
-
-        &:hover { background-color: $button_bg; }
-        &:active { color: $fg_color; }
-        &:selected {
-            color: $selected_fg_color;
-            background-color: $selected_bg_color;
-
-            &:active { color: $selected_fg_color; }
-            &:hover { background-color: mix(black, $selected_bg_color, 10%); }
-            &:disabled {
-                color: transparentize($selected_fg_color, 0.3);
-                background-color: transparentize($selected_bg_color, 0.3);
-                label { color: inherit; }
-            }
-        }
-    }
-    @at-root %menu {
-        .menu, menu {
-            margin: 4px;
-            padding: 0;
-            border-radius: 0;
-            background-color: $raven_bg;
-
-            menuitem {
-                padding: 5px;
-                color: $fg_color;
-                &:hover {
-                    color: $selected_fg_color;
-                    background-color: $selected_bg_color;
-                }
-                &:disabled { color: transparentize($fg_color, 0.65); }
-                separator { background-color: transparentize($raven_bg, 1); }
-            }
-            arrow {
-                border: none;
-                min-width: 16px;
-                min-height: 16px;
-
-                &.top {
-                    -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
-                    border-bottom: 1px solid mix($fg_color, $raven_bg, 10%);
-                }
-                &.bottom {
-                    -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
-                    border-top: 1px solid mix($fg_color, $raven_bg, 10%);
-                }
-                &:hover { background-color: $selected_bg_color; }
-                &:disabled {
-                    color: transparentize($fg_color, 0.65);
-                    background-color: transparent;
-                }
-            }
-        }
-        .csd.popup decoration {
-            box-shadow: 0 3px 6px transparentize(black, 0.55),
-                        0 0 0 1px transparentize(black, 0.55);
-        }
-    }
-
-    // Calendar
-    calendar.raven-calendar {
-        padding: 3px;
-        color: $fg_color;
-
-        &:indeterminate { color: gtkalpha(currentColor,0.3); }
-
-        @if $variant=='default' {
-            &:selected { color: $selected_bg_color; }
-        }
-        @else {
-            &:selected {
-                color: $selected_fg_color;
-                background-color: $selected_bg_color;
-            }
-        }
-        &.header {
-            color: $fg_color;
-            border: none;
-            border-radius: 0;
-        }
-        &.button, &.button:focus {
-            color: gtkalpha(currentColor,0.5);
-            background-color: transparent;
-
-            &:hover {
-                color: $fg_color;
-                background-color: transparent;
-            }
-        }
-    }
+.budgie-container {
+  background-color: transparent;
+  &:backdrop { background-color: transparent; }
 }
 
 .budgie-popover,
@@ -681,7 +259,6 @@ button.raven-trigger {
 
 // Panel
 .budgie-panel {
-    @extend %widgets;
     color: $fg_color;
     background-color: $panel_bg;
     background-image: none;
@@ -824,8 +401,6 @@ button.raven-trigger {
 
 // Raven
 .raven {
-    @extend %widgets;
-    @extend %menu;
     color: $fg_color;
     background-color: $raven_bg;
     transition: 170ms ease-out;
@@ -887,8 +462,6 @@ button.raven-trigger {
 }
 
 .drop-shadow {
-    @extend %widgets;
-
     color: $fg_color;
     background-color: $panel_bg;
     box-shadow: 0 2px 4px 0 $panel_shadow, 0 0 0 1px $panel_border;
@@ -942,8 +515,6 @@ button.raven-trigger {
     color: $fg_color;
     background-color: $panel_bg;
 
-    @extend %widgets;
-
     .dialog-title { font-size: 120%; }
 
     decoration {
@@ -963,7 +534,6 @@ button.raven-trigger {
 // PolKit Dialog
 .budgie-polkit-dialog {
     @extend .budgie-session-dialog;
-    @extend %menu;
 
     .message { color: transparentize($fg_color, 0.3); }
     .failure { color: $alert_color; }
@@ -992,7 +562,6 @@ button.raven-trigger {
 
 // Budgie styled Gtk Menus
 .budgie-menubar {
-    @extend %menu;
     menu {
         margin: 4px;
         padding: 5px;
