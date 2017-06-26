@@ -4799,78 +4799,124 @@ menubar menuitem label {
   background: none; }
 
 button.budgie-menu-launcher {
-  padding: 0 2px; }
+  padding: 0 2px;
+  color: #fefefe;
+  box-shadow: none; }
+  button.budgie-menu-launcher:hover {
+    background-color: rgba(0, 0, 0, 0.05); }
+  button.budgie-menu-launcher:active, button.budgie-menu-launcher:checked {
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1); }
 
 .user-menu .content-box separator {
   background-color: alpha(@theme_fg_color, 0.15); }
 .user-menu .container {
-  padding: 10px; }
+  padding: 8px; }
 
 button.raven-trigger {
   padding-left: 2px;
-  padding-right: 2px; }
+  padding-right: 2px;
+  color: #fefefe;
+  box-shadow: none; }
+  button.raven-trigger:hover {
+    background-color: transparent; }
+  button.raven-trigger:active, button.raven-trigger:checked {
+    box-shadow: none;
+    background-color: transparent; }
 
-.places-menu .container {
-  padding: 0; }
-.places-menu .message-bar {
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px; }
-.places-menu .name-button {
-  border: 0;
-  border-radius: 0;
-  padding: 4px 6px; }
-.places-menu .unmount-button {
-  padding: 4px 4px;
-  border: 0;
-  border-radius: 0; }
-.places-menu .places-section-header {
-  padding: 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 1px 1px alpha(@theme_fg_color, 0.03); }
-.places-menu .places-section-header > button {
-  padding: 8px;
-  border: none;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px; }
-.places-menu .places-list {
-  background: rgba(254, 254, 254, 0.04);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-.places-menu list,
-.places-menu row {
-  padding: 0;
-  margin: 0; }
-.places-menu .unlock-area {
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent; }
-.places-menu .unlock-area entry {
-  border-radius: 0;
-  border: 0; }
-.places-menu .unlock-area button {
-  border-radius: 0;
-  border: 0;
-  border-left: 1px solid transparent; }
-.places-menu .alternative-label {
-  font-size: 15px;
-  padding: 3px; }
-.places-menu .always-expand {
-  background: transparent;
-  border-bottom: none; }
+/* Look at later
+// Places Menu
+.places-menu {
+    .container { padding: 0; }
 
-.night-light-indicator .container {
-  padding: 0; }
-.night-light-indicator .view-header {
-  font-size: 14px;
-  padding: 10px;
-  border-bottom: 1px solid mix(@theme_base_color, #000000, 0.35);;
-  box-shadow: 0px 1px 1px alpha(@theme_fg_color, 0.04);; }
-.night-light-indicator .display-settings-button {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border: none;
-  padding: 3px;
-  border-top: 1px solid mix(@theme_base_color, #000000, 0.35);;
-  box-shadow: inset 0px 1px 1px alpha(@theme_fg_color, 0.04);; }
+    .message-bar {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
 
+    .name-button {
+        border: 0;
+        border-radius: 0;
+        padding: 4px 6px;
+    }
+
+    .unmount-button {
+        padding: 4px 4px;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .places-section-header {
+        padding: 0px;
+        border-bottom: 1px solid $raven_expander_border;
+        box-shadow: 0px 1px 1px alpha(@theme_fg_color, 0.03);
+    }
+
+    .places-section-header > button {
+        padding: 8px;
+        border: none;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .places-list {
+        background: transparentize($fg_color, 0.96);
+        border-bottom: 1px solid $raven_expander_border;
+    }
+
+    list,
+    row {
+        padding: 0;
+        margin: 0;
+    }
+
+    .unlock-area {
+        border-top: 1px solid transparentize($raven_expander_border, 0.1);
+        border-bottom: 1px solid transparentize($raven_expander_border, 0.1);
+    }
+
+    .unlock-area entry {
+        border-radius: 0;
+        border: 0;
+    }
+
+    .unlock-area button {
+        border-radius: 0;
+        border: 0;
+        border-left: 1px solid transparentize($raven_expander_border, 0.1);
+    }
+
+    .alternative-label {
+        font-size: 15px;
+        padding: 3px;
+    }
+
+    .always-expand {
+        background: transparent;
+        border-bottom: none;
+    }
+}
+
+// Night Light indicator
+.night-light-indicator {
+    .container { padding: 0; }
+
+    .view-header {
+        font-size: 14px;
+        padding: 10px;
+        border-bottom: 1px solid mix(@theme_base_color, #000000, 0.35);;
+        box-shadow: 0px 1px 1px alpha(@theme_fg_color, 0.04);;
+    }
+
+    .display-settings-button {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border: none;
+        padding: 3px;
+        border-top: 1px solid mix(@theme_base_color, #000000, 0.35);;
+        box-shadow: inset 0px 1px 1px alpha(@theme_fg_color, 0.04);;
+    }
+}*/
 .budgie-panel {
   color: #fefefe;
   background-color: rgba(26, 29, 33, 0.95);
@@ -4878,6 +4924,11 @@ button.raven-trigger {
   box-shadow: none;
   border: none;
   transition: all 150ms ease-in; }
+  .budgie-panel .alert {
+    color: #c72240; }
+  .budgie-panel:backdrop {
+    color: #fefefe;
+    background-color: rgba(26, 29, 33, 0.95); }
   .budgie-panel button {
     border-top-width: 0;
     border-bottom-width: 0;
@@ -4892,8 +4943,14 @@ button.raven-trigger {
       border-right-color: transparent; }
     .right .budgie-panel.transparent {
       border-left-color: transparent; }
-  .budgie-panel separator {
-    background-color: rgba(254, 254, 254, 0.15); }
+  .budgie-panel .end-region {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 0px; }
+    .budgie-panel .end-region separator {
+      background-color: rgba(254, 254, 254, 0.15); }
+    .budgie-panel .end-region label {
+      font-weight: 700;
+      color: #fefefe; }
 
 .budgie-panel #tasklist-button,
 .budgie-panel #tasklist-button:backdrop {

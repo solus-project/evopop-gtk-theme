@@ -158,6 +158,13 @@ popover row,
 // Menu Button
 button.budgie-menu-launcher {
     padding: 0 2px;
+    color: $selected_fg_color;
+    box-shadow: none;
+    &:hover { background-color: transparentize(black, 0.95); }
+    &:active, &:checked {
+      box-shadow: none;
+      background-color: transparentize(black, 0.9);
+    }
 }
 
 // User Menu
@@ -167,7 +174,7 @@ button.budgie-menu-launcher {
     }
 
     .container {
-        padding: 10px;
+        padding: 8px;
     }
 }
 
@@ -175,8 +182,15 @@ button.budgie-menu-launcher {
 button.raven-trigger {
     padding-left: 2px;
     padding-right: 2px;
+    color: $selected_fg_color;
+    box-shadow: none;
+    &:hover { background-color: transparent; }
+    &:active, &:checked {
+      box-shadow: none;
+      background-color: transparent;
+    }
 }
-
+/* Look at later
 // Places Menu
 .places-menu {
     .container { padding: 0; }
@@ -268,7 +282,7 @@ button.raven-trigger {
         border-top: #{"1px solid mix(@theme_base_color, #000000, 0.35);"};
         box-shadow: #{"inset 0px 1px 1px alpha(@theme_fg_color, 0.04);"};
     }
-}
+}*/
 
 // Panel
 .budgie-panel {
@@ -278,6 +292,13 @@ button.raven-trigger {
     box-shadow: none;
     border: none;
     transition: all 150ms ease-in;
+
+    .alert { color: $alert_color; }
+
+    &:backdrop {
+      color: $fg_color;
+      background-color: $panel_bg;
+    }
 
     button {
       border-top-width: 0;
@@ -305,16 +326,14 @@ button.raven-trigger {
         }
     }
 
-    separator { background-color: transparentize($fg_color, 0.85) }
-
-    // End Section needs to be fancy
-    @if $variant == 'default' {
-        .end-region {
-            background-color: rgba(0,0,0,0.2);
-
-            &:dir(ltr) { border-left: 1px solid rgba(0,0,0,0.2); }
-            &:dir(rtl) { border-right: 1px solid rgba(0,0,0,0.2); }
-        }
+    .end-region {
+      background-color: rgba(0,0,0,0.3);
+      border-radius: 0px;
+      separator { background-color: transparentize($headerbar_fg_color, 0.85); }
+      label {
+        font-weight: 700;
+        color: $headerbar_fg_color;
+      }
     }
 }
 
