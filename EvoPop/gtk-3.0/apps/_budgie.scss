@@ -14,7 +14,7 @@ $panel_shadow: transparentize(black, 0.7);
 $raven_bg: transparentize($bg_color, 0.08);
 $raven_expander_border: $borders_color;
 $raven_border: transparentize($bg_color, 0.08);
-$raven_expander_bg: transparent;
+$raven_expander_bg: transparentize($bg_color, 0.8);
 $raven_background_bg: transparent;
 $raven_background_border: transparent;
 
@@ -429,21 +429,67 @@ button.raven-trigger {
 
 // Raven
 .raven {
+    padding: 0;
     color: $fg_color;
     background-color: $raven_bg;
     transition: 170ms ease-out;
 
     .raven-header {
-        min-height: 32px;
+        * {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
 
+        min-height: 32px;
         color: $fg_color;
         border: solid $raven_expander_border;
         border-width: 1px 0;
         background-color: $raven_expander_bg;
 
-        &.top { border-top-style: none; }
+        &.top {
+          border-top-style: none;
+          border-color: transparent;
+          margin-top: 3px;
+          min-height: 32px;
+          button.image-button {
+            &:hover {
+              color: darken($selected_bg_color,5%);
+              box-shadow: none;
+            }
+          }
+        }
         &.bottom { border-bottom-style: none; }
+        button {
+          background-color: transparent;
+          color: $fg_color;
+          border-radius: 0;
+          border: none;
+          box-shadow: none;
+          margin-top: -4px;
+          margin-bottom: -4px;
+          min-height: 32px;
+
+          &:hover {
+            border-radius: 0;
+            background-color: transparent;
+            @include lines(up);
+          }
+
+          &:active,
+          &:checked {
+            border-radius: 0;
+            background-color: transparent;
+            @include lines(up);
+          }
+
+          &:disabled {
+            color: $insensitive_fg_color;
+          }
+        }
     }
+
+    GtkScrolledWindow { background: transparent; }
+
     @if $variant=='default' {
         .expander-button { color: gtkalpha(currentColor, 0.5); }
     }
