@@ -2,8 +2,8 @@ EvoPop Theme
 ============
 
 EvoPop is a modern desktop theme suite. Its design is mostly flat with a minimal use of shadows for depth.
-After a year of absence the theme has been revamped with Paper theme as a base.
-Requires Gtk 3.22 to function properly.
+Requires Gtk 3.20 to function properly.
+The theme is primarily build for the Solus Project, this means I can only provide Budgie, Mate and Gnome support.
 
 EvoPop has been developed primarily with modern GTK3 (GNOME-based) desktop environments in mind, legacy-toolkit and GTK2 environments will not provide an ideal experience, as much of the visual design relies on modern GTK3+ widgets.
 
