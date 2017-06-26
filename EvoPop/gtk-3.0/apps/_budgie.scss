@@ -102,7 +102,7 @@ popover row,
     entry.search {
         @extend %reset_style;
 
-        padding: 12px 5px;
+        padding: 10px 5px;
         border-bottom: 1px solid #{"@borders"};
         border-radius: 0;
         font-size: 120%;
@@ -117,6 +117,7 @@ popover row,
 
     .categories {
         border-width: 0;
+        margin-left: 3px;
 
         &:dir(ltr) { border-right: 1px solid #{"@borders"}; }
         &:dir(rtl) { border-left: 1px solid #{"@borders"}; }
@@ -126,18 +127,27 @@ popover row,
         @extend %reset_style;
 
         padding: 8px;
-        border-radius: 0;
+        border-radius: 2px 0 0 2px;
 
-        &:hover { background-color: #{"mix(@theme_base_color, @theme_fg_color, 0.1);"} }
-        &:active, &:checked {
-            color: $selected_fg_color;
-            background-color: $selected_bg_color;
+        &:hover {
+          background-color: if(variant == light, transparentize($fg_color, 0.9), transparentize($fg_color, 0.95));
+          color: $fg_color;
+        }
+        &:active { box-shadow: inset 0 2px 2px -2px transparentize(black, 0.8); }
+        &:checked {
+          color: $selected_fg_color;
+          background-color: transparentize( darken($selected_bg_color,5%),0.2);
         }
         &:checked:disabled {
             opacity: 0.5;
 
             label { color: inherit; }
         }
+    }
+
+    scrollbar {
+      background-color: transparent;
+      border-color: transparent;
     }
 
     button:not(.category-button) { padding-top: 5px; padding-bottom: 5px; }
