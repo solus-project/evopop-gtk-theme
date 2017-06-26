@@ -158,12 +158,21 @@ popover row,
 // Menu Button
 button.budgie-menu-launcher {
     padding: 0 2px;
-    color: $selected_fg_color;
+    color: transparentize($headerbar_fg_color,0.3);
+    background-color: rgba(0,0,0,0.3);
     box-shadow: none;
-    &:hover { background-color: transparentize(black, 0.95); }
-    &:active, &:checked {
-      box-shadow: none;
-      background-color: transparentize(black, 0.9);
+    &:hover { color: $headerbar_fg_color; }
+    &:active, &:checked { color: $headerbar_fg_color; }
+
+    &:backdrop {
+      color: transparentize($headerbar_fg_color,0.3);
+      background-color: rgba(0,0,0,0.3);
+      &:hover { color: $headerbar_fg_color; }
+      &:active, &:checked {
+        color: $darkpurple;
+        background-color: rgba(0,0,0,0.3);
+        box-shadow: none;
+      }
     }
 }
 
@@ -286,7 +295,7 @@ button.raven-trigger {
 
 // Panel
 .budgie-panel {
-    color: $fg_color;
+    color: $headerbar_fg_color;
     background-color: $panel_bg;
     background-image: none;
     box-shadow: none;
@@ -296,7 +305,7 @@ button.raven-trigger {
     .alert { color: $alert_color; }
 
     &:backdrop {
-      color: $fg_color;
+      color: $headerbar_fg_color;
       background-color: $panel_bg;
     }
 
@@ -716,7 +725,7 @@ calendar.raven-calendar {
 .budgie-polkit-dialog {
     @extend .budgie-session-dialog;
 
-    .message { color: transparentize($fg_color, 0.3); }
+    .message { color: transparentize($headerbar_fg_color, 0.3); }
     .failure { color: $alert_color; }
 }
 
