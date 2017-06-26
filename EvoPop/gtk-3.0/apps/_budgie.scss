@@ -380,24 +380,20 @@ button.raven-trigger {
 }
 
 %underscores {
-    &:hover,
-    &:active, &:checked {
-        background-color: transparentize(black, 0.8);
-        box-shadow: inset 1px 0 transparentize(black, 0.8),
-                    inset -1px 0 transparentize(black, 0.8);
-    }
+    &:hover { background-color: transparentize(black, 0.95); }
+    &:active, &:checked { background-color: transparentize(black, 0.9); }
 
     @each $pos, $b_pos in $pos_list {
         .#{$pos} & {
             padding-#{$b_pos}: 2px;
-            border-#{$pos}: 2px solid transparentize($panel_bg,1);
+            border-#{$pos}: 2px solid transparent;
 
             @at-root {
                 .#{$pos} .budgie-panel .unpinned button.flat.launcher,
-                .#{$pos} .budgie-panel .pinned button.flat.launcher.running { border-#{$pos}: 2px solid transparentize($selected_bg_color, 0.5); }
+                .#{$pos} .budgie-panel .pinned button.flat.launcher.running { border-#{$pos}: 2px solid transparentize(white, 0.6); }
             }
             &:hover {
-                border-#{$pos}: 2px solid transparentize($selected_bg_color, 0.5);
+                border-#{$pos}: 2px solid transparentize(white, 0.75);
             }
             &:active, &:checked {
                 border-#{$pos}: 2px solid $selected_bg_color;

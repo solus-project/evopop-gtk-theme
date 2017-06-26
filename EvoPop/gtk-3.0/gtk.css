@@ -4997,23 +4997,24 @@ button.raven-trigger {
   box-shadow: inset 1px 0 rgba(0, 0, 0, 0.2), inset -1px 0 rgba(0, 0, 0, 0.2); }
 
 .budgie-panel .unpinned button.flat.launcher:hover,
-.budgie-panel .pinned button.flat.launcher.running:hover, .budgie-panel .unpinned button.flat.launcher:active,
+.budgie-panel .pinned button.flat.launcher.running:hover {
+  background-color: rgba(0, 0, 0, 0.05); }
+.budgie-panel .unpinned button.flat.launcher:active,
 .budgie-panel .pinned button.flat.launcher.running:active, .budgie-panel .unpinned button.flat.launcher:checked,
 .budgie-panel .pinned button.flat.launcher.running:checked {
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: inset 1px 0 rgba(0, 0, 0, 0.2), inset -1px 0 rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.1); }
 .top .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .top button.flat.launcher,
 .top .budgie-panel .pinned button.flat.launcher.running,
 .budgie-panel .pinned .top button.flat.launcher.running {
   padding-bottom: 2px;
-  border-top: 2px solid rgba(26, 29, 33, 0); }
+  border-top: 2px solid transparent; }
   .top .budgie-panel .unpinned button.flat.launcher,
   .top .budgie-panel .pinned button.flat.launcher.running {
-    border-top: 2px solid rgba(19, 177, 213, 0.5); }
+    border-top: 2px solid rgba(255, 255, 255, 0.4); }
   .top .budgie-panel .unpinned button.flat.launcher:hover, .budgie-panel .unpinned .top button.flat.launcher:hover,
   .top .budgie-panel .pinned button.flat.launcher.running:hover,
   .budgie-panel .pinned .top button.flat.launcher.running:hover {
-    border-top: 2px solid rgba(19, 177, 213, 0.5); }
+    border-top: 2px solid rgba(255, 255, 255, 0.25); }
   .top .budgie-panel .unpinned button.flat.launcher:active, .budgie-panel .unpinned .top button.flat.launcher:active,
   .top .budgie-panel .pinned button.flat.launcher.running:active,
   .budgie-panel .pinned .top button.flat.launcher.running:active, .top .budgie-panel .unpinned button.flat.launcher:checked, .budgie-panel .unpinned .top button.flat.launcher:checked,
@@ -5024,14 +5025,14 @@ button.raven-trigger {
 .bottom .budgie-panel .pinned button.flat.launcher.running,
 .budgie-panel .pinned .bottom button.flat.launcher.running {
   padding-top: 2px;
-  border-bottom: 2px solid rgba(26, 29, 33, 0); }
+  border-bottom: 2px solid transparent; }
   .bottom .budgie-panel .unpinned button.flat.launcher,
   .bottom .budgie-panel .pinned button.flat.launcher.running {
-    border-bottom: 2px solid rgba(19, 177, 213, 0.5); }
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4); }
   .bottom .budgie-panel .unpinned button.flat.launcher:hover, .budgie-panel .unpinned .bottom button.flat.launcher:hover,
   .bottom .budgie-panel .pinned button.flat.launcher.running:hover,
   .budgie-panel .pinned .bottom button.flat.launcher.running:hover {
-    border-bottom: 2px solid rgba(19, 177, 213, 0.5); }
+    border-bottom: 2px solid rgba(255, 255, 255, 0.25); }
   .bottom .budgie-panel .unpinned button.flat.launcher:active, .budgie-panel .unpinned .bottom button.flat.launcher:active,
   .bottom .budgie-panel .pinned button.flat.launcher.running:active,
   .budgie-panel .pinned .bottom button.flat.launcher.running:active, .bottom .budgie-panel .unpinned button.flat.launcher:checked, .budgie-panel .unpinned .bottom button.flat.launcher:checked,
@@ -5042,14 +5043,14 @@ button.raven-trigger {
 .left .budgie-panel .pinned button.flat.launcher.running,
 .budgie-panel .pinned .left button.flat.launcher.running {
   padding-right: 2px;
-  border-left: 2px solid rgba(26, 29, 33, 0); }
+  border-left: 2px solid transparent; }
   .left .budgie-panel .unpinned button.flat.launcher,
   .left .budgie-panel .pinned button.flat.launcher.running {
-    border-left: 2px solid rgba(19, 177, 213, 0.5); }
+    border-left: 2px solid rgba(255, 255, 255, 0.4); }
   .left .budgie-panel .unpinned button.flat.launcher:hover, .budgie-panel .unpinned .left button.flat.launcher:hover,
   .left .budgie-panel .pinned button.flat.launcher.running:hover,
   .budgie-panel .pinned .left button.flat.launcher.running:hover {
-    border-left: 2px solid rgba(19, 177, 213, 0.5); }
+    border-left: 2px solid rgba(255, 255, 255, 0.25); }
   .left .budgie-panel .unpinned button.flat.launcher:active, .budgie-panel .unpinned .left button.flat.launcher:active,
   .left .budgie-panel .pinned button.flat.launcher.running:active,
   .budgie-panel .pinned .left button.flat.launcher.running:active, .left .budgie-panel .unpinned button.flat.launcher:checked, .budgie-panel .unpinned .left button.flat.launcher:checked,
@@ -5060,14 +5061,14 @@ button.raven-trigger {
 .right .budgie-panel .pinned button.flat.launcher.running,
 .budgie-panel .pinned .right button.flat.launcher.running {
   padding-left: 2px;
-  border-right: 2px solid rgba(26, 29, 33, 0); }
+  border-right: 2px solid transparent; }
   .right .budgie-panel .unpinned button.flat.launcher,
   .right .budgie-panel .pinned button.flat.launcher.running {
-    border-right: 2px solid rgba(19, 177, 213, 0.5); }
+    border-right: 2px solid rgba(255, 255, 255, 0.4); }
   .right .budgie-panel .unpinned button.flat.launcher:hover, .budgie-panel .unpinned .right button.flat.launcher:hover,
   .right .budgie-panel .pinned button.flat.launcher.running:hover,
   .budgie-panel .pinned .right button.flat.launcher.running:hover {
-    border-right: 2px solid rgba(19, 177, 213, 0.5); }
+    border-right: 2px solid rgba(255, 255, 255, 0.25); }
   .right .budgie-panel .unpinned button.flat.launcher:active, .budgie-panel .unpinned .right button.flat.launcher:active,
   .right .budgie-panel .pinned button.flat.launcher.running:active,
   .budgie-panel .pinned .right button.flat.launcher.running:active, .right .budgie-panel .unpinned button.flat.launcher:checked, .budgie-panel .unpinned .right button.flat.launcher:checked,
