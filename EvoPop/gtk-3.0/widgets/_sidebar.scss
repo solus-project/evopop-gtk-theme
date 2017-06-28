@@ -3,14 +3,13 @@
  ***********/
 .sidebar {
   border-style: none;
-  border-width: 0;
   background-color: mix($bg_color, $base_color, 50%);
 
   @at-root %sidebar_left,
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: none;
+    border-right: 1px solid $borders_color;
     border-left-style: none;
   }
 
@@ -29,11 +28,12 @@
 
   list { background-color: transparent; }
 
-  paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
-    border-style: none;
-    border-color: $borders_color;
+  paned & {
+    &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
+      border-style: none;
+      border-color: $borders_color;
+    }
   }
-}
 }
 
 stacksidebar {
