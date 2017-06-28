@@ -4326,8 +4326,7 @@ spinner {
  * Switch *
  **********/
 switch {
-  margin-left: 24px;
-  margin-right: 24px;
+  margin-left: 48px;
   font-size: 0;
   font-weight: 700;
   outline-offset: -4px;
