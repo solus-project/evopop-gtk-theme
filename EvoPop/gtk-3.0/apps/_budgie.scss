@@ -178,13 +178,8 @@ button.budgie-menu-launcher {
 
 // User Menu
 .user-menu {
-    .content-box separator {
-        background-color: #{"alpha(@theme_fg_color, 0.15)"};
-    }
-
-    .container {
-        padding: 8px;
-    }
+    .content-box separator { background-color: #{"alpha(@theme_fg_color, 0.15)"}; }
+    .container { padding: 8px; }
 }
 
 // Raven Trigger
@@ -193,10 +188,28 @@ button.raven-trigger {
     padding-right: 2px;
     color: $selected_fg_color;
     box-shadow: none;
-    &:hover { background-color: transparent; }
+    &:hover {
+      color: $selected_fg_color;
+      background-color: transparent;
+    }
     &:active, &:checked {
       box-shadow: none;
       background-color: transparent;
+      color: $selected_bg_color;
+    }
+    &:backdrop {
+      color: $selected_fg_color;
+      &:hover {
+        color: $selected_fg_color;
+      }
+      &:active, &:checked {
+        box-shadow: none;
+        color: $selected_bg_color;
+        background-color: transparent;
+      }
+      &:checked:active {
+        color: $selected_bg_color;
+      }
     }
 }
 
@@ -485,7 +498,7 @@ button.raven-trigger {
             @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
           }
         }
-        
+
         &.bottom { border-bottom-style: none; }
         button {
           background-color: transparent;
