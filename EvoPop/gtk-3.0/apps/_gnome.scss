@@ -6,6 +6,7 @@
   .sidebar {
     background-color: transparent;
     background-image: none;
+    box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.25);
 
     &:backdrop {
       background-color: transparent;
@@ -40,6 +41,14 @@
           background-color: transparentize($selected_bg_color,0.1);
         }
       }
+    }
+  }
+  iconview {
+    border-width:0;
+    box-shadow: none;
+    .frame {
+      border-width:0;
+      box-shadow: none;
     }
   }
   &.background {

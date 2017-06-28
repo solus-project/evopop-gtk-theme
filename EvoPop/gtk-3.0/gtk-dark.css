@@ -5378,7 +5378,8 @@ headerbar .budgie-run-dialog list row:selected .subtitle {
  ************/
 .nautilus-window .sidebar {
   background-color: transparent;
-  background-image: none; }
+  background-image: none;
+  box-shadow: inset 0px 1px 1px 0px rgba(0, 0, 0, 0.25); }
   .nautilus-window .sidebar:backdrop {
     background-color: transparent;
     background-image: none; }
@@ -5399,6 +5400,12 @@ headerbar .budgie-run-dialog list row:selected .subtitle {
     background-color: rgba(80, 83, 89, 0.5); }
     .nautilus-window .sidebar .list-row:hover:active {
       background-color: rgba(19, 177, 213, 0.9); }
+.nautilus-window iconview {
+  border-width: 0;
+  box-shadow: none; }
+  .nautilus-window iconview .frame {
+    border-width: 0;
+    box-shadow: none; }
 .nautilus-window.background {
   background-color: rgba(73, 75, 81, 0.95); }
   .nautilus-window.background:backdrop {
