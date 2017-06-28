@@ -158,14 +158,14 @@ popover row,
 // Menu Button
 button.budgie-menu-launcher {
     padding: 0 2px;
-    color: transparentize($headerbar_fg_color,0.2);
+    color: $headerbar_fg_color;
     background-color: rgba(0,0,0,0.3);
     box-shadow: none;
     &:hover { color: $headerbar_fg_color; }
     &:active, &:checked { color: $headerbar_fg_color; }
 
     &:backdrop {
-      color: transparentize($headerbar_fg_color,0.2);
+      color: $headerbar_fg_color;
       background-color: rgba(0,0,0,0.3);
       &:hover { color: $headerbar_fg_color; }
       &:active, &:checked {
@@ -186,10 +186,10 @@ button.budgie-menu-launcher {
 button.raven-trigger {
     padding-left: 2px;
     padding-right: 2px;
-    color: $selected_fg_color;
+    color: $headerbar_fg_color;
     box-shadow: none;
     &:hover {
-      color: $selected_fg_color;
+      color: $headerbar_fg_color;
       background-color: transparent;
     }
     &:active, &:checked {
@@ -198,17 +198,14 @@ button.raven-trigger {
       color: $selected_bg_color;
     }
     &:backdrop {
-      color: $selected_fg_color;
+      color: $headerbar_fg_color;
       &:hover {
-        color: $selected_fg_color;
+        color: $headerbar_fg_color;
       }
       &:active, &:checked {
         box-shadow: none;
         color: $selected_bg_color;
         background-color: transparent;
-      }
-      &:checked:active {
-        color: $selected_bg_color;
       }
     }
 }
