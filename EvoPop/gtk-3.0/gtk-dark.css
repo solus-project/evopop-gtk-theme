@@ -3154,7 +3154,9 @@ notebook > header {
       notebook > header.top > tabs > tab:backdrop {
         box-shadow: none; }
       notebook > header.top > tabs > tab:checked {
-        box-shadow: inset 0 -3px #13b1d5; }
+        box-shadow: inset 0 -3px #13b1d5;
+        border-left-width: 0;
+        border-right-width: 0; }
   notebook > header.bottom {
     border-top-style: solid; }
     notebook > header.bottom > tabs {
@@ -5402,6 +5404,8 @@ headerbar .budgie-run-dialog list row:selected .subtitle {
   background-color: rgba(73, 75, 81, 0.95); }
   .nautilus-window.background:backdrop {
     background-color: rgba(73, 75, 81, 0.95); }
+.nautilus-window notebook > header {
+  border-width: 0px; }
 .nautilus-window notebook > stack:only-child {
   background-color: #505359; }
   .nautilus-window notebook > stack:only-child:backdrop {

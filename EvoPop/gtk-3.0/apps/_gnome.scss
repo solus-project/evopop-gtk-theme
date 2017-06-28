@@ -49,6 +49,7 @@
   }
 
   notebook {
+    > header { border-width: 0px; }
     > stack:only-child { // the :not(:only-child) is for "hidden" notebooks
         background-color: $base_color;
         &:backdrop { background-color: $backdrop_base_color; }
