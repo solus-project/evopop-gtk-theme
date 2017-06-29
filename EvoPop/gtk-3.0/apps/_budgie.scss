@@ -5,7 +5,7 @@
 $alert_color: $red;
 $button_bg: transparent;
 $entry_border: transparent;
-$mpris_overlay_fg: fg_color;
+$mpris_overlay_fg: $fg_color;
 $mpris_overlay_bg: transparentize(if($variant=='light',$base_color, darken($bg_color, 10%)), 0.1);
 $mpris_overlay_border: $borders_color;
 $panel_bg: transparentize( darken($headerbar_color,10%),0.05);
@@ -141,7 +141,7 @@ popover row,
         &:checked:disabled {
             opacity: 0.5;
 
-            label { color: inherit; }
+            label { color: transparentize($selected_fg_color, 0.3); }
         }
     }
 
@@ -369,8 +369,6 @@ button.raven-trigger {
     box-shadow: none;
     background-clip: padding-box;
 
-    &:hover { background-color: transparentize(black, 0.8); }
-
     @extend %underscores;
 
     &:drop(active) { box-shadow: inset 0 0 0 1px $selected_bg_color; }
@@ -389,22 +387,16 @@ button.raven-trigger {
         padding: 0;
         background-clip: padding-box;
     }
-    .unpinned button.flat.launcher,
-    .pinned button.flat.launcher.running {
-      @extend %underscores;
-      &:hover { background-color: transparentize(black, 0.8); }
-    }
 
-    .pinned button.flat.launcher:not(.running):hover {
-        background-color: transparentize(black, 0.8);
-        box-shadow: inset 1px 0 transparentize(black, 0.8),
-                    inset -1px 0 transparentize(black, 0.8);
-    }
+    .unpinned button.flat.launcher,
+    .pinned button.flat.launcher.running { @extend %underscores; }
+
+    .pinned button.flat.launcher:not(.running):hover { background-color: transparentize(black, 0.85); }
 }
 
 %underscores {
-    &:hover { background-color: transparentize(black, 0.95); }
-    &:active, &:checked { background-color: transparentize(black, 0.9); }
+    &:hover { background-color: transparentize(black, 0.85); }
+    &:active, &:checked { background-color: transparentize(black, 0.8); }
 
     @each $pos, $b_pos in $pos_list {
         .#{$pos} & {
@@ -700,7 +692,7 @@ calendar.raven-calendar {
             &:disabled {
                 color: transparentize($selected_fg_color, 0.3);
                 background-color: transparentize($selected_bg_color, 0.3);
-                label { color: inherit; }
+                label { color: transparentize($selected_fg_color, 0.3); }
             }
         }
     }
@@ -773,6 +765,7 @@ calendar.raven-calendar {
         box-shadow: none;
 
         image {
+            color: $headerbar_fg_color;
             &:dir(ltr) { padding-left: 8px; padding-right: 12px; }
             &:dir(rtl) { padding-left: 12px; padding-right: 8px; }
         }
