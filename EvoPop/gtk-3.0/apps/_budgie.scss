@@ -54,7 +54,7 @@ popover row,
 
     menuitem:hover {
         background-color: $selected_bg_color;
-        color: $fg_color;
+        color: $selected_fg_color;
         }
 
     menuitem:disabled {
@@ -405,7 +405,7 @@ button.raven-trigger {
 
             @at-root {
                 .#{$pos} .budgie-panel .unpinned button.flat.launcher,
-                .#{$pos} .budgie-panel .pinned button.flat.launcher.running { border-#{$pos}: 2px solid transparentize(white, 0.6); }
+                .#{$pos} .budgie-panel .pinned button.flat.launcher.running { border-#{$pos}: 2px solid transparentize(white, 0.9); }
             }
             &:hover {
                 border-#{$pos}: 2px solid transparentize(white, 0.75);
