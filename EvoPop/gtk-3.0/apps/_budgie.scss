@@ -7,12 +7,12 @@ $button_bg: transparent;
 $entry_border: transparent;
 $mpris_overlay_fg: $fg_color;
 $mpris_overlay_bg: transparentize(if($variant=='light',$base_color, darken($bg_color, 10%)), 0.1);
-$mpris_overlay_border: $borders_color;
+$mpris_overlay_border: $top_highlight;
 $panel_bg: transparentize( darken($headerbar_color,10%),0.05);
 $panel_border: transparentize(darken($headerbar_color, 7%), 0.08);
 $panel_shadow: transparentize(black, 0.7);
 $raven_bg: transparentize($bg_color, 0.08);
-$raven_expander_border: $borders_color;
+$raven_expander_border: transparentize($borders_color, 0.05);
 $raven_border: transparentize($bg_color, 0.08);
 $raven_expander_bg: transparentize($bg_color, 0.8);
 $raven_background_bg: transparent;
@@ -540,7 +540,10 @@ button.raven-trigger {
         &.middle { border-bottom-style: none; }  // applet background between two headers
     }
 
-    .powerstrip { border-top-color: transparent; }
+    .powerstrip {
+      background-color: transparent;
+      border-top-color: transparent;
+    }
 
     .powerstrip button.image-button {
       border-radius:50%;
@@ -631,6 +634,7 @@ calendar.raven-calendar {
     background-color: $mpris_overlay_bg;
     border: solid $mpris_overlay_border;
     border-width: 1px 0;
+    border-bottom-color: $bottom_highlight;
 
     button.image-button { padding: 8px; }
 }

@@ -4867,7 +4867,7 @@ button.raven-trigger {
   border-radius: 0; }
 .places-menu .places-section-header {
   padding: 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0px 1px 1px alpha(@theme_fg_color, 0.03); }
 .places-menu .places-section-header > button {
   padding: 8px;
@@ -4876,7 +4876,7 @@ button.raven-trigger {
   border-bottom-right-radius: 0px; }
 .places-menu .places-list {
   background: rgba(254, 254, 254, 0.04);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
 .places-menu list,
 .places-menu row {
   padding: 0;
@@ -5115,7 +5115,7 @@ button.raven-trigger {
   .raven .raven-header {
     min-height: 32px;
     color: #fefefe;
-    border: solid rgba(0, 0, 0, 0.1);
+    border: solid rgba(0, 0, 0, 0.05);
     border-width: 1px 0;
     background-color: rgba(49, 54, 61, 0.2); }
     .raven .raven-header * {
@@ -5181,6 +5181,7 @@ button.raven-trigger {
     .raven .raven-background.middle {
       border-bottom-style: none; }
   .raven .powerstrip {
+    background-color: transparent;
     border-top-color: transparent; }
   .raven .powerstrip button.image-button {
     border-radius: 50%;
@@ -5244,8 +5245,9 @@ calendar.raven-calendar {
 .raven-mpris {
   color: #fefefe;
   background-color: rgba(26, 29, 33, 0.9);
-  border: solid rgba(0, 0, 0, 0.1);
-  border-width: 1px 0; }
+  border: solid rgba(255, 255, 255, 0.1);
+  border-width: 1px 0;
+  border-bottom-color: rgba(0, 0, 0, 0.1); }
   .raven-mpris button.image-button {
     padding: 8px; }
 
