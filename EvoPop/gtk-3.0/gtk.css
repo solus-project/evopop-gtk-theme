@@ -2306,7 +2306,8 @@ headerbar {
   min-height: 34px;
   background-color: #31363D;
   color: #fefefe;
-  border-radius: 0; }
+  border-radius: 0;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
     border-color: rgba(115, 116, 118, 0.28);
@@ -2751,9 +2752,12 @@ headerbar separator {
     border-top-right-radius: 2px; }
 
 window:not(.tiled):not(.maximized) separator:first-child + headerbar:backdrop, window:not(.tiled):not(.maximized) separator:first-child + headerbar, window:not(.tiled):not(.maximized) headerbar:first-child:backdrop, window:not(.tiled):not(.maximized) headerbar:first-child {
-  border-top-left-radius: 0; }
+  border-top-left-radius: 2px; }
 window:not(.tiled):not(.maximized) headerbar:last-child:backdrop, window:not(.tiled):not(.maximized) headerbar:last-child {
-  border-top-right-radius: 0; }
+  border-top-right-radius: 2px; }
+window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:first-child, window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack headerbar:last-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px; }
 
 window.csd > .titlebar:not(headerbar) {
   padding: 0;
@@ -5205,7 +5209,7 @@ button.raven-trigger {
     border-top-color: transparent; }
   .raven .powerstrip button.image-button {
     border-radius: 50%;
-    padding: 6px;
+    padding: 5px;
     min-width: 32px;
     margin-bottom: 3px;
     background: rgba(123, 123, 189, 0.7);
