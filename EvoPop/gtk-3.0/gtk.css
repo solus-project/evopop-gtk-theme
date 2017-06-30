@@ -4562,6 +4562,8 @@ treeview.view {
     treeview.view header button:active {
       color: #31363d;
       transition: none; }
+    treeview.view header button:backdrop {
+      box-shadow: none; }
   treeview.view header button:last-child:backdrop, treeview.view header button:last-child {
     border-right-style: none; }
   treeview.view button.dnd:active, treeview.view button.dnd:selected, treeview.view button.dnd:hover, treeview.view button.dnd,

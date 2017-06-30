@@ -181,6 +181,8 @@ treeview.view {
         color: $fg_color;
         transition: none; //I shouldn't need this
       }
+
+      &:backdrop { box-shadow:none; }
     }
 
     button:last-child { &:backdrop, & { border-right-style: none; }}
