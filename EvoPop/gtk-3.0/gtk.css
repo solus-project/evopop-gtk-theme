@@ -5208,18 +5208,31 @@ button.raven-trigger {
     padding: 6px;
     min-width: 32px;
     margin-bottom: 3px;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(123, 123, 189, 0.7);
+    color: #fefefe;
     border: none;
     box-shadow: none;
     font-size: 100%; }
     .raven .powerstrip button.image-button:hover {
       transition: 170ms ease all;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(123, 123, 189, 0.85);
       color: #fefefe; }
     .raven .powerstrip button.image-button:active {
       transition: 170ms ease all;
-      background: rgba(0, 0, 0, 0.3);
+      background: #7b7bbd;
       color: #fefefe; }
+    .raven .powerstrip button.image-button:first-child {
+      background: rgba(55, 185, 165, 0.7); }
+      .raven .powerstrip button.image-button:first-child:hover {
+        background: rgba(55, 185, 165, 0.85); }
+      .raven .powerstrip button.image-button:first-child:active {
+        background: #37b9a5; }
+    .raven .powerstrip button.image-button:last-child {
+      background: rgba(199, 34, 64, 0.7); }
+      .raven .powerstrip button.image-button:last-child:hover {
+        background: rgba(199, 34, 64, 0.85); }
+      .raven .powerstrip button.image-button:last-child:active {
+        background: #c72240; }
   .raven .option-subtitle {
     font-size: 13px; }
 

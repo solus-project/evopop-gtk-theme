@@ -547,20 +547,41 @@ button.raven-trigger {
       padding: 6px;
       min-width: 32px;
       margin-bottom: 3px;
-      background: if($variant=='dark', transparentize(black,0.7), transparentize(black,0.9));
+      background: transparentize($darkpurple,0.3);
+      color: $selected_fg_color;
       border: none;
       box-shadow: none;
       font-size: 100%;
 
       &:hover {
         transition: 170ms ease all;
-        background: if($variant=='dark', transparentize(black,0.6), transparentize(black,0.8));
+        background: transparentize($darkpurple,0.15);
         color: $selected_fg_color;
       }
       &:active {
         transition: 170ms ease all;
-        background: if($variant=='dark', transparentize(black,0.5), transparentize(black,0.7));
+        background: $darkpurple;
         color: $selected_fg_color;
+      }
+      &:first-child {
+        background: transparentize($cyan,0.3);
+
+        &:hover {
+          background: transparentize($cyan,0.15);
+        }
+        &:active {
+          background: $cyan;
+        }
+      }
+      &:last-child {
+        background: transparentize($red,0.3);
+
+        &:hover {
+          background: transparentize($red,0.15);
+        }
+        &:active {
+          background: $red;
+        }
       }
     }
     .option-subtitle {
