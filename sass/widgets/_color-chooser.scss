@@ -8,56 +8,10 @@ colorswatch {
 
   &, &:drop(active) { border-style: none; } // FIXME: implement a proper drop(active) state
 
-  $_colorswatch_radius: 2px;
-  $_colorswatch_overlay_shadow: if($variant == 'light', inset 0 1px 3px -1px transparentize(black, 0.6),
-                                                        inset 0 1px 2px -1px transparentize(black, 0.8));
+  $_colorswatch_radius: 0px;
+  $_colorswatch_overlay_shadow: if($variant == 'light', inset 0px 1px 0px 0px $bottom_highlight,
+                                                        inset 0px -1px 0px 0px $top_highlight);
 
-  // base color corners rounding
-  // to avoid the artifacts caused by rounded corner anti-aliasing the base color
-  // sports a bigger radius.
-  // nth-child is needed by the custom color strip.
-
-  &.top {
-    border-top-left-radius: $_colorswatch_radius + 0.5px;
-    border-top-right-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-top-left-radius: $_colorswatch_radius;
-      border-top-right-radius: $_colorswatch_radius;
-    }
-  }
-
-  &.bottom {
-    border-bottom-left-radius: $_colorswatch_radius + 0.5px;
-    border-bottom-right-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-bottom-left-radius: $_colorswatch_radius;
-      border-bottom-right-radius: $_colorswatch_radius;
-    }
-  }
-
-  &.left,
-  &:first-child:not(.top) {
-    border-top-left-radius: $_colorswatch_radius + 0.5px;
-    border-bottom-left-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-top-left-radius: $_colorswatch_radius;
-      border-bottom-left-radius: $_colorswatch_radius;
-    }
-  }
-
-  &.right,
-  &:last-child:not(.bottom) {
-    border-top-right-radius: $_colorswatch_radius + 0.5px;
-    border-bottom-right-radius: $_colorswatch_radius + 0.5px;
-
-    overlay {
-      border-top-right-radius: $_colorswatch_radius;
-      border-bottom-right-radius: $_colorswatch_radius;
-    }
-  }
 
   &.dark overlay {
     color: $selected_fg_color;
