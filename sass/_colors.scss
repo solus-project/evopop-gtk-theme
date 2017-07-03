@@ -4,8 +4,8 @@
 // Main definitions
 $base_color:  if($subtheme == 'azure', if($variant == 'light', #fefefe, #39465c), if($variant == 'light', #fefefe, #505359));
 $text_color: if($subtheme == 'azure', if($variant == 'light', #283141, #fefefe), if($variant == 'light', #31363d, #fefefe));
-$bg_color: if($subtheme == 'azure', if($variant == 'light', #39465c, #283141), if($variant == 'light', #e6e8eb, #31363d));
-$fg_color: if($subtheme == 'azure', #fefefe, if($variant == 'light', #31373d, #fefefe));
+$bg_color: if($subtheme == 'azure', if($variant == 'light', #f0f1f3, #283141), if($variant == 'light', #e6e8eb, #31363d));
+$fg_color: if($subtheme == 'azure', if($variant == 'light', #283141, #fefefe), if($variant == 'light', #31373d, #fefefe));
 
 // Primary colors
 $lime: #a1ce4b;
@@ -49,7 +49,7 @@ $osd_fg_color: #fefefe;
 $osd_text_color: white;
 $osd_bg_color: if($subtheme == 'azure', transparentize(darken(#283141, 10%), 0.2),transparentize(#14171a, 0.2));
 $osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
-$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
+$osd_insensitive_fg_color: transparentize($selected_fg_color, 0.5);
 $osd_borders_color: transparentize(black, 0.3);
 
 $sidebar_bg_color: if($subtheme == 'azure', $bg_color, mix($bg_color, $base_color, 50%));
@@ -75,7 +75,7 @@ $panel_fg_color: white;
 $panel_borders_color: transparentize(black, 0.8);
 
 // Disabled state colors
-$insensitive_fg_color: if($subtheme == 'azure', transparentize($text_color,0.5), mix($text_color, $bg_color, 50%));
+$insensitive_fg_color: mix($text_color, $bg_color, 50%);
 $insensitive_bg_color: mix($bg_color, $base_color, 60%);
 $insensitive_base_color: darken($base_color, 5%);
 $insensitive_borders_color: $borders_color;
@@ -86,13 +86,13 @@ $backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
 $backdrop_bg_color: $bg_color;
 $backdrop_headerbar_bg_color: $headerbar_color;
 $backdrop_headerbar_fg_color: transparentize($headerbar_fg_color, 0.2);
-$backdrop_fg_color: if($subtheme == 'azure', transparentize($selected_fg_color, 0.5), mix($fg_color, $backdrop_bg_color, 50%));
+$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 50%);
 $backdrop_insensitive_color: if($variant == 'light', darken($backdrop_bg_color, 15%), lighten($backdrop_bg_color, 15%));
 $backdrop_selected_bg_color: $selected_bg_color;
-$backdrop_selected_fg_color: transparentize($selected_fg_color, 0.5);
+$backdrop_selected_fg_color: transparentize($selected_fg_color, 0.2);
 $backdrop_borders_color: mix($borders_color, $bg_color, 90%);
 $backdrop_dark_fill: mix($backdrop_borders_color, $backdrop_bg_color, 35%);
-$backdrop_sidebar_bg_color: if($subtheme == 'azure', $backdrop_bg_color, mix($backdrop_bg_color, $backdrop_base_color, 50%));
+$backdrop_sidebar_bg_color: mix($backdrop_bg_color, $backdrop_base_color, 50%);
 
 $backdrop_scrollbar_bg_color: darken($backdrop_bg_color, 3%);
 $backdrop_scrollbar_slider_color: mix($backdrop_fg_color, $backdrop_bg_color, 40%);
