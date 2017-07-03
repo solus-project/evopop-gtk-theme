@@ -1,0 +1,74 @@
+/***********
+ * Sidebar *
+ ***********/
+.sidebar {
+  border-style: none;
+  background-color: $sidebar_bg_color;
+  color: $fg_color;
+
+  @at-root %sidebar_left,
+  &:dir(ltr),
+  &.left,
+  &.left:dir(rtl) {
+    border-right: 1px solid $borders_color;
+    border-left-style: none;
+  }
+
+  @at-root %sidebar_right
+  &:dir(rtl),
+  &.right {
+    border-left: 1px solid $borders_color;
+    border-right-style: none;
+  }
+
+  &:backdrop {
+    background-color: $backdrop_sidebar_bg_color;
+    border-color: $backdrop_borders_color;
+    transition: $backdrop_transition;
+    color: $backdrop_fg_color;
+  }
+
+  list {
+    background-color: transparent;
+    color: $fg_color;
+    &:backdrop { color: $backdrop_fg_color; }
+    row { label { padding-left: 10px; } }
+    button {
+      border-radius: 50%;
+      padding: 2px;
+    }
+  }
+
+  paned & {
+    &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & {
+      border-style: none;
+      border-color: $borders_color;
+    }
+  }
+}
+
+stacksidebar {
+  &.sidebar {
+    &:dir(ltr),
+    &.left,
+    &.left:dir(rtl) { list { @extend %sidebar_left; }}
+
+    &:dir(rtl),
+    &.right { list { @extend %sidebar_right; }}
+  }
+
+  row {
+    padding: 10px 4px;
+
+    > label {
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    &.needs-attention > label {
+      @extend %needs_attention;
+
+      background-size: 6px 6px, 0 0;
+    }
+  }
+}
