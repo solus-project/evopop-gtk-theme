@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=EvoPop-Azure
+Comment=Back from the dead.
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=EvoPop-Azure
+MetacityTheme=EvoPop-Azure
+IconTheme=Paper
