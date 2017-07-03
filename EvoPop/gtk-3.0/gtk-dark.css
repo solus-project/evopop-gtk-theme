@@ -4760,6 +4760,12 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   background-color: transparent; }
   .budgie-container:backdrop {
     background-color: transparent; }
+  .budgie-container popover list,
+  .budgie-container popover row {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0; }
 
 .budgie-popover,
 .budgie-popover.background {
@@ -4777,18 +4783,18 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .budgie-menu button:hover {
   -gtk-icon-effect: none; }
 .budgie-menu entry.search {
-  padding: 10px 5px;
+  border: none;
+  background: none;
+  padding: 5px 2px;
   border-bottom: 1px solid @borders;
   border-radius: 0;
   font-size: 120%; }
-  .budgie-menu entry.search image {
-    color: currentColor; }
-    .budgie-menu entry.search image:dir(ltr) {
-      padding-left: 8px;
-      padding-right: 12px; }
-    .budgie-menu entry.search image:dir(rtl) {
-      padding-left: 12px;
-      padding-right: 8px; }
+  .budgie-menu entry.search image:dir(ltr) {
+    padding-left: 8px;
+    padding-right: 12px; }
+  .budgie-menu entry.search image:dir(rtl) {
+    padding-left: 12px;
+    padding-right: 8px; }
 .budgie-menu .categories {
   border-width: 0;
   margin-left: 3px; }
@@ -4890,10 +4896,6 @@ button.raven-trigger {
 .places-menu .places-list {
   background: rgba(254, 254, 254, 0.04);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
-.places-menu list,
-.places-menu row {
-  padding: 0;
-  margin: 0; }
 .places-menu .unlock-area {
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent; }
@@ -4942,6 +4944,10 @@ button.raven-trigger {
     border-top-width: 0;
     border-bottom-width: 0;
     border-radius: 0; }
+  .budgie-panel popover list,
+  .budgie-panel popover row {
+    padding: 0;
+    margin: 0; }
   .budgie-panel.transparent {
     background-color: transparent; }
     .top .budgie-panel.transparent {
@@ -5172,6 +5178,7 @@ button.raven-trigger {
         background-color: transparent;
         box-shadow: inset 0 -3px 0 0 #119ebe; }
       .raven .raven-header button:active, .raven .raven-header button:checked {
+        color: #fefefe;
         border-radius: 0;
         background-color: transparent;
         box-shadow: inset 0 -3px 0 0 #119ebe; }
@@ -5362,12 +5369,12 @@ calendar.raven-calendar {
       .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-run-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked, .budgie-run-dialog .linked.horizontal > button.destructive-action:checked {
         background-color: rgba(177, 30, 57, 0.9); }
   .budgie-session-dialog entry, .budgie-polkit-dialog entry, .budgie-run-dialog entry {
-    background-color: #505359;
+    background-color: rgba(0, 0, 0, 0.2);
     color: #fefefe; }
     .budgie-session-dialog entry:focus, .budgie-polkit-dialog entry:focus, .budgie-run-dialog entry:focus {
-      background-color: #505359; }
+      background-color: rgba(0, 0, 0, 0.2); }
     .budgie-session-dialog entry:backdrop, .budgie-polkit-dialog entry:backdrop, .budgie-run-dialog entry:backdrop {
-      background-color: #505359; }
+      background-color: rgba(0, 0, 0, 0.2); }
 
 .budgie-polkit-dialog .message {
   color: rgba(254, 254, 254, 0.7); }

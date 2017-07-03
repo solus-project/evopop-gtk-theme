@@ -31,6 +31,14 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-container {
   background-color: transparent;
   &:backdrop { background-color: transparent; }
+
+  popover list,
+  popover row {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .budgie-popover,
@@ -57,15 +65,14 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
     button:hover { -gtk-icon-effect: none; }
 
     entry.search {
-        @if $subtheme == 'azure' { color: $headerbar_fg_color; }
-        padding: 10px 5px;
+        border: none;
+        background: none;
+        padding: 5px 2px;
         border-bottom: 1px solid #{"@borders"};
         border-radius: 0;
         font-size: 120%;
 
         image {
-            color: if($subtheme == 'azure', $headerbar_fg_color, currentColor);
-
             &:dir(ltr) { padding-left: 8px; padding-right: 12px; }
             &:dir(rtl) { padding-left: 12px; padding-right: 8px; }
         }
@@ -203,12 +210,6 @@ button.raven-trigger {
         border-bottom: 1px solid $raven_expander_border;
     }
 
-    list,
-    row {
-        padding: 0;
-        margin: 0;
-    }
-
     .unlock-area {
         border-top: 1px solid transparentize($raven_expander_border, 0.1);
         border-bottom: 1px solid transparentize($raven_expander_border, 0.1);
@@ -277,6 +278,12 @@ button.raven-trigger {
       border-top-width: 0;
       border-bottom-width: 0;
       border-radius: 0;
+    }
+
+    popover list,
+    popover row {
+      padding: 0;
+      margin: 0;
     }
 
     &.transparent {
@@ -461,6 +468,7 @@ button.raven-trigger {
 
           &:active,
           &:checked {
+            color: $fg_color;
             border-radius: 0;
             background-color: transparent;
             @include lines(up);
@@ -717,10 +725,10 @@ calendar.raven-calendar {
     }
 
     entry {
-      background-color: #505359;
+      background-color: transparentize(black, 0.8);
       color: $headerbar_fg_color;
-      &:focus { background-color: #505359; }
-      &:backdrop { background-color: #505359; }
+      &:focus { background-color: transparentize(black, 0.8); }
+      &:backdrop { background-color: transparentize(black, 0.8); }
     }
 }
 
@@ -757,15 +765,18 @@ calendar.raven-calendar {
 // Budgie styled Gtk Menus
 .budgie-menubar {
     menu {
-        margin: 4px;
-        padding: 5px;
-        border-radius: 0;
-        background-color: $panel_bg;
-        menuitem:hover {
-            background-color: $selected_bg_color;
-            color: $fg_color;
-            }
-        }
+      margin: 4px;
+      padding: 5px;
+      border-radius: 0;
+      background-color: $panel_bg;
+      menuitem {
+
+      }
+      menuitem:hover {
+        background-color: $selected_bg_color;
+        color: $fg_color;
+      }
+    }
 
     arrow {
         border:none;
