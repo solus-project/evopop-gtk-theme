@@ -466,7 +466,7 @@ button.osd {
     box-shadow: none; }
   button.osd:disabled:backdrop,
   button.osd:disabled {
-    color: #898b8c;
+    color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(43, 46, 49, 0.5);
     background-clip: padding-box;
@@ -520,7 +520,7 @@ button {
   .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .osd
   button:disabled:backdrop, .osd
   button:disabled {
-    color: #898b8c;
+    color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(43, 46, 49, 0.5);
     background-clip: padding-box;
@@ -559,7 +559,7 @@ button {
       outline-color: rgba(254, 254, 254, 0.3); }
     .app-notification button.flat:disabled, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .osd
     button.flat:disabled {
-      color: #898b8c;
+      color: rgba(254, 254, 254, 0.5);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(43, 46, 49, 0.5);
       background-clip: padding-box;
@@ -749,7 +749,7 @@ button.suggested-action {
     .osd
     button.suggested-action:disabled:backdrop, .osd
     button.suggested-action:disabled {
-      color: #898b8c;
+      color: rgba(254, 254, 254, 0.5);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(43, 46, 49, 0.5);
       background-clip: padding-box;
@@ -916,7 +916,7 @@ button.destructive-action {
     .osd
     button.destructive-action:disabled:backdrop, .osd
     button.destructive-action:disabled {
-      color: #898b8c;
+      color: rgba(254, 254, 254, 0.5);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(43, 46, 49, 0.5);
       background-clip: padding-box;
@@ -1575,7 +1575,9 @@ radio {
   margin: 0 4px;
   min-height: 16px;
   min-width: 16px;
-  border: none; }
+  border: none;
+  background-image: none;
+  background-color: transparent; }
   menu menuitem check, menu menuitem
   radio {
     margin: 0; }
@@ -1627,7 +1629,7 @@ colorswatch.dark overlay {
   colorswatch.dark overlay:hover {
     border-color: rgba(0, 0, 0, 0.1); }
   colorswatch.dark overlay:backdrop {
-    color: rgba(254, 254, 254, 0.5); }
+    color: rgba(254, 254, 254, 0.8); }
 colorswatch.light overlay {
   color: #fefefe; }
   colorswatch.light overlay:hover {
@@ -1888,7 +1890,7 @@ entry {
       -gtk-icon-shadow: none; }
     .osd spinbutton:disabled:not(.vertical), .osd
     entry:disabled {
-      color: #898b8c;
+      color: rgba(254, 254, 254, 0.5);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(43, 46, 49, 0.5);
       background-clip: padding-box;
@@ -2808,7 +2810,7 @@ infobar {
   .info .label, .warning .label, .question .label, .error .label {
     color: #fefefe; }
     .info .label:backdrop, .warning .label:backdrop, .question .label:backdrop, .error .label:backdrop {
-      color: rgba(254, 254, 254, 0.5); }
+      color: rgba(254, 254, 254, 0.8); }
   .info button, .warning button, .question button, .error button {
     border-radius: 2px;
     border: none;
@@ -2844,25 +2846,25 @@ infobar {
   background-color: #a1ce4b; }
   .info:backdrop {
     background-color: #b6d973;
-    color: rgba(254, 254, 254, 0.5); }
+    color: rgba(254, 254, 254, 0.8); }
 
 .warning {
   background-color: #ee8e00; }
   .warning:backdrop {
     background-color: #ffa622;
-    color: rgba(254, 254, 254, 0.5); }
+    color: rgba(254, 254, 254, 0.8); }
 
 .question {
   background-color: #37b9a5; }
   .question:backdrop {
     background-color: #56cdbb;
-    color: rgba(254, 254, 254, 0.5); }
+    color: rgba(254, 254, 254, 0.8); }
 
 .error {
   background-color: #b11e39; }
   .error:backdrop {
     background-color: #da2849;
-    color: rgba(254, 254, 254, 0.5); }
+    color: rgba(254, 254, 254, 0.8); }
 
 /*************
  * Level Bar *
@@ -3621,7 +3623,7 @@ scale {
         outline-color: rgba(254, 254, 254, 0.3);
         background-color: #14171a; }
       .osd scale slider:disabled {
-        color: #898b8c;
+        color: rgba(254, 254, 254, 0.5);
         border-color: rgba(0, 0, 0, 0.7);
         background-color: rgba(43, 46, 49, 0.5);
         background-clip: padding-box;
@@ -4262,7 +4264,7 @@ spinbutton:not(.vertical) {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none;
-    color: #898b8c;
+    color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.5);
     -gtk-icon-shadow: none;
     box-shadow: none; }
@@ -4323,7 +4325,7 @@ spinbutton.vertical button.down {
     -gtk-icon-shadow: none;
     outline-color: rgba(254, 254, 254, 0.3); }
   .osd spinbutton.vertical button:first-child:disabled {
-    color: #898b8c;
+    color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(43, 46, 49, 0.5);
     background-clip: padding-box;
@@ -4513,7 +4515,7 @@ treeview.view {
     treeview.view:disabled:selected {
       color: #71d0e5; }
       treeview.view:disabled:selected:backdrop {
-        color: rgba(48, 187, 218, 0.85); }
+        color: rgba(71, 194, 222, 0.94); }
     treeview.view:disabled:backdrop {
       color: #535c67; }
   treeview.view.separator {
@@ -4544,7 +4546,7 @@ treeview.view {
       treeview.view.expander:selected:hover {
         color: #fefefe; }
       treeview.view.expander:selected:backdrop {
-        color: rgba(122, 211, 231, 0.65); }
+        color: rgba(162, 224, 238, 0.86); }
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     treeview.view.expander:backdrop {
@@ -4734,7 +4736,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     popover.background radiobutton:backdrop:selected,
     .menuitem.button.flat:backdrop:selected, calendar:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
     entry selection:backdrop, row:backdrop:selected {
-      color: rgba(254, 254, 254, 0.5); }
+      color: rgba(254, 254, 254, 0.8); }
       row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .selection-mode button.titlebutton:backdrop:disabled, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
       .view text:backdrop:disabled:selected,
       iconview text:backdrop:disabled:selected,
@@ -4743,7 +4745,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       popover.background radiobutton:backdrop:disabled:selected,
       .menuitem.button.flat:backdrop:disabled:selected, calendar:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled,
       entry selection:backdrop:disabled, row:backdrop:disabled:selected {
-        color: rgba(48, 187, 218, 0.85); }
+        color: rgba(71, 194, 222, 0.94); }
 
 .monospace {
   font-family: monospace; }
@@ -5736,7 +5738,7 @@ ConversationListView {
     color: #fefefe; }
     ConversationListView .view:active:backdrop, ConversationListView iconview:active:backdrop, ConversationListView .view:selected:backdrop, ConversationListView iconview:selected:backdrop {
       background-color: #13b1d5;
-      color: rgba(254, 254, 254, 0.5); }
+      color: rgba(254, 254, 254, 0.8); }
   ConversationListView .view .cell, ConversationListView iconview .cell {
     border: solid rgba(0, 0, 0, 0.2);
     border-width: 0 0 1px 0; }
@@ -5852,7 +5854,7 @@ ConversationListView {
     -gtk-icon-shadow: none;
     outline-color: rgba(254, 254, 254, 0.3); }
   #buttonbox_frame button:disabled {
-    color: #898b8c;
+    color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(43, 46, 49, 0.5);
     background-clip: padding-box;
