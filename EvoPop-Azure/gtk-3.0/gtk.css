@@ -4786,22 +4786,10 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .budgie-popover.background {
   border-radius: 2px;
   padding: 0;
-  background-color: rgba(40, 49, 65, 0.96);
+  background-color: rgba(254, 254, 254, 0.96);
   background-clip: border-box;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.35);
   border: 1px solid @borders; }
-  .budgie-popover button, .budgie-popover label, .budgie-popover entry, .budgie-popover entry image,
-  .budgie-popover.background button,
-  .budgie-popover.background label,
-  .budgie-popover.background entry,
-  .budgie-popover.background entry image {
-    color: #fefefe; }
-    .budgie-popover button:disabled, .budgie-popover label:disabled, .budgie-popover entry:disabled, .budgie-popover entry image:disabled,
-    .budgie-popover.background button:disabled,
-    .budgie-popover.background label:disabled,
-    .budgie-popover.background entry:disabled,
-    .budgie-popover.background entry image:disabled {
-      color: rgba(254, 254, 254, 0.5); }
 
 .budgie-popover > .container {
   padding: 2px; }
@@ -4875,7 +4863,7 @@ button.budgie-menu-launcher {
       box-shadow: none; }
 
 .user-menu .content-box separator {
-  background-color: rgba(254, 254, 254, 0.2); }
+  background-color: rgba(40, 49, 65, 0.2); }
 .user-menu .container {
   padding: 6px; }
 
