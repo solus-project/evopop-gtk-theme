@@ -41,16 +41,38 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
   }
 }
 
+.budgie-popover .container,
+.budgie-popover border,
+.budgie-popover list,
+.budgie-popover row {
+    @extend %reset_style
+}
+
+%reset_style {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    opacity: 1;
+    min-width: 0;
+    min-height: 0;
+}
+
 .budgie-popover,
 .budgie-popover.background {
     border-radius: 2px;
+    padding: 0;
     background-color: if($subtheme == 'azure', transparentize($headerbar_color,0.04), transparentize($popover_bg_color,0.04));
     background-clip: border-box;
     box-shadow: 0 2px 3px 1px transparentize(black, 0.65);
     border: 1px solid #{"@borders"};
     @if $subtheme == 'azure' {
-      button { color: $headerbar_fg_color; }
-      label { color: $headerbar_fg_color; }
+      button, label, entry, entry image {
+        color: $headerbar_fg_color;
+        &:disabled { color: transparentize( $headerbar_fg_color, 0.5)}
+      }
     }
 }
 
@@ -82,6 +104,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         border-width: 0;
         margin-left: 3px;
 
+        background-color: transparent;
         &:dir(ltr) { border-right: 1px solid #{"@borders"}; }
         &:dir(rtl) { border-left: 1px solid #{"@borders"}; }
     }
@@ -139,8 +162,9 @@ button.budgie-menu-launcher {
 
 // User Menu
 .user-menu {
-    .content-box separator { background-color: #{"alpha(@theme_fg_color, 0.15)"}; }
-    .container { padding: 8px; }
+    .content-box separator {
+      background-color: if($subtheme == 'azure', transparentize($headerbar_fg_color, 0.8), transparentize($fg_color, 0.8)); }
+    .container { padding: 6px; }
 }
 
 // Raven Trigger

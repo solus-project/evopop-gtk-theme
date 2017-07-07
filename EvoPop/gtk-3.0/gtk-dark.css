@@ -4743,9 +4743,24 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding: 0;
     margin: 0; }
 
+.budgie-popover .container,
+.budgie-popover border,
+.budgie-popover list,
+.budgie-popover row {
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  opacity: 1;
+  min-width: 0;
+  min-height: 0; }
+
 .budgie-popover,
 .budgie-popover.background {
   border-radius: 2px;
+  padding: 0;
   background-color: rgba(80, 83, 89, 0.96);
   background-clip: border-box;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.35);
@@ -4773,7 +4788,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding-right: 8px; }
 .budgie-menu .categories {
   border-width: 0;
-  margin-left: 3px; }
+  margin-left: 3px;
+  background-color: transparent; }
   .budgie-menu .categories:dir(ltr) {
     border-right: 1px solid @borders; }
   .budgie-menu .categories:dir(rtl) {
@@ -4822,9 +4838,9 @@ button.budgie-menu-launcher {
       box-shadow: none; }
 
 .user-menu .content-box separator {
-  background-color: alpha(@theme_fg_color, 0.15); }
+  background-color: rgba(254, 254, 254, 0.2); }
 .user-menu .container {
-  padding: 8px; }
+  padding: 6px; }
 
 button.raven-trigger {
   padding-left: 2px;

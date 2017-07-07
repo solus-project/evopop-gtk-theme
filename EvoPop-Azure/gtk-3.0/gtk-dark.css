@@ -4743,19 +4743,40 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding: 0;
     margin: 0; }
 
+.budgie-popover .container,
+.budgie-popover border,
+.budgie-popover list,
+.budgie-popover row {
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  opacity: 1;
+  min-width: 0;
+  min-height: 0; }
+
 .budgie-popover,
 .budgie-popover.background {
   border-radius: 2px;
+  padding: 0;
   background-color: rgba(40, 49, 65, 0.96);
   background-clip: border-box;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.35);
   border: 1px solid @borders; }
-  .budgie-popover button,
-  .budgie-popover.background button {
+  .budgie-popover button, .budgie-popover label, .budgie-popover entry, .budgie-popover entry image,
+  .budgie-popover.background button,
+  .budgie-popover.background label,
+  .budgie-popover.background entry,
+  .budgie-popover.background entry image {
     color: #fefefe; }
-  .budgie-popover label,
-  .budgie-popover.background label {
-    color: #fefefe; }
+    .budgie-popover button:disabled, .budgie-popover label:disabled, .budgie-popover entry:disabled, .budgie-popover entry image:disabled,
+    .budgie-popover.background button:disabled,
+    .budgie-popover.background label:disabled,
+    .budgie-popover.background entry:disabled,
+    .budgie-popover.background entry image:disabled {
+      color: rgba(254, 254, 254, 0.5); }
 
 .budgie-popover > .container {
   padding: 2px; }
@@ -4779,7 +4800,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     padding-right: 8px; }
 .budgie-menu .categories {
   border-width: 0;
-  margin-left: 3px; }
+  margin-left: 3px;
+  background-color: transparent; }
   .budgie-menu .categories:dir(ltr) {
     border-right: 1px solid @borders; }
   .budgie-menu .categories:dir(rtl) {
@@ -4828,9 +4850,9 @@ button.budgie-menu-launcher {
       box-shadow: none; }
 
 .user-menu .content-box separator {
-  background-color: alpha(@theme_fg_color, 0.15); }
+  background-color: rgba(254, 254, 254, 0.2); }
 .user-menu .container {
-  padding: 8px; }
+  padding: 6px; }
 
 button.raven-trigger {
   padding-left: 2px;
