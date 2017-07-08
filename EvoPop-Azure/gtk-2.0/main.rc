@@ -1770,10 +1770,24 @@ style "separator_menu_item" {
 
 }
 
+style "button_label" {
+  fg[PRELIGHT] = @selected_fg_color
+  fg[ACTIVE] = @selected_fg_color
+}
+
+style "misc_button_label" {
+  fg[PRELIGHT] = @fg_color
+  fg[ACTIVE] = @fg_color
+}
+
 style "button" {
 
   xthickness = 2
   ythickness = 2
+
+  fg[PRELIGHT] = @selected_fg_color
+  fg[ACTIVE] = @selected_fg_color
+  font_name = "Bold"
 
   # For the sake of sanity style buttons this way
   engine "pixmap" {
@@ -1841,7 +1855,7 @@ style "link_button" {
 style "entry" {
 
   # We set this same as the border of the border of the entry
-  # This way there's no overlap
+  # This way theres no overlap
   xthickness = 4
   ythickness = 4
 
@@ -2491,6 +2505,9 @@ class "GtkSeparatorToolItem" style "toolbar_separator"
 class "GtkMenuBar"           style "menubar"
 class "GtkMenu"              style "menu"
 class "GtkTextView"          style "textview"
+
+widget_class "*<GtkButton>*<GtkLabel>"               style "button_label"
+widget_class "*<GtkCheckButton>*<GtkLabel>"          style "misc_button_label"
 
 # Menu and menubar items
 widget_class "*<GtkMenuItem>*"              style "menu_item"

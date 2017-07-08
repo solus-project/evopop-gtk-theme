@@ -30,11 +30,11 @@ gtk-color-scheme = "fg_color:#283141\nbg_color:#f0f1f3"
 # Selection colors
 gtk-color-scheme = "selected_fg_color:#fefefe\nselected_bg_color:#37b9a5"
 # Tooltip colors
-gtk-color-scheme = "tooltip_fg_color:#39465c\ntooltip_bg_color:#fefefe"
+gtk-color-scheme = "tooltip_fg_color:#2d2d2d\ntooltip_bg_color:#fefefe"
 # Window colors
 gtk-color-scheme = "wm_color:#283141\nunfocused_wm_color:#283141"
 # Panel colors
-gtk-color-scheme = "panel_bg_color:#263238\npanel_fg_color:#fefefe"
+gtk-color-scheme = "panel_bg_color:#283141\npanel_fg_color:#fefefe"
 # Dark Theme - Text/base colors
 gtk-color-scheme = "dark_text_color:#fefefe\ndark_base_color:#39465c"
 # Dark Theme - Foreground/background colors
@@ -44,7 +44,6 @@ gtk-auto-mnemonics = 1
 gtk-primary-button-warps-slider = 1
 
 include "main.rc"
-# include "dark.rc"
 
 # App stylings
 include "apps/chrome.rc"
