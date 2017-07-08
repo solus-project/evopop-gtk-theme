@@ -122,7 +122,7 @@ style "default" {
   base[NORMAL]      = @base_color
   base[PRELIGHT]    = shade (0.95, @bg_color)
   base[SELECTED]    = @selected_bg_color
-  base[INSENSITIVE] = mix (0.5, @fg_color, @bg_color)
+  base[INSENSITIVE] = shade (0.95,@base_color)
   base[ACTIVE]      = @selected_bg_color
 
   # For succinctness, all reasonable pixmap options remain here
