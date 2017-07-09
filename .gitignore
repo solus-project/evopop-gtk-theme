@@ -10,3 +10,4 @@ missing
 .sass-cache
 .sass-cache/
 *.css.map
+Gemfile
