@@ -5580,14 +5580,25 @@ PanelToplevel.background {
     .mate-panel-applet-slider frame > border {
       border: unset; }
 
+.brisk-menu .session-button:first-child {
+  background-color: #c72240; }
+.brisk-menu scrollbar {
+  background-color: #505359;
+  border-color: transparent; }
+.brisk-menu entry, .brisk-menu entry:focus {
+  border: none;
+  border-radius: 0; }
+  .brisk-menu entry:focus, .brisk-menu entry:focus:focus {
+    border-bottom: 2px solid #13b1d5; }
 .brisk-menu .categories-list button.flat {
   padding-top: unset;
   padding-bottom: unset;
-  border-radius: 2px;
+  border-radius: 0;
   -gtk-outline-radius: 0;
   transition-duration: 0.1s; }
-  .brisk-menu .categories-list button.flat:checked {
+  .brisk-menu .categories-list button.flat:checked, .brisk-menu .categories-list button.flat:active {
     background-color: transparent;
+    box-shadow: none;
     color: #13b1d5; }
   .brisk-menu .categories-list button.flat image {
     padding: 8px 0; }
@@ -5598,10 +5609,14 @@ PanelToplevel.background {
   background-color: transparent; }
 .brisk-menu .apps-list {
   background-color: #505359; }
+  .brisk-menu .apps-list row {
+    padding: 2px; }
+  .brisk-menu .apps-list button {
+    box-shadow: none; }
   .brisk-menu .apps-list row.activatable > button.flat {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    border-radius: 2px;
+    padding-top: unset;
+    padding-bottom: unset;
+    border-radius: 0;
     -gtk-outline-radius: 0;
     font-weight: 400;
     transition: none; }

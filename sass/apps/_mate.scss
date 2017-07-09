@@ -64,16 +64,32 @@ PanelToplevel.background {
 // Brisk-Menu applet
 
 .brisk-menu {
+  .session-button {
+    &:first-child { background-color: $red; }
+  }
+
+  scrollbar {
+    background-color: $base_color;
+    border-color: transparent;
+  }
+
+  entry, entry:focus {
+      border: none;
+      border-radius: 0;
+      &:focus { border-bottom: 2px solid $selected_bg_color; }
+  }
+
   .categories-list { // left-pane
     button.flat {
       padding-top: unset;
       padding-bottom: unset;
-      border-radius: 2px; // remove roundness
+      border-radius: 0; // remove roundness
       -gtk-outline-radius: 0;
       transition-duration: 0.1s; // shorter duration
       // almost covers :hover pseudo-class
-      &:checked {
+      &:checked, &:active {
         background-color: transparent;
+        box-shadow: none;
         color: $selected_bg_color;
       }
 
@@ -91,11 +107,13 @@ PanelToplevel.background {
 
   .apps-list { // right-pane
     background-color: $base_color;
+    row { padding: 2px; }
+    button { box-shadow: none; }
 
     row.activatable > button.flat {
-      padding-top: 2px;
-      padding-bottom: 2px;
-      border-radius: 2px; // remove roundness
+      padding-top: unset;
+      padding-bottom: unset;
+      border-radius: 0; // remove roundness
       -gtk-outline-radius: 0;
       font-weight: 400;
       transition: none; // needs quicker response
