@@ -5590,9 +5590,9 @@ PanelToplevel.background {
     background-color: transparent;
     color: #13b1d5; }
   .brisk-menu .categories-list button.flat image {
-    padding: rem(8px) 0; }
+    padding: 8px 0; }
   .brisk-menu .categories-list button.flat label {
-    padding-bottom: rem(0.7px); }
+    padding-bottom: 0.7px; }
 .brisk-menu box.vertical > box.horizontal > box.vertical > separator.horizontal {
   min-height: 0;
   background-color: transparent; }
@@ -5606,7 +5606,7 @@ PanelToplevel.background {
     font-weight: 400;
     transition: none; }
     .brisk-menu .apps-list row.activatable > button.flat > box.horizontal > image {
-      padding: rem(5.3px) 0; }
+      padding: 5.3px 0; }
 
 .mate-panel-applet-slider {
   background-color: transparent; }
@@ -5635,13 +5635,13 @@ PanelToplevel.background {
   .caja-navigation-window .caja-side-pane notebook .frame {
     border: none; }
 .caja-navigation-window .caja-side-pane button.flat:last-child {
-  padding: rem(10.7px);
+  padding: 10.7px;
   border-radius: 100px;
   -gtk-outline-radius: 100px; }
 .caja-navigation-window toolbar.primary-toolbar {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
   .caja-navigation-window toolbar.primary-toolbar button {
-    padding: rem(4px); }
+    padding: 4px; }
 .caja-navigation-window .caja-pathbar button:not(:first-child):not(:last-child) {
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 0px;

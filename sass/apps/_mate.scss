@@ -77,9 +77,9 @@ PanelToplevel.background {
         color: $selected_bg_color;
       }
 
-      image { padding: rem(8px) 0; }
+      image { padding: 8px 0; }
       // for finer base-lines
-      label { padding-bottom: rem(0.7px); }
+      label { padding-bottom: 0.7px; }
     }
   }
 
@@ -101,7 +101,7 @@ PanelToplevel.background {
       transition: none; // needs quicker response
 
       // set vertical padding with icon's padding
-      > box.horizontal > image { padding: rem(5.3px) 0; }
+      > box.horizontal > image { padding: 5.3px 0; }
     }
   }
 }
@@ -162,7 +162,7 @@ PanelToplevel.background {
     }
 
     button.flat:last-child { // 'close' button on header
-      padding: rem(10.7px);
+      padding: 10.7px;
       border-radius: 100px;
       -gtk-outline-radius: 100px;
     }
@@ -172,7 +172,7 @@ PanelToplevel.background {
   toolbar.primary-toolbar {
     border-bottom: 1px solid $borders_color;
     button { // uniform button sizes
-      padding: rem(4px);
+      padding: 4px;
     }
   }
 
