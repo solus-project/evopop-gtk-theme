@@ -4846,18 +4846,21 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 button.budgie-menu-launcher {
   padding: 0 2px;
   color: #fefefe;
-  box-shadow: none; }
+  box-shadow: none;
+  background-color: transparent; }
   button.budgie-menu-launcher:hover {
     color: #fefefe; }
   button.budgie-menu-launcher:active, button.budgie-menu-launcher:checked {
     color: #fefefe; }
   button.budgie-menu-launcher:backdrop {
-    color: #fefefe; }
+    color: #fefefe;
+    background-color: transparent; }
     button.budgie-menu-launcher:backdrop:hover {
       color: #fefefe; }
     button.budgie-menu-launcher:backdrop:active, button.budgie-menu-launcher:backdrop:checked {
       color: #13b1d5;
-      box-shadow: none; }
+      box-shadow: none;
+      background-color: transparent; }
 
 .user-menu .content-box separator {
   background-color: rgba(49, 55, 61, 0.2); }
@@ -5006,11 +5009,13 @@ button.raven-trigger {
 
 .budgie-panel #tasklist-button:hover, .budgie-panel .unpinned button.flat.launcher:hover,
 .budgie-panel .pinned button.flat.launcher.running:hover {
-  background-color: rgba(0, 0, 0, 0.15); }
+  background-color: rgba(0, 0, 0, 0.15);
+  box-shadow: none; }
 .budgie-panel #tasklist-button:active, .budgie-panel .unpinned button.flat.launcher:active,
 .budgie-panel .pinned button.flat.launcher.running:active, .budgie-panel #tasklist-button:checked, .budgie-panel .unpinned button.flat.launcher:checked,
 .budgie-panel .pinned button.flat.launcher.running:checked {
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: none; }
 .top .budgie-panel #tasklist-button, .budgie-panel .top #tasklist-button, .top .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .top button.flat.launcher,
 .top .budgie-panel .pinned button.flat.launcher.running,
 .budgie-panel .pinned .top button.flat.launcher.running {

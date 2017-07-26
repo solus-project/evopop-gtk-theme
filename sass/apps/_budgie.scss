@@ -138,15 +138,18 @@ button.budgie-menu-launcher {
     padding: 0 2px;
     color: $headerbar_fg_color;
     box-shadow: none;
+    background-color: transparent;
     &:hover { color: $headerbar_fg_color; }
     &:active, &:checked { color: $headerbar_fg_color; }
 
     &:backdrop {
       color: $headerbar_fg_color;
+      background-color: transparent;
       &:hover { color: $headerbar_fg_color; }
       &:active, &:checked {
         color: $selected_bg_color;
         box-shadow: none;
+        background-color: transparent;
       }
     }
 }
@@ -367,8 +370,14 @@ button.raven-trigger {
 }
 
 %underscores {
-    &:hover { background-color: transparentize(black, 0.85); }
-    &:active, &:checked { background-color: transparentize(black, 0.8); }
+    &:hover {
+      background-color: transparentize(black, 0.85);
+      box-shadow: none;
+    }
+    &:active, &:checked {
+      background-color: transparentize(black, 0.8);
+      box-shadow: none;
+    }
 
     @each $pos, $b_pos in $pos_list {
         .#{$pos} & {
