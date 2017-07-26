@@ -137,18 +137,15 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 button.budgie-menu-launcher {
     padding: 0 2px;
     color: $headerbar_fg_color;
-    background-color: rgba(0,0,0,0.3);
     box-shadow: none;
     &:hover { color: $headerbar_fg_color; }
     &:active, &:checked { color: $headerbar_fg_color; }
 
     &:backdrop {
       color: $headerbar_fg_color;
-      background-color: rgba(0,0,0,0.3);
       &:hover { color: $headerbar_fg_color; }
       &:active, &:checked {
         color: $selected_bg_color;
-        background-color: rgba(0,0,0,0.3);
         box-shadow: none;
       }
     }

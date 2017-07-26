@@ -4821,20 +4821,17 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 button.budgie-menu-launcher {
   padding: 0 2px;
   color: #fefefe;
-  background-color: rgba(0, 0, 0, 0.3);
   box-shadow: none; }
   button.budgie-menu-launcher:hover {
     color: #fefefe; }
   button.budgie-menu-launcher:active, button.budgie-menu-launcher:checked {
     color: #fefefe; }
   button.budgie-menu-launcher:backdrop {
-    color: #fefefe;
-    background-color: rgba(0, 0, 0, 0.3); }
+    color: #fefefe; }
     button.budgie-menu-launcher:backdrop:hover {
       color: #fefefe; }
     button.budgie-menu-launcher:backdrop:active, button.budgie-menu-launcher:backdrop:checked {
       color: #13b1d5;
-      background-color: rgba(0, 0, 0, 0.3);
       box-shadow: none; }
 
 .user-menu .content-box separator {
