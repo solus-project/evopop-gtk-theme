@@ -4868,10 +4868,48 @@ button.budgie-menu-launcher {
       box-shadow: none;
       background-color: transparent; }
 
-.user-menu .content-box separator {
-  background-color: rgba(49, 55, 61, 0.2); }
-.user-menu .container {
-  padding: 6px; }
+.user-menu {
+  padding-bottom: 5px; }
+  .user-menu .content-box separator {
+    background-color: rgba(49, 55, 61, 0.1); }
+  .user-menu .container {
+    padding: 6px; }
+  .user-menu > box.vertical row.activatable:first-child,
+  .user-menu > frame.container > box.vertical row.activatable:first-child {
+    margin-bottom: 5px; }
+    .user-menu > box.vertical row.activatable:first-child .indicator-item,
+    .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item {
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+      background-color: #37b9a5;
+      transition-duration: 0.2s; }
+      .user-menu > box.vertical row.activatable:first-child .indicator-item:dir(ltr),
+      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item:dir(ltr) {
+        padding-left: 7px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 38px auto; }
+      .user-menu > box.vertical row.activatable:first-child .indicator-item:dir(rtl),
+      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item:dir(rtl) {
+        padding-right: 7px;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: 38px auto; }
+      .user-menu > box.vertical row.activatable:first-child .indicator-item label,
+      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label {
+        color: #fefefe; }
+        .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(ltr),
+        .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(ltr) {
+          padding-left: 5px; }
+        .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(rtl),
+        .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(rtl) {
+          padding-right: 5px; }
+      .user-menu > box.vertical row.activatable:first-child .indicator-item image,
+      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item image {
+        color: #fefefe; }
+        .user-menu > box.vertical row.activatable:first-child .indicator-item image:first-child,
+        .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item image:first-child {
+          min-width: 24px;
+          min-height: 20px; }
 
 button.raven-trigger {
   padding-left: 2px;

@@ -64,7 +64,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
 .budgie-popover.background {
     border-radius: 2px;
     padding: 0;
-    background-color: transparentize($popover_bg_color,0.04);
+    background-color: transparentize(if($variant=='light',$popover_bg_color,$bg_color),if($variant=='light',0.04,0.02));
     background-clip: border-box;
     box-shadow: 0 2px 3px 1px transparentize(black, 0.65);
     border: 1px solid #{"@borders"};
@@ -157,8 +157,52 @@ button.budgie-menu-launcher {
 // User Menu
 .user-menu {
     .content-box separator {
-      background-color: transparentize($fg_color, 0.8); }
+      background-color: transparentize($fg_color, 0.9); }
+      padding-bottom: 5px;
     .container { padding: 6px; }
+
+
+
+    // top-row (user-name and avatar)
+    > box.vertical row.activatable:first-child,
+    > frame.container > box.vertical row.activatable:first-child {
+      margin-bottom: 5px;
+
+      .indicator-item {
+        box-shadow: inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight;
+        background-color: if($subtheme=='azure',$darkpurple, $cyan);
+        transition-duration: 0.2s;
+
+        &:dir(ltr) { // mask avatar's background
+          padding-left: 7px; // non-scaling unit
+          background-position: left center;
+          background-repeat: no-repeat;
+          background-size: 38px auto; // non-scaling unit
+        }
+        &:dir(rtl) {
+          padding-right: 7px;
+          background-position: right center;
+          background-repeat: no-repeat;
+          background-size: 38px auto;
+        }
+
+        label {
+          color: $selected_fg_color;
+
+          &:dir(ltr) { padding-left: 5px; }
+          &:dir(rtl) { padding-right: 5px; }
+        }
+
+        image {
+          color: $selected_fg_color;
+
+          &:first-child { // avatar image
+            min-width: 24px;
+            min-height: 20px;
+          }
+        }
+      }
+    }
 }
 
 // Raven Trigger
