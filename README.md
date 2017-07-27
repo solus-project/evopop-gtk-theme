@@ -15,7 +15,7 @@ EvoPop is distributed under the terms the GNU General Public License (GNU GPL v.
 
 ### Getting EvoPop
 
-You can download the EvoPop [here](https://github.com/solus-cold-storage/evopop-gtk-theme).
+You can download the EvoPop theme [here](https://github.com/solus-cold-storage/evopop-gtk-theme).
 
 ### Building EvoPop
 
@@ -29,9 +29,10 @@ This procedure requires ```autotools``` on your system.
 
 ### Installing EvoPop
 
-Alternatively you may install EvoPop with the provided installation script:
+Alternatively you may install EvoPop with the provided installation scripts:
 
     ./install-gtk-theme.sh
+    ./install-gtk-azure-theme.sh
 
 ### Geary Fix
 
