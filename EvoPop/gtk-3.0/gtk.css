@@ -41,7 +41,7 @@
 /* disabled text widgets and the like base background color */
 @define-color insensitive_base_color #fefefe;
 /* widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #8c9094;
+@define-color theme_unfocused_fg_color rgba(49, 55, 61, 0.8);
 /* text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #31363d;
 /* widget base background color on backdrop windows */
@@ -63,7 +63,7 @@
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#31373d, 1.8);
-@define-color wm_unfocused_title #8c9094;
+@define-color wm_unfocused_title rgba(49, 55, 61, 0.8);
 @define-color wm_highlight rgba(255, 255, 255, 0.1);
 @define-color wm_borders_edge rgba(255, 255, 255, 0.2);
 @define-color wm_bg_a shade(#e6e8eb, 1.2);
@@ -147,7 +147,7 @@ read if you used those and something break with a version upgrade you're on your
   color: #31373d;
   background-color: #e6e8eb; }
   .background:backdrop {
-    color: #8c9094;
+    color: rgba(49, 55, 61, 0.8);
     background-color: #e6e8eb;
     text-shadow: none;
     -gtk-icon-shadow: none; }
@@ -220,7 +220,7 @@ label {
   label.separator {
     color: #31373d; }
     label.separator:backdrop {
-      color: #8c9094; }
+      color: rgba(49, 55, 61, 0.8); }
   label selection {
     background-color: #13b1d5;
     color: #fefefe; }
@@ -229,7 +229,7 @@ label {
     label:disabled:backdrop {
       color: #bcc1c9; }
   label:backdrop {
-    color: #8c9094; }
+    color: rgba(49, 55, 61, 0.8); }
 
 .dim-label, label.separator, .titlebar:not(headerbar) .subtitle,
 headerbar .subtitle {
@@ -2304,6 +2304,7 @@ headerbar {
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
     border-color: rgba(115, 116, 118, 0.28);
+    color: rgba(254, 254, 254, 0.8);
     background-image: none;
     transition: 200ms ease-out; }
   .titlebar:not(headerbar) .title,
@@ -2381,16 +2382,21 @@ headerbar {
     headerbar button:backdrop,
     headerbar button:disabled,
     headerbar button:backdrop:disabled {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.5);
       background-color: transparent;
       border-radius: 0;
       text-shadow: none;
       box-shadow: none; }
+      .titlebar:not(headerbar) button:backdrop label, .titlebar:not(headerbar) button:disabled label, .titlebar:not(headerbar) button:backdrop:disabled label,
+      headerbar button:backdrop label,
+      headerbar button:disabled label,
+      headerbar button:backdrop:disabled label {
+        color: rgba(255, 255, 255, 0.5); }
     .titlebar:not(headerbar) button:backdrop:hover, .titlebar:not(headerbar) button:backdrop:active, .titlebar:not(headerbar) button:backdrop:checked,
     headerbar button:backdrop:hover,
     headerbar button:backdrop:active,
     headerbar button:backdrop:checked {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.5);
       background-color: transparent;
       border-radius: 0;
       text-shadow: none;
@@ -3037,7 +3043,7 @@ menu,
     .menu menuitem:backdrop:hover,
     .context-menu menuitem:backdrop,
     .context-menu menuitem:backdrop:hover {
-      color: #8c9094;
+      color: rgba(49, 55, 61, 0.8);
       background-color: transparent; }
     menu menuitem arrow,
     .menu menuitem arrow,
@@ -3266,7 +3272,7 @@ notebook > header {
         border-color: transparent;
         background-color: rgba(230, 232, 235, 0.2); }
     notebook > header tab:backdrop {
-      color: #b0b3b7; }
+      color: rgba(140, 144, 148, 0.88); }
       notebook > header tab:backdrop.reorderable-page {
         border-color: transparent;
         background-color: transparent; }
@@ -3278,7 +3284,7 @@ notebook > header {
         notebook > header tab:checked.reorderable-page:hover {
           background-color: rgba(230, 232, 235, 0.7); }
     notebook > header tab:backdrop:checked {
-      color: #8c9094; }
+      color: rgba(49, 55, 61, 0.8); }
       notebook > header tab:backdrop:checked.reorderable-page {
         border-color: rgba(115, 116, 118, 0.28);
         background-color: #e6e8eb; }
@@ -3998,7 +4004,7 @@ scrollbar {
     scrollbar slider:hover:active {
       background-color: #0f8aa6; }
     scrollbar slider:backdrop {
-      background-color: #c2c5c8; }
+      background-color: rgba(174, 178, 181, 0.92); }
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.fine-tune slider {
@@ -4089,7 +4095,7 @@ scrollbar {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0);
       text-shadow: none;
       -gtk-icon-shadow: none;
-      color: #c2c5c8; }
+      color: rgba(174, 178, 181, 0.92); }
       scrollbar button:backdrop:disabled {
         border-color: transparent;
         background-color: transparent;
@@ -4097,7 +4103,7 @@ scrollbar {
         box-shadow: inset 0 1px rgba(255, 255, 255, 0);
         text-shadow: none;
         -gtk-icon-shadow: none;
-        color: rgba(194, 197, 200, 0.2); }
+        color: rgba(174, 178, 181, 0.12); }
   scrollbar.vertical button.down {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
   scrollbar.vertical button.up {
@@ -4130,12 +4136,12 @@ treeview ~ scrollbar.vertical {
     background-color: #f1f2f3;
     border-color: rgba(115, 116, 118, 0.28);
     transition: 200ms ease-out;
-    color: #8c9094; }
+    color: rgba(49, 55, 61, 0.8); }
   .sidebar list {
     background-color: transparent;
     color: #31373d; }
     .sidebar list:backdrop {
-      color: #8c9094; }
+      color: rgba(49, 55, 61, 0.8); }
     .sidebar list row label {
       padding-left: 10px; }
     .sidebar list button {
@@ -4188,7 +4194,7 @@ spinbutton:not(.vertical) {
       background-color: rgba(0, 0, 0, 0.1);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2); }
     spinbutton:not(.vertical) button:backdrop {
-      color: #979b9e;
+      color: rgba(78, 83, 88, 0.82);
       background-color: transparent;
       border-color: rgba(115, 116, 118, 0);
       transition: 200ms ease-out; }
@@ -4518,7 +4524,7 @@ treeview.view {
     treeview.view.separator:backdrop {
       color: rgba(230, 232, 235, 0.1); }
   treeview.view:backdrop {
-    border-left-color: #b9bcc0;
+    border-left-color: rgba(158, 161, 165, 0.9);
     border-top: #e6e8eb; }
   treeview.view:drop(active) {
     border-style: solid none;
@@ -4544,7 +4550,7 @@ treeview.view {
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     treeview.view.expander:backdrop {
-      color: #adb0b3; }
+      color: rgba(128, 132, 135, 0.86); }
   treeview.view.progressbar {
     color: #fefefe;
     border: 1px solid #0f8aa6;
@@ -4622,7 +4628,7 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   treeview.view header button:backdrop {
     border-color: #e6e8eb;
     border-style: none solid solid none;
-    color: #b9bcc0;
+    color: rgba(158, 161, 165, 0.9);
     background-image: none;
     background-color: #fbfbfb; }
     treeview.view header button:backdrop:disabled {

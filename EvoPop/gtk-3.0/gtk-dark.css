@@ -41,7 +41,7 @@
 /* disabled text widgets and the like base background color */
 @define-color insensitive_base_color #505359;
 /* widget text/foreground color on backdrop windows */
-@define-color theme_unfocused_fg_color #989a9e;
+@define-color theme_unfocused_fg_color rgba(254, 254, 254, 0.8);
 /* text color for entries, views and content in general on backdrop windows */
 @define-color theme_unfocused_text_color #fefefe;
 /* widget base background color on backdrop windows */
@@ -63,7 +63,7 @@
 /* these colors are exported for the window manager and shouldn't be used in applications,
 read if you used those and something break with a version upgrade you're on your own... */
 @define-color wm_title shade(#fefefe, 1.8);
-@define-color wm_unfocused_title #989a9e;
+@define-color wm_unfocused_title rgba(254, 254, 254, 0.8);
 @define-color wm_highlight transparent;
 @define-color wm_borders_edge rgba(255, 255, 255, 0.1);
 @define-color wm_bg_a shade(#31363d, 1.2);
@@ -147,7 +147,7 @@ read if you used those and something break with a version upgrade you're on your
   color: #fefefe;
   background-color: #31363d; }
   .background:backdrop {
-    color: #989a9e;
+    color: rgba(254, 254, 254, 0.8);
     background-color: #31363d;
     text-shadow: none;
     -gtk-icon-shadow: none; }
@@ -220,7 +220,7 @@ label {
   label.separator {
     color: #fefefe; }
     label.separator:backdrop {
-      color: #989a9e; }
+      color: rgba(254, 254, 254, 0.8); }
   label selection {
     background-color: #13b1d5;
     color: #fefefe; }
@@ -229,7 +229,7 @@ label {
     label:disabled:backdrop {
       color: #535c67; }
   label:backdrop {
-    color: #989a9e; }
+    color: rgba(254, 254, 254, 0.8); }
 
 .dim-label, label.separator, .titlebar:not(headerbar) .subtitle,
 headerbar .subtitle {
@@ -422,7 +422,7 @@ button.flat:not(:active):not(:checked):not(:hover):not(disabled) {
   border-color: transparent; }
   row:selected
   button.flat:not(:active):not(:checked):not(:hover):not(disabled):backdrop {
-    color: #989a9e; }
+    color: rgba(254, 254, 254, 0.8); }
 button.osd {
   min-width: 24px;
   min-height: 32px;
@@ -2297,6 +2297,7 @@ headerbar {
   .titlebar:backdrop:not(headerbar),
   headerbar:backdrop {
     border-color: rgba(33, 37, 41, 0.19);
+    color: rgba(254, 254, 254, 0.8);
     background-image: none;
     transition: 200ms ease-out; }
   .titlebar:not(headerbar) .title,
@@ -2374,16 +2375,21 @@ headerbar {
     headerbar button:backdrop,
     headerbar button:disabled,
     headerbar button:backdrop:disabled {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.5);
       background-color: transparent;
       border-radius: 0;
       text-shadow: none;
       box-shadow: none; }
+      .titlebar:not(headerbar) button:backdrop label, .titlebar:not(headerbar) button:disabled label, .titlebar:not(headerbar) button:backdrop:disabled label,
+      headerbar button:backdrop label,
+      headerbar button:disabled label,
+      headerbar button:backdrop:disabled label {
+        color: rgba(255, 255, 255, 0.5); }
     .titlebar:not(headerbar) button:backdrop:hover, .titlebar:not(headerbar) button:backdrop:active, .titlebar:not(headerbar) button:backdrop:checked,
     headerbar button:backdrop:hover,
     headerbar button:backdrop:active,
     headerbar button:backdrop:checked {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.5);
       background-color: transparent;
       border-radius: 0;
       text-shadow: none;
@@ -3030,7 +3036,7 @@ menu,
     .menu menuitem:backdrop:hover,
     .context-menu menuitem:backdrop,
     .context-menu menuitem:backdrop:hover {
-      color: #989a9e;
+      color: rgba(254, 254, 254, 0.8);
       background-color: transparent; }
     menu menuitem arrow,
     .menu menuitem arrow,
@@ -3259,7 +3265,7 @@ notebook > header {
         border-color: transparent;
         background-color: rgba(49, 54, 61, 0.2); }
     notebook > header tab:backdrop {
-      color: #6f7277; }
+      color: rgba(152, 154, 158, 0.88); }
       notebook > header tab:backdrop.reorderable-page {
         border-color: transparent;
         background-color: transparent; }
@@ -3271,7 +3277,7 @@ notebook > header {
         notebook > header tab:checked.reorderable-page:hover {
           background-color: rgba(49, 54, 61, 0.7); }
     notebook > header tab:backdrop:checked {
-      color: #989a9e; }
+      color: rgba(254, 254, 254, 0.8); }
       notebook > header tab:backdrop:checked.reorderable-page {
         border-color: rgba(33, 37, 41, 0.19);
         background-color: #31363d; }
@@ -3991,7 +3997,7 @@ scrollbar {
     scrollbar slider:hover:active {
       background-color: #2fc9ec; }
     scrollbar slider:backdrop {
-      background-color: #5a5e64; }
+      background-color: rgba(112, 116, 120, 0.92); }
     scrollbar slider:disabled {
       background-color: transparent; }
   scrollbar.fine-tune slider {
@@ -4082,7 +4088,7 @@ scrollbar {
       box-shadow: inset 0 1px rgba(255, 255, 255, 0);
       text-shadow: none;
       -gtk-icon-shadow: none;
-      color: #5a5e64; }
+      color: rgba(112, 116, 120, 0.92); }
       scrollbar button:backdrop:disabled {
         border-color: transparent;
         background-color: transparent;
@@ -4090,7 +4096,7 @@ scrollbar {
         box-shadow: inset 0 1px rgba(255, 255, 255, 0);
         text-shadow: none;
         -gtk-icon-shadow: none;
-        color: rgba(90, 94, 100, 0.2); }
+        color: rgba(112, 116, 120, 0.12); }
   scrollbar.vertical button.down {
     -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
   scrollbar.vertical button.up {
@@ -4123,12 +4129,12 @@ treeview ~ scrollbar.vertical {
     background-color: #42464d;
     border-color: rgba(33, 37, 41, 0.19);
     transition: 200ms ease-out;
-    color: #989a9e; }
+    color: rgba(254, 254, 254, 0.8); }
   .sidebar list {
     background-color: transparent;
     color: #fefefe; }
     .sidebar list:backdrop {
-      color: #989a9e; }
+      color: rgba(254, 254, 254, 0.8); }
     .sidebar list row label {
       padding-left: 10px; }
     .sidebar list button {
@@ -4181,7 +4187,7 @@ spinbutton:not(.vertical) {
       background-color: rgba(0, 0, 0, 0.1);
       box-shadow: inset 0 2px 3px -1px rgba(0, 0, 0, 0.2); }
     spinbutton:not(.vertical) button:backdrop {
-      color: #919397;
+      color: rgba(229, 230, 231, 0.82);
       background-color: transparent;
       border-color: rgba(33, 37, 41, 0);
       transition: 200ms ease-out; }
@@ -4500,7 +4506,7 @@ treeview.view {
     treeview.view.separator:backdrop {
       color: rgba(49, 54, 61, 0.1); }
   treeview.view:backdrop {
-    border-left-color: #65686e;
+    border-left-color: rgba(131, 134, 138, 0.9);
     border-top: #31363d; }
   treeview.view:drop(active) {
     border-style: solid none;
@@ -4526,7 +4532,7 @@ treeview.view {
     treeview.view.expander:checked {
       -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
     treeview.view.expander:backdrop {
-      color: #83868a; }
+      color: rgba(187, 188, 191, 0.86); }
   treeview.view.progressbar {
     border: 1px solid #0f8aa6;
     border-radius: 4px;
@@ -4598,7 +4604,7 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   treeview.view header button:backdrop {
     border-color: #31363d;
     border-style: none solid solid none;
-    color: #65686e;
+    color: rgba(131, 134, 138, 0.9);
     background-image: none;
     background-color: #52565c; }
     treeview.view header button:backdrop:disabled {

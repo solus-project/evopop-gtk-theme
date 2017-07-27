@@ -14,6 +14,7 @@ headerbar {
 
   &:backdrop {
     border-color: $backdrop_borders_color;
+    color: $backdrop_headerbar_fg_color;
     background-image: none;
 
     transition: $backdrop_transition;
@@ -69,14 +70,15 @@ headerbar {
     &:backdrop,
     &:disabled,
     &:backdrop:disabled {
-      @include button(backdrop-header,transparent,transparentize(white,0.7));
+      @include button(backdrop-header,transparent,transparentize(white,0.5));
+      label { color: transparentize(white, 0.5); }
     }
 
     &:backdrop {
       &:hover,
       &:active,
       &:checked {
-        @include button(hover-header,transparent,transparentize(white,0.7));
+        @include button(hover-header,transparent,transparentize(white,0.5));
       }
     }
 
