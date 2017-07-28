@@ -24,6 +24,8 @@ headerbar {
     font-weight: 700;
     padding-left: 12px;
     padding-right: 12px;
+
+    &:backdrop { color: $backdrop_headerbar_fg_color; }
   }
 
   .subtitle {
@@ -32,6 +34,8 @@ headerbar {
     padding-right: 12px;
 
     @extend .dim-label;
+
+    &:backdrop { color: $backdrop_headerbar_fg_color; }
   }
 
   %linked-header {

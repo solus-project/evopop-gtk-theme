@@ -2312,11 +2312,17 @@ headerbar {
     font-weight: 700;
     padding-left: 12px;
     padding-right: 12px; }
+    .titlebar:not(headerbar) .title:backdrop,
+    headerbar .title:backdrop {
+      color: rgba(254, 254, 254, 0.8); }
   .titlebar:not(headerbar) .subtitle,
   headerbar .subtitle {
     font-size: smaller;
     padding-left: 12px;
     padding-right: 12px; }
+    .titlebar:not(headerbar) .subtitle:backdrop,
+    headerbar .subtitle:backdrop {
+      color: rgba(254, 254, 254, 0.8); }
   .titlebar:not(headerbar) .linked > button,
   .titlebar:not(headerbar) .linked > button:hover,
   .titlebar:not(headerbar) .linked > button:active,
