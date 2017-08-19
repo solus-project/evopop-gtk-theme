@@ -2360,6 +2360,27 @@ headerbar {
     headerbar .linked > button:only-child {
       border-radius: 0px;
       border-style: solid; }
+  .titlebar:not(headerbar) switch,
+  headerbar switch {
+    background-color: #7e838d; }
+    .titlebar:not(headerbar) switch:backdrop,
+    headerbar switch:backdrop {
+      background-color: #7e838d; }
+    .titlebar:not(headerbar) switch:disabled,
+    headerbar switch:disabled {
+      background-color: #3d4654; }
+    .titlebar:not(headerbar) switch:backdrop:disabled,
+    headerbar switch:backdrop:disabled {
+      background-color: #3d4654; }
+    .titlebar:not(headerbar) switch slider,
+    headerbar switch slider {
+      background-color: #283141; }
+      .titlebar:not(headerbar) switch slider:disabled,
+      headerbar switch slider:disabled {
+        background-color: #283141; }
+      .titlebar:not(headerbar) switch slider:backdrop:disabled,
+      headerbar switch slider:backdrop:disabled {
+        background-color: #283141; }
   .titlebar:not(headerbar) button,
   headerbar button {
     color: #fefefe;

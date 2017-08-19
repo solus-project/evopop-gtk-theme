@@ -61,6 +61,23 @@ headerbar {
     }
   }
 
+  switch {
+    background-color: mix($headerbar_color, $headerbar_fg_color, 60%);
+    &:backdrop { background-color: mix($headerbar_color, $headerbar_fg_color, 60%); }
+
+    &:disabled { background-color: mix($headerbar_color, $headerbar_fg_color, 90%); }
+    &:backdrop {
+      &:disabled { background-color: mix($headerbar_color, $headerbar_fg_color, 90%); }
+    }
+    slider {
+      background-color: $headerbar_color;
+      &:disabled { background-color: $headerbar_color; }
+      &:backdrop {
+        &:disabled { background-color: $headerbar_color; }
+      }
+    }
+  }
+
   button {
     @include button(normal-header);
     min-height: 34px;
