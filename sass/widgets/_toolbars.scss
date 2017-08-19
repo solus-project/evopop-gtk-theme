@@ -6,6 +6,18 @@
   padding: 4px;
   color: $fg_color;
   background-color: $bg_color;
+
+  button,
+  button:backdrop {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    &:hover {
+      box-shadow: none;
+      color: $selected_bg_color;
+      background-color: transparent;
+    }
+  }
 }
 
 toolbar {

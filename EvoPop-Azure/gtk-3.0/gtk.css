@@ -4453,6 +4453,24 @@ toolbar, .inline-toolbar, searchbar,
   padding: 4px;
   color: #283141;
   background-color: #f0f1f3; }
+  toolbar button, .inline-toolbar button, searchbar button,
+  .location-bar button,
+  toolbar button:backdrop,
+  .inline-toolbar button:backdrop,
+  searchbar button:backdrop,
+  .location-bar button:backdrop {
+    border: none;
+    box-shadow: none;
+    background-color: transparent; }
+    toolbar button:hover, .inline-toolbar button:hover, searchbar button:hover,
+    .location-bar button:hover,
+    toolbar button:backdrop:hover,
+    .inline-toolbar button:backdrop:hover,
+    searchbar button:backdrop:hover,
+    .location-bar button:backdrop:hover {
+      box-shadow: none;
+      color: #37b9a5;
+      background-color: transparent; }
 
 toolbar {
   padding: 4px 3px 3px 4px; }
