@@ -82,6 +82,12 @@ button.combo {
       }
     }
   }
+  &:disabled {
+    @include button(insensitive);
+
+    &:active,
+    &:checked { @include button(insensitive-active); }
+  }
 }
 
 notebook, list, .view, popover {
