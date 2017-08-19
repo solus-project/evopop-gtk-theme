@@ -4383,7 +4383,7 @@ switch {
   switch:disabled {
     background-color: #f0f1f3; }
   switch:backdrop {
-    background-color: #e6e8eb;
+    background-color: rgba(0, 0, 0, 0.05);
     transition: 200ms ease-out; }
     switch:backdrop:disabled {
       background-color: #f0f1f3; }

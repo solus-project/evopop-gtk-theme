@@ -4376,7 +4376,7 @@ switch {
   switch:disabled {
     background-color: #3d4248; }
   switch:backdrop {
-    background-color: #31363d;
+    background-color: rgba(0, 0, 0, 0.05);
     transition: 200ms ease-out; }
     switch:backdrop:disabled {
       background-color: #3d4248; }
