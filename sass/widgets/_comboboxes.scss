@@ -39,3 +39,56 @@ combobox {
 .linked.vertical > combobox:first-child > box > button.combo { @extend %linked_vertical:first-child; }
 .linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
 .linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
+
+
+button.combo {
+  border: none;
+  @include button(normal);
+
+  &:hover {
+    border: none;
+    @include button(hover,$selected_bg_color,$selected_fg_color);
+  }
+
+  &:active,
+  &:checked {
+    border: none;
+    @include button(active,darken($selected_bg_color,5%),$selected_fg_color);
+
+    transition-duration: 50ms;
+  }
+
+  &:backdrop {
+    border: none;
+    @include button(backdrop);
+
+    transition: $backdrop_transition;
+    -gtk-icon-effect: none;
+
+    &:active,
+    &:checked {
+      border: none;
+      @include button(backdrop-active);
+    }
+
+    &:disabled {
+      border: none;
+      @include button(backdrop-insensitive);
+
+      &:active,
+      &:checked {
+        border: none;
+        @include button(backdrop-insensitive-active);
+      }
+    }
+  }
+}
+
+notebook, list, .view, popover {
+  button.combo {
+    box-shadow: inset 0px 0px 0px 1px $borders_color;
+    &:backdrop {
+      box-shadow: inset 0px 0px 0px 1px $borders_color;
+    }
+  }
+}

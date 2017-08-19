@@ -1685,6 +1685,69 @@ combobox arrow {
 combobox:drop(active) {
   box-shadow: none; }
 
+button.combo {
+  border: none;
+  font-weight: 700;
+  color: #283141;
+  outline-color: rgba(40, 49, 65, 0.3);
+  background-color: #fefefe;
+  text-shadow: none;
+  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+  button.combo:hover {
+    border: none;
+    color: #fefefe;
+    outline-color: rgba(254, 254, 254, 0.3);
+    background-color: #37b9a5;
+    text-shadow: none;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+  button.combo:active, button.combo:checked {
+    border: none;
+    color: #fefefe;
+    outline-color: rgba(254, 254, 254, 0.3);
+    background-color: #31a593;
+    text-shadow: none;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+    transition-duration: 50ms; }
+  button.combo:backdrop {
+    border: none;
+    color: #525966;
+    outline-color: rgba(40, 49, 65, 0.3);
+    background-color: #fbfbfb;
+    text-shadow: none;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
+    transition: 200ms ease-out;
+    -gtk-icon-effect: none; }
+    button.combo:backdrop label {
+      color: #525966; }
+    button.combo:backdrop:active, button.combo:backdrop:checked {
+      border: none;
+      color: rgba(254, 254, 254, 0.7);
+      outline-color: rgba(40, 49, 65, 0.3);
+      background-color: #37b9a5;
+      text-shadow: none;
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+      button.combo:backdrop:active label, button.combo:backdrop:checked label {
+        color: rgba(254, 254, 254, 0.7); }
+    button.combo:backdrop:disabled {
+      border: none;
+      color: #525966;
+      outline-color: rgba(40, 49, 65, 0.3);
+      background-color: #f6f6f7;
+      text-shadow: none;
+      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+      button.combo:backdrop:disabled:active, button.combo:backdrop:disabled:checked {
+        border: none;
+        color: rgba(254, 254, 254, 0.7);
+        outline-color: rgba(40, 49, 65, 0.3);
+        background-color: #37b9a5;
+        text-shadow: none;
+        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
+
+notebook button.combo, list button.combo, .view button.combo, iconview button.combo, popover button.combo {
+  box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
+  notebook button.combo:backdrop, list button.combo:backdrop, .view button.combo:backdrop, iconview button.combo:backdrop, popover button.combo:backdrop {
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
+
 /***********
  * Dialogs *
  ***********/
