@@ -4383,7 +4383,7 @@ switch {
   switch:disabled {
     background-color: #f0f1f3; }
   switch:backdrop {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.08);
     transition: 200ms ease-out; }
     switch:backdrop:disabled {
       background-color: #f0f1f3; }
@@ -5493,6 +5493,9 @@ headerbar .budgie-run-dialog list row:selected .subtitle {
 .budgie-menubar menuitem check, .budgie-menubar menuitem radio {
   min-height: 16px;
   min-width: 16px; }
+
+window.background.budgie-settings-window.csd > box.horizontal > stack > scrolledwindow buttonbox.inline-toolbar {
+  border-style: none none solid; }
 
 /************
  * Nautilus *

@@ -21,7 +21,7 @@ switch {
   }
 
   &:backdrop {
-    background-color: transparentize(black, 0.95);
+    background-color: transparentize(black, 0.92);
     transition: $backdrop_transition;
 
     &:disabled { background-color: $insensitive_bg_color; }

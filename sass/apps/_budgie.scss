@@ -870,3 +870,14 @@ calendar.raven-calendar {
         }
     }
 }
+
+// settings-window
+window.background.budgie-settings-window.csd {
+
+  > box.horizontal > stack > scrolledwindow {
+
+      // hide double-borders
+      buttonbox.inline-toolbar { border-style: none none solid; }
+
+  }
+}
