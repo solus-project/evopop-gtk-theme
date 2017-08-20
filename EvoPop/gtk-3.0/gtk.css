@@ -3094,6 +3094,9 @@ menubar,
   -GtkWidget-window-dragging: true;
   padding: 0px;
   box-shadow: inset 0 -1px rgba(0, 0, 0, 0.1); }
+  menubar label:backdrop,
+  .menubar label:backdrop {
+    color: rgba(254, 254, 254, 0.8); }
   menubar > menuitem,
   .menubar > menuitem {
     min-height: 16px;
@@ -5593,7 +5596,7 @@ headerbar .budgie-run-dialog list row:selected .subtitle {
   background-color: rgba(26, 29, 33, 0.95); }
   .budgie-menubar menu menuitem:hover {
     background-color: #13b1d5;
-    color: #31373d; }
+    color: #fefefe; }
 .budgie-menubar arrow {
   border: none;
   min-width: 16px;
