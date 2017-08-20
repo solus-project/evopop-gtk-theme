@@ -354,6 +354,8 @@ button.raven-trigger {
       margin: 0;
     }
 
+    label { color: $headerbar_fg_color; }
+
     &.transparent {
         background-color: transparent;
 

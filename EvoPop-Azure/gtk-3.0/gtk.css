@@ -4992,6 +4992,8 @@ button.raven-trigger {
   .budgie-panel popover row {
     padding: 0;
     margin: 0; }
+  .budgie-panel label {
+    color: #fefefe; }
   .budgie-panel.transparent {
     background-color: transparent; }
     .top .budgie-panel.transparent {
