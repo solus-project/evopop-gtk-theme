@@ -4760,6 +4760,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
 .budgie-popover list,
 .budgie-popover row {
   padding: 0;
+  margin: 0;
   background: none;
   border: none;
   box-shadow: none;
@@ -4777,6 +4778,15 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   background-clip: border-box;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.35);
   border: 1px solid @borders; }
+  .budgie-popover list:hover,
+  .budgie-popover row:hover,
+  .budgie-popover.background list:hover,
+  .budgie-popover.background row:hover {
+    background: none; }
+  .budgie-popover > frame.container,
+  .budgie-popover.background > frame.container {
+    margin: 0 -1px -1px;
+    padding: 2px 0 0; }
 
 .budgie-popover > .container {
   padding: 2px; }
@@ -4852,16 +4862,12 @@ button.budgie-menu-launcher {
       box-shadow: none;
       background-color: transparent; }
 
-.user-menu list:hover,
-.user-menu row:hover {
-  background: none; }
-.user-menu button {
-  margin-top: 4px;
-  margin-bottom: 4px; }
 .user-menu .content-box separator {
+  margin-left: 6px;
+  margin-right: 6px;
   background-color: rgba(40, 49, 65, 0.1); }
-.user-menu .container {
-  padding: 6px; }
+.user-menu button {
+  margin: 5px; }
 .user-menu > box.vertical row.activatable:first-child .indicator-item,
 .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
