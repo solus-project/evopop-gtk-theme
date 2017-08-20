@@ -162,20 +162,26 @@ button.budgie-menu-launcher {
 
 // User Menu
 .user-menu {
-    .content-box separator {
-      background-color: transparentize($fg_color, 0.9); }
-      padding-bottom: 5px;
+
+    list,
+    row {
+      &:hover { background: none; }
+    }
+
+    button {
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .content-box separator { background-color: transparentize($fg_color, 0.9); }
     .container { padding: 6px; }
-
-
 
     // top-row (user-name and avatar)
     > box.vertical row.activatable:first-child,
     > frame.container > box.vertical row.activatable:first-child {
-      margin-bottom: 5px;
 
       .indicator-item {
-        box-shadow: inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight;
+        box-shadow: $depth;
         background-color: if($subtheme=='azure',$darkpurple, $cyan);
         transition-duration: 0.2s;
 
@@ -354,7 +360,10 @@ button.raven-trigger {
       margin: 0;
     }
 
-    label { color: $headerbar_fg_color; }
+    label {
+      color: $headerbar_fg_color;
+      font-weight: 700;
+    }
 
     &.transparent {
         background-color: transparent;
@@ -760,13 +769,14 @@ calendar.raven-calendar {
     flowbox { color: $fg_color; }
     flowboxchild {
         padding: 3px;
+        margin: 3px;
         color: $fg_color;
 
         &:hover { background-color: $button_bg; }
         &:active { color: $fg_color; }
         &:selected {
             color: $selected_fg_color;
-            background-color: transparentize($selected_bg_color,0.2);
+            background-color: transparentize($selected_bg_color,0.5);
 
             &:active { color: $selected_fg_color; }
             &:hover { background-color: mix(black, $selected_bg_color, 10%); }
@@ -788,6 +798,8 @@ calendar.raven-calendar {
 .budgie-session-dialog {
     color: $headerbar_fg_color;
     background-color: $panel_bg;
+
+    label:backdrop { color: $backdrop_headerbar_fg_color; }
     &.background { @extend .drop-shadow; }
     .dialog-title { font-size: 120%; }
 
@@ -820,10 +832,10 @@ calendar.raven-calendar {
     }
 
     entry {
-      background-color: transparentize(black, 0.8);
+      background-color: if($subtheme == 'azure', #39465c, #505359);
       color: $headerbar_fg_color;
-      &:focus { background-color: transparentize(black, 0.8); }
-      &:backdrop { background-color: transparentize(black, 0.8); }
+      &:focus { background-color: if($subtheme == 'azure', #39465c, #505359); }
+      &:backdrop { background-color: if($subtheme == 'azure', #39465c, #505359); }
     }
 }
 

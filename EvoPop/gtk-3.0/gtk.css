@@ -4359,7 +4359,7 @@ switch {
     border-radius: 50%;
     transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
     background-color: #fefefe;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     switch slider:backdrop {
       padding: 2px;
       box-shadow: none;
@@ -4852,48 +4852,49 @@ button.budgie-menu-launcher {
       box-shadow: none;
       background-color: transparent; }
 
-.user-menu {
-  padding-bottom: 5px; }
-  .user-menu .content-box separator {
-    background-color: rgba(49, 55, 61, 0.1); }
-  .user-menu .container {
-    padding: 6px; }
-  .user-menu > box.vertical row.activatable:first-child,
-  .user-menu > frame.container > box.vertical row.activatable:first-child {
-    margin-bottom: 5px; }
-    .user-menu > box.vertical row.activatable:first-child .indicator-item,
-    .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item {
-      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
-      background-color: #37b9a5;
-      transition-duration: 0.2s; }
-      .user-menu > box.vertical row.activatable:first-child .indicator-item:dir(ltr),
-      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item:dir(ltr) {
-        padding-left: 7px;
-        background-position: left center;
-        background-repeat: no-repeat;
-        background-size: 38px auto; }
-      .user-menu > box.vertical row.activatable:first-child .indicator-item:dir(rtl),
-      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item:dir(rtl) {
-        padding-right: 7px;
-        background-position: right center;
-        background-repeat: no-repeat;
-        background-size: 38px auto; }
-      .user-menu > box.vertical row.activatable:first-child .indicator-item label,
-      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label {
-        color: #fefefe; }
-        .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(ltr),
-        .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(ltr) {
-          padding-left: 5px; }
-        .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(rtl),
-        .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(rtl) {
-          padding-right: 5px; }
-      .user-menu > box.vertical row.activatable:first-child .indicator-item image,
-      .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item image {
-        color: #fefefe; }
-        .user-menu > box.vertical row.activatable:first-child .indicator-item image:first-child,
-        .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item image:first-child {
-          min-width: 24px;
-          min-height: 20px; }
+.user-menu list:hover,
+.user-menu row:hover {
+  background: none; }
+.user-menu button {
+  margin-top: 4px;
+  margin-bottom: 4px; }
+.user-menu .content-box separator {
+  background-color: rgba(49, 55, 61, 0.1); }
+.user-menu .container {
+  padding: 6px; }
+.user-menu > box.vertical row.activatable:first-child .indicator-item,
+.user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  background-color: #37b9a5;
+  transition-duration: 0.2s; }
+  .user-menu > box.vertical row.activatable:first-child .indicator-item:dir(ltr),
+  .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item:dir(ltr) {
+    padding-left: 7px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 38px auto; }
+  .user-menu > box.vertical row.activatable:first-child .indicator-item:dir(rtl),
+  .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item:dir(rtl) {
+    padding-right: 7px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 38px auto; }
+  .user-menu > box.vertical row.activatable:first-child .indicator-item label,
+  .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label {
+    color: #fefefe; }
+    .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(ltr),
+    .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(ltr) {
+      padding-left: 5px; }
+    .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(rtl),
+    .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(rtl) {
+      padding-right: 5px; }
+  .user-menu > box.vertical row.activatable:first-child .indicator-item image,
+  .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item image {
+    color: #fefefe; }
+    .user-menu > box.vertical row.activatable:first-child .indicator-item image:first-child,
+    .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item image:first-child {
+      min-width: 24px;
+      min-height: 20px; }
 
 button.raven-trigger {
   padding-left: 2px;
@@ -4994,7 +4995,8 @@ button.raven-trigger {
     padding: 0;
     margin: 0; }
   .budgie-panel label {
-    color: #fefefe; }
+    color: #fefefe;
+    font-weight: 700; }
   .budgie-panel.transparent {
     background-color: transparent; }
     .top .budgie-panel.transparent {
@@ -5377,6 +5379,7 @@ calendar.raven-calendar {
   color: #31373d; }
 .budgie-switcher-window flowboxchild {
   padding: 3px;
+  margin: 3px;
   color: #31373d; }
   .budgie-switcher-window flowboxchild:hover {
     background-color: transparent; }
@@ -5384,7 +5387,7 @@ calendar.raven-calendar {
     color: #31373d; }
   .budgie-switcher-window flowboxchild:selected {
     color: #fefefe;
-    background-color: rgba(19, 177, 213, 0.8); }
+    background-color: rgba(19, 177, 213, 0.5); }
     .budgie-switcher-window flowboxchild:selected:active {
       color: #fefefe; }
     .budgie-switcher-window flowboxchild:selected:hover {
@@ -5398,6 +5401,8 @@ calendar.raven-calendar {
 .budgie-session-dialog, .budgie-polkit-dialog, .budgie-run-dialog {
   color: #fefefe;
   background-color: rgba(26, 29, 33, 0.95); }
+  .budgie-session-dialog label:backdrop, .budgie-polkit-dialog label:backdrop, .budgie-run-dialog label:backdrop {
+    color: rgba(254, 254, 254, 0.8); }
   .budgie-session-dialog .dialog-title, .budgie-polkit-dialog .dialog-title, .budgie-run-dialog .dialog-title {
     font-size: 120%; }
   .budgie-session-dialog .linked.horizontal > button, .budgie-polkit-dialog .linked.horizontal > button, .budgie-run-dialog .linked.horizontal > button {
@@ -5432,12 +5437,12 @@ calendar.raven-calendar {
       .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-run-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked, .budgie-run-dialog .linked.horizontal > button.destructive-action:checked {
         background-color: rgba(199, 34, 64, 0.9); }
   .budgie-session-dialog entry, .budgie-polkit-dialog entry, .budgie-run-dialog entry {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: #505359;
     color: #fefefe; }
     .budgie-session-dialog entry:focus, .budgie-polkit-dialog entry:focus, .budgie-run-dialog entry:focus {
-      background-color: rgba(0, 0, 0, 0.2); }
+      background-color: #505359; }
     .budgie-session-dialog entry:backdrop, .budgie-polkit-dialog entry:backdrop, .budgie-run-dialog entry:backdrop {
-      background-color: rgba(0, 0, 0, 0.2); }
+      background-color: #505359; }
 
 .budgie-polkit-dialog .message {
   color: rgba(254, 254, 254, 0.7); }

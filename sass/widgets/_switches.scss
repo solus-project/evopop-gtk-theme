@@ -56,8 +56,7 @@ switch {
     transition: $button_transition;
     background-color: $base_color;
 
-    box-shadow: 0 2px 2px transparentize(black, 0.8),
-                0 1px 2px transparentize(black, 0.8);
+    box-shadow: $depth;
 
     &:backdrop {
       padding:2px;
