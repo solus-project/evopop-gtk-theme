@@ -87,6 +87,7 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
         border-bottom: 1px solid #{"@borders"};
         border-radius: 0;
         font-size: 120%;
+        box-shadow: none;
 
         image {
             &:dir(ltr) { padding-left: 8px; padding-right: 12px; }
@@ -128,7 +129,12 @@ $pos_list: ((top, bottom),(bottom,top),(left,right),(right,left));
       border-color: transparent;
     }
 
-    button:not(.category-button) { padding-top: 5px; padding-bottom: 5px; }
+    button:not(.category-button) {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border-radius: 0;
+      box-shadow: none;
+    }
 
     undershoot, overshoot { background: none; }
 }
@@ -578,8 +584,8 @@ button.raven-trigger {
       margin-bottom: 3px;
       background: transparentize($darkpurple,0.3);
       color: $selected_fg_color;
+      box-shadow: $depth;
       border: none;
-      box-shadow: none;
       font-size: 100%;
 
       &:hover {
@@ -665,7 +671,26 @@ calendar.raven-calendar {
     border-width: 1px 0;
     border-bottom-color: $bottom_highlight;
 
-    button.image-button { padding: 8px; }
+    button.image-button {
+      padding: 10px;
+      background-color: $base_color;
+      box-shadow: $depth;
+
+      &:hover { background-color: $selected_bg_color; }
+
+      &:active { background-color: darken($selected_bg_color,5%); }
+
+      &:first-child { margin-right: 4px; }
+
+      &:last-child { margin-left: 4px; }
+
+      &:last-child,
+      &:first-child {
+        padding: 4px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+    }
 }
 
 // Notifications
