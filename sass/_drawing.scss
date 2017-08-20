@@ -2,6 +2,9 @@
 * Drawing mixins *
 *****************/
 
+  $depth: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.20), inset 0px 1px 0px 0px $top_highlight;
+  $depth2: 0 1px 1px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px $top_highlight;
+
 // generic drawing of more complex things
 
 @function _widget_edge($c:$borders_edge) {
@@ -64,12 +67,13 @@
 //
 
   $_blank_edge: if($edge == none, none, 0 1px transparentize($edge, 1));
-  $_entry_edge: if($edge == none, none, _widget_edge($edge));
+  $_entry_edge: $depth;
 
   @if $t==normal {
     color: $text_color;
-    border-color: $borders_color;
+    border: none;
     background-color: $base_color;
+    box-shadow: $_entry_edge;
     // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
   }
   @if $t==focus {
@@ -77,21 +81,21 @@
   }
   @if $t==insensitive {
     color: $insensitive_fg_color;
-    border-color: $borders_color;
+    border: none;
     background-color: $insensitive_bg_color;
     box-shadow: $_entry_edge;
   }
   @if $t==backdrop {
     color: $backdrop_text_color;
-    border-color: $backdrop_borders_color;
+    border: none;
     background-color: $backdrop_base_color;
-    box-shadow: $_blank_edge;
+    box-shadow: $_entry_edge;
   }
   @if $t==backdrop-insensitive {
     color: $backdrop_insensitive_color;
-    border-color: $backdrop_borders_color;
+    border: none;
     background-color: $insensitive_bg_color;
-    box-shadow: $_blank_edge;
+    box-shadow: $_entry_edge;
   }
   @if $t==osd {
     color: $osd_text_color;
@@ -211,7 +215,7 @@
     outline-color: transparentize($tc, 0.7);
     background-color: $c;
     text-shadow: none;
-    @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+    @include _shadows($depth);
   }
 
   @else if $t==hover {
@@ -222,7 +226,7 @@
     outline-color: transparentize($tc, 0.7);
     background-color: $c;
     text-shadow: none;
-    @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+    @include _shadows($depth2);
   }
 
   @if $t==normal-header {
@@ -267,7 +271,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: if($c==$base_color, $selected_bg_color, $c);
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth2);
 }
   @else if $t==insensitive {
   //
@@ -277,7 +281,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: if($c==$base_color, $insensitive_bg_color, $c);
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth);
 }
   @else if $t==insensitive-active {
   //
@@ -287,7 +291,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: if($c==$base_color, $selected_bg_color, $c);
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth2);
   label { color: transparentize($selected_fg_color, 0.3); }
 }
   @else if $t==backdrop {
@@ -298,7 +302,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: if($c==$base_color, $backdrop_base_color, $c);
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth);
   label { color: $backdrop_text_color; }
 }
 
@@ -310,7 +314,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: $selected_bg_color;
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth2);
   label { color: transparentize($selected_fg_color, 0.3); }
 }
 
@@ -322,7 +326,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: if($c==$base_color, $insensitive_bg_color, $c);
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth);
 }
 
   @else if $t==backdrop-insensitive-active {
@@ -333,7 +337,7 @@ box-shadow: none;
   outline-color: transparentize($tc, 0.7);
   background-color: $selected_bg_color;
   text-shadow: none;
-  @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  @include _shadows($depth2);
 }
 
   @else if $t==osd {

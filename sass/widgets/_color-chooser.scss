@@ -6,9 +6,9 @@ colorswatch {
   // is colorswatch overlay {}, colorswatch has the programmatically set background, so most of the style is
   // applied to the overlay box.
 
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.20), inset 0px 1px 0px 0px $top_highlight;
+  box-shadow: $depth;
 
-  &:hover { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px $top_highlight; }
+  &:hover { box-shadow: $depth2; }
 
   &#add-color-button { border-radius: 0; }
 

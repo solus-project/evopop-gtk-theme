@@ -439,12 +439,7 @@ toolbar.inline-toolbar toolbutton:backdrop {
   }
 }
 
-%linked_middle {
-  border: 1px solid $borders_color;
-  border-radius: 0;
-  border-right-style: none;
-  box-shadow: inset 0px 1px 0px 0px $top_highlight;
-}
+%linked_middle { border-radius: 0; }
 
 %linked {
   @extend %linked_middle;
@@ -457,17 +452,14 @@ toolbar.inline-toolbar toolbutton:backdrop {
   &:last-child {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    border-right-style: solid;
   }
 
   &:only-child {
     border-radius: 2px;
-    border-style: solid;
   }
 }
 
 %linked_vertical_middle {
-  border-style: solid solid none solid;
   border-radius: 0;
 }
 
@@ -482,12 +474,10 @@ toolbar.inline-toolbar toolbutton:backdrop {
   &:last-child {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    border-style: solid;
   }
 
   &:only-child {
     border-radius: 2px;
-    border-style: solid;
   }
 }
 
@@ -542,20 +532,8 @@ button.color {
 
   colorswatch:only-child {
     &, overlay { border-radius: 0; }
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.20), inset 0px 1px 0px 0px $top_highlight;
+    box-shadow: $depth;
 
-    &:hover { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px $top_highlight; }
-  }
-}
-
-notebook, list, .view, popover {
-  button {
-    box-shadow: inset 0px 0px 0px 1px $borders_color;
-    &:backdrop {
-      box-shadow: inset 0px 0px 0px 1px $borders_color;
-    }
-  }
-  .linked > button {
-    box-shadow: none;
+    &:hover { box-shadow: $depth2; }
   }
 }

@@ -9,6 +9,13 @@ spinbutton {
     @extend %entry;
 
     padding: 0;
+    box-shadow: none;
+
+    &:backdrop,
+    &:disabled,
+    &:backdrop:disabled {
+      box-shadow: none;
+    }
 
     entry {
       min-width: 28px;
@@ -18,7 +25,11 @@ spinbutton {
       background-color: transparent;
       border: none;
       border-radius: 0;
-      box-shadow: none;
+
+      &:backdrop:disabled {
+        background-color: $insensitive_bg_color;
+      }
+
     }
 
     button {
@@ -28,10 +39,7 @@ spinbutton {
       padding-top: 0;
       color: mix($text_color, $base_color, 90%);
       background-image: none;
-      border-style: none none none solid;
-      border-color: transparentize($borders_color, 0.7);
       border-radius: 0;
-      box-shadow: inset 1px 0px 0px 0px rgba(0,0,0,0.07);
 
       &:dir(rtl) { border-style: none solid none none; }
 
@@ -49,18 +57,13 @@ spinbutton {
 
       &:backdrop {
         color: mix($backdrop_fg_color, $backdrop_base_color, 90%);
-        background-color: transparent;
-        border-color: transparentize($backdrop_borders_color, 0.7);
         transition: $backdrop_transition;
       }
 
       &:backdrop:disabled {
         color: transparentize($backdrop_insensitive_color,0.7);
-        background-image: none;
-        border-style: none none none solid; // It is needed or it gets overridden
-        box-shadow: inset 1px 0px 0px 0px rgba(0,0,0,0.07);
-
-        &:dir(rtl) { border-style: none solid none none; }
+        background-color: $insensitive_bg_color;
+        box-shadow: $depth;
       }
 
       &:last-child {
@@ -145,9 +148,6 @@ spinbutton {
       min-height: 32px;
       min-width: 32px;
       padding: 0;
-      border-width: 1px;
-      border-color: $borders_color;
-      box-shadow: 0 1px $top_highlight;
 
       &.up { @extend %top_button; }
 

@@ -89,12 +89,3 @@ button.combo {
     &:checked { @include button(insensitive-active); }
   }
 }
-
-notebook, list, .view, popover {
-  button.combo {
-    box-shadow: inset 0px 0px 0px 1px $borders_color;
-    &:backdrop {
-      box-shadow: inset 0px 0px 0px 1px $borders_color;
-    }
-  }
-}
