@@ -18,11 +18,11 @@ levelbar {
     padding: 3px;
     border-radius: 2px;
     background-color: if($variant == 'light' ,transparentize(white,0.2),transparentize(black,0.86));
-    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
+    box-shadow: $depth;
 
     &:backdrop {
       background-color: if($variant == 'light' ,transparentize(white,0.4),transparentize(black,0.94));
-      box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.1);
+      box-shadow: $depth;
     }
   }
 
