@@ -1163,13 +1163,13 @@ popover.background radiobutton arrow {
     -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 
 button.color {
-  padding: 4px; }
+  padding: 5px; }
   button.color colorswatch:only-child {
-    box-shadow: 0 1px rgba(255, 255, 255, 0.76923); }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     button.color colorswatch:only-child, button.color colorswatch:only-child overlay {
       border-radius: 0; }
-    button.color colorswatch:only-child:disabled, button.color colorswatch:only-child:backdrop {
-      box-shadow: none; }
+    button.color colorswatch:only-child:hover {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 
 notebook button, list button, .view button, iconview button, popover button {
   box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.2); }
@@ -1607,72 +1607,21 @@ radio {
 /*****************
  * Color Chooser *
  *****************/
-colorswatch, colorswatch:drop(active) {
-  border-style: none; }
-colorswatch.dark overlay {
-  color: #fefefe; }
-  colorswatch.dark overlay:hover {
-    border-color: rgba(0, 0, 0, 0.8); }
-  colorswatch.dark overlay:backdrop {
-    color: rgba(254, 254, 254, 0.8); }
-colorswatch.light overlay {
-  color: #283141; }
-  colorswatch.light overlay:hover {
-    border-color: rgba(0, 0, 0, 0.5); }
-  colorswatch.light overlay:backdrop {
-    color: #525966; }
-colorswatch:drop(active) {
-  box-shadow: none; }
-  colorswatch:drop(active).light overlay {
-    border-color: #4e9a06;
-    box-shadow: inset 0 0 0 1px #3d7805, inset 0 0 0 1px #4e9a06; }
-  colorswatch:drop(active).dark overlay {
-    border-color: #4e9a06;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #4e9a06; }
-colorswatch overlay {
-  box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.3); }
-  colorswatch overlay:hover {
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.3); }
-  colorswatch overlay:backdrop, colorswatch overlay:backdrop:hover {
-    border-color: rgba(0, 0, 0, 0.3);
-    box-shadow: none; }
-colorswatch#add-color-button {
-  border-radius: 0px 0px 0 0; }
-  colorswatch#add-color-button:only-child {
-    border-radius: 0px; }
-  colorswatch#add-color-button overlay {
-    font-weight: 700;
-    color: #283141;
-    outline-color: rgba(40, 49, 65, 0.3);
-    background-color: #fefefe;
-    text-shadow: none;
-    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-    colorswatch#add-color-button overlay:hover {
-      color: #283141;
-      outline-color: rgba(40, 49, 65, 0.3);
-      background-color: #fefefe;
-      text-shadow: none;
-      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-    colorswatch#add-color-button overlay:backdrop {
-      color: #525966;
-      outline-color: rgba(40, 49, 65, 0.3);
-      background-color: #fbfbfb;
-      text-shadow: none;
-      box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
-      colorswatch#add-color-button overlay:backdrop label {
-        color: #525966; }
-colorswatch:disabled {
-  opacity: 0.5; }
-  colorswatch:disabled overlay {
-    border-color: rgba(0, 0, 0, 0.6);
-    box-shadow: none; }
-row:selected colorswatch {
-  box-shadow: 0 0 0 2px #fefefe; }
-colorswatch#editor-color-sample {
-  border-radius: 2px; }
-  colorswatch#editor-color-sample overlay {
+colorswatch {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  colorswatch:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  colorswatch#add-color-button {
+    border-radius: 0; }
+  colorswatch:disabled {
+    opacity: 0.5; }
+    colorswatch:disabled overlay {
+      border-color: rgba(0, 0, 0, 0.6);
+      box-shadow: none; }
+  colorswatch#editor-color-sample {
     border-radius: 2px; }
+    colorswatch#editor-color-sample overlay {
+      border-radius: 2px; }
 
 colorchooser .popover.osd {
   border-radius: 2px; }
@@ -2556,11 +2505,13 @@ headerbar {
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #37b9a5;
         text-shadow: none;
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
-        border-radius: 0; }
+        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
         .titlebar:not(headerbar) button.suggested-action:backdrop label,
         headerbar button.suggested-action:backdrop label {
           color: #525966; }
+        .titlebar:not(headerbar) button.suggested-action:backdrop label,
+        headerbar button.suggested-action:backdrop label {
+          color: rgba(254, 254, 254, 0.8); }
       .titlebar:not(headerbar) button.suggested-action:backdrop:disabled,
       headerbar button.suggested-action:backdrop:disabled {
         color: white;
@@ -2614,11 +2565,13 @@ headerbar {
         outline-color: rgba(255, 255, 255, 0.3);
         background-color: #b11e39;
         text-shadow: none;
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1);
-        border-radius: 0; }
+        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1), inset 0px -1px 0px 0px rgba(0, 0, 0, 0.1); }
         .titlebar:not(headerbar) button.destructive-action:backdrop label,
         headerbar button.destructive-action:backdrop label {
           color: #525966; }
+        .titlebar:not(headerbar) button.destructive-action:backdrop label,
+        headerbar button.destructive-action:backdrop label {
+          color: rgba(254, 254, 254, 0.8); }
       .titlebar:not(headerbar) button.destructive-action:backdrop:disabled,
       headerbar button.destructive-action:backdrop:disabled {
         color: white;

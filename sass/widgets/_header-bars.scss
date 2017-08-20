@@ -126,12 +126,12 @@ headerbar {
 
         &:disabled {
           @include button(insensitive, $b_color, white);
-          label {color: transparentize(white,0.5);}
+          label { color: transparentize(white,0.5); }
         }
 
         &:backdrop {
           @include button(backdrop, $b_color, white);
-          border-radius: 0;
+          label { color: $backdrop_headerbar_fg_color; }
         }
 
         &:backdrop:disabled { @include button(backdrop-insensitive, $b_color, white); }

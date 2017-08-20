@@ -538,17 +538,13 @@ modelbutton.flat arrow {
 }
 
 button.color {
-  padding: 4px;
+  padding: 5px;
 
   colorswatch:only-child {
     &, overlay { border-radius: 0; }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.20), inset 0px 1px 0px 0px $top_highlight;
 
-    @if $variant == 'light' {
-      box-shadow: 0 1px _text_shadow_color();
-
-      &:disabled,
-      &:backdrop { box-shadow: none; }
-    }
+    &:hover { box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px $top_highlight; }
   }
 }
 
