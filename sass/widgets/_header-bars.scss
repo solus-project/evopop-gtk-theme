@@ -103,6 +103,8 @@ headerbar {
       }
     }
 
+    &.image-button { border-radius: 0px; }
+
     @each $b_type, $b_color in (suggested-action, $cyan),
                                (destructive-action, $destructive_color) {
       &.#{$b_type} {
@@ -186,6 +188,8 @@ headerbar {
       @include button(normal, $selected_bg_color, $selected_fg_color);
 
       &.flat { @include button(undecorated); }
+
+      &.image-button { border-radius: 0px; }
 
       &:hover { @include button(hover, $selected_bg_color, $selected_fg_color); }
 

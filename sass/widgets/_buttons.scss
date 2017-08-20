@@ -95,6 +95,7 @@ button {
       min-width: 24px;
       padding-left: 4px;
       padding-right: 4px;
+      border-radius: 50px;
     }
 
     &.text-button {
@@ -105,6 +106,8 @@ button {
     &.text-button.image-button {
       padding-left: 8px;
       padding-right: 8px;
+      border-radius: 2px;
+
 
       label {
         padding-left: 8px;
