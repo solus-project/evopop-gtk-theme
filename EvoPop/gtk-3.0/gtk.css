@@ -4405,8 +4405,10 @@ toolbar, .inline-toolbar, searchbar,
     searchbar button:backdrop:hover,
     .location-bar button:backdrop:hover {
       box-shadow: none;
+      border-image: none;
       color: #13b1d5;
-      background-color: transparent; }
+      background-color: transparent;
+      -gtk-icon-effect: none; }
 
 toolbar {
   padding: 4px 3px 3px 4px; }
