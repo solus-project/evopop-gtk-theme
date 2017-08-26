@@ -4390,10 +4390,6 @@ toolbar, .inline-toolbar, searchbar,
     .inline-toolbar button:backdrop:hover,
     searchbar button:backdrop:hover,
     .location-bar button:backdrop:hover {
-      box-shadow: none;
-      border-image: none;
-      color: #13b1d5;
-      background-color: transparent;
       -gtk-icon-effect: none; }
 
 toolbar {

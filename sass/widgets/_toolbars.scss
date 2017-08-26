@@ -13,10 +13,6 @@
     box-shadow: none;
     background-color: transparent;
     &:hover {
-      box-shadow: none;
-      border-image: none;
-      color: $selected_bg_color;
-      background-color: transparent;
       -gtk-icon-effect: none;
     }
   }
