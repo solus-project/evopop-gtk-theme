@@ -10,6 +10,7 @@ entry {
     padding-right: 8px;
     border: none;
     border-radius: 2px;
+    margin: 1px;
     transition: all 200ms $ease-out-quad;
 
     @include entry(normal);

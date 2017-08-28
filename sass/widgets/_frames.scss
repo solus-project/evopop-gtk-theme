@@ -14,11 +14,15 @@ frame > border,
   &:backdrop { border-color: $backdrop_borders_color; }
 }
 
-actionbar > revealer >  box {
-  padding: 6px;
-  border-top: 1px solid $borders_color;
 
-  &:backdrop { border-color: $backdrop_borders_color; }
+actionbar {
+  > frame > border { border-width: 1px 0 0; }
+  > revealer >  box {
+    padding: 6px;
+    border-top: 1px solid $borders_color;
+
+    &:backdrop { border-color: $backdrop_borders_color; }
+  }
 }
 
 scrolledwindow {

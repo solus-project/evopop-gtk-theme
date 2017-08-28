@@ -166,6 +166,7 @@ treeview.view {
       font-weight: 700;
       text-shadow: none;
       box-shadow: none;
+      margin: 0;
 
       &:hover {
         @extend %column_header_button;
@@ -213,22 +214,22 @@ treeview.view {
   text-shadow: none;
   border-width: 1px;
   border-style: none solid solid none;
-  border-color: $bg_color;
+  border-color: $borders_color;
 
   &:disabled {
-    border-color: $bg_color;
+    border-color: $borders_color;
     background-image: none;
   }
 
   &:backdrop {
-    border-color: $backdrop_bg_color;
+    border-color: $backdrop_borders_color;
     border-style: none solid solid none;
     color: mix($backdrop_fg_color, $backdrop_bg_color, 50%);
     background-image: none;
     background-color: $backdrop_base_color;
 
     &:disabled {
-      border-color: $backdrop_bg_color;
+      border-color: $backdrop_borders_color;
       background-image: none;
     }
   }

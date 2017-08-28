@@ -2,6 +2,10 @@
  * Sidebar *
  ***********/
 .sidebar {
+
+  frame > border,
+  .frame { border: none; }
+  
   border-style: none;
   background-color: $sidebar_bg_color;
   color: $fg_color;

@@ -29,6 +29,7 @@ button {
     min-height: 24px;
     min-width: 16px;
     padding: 4px 8px;
+    margin: 1px;
     border: none;
     border-radius: 2px;
     transition: $button_transition;
@@ -439,7 +440,11 @@ toolbar.inline-toolbar toolbutton:backdrop {
   }
 }
 
-%linked_middle { border-radius: 0; }
+%linked_middle {
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
 
 %linked {
   @extend %linked_middle;

@@ -275,6 +275,7 @@ button {
   min-height: 24px;
   min-width: 16px;
   padding: 4px 8px;
+  margin: 1px;
   border: none;
   border-radius: 2px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1046,7 +1047,9 @@ button:active, .linked >
 button:checked, .linked >
 button:backdrop, .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) >
 entry, .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
-  border-radius: 0; }
+  border-radius: 0;
+  margin-left: 0;
+  margin-right: 0; }
 
 .inline-toolbar
 button:first-child, .linked >
@@ -1747,6 +1750,7 @@ entry {
   padding-right: 8px;
   border: none;
   border-radius: 2px;
+  margin: 1px;
   transition: all 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: #fefefe;
   border: none;
@@ -1964,6 +1968,8 @@ frame > border,
   .frame:backdrop {
     border-color: rgba(27, 33, 44, 0.19); }
 
+actionbar > frame > border {
+  border-width: 1px 0 0; }
 actionbar > revealer > box {
   padding: 6px;
   border-top: 1px solid rgba(0, 0, 0, 0.1); }
@@ -4100,6 +4106,9 @@ treeview ~ scrollbar.vertical {
   border-style: none;
   background-color: #283141;
   color: #fefefe; }
+  .sidebar frame > border,
+  .sidebar .frame {
+    border: none; }
   stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     border-left-style: none; }
@@ -4544,7 +4553,8 @@ treeview.view {
     background-color: #39465c;
     font-weight: 700;
     text-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    margin: 0; }
     treeview.view header button:hover {
       color: #e1e3e6;
       box-shadow: none;
@@ -4580,18 +4590,18 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
   text-shadow: none;
   border-width: 1px;
   border-style: none solid solid none;
-  border-color: #283141; }
+  border-color: rgba(0, 0, 0, 0.1); }
   treeview.view header button:disabled {
-    border-color: #283141;
+    border-color: rgba(0, 0, 0, 0.1);
     background-image: none; }
   treeview.view header button:backdrop {
-    border-color: #283141;
+    border-color: rgba(27, 33, 44, 0.19);
     border-style: none solid solid none;
     color: rgba(126, 131, 141, 0.9);
     background-image: none;
     background-color: #3b485f; }
     treeview.view header button:backdrop:disabled {
-      border-color: #283141;
+      border-color: rgba(27, 33, 44, 0.19);
       background-image: none; }
 
 /**********************
@@ -5560,6 +5570,9 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
 /********************
  * Gnome Tweak Tool *
  *******************/
+scrolledwindow.view > viewport.frame > stack > list {
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+
 /**************
  * Mate-Panel *
  **************/
