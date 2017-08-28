@@ -3,13 +3,13 @@
  ***********/
 messagedialog { // Message Dialog styling
   .titlebar:not(headerbar) {
-    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+    background-color: transparentize( $headerbar_color, 0.05);
   }
 
   .titlebar {
     min-height: 20px;
     background-image: none;
-    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+    background-color: transparentize( $headerbar_color, 0.05);
     border-style: none;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -17,12 +17,16 @@ messagedialog { // Message Dialog styling
 
   &.csd { // rounded bottom border styling for csd version
     &.background {
-      background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
-      color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      background-color: transparentize( $headerbar_color, 0.05);
+      color: $headerbar_fg_color;
 
       // bigger radius for better antialiasing
       border-bottom-left-radius: 2px;
       border-bottom-right-radius: 2px;
+
+      &:backdrop {
+        label { color: transparentize($headerbar_fg_color, 0.2); }
+      }
     }
 
     .dialog-action-area button {
@@ -33,6 +37,7 @@ messagedialog { // Message Dialog styling
       border-bottom-style: none;
       background-color: transparent;
       color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      margin-bottom: 0;
       box-shadow: none;
 
       &:hover {
@@ -43,11 +48,13 @@ messagedialog { // Message Dialog styling
       }
 
       &:first-child{
+        box-shadow: none;
         border-left-style: none;
         border-bottom-left-radius: 2px;
       }
 
       &:last-child {
+        box-shadow: none;
         border-bottom-right-radius: 2px;
       }
     }

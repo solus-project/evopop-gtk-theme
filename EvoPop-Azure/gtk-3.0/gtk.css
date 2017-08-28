@@ -1713,6 +1713,8 @@ messagedialog.csd.background {
   color: #fefefe;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px; }
+  messagedialog.csd.background:backdrop label {
+    color: rgba(254, 254, 254, 0.8); }
 messagedialog.csd .dialog-action-area button {
   padding: 8px 12px;
   border-radius: 0;
@@ -1721,15 +1723,18 @@ messagedialog.csd .dialog-action-area button {
   border-bottom-style: none;
   background-color: transparent;
   color: #fefefe;
+  margin-bottom: 0;
   box-shadow: none; }
   messagedialog.csd .dialog-action-area button:hover {
     background-color: rgba(55, 185, 165, 0.9); }
     messagedialog.csd .dialog-action-area button:hover:backdrop label {
       color: rgba(255, 255, 255, 0.5); }
   messagedialog.csd .dialog-action-area button:first-child {
+    box-shadow: none;
     border-left-style: none;
     border-bottom-left-radius: 2px; }
   messagedialog.csd .dialog-action-area button:last-child {
+    box-shadow: none;
     border-bottom-right-radius: 2px; }
 
 filechooser .dialog-action-box {
