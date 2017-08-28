@@ -274,3 +274,22 @@ window#MyControlCenter > frame > box.horizontal {
     border-style: solid none none;
   }
 }
+
+// /*********
+//  * Pluma *
+//  *********/
+
+.pluma-window {
+
+  notebook {
+    > header { border-width: 0px; }
+  }
+
+  statusbar {
+    * { border: none; }
+    button {
+      padding: 0;
+      border-radius: 0;
+    }
+  }
+}

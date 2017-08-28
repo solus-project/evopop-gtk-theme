@@ -5759,6 +5759,14 @@ window#MyControlCenter > frame > box.horizontal > widget > scrolledwindow.frame 
 .xreader-window scrolledwindow.frame {
   border-style: solid none none; }
 
+.pluma-window notebook > header {
+  border-width: 0px; }
+.pluma-window statusbar * {
+  border: none; }
+.pluma-window statusbar button {
+  padding: 0;
+  border-radius: 0; }
+
 /***********************
  * App-Specific Styles *
  ***********************/
