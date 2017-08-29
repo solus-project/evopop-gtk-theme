@@ -466,6 +466,8 @@ toolbar.inline-toolbar toolbutton:backdrop {
 
 %linked_vertical_middle {
   border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 %linked_vertical{
@@ -474,11 +476,13 @@ toolbar.inline-toolbar toolbutton:backdrop {
   &:first-child {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+    margin-bottom: 0;
   }
 
   &:last-child {
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
+    margin-top: 0;
   }
 
   &:only-child {

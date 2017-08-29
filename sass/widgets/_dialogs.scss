@@ -48,13 +48,11 @@ messagedialog { // Message Dialog styling
       }
 
       &:first-child{
-        box-shadow: none;
         border-left-style: none;
         border-bottom-left-radius: 2px;
       }
 
       &:last-child {
-        box-shadow: none;
         border-bottom-right-radius: 2px;
       }
     }

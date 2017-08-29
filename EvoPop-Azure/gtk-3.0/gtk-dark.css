@@ -1076,18 +1076,22 @@ button:active, .linked.vertical >
 button:checked, .linked.vertical >
 button:backdrop, .linked.vertical > spinbutton:not(.vertical), .linked.vertical >
 entry, .linked.vertical > combobox > box > button.combo {
-  border-radius: 0; }
+  border-radius: 0;
+  margin-top: 0;
+  margin-bottom: 0; }
 
 .linked.vertical >
 button:first-child, .linked.vertical > combobox:first-child > box > button.combo, .linked.vertical > spinbutton:first-child:not(.vertical), .linked.vertical >
 entry:first-child {
   border-top-left-radius: 2px;
-  border-top-right-radius: 2px; }
+  border-top-right-radius: 2px;
+  margin-bottom: 0; }
 .linked.vertical >
 button:last-child, .linked.vertical > combobox:last-child > box > button.combo, .linked.vertical > spinbutton:last-child:not(.vertical), .linked.vertical >
 entry:last-child {
   border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px; }
+  border-bottom-right-radius: 2px;
+  margin-top: 0; }
 .linked.vertical >
 button:only-child, .linked.vertical > combobox:only-child > box > button.combo, .linked.vertical > spinbutton:only-child:not(.vertical), .linked.vertical >
 entry:only-child {
@@ -1727,11 +1731,9 @@ messagedialog.csd .dialog-action-area button {
     messagedialog.csd .dialog-action-area button:hover:backdrop label {
       color: rgba(255, 255, 255, 0.5); }
   messagedialog.csd .dialog-action-area button:first-child {
-    box-shadow: none;
     border-left-style: none;
     border-bottom-left-radius: 2px; }
   messagedialog.csd .dialog-action-area button:last-child {
-    box-shadow: none;
     border-bottom-right-radius: 2px; }
 
 filechooser .dialog-action-box {
