@@ -2800,18 +2800,20 @@ infobar {
   text-shadow: none;
   color: #fefefe;
   border: none; }
-  .info .label, .warning .label, .question .label, .error .label {
+  .info label, .warning label, .question label, .error label {
     color: #fefefe; }
-    .info .label:backdrop, .warning .label:backdrop, .question .label:backdrop, .error .label:backdrop {
+    .info label:backdrop, .warning label:backdrop, .question label:backdrop, .error label:backdrop {
       color: rgba(254, 254, 254, 0.8); }
   .info button, .warning button, .question button, .error button {
     border-radius: 2px;
     border: none;
-    background: rgba(254, 254, 254, 0.98);
+    background: rgba(254, 254, 254, 0.95);
     color: #31373d;
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2); }
-    .info button .label, .warning button .label, .question button .label, .error button .label {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    .info button label, .warning button label, .question button label, .error button label {
       color: #31373d; }
+      .info button label:backdrop, .warning button label:backdrop, .question button label:backdrop, .error button label:backdrop {
+        color: rgba(49, 55, 61, 0.8); }
     .info button:active, .warning button:active, .question button:active, .error button:active {
       background: #fefefe;
       color: #31373d;
@@ -2819,21 +2821,19 @@ infobar {
       .info button:active:backdrop, .warning button:active:backdrop, .question button:active:backdrop, .error button:active:backdrop {
         background: rgba(254, 254, 254, 0.8);
         color: rgba(49, 55, 61, 0.5);
-        box-shadow: none; }
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .info button:hover, .warning button:hover, .question button:hover, .error button:hover, .info button:focus, .warning button:focus, .question button:focus, .error button:focus {
       box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4); }
     .info button:disabled, .warning button:disabled, .question button:disabled, .error button:disabled {
       background: rgba(254, 254, 254, 0.6);
-      color: rgba(49, 55, 61, 0.5);
-      box-shadow: none; }
+      color: rgba(49, 55, 61, 0.5); }
       .info button:disabled:backdrop, .warning button:disabled:backdrop, .question button:disabled:backdrop, .error button:disabled:backdrop {
-        background: rgba(254, 254, 254, 0.5);
-        color: rgba(49, 55, 61, 0.5);
-        box-shadow: none; }
+        background: rgba(254, 254, 254, 0.6);
+        color: rgba(49, 55, 61, 0.5); }
     .info button:backdrop, .warning button:backdrop, .question button:backdrop, .error button:backdrop {
       background: rgba(254, 254, 254, 0.8);
       color: rgba(49, 55, 61, 0.5);
-      box-shadow: none; }
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 
 .info {
   background-color: #a1ce4b; }

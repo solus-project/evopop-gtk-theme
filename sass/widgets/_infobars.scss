@@ -20,7 +20,7 @@ infobar {
   color: $selected_fg_color;
   border:none;
 
-  .label {
+  label {
     color: $selected_fg_color;
 
     &:backdrop {
@@ -31,12 +31,15 @@ infobar {
   button {
     border-radius: 2px;
     border: none;
-    background: transparentize($base_color, 0.02);
+    background: transparentize($base_color, 0.05);
     color: $fg_color;
-    box-shadow: 0 1px 0 0 transparentize(black, 0.8);
+    @include _shadows($depth);
 
-    .label {
+    label {
       color: $fg_color;
+      &:backdrop {
+        color: $backdrop_fg_color;
+      }
     }
 
     &:active {
@@ -48,7 +51,7 @@ infobar {
       &:backdrop {
         background: transparentize($base_color, 0.2);
         color: transparentize($fg_color, 0.5);
-        box-shadow: none;
+        @include _shadows($depth);
       }
     }
 
@@ -60,19 +63,17 @@ infobar {
     &:disabled {
       background: transparentize($base_color, 0.4);
       color: transparentize($fg_color, 0.5);
-      box-shadow: none;
 
         &:backdrop {
-          background: transparentize($base_color, 0.5);
+          background: transparentize($base_color, 0.4);
           color: transparentize($fg_color, 0.5);
-          box-shadow: none;
         }
     }
 
     &:backdrop {
       background: transparentize($base_color, 0.2);
       color: transparentize($fg_color, 0.5);
-      box-shadow: none;
+      @include _shadows($depth);
     }
   }
 }
