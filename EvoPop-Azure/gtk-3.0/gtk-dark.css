@@ -2092,12 +2092,12 @@ scrolledwindow undershoot.right {
 scrolledwindow junction {
   border-color: transparent;
   border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px) 0 0 0 1/0 1px stretch;
-  background-color: #313c4f; }
+  background-color: #39465c; }
   scrolledwindow junction:dir(rtl) {
     border-image-slice: 0 1 0 0; }
   scrolledwindow junction:backdrop {
     border-image-source: linear-gradient(to bottom, rgba(27, 33, 44, 0.19) 1px, transparent 1px);
-    background-color: #222a38;
+    background-color: #3b485f;
     transition: 200ms ease-out; }
 
 separator {
@@ -2827,8 +2827,12 @@ infobar {
       .info button:disabled:backdrop, .warning button:disabled:backdrop, .question button:disabled:backdrop, .error button:disabled:backdrop {
         background: rgba(57, 70, 92, 0.6);
         color: rgba(254, 254, 254, 0.5); }
+      .info button:disabled label, .warning button:disabled label, .question button:disabled label, .error button:disabled label {
+        color: rgba(254, 254, 254, 0.5); }
+        .info button:disabled label:backdrop, .warning button:disabled label:backdrop, .question button:disabled label:backdrop, .error button:disabled label:backdrop {
+          color: rgba(254, 254, 254, 0.5); }
     .info button:backdrop, .warning button:backdrop, .question button:backdrop, .error button:backdrop {
-      background: rgba(57, 70, 92, 0.8);
+      background: rgba(57, 70, 92, 0.9);
       color: rgba(254, 254, 254, 0.5);
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 
@@ -3978,21 +3982,13 @@ scale {
  * Scrollbars *
  **************/
 scrollbar {
-  background-color: #313c4f;
+  background-color: #39465c;
   transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   * {
     -GtkScrollbar-has-backward-stepper: false;
     -GtkScrollbar-has-forward-stepper: false; }
-  scrollbar.top {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  scrollbar.bottom {
-    border-top: 1px solid rgba(0, 0, 0, 0.1); }
-  scrollbar.left {
-    border-right: 1px solid rgba(0, 0, 0, 0.1); }
-  scrollbar.right {
-    border-left: 1px solid rgba(0, 0, 0, 0.1); }
   scrollbar:backdrop {
-    background-color: #222a38;
+    background-color: #3b485f;
     border-color: rgba(27, 33, 44, 0.19);
     transition: 200ms ease-out; }
   scrollbar slider {
@@ -4024,17 +4020,15 @@ scrollbar {
     background-color: transparent; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
       margin: 0;
-      min-width: 3px;
-      min-height: 3px;
-      background-color: #fefefe;
-      border: 1px solid black; }
+      min-width: 4px;
+      min-height: 10px;
+      background-color: #fefefe; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
       min-width: 5px;
       min-height: 5px;
       background-color: #fefefe;
       background-clip: padding-box;
       border-radius: 100%;
-      border: 1px solid black;
       -gtk-icon-source: none; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
       margin: 0 2px;

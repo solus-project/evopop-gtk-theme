@@ -68,10 +68,17 @@ infobar {
           background: transparentize($base_color, 0.4);
           color: transparentize($fg_color, 0.5);
         }
+
+        label {
+          color: transparentize($fg_color, 0.5);
+          &:backdrop {
+            color: transparentize($fg_color, 0.5);
+          }
+        }
     }
 
     &:backdrop {
-      background: transparentize($base_color, 0.2);
+      background: transparentize($base_color, 0.1);
       color: transparentize($fg_color, 0.5);
       @include _shadows($depth);
     }

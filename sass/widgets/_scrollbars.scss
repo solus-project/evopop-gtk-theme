@@ -13,12 +13,6 @@ scrollbar {
   background-color: $scrollbar_bg_color;
   transition: 300ms $ease-out-quad;
 
-  // scrollbar border
-  &.top { border-bottom: 1px solid $borders_color; }
-  &.bottom { border-top: 1px solid $borders_color; }
-  &.left { border-right: 1px solid $borders_color; }
-  &.right { border-left: 1px solid $borders_color; }
-
   &:backdrop {
     background-color: $backdrop_scrollbar_bg_color;
     border-color: $backdrop_borders_color;
@@ -62,10 +56,9 @@ scrollbar {
 
       slider {
         margin: 0;
-        min-width: 3px;
-        min-height: 3px;
+        min-width: 4px;
+        min-height: 10px;
         background-color: $fg_color;
-        border: 1px solid if($variant == 'light', white, black);
       }
 
       button {
@@ -74,7 +67,6 @@ scrollbar {
         background-color: $fg_color;
         background-clip: padding-box;
         border-radius: 100%;
-        border: 1px solid if($variant == 'light', white, black);
         -gtk-icon-source: none;
       }
 
