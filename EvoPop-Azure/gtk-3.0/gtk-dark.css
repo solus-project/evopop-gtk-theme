@@ -2256,6 +2256,9 @@ headerbar {
     color: rgba(254, 254, 254, 0.8);
     background-image: none;
     transition: 200ms ease-out; }
+  .titlebar:not(headerbar) label:backdrop,
+  headerbar label:backdrop {
+    color: rgba(254, 254, 254, 0.8); }
   .titlebar:not(headerbar) .title,
   headerbar .title {
     font-weight: 700;
@@ -2337,6 +2340,18 @@ headerbar {
       .titlebar:not(headerbar) switch slider:backdrop:disabled,
       headerbar switch slider:backdrop:disabled {
         background-color: #283141; }
+  .titlebar:not(headerbar) entry,
+  headerbar entry {
+    background-color: #39465c;
+    color: #fefefe;
+    caret-color: #fefefe;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    .titlebar:not(headerbar) entry:backdrop, .titlebar:not(headerbar) entry:disabled,
+    headerbar entry:backdrop,
+    headerbar entry:disabled {
+      background-color: #3b485f;
+      color: #fefefe;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .titlebar:not(headerbar) button,
   headerbar button {
     color: #fefefe;
@@ -2735,8 +2750,8 @@ headerbar entry,
 headerbar spinbutton,
 headerbar separator,
 headerbar button {
-  margin-top: 0;
-  margin-bottom: 0; }
+  margin-top: 1px;
+  margin-bottom: 1px; }
 headerbar switch {
   margin-top: 3px;
   margin-bottom: 3px; }

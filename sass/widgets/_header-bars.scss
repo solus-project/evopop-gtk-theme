@@ -20,6 +20,10 @@ headerbar {
     transition: $backdrop_transition;
   }
 
+  label {
+    &:backdrop { color: $backdrop_headerbar_fg_color; }
+  }
+
   .title {
     font-weight: 700;
     padding-left: 12px;
@@ -75,6 +79,19 @@ headerbar {
       &:backdrop {
         &:disabled { background-color: $headerbar_color; }
       }
+    }
+  }
+
+  entry {
+    background-color: if($subtheme == 'azure', #39465c, #505359);
+    color: $headerbar_fg_color;
+    caret-color: $headerbar_fg_color;
+    @include _shadows($depth);
+    &:backdrop,
+    &:disabled {
+      background-color: lighten(if($subtheme == 'azure', #39465c, #505359), 1%);
+      color: $headerbar_fg_color;
+      @include _shadows($depth);
     }
   }
 
@@ -295,8 +312,8 @@ headerbar {
   spinbutton,
   separator,
   button {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 1px;
+    margin-bottom: 1px;
   }
   switch {
     margin-top: 3px;
