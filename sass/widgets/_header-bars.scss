@@ -158,7 +158,6 @@ headerbar {
 
     //Reset style
     &.titlebutton {
-      color: transparent;
       box-shadow: none;
 
       &:hover,
@@ -166,7 +165,6 @@ headerbar {
       &:checked,
       &:backdrop,
       &:backdrop:hover,* {
-        color: transparent;
         box-shadow: none;
       }
     }
