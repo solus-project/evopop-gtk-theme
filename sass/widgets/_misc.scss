@@ -26,7 +26,7 @@
     &:first-child { // '+' button
       &:hover {
         border-radius: 50px;
-        background-color: $suggested_color;
+        background-color: $success_color;
         color: $selected_fg_color;
         @include _shadows($depth);
         animation: volume_hover 0.2s linear forwards;
@@ -34,8 +34,8 @@
       &:disabled {
         border-radius: 50px;
         background-color: transparent;
-        color: $suggested_color;
-        &:backdrop { color: $suggested_color; }
+        color: $success_color;
+        &:backdrop { color: $success_color; }
       }
     }
     &:last-child { // '+' button

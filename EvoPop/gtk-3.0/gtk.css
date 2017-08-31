@@ -257,8 +257,11 @@ assistant .sidebar label.highlight {
   background-clip: padding-box;
   outline-color: rgba(254, 254, 254, 0.3); }
   .app-notification:backdrop, .osd .scale-popup:backdrop, popover.background.touch-selection:backdrop, popover.background.magnifier:backdrop, popover.background.osd:backdrop, .osd:backdrop {
+    color: rgba(254, 254, 254, 0.8);
     text-shadow: none;
     -gtk-icon-shadow: none; }
+    .app-notification:backdrop label, .osd .scale-popup:backdrop label, popover.background.touch-selection:backdrop label, popover.background.magnifier:backdrop label, popover.background.osd:backdrop label, .osd:backdrop label {
+      color: rgba(254, 254, 254, 0.8); }
 
 /***********
  * Buttons *
@@ -1072,7 +1075,7 @@ popover.background radiobutton:backdrop:hover,
 button:visited, button:link:hover, button:link:active, button:link:checked,
 button:visited:hover,
 button:visited:active,
-button:visited:checked, .scale-popup button:hover, .scale-popup button:backdrop:hover, .scale-popup button:backdrop:disabled, .scale-popup button:backdrop {
+button:visited:checked, .scale-popup button:backdrop {
   background-color: transparent;
   background-image: none;
   border-color: transparent;
@@ -1092,7 +1095,8 @@ popover.background radiobutton,
   modelbutton.flat:hover, popover.background checkbutton:hover,
   popover.background radiobutton:hover,
   .menuitem.button.flat:hover {
-    background-color: #13b1d5; }
+    background-color: #13b1d5;
+    color: #fefefe; }
   modelbutton.flat check:last-child, popover.background checkbutton check:last-child,
   popover.background radiobutton check:last-child,
   modelbutton.flat radio:last-child,
@@ -3115,9 +3119,33 @@ menuitem radio {
 .osd .scale-popup button.flat {
   border-style: none;
   border-radius: 2px; }
-.scale-popup button:hover {
-  background-color: rgba(49, 55, 61, 0.1);
-  border-radius: 2px; }
+.scale-popup button {
+  border-radius: 50px;
+  padding: 2px; }
+  .scale-popup button:first-child:hover {
+    border-radius: 50px;
+    background-color: #37b9a5;
+    color: #fefefe;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    animation: volume_hover 0.2s linear forwards; }
+  .scale-popup button:first-child:disabled {
+    border-radius: 50px;
+    background-color: transparent;
+    color: #37b9a5; }
+    .scale-popup button:first-child:disabled:backdrop {
+      color: #37b9a5; }
+  .scale-popup button:last-child:hover {
+    border-radius: 50px;
+    background-color: #c72240;
+    color: #fefefe;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    animation: volume_hover 0.2s linear forwards; }
+  .scale-popup button:last-child:disabled {
+    border-radius: 50px;
+    background-color: transparent;
+    color: #c72240; }
+    .scale-popup button:last-child:disabled:backdrop {
+      color: #c72240; }
 
 /************
 * Assistant *
