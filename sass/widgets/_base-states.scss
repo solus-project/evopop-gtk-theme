@@ -163,8 +163,6 @@ assistant {
   background-color: $osd_bg_color;
   background-clip: padding-box;
   outline-color: transparentize($osd_fg_color, 0.7);
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black;
 
   &:backdrop {
     text-shadow: none;

@@ -255,9 +255,7 @@ assistant .sidebar label.highlight {
   border: none;
   background-color: rgba(20, 23, 26, 0.8);
   background-clip: padding-box;
-  outline-color: rgba(254, 254, 254, 0.3);
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black; }
+  outline-color: rgba(254, 254, 254, 0.3); }
   .app-notification:backdrop, .osd .scale-popup:backdrop, popover.background.touch-selection:backdrop, popover.background.magnifier:backdrop, popover.background.osd:backdrop, .osd:backdrop {
     text-shadow: none;
     -gtk-icon-shadow: none; }
@@ -1171,11 +1169,20 @@ button.color {
  * Calendar *
  ***********/
 calendar {
+  padding: 2px;
   color: #fefefe;
   border: 1px solid rgba(0, 0, 0, 0.1); }
   calendar:selected {
-    border-radius: 3px; }
+    color: #fefefe;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1.6em 1.6em;
+    background-image: -gtk-scaled(url("../assets/calendar-selected.png"), url("../assets/calendar-selected@2.png")); }
+    calendar:selected:backdrop {
+      color: rgba(254, 254, 254, 0.8); }
   calendar.header {
+    border-width: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0; }
     calendar.header:backdrop {
@@ -2814,7 +2821,7 @@ infobar {
     .info button:active, .warning button:active, .question button:active, .error button:active {
       background: #505359;
       color: #fefefe;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4); }
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
       .info button:active:backdrop, .warning button:active:backdrop, .question button:active:backdrop, .error button:active:backdrop {
         background: rgba(80, 83, 89, 0.8);
         color: rgba(254, 254, 254, 0.5);
@@ -4473,10 +4480,9 @@ tooltip {
   padding: 2px;
   /* not working */
   border-radius: 3px;
-  box-shadow: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.9); }
+  box-shadow: none; }
   tooltip.background {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(20, 23, 26, 0.8);
     background-clip: padding-box;
     border: 1px solid rgba(255, 255, 255, 0.1); }
   tooltip decoration {
@@ -4692,7 +4698,7 @@ textview text:selected, .view text selection:focus, iconview text selection:focu
 textview text selection:focus,
 textview text selection, flowbox flowboxchild:selected, modelbutton.flat:selected, popover.background checkbutton:selected,
 popover.background radiobutton:selected,
-.menuitem.button.flat:selected, calendar:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
+.menuitem.button.flat:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
 entry selection:focus,
 entry selection, row:selected, treeview.view:selected:focus, treeview.view:selected {
   background-color: #13b1d5; }
@@ -4706,7 +4712,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   textview text selection:focus,
   textview text selection, flowbox flowboxchild:selected, modelbutton.flat:selected, popover.background checkbutton:selected,
   popover.background radiobutton:selected,
-  .menuitem.button.flat:selected, calendar:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
+  .menuitem.button.flat:selected, spinbutton:not(.vertical) selection:focus, spinbutton:not(.vertical) selection,
   entry selection:focus,
   entry selection, row:selected, treeview.view:selected:focus, treeview.view:selected {
     color: #fefefe; }
@@ -4718,7 +4724,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     textview text:disabled:selected, iconview text selection:disabled:focus, .view text selection:disabled, iconview text selection:disabled,
     textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, modelbutton.flat:disabled:selected, popover.background checkbutton:disabled:selected,
     popover.background radiobutton:disabled:selected,
-    .menuitem.button.flat:disabled:selected, calendar:disabled:selected, spinbutton:not(.vertical) selection:disabled,
+    .menuitem.button.flat:disabled:selected, spinbutton:not(.vertical) selection:disabled,
     entry selection:disabled, row:disabled:selected {
       color: #89d8ea; }
     row:selected label:backdrop, label:backdrop:selected, .selection-mode button.titlebutton:backdrop, iconview:backdrop:selected:focus, .view:backdrop:selected, iconview:backdrop:selected,
@@ -4729,7 +4735,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     textview text:backdrop:selected, iconview text selection:backdrop:focus, .view text selection:backdrop, iconview text selection:backdrop,
     textview text selection:backdrop, flowbox flowboxchild:backdrop:selected, label:backdrop selection, modelbutton.flat:backdrop:selected, popover.background checkbutton:backdrop:selected,
     popover.background radiobutton:backdrop:selected,
-    .menuitem.button.flat:backdrop:selected, calendar:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
+    .menuitem.button.flat:backdrop:selected, spinbutton:not(.vertical) selection:backdrop,
     entry selection:backdrop, row:backdrop:selected {
       color: rgba(254, 254, 254, 0.8); }
       row:selected label:backdrop:disabled, label:backdrop:disabled:selected, .selection-mode button.titlebutton:backdrop:disabled, .view:backdrop:disabled:selected, iconview:backdrop:disabled:selected,
@@ -4738,7 +4744,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
       textview text:backdrop:disabled:selected, .view text selection:backdrop:disabled, iconview text selection:backdrop:disabled,
       textview text selection:backdrop:disabled, flowbox flowboxchild:backdrop:disabled:selected, label:disabled selection:backdrop, label:backdrop selection:disabled, modelbutton.flat:backdrop:disabled:selected, popover.background checkbutton:backdrop:disabled:selected,
       popover.background radiobutton:backdrop:disabled:selected,
-      .menuitem.button.flat:backdrop:disabled:selected, calendar:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled,
+      .menuitem.button.flat:backdrop:disabled:selected, spinbutton:not(.vertical) selection:backdrop:disabled,
       entry selection:backdrop:disabled, row:backdrop:disabled:selected {
         color: rgba(71, 194, 222, 0.94); }
 

@@ -46,7 +46,7 @@ infobar {
       background: $base_color;
       color: $fg_color;
 
-      box-shadow: 0 1px 2px 0 transparentize(black, 0.6);
+      @include _shadows($depth2);
 
       &:backdrop {
         background: transparentize($base_color, 0.2);

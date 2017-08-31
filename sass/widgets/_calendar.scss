@@ -2,16 +2,24 @@
  * Calendar *
  ***********/
 calendar {
+  padding: 2px;
   color: $text_color;
   border: 1px solid $borders_color;
 
   &:selected {
-    @extend %selected_items;
+    color: $selected_fg_color;
+    background-color: transparent;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 1.6em 1.6em;
+    background-image: -gtk-scaled(url("../assets/calendar-selected.png"),
+                                  url("../assets/calendar-selected@2.png"));
 
-    border-radius: 3px;
+    &:backdrop { color: $backdrop_selected_fg_color; }
   }
 
   &.header {
+    border-width: 0;
     border-bottom: 1px solid transparentize(black, 0.9);
     border-radius: 0;
 
