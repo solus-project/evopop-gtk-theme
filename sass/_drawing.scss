@@ -345,48 +345,41 @@ box-shadow: none;
   //
   // normal osd button
   //
-    $_bg: if($c!=$base_color, transparentize($c, 0.5),
-                            $osd_bg_color);
+    $_bg: if($c!=$base_color, $c, lighten($osd_bg_color, 3%));
 
     color: $osd_fg_color;
     border-color: $osd_borders_color;
     background-color: $_bg;
     background-clip: padding-box;
-    box-shadow: inset 0 1px transparentize(white, 0.9);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
     outline-color: transparentize($osd_fg_color, 0.7);
+    @include _shadows($depth);
   }
   @else if $t==osd-hover {
   //
-  // active osd button
+  // hover osd button
   //
     $_bg: if($c!=$base_color, transparentize($c, 0.3),
-                            lighten($osd_bg_color, 12%));
+                            lighten($osd_bg_color, 6%));
 
     color: white;
     border-color: $osd_borders_color;
     background-color: $_bg;
     background-clip: padding-box;
-    box-shadow: inset 0 1px transparentize(white, 0.9);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
     outline-color: transparentize($osd_fg_color, 0.7);
+    @include _shadows($depth2)
   }
   @else if $t==osd-active {
   //
   // active osd button
   //
-    $_bg: if($c!=$base_color, $c, lighten($osd_bg_color, 6%));
+    $_bg: if($c!=$base_color, $c, lighten($osd_bg_color, 9%));
 
     color: white;
     border-color: $osd_borders_color;
     background-color: $_bg;
     background-clip: padding-box;
-    box-shadow: inset 0 1px transparentize(white, 0.9);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
     outline-color: transparentize($osd_fg_color, 0.7);
+    @include _shadows($depth2)
   }
   @else if $t==osd-insensitive {
   //
@@ -411,9 +404,7 @@ box-shadow: none;
     border-color: $osd_borders_color;
     background-color: $_bg;
     background-clip: padding-box;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none;
+    @include _shadows($depth2);
   }
   @else if $t==undecorated {
   //

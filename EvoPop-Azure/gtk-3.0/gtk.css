@@ -435,12 +435,10 @@ button.osd {
   outline-color: rgba(254, 254, 254, 0.3);
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(21, 25, 33, 0.8);
+  background-color: rgba(26, 32, 43, 0.8);
   background-clip: padding-box;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black;
   outline-color: rgba(254, 254, 254, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
   border: none;
   box-shadow: none; }
   button.osd.image-button {
@@ -448,24 +446,20 @@ button.osd {
   button.osd:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(44, 54, 71, 0.8);
+    background-color: rgba(32, 39, 52, 0.8);
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
     outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
     border: none;
     box-shadow: none; }
   button.osd:active,
   button.osd:checked {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(32, 39, 52, 0.8);
+    background-color: rgba(38, 47, 62, 0.8);
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
     outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
     border: none;
     box-shadow: none; }
   button.osd:disabled:backdrop,
@@ -483,31 +477,25 @@ button.osd {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(21, 25, 33, 0.8);
     background-clip: padding-box;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
     border: none; }
 .app-notification button,
 .app-notification.frame button, .csd popover.background.touch-selection button, .csd popover.background.magnifier button, popover.background.touch-selection button, popover.background.magnifier button, .osd
 button {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(21, 25, 33, 0.8);
+  background-color: rgba(26, 32, 43, 0.8);
   background-clip: padding-box;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3); }
+  outline-color: rgba(254, 254, 254, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .app-notification button:hover, popover.background.touch-selection button:hover, popover.background.magnifier button:hover, .osd
   button:hover {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(44, 54, 71, 0.8);
+    background-color: rgba(32, 39, 52, 0.8);
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .app-notification button:active:backdrop, popover.background.touch-selection button:active:backdrop, popover.background.magnifier button:active:backdrop, .app-notification button:active, popover.background.touch-selection button:active, popover.background.magnifier button:active, .app-notification button:checked:backdrop, popover.background.touch-selection button:checked:backdrop, popover.background.magnifier button:checked:backdrop, .app-notification button:checked, popover.background.touch-selection button:checked, popover.background.magnifier button:checked, .osd
   button:active:backdrop, .osd
   button:active, .osd
@@ -515,12 +503,10 @@ button {
   button:checked {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(32, 39, 52, 0.8);
+    background-color: rgba(38, 47, 62, 0.8);
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .app-notification button:disabled:backdrop, popover.background.touch-selection button:disabled:backdrop, popover.background.magnifier button:disabled:backdrop, .app-notification button:disabled, popover.background.touch-selection button:disabled, popover.background.magnifier button:disabled, .osd
   button:disabled:backdrop, .osd
   button:disabled {
@@ -537,9 +523,7 @@ button {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(21, 25, 33, 0.8);
     background-clip: padding-box;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .app-notification button.flat, popover.background.touch-selection button.flat, popover.background.magnifier button.flat, .osd
   button.flat {
     border-color: transparent;
@@ -555,12 +539,10 @@ button {
     button.flat:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(44, 54, 71, 0.8);
+      background-color: rgba(32, 39, 52, 0.8);
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
-      outline-color: rgba(254, 254, 254, 0.3); }
+      outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .app-notification button.flat:disabled, popover.background.touch-selection button.flat:disabled, popover.background.magnifier button.flat:disabled, .osd
     button.flat:disabled {
       color: rgba(254, 254, 254, 0.5);
@@ -586,12 +568,10 @@ button {
     button.flat:checked {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(32, 39, 52, 0.8);
+      background-color: rgba(38, 47, 62, 0.8);
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      outline-color: rgba(254, 254, 254, 0.3); }
+      outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 button.suggested-action {
   font-weight: 700;
   color: white;
@@ -721,22 +701,18 @@ button.suggested-action {
   button.suggested-action {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(55, 185, 165, 0.5);
+    background-color: #37b9a5;
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .osd
     button.suggested-action:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(55, 185, 165, 0.7);
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
-      outline-color: rgba(254, 254, 254, 0.3); }
+      outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .osd
     button.suggested-action:active:backdrop, .osd
     button.suggested-action:active, .osd
@@ -746,10 +722,8 @@ button.suggested-action {
       border-color: rgba(0, 0, 0, 0.7);
       background-color: #37b9a5;
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      outline-color: rgba(254, 254, 254, 0.3); }
+      outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .osd
     button.suggested-action:disabled:backdrop, .osd
     button.suggested-action:disabled {
@@ -766,9 +740,7 @@ button.suggested-action {
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(55, 185, 165, 0.5);
       background-clip: padding-box;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 button.destructive-action {
   font-weight: 700;
   color: white;
@@ -888,22 +860,18 @@ button.destructive-action {
   button.destructive-action {
     color: #fefefe;
     border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(177, 30, 57, 0.5);
+    background-color: #b11e39;
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .osd
     button.destructive-action:hover {
       color: white;
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(177, 30, 57, 0.7);
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
-      outline-color: rgba(254, 254, 254, 0.3); }
+      outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .osd
     button.destructive-action:active:backdrop, .osd
     button.destructive-action:active, .osd
@@ -913,10 +881,8 @@ button.destructive-action {
       border-color: rgba(0, 0, 0, 0.7);
       background-color: #b11e39;
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: none;
-      -gtk-icon-shadow: none;
-      outline-color: rgba(254, 254, 254, 0.3); }
+      outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
     .osd
     button.destructive-action:disabled:backdrop, .osd
     button.destructive-action:disabled {
@@ -933,9 +899,7 @@ button.destructive-action {
       border-color: rgba(0, 0, 0, 0.7);
       background-color: rgba(177, 30, 57, 0.5);
       background-clip: padding-box;
-      box-shadow: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 .stack-switcher >
 button {
   outline-offset: -3px; }
@@ -3601,33 +3565,27 @@ scale {
     .osd scale slider {
       color: #fefefe;
       border-color: rgba(0, 0, 0, 0.7);
-      background-color: rgba(21, 25, 33, 0.8);
+      background-color: rgba(26, 32, 43, 0.8);
       background-clip: padding-box;
-      box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-      text-shadow: 0 1px black;
-      -gtk-icon-shadow: 0 1px black;
       outline-color: rgba(254, 254, 254, 0.3);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
       border-color: rgba(0, 0, 0, 0.7);
       background-color: #151921; }
       .osd scale slider:hover {
         color: white;
         border-color: rgba(0, 0, 0, 0.7);
-        background-color: rgba(44, 54, 71, 0.8);
+        background-color: rgba(32, 39, 52, 0.8);
         background-clip: padding-box;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-        text-shadow: 0 1px black;
-        -gtk-icon-shadow: 0 1px black;
         outline-color: rgba(254, 254, 254, 0.3);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
         background-color: #151921; }
       .osd scale slider:active {
         color: white;
         border-color: rgba(0, 0, 0, 0.7);
-        background-color: rgba(32, 39, 52, 0.8);
+        background-color: rgba(38, 47, 62, 0.8);
         background-clip: padding-box;
-        box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-        text-shadow: none;
-        -gtk-icon-shadow: none;
         outline-color: rgba(254, 254, 254, 0.3);
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
         background-color: #151921; }
       .osd scale slider:disabled {
         color: rgba(254, 254, 254, 0.5);
@@ -3643,9 +3601,7 @@ scale {
         border-color: rgba(0, 0, 0, 0.7);
         background-color: rgba(21, 25, 33, 0.8);
         background-clip: padding-box;
-        box-shadow: none;
-        text-shadow: none;
-        -gtk-icon-shadow: none;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
         background-color: #151921; }
         .osd scale slider:backdrop:disabled {
           background-color: #151921; }
@@ -4287,30 +4243,24 @@ spinbutton.vertical button.down {
 .osd spinbutton.vertical button:first-child {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(21, 25, 33, 0.8);
+  background-color: rgba(26, 32, 43, 0.8);
   background-clip: padding-box;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3); }
+  outline-color: rgba(254, 254, 254, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .osd spinbutton.vertical button:first-child:hover {
-    color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(44, 54, 71, 0.8);
-    background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
-  .osd spinbutton.vertical button:first-child:active {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(32, 39, 52, 0.8);
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  .osd spinbutton.vertical button:first-child:active {
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(38, 47, 62, 0.8);
+    background-clip: padding-box;
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   .osd spinbutton.vertical button:first-child:disabled {
     color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.7);
@@ -4324,9 +4274,7 @@ spinbutton.vertical button.down {
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(21, 25, 33, 0.8);
     background-clip: padding-box;
-    box-shadow: none;
-    text-shadow: none;
-    -gtk-icon-shadow: none; }
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 treeview spinbutton:not(.vertical) {
   min-height: 0;
   border-style: none;
@@ -5956,30 +5904,24 @@ ConversationListView {
 #buttonbox_frame button {
   color: #fefefe;
   border-color: rgba(0, 0, 0, 0.7);
-  background-color: rgba(21, 25, 33, 0.8);
+  background-color: rgba(26, 32, 43, 0.8);
   background-clip: padding-box;
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-  text-shadow: 0 1px black;
-  -gtk-icon-shadow: 0 1px black;
-  outline-color: rgba(254, 254, 254, 0.3); }
+  outline-color: rgba(254, 254, 254, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   #buttonbox_frame button:hover {
-    color: white;
-    border-color: rgba(0, 0, 0, 0.7);
-    background-color: rgba(44, 54, 71, 0.8);
-    background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: 0 1px black;
-    -gtk-icon-shadow: 0 1px black;
-    outline-color: rgba(254, 254, 254, 0.3); }
-  #buttonbox_frame button:active, #buttonbox_frame button:checked {
     color: white;
     border-color: rgba(0, 0, 0, 0.7);
     background-color: rgba(32, 39, 52, 0.8);
     background-clip: padding-box;
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
-    text-shadow: none;
-    -gtk-icon-shadow: none;
-    outline-color: rgba(254, 254, 254, 0.3); }
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  #buttonbox_frame button:active, #buttonbox_frame button:checked {
+    color: white;
+    border-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(38, 47, 62, 0.8);
+    background-clip: padding-box;
+    outline-color: rgba(254, 254, 254, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
   #buttonbox_frame button:disabled {
     color: rgba(254, 254, 254, 0.5);
     border-color: rgba(0, 0, 0, 0.7);
