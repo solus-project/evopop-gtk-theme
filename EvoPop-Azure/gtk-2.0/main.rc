@@ -2423,7 +2423,35 @@ style "toolbar_button" {
   ythickness = 2
 
   GtkButton::inner-border = {2, 2, 2, 2}
+  
+    engine "pixmap" {
+    image {
+      function = BOX
+      state    = PRELIGHT
+      shadow   = OUT
+      file     = "assets/toolbar-button-hover.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
 
+    # Don't add hover effect on pressed buttons
+    image {
+      function = BOX
+      state    = PRELIGHT
+      shadow   = IN
+      file     = "assets/toolbar-button-active.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+
+    image {
+      function = BOX
+      state    = ACTIVE
+      file     = "assets/toolbar-button-active.png"
+      border   = {4, 4, 4, 4}
+      stretch  = TRUE
+    }
+   }
 }
 
 style "toolbar_separator" {

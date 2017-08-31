@@ -30,6 +30,8 @@ button
 button-hover
 button-active
 button-insensitive
+toolbar-button-hover
+toolbar-button-active
 combo-entry-ltr-entry
 combo-entry-ltr-entry-active
 combo-entry-ltr-entry-insensitive
