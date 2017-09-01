@@ -145,7 +145,8 @@ read if you used those and something break with a version upgrade you're on your
  ***************/
 .background {
   color: #fefefe;
-  background-color: #31363d; }
+  background-color: #31363d;
+  box-shadow: inset 0px 1px 2px -1px rgba(0, 0, 0, 0.4), inset 0px 2px 2px -1px rgba(0, 0, 0, 0.1); }
   .background:backdrop {
     color: rgba(254, 254, 254, 0.8);
     background-color: #31363d;
@@ -2714,10 +2715,11 @@ headerbar {
     min-height: 28px; }
     .default-decoration.titlebar:not(headerbar) button.titlebutton,
     headerbar.default-decoration button.titlebutton {
-      min-height: 26px;
-      min-width: 26px;
-      margin: 0;
-      padding: 0; }
+      padding: 1px;
+      min-width: 18px;
+      min-height: 18px;
+      margin: 6px 3px;
+      box-shadow: none; }
 
 headerbar entry,
 headerbar spinbutton,
@@ -4636,23 +4638,39 @@ decoration {
 button.titlebutton {
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 32px;
-  padding: 0 5px;
+  padding: 1px;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 6px 3px;
   box-shadow: none; }
-  button.titlebutton.close *, button.titlebutton.maximize *, button.titlebutton.minimize * {
-    color: transparent; }
-  button.titlebutton.close {
-    background-image: -gtk-scaled(url("../assets/close.png"), url("../assets/close@2.png")); }
-    button.titlebutton.close:hover, button.titlebutton.close:active {
-      background-image: -gtk-scaled(url("../assets/close_prelight.png"), url("../assets/close_prelight@2.png")); }
-  button.titlebutton.maximize {
-    background-image: -gtk-scaled(url("../assets/maximize.png"), url("../assets/maximize@2.png")); }
-    button.titlebutton.maximize:hover, button.titlebutton.maximize:active {
-      background-image: -gtk-scaled(url("../assets/maximize_prelight.png"), url("../assets/maximize_prelight@2.png")); }
-  button.titlebutton.minimize {
-    background-image: -gtk-scaled(url("../assets/minimize.png"), url("../assets/minimize@2.png")); }
-    button.titlebutton.minimize:hover, button.titlebutton.minimize:active {
-      background-image: -gtk-scaled(url("../assets/minimize_prelight.png"), url("../assets/minimize_prelight@2.png")); }
+  button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
+    color: #31363D;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+    padding: 1px;
+    min-width: 18px;
+    min-height: 18px;
+    margin: 6px 3px; }
+    button.titlebutton.close:hover, button.titlebutton.close:active, button.titlebutton.close:checked, button.titlebutton.close:backdrop, button.titlebutton.close:disabled, button.titlebutton.close:backdrop:disabled, button.titlebutton.maximize:hover, button.titlebutton.maximize:active, button.titlebutton.maximize:checked, button.titlebutton.maximize:backdrop, button.titlebutton.maximize:disabled, button.titlebutton.maximize:backdrop:disabled, button.titlebutton.minimize:hover, button.titlebutton.minimize:active, button.titlebutton.minimize:checked, button.titlebutton.minimize:backdrop, button.titlebutton.minimize:disabled, button.titlebutton.minimize:backdrop:disabled {
+      color: #31363D;
+      border-radius: 50px; }
+    button.titlebutton.close:hover, button.titlebutton.close:active, button.titlebutton.close:checked, button.titlebutton.maximize:hover, button.titlebutton.maximize:active, button.titlebutton.maximize:checked, button.titlebutton.minimize:hover, button.titlebutton.minimize:active, button.titlebutton.minimize:checked {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.25), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  button.titlebutton:backdrop, button.titlebutton:disabled, button.titlebutton:backdrop:disabled {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  button.titlebutton.close:hover {
+    background-color: #de3e5b; }
+  button.titlebutton.close:active {
+    background-color: #c72240; }
+  button.titlebutton.maximize:hover {
+    background-color: #9cb7e0; }
+  button.titlebutton.maximize:active {
+    background-color: #759bd4; }
+  button.titlebutton.minimize:hover {
+    background-color: #37b9a5; }
+  button.titlebutton.minimize:active {
+    background-color: #2b9282; }
   button.titlebutton:backdrop {
     -gtk-icon-shadow: none; }
 

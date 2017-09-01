@@ -296,10 +296,11 @@ headerbar {
     min-height: 28px;
 
     button.titlebutton {
-      min-height: 26px;
-      min-width: 26px;
-      margin: 0;
-      padding: 0;
+      padding: 1px;
+      min-width: 18px;
+      min-height: 18px;
+      margin: 6px 3px;
+      box-shadow: none;
     }
   }
 }
