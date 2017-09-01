@@ -5,7 +5,7 @@
 
   frame > border,
   .frame { border: none; }
-  
+
   border-style: none;
   background-color: $sidebar_bg_color;
   color: $fg_color;
@@ -14,20 +14,17 @@
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border-right: 1px solid $borders_color;
-    border-left-style: none;
+    border: none;
   }
 
   @at-root %sidebar_right
   &:dir(rtl),
   &.right {
-    border-left: 1px solid $borders_color;
-    border-right-style: none;
+    border: none;
   }
 
   &:backdrop {
     background-color: $backdrop_sidebar_bg_color;
-    border-color: $backdrop_borders_color;
     transition: $backdrop_transition;
     color: $backdrop_fg_color;
   }

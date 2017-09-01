@@ -1,45 +1,45 @@
-/***************
- * Header bars *
- ***************/
-%titlebar,
+// /***************
+//  * Header bars *
+//  ***************/
+
+.titlebar,
 headerbar {
-  padding: 0 6px;
-  min-height: 34px;
+  min-height: 44px;
   background-color: $headerbar_color;
+  background-clip: border-box;
   color: $headerbar_fg_color;
-  border-radius: 0;
 
-  @if $variant == 'light' { box-shadow: inset 0 1px $top_highlight; }
-  @else { box-shadow: inset 0 1px $top_highlight,inset 0 -1px $bottom_highlight; }
+  &:backdrop label { color: $backdrop_selected_fg_color; }
 
-  &:backdrop {
-    border-color: $backdrop_borders_color;
-    color: $backdrop_headerbar_fg_color;
-    background-image: none;
-
-    transition: $backdrop_transition;
+  // hide all outlines
+  * {
+    outline-style: none;
+    outline-width: 0;
+    outline-color: transparent;
   }
 
-  label {
-    &:backdrop { color: $backdrop_headerbar_fg_color; }
-  }
-
+  // titles
   .title {
+    padding: 0 12px;
+    color: $headerbar_fg_color;
     font-weight: 700;
-    padding-left: 12px;
-    padding-right: 12px;
-
-    &:backdrop { color: $backdrop_headerbar_fg_color; }
+    &:backdrop { @extend .dim-label; }
   }
 
   .subtitle {
-    font-size: smaller;
-    padding-left: 12px;
-    padding-right: 12px;
-
     @extend .dim-label;
+    padding: 0 12px;
+    color: $headerbar_fg_color;
+    &:backdrop { @extend .dim-label; }
+  }
 
-    &:backdrop { color: $backdrop_headerbar_fg_color; }
+  // separators
+  separator.vertical,
+  > box > separator.vertical,
+  > box > box > separator.vertical {
+    border: 0 none transparent;
+    color: transparent;
+    background-color: transparent;
   }
 
   %linked-header {
@@ -86,12 +86,12 @@ headerbar {
     background-color: if($subtheme == 'azure', #39465c, #505359);
     color: $headerbar_fg_color;
     caret-color: $headerbar_fg_color;
-    @include _shadows($depth);
+    @include _shadows($depth3);
     &:backdrop,
     &:disabled {
       background-color: lighten(if($subtheme == 'azure', #39465c, #505359), 1%);
       color: $headerbar_fg_color;
-      @include _shadows($depth);
+      @include _shadows($depth3);
     }
   }
 
@@ -282,84 +282,193 @@ headerbar {
     }
   }
 
+  // misc
   .tiled &,
-  .maximized & {
-    &.titlebar {
-      @if $variant == 'light' { box-shadow: none; }
-      @else { box-shadow: inset 0 -1px $bottom_highlight; }
-    }
-    &:backdrop, & { border-radius: 0; }
-  } // squared corners when the window is maximized or tiled
+  .maximized &,
+  .fullscreen & {
+    border-top-color: $headerbar_color;
+    border-radius: 0;
+  }
 
   &.default-decoration {
-    padding: 4px;
-    min-height: 28px;
+    padding: 0 3px; // override scaling-unit
+    border-radius: 2px 2px 0 0;
+    border-width: 0;
 
-    button.titlebutton {
-      padding: 1px;
-      min-width: 18px;
-      min-height: 18px;
-      margin: 6px 3px;
-      box-shadow: none;
+    .title { // fade_effect doesn't work
+      color: $headerbar_fg_color;
+      &:backdrop { color: gtkopacity($headerbar_fg_color, 0.4); }
+    }
+  }
+
+  .solid-csd & {
+    &:dir(rtl), &:dir(ltr) { // specificity bump
+      border-radius: 0;
     }
   }
 }
 
 headerbar {
-  // add vertical margins to common widget on the headerbar to avoid them spanning the whole height
-  entry,
-  spinbutton,
-  separator,
-  button {
-    margin-top: 1px;
-    margin-bottom: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  // To avoid double-padding, set it only for titlebar in case it
+  // is placed on the header-bar.
+  &.titlebar,
+  .csd &,
+  .solid-csd &,
+  box &:only-child {
+    padding: 0 rem(5.3px); // only add lateral spacer
+    // draw hilight and shadows
+    box-shadow: if( $variant == 'light',$header-depth-light,$header-depth-dark);
   }
-  switch {
-    margin-top: 3px;
-    margin-bottom: 3px;
+
+  // override unwanted side-borders
+  box &:not(:only-child):first-child,
+  box &:not(:only-child):last-child {
+    border-left-color: $headerbar_color;
+    border-right-color: $headerbar_color;
   }
-  separator { background: transparent; }
+
+  box & { // Remove unneeded side shadows with dirty hacks
+    &:not(:only-child):last-child {
+      &:dir(ltr) {
+
+      }
+      &:dir(rtl) {
+
+      }
+    }
+  }
+
+  // paned-separator is actually drawn by paned itself
+  paned &:not(:only-child):last-child {
+    &:dir(ltr) {
+      // border-left: 1px solid $solid_dark_borders_color;
+    }
+    &:dir(rtl) {
+      // border-right: 1px solid $solid_dark_borders_color;
+    }
+  }
 }
 
-.background:not(.tiled):not(.maximized) .titlebar {
-  @if $variant == 'light' { box-shadow: inset 0 1px $top_highlight; }
-  @else { box-shadow: inset 0 1px $top_highlight,inset 0 -1px $bottom_highlight; }
+headerbar.selection-mode { // selection-mode specific
+  box & { // Remove unneeded side shadows with dirty hacks
+    &:not(:only-child):last-child {
+      &:dir(ltr) {
 
+      }
+      &:dir(rtl) {
 
-  &:backdrop, & {
+      }
+    }
+  }
+}
+
+.background:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd) {
+  headerbar,
+  .titlebar { // set rounded corners
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
   }
-}
 
-headerbar {
-  window:not(.tiled):not(.maximized) separator:first-child + &, // tackles the paned container case
-  window:not(.tiled):not(.maximized) &:first-child { &:backdrop, & { border-top-left-radius: 2px; }}
+  box headerbar {
+    &:not(:last-child) {
+      &:dir(ltr) {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 0;
+      }
+      &:dir(rtl) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 2px;
+      }
+    }
 
-  window:not(.tiled):not(.maximized) &:last-child { &:backdrop, & { border-top-right-radius: 2px; }}
-
-  window:not(.tiled):not(.maximized):not(.fullscreen):not(.solid-csd) stack & { // tackles the stacked headerbars case
-    &:first-child, &:last-child {
-      border-top-left-radius: 2px;
-      border-top-right-radius: 2px;
+    &:last-child {
+      &:dir(ltr) { border-top-left-radius: 0; }
+      &:dir(rtl) { border-top-right-radius: 0; }
     }
   }
 }
 
-.titlebar:not(headerbar) {
-  window.csd > & {
-    // in csd we assume every titlebar is a headerbar so reset anything, this is needed for split toolbars cases
-    padding: 0;
-    background-color: transparent;
-    background-image: none;
-    border-style: none;
-    border-color: transparent;
+// force using rounded corners in case of paned titlebars
+window:not(.maximized):not(.fullscreen):not(.tiled):not(.solid-csd) {
+  paned.titlebar,
+  grid.titlebar {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    > headerbar:not(:last-child) {
+      &:dir(ltr) {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 0;
+      }
+      &:dir(rtl) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 2px;
+      }
+    }
+    > headerbar:last-child {
+      &:dir(ltr) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 2px;
+      }
+      &:dir(rtl) {
+        border-top-left-radius: 2px;
+        border-top-right-radius: 0;
+      }
+    }
+  }
+}
+
+// revive top-edge highlight border for SSDs
+.ssd {
+  decoration .titlebar,
+  .titlebar {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: $top_highlight;
     box-shadow: none;
   }
+}
 
-  > separator {
-    background: transparent;
+// revive top-edge highlight border for Metacity's CSDs
+headerbar.titlebar.default-decoration {
+  border-top: 1px solid $top_highlight;
+  box-shadow: none; // reset outset shadows
+
+  .tiled &,
+  .maximized & {
+    border-top-color: $headerbar_color;
+    border-radius: 0;
+  }
+}
+
+// workaround for ugly Ubuntu-related CSD patches
+.background:not(.csd):not(.ssd):not(.solid-csd) {
+  box headerbar,
+  headerbar {
+    &, &:not(:last-child) {
+      padding: 0 rem(5.3px); // only add lateral spacer
+      border-radius: 0;
+      border-top: 0 none transparent;
+      box-shadow: none;
+
+      // unset fade-effect
+      *:backdrop { opacity: 1.0; }
+    }
   }
 
-  @extend %titlebar;
+  &.tiled,
+  &.maximized,
+  &.fullscreen {
+    box headerbar,
+    headerbar {
+      &, &:not(:last-child) {
+        border-top: 0 none transparent;
+        background-color: $headerbar_color;
+        box-shadow: none;
+      }
+    }
+  }
 }

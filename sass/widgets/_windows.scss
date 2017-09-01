@@ -61,12 +61,10 @@ decoration {
 
 // Window Close button
 button.titlebutton {
-  background-repeat: no-repeat;
-  background-position: center;
   padding: 1px;
-  min-width: 18px;
-  min-height: 18px;
-  margin: 6px 3px;
+  min-width: 16px;
+  min-height: 16px;
+  margin: 6px 4px;
   box-shadow: none;
 
   &.close,
@@ -77,9 +75,9 @@ button.titlebutton {
     border-radius: 50px;
     box-shadow: $depth;
     padding: 1px;
-    min-width: 18px;
-    min-height: 18px;
-    margin: 6px 3px;
+    min-width: 16px;
+    min-height: 16px;
+    margin: 6px 4px;
 
     &:hover,
     &:active,
@@ -94,11 +92,14 @@ button.titlebutton {
     &:hover,
     &:active,
     &:checked { box-shadow: $depth2; }
-  }
 
-  &:backdrop,
-  &:disabled,
-  &:backdrop:disabled { box-shadow: $depth; }
+    &:backdrop,
+    &:disabled,
+    &:backdrop:disabled {
+      background-color: transparentize(white , 0.7);
+      box-shadow: $depth;
+    }
+  }
 
   &.close {
     &:hover { background-color: lighten($red, 10%); }
