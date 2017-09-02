@@ -4163,13 +4163,16 @@ treeview ~ scrollbar.vertical {
   .sidebar .frame {
     border: none; }
   stacksidebar.sidebar:dir(ltr) list, stacksidebar.sidebar.left list, stacksidebar.sidebar.left:dir(rtl) list, .sidebar:dir(ltr), .sidebar.left, .sidebar.left:dir(rtl) {
-    border: none; }
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-left-style: none; }
   stacksidebar.sidebar:dir(rtl) list
   .sidebar:dir(rtl), stacksidebar.sidebar.right list
   .sidebar:dir(rtl), .sidebar.right {
-    border: none; }
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    border-right-style: none; }
   .sidebar:backdrop {
     background-color: #f1f2f3;
+    border-color: rgba(115, 116, 118, 0.28);
     transition: 200ms ease-out;
     color: rgba(49, 55, 61, 0.8); }
   .sidebar list {

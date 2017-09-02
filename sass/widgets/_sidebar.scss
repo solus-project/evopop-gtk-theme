@@ -14,17 +14,20 @@
   &:dir(ltr),
   &.left,
   &.left:dir(rtl) {
-    border: none;
+    border-right: 1px solid $borders_color;
+    border-left-style: none;
   }
 
   @at-root %sidebar_right
   &:dir(rtl),
   &.right {
-    border: none;
+    border-left: 1px solid $borders_color;
+    border-right-style: none;
   }
 
   &:backdrop {
     background-color: $backdrop_sidebar_bg_color;
+    border-color: $backdrop_borders_color;
     transition: $backdrop_transition;
     color: $backdrop_fg_color;
   }
