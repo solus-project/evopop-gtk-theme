@@ -36,7 +36,7 @@ stage {
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
   border-radius: 2px;
-  border: none;
+  border-width: 0;
   padding: 4px 32px; }
   .button:focus {
     color: #fefefe;
@@ -60,15 +60,12 @@ stage {
     icon-shadow: none; }
 
 .modal-dialog-linked-button {
+  padding: 10px;
+  border: none;
   color: #fefefe;
-  background-color: #292929;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), inset 0 2px 3px rgba(0, 0, 0, 0.22);
-  border: none;
-  text-shadow: 0 1px black;
-  icon-shadow: 0 1px black;
-  border: none;
   background-color: transparent;
-  padding: 12px; }
+  text-shadow: none;
+  icon-shadow: none; }
   .modal-dialog-linked-button:insensitive {
     color: #9c9f9f;
     background-color: rgba(78, 84, 84, 0.66);
@@ -100,13 +97,13 @@ stage {
 
 /* Entries */
 StEntry {
+  background-color: #292929;
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   padding: 4px;
   border-width: 0;
   color: #fefefe;
-  background-color: #292929;
-  border-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
   selection-background-color: #13b1d5;
   selected-color: #fefefe; }
   StEntry:focus {
@@ -200,16 +197,18 @@ StScrollBar {
   background-color: white; }
 
 .modal-dialog {
+  border: none;
   border-radius: 2px;
   color: #fefefe;
   background-color: rgba(45, 50, 50, 0.95);
-  border-width: 0; }
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }
   .modal-dialog .modal-dialog-content-box {
     padding: 24px; }
   .modal-dialog .run-dialog-entry {
     width: 20em;
     margin-bottom: 6px; }
   .modal-dialog .run-dialog-error-box {
+    color: #b11e39;
     padding-top: 16px;
     spacing: 6px; }
   .modal-dialog .run-dialog-button-box {
@@ -470,7 +469,7 @@ StScrollBar {
   min-width: 15em; }
   .popup-menu .popup-sub-menu {
     background-color: #343a3a;
-    box-shadow: inset 0 -1px 0px rgba(13, 13, 13, 0.1); }
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }
   .popup-menu .popup-menu-content {
     padding: 1em 0em; }
   .popup-menu .popup-menu-item {
@@ -635,8 +634,8 @@ StScrollBar {
 .switcher-list, .workspace-switcher-container {
   color: #fefefe;
   background-color: #393f3f;
-  border: 1px solid rgba(254, 254, 254, 0.2);
-  border-radius: 12px;
+  border: none;
+  border-radius: 2px;
   padding: 12px; }
 
 /* Tiled window previews */
@@ -1097,11 +1096,11 @@ StScrollBar {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
 
 .window-caption {
-  spacing: 25px;
+  spacing: 20px;
   color: #fefefe;
-  background-color: #13b1d5;
-  border-radius: 8px;
-  padding: 4px 12px; }
+  background-color: rgba(57, 63, 63, 0.65);
+  border-radius: 2px;
+  padding: 4px 8px; }
 
 .search-entry {
   width: 320px;
@@ -1335,9 +1334,9 @@ StScrollBar {
     border-radius: 0; }
 
 .workspace-thumbnail-indicator {
-  border: 4px solid #13b1d5;
+  border: 4px solid rgba(254, 254, 254, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
-  padding: 1px; }
+  padding: 0; }
 
 .search-display > StBoxLayout,
 .all-apps,

@@ -45,7 +45,7 @@ stage {
 .button {
   @include button(normal);
   border-radius: 2px;
-  border: none;
+  border-width: 0;
   padding: 4px 32px;
   &:focus { @include button(focus); }
   &:insensitive { @include button(insensitive); }
@@ -54,10 +54,12 @@ stage {
 }
 
 .modal-dialog-linked-button {
-  @include button(normal);
+  padding: 10px;
   border: none;
+  color: $fg_color;
   background-color: transparent;
-  padding: 12px;
+  text-shadow: none;
+  icon-shadow: none;
   &:insensitive { @include button(insensitive); }
   &:active {
     @include button(active);
@@ -68,24 +70,18 @@ stage {
     box-shadow: $depth5;
   }
 
-  &:first-child {
-    border-radius: 0px 0px 0px 2px;
-  }
-  &:last-child {
-    border-radius: 0px 0px 2px 0px;
-  }
-  &:first-child:last-child {
-    border-radius: 0px 0px 2px 2px;
-  }
+  &:first-child { border-radius: 0px 0px 0px 2px; }
+  &:last-child { border-radius: 0px 0px 2px 0px; }
+  &:first-child:last-child { border-radius: 0px 0px 2px 2px; }
 }
 
 /* Entries */
 StEntry {
+  @include entry(normal);
   border-radius: 2px;
   padding: 4px;
   border-width: 0;
   color: $fg_color;
-  @include entry(normal);
   //&:hover { @include entry(hover);}
   &:focus { @include entry(focus,$fc:transparentize($fg_color,0.5));}
   &:insensitive { @include entry(insensitive);}
@@ -183,15 +179,19 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
+  border: none;
   border-radius: 2px;
   color: $osd_fg_color;
   background-color: darken($osd_bg_color,5%);
-  border-width: 0;
-  .modal-dialog-content-box {
-    padding: 24px;
+  box-shadow: $depth6;
+
+  .modal-dialog-content-box { padding: 24px; }
+  .run-dialog-entry {
+    width: 20em;
+    margin-bottom: 6px;
   }
-  .run-dialog-entry { width: 20em; margin-bottom: 6px; }
   .run-dialog-error-box {
+    color: $error_color;
     padding-top: 16px;
     spacing: 6px;
   }
@@ -511,7 +511,7 @@ StScrollBar {
   .popup-menu-arrow { } //defined globally in the TOP BAR
   .popup-sub-menu {
     background-color: darken($bg_color,2%);
-    box-shadow: inset 0 -1px 0px lighten($borders_color,5%);
+    box-shadow: $depth6;
   }
 
   .popup-menu-content { padding: 1em 0em; }
@@ -708,8 +708,8 @@ StScrollBar {
 %osd-panel {
   color: $_bubble_fg_color;
   background-color: $_bubble_bg_color;
-  border: 1px solid $_bubble_borders_color;
-  border-radius: 12px;
+  border: none;
+  border-radius: 2px;
   padding: 12px;
 }
 
@@ -1232,11 +1232,11 @@ StScrollBar {
     box-shadow: $depth;
   }
   .window-caption {
-    spacing: 25px;
-    color: $selected_fg_color;
-    background-color: $selected_bg_color;
-    border-radius: 8px;
-    padding: 4px 12px;
+    spacing: 20px;
+    color: $fg_color;
+    background-color: transparentize($osd_bg_color,.3);
+    border-radius: 2px;
+    padding: 4px 8px;
   }
 
   //search entry
@@ -1474,9 +1474,9 @@ StScrollBar {
     &:rtl { border-radius: 0;}
   }
   .workspace-thumbnail-indicator {
-    border: 4px solid $selected_bg_color;
+    border: 4px solid transparentize($osd_fg_color, .8);
     box-shadow: $depth;
-    padding: 1px;
+    padding: 0;
   }
 
   //Some hacks I don't even
