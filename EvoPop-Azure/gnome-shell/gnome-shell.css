@@ -99,7 +99,7 @@ stage {
 StEntry {
   background-color: #39465c;
   border-color: rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22);
   border-radius: 2px;
   padding: 4px;
   border-width: 0;
@@ -107,10 +107,10 @@ StEntry {
   selection-background-color: #37b9a5;
   selected-color: #fefefe; }
   StEntry:focus {
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22); }
   StEntry:insensitive {
     color: #9398a0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22); }
   StEntry StIcon.capslock-warning {
     icon-size: 16px;
     warning-color: #ee8e00;
@@ -983,13 +983,13 @@ StScrollBar {
   border: none;
   text-shadow: 0 1px black;
   icon-shadow: 0 1px black;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22);
   border-radius: 32px;
   /* wish we could do 50% */
   padding: 13px; }
   .system-menu-action:hover, .system-menu-action:focus {
     background-color: #37b9a5;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3); }
   .system-menu-action:active {
     background-color: #2b9282; }
   .system-menu-action > StIcon {
@@ -1093,7 +1093,7 @@ StScrollBar {
 .window-clone-border {
   border: 4px solid rgba(254, 254, 254, 0.1);
   border-radius: 0px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22); }
 
 .window-caption {
   spacing: 20px;
@@ -1109,12 +1109,12 @@ StScrollBar {
   border: none;
   color: #283141;
   background-color: rgba(254, 254, 254, 0.6);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22); }
   .search-entry:focus {
     border-width: 0;
     color: #283141;
     background-color: rgba(254, 254, 254, 0.8);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3); }
   .search-entry .search-entry-icon {
     icon-size: 1em;
     padding: 0 4px;
@@ -1250,7 +1250,7 @@ StScrollBar {
   .grid-search-result:active .overview-icon,
   .grid-search-result:checked .overview-icon {
     background-color: rgba(21, 25, 33, 0.85);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.3); }
   .app-well-app:hover .overview-icon, .app-well-app:focus .overview-icon, .app-well-app:selected .overview-icon,
   .app-well-app.app-folder:hover .overview-icon,
   .app-well-app.app-folder:focus .overview-icon,
@@ -1283,7 +1283,7 @@ StScrollBar {
   border: none;
   transition-duration: 100ms;
   text-align: center;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1); }
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22); }
 
 .app-well-app.app-folder > .overview-icon {
   background-color: rgba(40, 49, 65, 0.35); }
@@ -1335,7 +1335,7 @@ StScrollBar {
 
 .workspace-thumbnail-indicator {
   border: 4px solid rgba(254, 254, 254, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.22);
   padding: 0; }
 
 .search-display > StBoxLayout,
