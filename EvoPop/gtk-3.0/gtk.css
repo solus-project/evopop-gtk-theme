@@ -4889,7 +4889,8 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
     border-left: 1px solid @borders; }
 .budgie-menu .category-button {
   padding: 8px;
-  border-radius: 2px 0 0 2px; }
+  border-radius: 2px 0 0 2px;
+  font-weight: 400; }
   .budgie-menu .category-button:hover {
     background-color: rgba(49, 55, 61, 0.05);
     color: #31373d; }
@@ -4906,6 +4907,7 @@ entry selection, row:selected, treeview.view:selected:focus, treeview.view:selec
   background-color: transparent;
   border-color: transparent; }
 .budgie-menu button:not(.category-button) {
+  font-weight: 400;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 0;
@@ -4937,7 +4939,8 @@ button.budgie-menu-launcher {
   margin-right: 6px;
   background-color: rgba(49, 55, 61, 0.1); }
 .user-menu button {
-  margin: 5px; }
+  margin: 5px;
+  font-weight: 400; }
 .user-menu > box.vertical row.activatable:first-child .indicator-item,
 .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
@@ -4957,6 +4960,7 @@ button.budgie-menu-launcher {
     background-size: 38px auto; }
   .user-menu > box.vertical row.activatable:first-child .indicator-item label,
   .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label {
+    font-weight: 700;
     color: #fefefe; }
     .user-menu > box.vertical row.activatable:first-child .indicator-item label:dir(ltr),
     .user-menu > frame.container > box.vertical row.activatable:first-child .indicator-item label:dir(ltr) {
@@ -5072,7 +5076,7 @@ button.raven-trigger {
     margin: 0; }
   .budgie-panel label {
     color: #fefefe;
-    font-weight: 700; }
+    font-weight: 400; }
   .budgie-panel.transparent {
     background-color: transparent; }
     .top .budgie-panel.transparent {
@@ -5510,7 +5514,7 @@ calendar.raven-calendar {
     background-color: transparent;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), inset 0 1px 2px rgba(0, 0, 0, 0.2); }
     .budgie-session-dialog .linked.horizontal > button label, .budgie-polkit-dialog .linked.horizontal > button label, .budgie-run-dialog .linked.horizontal > button label {
-      font-weight: 700; }
+      font-weight: 400; }
     .budgie-session-dialog .linked.horizontal > button:first-child, .budgie-polkit-dialog .linked.horizontal > button:first-child, .budgie-run-dialog .linked.horizontal > button:first-child {
       border-left: none;
       border-bottom-left-radius: 2px; }
