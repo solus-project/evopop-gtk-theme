@@ -2221,7 +2221,7 @@ GraniteWidgetsWelcome {
 
 .titlebar,
 headerbar {
-  min-height: 40px;
+  min-height: 36px;
   background-color: #31363D;
   background-clip: border-box;
   color: #fefefe; }
@@ -2335,7 +2335,7 @@ headerbar {
     border-radius: 0;
     text-shadow: none;
     box-shadow: none;
-    min-height: 28px; }
+    min-height: 36px; }
     .titlebar button:hover, .titlebar button:active, .titlebar button:checked,
     headerbar button:hover,
     headerbar button:active,
