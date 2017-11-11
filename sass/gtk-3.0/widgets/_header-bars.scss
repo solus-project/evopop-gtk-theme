@@ -4,7 +4,7 @@
 
 .titlebar,
 headerbar {
-  min-height: 36px;
+  min-height: 34px;
   background-color: $headerbar_color;
   background-clip: border-box;
   color: $headerbar_fg_color;
@@ -284,6 +284,10 @@ headerbar {
 
   // misc
   .tiled &,
+  .tiled-top &,
+  .tiled-bottom &,
+  .tiled-left &,
+  .tiled-right &,
   .maximized &,
   .fullscreen & {
     border-top-color: $headerbar_color;

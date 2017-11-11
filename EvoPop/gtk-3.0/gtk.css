@@ -2221,7 +2221,7 @@ GraniteWidgetsWelcome {
 
 .titlebar,
 headerbar {
-  min-height: 36px;
+  min-height: 34px;
   background-color: #31363D;
   background-clip: border-box;
   color: #fefefe; }
@@ -2699,7 +2699,11 @@ headerbar {
         -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
         color: rgba(254, 254, 254, 0.5);
         -gtk-icon-shadow: none; }
-  .tiled .titlebar, .maximized .titlebar, .fullscreen .titlebar, .tiled
+  .tiled .titlebar, .tiled-top .titlebar, .tiled-bottom .titlebar, .tiled-left .titlebar, .tiled-right .titlebar, .maximized .titlebar, .fullscreen .titlebar, .tiled
+  headerbar, .tiled-top
+  headerbar, .tiled-bottom
+  headerbar, .tiled-left
+  headerbar, .tiled-right
   headerbar, .maximized
   headerbar, .fullscreen
   headerbar {
@@ -4702,7 +4706,7 @@ button.titlebutton {
   padding: 1px;
   min-width: 16px;
   min-height: 16px;
-  margin: 6px 4px;
+  margin: 5px 3px;
   box-shadow: none; }
   button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
     color: #31363D;
@@ -4712,7 +4716,7 @@ button.titlebutton {
     padding: 1px;
     min-width: 16px;
     min-height: 16px;
-    margin: 6px 4px; }
+    margin: 5px 3px; }
     button.titlebutton.close:hover, button.titlebutton.close:active, button.titlebutton.close:checked, button.titlebutton.close:backdrop, button.titlebutton.close:disabled, button.titlebutton.close:backdrop:disabled, button.titlebutton.maximize:hover, button.titlebutton.maximize:active, button.titlebutton.maximize:checked, button.titlebutton.maximize:backdrop, button.titlebutton.maximize:disabled, button.titlebutton.maximize:backdrop:disabled, button.titlebutton.minimize:hover, button.titlebutton.minimize:active, button.titlebutton.minimize:checked, button.titlebutton.minimize:backdrop, button.titlebutton.minimize:disabled, button.titlebutton.minimize:backdrop:disabled {
       color: #31363D;
       border-radius: 50px; }
