@@ -64,7 +64,7 @@ button.titlebutton {
   padding: 1px;
   min-width: 16px;
   min-height: 16px;
-  margin: 5px 3px;
+  margin: 0 3px;
   box-shadow: none;
 
   &.close,
@@ -77,7 +77,7 @@ button.titlebutton {
     padding: 1px;
     min-width: 16px;
     min-height: 16px;
-    margin: 5px 3px;
+    margin: 0 3px;
 
     &:hover,
     &:active,

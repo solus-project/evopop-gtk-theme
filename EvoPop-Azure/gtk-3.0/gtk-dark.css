@@ -2218,7 +2218,6 @@ GraniteWidgetsWelcome {
 
 .titlebar,
 headerbar {
-  min-height: 34px;
   background-color: #283141;
   background-clip: border-box;
   color: #fefefe; }
@@ -2332,7 +2331,7 @@ headerbar {
     border-radius: 0;
     text-shadow: none;
     box-shadow: none;
-    min-height: 36px; }
+    min-height: 32px; }
     .titlebar button:hover, .titlebar button:active, .titlebar button:checked,
     headerbar button:hover,
     headerbar button:active,
@@ -2723,6 +2722,7 @@ headerbar {
     border-radius: 0; }
 
 headerbar {
+  min-height: 20px;
   padding-left: 10px;
   padding-right: 10px; }
   headerbar.titlebar, .csd headerbar, .solid-csd headerbar, box headerbar:only-child {
@@ -2986,7 +2986,7 @@ list {
     border-color: rgba(27, 33, 44, 0.19); }
 
 row {
-  padding: 5px 8px;
+  padding: 2px 6px;
   transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   row:hover {
     transition: none; }
@@ -4693,7 +4693,7 @@ button.titlebutton {
   padding: 1px;
   min-width: 16px;
   min-height: 16px;
-  margin: 5px 3px;
+  margin: 0 3px;
   box-shadow: none; }
   button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
     color: #283141;
@@ -4703,7 +4703,7 @@ button.titlebutton {
     padding: 1px;
     min-width: 16px;
     min-height: 16px;
-    margin: 5px 3px; }
+    margin: 0 3px; }
     button.titlebutton.close:hover, button.titlebutton.close:active, button.titlebutton.close:checked, button.titlebutton.close:backdrop, button.titlebutton.close:disabled, button.titlebutton.close:backdrop:disabled, button.titlebutton.maximize:hover, button.titlebutton.maximize:active, button.titlebutton.maximize:checked, button.titlebutton.maximize:backdrop, button.titlebutton.maximize:disabled, button.titlebutton.maximize:backdrop:disabled, button.titlebutton.minimize:hover, button.titlebutton.minimize:active, button.titlebutton.minimize:checked, button.titlebutton.minimize:backdrop, button.titlebutton.minimize:disabled, button.titlebutton.minimize:backdrop:disabled {
       color: #283141;
       border-radius: 50px; }
@@ -5601,8 +5601,8 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
     background-image: none; }
   .nautilus-window .sidebar .frame {
     border-width: 0; }
-  .nautilus-window .sidebar list {
-    padding-left: 6px; }
+  .nautilus-window .sidebar row {
+    padding: 5px 12px; }
 .nautilus-window iconview {
   border-width: 0;
   box-shadow: none; }
