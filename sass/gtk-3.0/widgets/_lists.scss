@@ -14,7 +14,7 @@ list {
 }
 
 row {
-  padding: 6px 12px;
+  padding: 5px 8px;
   transition: all 150ms $ease-out-quad;
 
   &:hover { transition: none; }
@@ -44,4 +44,15 @@ row {
   }
 
   &:selected { @extend %selected_items; }
+}
+
+// button spacing
+row {
+  button.image-button:not(.text-button):not(.round-button),
+  button.circular {
+    min-width: 16px;
+    min-height: 16px;
+    margin: 2px;
+    padding: 3px;
+  }
 }
