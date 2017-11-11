@@ -61,9 +61,9 @@ decoration {
 
 // Window Close button
 button.titlebutton {
-  padding: 1px;
-  min-width: 16px;
-  min-height: 16px;
+  padding: 0;
+  min-width: 14px;
+  min-height: 14px;
   margin: 0 3px;
   box-shadow: none;
 
@@ -74,9 +74,9 @@ button.titlebutton {
     background-color: transparentize(white , 0.7);
     border-radius: 50px;
     box-shadow: $depth;
-    padding: 1px;
-    min-width: 16px;
-    min-height: 16px;
+    padding: 0;
+    min-width: 14px;
+    min-height: 14px;
     margin: 0 3px;
 
     &:hover,

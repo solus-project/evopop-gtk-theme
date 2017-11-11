@@ -4,6 +4,7 @@
 
 .titlebar,
 headerbar {
+  min-height: 28px;
   background-color: $headerbar_color;
   background-clip: border-box;
   color: $headerbar_fg_color;
@@ -96,7 +97,7 @@ headerbar {
 
   button {
     @include button(normal-header);
-    min-height: 32px;
+    min-height: 30px;
 
     &:hover,
     &:active,
@@ -312,7 +313,6 @@ headerbar {
 }
 
 headerbar {
-  min-height: 20px;
   padding-left: 10px;
   padding-right: 10px;
 

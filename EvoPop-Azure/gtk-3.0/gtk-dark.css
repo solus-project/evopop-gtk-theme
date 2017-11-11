@@ -2218,6 +2218,7 @@ GraniteWidgetsWelcome {
 
 .titlebar,
 headerbar {
+  min-height: 28px;
   background-color: #283141;
   background-clip: border-box;
   color: #fefefe; }
@@ -2331,7 +2332,7 @@ headerbar {
     border-radius: 0;
     text-shadow: none;
     box-shadow: none;
-    min-height: 32px; }
+    min-height: 30px; }
     .titlebar button:hover, .titlebar button:active, .titlebar button:checked,
     headerbar button:hover,
     headerbar button:active,
@@ -2722,7 +2723,6 @@ headerbar {
     border-radius: 0; }
 
 headerbar {
-  min-height: 20px;
   padding-left: 10px;
   padding-right: 10px; }
   headerbar.titlebar, .csd headerbar, .solid-csd headerbar, box headerbar:only-child {
@@ -4690,9 +4690,9 @@ decoration {
     box-shadow: none; }
 
 button.titlebutton {
-  padding: 1px;
-  min-width: 16px;
-  min-height: 16px;
+  padding: 0;
+  min-width: 14px;
+  min-height: 14px;
   margin: 0 3px;
   box-shadow: none; }
   button.titlebutton.close, button.titlebutton.maximize, button.titlebutton.minimize {
@@ -4700,9 +4700,9 @@ button.titlebutton {
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 50px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
-    padding: 1px;
-    min-width: 16px;
-    min-height: 16px;
+    padding: 0;
+    min-width: 14px;
+    min-height: 14px;
     margin: 0 3px; }
     button.titlebutton.close:hover, button.titlebutton.close:active, button.titlebutton.close:checked, button.titlebutton.close:backdrop, button.titlebutton.close:disabled, button.titlebutton.close:backdrop:disabled, button.titlebutton.maximize:hover, button.titlebutton.maximize:active, button.titlebutton.maximize:checked, button.titlebutton.maximize:backdrop, button.titlebutton.maximize:disabled, button.titlebutton.maximize:backdrop:disabled, button.titlebutton.minimize:hover, button.titlebutton.minimize:active, button.titlebutton.minimize:checked, button.titlebutton.minimize:backdrop, button.titlebutton.minimize:disabled, button.titlebutton.minimize:backdrop:disabled {
       color: #283141;
